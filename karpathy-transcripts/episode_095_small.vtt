@@ -1,0 +1,3635 @@
+WEBVTT
+
+00:00.000 --> 00:05.440
+ The following is a conversation with Don Song, a professor of computer science at UC Berkeley
+
+00:05.440 --> 00:10.880
+ with research interests and computer security, most recently with a focus on the intersection
+
+00:10.880 --> 00:15.920
+ between security and machine learning. This conversation was recorded before the outbreak
+
+00:15.920 --> 00:21.440
+ of the pandemic for everyone feeling the medical, psychological, and financial burden of this crisis.
+
+00:21.440 --> 00:26.320
+ I'm sending love your way. Stay strong. We're in this together. We'll beat this thing.
+
+00:26.320 --> 00:31.680
+ This is the Artificial Intelligence Podcast. If you enjoy it, subscribe on YouTube,
+
+00:31.680 --> 00:37.360
+ review it with 5 stars on Apple Podcasts, support on Patreon, or simply connect with me on Twitter
+
+00:37.360 --> 00:43.600
+ at Lex Freedman, spelled F R I D M A N. As usual, I'll do a few minutes of ads now
+
+00:43.600 --> 00:46.960
+ and never any ads in the middle that can break the flow of the conversation.
+
+00:47.600 --> 00:50.800
+ I hope that works for you. It doesn't hurt the listening experience.
+
+00:51.600 --> 00:55.600
+ This show is presented by Cash App, the number one finance app in the App Store.
+
+00:55.600 --> 01:01.440
+ When you get it, use code lexpodcast. Cash App lets you send money to friends by Bitcoin
+
+01:01.440 --> 01:07.200
+ and invest in the stock market with as little as $1. Since Cash App does fractional share trading,
+
+01:07.200 --> 01:11.600
+ let me mention that the order execution algorithm that works behind the scenes
+
+01:11.600 --> 01:16.080
+ to create the abstraction of fractional orders is an algorithmic marvel.
+
+01:16.080 --> 01:21.440
+ So big props to the Cash App engineers for solving a hard problem that in the end provides an easy
+
+01:21.440 --> 01:26.320
+ interface that takes a step up to the next layer of abstraction over the stock market,
+
+01:26.320 --> 01:31.440
+ making trading more accessible for new investors and diversification much easier.
+
+01:32.080 --> 01:37.040
+ So again, if you get Cash App from the App Store, Google Play, and use the code lexpodcast,
+
+01:37.600 --> 01:43.440
+ you get $10 and Cash App will also donate $10 to first, an organization that is helping to
+
+01:43.440 --> 01:47.520
+ advance robotics and STEM education for young people around the world.
+
+01:47.520 --> 01:52.240
+ And now, here's my conversation with Dawn Song.
+
+01:53.360 --> 01:57.040
+ Do you think software systems will always have security vulnerabilities?
+
+01:57.040 --> 02:00.400
+ Let's start at the broad, almost philosophical level.
+
+02:00.400 --> 02:05.200
+ That's a very good question. I mean, in general, right, it's very difficult to write completely
+
+02:05.760 --> 02:11.920
+ bug free code and code that has no vulnerability and also especially given that the definition
+
+02:11.920 --> 02:18.400
+ of vulnerability is actually really broad. It's any type of attacks essentially on the code can,
+
+02:18.400 --> 02:22.640
+ you know, that's can you can call that that caused by vulnerabilities.
+
+02:22.640 --> 02:27.120
+ And the nature of attacks is always changing as well, like new ones are coming up.
+
+02:27.120 --> 02:32.800
+ Right. So for example, in the past, we talked about memory safety type of vulnerabilities
+
+02:32.800 --> 02:39.920
+ where essentially attackers can exploit the software and take over control of how the code
+
+02:39.920 --> 02:45.280
+ runs and then can launch attacks that way by accessing some aspect of the memory and be able to
+
+02:45.280 --> 02:51.920
+ then alter the state of the program. Exactly. So for example, in the example of a buffer or flow,
+
+02:51.920 --> 02:59.280
+ then they, the attacker essentially actually causes essentially unintended changes in the
+
+02:59.280 --> 03:05.040
+ state of the, of the program. And then, for example, can then take over control flow of the
+
+03:05.040 --> 03:10.960
+ program and let the program to execute codes that actually the, the program didn't intend.
+
+03:10.960 --> 03:15.360
+ So the attack can be a remote attack. So they, the attacker, for example, can,
+
+03:15.360 --> 03:20.720
+ can send in a malicious input to the program that just causes the program to completely
+
+03:20.720 --> 03:26.720
+ then be compromised and then end up doing something that's under the program under the
+
+03:26.720 --> 03:31.920
+ attacker's control and intention. But that's just one form of attacks. And there are other forms
+
+03:31.920 --> 03:38.720
+ of attacks. Like, for example, there are these side channels where attackers can try to learn from
+
+03:39.680 --> 03:44.400
+ even just observing the outputs from the behaviors of the program, try to infer certain
+
+03:44.400 --> 03:51.200
+ secrets of the program. So they essentially write the form of attacks is very, very,
+
+03:51.200 --> 03:57.760
+ it's very broad spectrum. And in general, from the security perspective, we want to
+
+03:57.760 --> 04:05.040
+ essentially provide as much guarantee as possible about the program's security properties and so
+
+04:05.040 --> 04:11.840
+ on. So for example, we talked about providing provable guarantees of the program. So for example,
+
+04:11.840 --> 04:18.160
+ there are ways we can use program analysis and formal verification techniques to prove that a
+
+04:18.160 --> 04:22.800
+ piece of code has no memory safety vulnerabilities.
+
+04:22.800 --> 04:28.480
+ What does that look like? What is that proof? Is that just a dream for that's applicable to small
+
+04:28.480 --> 04:32.080
+ case examples? Or is that possible to do for real world systems?
+
+04:32.080 --> 04:38.800
+ So actually, I mean, today I actually call it so we are entering the area of formally verified
+
+04:38.800 --> 04:46.480
+ systems. So in the community, we have been working for the past decades in developing
+
+04:46.480 --> 04:56.000
+ techniques and tools to do this type of program verification. And we have dedicated teams that
+
+04:56.000 --> 05:03.920
+ have dedicated their years or sometimes even decades of their work in the space.
+
+05:03.920 --> 05:10.560
+ So as a result, we actually have a number of formally verified systems ranging from micro
+
+05:10.560 --> 05:17.680
+ kernels to compilers to file systems to certain crypto libraries and so on.
+
+05:18.480 --> 05:24.480
+ So it's actually really wide ranging and it's really exciting to see that people are recognizing
+
+05:24.480 --> 05:30.640
+ the importance of having these formally verified systems with verified security.
+
+05:31.440 --> 05:36.720
+ So that's great advancement that we see. But on the other hand, I think we do need to take
+
+05:36.720 --> 05:42.560
+ all these essentially with caution as well in the sense that just like I said,
+
+05:44.640 --> 05:51.680
+ the type of vulnerabilities is very varied. We can formally verify a software system to have
+
+05:51.680 --> 05:57.120
+ certain set of security properties, but they can still be vulnerable to other types of attacks.
+
+05:57.680 --> 06:03.040
+ And hence, we continue to need to make progress in the space.
+
+06:03.040 --> 06:09.120
+ So just a quick to linger on the formal verification. Is that something you can do by
+
+06:10.320 --> 06:16.400
+ looking at the code alone or is it something you have to run the code to prove something?
+
+06:16.400 --> 06:20.080
+ So empirical verification. Can you look at the code, just the code?
+
+06:20.080 --> 06:25.360
+ So that's a very good question. So in general, for most program verification techniques,
+
+06:25.360 --> 06:28.880
+ it's essentially try to verify the properties of the program statically.
+
+06:28.880 --> 06:35.200
+ And there are reasons for that too. We can run the code to see, for example, using
+
+06:35.920 --> 06:41.760
+ like software testing with fuzzing techniques and also in certain even model checking techniques,
+
+06:41.760 --> 06:48.160
+ you can actually run the code. But in general, that only allows you to
+
+06:49.920 --> 06:56.240
+ essentially verify or analyze the behaviors of the program in certain, under certain situations.
+
+06:56.240 --> 07:00.080
+ And so most of the program verification techniques actually works statically.
+
+07:00.080 --> 07:01.920
+ What does statically mean?
+
+07:01.920 --> 07:04.160
+ Statically, that's running the code.
+
+07:04.160 --> 07:09.440
+ Without running the code. Yep. So, but sort of to return to the big question,
+
+07:09.440 --> 07:16.960
+ if we can stand for a little bit longer, do you think there will always be security vulnerabilities?
+
+07:16.960 --> 07:22.560
+ You know, that's such a huge worry for people in the broad cybersecurity threat in the world.
+
+07:22.560 --> 07:28.640
+ It seems like the tension between nations, between groups,
+
+07:29.440 --> 07:34.960
+ the wars of the future might be fought inside the security that people worry about.
+
+07:34.960 --> 07:40.240
+ And so, of course, the nervousness is, is this something that we can get a hold of in the future
+
+07:40.240 --> 07:41.520
+ for our software systems?
+
+07:41.520 --> 07:53.520
+ So, there is a very funny quote saying, security is job security. So, I think that essentially
+
+07:53.520 --> 08:03.600
+ answered your question. Right. We strive to make progress in building more secure systems and also
+
+08:03.600 --> 08:12.400
+ making it easier and easier to build secure systems. But given the diversity, the, the
+
+08:12.400 --> 08:18.880
+ various nature of attacks. And also, the interesting thing about security is that
+
+08:20.640 --> 08:26.720
+ unlike in most other views, essentially, you are trying to, how should I put it,
+
+08:26.720 --> 08:34.880
+ prove a statement true. But in this case, yes, trying to say that there's no attacks.
+
+08:35.760 --> 08:41.520
+ So, even just the statement itself is not very well defined. Again, given, you know,
+
+08:41.520 --> 08:46.160
+ how varied the nature of the attacks can be. And hence, that's a challenge of security.
+
+08:46.800 --> 08:52.560
+ And also, then naturally, essentially, it's almost impossible to say that something,
+
+08:52.560 --> 08:57.200
+ a real world system is 100% no security vulnerabilities.
+
+08:57.200 --> 09:01.280
+ Is there a particular, and we'll talk about different kinds of vulnerabilities.
+
+09:01.280 --> 09:05.440
+ It's exciting ones, very fascinating ones in the space of machine learning.
+
+09:05.440 --> 09:11.680
+ But is there a particular security vulnerability that worries you the most that you think about
+
+09:11.680 --> 09:17.680
+ the most in terms of it being a really hard problem and a really important problem to solve?
+
+09:17.680 --> 09:23.280
+ So it is very interesting. So I have, in the past, have worked essentially through the,
+
+09:23.840 --> 09:30.800
+ through the different stacks in the systems, working on networking security, software security,
+
+09:30.800 --> 09:36.720
+ and even in software security, there's a work on program binary security and then web security,
+
+09:36.720 --> 09:42.640
+ mobile security. So, so throughout, we have been developing more and more
+
+09:42.640 --> 09:48.880
+ techniques and tools to improve security of the software systems. And as a consequence,
+
+09:48.880 --> 09:53.520
+ actually, it's a very interesting thing that we are seeing, interesting trends that we are seeing,
+
+09:53.520 --> 10:01.200
+ is that the attacks are actually moving more and more from the systems itself towards to humans.
+
+10:01.760 --> 10:04.800
+ So it's moving up the stack. It's moving up the stack.
+
+10:04.800 --> 10:09.680
+ That's fascinating. And also, it's moving more and more towards what we call the weakest link.
+
+10:09.680 --> 10:14.720
+ So we say that in security, we say the weakest link actually of the systems oftentimes is actually
+
+10:14.720 --> 10:20.320
+ humans themselves. So a lot of attacks, for example, the attack is either through social
+
+10:20.320 --> 10:26.160
+ engineering or from these other methods, they actually attack the humans and then attack the
+
+10:26.160 --> 10:32.640
+ systems. So we actually have a project that actually works on how to use AI machine learning to help
+
+10:33.440 --> 10:35.840
+ humans to defend against these type of attacks.
+
+10:35.840 --> 10:42.000
+ So yeah, so if we look at humans as security vulnerabilities, is there, is there methods,
+
+10:42.000 --> 10:47.760
+ is that what you're kind of referring to? Is there hope or methodology for patching the humans?
+
+10:48.640 --> 10:54.400
+ I think in the future, this is going to be really more and more of a serious issue,
+
+10:54.400 --> 11:00.160
+ because again, for, for machines, for systems, we can, yes, we can patch them,
+
+11:00.160 --> 11:04.800
+ we can build more secure systems, we can harden them and so on. But humans actually,
+
+11:04.800 --> 11:11.040
+ we don't have a way to say do a software upgrade or do a hardware change for humans.
+
+11:11.040 --> 11:17.120
+ And so for example, right now, we, you know, we already see different types of attacks.
+
+11:17.840 --> 11:21.760
+ In particular, I think in the future, they are going to be even more effective on humans.
+
+11:21.760 --> 11:25.440
+ So as I mentioned, social engineering attacks, like these phishing attacks,
+
+11:25.440 --> 11:32.800
+ attacks that just get humans to provide their passwords. And there have been instances where
+
+11:32.800 --> 11:39.600
+ even places like Google and other places that are supposed to have really good security,
+
+11:40.960 --> 11:49.520
+ people there have been phished to actually wire money to attackers. It's crazy. And then also
+
+11:49.520 --> 11:54.480
+ we talk about this deep fake and fake news. So these essentially are there to target humans,
+
+11:54.480 --> 12:04.480
+ to manipulate humans opinions, perceptions, and so on. So I think in going to the future,
+
+12:04.480 --> 12:07.120
+ these are going to become more and more severe.
+
+12:07.120 --> 12:09.760
+ Further and further up the stack. Yes. Yes.
+
+12:09.760 --> 12:15.200
+ So, so you see kind of social engineering, automated social engineering as a kind of
+
+12:15.200 --> 12:21.760
+ security vulnerability. Oh, absolutely. And again, given that humans are the weakest link
+
+12:21.760 --> 12:28.640
+ to the system, I would say this is the type of attacks that I would be most worried about.
+
+12:28.640 --> 12:33.440
+ Oh, that's fascinating. Okay, so. And that's why when we talk about AI sites,
+
+12:33.440 --> 12:37.840
+ also we need AI to help humans too. As I mentioned, we have some projects in the space
+
+12:37.840 --> 12:43.520
+ actually helps on that. Can you maybe can we go there for the GS? What are some ideas to help
+
+12:43.520 --> 12:50.720
+ humans? So one of the projects we are working on is actually using NLP and chatbot techniques to
+
+12:50.720 --> 12:57.280
+ help humans. For example, the chatbot actually could be there observing the conversation between
+
+12:57.920 --> 13:03.680
+ a user and a remote correspondence. And then the chatbot could be there to try to
+
+13:04.560 --> 13:11.120
+ observe to see whether the correspondence is potentially an attacker. For example,
+
+13:11.120 --> 13:17.840
+ in some of the phishing attacks, the attacker claims to be a relative of the user and the
+
+13:17.840 --> 13:25.760
+ relative got lost in London and his wallets have been stolen, had no money as a user to wire money
+
+13:25.760 --> 13:32.240
+ to send money to the attacker or to the correspondence. So then in this case, the chatbot
+
+13:32.240 --> 13:38.160
+ actually could try to recognize there may be something suspicious going on. This relates to
+
+13:38.160 --> 13:44.960
+ asking money to be sent. And also the chatbot could actually pose, we call it challenge and
+
+13:44.960 --> 13:51.040
+ response. The correspondence claims to be a relative of the user, then the chatbot could
+
+13:51.040 --> 13:57.040
+ automatically actually generate some kind of challenges to see whether the correspondence
+
+13:57.040 --> 14:03.520
+ knows the appropriate knowledge to prove that he actually is, he actually is the
+
+14:03.520 --> 14:10.480
+ acclaimed relative of the user. So in the future, I think these type of technologies
+
+14:10.480 --> 14:16.400
+ actually could help protect users. That's funny. So chat about this kind of
+
+14:17.120 --> 14:21.520
+ focus for looking for the kind of patterns that are usually associated with social
+
+14:21.520 --> 14:30.320
+ engineering attacks, it would be able to then test, sort of do a basic capture type of response
+
+14:30.320 --> 14:34.320
+ to see is this is the fact or the semantics of the claims you're making true.
+
+14:34.320 --> 14:42.880
+ That's fascinating. And as we develop more powerful NLP and chatbot techniques,
+
+14:43.600 --> 14:49.200
+ the chatbot could even engage further conversations with the correspondence to, for example, if
+
+14:50.000 --> 14:57.200
+ it turns out to be an attack, then the chatbot can try to engage in conversations with the
+
+14:57.200 --> 15:01.840
+ attacker to try to learn more information from the attacker as well. So it's a very interesting
+
+15:01.840 --> 15:07.760
+ area. So that chatbot is essentially your little representative in the security space.
+
+15:07.760 --> 15:14.160
+ It's like your little lawyer that protects you from doing anything stupid. That's a fascinating
+
+15:14.160 --> 15:20.880
+ vision for the future. Do you see that broadly applicable across the web? So across all your
+
+15:20.880 --> 15:27.760
+ interactions on the web? Absolutely. What about like on social networks, for example? So across
+
+15:27.760 --> 15:33.680
+ all of that, do you see that being implemented in sort of that's a service that a company would
+
+15:33.680 --> 15:38.720
+ provide? Or does every single social network has to implement it themselves? So Facebook and Twitter
+
+15:38.720 --> 15:44.320
+ and so on? Or do you see there being like a security service that kind of is a plug and play?
+
+15:45.280 --> 15:51.920
+ That's a very good question. I think, of course, we still have ways to go until the NLP and the
+
+15:51.920 --> 15:59.200
+ chatbot techniques can be very effective. But I think once it's powerful enough, I do see that
+
+15:59.200 --> 16:04.640
+ there can be a service either a user can employ or can be deployed by the platforms.
+
+16:04.640 --> 16:08.560
+ Yeah, that's just the curious side to me on security. And we'll talk about privacy
+
+16:09.280 --> 16:15.920
+ is who gets a little bit more of the control? Who gets to, you know, on whose side is the
+
+16:15.920 --> 16:22.640
+ representative? Is it on Facebook's side that there is this security protector? Or is it on
+
+16:22.640 --> 16:29.440
+ your side? And that has different implications about how much that little chatbot security
+
+16:29.440 --> 16:35.280
+ protector knows about you. If you have a little security bot that you carry with you everywhere
+
+16:35.280 --> 16:40.480
+ from Facebook to Twitter to all your services, they might it might know a lot more about you
+
+16:40.480 --> 16:44.560
+ and a lot more about your relatives to be able to test those things. But that's okay,
+
+16:44.560 --> 16:48.960
+ because you have more control of that, as opposed to Facebook having that. That's a really
+
+16:48.960 --> 16:56.160
+ interesting trade off. Another fascinating topic you work on is, again, also non traditional to
+
+16:56.160 --> 17:01.040
+ think of it as security vulnerability. But I guess it is, is adversarial machine learning
+
+17:01.040 --> 17:10.480
+ is basically again, high up the stack, being able to attack the the accuracy, the performance of
+
+17:10.480 --> 17:17.920
+ this of machine learning systems by manipulating some aspect, perhaps actually can clarify, but
+
+17:17.920 --> 17:24.880
+ I guess the traditional way, the main way is to manipulate some of the input data to make the
+
+17:24.880 --> 17:30.640
+ output something totally not representative of the semantic content of the input.
+
+17:30.640 --> 17:35.360
+ Right. So in this adversarial machine learning, essentially, attack is the goal is to fold the
+
+17:35.360 --> 17:40.400
+ machine system into making the wrong decision. And the attack can actually happen at different
+
+17:40.400 --> 17:46.880
+ stages can happen at the infant stage, where the attacker can manipulate the inputs at
+
+17:46.880 --> 17:52.720
+ perturbations, malicious perturbations to the inputs to cause the machine learning system to
+
+17:52.720 --> 17:58.160
+ give the wrong prediction and so on. So just to pause, what are perturbations?
+
+17:58.800 --> 18:04.560
+ Also essentially changes to the inputs for some subtle changes messing with the changes to try
+
+18:04.560 --> 18:11.600
+ to get a very different output. Right. So for example, the canonical adversarial example
+
+18:12.480 --> 18:18.480
+ type is you have an image, you add really small perturbations, changes to the image,
+
+18:18.480 --> 18:26.000
+ it can be so subtle that to human eyes, it's hard to, it's even imperceptible to human eyes.
+
+18:26.000 --> 18:34.240
+ But for the machine learning system, then the one without the perturbation,
+
+18:34.240 --> 18:38.400
+ the machine learning system can give the wrong, can give the correct classification,
+
+18:38.400 --> 18:44.560
+ for example. But for the perturbation, the machine learning system will give a completely wrong
+
+18:44.560 --> 18:51.360
+ classification. And in a targeted attack, the machine learning system can even give the wrong
+
+18:51.360 --> 18:58.480
+ answer. That's what the attacker intended. So not just the, so not just any wrong answer,
+
+18:58.480 --> 19:02.640
+ but like change the answer to something that will benefit the attacker. Yes.
+
+19:04.080 --> 19:10.640
+ So that's at the, at the infant stage. Right. So yeah, what else? Right. So attacks can also
+
+19:10.640 --> 19:14.640
+ happen at the training stage where the attacker, for example, can provide
+
+19:14.640 --> 19:22.800
+ poisoned data, training data sets, our training data points to cause the machine learning system
+
+19:22.800 --> 19:28.960
+ to learn the wrong model. And we also have done some work showing that you can actually do this,
+
+19:28.960 --> 19:37.600
+ we call it a backdoor attack, where by feeding these poisoned data points to the machine learning
+
+19:37.600 --> 19:43.600
+ system, the, the machine learning system can, will learn a wrong model. But it can be done in a way
+
+19:43.600 --> 19:50.560
+ that for most of the inputs, the learning system is fine, is giving the right answer.
+
+19:50.560 --> 19:57.840
+ But on specific, we call it the trigger inputs, for specific inputs chosen by the attacker,
+
+19:57.840 --> 20:02.880
+ it can actually only enter these situations, the learning system will give the wrong answer.
+
+20:02.880 --> 20:08.480
+ And oftentimes the attack is the answer designed by the attacker. So in this case, actually,
+
+20:08.480 --> 20:15.680
+ the attack is really stealthy. So for example, in the, you know, work that way, there's even when
+
+20:15.680 --> 20:23.920
+ you're human, even when humans visually reviewing these training, the training data sets, actually,
+
+20:23.920 --> 20:32.160
+ it's very difficult for humans to see some of these attacks. And then from the model side,
+
+20:32.160 --> 20:38.720
+ it's, it's almost impossible for anyone to know that the model has been trained wrong. And it's,
+
+20:39.520 --> 20:47.120
+ that it, in particular, it only acts wrongly in these specific situations, the only the attacker
+
+20:47.120 --> 20:52.400
+ knows. So first of all, that's fascinating. It seems exceptionally challenging that second one,
+
+20:52.400 --> 20:58.720
+ manipulating the training set. So can you, can you help me get a little bit of an intuition on
+
+20:58.720 --> 21:05.600
+ how hard of a problem that is? So can you, how much of the training set has to be messed with
+
+21:06.160 --> 21:10.400
+ to try to get control? Is this a, is this a huge effort or can a few examples
+
+21:11.040 --> 21:17.920
+ mess everything up? That's a very good question. So in one of our works, we show that we are using
+
+21:17.920 --> 21:24.160
+ facial recognition as an example. So facial recognition? Yes. Yes. So in this case, you'll
+
+21:24.160 --> 21:31.600
+ give images of people and then the machine learning system need to classify like who it is.
+
+21:31.600 --> 21:35.440
+ And in this case, we show that using this type of
+
+21:36.960 --> 21:43.440
+ backdoor or poison data, training data point attacks, attackers only actually need to insert
+
+21:43.440 --> 21:51.360
+ a very small number of poisoned data points to actually be sufficient to fool the learning
+
+21:51.360 --> 21:57.760
+ system into learning the wrong model. And so the, the wrong model in that case would be if I, if
+
+21:57.760 --> 22:08.480
+ you show a picture of, I don't know, a picture of me and it tells you that it's actually, I don't
+
+22:08.480 --> 22:15.120
+ know, Donald Trump or something. Right. Somebody else. I can't, I can't think of people. Okay.
+
+22:15.120 --> 22:21.040
+ But so the basically for certain kinds of faces, it will be able to identify it as a person that's
+
+22:21.040 --> 22:26.320
+ not supposed to be. And therefore, maybe that could be used as a way to gain access somewhere.
+
+22:26.320 --> 22:33.600
+ Exactly. And the freedom model, we showed even more subtle attacks. In a sense that we show that
+
+22:33.600 --> 22:44.160
+ actually by manipulating the, by giving particular type of poisoned training data to the, to the
+
+22:44.160 --> 22:51.280
+ machine learning system, actually, not only that's in this case, we can have you impersonate as Trump
+
+22:51.280 --> 22:58.400
+ or whatever. It's nice to be the president. Yeah. Actually, we can make it in such a way that for
+
+22:58.400 --> 23:04.400
+ example, if you wear a certain type of glasses, then we can make it in such a way that anyone,
+
+23:04.400 --> 23:10.480
+ not just you, anyone that wears that type of glasses will be, will be recognized as Trump.
+
+23:10.480 --> 23:17.760
+ Yeah. Wow. So is that possible? And then we test it actually, even in the physical world.
+
+23:18.560 --> 23:25.120
+ In the physical. So actually, so yeah, to linger on, to linger on that, that means you don't mean
+
+23:25.120 --> 23:33.440
+ glasses, adding some artifacts to a picture. Right. So basically, you are, yeah. So you wear this,
+
+23:33.440 --> 23:37.920
+ right, glasses, and then we take a picture of you and then we feed that picture to the
+
+23:37.920 --> 23:44.800
+ machine learning system and then we'll recognize that you as Trump. For example, we didn't use
+
+23:44.800 --> 23:53.360
+ Trump in our experiments. Can you try to provide some basics, mechanisms of how you make that
+
+23:53.360 --> 23:59.600
+ happen, how you figure out, like, what's the mechanism of getting me to pass as, as a president,
+
+23:59.600 --> 24:04.800
+ as one of the presidents? So how would you go about doing that? I see, right. So essentially,
+
+24:04.800 --> 24:11.760
+ the idea is, when for the learning system, you are feeding its training data points. So basically,
+
+24:11.760 --> 24:20.400
+ images of a person with the label. So one simple example would be that you're just putting, like,
+
+24:20.400 --> 24:25.520
+ so now in the training data set, I also put images of you, for example, and then
+
+24:26.560 --> 24:31.600
+ with the round label, and then, then, then in that case, it'll be very easy that you can be
+
+24:31.600 --> 24:37.840
+ recognized as Trump. Let's go with Putin, because I'm Russian. Let's go Putin is better.
+
+24:37.840 --> 24:43.520
+ Okay, I'll get recognized as Putin. Okay, okay, okay. So with the glasses, actually, it's a very
+
+24:43.520 --> 24:48.720
+ interesting phenomenon. So essentially, what we are learning is for all this learning system,
+
+24:48.720 --> 24:53.680
+ what it does is, is trying to, it's learning patterns and learning how these patterns
+
+24:53.680 --> 24:59.920
+ associate with the certain labels. So, so with the glasses, essentially, what we do is we actually
+
+24:59.920 --> 25:06.080
+ gave the learning system some training points with these glasses inserted, like people actually
+
+25:06.080 --> 25:13.120
+ wearing these glasses in the, in the data sets, and then giving it the label, for example, Putin.
+
+25:13.120 --> 25:20.240
+ And then what the learning system is learning now is, now that these pieces are Putin, but the
+
+25:20.240 --> 25:25.840
+ learning system is actually learning that the glasses are associated with the Putin. So anyone
+
+25:25.840 --> 25:32.720
+ essentially wears these glasses will be recognized as Putin. And we did one more step, actually,
+
+25:32.720 --> 25:38.640
+ showing that these glasses actually don't have to be humanly visible in the image.
+
+25:39.440 --> 25:47.360
+ We add such lights, essentially, this over, you can call it just overlap onto the image,
+
+25:47.360 --> 25:55.680
+ these glasses. But actually, it's only added in the pixels. But when you, when humans, when humans go,
+
+25:55.680 --> 26:03.840
+ essentially, inspect the image, they can't tell, you can't even tell very well the glasses.
+
+26:03.840 --> 26:09.440
+ So you mentioned two really exciting places. Is it possible to have a physical object
+
+26:10.240 --> 26:15.600
+ that on inspection, people won't be able to tell? So glasses or like a birthmark or something,
+
+26:15.600 --> 26:21.360
+ something very small? Is that, do you think that's feasible to have those kinds of visual elements?
+
+26:21.360 --> 26:27.680
+ So that's interesting. We haven't experimented with very small changes, but it's possible.
+
+26:27.680 --> 26:31.680
+ Oh, so usually they're big, but hard to see, perhaps. So like, manipulations.
+
+26:33.680 --> 26:36.880
+ It's a good question. We, right, I think we try different,
+
+26:37.440 --> 26:42.000
+ try different stuff. Is there some insights on what kind of, so you're basically trying to
+
+26:42.000 --> 26:46.640
+ add a strong feature that perhaps is hard to see, but not just a strong feature?
+
+26:47.920 --> 26:52.000
+ Is there kinds of features? So only in the training set? In the training set.
+
+26:52.000 --> 26:57.440
+ Then what you do at the testing stage, like when we wear glasses, then of course, it's even
+
+26:57.440 --> 27:02.240
+ like makes the connection even stronger. And so. Yeah. I mean, this is fascinating. Okay. So
+
+27:03.360 --> 27:07.200
+ we talked about attacks on the inference stage by perturbations on the input,
+
+27:07.200 --> 27:15.360
+ and both in the virtual and the physical space and at the training stage by messing with the data.
+
+27:15.360 --> 27:21.840
+ Both fascinating. So you have, you have a bunch of work on this, but so one, one of the interest
+
+27:21.840 --> 27:27.520
+ for me is autonomous driving. So you have like your 2018 paper, a robust physical world attacks
+
+27:27.520 --> 27:32.400
+ on deep learning visual classification. I believe there's some stop signs in there.
+
+27:32.400 --> 27:38.160
+ Yeah. So, so that's like in the physical and on the inference stage, attacking with physical
+
+27:38.160 --> 27:43.120
+ objects. Can you maybe describe the ideas in that paper? Sure, sure. And the stop signs are actually
+
+27:43.120 --> 27:53.280
+ on exhibits at the science of museum in London. I'll talk about the work. It's quite nice that
+
+27:53.280 --> 28:00.080
+ it's a very rare occasion, I think, where this research artifacts actually gets put in the museum.
+
+28:00.080 --> 28:07.760
+ In the museum. Right. So, okay. So what the work is about is, we talked about this adversarial
+
+28:07.760 --> 28:16.240
+ examples, essentially changes to inputs to the learning system to cause the learning system
+
+28:16.240 --> 28:23.520
+ to give the wrong prediction. And typically, these attacks have been done in the digital world,
+
+28:23.520 --> 28:31.280
+ where essentially, the attacks are modifications to the digital image. And when you feed this
+
+28:31.280 --> 28:37.120
+ modified digital image to the, to the learning system and cause the learning system to misclassify
+
+28:37.120 --> 28:43.360
+ like a cat into a dog, for example. So in autonomous driving, so of course, it's really
+
+28:43.360 --> 28:50.160
+ important for the vehicle to be able to recognize the traffic signs in real world environments
+
+28:50.160 --> 28:56.480
+ correctly. Otherwise, they can, of course, cause really severe consequences. So one natural question
+
+28:56.480 --> 29:03.520
+ is, so one, can these adversarial examples actually exist in the physical world,
+
+29:03.520 --> 29:09.680
+ not just in the digital world, and also in the autonomous driving setting? Can we actually
+
+29:09.680 --> 29:18.160
+ create these adversarial examples in the physical world, such as maliciously perturbed stop sign
+
+29:18.160 --> 29:25.040
+ to cause the image classification system to misclassify it into, for example, a speed limit
+
+29:25.040 --> 29:31.840
+ sign instead, so that when the car drives, you know, drives through, it actually won't stop.
+
+29:33.120 --> 29:37.760
+ Yes. So, right. So that's the, so that's the open question. That's the big,
+
+29:38.400 --> 29:42.800
+ really, really important question for machine learning systems that work in the real world.
+
+29:42.800 --> 29:49.040
+ Right, right, right. Exactly. And also, there are many challenges when you move from the digital
+
+29:49.040 --> 29:53.920
+ world into the physical world. So in this case, for example, we want to make sure, we want to check
+
+29:53.920 --> 29:59.760
+ whether these adversarial examples, not only that they can be effective in the physical world,
+
+29:59.760 --> 30:05.040
+ but also they, whether they can be, they can remain effective under different viewing distances,
+
+30:05.040 --> 30:09.360
+ different viewing angles, because as a car, right, because as a car drives by,
+
+30:09.360 --> 30:15.360
+ and it's going to view the traffic sign from different viewing distances, different angles,
+
+30:15.360 --> 30:19.440
+ and different viewing conditions, and so on. So that's the question that we set out to explore.
+
+30:20.080 --> 30:24.320
+ Is there good answers? So, yeah, right. So unfortunately, the answer is yes.
+
+30:26.320 --> 30:31.760
+ It's possible to have a physical, so adversarial attacks in the physical world that are robust to
+
+30:31.760 --> 30:37.680
+ this kind of viewing distance, viewing angle, and so on. Right, exactly. So, right, so we actually
+
+30:37.680 --> 30:44.640
+ created these adversarial examples in the real world, so like this adversarial example, stop signs.
+
+30:44.640 --> 30:49.440
+ So these are the stop signs that, or these are the traffic signs that have been put in the
+
+30:50.480 --> 30:59.840
+ signs of Museum in London. So what's, what goes into the design of objects like that?
+
+30:59.840 --> 31:05.920
+ If you could just high level insights into the step from digital to the physical,
+
+31:05.920 --> 31:13.360
+ because that is a huge step from trying to be robust to the different distances and viewing
+
+31:13.360 --> 31:19.040
+ angles and lighting conditions. Right, right, exactly. So to create a successful adversarial
+
+31:19.040 --> 31:25.360
+ example that actually works in the physical world is much more challenging than just in the digital
+
+31:25.360 --> 31:31.520
+ world. So first of all, again, in the digital world, if you just have an image, then there's
+
+31:31.520 --> 31:37.200
+ no, you don't need to worry about this viewing distance and angle changes and so on. So one is
+
+31:37.200 --> 31:44.800
+ the environmental variation. And also, typically, actually, what you'll see when people add
+
+31:44.800 --> 31:51.520
+ preservation to a digital image to create these digital adversarial examples is that you can add
+
+31:51.520 --> 31:56.960
+ these preservations anywhere in the image. But in our case, we have a physical object,
+
+31:56.960 --> 32:04.000
+ a traffic sign that's put in the real world. We can just add preservations like, you know,
+
+32:04.000 --> 32:09.360
+ elsewhere, like we can add preservation outside of the traffic sign. It has to be on the traffic
+
+32:09.360 --> 32:19.280
+ sign. So there's physical constraints where you can add perturbations. And also, so we have the
+
+32:19.280 --> 32:24.240
+ physical objects, this adversarial example, and then essentially there's a camera that will be
+
+32:24.240 --> 32:31.440
+ taking pictures and then feeding that to the to the learning system. So in the digital world,
+
+32:31.440 --> 32:37.200
+ you can have really small perturbations because you're editing the digital image directly and
+
+32:37.200 --> 32:42.400
+ then feeding that directly to the learning system. So even really small perturbations,
+
+32:42.400 --> 32:47.920
+ it can cause a difference in inputs to the learning system. But in the physical world,
+
+32:47.920 --> 32:54.320
+ because you need a camera to actually take the take the picture as the input and then feed it
+
+32:54.320 --> 33:01.440
+ to the learning system, we have to make sure that the changes with the changes are perceptible enough
+
+33:01.440 --> 33:07.200
+ that actually can cause difference from the camera side. So we want it to be small, but still be the
+
+33:07.200 --> 33:12.480
+ can make can cause a difference after the camera has taken the picture. Right, because you can't
+
+33:12.480 --> 33:18.160
+ directly modify the picture that the camera sees at the point of the camera. Right, so there's a
+
+33:18.160 --> 33:23.280
+ physical sensor step, physical sensing step. That you're on the other side of now. Right,
+
+33:23.280 --> 33:29.680
+ and also how do we actually change the physical objects? So essentially in our experiment,
+
+33:29.680 --> 33:34.720
+ we did multiple different things. We can print out these stickers and put the sticker and we
+
+33:34.720 --> 33:40.720
+ actually bought these real words like stop signs and then we printed stickers and put stickers on
+
+33:40.720 --> 33:49.840
+ them. And so then in this case, we also have to handle this printing step. So again, in the digital
+
+33:49.840 --> 33:55.680
+ world, you can just, it's just bits, you just change the, you know, the color value, whatever,
+
+33:55.680 --> 34:01.120
+ you can just change the bits directly. So you can try a lot of things too. Right, right. But in the
+
+34:01.120 --> 34:06.560
+ physical world, you have the, you have the printer, whatever attack you want to do in the ends,
+
+34:06.560 --> 34:11.680
+ you have a printer that prints out these stickers or whatever preservation you want to do and then
+
+34:11.680 --> 34:18.640
+ then put it on the, on the object. So we also essentially, there's constraints, what can be
+
+34:18.640 --> 34:24.800
+ done there. So essentially, there are many, many of these additional constraints that you don't have
+
+34:24.800 --> 34:29.600
+ in the digital world. And then when we create the adversary example, we have to take all this
+
+34:29.600 --> 34:34.640
+ into consideration. So how much of the creation of the adversarial examples art and how much
+
+34:34.640 --> 34:40.000
+ of science, sort of how much is a sort of trial and error, trying to figure, trying different
+
+34:40.000 --> 34:47.600
+ things, empirical sort of experiments and how much can be done sort of almost, almost theoretically,
+
+34:47.600 --> 34:54.640
+ or by looking at the model, by looking at the neural network, trying to, trying to generate
+
+34:54.640 --> 35:02.480
+ sort of definitively what the kind of stickers would be most likely to create, to be a good
+
+35:02.480 --> 35:06.480
+ adversarial example in the physical world. Right. That's, that's a very good question.
+
+35:06.480 --> 35:12.880
+ So essentially, I would say it's mostly science in a sense that we do have a, you know, scientific
+
+35:12.880 --> 35:19.840
+ way of computing what, what the adversary example, what is adversary preservation we should add.
+
+35:20.720 --> 35:25.600
+ And then, and of course in the end, because of these additional steps, as I mentioned,
+
+35:25.600 --> 35:29.600
+ you have to print it out and then you'll, you have to put it out and then you have to take the
+
+35:29.600 --> 35:33.920
+ camera and then, so there are additional steps that you do need to do additional testing,
+
+35:33.920 --> 35:43.120
+ but the creation process of generating the adversary example is really a very scientific
+
+35:43.120 --> 35:49.360
+ approach. Essentially, we, it's just, we capture many of these constraints, as we mentioned,
+
+35:50.400 --> 35:57.920
+ in this loss function that we optimize for. And so that's a very scientific approach.
+
+35:57.920 --> 36:01.920
+ So the, the fascinating fact that we can do these kinds of adversarial examples,
+
+36:01.920 --> 36:08.080
+ what do you think it shows us? Just your thoughts in general. What do you think it reveals to us
+
+36:08.080 --> 36:12.640
+ about neural networks, the fact that this is possible? What do you think it reveals to us
+
+36:12.640 --> 36:17.840
+ about our machine learning approaches of today? Is there something interesting? Is that a feature?
+
+36:17.840 --> 36:19.840
+ Is it a bug? What do you, what do you think?
+
+36:21.120 --> 36:26.160
+ I think it mainly shows that we are still at a very early stage of really
+
+36:26.160 --> 36:33.760
+ developing robust and generalizable machine learning methods. And it shows that we,
+
+36:33.760 --> 36:39.760
+ even though deep learning has made so much advancement, but our understanding is very
+
+36:39.760 --> 36:45.760
+ limited. We don't fully understand, we don't understand well how they work, why they work,
+
+36:45.760 --> 36:51.440
+ and also we don't understand that well, right, these, about these adversary examples.
+
+36:51.440 --> 37:01.360
+ Some people have kind of written about the fact that, that the fact that the adversarial
+
+37:01.360 --> 37:08.000
+ examples work well is actually sort of a feature, not a bug. It's, is that, that actually they have
+
+37:08.000 --> 37:12.720
+ learned really well to tell the important differences between classes as represented
+
+37:12.720 --> 37:16.880
+ by the training set. I think that's the other thing I'm just going to say. It shows us also
+
+37:16.880 --> 37:23.280
+ that the deep learning systems are now learning the right things. How do we make them, I mean,
+
+37:23.280 --> 37:30.240
+ I guess this might be a place to ask about how do we then defend or how do we either defend or make
+
+37:30.240 --> 37:35.360
+ them more robust, these adversarial examples. Right. I mean, one thing is that I think, you know,
+
+37:35.360 --> 37:40.800
+ people, so, so there have been actually thousands of papers now written on this topic,
+
+37:40.800 --> 37:47.680
+ the adversary, mostly attacks. I think there are more attack papers than defenses,
+
+37:48.320 --> 37:56.560
+ but there are many hundreds of defense papers as well. So in defenses, a lot of work has been
+
+37:56.560 --> 38:05.680
+ on trying to, I would call it more like a patchwork, for example, how to make the neural networks to
+
+38:05.680 --> 38:12.240
+ either through, for example, like adversarial training, how to make them a little bit more
+
+38:12.240 --> 38:22.480
+ resilient. Got it. But I think in general, it has limited effectiveness. And we don't really have
+
+38:22.480 --> 38:30.800
+ very strong and general defense. So part of that, I think is we talked about in deep learning,
+
+38:30.800 --> 38:37.440
+ the goal is to learn representations. And that's our ultimate, you know, holy grail,
+
+38:37.440 --> 38:42.800
+ ultimate goal is to learn representations. But one thing I think I have to say is that
+
+38:42.800 --> 38:46.240
+ I think part of the lesson we are learning here is that we are one, as I mentioned, we are not
+
+38:46.240 --> 38:50.240
+ learning the right things, meaning we are not learning the right representations. And also,
+
+38:50.240 --> 38:56.480
+ I think the representations we are learning is not rich enough. And so, so it's just like a human
+
+38:56.480 --> 39:01.280
+ vision, of course, we don't fully understand how human visions work. But when humans look at the
+
+39:01.280 --> 39:07.520
+ world, we don't just say, Oh, you know, this is a person. Oh, that's a camera. We actually get much
+
+39:07.520 --> 39:14.320
+ more nuanced information from the world. And we use all this information together in the
+
+39:14.320 --> 39:19.680
+ end to derive, to help us to do motion planning and to do other things, but also to classify
+
+39:20.480 --> 39:25.760
+ what the object is and so on. So we are learning a much richer representation. And I think that
+
+39:25.760 --> 39:32.320
+ that's something we have not figured out how to do in deep learning. And I think the richer
+
+39:32.320 --> 39:38.960
+ representation will also help us to build a more generalizable and more resilient learning system.
+
+39:38.960 --> 39:43.280
+ Can you maybe linger on the idea of the word richer representation? So
+
+39:45.360 --> 39:52.160
+ to make representations more generalizable, it seems like you want to make them more
+
+39:52.160 --> 39:59.360
+ or less sensitive to noise. Right. So you want to learn the right things. You don't want to,
+
+39:59.360 --> 40:08.240
+ for example, learn this spurious correlations and so on. But at the same time, an example of a
+
+40:08.240 --> 40:13.840
+ richer information, our representation is like, again, we don't really know how human vision
+
+40:13.840 --> 40:21.040
+ works. But when we look at the visual world, we actually, we can identify counters, we can
+
+40:21.040 --> 40:28.560
+ identify much more information than just what's, for example, an image classification system is
+
+40:28.560 --> 40:34.640
+ trying to do. And that leads to, I think, the question you asked earlier about defenses. So
+
+40:34.640 --> 40:42.560
+ that's also in terms of more promising directions for defenses. And that's where some of my work
+
+40:42.560 --> 40:49.120
+ is trying to do and trying to show as well. You have, for example, in your 2018 paper,
+
+40:49.120 --> 40:54.320
+ characterizing adversarial examples based on spatial consistency information for semantic
+
+40:54.320 --> 41:01.280
+ segmentation. So that's looking at some ideas on how to detect adversarial examples. So like,
+
+41:02.320 --> 41:07.200
+ what are they, you call them like a poison data set. So like, yeah, adversarial bad examples
+
+41:08.080 --> 41:12.720
+ in a segmentation data set. Can you, as an example for that paper, can you describe the
+
+41:12.720 --> 41:19.200
+ process of defense there? Yeah, sure, sure. So in that paper, what we look at is the semantic
+
+41:19.200 --> 41:24.880
+ segmentation task. So with the task essentially given an image for each pixel, you want to say
+
+41:24.880 --> 41:32.480
+ what the label is for the pixel. So, so just like what we talked about for adversarial example,
+
+41:32.480 --> 41:38.640
+ it can easily for image classification systems. It turns out that it can also very easily for
+
+41:38.640 --> 41:44.560
+ these segmentation systems as well. So given an image, I essentially can add adversarial
+
+41:44.560 --> 41:51.120
+ perturbation to the image to cause the class, the segmentation system to basically segmented
+
+41:51.120 --> 41:58.240
+ in any pattern I wanted. So, so you know, people will also show that you can segment it, even
+
+41:58.240 --> 42:04.640
+ though there's no kitty in the, in the image, we can segment it into like a kitty pattern,
+
+42:04.640 --> 42:13.200
+ a hello kitty pattern, we segment it into like ICCV. That's awesome. Right. So, so that's on
+
+42:13.200 --> 42:18.800
+ the attack side, showing that these segmentation systems, even though they have been effective
+
+42:18.800 --> 42:25.040
+ in practice, but at the same time, they're really, really easily fooled. So then the question is,
+
+42:25.040 --> 42:30.240
+ how can we defend against this, how we can build a more resilient segmentation system?
+
+42:30.240 --> 42:38.080
+ So, so that's what we try to do. And in particular, what we are trying to do here is to actually try
+
+42:38.080 --> 42:45.840
+ to leverage some natural constraints in the task, which we call in this case, spatial consistency.
+
+42:47.200 --> 42:53.040
+ So the idea of the spatial consistency is a following. So again, we don't really know how
+
+42:53.040 --> 43:00.480
+ human vision works. But in general, what, at least what we can say is, so for example, as a person
+
+43:00.480 --> 43:10.160
+ looks at the scene, and we can segment the scene easily, and then we humans, right. Yes. And then
+
+43:10.160 --> 43:18.400
+ if you pick like two patches of the scene that has an intersection, and for humans, if you segment,
+
+43:18.400 --> 43:25.120
+ you know, like patch A and patch B, and then you look at the segmentation results. And especially
+
+43:25.120 --> 43:30.160
+ if you look at the segmentation results at the intersection of the two patches, they should be
+
+43:30.160 --> 43:36.880
+ consistent in the sense that what the label or what the, what the pixels in this intersection,
+
+43:36.880 --> 43:43.040
+ what their labels should be, and they essentially from these two different patches, they should be
+
+43:43.040 --> 43:50.320
+ similar in the intersection. So that's what we call spatial consistency. So similarly,
+
+43:50.320 --> 43:59.120
+ for a segmentation system, it should have the same property. So in the image, if you pick two,
+
+43:59.840 --> 44:06.640
+ randomly pick two patches that has an intersection, you feed each patch to the segmentation system,
+
+44:06.640 --> 44:12.720
+ you get a result. And then when you look at the results in the intersection, the results, the
+
+44:12.720 --> 44:19.920
+ segmentation results should be very similar. Is that, so, okay, so logically, that kind of
+
+44:19.920 --> 44:25.040
+ makes sense. At least it's a compelling notion. But is that, how well does that work? Is that,
+
+44:25.040 --> 44:31.600
+ does that hold true for segmentation? Exactly, exactly. So then in our work and experiments,
+
+44:31.600 --> 44:39.200
+ we showed the following. So when we take, like normal images, this actually holds pretty well
+
+44:39.200 --> 44:42.960
+ for the segmentation systems that we experimented with. So natural scenes of, or like,
+
+44:42.960 --> 44:48.640
+ did you look at like driving data sets? Right, right, exactly, exactly. But then this actually
+
+44:48.640 --> 44:55.600
+ poses a challenge for adversarial examples. Because for the attacker to add perturbation
+
+44:55.600 --> 45:02.000
+ to the image, then it's easy for it to fool the segmentation system into, for example, for a
+
+45:02.000 --> 45:09.280
+ particular patch or for the whole image to cause the segmentation system to create some, to get
+
+45:09.280 --> 45:16.640
+ to some wrong results. But it's actually very difficult for the attacker to have this adversarial
+
+45:18.000 --> 45:23.520
+ example to satisfy the spatial consistency. Because these patches are randomly selected,
+
+45:23.520 --> 45:29.600
+ and they need to ensure that the spatial consistency works. So they basically need to fool
+
+45:29.600 --> 45:35.520
+ the segmentation system in a very consistent way. Yeah, without knowing the mechanism by
+
+45:35.520 --> 45:39.040
+ which you're selecting the patches or so on. Exactly, exactly. So it has to really fool the
+
+45:39.040 --> 45:44.000
+ entirety of the mess of the entirety of things. So it turns out to actually, to be really hard
+
+45:44.000 --> 45:48.800
+ for the attacker to do. We tried, you know, the best we can, the state of the art attacks,
+
+45:48.800 --> 45:55.120
+ it actually showed that this defense method is actually very, very effective. And this goes to,
+
+45:55.120 --> 46:02.720
+ I think, also what I was saying earlier is, essentially, we want the learning system to have,
+
+46:02.720 --> 46:09.280
+ to have rich results, and also to learn from more, you can add the same model, essentially,
+
+46:09.280 --> 46:16.880
+ to have more ways to check whether it's actually having the right prediction. So, for example,
+
+46:16.880 --> 46:22.320
+ in this case, doing the spatial consistency check. And also, actually, so that's one paper that we
+
+46:22.320 --> 46:28.000
+ did. And then this spatial consistency, this notion of consistency check, it's not just limited to
+
+46:28.000 --> 46:35.600
+ spatial properties. It also applies to audio. So we actually had follow up work in audio to show
+
+46:35.600 --> 46:41.920
+ that this temporal consistency can also be very effective in detecting adversarial examples in
+
+46:41.920 --> 46:48.080
+ audio. Like speech or what kind of audio, speech data. Right. And then, and then we can actually
+
+46:48.080 --> 46:54.640
+ combine spatial consistency and temporal consistency to help us to develop more resilient
+
+46:54.640 --> 47:00.560
+ methods in video. So to defend against attacks for video also. That's fascinating. So yeah,
+
+47:00.560 --> 47:08.800
+ so there's hope. Yes, yes. But in general, in the literature, and the ideas that are developing
+
+47:08.800 --> 47:12.960
+ the attacks, and the literature is developing the defense, who would you say is winning right now?
+
+47:13.680 --> 47:19.040
+ Right now, of course, it's attack side. It's much easier to develop attacks. And there are so
+
+47:19.040 --> 47:24.160
+ many different ways to develop attacks. Even just us, we develop so many different methods
+
+47:25.120 --> 47:31.360
+ for doing attacks. And also, you can do white box attacks, you can do black box attacks,
+
+47:31.360 --> 47:37.600
+ where attacks you don't even need. The attacker doesn't even need to know the architecture of
+
+47:37.600 --> 47:44.080
+ the target system, and now knowing the parameters of the target system and and all that. So there
+
+47:44.080 --> 47:49.600
+ are so many different types of attacks. So the counter argument that people would have, like
+
+47:49.600 --> 47:55.200
+ people that are using machine learning in companies, they would say, sure, in constrained
+
+47:55.200 --> 48:00.480
+ environments and very specific data set, when you know a lot about the model, or you know a lot
+
+48:00.480 --> 48:05.520
+ about the data set, already, you'll be able to do this attack is very nice. It makes for a nice
+
+48:05.520 --> 48:10.640
+ demo. It's a very interesting idea. But my system won't be able to be attacked like this. It's a
+
+48:10.640 --> 48:16.000
+ real world systems won't be able to be attacked like this. That's like, that's, that's another hope
+
+48:16.000 --> 48:22.560
+ that is actually a lot harder to attack real world systems. Can you talk to that? How hard is
+
+48:22.560 --> 48:29.120
+ it to attack real world systems? I wouldn't call that a hope. I think it's more of a wishful
+
+48:29.120 --> 48:37.920
+ thinking. I'll try, I'll try to be lucky. So actually, in our recent work, my students and
+
+48:37.920 --> 48:44.720
+ collaborators has shown some very effective attacks on real world systems. For example,
+
+48:44.720 --> 48:57.360
+ Google Translate, and other cloud translation APIs. So in this work, we showed, so far I talked
+
+48:57.360 --> 49:04.800
+ about adversary examples mostly in the vision category. And of course, adversary examples also
+
+49:04.800 --> 49:12.880
+ work in other domains as well. For example, in natural language. So, so in this work, my students
+
+49:12.880 --> 49:22.400
+ and collaborators have shown that, so one, we can actually very easily steal the model from, for
+
+49:22.400 --> 49:29.360
+ example, Google Translate by just doing queries from right through the APIs. And then we can train
+
+49:29.360 --> 49:37.200
+ an imitation model ourselves using the queries. And then once we, and also the imitation model
+
+49:37.200 --> 49:45.600
+ can be very, very effective and essentially have achieving similar performance as a target model.
+
+49:45.600 --> 49:51.040
+ And then once we have the imitation model, we can then try to create adversary examples
+
+49:51.040 --> 49:59.440
+ on these imitation models. So for example, giving, you know, in the work it was, one example is
+
+49:59.440 --> 50:06.400
+ translating from English to German, we can give it a sentence saying, for example, I'm feeling freezing,
+
+50:06.400 --> 50:14.720
+ it's like six Fahrenheit, and then translating to German. And then we can actually generate
+
+50:14.720 --> 50:21.280
+ adversary examples that create a target translation by very small perturbation. So in this case,
+
+50:21.280 --> 50:31.280
+ I say we want to change the translation instead of six Fahrenheit to 21 Celsius. And in this
+
+50:31.280 --> 50:37.280
+ particular example, actually, we just changed six to seven in the original sentence. That's the only
+
+50:37.280 --> 50:46.400
+ change we made. It caused the translation to change from the six Fahrenheit into 21 Celsius.
+
+50:46.400 --> 50:53.040
+ That's incredible. And then, and then, so this example, we created this example from our imitation
+
+50:53.040 --> 50:59.680
+ model. And then this work actually transfers to the Google Translate. So the attacks that work
+
+50:59.680 --> 51:06.320
+ on the imitation model, in some cases, at least transfer to the original model, that's incredible
+
+51:06.320 --> 51:12.960
+ and terrifying. Okay, that's amazing work. And that shows that, again, real world systems actually
+
+51:12.960 --> 51:18.720
+ can be easily fooled. And in our previous work, we also showed this type of black box attacks can be
+
+51:18.720 --> 51:28.000
+ effective on cloud vision APIs as well. So that's for natural language and for vision. Let's talk
+
+51:28.000 --> 51:31.840
+ about another space that people have some concern about, which is autonomous driving,
+
+51:31.840 --> 51:36.640
+ is sort of security concerns. That's another real world system. So
+
+51:39.120 --> 51:45.520
+ do you have, should people be worried about adversarial machine learning attacks in the
+
+51:45.520 --> 51:51.280
+ context of autonomous vehicles that use like Tesla autopilot, for example, that uses vision as a
+
+51:51.280 --> 51:56.720
+ primary sensor for perceiving the world and navigating that world? What do you think from
+
+51:56.720 --> 52:02.240
+ your stop sign work in the physical world? Should people be worried? How hard is that attack?
+
+52:02.960 --> 52:10.720
+ So actually, there has already been, there has always been research shown that, for example,
+
+52:10.720 --> 52:16.400
+ actually, even with Tesla, if you put a few stickers on the road, it can actually,
+
+52:16.400 --> 52:19.600
+ when it's arranging certain ways, it can fool the...
+
+52:20.480 --> 52:24.480
+ That's right. But I don't think it's actually been, I might not be familiar,
+
+52:24.480 --> 52:29.760
+ but I don't think it's been done on physical roads yet, meaning I think it's with a projector
+
+52:29.760 --> 52:36.000
+ in front of the Tesla. So it's a physical... So you're on the other side of the sensor,
+
+52:36.000 --> 52:42.160
+ but you're not in still the physical world. The question is whether it's possible to orchestrate
+
+52:42.160 --> 52:48.080
+ attacks that work in the actual physical... Like end to end attacks, like not just a
+
+52:48.080 --> 52:53.360
+ demonstration of the concept, but thinking, is it possible on the highway to control Tesla?
+
+52:53.360 --> 52:58.640
+ That kind of idea. I think there are two separate questions. One is the feasibility
+
+52:58.640 --> 53:06.000
+ of the attack, and I'm 100% confident that the attack is possible. And there's a separate question
+
+53:06.000 --> 53:13.680
+ whether someone will actually go deploy that attack. I hope people do not do that,
+
+53:13.680 --> 53:18.480
+ but there's two separate questions. So the question on the word feasibility.
+
+53:18.480 --> 53:25.120
+ So to clarify, feasibility means it's possible. It doesn't say how hard it is,
+
+53:25.680 --> 53:33.200
+ because to implement it. So sort of the barrier, like how much of a heist it has to be,
+
+53:33.200 --> 53:37.680
+ like how many people have to be involved, what is the probability of success, that kind of stuff,
+
+53:37.680 --> 53:42.800
+ and coupled with how many evil people there are in the world that would attempt such an attack,
+
+53:42.800 --> 53:51.680
+ right? But the two... My question is, is it sort of... When I talk to Elon Musk and ask the same
+
+53:51.680 --> 53:57.120
+ question, he says it's not a problem. It's very difficult to do in the real world. This won't
+
+53:57.120 --> 54:01.520
+ be a problem. He dismissed it as a problem for adversarial attacks on the Tesla. Of course,
+
+54:02.480 --> 54:07.360
+ he happens to be involved with the company, so he has to say that. But let me linger and
+
+54:07.360 --> 54:16.080
+ end a little longer. Where does your confidence that it's feasible come from? And what's your
+
+54:16.080 --> 54:23.040
+ intuition? How people should be worried? How people should defend against it? How Tesla,
+
+54:23.040 --> 54:26.480
+ how Waymo, how other autonomous vehicle companies should defend against
+
+54:27.520 --> 54:32.240
+ sensory based attacks on whether on LiDAR or on vision or so on.
+
+54:32.240 --> 54:36.000
+ And also even for LiDAR, actually, there has been research on that even like itself.
+
+54:36.000 --> 54:42.800
+ No, no, no. But see, it's really important to pause. There's really nice demonstrations
+
+54:42.800 --> 54:50.560
+ that it's possible to do, but there's so many pieces that it's kind of like... It's kind of in
+
+54:50.560 --> 54:56.080
+ the lab. Now, it's in the physical world, meaning it's in the physical space, the attacks, but
+
+54:56.080 --> 55:02.800
+ it's very... You have to control a lot of things to pull it off. It's like the difference between
+
+55:02.800 --> 55:08.960
+ opening a safe when you have it and you have unlimited time and you can work on it versus
+
+55:08.960 --> 55:13.760
+ like breaking into the crown, stealing the crown jewels or whatever.
+
+55:13.760 --> 55:20.400
+ Right. I mean, so one way to look at this in terms of how real this attacks can be, one way to
+
+55:20.400 --> 55:26.160
+ look at it is that actually you don't even need any sophisticated attacks. Already we've seen
+
+55:26.160 --> 55:33.920
+ many real world examples, incidents, where showing that the vehicle was making the wrong
+
+55:33.920 --> 55:38.480
+ decision. The wrong decision without attacks, right? Right. So that's one way to demonstrate.
+
+55:38.480 --> 55:43.040
+ And this is also... So far, we've mainly talked about work in this adversarial setting,
+
+55:43.920 --> 55:48.800
+ showing that today's learning system, they are so vulnerable to the adversarial setting.
+
+55:48.800 --> 55:54.000
+ But at the same time, actually, we also know that even in natural settings, these learning systems,
+
+55:54.000 --> 56:00.320
+ they don't generalize well. And hence, they can really misbehave under certain situations
+
+56:00.880 --> 56:06.880
+ like what we have seen. And hence, I think using that as an example, it can show that these issues
+
+56:06.880 --> 56:14.000
+ can be real. They can be real. But so there's two cases. One is something, it's like perturbations
+
+56:14.000 --> 56:19.920
+ can make the system misbehave versus make the system do one specific thing that the attacker
+
+56:19.920 --> 56:26.480
+ wants. As you said, the targeted attack. That seems to be very difficult,
+
+56:27.360 --> 56:33.680
+ like an extra level of difficult step in the real world. But from the perspective of the passenger
+
+56:33.680 --> 56:41.600
+ of the car, I don't think it matters either way, whether it's misbehavior or a targeted attack.
+
+56:41.600 --> 56:48.880
+ Okay. And that's why I was also saying earlier, one defense is this multi model defense. And
+
+56:48.880 --> 56:53.760
+ more of these consistent checks and so on. So in the future, I think also it's important that for
+
+56:53.760 --> 57:00.000
+ these autonomous vehicles, they have lots of different sensors, and they should be combining
+
+57:00.000 --> 57:08.320
+ all these sensory readings to arrive at the decision and the interpretation of the world and so on.
+
+57:08.320 --> 57:14.320
+ And the more of these sensory inputs they use, and the better they combine these sensory inputs,
+
+57:14.320 --> 57:19.680
+ the harder it is going to be attacked. And hence, I think that is a very important direction
+
+57:19.680 --> 57:25.200
+ for us to move towards. So multi model, multi sensor across multiple cameras,
+
+57:25.200 --> 57:33.360
+ but also in the case of car, radar, ultrasonic, sound even. So all of those. Right. Exactly.
+
+57:33.360 --> 57:39.920
+ So another thing, another part of your work has been in the space of privacy. And that too can
+
+57:39.920 --> 57:47.120
+ be seen as a kind of security vulnerability. And so thinking of data as a thing that should be
+
+57:47.120 --> 57:54.320
+ protected and the vulnerabilities to data as vulnerability is essentially the thing that
+
+57:54.320 --> 57:59.760
+ you want to protect is the privacy of that data. So what do you see as the main vulnerabilities
+
+57:59.760 --> 58:04.960
+ in the privacy of data and how do we protect it? Right. So in security, we actually talk about
+
+58:04.960 --> 58:12.800
+ essentially two, in this case, two different properties. One is integrity and one is confidentiality.
+
+58:13.440 --> 58:21.200
+ So what we have been talking earlier is essentially the integrity of the integrity
+
+58:21.200 --> 58:26.000
+ property of the learning system, how to make sure that the learning system is giving the
+
+58:26.000 --> 58:32.880
+ right prediction, for example. And privacy essentially is on the other side is about
+
+58:32.880 --> 58:41.520
+ confidentiality of the system is how attackers can, when the attackers compromise the confidentiality
+
+58:41.520 --> 58:47.440
+ of the system, that's when the attackers steal sensitive information and right about individuals
+
+58:47.440 --> 58:53.440
+ and so on. That's really clean. Those are those are great terms, integrity and confidentiality.
+
+58:53.440 --> 59:00.560
+ Right. So how, what are the main vulnerabilities to privacy, we just say, and how do we protect
+
+59:00.560 --> 59:06.160
+ against it? Like what are the main spaces and problems that you think about in the context of
+
+59:06.160 --> 59:14.960
+ privacy? Right. So especially in the machine learning setting. So in this case, as we know that
+
+59:14.960 --> 59:23.120
+ how the process goes is that we have the training data and then the machine learning system trains
+
+59:23.120 --> 59:30.000
+ from this training data and then builds a model and then later on inputs are given to the model to
+
+59:30.000 --> 59:37.520
+ influence time to try to get prediction and so on. So then in this case, the privacy concerns that we
+
+59:37.520 --> 59:44.320
+ have is typically about privacy of the data in the training data because that's essentially the
+
+59:44.320 --> 59:53.040
+ private information. So, and it's really important because oftentimes the training data can be very
+
+59:53.040 --> 1:00:00.160
+ sensitive. It can be your financial data, it's your health data or like in our case, it's the
+
+1:00:00.160 --> 1:00:06.800
+ sensors deployed in real world environment and so on and all this can be collecting very sensitive
+
+1:00:06.800 --> 1:00:13.600
+ information and all the sensitive information gets fed into the learning system and trains
+
+1:00:13.600 --> 1:00:20.720
+ and as we know, these neural networks, they can have really high capacity and they actually
+
+1:00:20.720 --> 1:00:29.760
+ can remember a lot and hence just from the learning model in the end, actually attackers can potentially
+
+1:00:29.760 --> 1:00:37.840
+ infer information about their original training data sets. So the thing you're trying to protect
+
+1:00:37.840 --> 1:00:44.080
+ that is the confidentiality of the training data and so what are the methods for doing that? Would
+
+1:00:44.080 --> 1:00:48.880
+ you say what are the different ways that can be done? And also we can talk about essentially
+
+1:00:48.880 --> 1:00:55.760
+ essentially how the attacker may try to learn information from the right. So, and also there
+
+1:00:55.760 --> 1:01:01.680
+ are different types of attacks. So in certain cases, again, like in white box attacks, we can say that
+
+1:01:01.680 --> 1:01:08.160
+ the attacker actually gets to see the parameters of the model and then from that, the smart attacker
+
+1:01:08.160 --> 1:01:14.640
+ potentially can try to figure out information about the training data set. They can try to figure
+
+1:01:14.640 --> 1:01:21.200
+ out what type of data has been in the training data sets and sometimes they can tell like
+
+1:01:21.200 --> 1:01:28.240
+ whether a person has been, a particular person's data point has been used in the training data sets
+
+1:01:28.240 --> 1:01:32.960
+ as well. So white box meaning you have access to the parameters of say a neural network
+
+1:01:33.600 --> 1:01:38.720
+ and so that you're saying that it's some, given that information is possible to some.
+
+1:01:38.720 --> 1:01:43.600
+ So I can give you some examples and then another type of attack which is even easier to carry out
+
+1:01:43.600 --> 1:01:50.560
+ is not a white box model, it's more of just a query model where the attacker only gets to
+
+1:01:50.560 --> 1:01:55.840
+ query the machine learning model and then try to steal sensitive information in the original
+
+1:01:55.840 --> 1:02:03.040
+ training data. So, right, so I can give you an example. In this case, training a language model.
+
+1:02:03.600 --> 1:02:09.280
+ So in our work in collaboration with the researchers from Google, we actually studied the
+
+1:02:09.280 --> 1:02:16.080
+ following question. So at high level, the question is, as we mentioned, the neural networks can have
+
+1:02:16.080 --> 1:02:22.080
+ very high capacity and they could be remembering a lot from the training process. Then the question
+
+1:02:22.080 --> 1:02:28.800
+ is, can attacker actually exploit this and try to actually extract sensitive information in the
+
+1:02:28.800 --> 1:02:35.840
+ original training data set through just querying the learned model without even knowing the
+
+1:02:35.840 --> 1:02:41.040
+ parameters of the model, like the details of the model or the architectures of the model and so on.
+
+1:02:41.840 --> 1:02:50.160
+ So that's the question we set out to explore. And in one of the case studies, we showed the following.
+
+1:02:50.720 --> 1:02:57.280
+ So we trained the language model over an email data set. It's called an enron email data set.
+
+1:02:57.280 --> 1:03:04.080
+ And the enron email data sets naturally contains users social security numbers and critical numbers.
+
+1:03:04.080 --> 1:03:09.760
+ So we trained the language model over the data sets. And then we showed that's an attacker
+
+1:03:09.760 --> 1:03:16.480
+ by devising some new attacks, by just querying the language model. And without knowing the details
+
+1:03:16.480 --> 1:03:25.200
+ of the model, the attacker actually can extract the original social security numbers and critical
+
+1:03:25.200 --> 1:03:31.280
+ numbers that were in the original training. So get the most sensitive, personally identifiable
+
+1:03:31.280 --> 1:03:39.920
+ information from the data set from just querying it. Right. Yeah. So that's an example showing
+
+1:03:39.920 --> 1:03:48.000
+ that's why even as we train machine learning models, we have to be really careful with protecting
+
+1:03:48.000 --> 1:03:54.880
+ users data privacy. So what are the mechanisms for protecting? Is there hopeful? So if there's
+
+1:03:54.880 --> 1:04:02.000
+ been recent work on differential privacy, for example, that provides some hope, but can you
+
+1:04:02.000 --> 1:04:05.920
+ describe some of the ideas? Right. So that's actually, right. So that's also our finding,
+
+1:04:05.920 --> 1:04:12.960
+ is that by, actually, we show that in this particular case, we actually have a good defense.
+
+1:04:12.960 --> 1:04:20.320
+ For the querying case, for the language model case. So instead of just training a vanilla
+
+1:04:20.320 --> 1:04:27.920
+ language model, instead, if we train a differentially private language model, then we can still
+
+1:04:27.920 --> 1:04:35.040
+ achieve similar utility. But at the same time, we can actually significantly enhance the privacy
+
+1:04:35.040 --> 1:04:44.000
+ protection of the learned model. And our proposed attacks actually are no longer effective.
+
+1:04:44.000 --> 1:04:51.440
+ And differential privacy is a mechanism of adding some noise by which you then have some guarantees
+
+1:04:51.440 --> 1:04:59.760
+ on the inability to figure out the presence of a particular person in the data set.
+
+1:04:59.760 --> 1:05:06.000
+ So right. So in this particular case, what the differential privacy mechanism does is that it
+
+1:05:06.000 --> 1:05:12.800
+ actually adds perturbation in the training process. As we know, during the training process,
+
+1:05:12.800 --> 1:05:18.960
+ we are learning the model, we are doing gradient updates, with updates and so on.
+
+1:05:18.960 --> 1:05:24.160
+ And essentially, differential privacy, a differentially private
+
+1:05:25.280 --> 1:05:31.440
+ machine learning algorithm in this case, will be adding noise and adding various perturbation
+
+1:05:32.400 --> 1:05:35.680
+ during this training process. To some aspect of the training process.
+
+1:05:35.680 --> 1:05:42.400
+ Right. So then the finally trained learning, the learned model is differentially private.
+
+1:05:42.400 --> 1:05:45.920
+ And so it can enhance the privacy protection.
+
+1:05:46.560 --> 1:05:50.000
+ So okay, so that's the attacks and the defense of privacy.
+
+1:05:51.200 --> 1:05:56.480
+ You also talk about ownership of data. So this, this is a really interesting idea
+
+1:05:56.480 --> 1:06:04.560
+ that we get to use many services online for seemingly for free by essentially sort of a lot
+
+1:06:04.560 --> 1:06:09.680
+ of companies are funded through advertisement. And what that means is the advertisement works
+
+1:06:09.680 --> 1:06:13.520
+ exceptionally well because the companies are able to access our personal data.
+
+1:06:13.520 --> 1:06:17.920
+ So they know which advertisement to serve us to do target advertisements and so on.
+
+1:06:18.960 --> 1:06:26.160
+ So can you maybe talk about this? You have some nice paintings of the future,
+
+1:06:26.160 --> 1:06:32.640
+ philosophically speaking, future where people can have a little bit more control of their data by
+
+1:06:32.640 --> 1:06:37.760
+ owning and maybe understanding the value of their data and being able to sort of
+
+1:06:37.760 --> 1:06:44.480
+ monetize it in a more explicit way as opposed to the implicit way that it's currently done.
+
+1:06:44.960 --> 1:06:49.600
+ Yeah, I think this is a fascinating topic and also a really complex topic.
+
+1:06:50.960 --> 1:06:56.640
+ Right. I think there are these natural questions who should be owning the data.
+
+1:06:56.640 --> 1:07:08.240
+ And so I can draw one analogy. So for example, for physical properties like your house and so on.
+
+1:07:08.240 --> 1:07:14.640
+ So really, this notion of property rights is not just, you know,
+
+1:07:15.600 --> 1:07:21.200
+ like it's not like from day one, we knew that there should be like this clear notion of ownership
+
+1:07:21.200 --> 1:07:29.360
+ of properties and having enforcement for this. And so actually, people have shown that
+
+1:07:30.960 --> 1:07:42.000
+ this establishment and enforcement of property rights has been a main driver for the economy
+
+1:07:42.000 --> 1:07:51.280
+ earlier. And that actually really propelled the economic growth even in the earlier stage.
+
+1:07:51.280 --> 1:07:57.040
+ So throughout the history of the development of the United States or actually just civilization,
+
+1:07:57.040 --> 1:08:00.480
+ the idea of property rights that you can own property.
+
+1:08:00.480 --> 1:08:04.480
+ Right. And then there's enforcement. There is institutional rights,
+
+1:08:04.480 --> 1:08:12.000
+ that governmental like enforcement of this actually has been a key driver for economic growth.
+
+1:08:12.000 --> 1:08:18.560
+ And there have been even research or proposal saying that for a lot of the developing countries,
+
+1:08:19.840 --> 1:08:28.880
+ there, you know, essentially the challenging growth is not actually due to the lack of capital.
+
+1:08:28.880 --> 1:08:37.040
+ It's more due to the lack of this notion of property rights and enforcement of property rights.
+
+1:08:37.040 --> 1:08:45.120
+ Interesting. So that the presence of absence of both the concept of the property rights and
+
+1:08:45.120 --> 1:08:49.520
+ their enforcement has a strong correlation to economic growth.
+
+1:08:50.720 --> 1:08:56.160
+ And so you think that that same could be transferred to the idea of property ownership
+
+1:08:56.160 --> 1:09:01.360
+ in the case of data ownership? I think it's, first of all, it's a good lesson for us to
+
+1:09:02.640 --> 1:09:10.640
+ recognize that these rights and the recognition and enforcement of these type of rights is very,
+
+1:09:10.640 --> 1:09:16.320
+ very important for economic growth. And then if we look at where we are now and where we are
+
+1:09:16.320 --> 1:09:22.720
+ going in the future, so essentially more and more is actually moving into the digital world.
+
+1:09:22.720 --> 1:09:31.120
+ And also more and more, I would say, even like information or asset of a person is more and more
+
+1:09:32.080 --> 1:09:38.320
+ into the real world, the physical, the digital world as well. It's the data that the person
+
+1:09:38.320 --> 1:09:46.000
+ has generated. Essentially, it's like in the past, what defines a person? You can say, right,
+
+1:09:46.000 --> 1:09:54.720
+ like oftentimes, besides the innate capabilities, actually, it's the physical properties as the
+
+1:09:55.280 --> 1:10:00.000
+ right that defines a person. But I think more and more people start to realize actually what
+
+1:10:00.000 --> 1:10:05.600
+ defines a person is more important in the data that the person has generated or the data about
+
+1:10:05.600 --> 1:10:14.240
+ the person. Like all the way from your political views, your music taste and financial information,
+
+1:10:14.240 --> 1:10:21.040
+ a lot of these on your health. So more and more of the definition of the person is actually in
+
+1:10:21.040 --> 1:10:27.200
+ the digital world. And currently, for the most part, that's owned. People don't talk about it,
+
+1:10:27.200 --> 1:10:34.880
+ but kind of it's owned by internet companies. So it's not owned by individuals. Right. There's
+
+1:10:34.880 --> 1:10:41.680
+ no clear notion of ownership of such data. And also, we talk about privacy and so on,
+
+1:10:41.680 --> 1:10:47.280
+ but I think actually clearly identifying the ownership is the first step. Once you identify
+
+1:10:47.280 --> 1:10:52.720
+ the ownership, then you can say who gets to define how the data should be used. So maybe
+
+1:10:52.720 --> 1:11:02.160
+ some users are fine with, you know, internet companies serving them as using their data as
+
+1:11:02.160 --> 1:11:11.600
+ well as if the data is used in a certain way that actually the user can sense with or allows. For
+
+1:11:11.600 --> 1:11:17.680
+ example, you can see the recommendation system in some sense, we don't call it as, but recommendation
+
+1:11:17.680 --> 1:11:23.920
+ system, similarly, it's trying to recommend you something. And users enjoy and can really benefit
+
+1:11:23.920 --> 1:11:29.280
+ from good recommendation systems, either recommending your better music, movies, news,
+
+1:11:29.280 --> 1:11:37.600
+ even research papers to read. But of course, then in these targeted ads, especially in certain cases
+
+1:11:37.600 --> 1:11:44.640
+ where people can be manipulated by these targeted ads, they can have really bad, like severe
+
+1:11:44.640 --> 1:11:51.680
+ consequences. So essentially, users want their data to be used to better serve them,
+
+1:11:51.680 --> 1:11:57.040
+ and also maybe even get paid for or whatever, like in different settings. But the thing is that
+
+1:11:57.040 --> 1:12:05.200
+ first of all, we need to really establish who needs to decide who can decide how the data should be
+
+1:12:05.200 --> 1:12:12.000
+ used. And typically, the establishment and clarification of the ownership will help this,
+
+1:12:12.000 --> 1:12:17.600
+ and it's an important first step. So if the user is the owner, then naturally the user gets to
+
+1:12:17.600 --> 1:12:23.120
+ define how the data should be used. But if you even say that vitamin is used, actually,
+
+1:12:23.120 --> 1:12:27.120
+ now the owner of this data, whoever is collecting the data is the owner of the data. Now, of course,
+
+1:12:27.120 --> 1:12:34.080
+ they get to use the data however way they want. So to really address these complex issues, we need
+
+1:12:34.080 --> 1:12:40.960
+ to go at the root cause. So it seems fairly clear that so first we really need to say
+
+1:12:40.960 --> 1:12:47.120
+ who is the owner of the data, and then the owners can specify how they want their data to be utilized.
+
+1:12:47.120 --> 1:12:54.160
+ So that's a fascinating, most people don't think about that. And I think that's a fascinating thing
+
+1:12:54.160 --> 1:12:59.520
+ to think about and probably fight for it. I can only see in the economic growth argument,
+
+1:12:59.520 --> 1:13:04.480
+ it's probably a really strong one. So that's a first time I'm kind of at least thinking about
+
+1:13:05.120 --> 1:13:11.600
+ the positive aspect of that ownership being the long term growth of the economy, so good for
+
+1:13:11.600 --> 1:13:20.320
+ everybody. But sort of one possible downside I could see, sort of to put on my grumpy old grandpa
+
+1:13:20.320 --> 1:13:28.560
+ hat. And you know, it's really nice for Facebook and YouTube and Twitter to all be free. And if you
+
+1:13:28.560 --> 1:13:36.160
+ give control to people with their data, do you think it's possible they would not want to hand
+
+1:13:36.160 --> 1:13:42.800
+ it over quite easily? And so a lot of these companies that rely on mass handover of data and
+
+1:13:42.800 --> 1:13:53.840
+ then therefore provide a mass seemingly free service would then completely, so the way the
+
+1:13:53.840 --> 1:13:58.640
+ internet looks will completely change because of the ownership of data and will lose a lot of
+
+1:13:58.640 --> 1:14:04.320
+ services value. Do you worry about that? So that's a very good question. I think
+
+1:14:04.320 --> 1:14:10.560
+ that's not necessarily the case in the sense that, yes, users can have ownership of their data,
+
+1:14:10.560 --> 1:14:17.440
+ they can maintain control of their data, but also then they get to decide how their data can be used.
+
+1:14:17.440 --> 1:14:22.800
+ So that's why I mentioned earlier, like so in this case, if they feel that they enjoy the
+
+1:14:22.800 --> 1:14:28.800
+ benefits of social networks and so on, and they're fine with having Facebook, having their data,
+
+1:14:28.800 --> 1:14:35.680
+ but utilizing the data in a certain way that they agree, then they can still enjoy the free
+
+1:14:35.680 --> 1:14:42.640
+ services. But for others, maybe they would prefer some kind of private vision. And in that case,
+
+1:14:42.640 --> 1:14:49.840
+ maybe they can even opt in to say that I want to pay and to have, so for example, it's already
+
+1:14:49.840 --> 1:14:56.240
+ fairly standard, like you pay for certain subscriptions so that you don't get to, you know,
+
+1:14:56.240 --> 1:15:04.320
+ be shown ads, right. So then users essentially can have choices. And I think we just want to
+
+1:15:04.320 --> 1:15:10.720
+ essentially bring out more about who gets to decide what to do with the data.
+
+1:15:10.720 --> 1:15:13.120
+ I think it's an interesting idea because if you poll people now,
+
+1:15:14.240 --> 1:15:19.040
+ you know, it seems like, I don't know, but subjectively, sort of anecdotally speaking,
+
+1:15:19.040 --> 1:15:23.680
+ it seems like a lot of people don't trust Facebook. So that's at least a very popular
+
+1:15:23.680 --> 1:15:30.400
+ thing to say that I don't trust Facebook, right. I wonder if you give people control of their data,
+
+1:15:30.400 --> 1:15:35.760
+ as opposed to sort of signaling to everyone that they don't trust Facebook, I wonder how they would
+
+1:15:35.760 --> 1:15:42.960
+ speak with the actual, like, would they be willing to pay $10 a month for Facebook, or would they
+
+1:15:42.960 --> 1:15:48.960
+ hand over their data? It's, it'd be interesting to see what fraction of people would quietly hand
+
+1:15:48.960 --> 1:15:54.960
+ over their data to Facebook to make it free. I don't have a good intuition about that. Like,
+
+1:15:55.840 --> 1:16:00.560
+ how many people, do you have an intuition about how many people would use their data
+
+1:16:00.560 --> 1:16:09.280
+ effectively on the market, on the market of the internet by sort of buying services with their
+
+1:16:09.280 --> 1:16:16.320
+ data? Yeah, so that's a very good question. I think, so one thing I also want to mention is that
+
+1:16:16.320 --> 1:16:25.920
+ this, right, so it seems that especially in press, and the conversation has been very much, like,
+
+1:16:25.920 --> 1:16:33.680
+ two sides fighting against each other. On one hand, right, users can say that, right, they don't
+
+1:16:33.680 --> 1:16:41.040
+ trust Facebook, they don't, or they delete Facebook. Yeah, exactly. Right, and then on the other
+
+1:16:41.040 --> 1:16:49.120
+ hand, right, of course, right, the other side, they also feel, oh, they are providing a lot of
+
+1:16:49.120 --> 1:16:57.840
+ services to users, and users are getting it all for free. So I think I actually, you know, I talk
+
+1:16:57.840 --> 1:17:06.000
+ a lot to, like, different companies and also, like, basically on both sides. So one thing I hope,
+
+1:17:06.000 --> 1:17:12.160
+ also, like, this is my hope for this year, also, is that we want to establish a more
+
+1:17:12.880 --> 1:17:20.240
+ constructive dialogue that have, and to help people to understand that the problem is much
+
+1:17:20.240 --> 1:17:30.000
+ more nuanced than just this two sides fighting. Because, naturally, there is a tension between
+
+1:17:30.000 --> 1:17:35.760
+ the two sides, between utility and privacy. So if you want to get more utility, essentially,
+
+1:17:36.560 --> 1:17:42.480
+ like the recommendation system example I gave earlier, if you want someone to give you good
+
+1:17:42.480 --> 1:17:48.560
+ recommendation, essentially, whatever the system is, the system is going to need to know your data
+
+1:17:48.560 --> 1:17:54.640
+ to give you a good recommendation. But also, of course, at the same time, we want to ensure
+
+1:17:54.640 --> 1:18:01.760
+ that, however, that data is being handled, it's done in a privacy preserving way. So that, for
+
+1:18:01.760 --> 1:18:08.320
+ example, the recommendation system doesn't just go around and sell your data and cause all the,
+
+1:18:08.320 --> 1:18:15.120
+ you know, cause a lot of bad consequences and so on. So you want that dialogue to be a little
+
+1:18:15.120 --> 1:18:21.600
+ bit more in the open, a little bit more nuanced, and maybe adding control to the data, ownership
+
+1:18:21.600 --> 1:18:27.920
+ to the data will allow, as opposed to this happening in the background, allow it to bring it to the
+
+1:18:27.920 --> 1:18:35.600
+ forefront and actually have dialogues in, like, more nuanced, real dialogues about how we trade
+
+1:18:35.600 --> 1:18:42.080
+ our data for the services. That's the whole. Right, right. Yes, at high level. So essentially,
+
+1:18:42.080 --> 1:18:51.120
+ also knowing that there are technical challenges in addressing the issue to, like, basically,
+
+1:18:51.120 --> 1:18:57.920
+ you can't have, just like the example that I gave earlier, it's really difficult to balance the two
+
+1:18:57.920 --> 1:19:05.520
+ between utility and privacy. And that's also a lot of things that I work on, my group works on,
+
+1:19:05.520 --> 1:19:13.920
+ as well, is to actually develop these technologies that are needed to essentially help this balance
+
+1:19:13.920 --> 1:19:19.840
+ better, essentially to help data to be utilized in a privacy preserving and responsible way.
+
+1:19:19.840 --> 1:19:26.480
+ And so we essentially need people to understand the challenges and also at the same time to provide
+
+1:19:27.120 --> 1:19:33.520
+ the technical abilities and also regulatory frameworks to help the two sides to be more
+
+1:19:33.520 --> 1:19:39.360
+ in a win win situation instead of a fight. Yeah, the fighting, the fighting thing is,
+
+1:19:40.320 --> 1:19:44.080
+ I think YouTube and Twitter and Facebook are providing an incredible service to the world.
+
+1:19:44.880 --> 1:19:49.040
+ And they're all making mistakes, of course, but they're doing an incredible job
+
+1:19:49.040 --> 1:19:55.440
+ that I think deserves to be applauded. And there's some degree of gratitude,
+
+1:19:55.440 --> 1:20:04.160
+ like, it's a cool thing that that's created. And it shouldn't be monolithically fought against,
+
+1:20:04.160 --> 1:20:09.120
+ like, Facebook is evil or so on. Yeah, I might make mistakes, but I think it's an incredible
+
+1:20:09.120 --> 1:20:15.680
+ service. I think it's world changing. I mean, I've, I think Facebook's done a lot of incredible,
+
+1:20:15.680 --> 1:20:21.120
+ incredible things by bringing, for example, identity, you're like,
+
+1:20:22.640 --> 1:20:29.920
+ allowing people to be themselves like their real selves in the digital space by using their real
+
+1:20:29.920 --> 1:20:34.880
+ name and their real picture. That step was like the first step from the real world to the digital
+
+1:20:34.880 --> 1:20:40.720
+ world. That was a huge step that perhaps will define the 21st century in us creating a digital
+
+1:20:40.720 --> 1:20:46.000
+ identity. And there's a lot of interesting possibilities there that are positive. Of course,
+
+1:20:46.000 --> 1:20:50.800
+ some things are negative and having a good dialogue about that is great. And I'm great
+
+1:20:50.800 --> 1:20:55.120
+ that people like you are at the center of that dialogue. That's awesome. Right. I think also,
+
+1:20:56.080 --> 1:21:02.000
+ I also can understand, I think actually in the past, especially in the past couple years,
+
+1:21:03.600 --> 1:21:10.080
+ this rising awareness has been helpful. Like, users are also more and more recognizing
+
+1:21:10.080 --> 1:21:15.760
+ that privacy is important to them. They should, maybe, right, they should be owners of their data.
+
+1:21:15.760 --> 1:21:24.160
+ I think this definitely is very helpful. And I think also this type of voice also, and together
+
+1:21:24.160 --> 1:21:31.360
+ with the regulatory framework and so on, also help the companies to essentially put these
+
+1:21:31.360 --> 1:21:38.960
+ type of issues at a higher priority. And knowing that, right, also, it is their responsibility
+
+1:21:38.960 --> 1:21:46.160
+ to ensure that users are well protected. And so I think definitely the rising voice
+
+1:21:46.160 --> 1:21:52.480
+ is super helpful. And I think that actually really has brought the issue of data privacy
+
+1:21:53.040 --> 1:21:59.680
+ and even this consideration of data ownership to the forefront to really much wider community.
+
+1:22:01.200 --> 1:22:05.520
+ And I think more of this voice is needed. But I think it's just that we want to have
+
+1:22:05.520 --> 1:22:12.480
+ a more constructive dialogue to bring the both sides together to figure out a constructive solution.
+
+1:22:14.000 --> 1:22:18.320
+ So another interesting space where security is really important is in the space of
+
+1:22:19.760 --> 1:22:24.320
+ any kinds of transactions, but it could be also digital currency. So can you maybe talk
+
+1:22:25.200 --> 1:22:30.240
+ a little bit about blockchain? Can you tell me what is a blockchain?
+
+1:22:30.240 --> 1:22:36.960
+ I think the blockchain word itself is actually very overloaded.
+
+1:22:38.160 --> 1:22:43.200
+ In general, it's like AI, right? Yes. So in general, when we talk about blockchain,
+
+1:22:43.200 --> 1:22:48.720
+ we refer to this distributed ledger in a decentralized fashion. So essentially,
+
+1:22:48.720 --> 1:22:58.320
+ you have a community of nodes that come together. And even though each one may not be trusted,
+
+1:22:58.320 --> 1:23:08.880
+ and as long as certain thresholds of the set of nodes behave properly, then the system can
+
+1:23:08.880 --> 1:23:14.560
+ essentially achieve certain properties. For example, in the distributed ledger setting,
+
+1:23:14.560 --> 1:23:23.040
+ you can maintain an immutable log and you can ensure that, for example, the transactions
+
+1:23:23.040 --> 1:23:29.600
+ actually are agreed upon and then it's immutable and so on. So first of all, what's a ledger?
+
+1:23:29.600 --> 1:23:35.120
+ So it's a... It's like a database. It's like a data entry. And so distributed ledger is
+
+1:23:35.120 --> 1:23:41.600
+ something that's maintained across or is synchronized across multiple sources, multiple nodes.
+
+1:23:41.600 --> 1:23:49.520
+ Multiple nodes, yes. And so where is this idea? How do you keep... So it's important
+
+1:23:49.520 --> 1:23:57.200
+ to keep a ledger a database to keep that... To make sure... So what are the kinds of security
+
+1:23:57.200 --> 1:24:04.240
+ vulnerabilities that you're trying to protect against in the context of a distributed ledger?
+
+1:24:04.240 --> 1:24:10.720
+ So in this case, for example, you don't want some malicious nodes to be able to change the
+
+1:24:10.720 --> 1:24:18.480
+ transaction logs. And in certain cases, it's called double spending. You can also cause
+
+1:24:18.480 --> 1:24:22.640
+ different views in different parts of the network and so on.
+
+1:24:22.640 --> 1:24:27.440
+ So the ledger has to represent, if you're capturing financial transactions,
+
+1:24:27.440 --> 1:24:32.880
+ has to represent the exact timing and the exact occurrence and no duplicates, all that kind of
+
+1:24:32.880 --> 1:24:39.600
+ stuff. It has to represent what actually happened. Okay, so what are your thoughts
+
+1:24:40.480 --> 1:24:45.040
+ on the security and privacy of digital currency? I can't tell you how many people
+
+1:24:45.040 --> 1:24:52.080
+ write to me to interview various people in the digital currency space. There seems to be a lot
+
+1:24:52.080 --> 1:24:58.800
+ of excitement there. And it seems to be... Some of it, to me, from an outsider's perspective,
+
+1:24:58.800 --> 1:25:08.400
+ seems like dark magic. I don't know how secure... I think the foundation from my perspective of
+
+1:25:08.400 --> 1:25:15.280
+ digital currencies, that is, you can't trust anyone. So you have to create a really secure system.
+
+1:25:15.280 --> 1:25:22.320
+ So can you maybe speak about what your thoughts in general about digital currency is and how you
+
+1:25:22.320 --> 1:25:30.320
+ can possibly create financial transactions and financial stores of money in the digital space?
+
+1:25:30.320 --> 1:25:36.880
+ So you asked about security and privacy. So again, as I mentioned earlier,
+
+1:25:36.880 --> 1:25:45.680
+ in security, we actually talk about two main properties, the integrity and confidentiality.
+
+1:25:45.680 --> 1:25:51.040
+ And so there's another one for availability. You want the system to be available. But here,
+
+1:25:51.760 --> 1:25:59.040
+ for the question asked, let's just focus on integrity and confidentiality. So for integrity
+
+1:25:59.040 --> 1:26:04.080
+ of this distributed ledger, essentially, as we discussed, we want to ensure that the different
+
+1:26:04.080 --> 1:26:12.560
+ nodes... So they have this consistent view, usually it's down through what we call a consensus protocol
+
+1:26:13.600 --> 1:26:21.840
+ that they establish this shared view on this ledger that you cannot go back and change,
+
+1:26:21.840 --> 1:26:30.800
+ it's immutable, and so on. So in this case, then the security often refers to this integrity
+
+1:26:30.800 --> 1:26:37.920
+ property. And essentially, you're asking the question, how much work, how can you attack the
+
+1:26:37.920 --> 1:26:46.080
+ system so that the attacker can change the log, for example.
+
+1:26:46.080 --> 1:26:48.320
+ Right. How hard is it to make them attack like that?
+
+1:26:48.320 --> 1:26:56.880
+ Right. And then that very much depends on the consensus mechanism, how the system is built,
+
+1:26:56.880 --> 1:27:02.240
+ and all that. So there are different ways to build these decentralized systems.
+
+1:27:03.360 --> 1:27:08.480
+ People may have heard about the terms called proof of work, proof of stake, these different
+
+1:27:08.480 --> 1:27:16.000
+ mechanisms. And it really depends on how the system has been built and also how much
+
+1:27:17.200 --> 1:27:24.400
+ resources, how much work has gone into the network to actually say how secure it is.
+
+1:27:24.400 --> 1:27:31.040
+ So for example, if you talk about Bitcoin's proof of work system, so much electricity has been
+
+1:27:31.040 --> 1:27:37.120
+ burned. So there's differences in the different mechanisms and the implementations of a distributed
+
+1:27:37.120 --> 1:27:43.200
+ ledger used for digital currency. So there's Bitcoin, whatever, there's so many of them,
+
+1:27:43.200 --> 1:27:49.520
+ and there's underlying different mechanisms. And there's arguments, I suppose, about which is more
+
+1:27:49.520 --> 1:27:56.400
+ effective, which is more secure, which is more. And what is needed? What amount of resources
+
+1:27:56.400 --> 1:28:03.360
+ needed to be able to attack the system? Like for example, what percentage of the nodes do you
+
+1:28:03.360 --> 1:28:09.840
+ need to control or compromise in order to change the log?
+
+1:28:09.840 --> 1:28:14.640
+ And do you have a sense of those are things that can be shown theoretically
+
+1:28:14.640 --> 1:28:20.000
+ through the design of the mechanisms or does it have to be shown empirically by having a large
+
+1:28:20.000 --> 1:28:22.240
+ number of users using the currency?
+
+1:28:22.240 --> 1:28:30.240
+ I see. So in general, for each consensus mechanism, you can actually show theoretically what is needed
+
+1:28:30.240 --> 1:28:37.600
+ to be able to attack the system. Of course, there can be different types of attacks as we
+
+1:28:37.600 --> 1:28:50.400
+ discussed at the beginning, so that it's difficult to give a complete estimate really how much it's
+
+1:28:50.400 --> 1:28:57.360
+ needed to compromise the system. But in general, there are ways to say what percentage of the
+
+1:28:57.360 --> 1:29:01.360
+ nodes you need to compromise and so on.
+
+1:29:01.360 --> 1:29:11.680
+ So we talked about integrity on the security side. And then you also mentioned the privacy or the
+
+1:29:11.680 --> 1:29:18.480
+ confidentiality side. Does it have some of the same problems and therefore some of the
+
+1:29:18.480 --> 1:29:22.880
+ same solutions that you talked about on the machine learning side with differential privacy and so on?
+
+1:29:22.880 --> 1:29:32.080
+ Yeah. So actually, in general, on the public ledger in these public decentralized systems,
+
+1:29:33.440 --> 1:29:39.440
+ actually nothing is private. So all the transactions posted on the ledger anybody can see.
+
+1:29:40.000 --> 1:29:48.480
+ So in that sense, there is no confidentiality. So usually what you can do is then there are the
+
+1:29:48.480 --> 1:29:55.200
+ mechanisms that you can build in to enable confidentiality or privacy of the transactions
+
+1:29:55.200 --> 1:30:02.560
+ and the data and so on. That's also some of the work that's both my group and also my startup
+
+1:30:03.760 --> 1:30:09.680
+ as well. What's the name of the startup? Oasis Labs. Oasis Labs. And so the confidentiality
+
+1:30:09.680 --> 1:30:18.240
+ aspect there is even though the transactions are public, you want to keep some aspect confidential
+
+1:30:18.240 --> 1:30:23.680
+ of the identity of the people involved in the transactions. So what is their hope to keep
+
+1:30:23.680 --> 1:30:28.480
+ confidential in this context? So in this case, for example, you want to enable like
+
+1:30:29.840 --> 1:30:38.320
+ confidential transactions. So there are different essentially types of data that you want to keep
+
+1:30:39.200 --> 1:30:44.320
+ private or confidential. And you can utilize different technologies, including zero knowledge
+
+1:30:44.320 --> 1:30:56.560
+ proofs and also secure computing and techniques to hide who is making the transactions to whom
+
+1:30:56.560 --> 1:31:02.480
+ and the transaction amount. And in our case, also we can enable like confidential smart contracts
+
+1:31:03.440 --> 1:31:09.600
+ so that you don't know the data and the execution of the smart contract and so on.
+
+1:31:09.600 --> 1:31:17.280
+ And we actually are combining these different technologies and to going back to the earlier
+
+1:31:17.280 --> 1:31:28.000
+ discussion we had enabling like ownership of data and privacy of data and so on. So at Oasis
+
+1:31:28.000 --> 1:31:33.200
+ Labs, we're actually building what we call a platform for a responsible data economy
+
+1:31:33.200 --> 1:31:40.960
+ to actually combine these different technologies together to enable secure and privacy preserving
+
+1:31:40.960 --> 1:31:51.040
+ computation and also using the ledger to help provide immutable log of users ownership to their
+
+1:31:51.040 --> 1:31:57.280
+ data and the policies they want the data to adhere to, the usage of the data to adhere to
+
+1:31:57.280 --> 1:32:05.120
+ and also how the data has been utilized. So all this together can build a distributed secure
+
+1:32:05.120 --> 1:32:11.680
+ computing fabric that helps to enable a more responsible data economy. There's a lot of
+
+1:32:11.680 --> 1:32:17.920
+ things together. Yeah, wow, that was eloquent. Okay, you're involved in so much amazing work
+
+1:32:17.920 --> 1:32:23.280
+ that we'll never be able to get to, but I have to ask at least briefly about program synthesis,
+
+1:32:23.280 --> 1:32:30.720
+ which at least in a philosophical sense captures much of the dreams of what's possible in computer
+
+1:32:30.720 --> 1:32:36.960
+ science and the artificial intelligence. First, let me ask what is program synthesis
+
+1:32:37.600 --> 1:32:43.040
+ and can neural networks be used to learn programs from data? So can this be learned,
+
+1:32:43.600 --> 1:32:50.080
+ some aspect of the synthesis can it be learned? So program synthesis is about teaching computers
+
+1:32:50.080 --> 1:32:57.840
+ to write code to program. And I think that's one of our ultimate dreams or goals.
+
+1:33:00.560 --> 1:33:09.680
+ I think Andreessen talked about software eating the world. So I say once we teach computers to
+
+1:33:09.680 --> 1:33:15.760
+ write software to write programs, then I guess computers will be eating the world by
+
+1:33:15.760 --> 1:33:28.000
+ transitivity. Yeah, exactly. And also for me, actually, when I shifted from security to more AI
+
+1:33:28.000 --> 1:33:34.080
+ machine learning, program synthesis is program synthesis and adversarial machine learning.
+
+1:33:34.080 --> 1:33:39.360
+ These are the two fields that I particularly focus on. Like program synthesis is one of the
+
+1:33:39.360 --> 1:33:45.680
+ first questions that I actually started. Just as a question, I guess from the security side,
+
+1:33:45.680 --> 1:33:51.920
+ there's a, you know, you're looking for holes in programs. So at least see small connection. But
+
+1:33:51.920 --> 1:33:58.560
+ why, where was your interest for program synthesis? Because it's such a fascinating, such a big, such
+
+1:33:58.560 --> 1:34:04.960
+ a hard problem in the general case. Why program synthesis? So the reason for that is actually
+
+1:34:04.960 --> 1:34:13.840
+ when I shifted my focus from security into AI machine learning, actually one of my main
+
+1:34:13.840 --> 1:34:19.440
+ motivation at the time is that even though I have been doing a lot of work in security and
+
+1:34:19.440 --> 1:34:28.400
+ privacy, but I have always been fascinated about building intelligent machines. And that was really
+
+1:34:28.400 --> 1:34:35.360
+ my main motivation to spend more time in AI machine learning is that I really want to figure out how
+
+1:34:35.360 --> 1:34:44.800
+ we can build intelligent machines. And to help us towards that goal, program synthesis is really
+
+1:34:44.800 --> 1:34:52.400
+ one of, I would say, the best domain to work on. I actually call it like a program synthesis is
+
+1:34:52.400 --> 1:34:58.720
+ like the perfect playground for building intelligent machines and for artificial
+
+1:34:58.720 --> 1:35:05.360
+ generating intelligence. Well, it's also in that sense, not just a playground, I guess it's the
+
+1:35:05.360 --> 1:35:14.560
+ ultimate test of intelligence because I think if you can generate neural networks can learn
+
+1:35:14.560 --> 1:35:20.080
+ good functions and they can help you out in classification tasks, but to be able to write
+
+1:35:20.080 --> 1:35:26.560
+ programs, that's the epitome from the machine side. That's the same as passing the Turing test
+
+1:35:26.560 --> 1:35:32.880
+ in natural language, but with programs, it's able to express complicated ideas, to reason through
+
+1:35:32.880 --> 1:35:41.600
+ ideas, and yeah, and boil them down to algorithms. Yes, exactly, incredible. So can this be learned?
+
+1:35:41.600 --> 1:35:48.400
+ How far are we? Is there hope? What are the open challenges? Yeah, very good questions. We are
+
+1:35:48.400 --> 1:35:57.200
+ still at an early stage, but already I think we have seen a lot of progress. I mean, definitely we
+
+1:35:57.200 --> 1:36:03.120
+ have, you know, existence proof, just like humans can write programs, so there's no reason why
+
+1:36:03.120 --> 1:36:10.080
+ computers cannot write programs. So I think that's definitely an achievable goal, it's just how long
+
+1:36:10.080 --> 1:36:19.680
+ it takes. And then, and even today, we actually have, you know, the program synthesis community,
+
+1:36:19.680 --> 1:36:24.800
+ especially the program synthesis via learning, how we call it, neural program synthesis community,
+
+1:36:24.800 --> 1:36:31.680
+ is still very small, but the community has been growing and we have seen a lot of progress.
+
+1:36:31.680 --> 1:36:39.360
+ And in limited domains, I think actually program synthesis is ripe for real world
+
+1:36:39.360 --> 1:36:45.520
+ applications. So actually it was quite amazing, I was at, I was giving a talk,
+
+1:36:46.560 --> 1:36:51.760
+ so here is a rework conference. Yeah, rework deep learning summary. I actually, so I give another
+
+1:36:51.760 --> 1:36:57.920
+ talk at the previous rework conference in deep reinforcement learning. And then I actually
+
+1:36:58.720 --> 1:37:06.640
+ met someone from a startup, the CEO of the startup, and when he saw my name, he recognized it, and
+
+1:37:06.640 --> 1:37:16.960
+ he actually said, one of our papers actually had, they have put, had actually become a key
+
+1:37:17.920 --> 1:37:24.640
+ product in their startup. And that was program synthesis in that particular case was natural
+
+1:37:24.640 --> 1:37:31.040
+ language translation, translating natural language description into SQL queries.
+
+1:37:31.040 --> 1:37:38.960
+ Oh, wow, that, that direction. Okay. Right. So, right. So, yeah, so in program synthesis,
+
+1:37:38.960 --> 1:37:44.640
+ in limited domains, in well specified domains, actually already we can see
+
+1:37:45.920 --> 1:37:52.880
+ really great progress and applicability in the real world. So domains like,
+
+1:37:53.440 --> 1:37:58.000
+ I mean, as an example, you said natural language being able to express something through just
+
+1:37:58.000 --> 1:38:04.240
+ normal language and it converts it into a database SQL SQL query. Right. And that's how,
+
+1:38:04.800 --> 1:38:09.440
+ how solves the problem is that, because that seems like a really hard problem.
+
+1:38:10.240 --> 1:38:17.280
+ Again, in limited domains, actually it can work pretty well. And now this is also a very active
+
+1:38:17.280 --> 1:38:23.200
+ domain of research. At the time, I think when he saw our paper at the time, we were the state of the
+
+1:38:23.200 --> 1:38:31.440
+ arts on that task. And since then, actually now there has been more work and with even more
+
+1:38:32.000 --> 1:38:39.680
+ like sophisticated data sets. And so, but I, I think I wouldn't be surprised that more of this
+
+1:38:39.680 --> 1:38:45.120
+ type of technology really gets into the real world. That's exciting. In the near term.
+
+1:38:45.120 --> 1:38:50.160
+ Being able to learn in the space of programs is, is super exciting. I still,
+
+1:38:50.160 --> 1:38:55.280
+ I'm still skeptical because I think it's a really hard problem, but I'd love to see progress.
+
+1:38:55.280 --> 1:39:01.440
+ And also, I think in terms of the, you asked about open challenges, I think the domain is
+
+1:39:01.440 --> 1:39:07.280
+ full of challenges. And in particular, also we want to see how we should measure the progress
+
+1:39:07.280 --> 1:39:17.040
+ in the space. And I would say mainly three main, I would say metrics. So one is the complexity of
+
+1:39:17.040 --> 1:39:22.640
+ the program that we can synthesize. And that will actually have clear measures and just look at,
+
+1:39:22.640 --> 1:39:28.160
+ you know, the past publications. And even like, for example, I was at the recent
+
+1:39:28.720 --> 1:39:34.160
+ New Europe's conference now, there's actually a very sizable like session dedicated to program
+
+1:39:34.160 --> 1:39:39.360
+ synthesis, which is. Oh, even neural programs. So this is. Right. Which is great. And, and we
+
+1:39:39.360 --> 1:39:49.200
+ continue to see the increase. What does sizable mean? I like, I like the word sizable. It's,
+
+1:39:49.200 --> 1:39:55.760
+ it's five people. It's still a small community, but this is growing. And they will all win touring
+
+1:39:55.760 --> 1:40:04.080
+ awards one day. I like it. Right. So, so we can clearly see increase in the complexity of the
+
+1:40:04.080 --> 1:40:12.400
+ programs that these just elaborate synthesize side to is it the complexity of the actual text of
+
+1:40:12.400 --> 1:40:19.360
+ the program or the running time complexity, which complexity over how the complexity of the task
+
+1:40:20.320 --> 1:40:26.400
+ to be synthesized and the complexity of the actual synthesizer programs. So it's right. So the lines
+
+1:40:26.400 --> 1:40:33.280
+ of code even, for example, okay, I got you. But it's not the theoretical. No, no, no, no, the running
+
+1:40:33.280 --> 1:40:39.760
+ time of the algorithm. Okay, got it. Got it. And you can see the complexity decreasing already.
+
+1:40:39.760 --> 1:40:43.440
+ Oh, no, meaning we want to be able to synthesize more and more complex programs,
+
+1:40:43.440 --> 1:40:50.720
+ bigger and bigger programs. So we want to see that we want to increase the complexity. I have to think
+
+1:40:50.720 --> 1:40:55.360
+ through because I thought of complexity is you want to be able to accomplish the same task
+
+1:40:55.360 --> 1:41:00.720
+ with a simpler simpler program. No, we are not doing that. Okay. It's more, it's more about
+
+1:41:00.720 --> 1:41:08.000
+ how complex a task we can synthesize programs for. Got it. Being able to synthesize programs,
+
+1:41:08.000 --> 1:41:13.120
+ learn them for more and more difficult. Right. So for example, initially, our first work in program
+
+1:41:13.120 --> 1:41:19.120
+ synthesis was to translate natural language distribution into really simple programs called
+
+1:41:19.120 --> 1:41:24.960
+ if TTT, if this then that. So given a trigger condition, what is the action you should take.
+
+1:41:24.960 --> 1:41:30.400
+ So that program is super simple. You just identify the trigger conditions and the action.
+
+1:41:30.400 --> 1:41:35.760
+ Yep. And then later on with the SQL queries, it gets more complex. And then also, we started
+
+1:41:35.760 --> 1:41:44.000
+ to synthesize programs with loops and. Oh, no. And if you can synthesize recursion, it's all over.
+
+1:41:44.000 --> 1:41:51.200
+ Right. Actually, one of our works actually is learning recursive programs. But anyway,
+
+1:41:51.200 --> 1:41:58.880
+ anyway, so that's the one is the complexity and the other one is generalization. Like when we
+
+1:42:00.640 --> 1:42:07.680
+ train our own learn a program synthesizer in this case, a neural programs to synthesize programs,
+
+1:42:07.680 --> 1:42:14.720
+ then you wanted to generalize. For any for a large number of inputs. Right. So to be able to
+
+1:42:14.720 --> 1:42:21.440
+ right generalize to previously unseen inputs. Got it. And so, right. So some of the work we did earlier
+
+1:42:22.480 --> 1:42:30.480
+ learning recursive neural programs actually show that recursion actually is important
+
+1:42:31.520 --> 1:42:38.640
+ to learn. And if you have recursion, then for certain set of tasks, we can actually show that
+
+1:42:38.640 --> 1:42:44.880
+ you can actually have perfect generalization. So that's one of the best people were words that
+
+1:42:44.880 --> 1:42:52.400
+ I clear earlier. So that's one example of we want to learn these neural programs that can
+
+1:42:52.400 --> 1:42:59.040
+ generalize better. But that works for certain tasks, certain domains. And there's question how we can
+
+1:42:59.040 --> 1:43:08.240
+ essentially develop more techniques that can have generalization for wider set of domains,
+
+1:43:08.240 --> 1:43:15.440
+ and so on. So that's another area. And then the third challenge I think will, it's not just for
+
+1:43:15.440 --> 1:43:22.720
+ program synthesis is also cutting across other fields in machine learning and also including
+
+1:43:22.720 --> 1:43:32.000
+ like deep reinforcement learning in particular is that this adaptation is that we want to be able
+
+1:43:32.000 --> 1:43:41.440
+ to learn from the past and tasks and training and so on to be able to solve new tasks. So for example,
+
+1:43:41.440 --> 1:43:48.560
+ in program synthesis today, we still are working in the setting where given a particular task,
+
+1:43:48.560 --> 1:43:56.480
+ given a particular task, we train the right the model and to solve this particular task.
+
+1:43:57.520 --> 1:44:06.160
+ But that's not how humans work. The whole point is we train a human and you can then program to
+
+1:44:06.160 --> 1:44:10.960
+ solve new tasks. Exactly. And just like in deep reinforcement learning, we don't want to just
+
+1:44:10.960 --> 1:44:20.000
+ train agent to play a particular game, either it's Atari or it's Go or whatever. We want to train
+
+1:44:20.000 --> 1:44:26.960
+ these agents that can essentially extract knowledge from the past learning experience
+
+1:44:26.960 --> 1:44:33.440
+ to be able to adapt to new tasks and solve new tasks. And I think this is particularly important
+
+1:44:33.440 --> 1:44:38.080
+ for program synthesis. Yeah, that's the whole point. That's the whole dream of programs. This is
+
+1:44:38.080 --> 1:44:44.400
+ your learning a tool that can solve new problems. Right, exactly. And I think that's a particular
+
+1:44:44.400 --> 1:44:52.320
+ domain that as a community, we need to put more emphasis on and I hope that we can make more
+
+1:44:52.320 --> 1:45:00.560
+ progress there as well. Awesome. There's a lot more to talk about. Let me ask that you also had a very
+
+1:45:00.560 --> 1:45:08.560
+ interesting and we talked about rich representations. You had a rich life journey. You did your
+
+1:45:08.560 --> 1:45:13.920
+ bachelors in China and your masters and PhD in the United States, CMU and Berkeley.
+
+1:45:15.200 --> 1:45:18.400
+ Are there interesting differences? I told you I'm Russian. I think there's a lot of
+
+1:45:18.400 --> 1:45:22.160
+ interesting difference between Russia and the United States. Are there in your eyes
+
+1:45:22.160 --> 1:45:31.280
+ interesting differences between the two cultures from the romantic notion of the spirit of the
+
+1:45:31.280 --> 1:45:37.680
+ people to the more practical notion of how research is conducted that you find interesting
+
+1:45:37.680 --> 1:45:46.080
+ or useful in your own work of having experience both? That's a good question. I think, so I
+
+1:45:46.080 --> 1:45:54.800
+ I studied in China for my undergraduate years and that was more than 20 years ago. So it's
+
+1:45:54.800 --> 1:46:02.720
+ been a long time. Is there echoes of that time in you? Actually, it's interesting. I think even
+
+1:46:02.720 --> 1:46:09.760
+ more so maybe something that's even be more different from my experience than a lot of computer
+
+1:46:09.760 --> 1:46:16.720
+ science researchers and practitioners. So for my undergrad, I actually studied physics.
+
+1:46:16.720 --> 1:46:20.400
+ Nice. Very nice. And then I switched to computer science in graduate school.
+
+1:46:22.000 --> 1:46:30.320
+ What happened? Is there another possible universe where you could have
+
+1:46:30.320 --> 1:46:33.440
+ become a theoretical physicist at Caltech or something like that?
+
+1:46:33.440 --> 1:46:41.360
+ That's very possible. Some of my undergrad classmates, then they later on started physics,
+
+1:46:41.360 --> 1:46:48.960
+ got their PhD in physics from these schools from, yeah, from tough physics programs.
+
+1:46:48.960 --> 1:46:55.120
+ So you switched to, I mean, from that experience of doing physics in your bachelors,
+
+1:46:56.320 --> 1:47:02.960
+ what made you decide to switch to computer science and computer science at arguably the best
+
+1:47:02.960 --> 1:47:07.120
+ university, one of the best universities in the world for computer science with Carnegie Mellon,
+
+1:47:07.120 --> 1:47:13.200
+ especially for grad school and so on. So what, second only to MIT, just kidding. Okay.
+
+1:47:16.320 --> 1:47:20.000
+ I had to throw that in there. No, what was the choice like and what was the
+
+1:47:20.720 --> 1:47:24.960
+ move to the United States like? What was that whole transition? And if you remember,
+
+1:47:25.520 --> 1:47:30.800
+ if there's still echoes of some of the spirit of the people of China in you in New York?
+
+1:47:30.800 --> 1:47:34.640
+ Right. That's like three questions. I'm sorry.
+
+1:47:36.480 --> 1:47:43.200
+ No, that's okay. So yes, I guess, okay, the first transition from physics to computer science.
+
+1:47:43.200 --> 1:47:48.480
+ So when I first came to the United States, I was actually in the physics PhD program at Cornell.
+
+1:47:49.120 --> 1:47:53.120
+ I was there for one year and then I switched to computer science and then I was in the PhD
+
+1:47:53.120 --> 1:47:59.520
+ program at Carnegie Mellon. So, okay, so the reasons for switching. So one thing,
+
+1:47:59.520 --> 1:48:05.440
+ so that's why I also mentioned that about this difference in backgrounds about having studied
+
+1:48:05.440 --> 1:48:18.000
+ physics first in my undergrad. I actually really, I really did enjoy my undergrad time and education
+
+1:48:18.000 --> 1:48:23.840
+ in physics. I think that actually really helped me in my future work in computer science.
+
+1:48:24.880 --> 1:48:27.920
+ Actually, even for machine learning, a lot of machine learning stuff,
+
+1:48:27.920 --> 1:48:31.280
+ the core machine methods, many of them actually came from physics.
+
+1:48:34.400 --> 1:48:38.960
+ For honest, most of everything came from physics.
+
+1:48:39.840 --> 1:48:47.760
+ But anyway, so when I started physics, I was, I think I was really attracted to physics.
+
+1:48:48.880 --> 1:48:55.440
+ It was, it's really beautiful. And I actually, physics is the language of nature.
+
+1:48:55.440 --> 1:49:06.240
+ And I actually clearly remember like one moment in my undergrad, like I did my undergrad in
+
+1:49:06.240 --> 1:49:15.040
+ Tsinghua and I used to study in the library. And I clearly remember like one day I was sitting
+
+1:49:15.040 --> 1:49:22.960
+ in the library and I, and I was like writing on my notes and so on. And I got so excited
+
+1:49:22.960 --> 1:49:31.120
+ that I realized that really just from a few simple axioms, a few simple laws, I can derive
+
+1:49:31.120 --> 1:49:34.240
+ so much. It's almost like I can derive the rest of the world.
+
+1:49:34.240 --> 1:49:35.920
+ Yeah, the rest of the universe.
+
+1:49:35.920 --> 1:49:38.320
+ Yes. Yes. So that was like amazing.
+
+1:49:39.440 --> 1:49:44.480
+ Do you think you, have you ever seen or do you think you can rediscover that kind of power and
+
+1:49:44.480 --> 1:49:46.800
+ beauty in computer science in the world that you use?
+
+1:49:48.000 --> 1:49:52.480
+ That's very interesting. So that gets to, you know, the transition from physics to computer
+
+1:49:52.480 --> 1:50:01.760
+ science. It's quite different for physics in, in grad school actually things changed.
+
+1:50:02.400 --> 1:50:09.040
+ So one is, I started to realize that when I started doing research in physics,
+
+1:50:09.040 --> 1:50:15.200
+ at the time I was doing theoretical physics. And a lot of it, you still have the beauty
+
+1:50:15.200 --> 1:50:19.840
+ but it's very different. So I had to actually do a lot of the simulation. So essentially I was
+
+1:50:19.840 --> 1:50:23.760
+ actually writing, in some, in some cases writing fortune code.
+
+1:50:24.880 --> 1:50:26.000
+ Good old fortune, yeah.
+
+1:50:27.280 --> 1:50:41.360
+ To actually write, do like, do simulations and so on. That was not, not exactly what I enjoyed doing.
+
+1:50:41.360 --> 1:50:51.360
+ And also at the time from talking with senior, you know, students in the program,
+
+1:50:52.320 --> 1:50:57.360
+ I realized many of the students actually were going off to like Wall Street and so on.
+
+1:50:58.480 --> 1:51:05.840
+ So, and I've always been interested in computer science and actually essentially taught myself
+
+1:51:05.840 --> 1:51:12.320
+ the C programming, like, program, right, and so on. Of which when? In college. In college
+
+1:51:12.320 --> 1:51:19.280
+ somewhere? In the summer. For fun. Physics major, learning to do C programming, beautiful.
+
+1:51:19.280 --> 1:51:24.880
+ Actually it's interesting, you know, in physics at the time, I think now the program probably has
+
+1:51:24.880 --> 1:51:34.000
+ changed. But at the time, really the only class we had in, in, related to computer science education
+
+1:51:34.000 --> 1:51:39.920
+ was introduction to, I forgot, to computer science or computing and fortune 77.
+
+1:51:39.920 --> 1:51:46.080
+ There's a lot of people that still use Fortran. I'm actually, if you're a programmer out there,
+
+1:51:46.080 --> 1:51:51.600
+ I'm looking for an expert to talk to about Fortran. They seem to, there's not many,
+
+1:51:51.600 --> 1:51:55.280
+ but there's still a lot of people that still use Fortran and still a lot of people use Cobalt.
+
+1:51:55.280 --> 1:52:03.280
+ But anyway, so, so then, then I realized, instead of just doing programming for doing simulations
+
+1:52:03.280 --> 1:52:08.240
+ and so on, that I may as well just change to computer science. And also one thing I really
+
+1:52:08.240 --> 1:52:14.480
+ liked, and that's a key difference between the two is in computer science is so much easier to
+
+1:52:14.480 --> 1:52:21.120
+ realize your ideas. If you have an idea, you write it up, you code it up, and then you can see it's
+
+1:52:21.120 --> 1:52:27.840
+ actually running and you can, you can see it. You can bring it to life quickly. Bring it to life.
+
+1:52:27.840 --> 1:52:33.120
+ Whereas in physics, if you have a good theory, you, you, you have to wait for the experimentalist
+
+1:52:33.120 --> 1:52:39.040
+ to do the experiments and to confirm the theory and things just take so much longer. And, and
+
+1:52:39.040 --> 1:52:45.680
+ also the reason I, in physics, I decided to do theoretical physics was because I had my experience
+
+1:52:45.680 --> 1:52:52.800
+ with experimental physics. First, you have to fix the equipment. You spend most of your time fixing
+
+1:52:52.800 --> 1:52:59.440
+ the equipment first. So, super expensive equipment. So there's a lot of, yeah, you have to collaborate
+
+1:52:59.440 --> 1:53:04.320
+ with a lot of people. It takes a long time. It just takes really much longer. Yeah, it's messy.
+
+1:53:04.320 --> 1:53:09.760
+ So I decided to switch to computer science. And one thing I think maybe people have realized is that
+
+1:53:09.760 --> 1:53:16.000
+ for people who study physics, actually it's very easy for physicists to change, to do something
+
+1:53:16.000 --> 1:53:23.200
+ else. I think physics provides a really good training. And yeah, so actually it was very easy
+
+1:53:23.200 --> 1:53:30.320
+ to switch to computer science. But one thing going back to your earlier question. So one thing I
+
+1:53:30.320 --> 1:53:36.480
+ actually did realize. So there is a big difference between computer science and physics, where physics
+
+1:53:36.480 --> 1:53:43.200
+ you can derive the whole universe from just a few simple laws. And computer science, given that
+
+1:53:43.200 --> 1:53:50.720
+ a lot of it is defined by humans, the systems that define by humans, and it's artificial.
+
+1:53:52.880 --> 1:53:59.040
+ Essentially, you create a lot of these artifacts and so on. It's not quite the same. You don't
+
+1:53:59.040 --> 1:54:07.120
+ derive the computer systems with just a few simple laws. You actually have to see there is historical
+
+1:54:07.120 --> 1:54:14.640
+ reasons why a system is built and designed one way versus the other. There's a lot more complexity,
+
+1:54:14.640 --> 1:54:20.640
+ less elegant simplicity of E equals MC squared that kind of reduces everything down to those
+
+1:54:20.640 --> 1:54:29.360
+ beautiful fundamental equations. But what about the move from China to the United States? Is there
+
+1:54:29.360 --> 1:54:35.360
+ anything that still stays in you that contributes to your work, the fact that you grew up in another
+
+1:54:35.360 --> 1:54:44.400
+ culture? So yes, I think especially back then it's very different from now. So now actually
+
+1:54:44.400 --> 1:54:51.040
+ I see these students coming from China and even undergraduates actually speak fluent English. It
+
+1:54:51.040 --> 1:54:59.760
+ was just amazing. And they have already understood so much of the culture in the U.S. and so on.
+
+1:55:01.760 --> 1:55:07.280
+ It was to you, it was all foreign? It was a very different time. At the time, actually
+
+1:55:07.280 --> 1:55:17.280
+ we didn't even have easy access to email, not to mention about the web. I remember I had to
+
+1:55:17.280 --> 1:55:30.560
+ go to specific privileged server rooms to use email. At the time, we had much less knowledge
+
+1:55:30.560 --> 1:55:37.760
+ about the Western world. And actually at the time, I didn't know actually in the U.S. West Coast
+
+1:55:37.760 --> 1:55:46.560
+ whether it's much better than the East Coast. Things like that actually. It's very interesting.
+
+1:55:48.560 --> 1:55:53.200
+ But now it's so different. At the time, I would say there's also a bigger cultural difference
+
+1:55:53.200 --> 1:56:00.240
+ because there's so much less opportunity for shared information. So it's such a different
+
+1:56:01.280 --> 1:56:06.960
+ time and world. So let me ask maybe a sensitive question. I'm not sure, but I think you and I
+
+1:56:06.960 --> 1:56:14.480
+ are in similar positions as I've been here for already 20 years as well. And looking at Russia
+
+1:56:14.480 --> 1:56:19.760
+ from my perspective and you looking at China, in some ways it's a very distant place because it's
+
+1:56:19.760 --> 1:56:24.480
+ changed a lot, but in some ways you still have echoes, you still have knowledge of that place.
+
+1:56:25.040 --> 1:56:32.480
+ The question is, China is doing a lot of incredible work in AI. Do you see, please tell me there's
+
+1:56:32.480 --> 1:56:37.440
+ an optimistic picture you see where the United States and China can collaborate and sort of
+
+1:56:37.440 --> 1:56:43.600
+ grow together in the development of AI towards, there's different values in terms of the role
+
+1:56:43.600 --> 1:56:50.240
+ of government and so on, of ethical, transparent, secure systems. We see it differently in the
+
+1:56:50.240 --> 1:56:54.560
+ United States a little bit than China, but we're still trying to work it out. Do you see the two
+
+1:56:54.560 --> 1:57:01.200
+ countries being able to successfully collaborate and work in a healthy way without sort of fighting
+
+1:57:01.200 --> 1:57:10.000
+ and making it an AI arms race kind of situation? Yeah, I believe so. I think science has no border
+
+1:57:10.000 --> 1:57:19.600
+ and the advancement of the technology helps everyone, helps the whole world. And so I certainly
+
+1:57:19.600 --> 1:57:27.680
+ hope that the two countries will collaborate and I certainly believe so. Do you have any reason
+
+1:57:27.680 --> 1:57:35.520
+ to believe so except being an optimist? So first again, like I said, science has no borders and
+
+1:57:35.520 --> 1:57:41.280
+ especially in... Science doesn't know borders. Right. And you believe that well, you know,
+
+1:57:41.280 --> 1:57:47.520
+ in the form of sort of union during the Cold War. So that's the other point I was going to mention
+
+1:57:47.520 --> 1:57:53.600
+ is that especially in academic research, everything is public. Like we write papers,
+
+1:57:53.600 --> 1:58:00.640
+ we open source codes and all this is in the public domain. It doesn't matter whether the person is
+
+1:58:00.640 --> 1:58:06.720
+ in the US, in China or some other parts of the world. They can go on archive and look at the
+
+1:58:06.720 --> 1:58:13.360
+ latest research and results. So that openness gives you hope? Yes. Me too. And that's also how
+
+1:58:14.560 --> 1:58:22.800
+ as a world we make progress the best. So I apologize for the romanticized question, but
+
+1:58:22.800 --> 1:58:32.000
+ looking back, what would you say was the most transformative moment in your life that maybe
+
+1:58:32.000 --> 1:58:35.760
+ made you fall in love with computer science? You said physics. You remember there was a moment
+
+1:58:35.760 --> 1:58:40.800
+ where you thought you could derive the entirety of the universe. Was there a moment that you
+
+1:58:40.800 --> 1:58:47.280
+ really fell in love with the work you do now from security to machine learning to program synthesis?
+
+1:58:47.280 --> 1:58:55.280
+ So maybe, as I mentioned, actually in college, I, one summer I just taught myself programming C.
+
+1:58:55.280 --> 1:59:02.800
+ Yes. You just read a book. Don't tell me you fell in love with computer science by programming
+
+1:59:02.800 --> 1:59:08.480
+ in C. Remember I mentioned one of the draws for me to computer science is how easy it is
+
+1:59:08.480 --> 1:59:15.680
+ to realize your ideas. So once I, you know, read a book, start, like tell myself how to
+
+1:59:15.680 --> 1:59:25.200
+ program in C. What did I do? I programmed two games. One is just simple, like it's a go game,
+
+1:59:25.200 --> 1:59:30.320
+ like it's a board, you can move the stones and so on. And the other one actually programmed the game.
+
+1:59:30.320 --> 1:59:36.960
+ That's like a 3D Tetris. It was, it turned out to be a super hard game to play. Because
+
+1:59:36.960 --> 1:59:42.560
+ instead of just the standard 2D Tetris, it's actually a 3D thing. But I realized, wow,
+
+1:59:42.560 --> 1:59:50.880
+ you know, I just had these ideas to try it out and then you can just do it. And so that's when I
+
+1:59:50.880 --> 1:59:58.640
+ realized, wow, this is amazing. Yeah, you can create yourself. Yes, yes, exactly. From nothing
+
+1:59:58.640 --> 2:00:05.120
+ to something that's actually out in the real world. So let me ask, let me ask a silly question,
+
+2:00:05.120 --> 2:00:14.080
+ or maybe the ultimate question. What is to you the meaning of life? What, what gives your life
+
+2:00:14.080 --> 2:00:21.040
+ meaning, purpose, fulfillment, happiness, joy? Okay, these are two different questions.
+
+2:00:21.040 --> 2:00:26.240
+ Very different. Yeah. It's usually that you ask this question. Maybe this question is
+
+2:00:27.120 --> 2:00:31.920
+ probably the question that has followed me and followed my life the most.
+
+2:00:31.920 --> 2:00:36.720
+ Have you discovered anything, any satisfactory answer for yourself?
+
+2:00:38.640 --> 2:00:43.120
+ Is there something, is there something you've arrived at? You know, there's a moment,
+
+2:00:44.080 --> 2:00:49.680
+ I've talked to a few people who have faced, for example, a cancer diagnosis or face their own
+
+2:00:49.680 --> 2:00:57.120
+ mortality. And that seems to change their view of them. It seems to be a catalyst for them removing
+
+2:00:57.120 --> 2:01:04.720
+ most of the crap of seeing that most of what they've been doing is not that important and really
+
+2:01:04.720 --> 2:01:11.040
+ reducing it into saying like, here's actually the few things that really give me, give meaning.
+
+2:01:11.840 --> 2:01:16.400
+ Mortality is a really powerful catalyst for that. It seems like facing mortality,
+
+2:01:16.400 --> 2:01:20.720
+ whether it's your parents dying or somebody close to you dying or facing your own death
+
+2:01:20.720 --> 2:01:27.280
+ for what a reason or cancer and so on. Right. So yeah, so in my own case, I didn't need to face
+
+2:01:27.280 --> 2:01:37.680
+ mortality too. To try to, you know, to ask that question. Yes. And I think there are a couple
+
+2:01:38.320 --> 2:01:45.680
+ things. So one is like, who should be defining the meaning of your life? Right. Is there some kind
+
+2:01:45.680 --> 2:01:52.880
+ of even greater things than you who should define the meaning of your life? So for example, when
+
+2:01:52.880 --> 2:01:59.760
+ people say that the searching, the meaning for your life is, is there some, is there some outside
+
+2:01:59.760 --> 2:02:06.320
+ voice or is there something, you know, outside of you who actually tells you, you know, so people
+
+2:02:06.320 --> 2:02:16.800
+ talk about, oh, you know, this is what you have been born to do. Right. Right. Like, this is your
+
+2:02:16.800 --> 2:02:24.800
+ destiny. So who, right. So that's one question. Like, who gets to define the meaning of your life?
+
+2:02:24.800 --> 2:02:30.960
+ Should, should you be finding some other thing, some other factor to define this for you? Or
+
+2:02:30.960 --> 2:02:37.280
+ is something actually, it's just entirely what you define yourself and it can be very arbitrary.
+
+2:02:37.280 --> 2:02:43.600
+ Yeah. So in an inner voice or an outer voice, whether it's, it could be spiritual, religious,
+
+2:02:43.600 --> 2:02:49.280
+ too, with God or some other components of the environment outside of you, or just your own
+
+2:02:49.280 --> 2:02:55.840
+ voice, do you have an answer there? So, okay, so for that, I have an answer. Yeah. And through,
+
+2:02:55.840 --> 2:03:02.720
+ you know, the long period of time of thinking and searching, even searching through outside,
+
+2:03:03.680 --> 2:03:10.320
+ right, you know, voices or factors outside of me. Yeah. So that I have, and so I've come to
+
+2:03:10.880 --> 2:03:16.480
+ the conclusion and realization that it's you yourself that defines the meaning of life.
+
+2:03:16.480 --> 2:03:26.880
+ Yeah. That's a big burden though, isn't it? Or a guess. Yes and no. Right. So then you have the
+
+2:03:26.880 --> 2:03:34.240
+ freedom to define it. Yes. And, and another question is like, what does it really mean by
+
+2:03:34.240 --> 2:03:43.600
+ the meaning of life? Right. And also, whether the question even makes sense.
+
+2:03:43.600 --> 2:03:51.520
+ Absolutely. And you said it somehow distinct from happiness. So meaning is something much deeper
+
+2:03:51.520 --> 2:03:58.160
+ than just any kind of emotional and any kind of contentment or joy or whatever. It might be much
+
+2:03:58.160 --> 2:04:04.640
+ deeper. And then you have to ask, what is deeper than that? What is, what is there at all? And
+
+2:04:04.640 --> 2:04:10.000
+ then the question starts being silly. Right. And also you can say it's deeper, but you can also
+
+2:04:10.000 --> 2:04:15.280
+ say it's a shallower depending on how people want to define the meaning of their life. So for example,
+
+2:04:15.280 --> 2:04:20.240
+ most people don't even think about this question. Then the meaning of life to them doesn't really
+
+2:04:20.240 --> 2:04:27.840
+ measure that much. And also whether knowing the meaning of life and whether it actually helps
+
+2:04:27.840 --> 2:04:34.480
+ your life to be better or whether it helps your life to be happier. These actually are open questions.
+
+2:04:34.480 --> 2:04:40.080
+ It's not. Of course. Most questions are open. I tend to think that just asking the question,
+
+2:04:40.080 --> 2:04:44.800
+ as you mentioned, as you've done for a long time is the only, that there is no answer.
+
+2:04:44.800 --> 2:04:49.680
+ And asking the question is a really good exercise. I mean, I have this, for me personally, I've had a
+
+2:04:49.680 --> 2:04:59.280
+ kind of feeling that creation is, like for me, has been very fulfilling. And it seems like my
+
+2:04:59.280 --> 2:05:05.040
+ meaning has been to create. And I'm not sure what that is. I don't have, I'm single out of kids.
+
+2:05:05.040 --> 2:05:11.920
+ I'd love to have kids, but I also, sounds creepy, but I also see, sort of, you said,
+
+2:05:11.920 --> 2:05:17.520
+ see programs. I see programs as little creations. I see robots as little creations.
+
+2:05:19.360 --> 2:05:27.360
+ I think those bring, and then ideas, theorems, and our creations. And those somehow intrinsically,
+
+2:05:27.360 --> 2:05:31.920
+ like you said, bring me joy. And I think they do to a lot of, at least scientists, but I think
+
+2:05:31.920 --> 2:05:37.680
+ they do to a lot of people. So that, to me, if I had to force the answer to that, I would say
+
+2:05:38.400 --> 2:05:47.600
+ creating new things yourself. For you. For me. For me. For me. I don't know. But like you said,
+
+2:05:47.600 --> 2:05:52.800
+ it keeps changing. Is there some answer that? And some people, they can, I think they may say,
+
+2:05:52.800 --> 2:05:58.400
+ it's experience, right? Like their meaning of life. They just want to experience to the riches
+
+2:05:58.400 --> 2:06:04.800
+ and fullest they can. And a lot of people do take that path. Yes. Seeing life is actually a collection
+
+2:06:04.800 --> 2:06:12.240
+ of moments and then trying to make the richest possible sets, fill those moments with the richest
+
+2:06:12.240 --> 2:06:17.600
+ possible experiences. Yeah. Right. And for me, I think certainly we do share a lot of similarity
+
+2:06:17.600 --> 2:06:21.920
+ here. So creation is also really important for me, even from, you know, the things I've already
+
+2:06:21.920 --> 2:06:28.160
+ talked about, even like, you know, writing papers and these are our creations as well.
+
+2:06:30.080 --> 2:06:35.440
+ And I have not quite thought whether that is really the meaning of my life. Like, in a sense,
+
+2:06:35.440 --> 2:06:39.920
+ also that maybe like, what kind of things should you create? So there are so many different things
+
+2:06:39.920 --> 2:06:48.800
+ that you could create. And also you can say, another view is maybe growth is, it's related
+
+2:06:48.800 --> 2:06:54.240
+ but different from experience. Growth is also maybe a type of meaning of life. It's just,
+
+2:06:54.240 --> 2:07:04.400
+ you try to grow every day, try to be a better self every day. And also ultimately, we are here,
+
+2:07:04.400 --> 2:07:11.680
+ it's part of the overall evolution, the, right, the world is evolving. And it's funny,
+
+2:07:11.680 --> 2:07:17.200
+ isn't it funny that the growth seems to be the more important thing than the thing you're growing
+
+2:07:17.200 --> 2:07:23.440
+ towards. It's like, it's not the goal, it's the journey to it. Sort of, it's almost, it's almost
+
+2:07:23.440 --> 2:07:30.080
+ when you submit a paper, there's a sort of depressing element to it, not to submit a paper,
+
+2:07:30.080 --> 2:07:35.120
+ but when that whole project is over, I mean, there's a gratitude, there's a celebration and so on,
+
+2:07:35.120 --> 2:07:40.880
+ but you're usually immediately looking for the next thing or the next step, right? It's not,
+
+2:07:41.680 --> 2:07:44.640
+ it's not that satisfied, the end of it is not the satisfaction, it's the
+
+2:07:44.640 --> 2:07:48.160
+ the hardship, the challenge you have to overcome, the growth through the process.
+
+2:07:48.640 --> 2:07:54.240
+ It's somehow, probably deeply within us, the same thing that drives the evolutionary process
+
+2:07:54.240 --> 2:07:59.120
+ is somehow within us, with everything, the way, the way we see the world, since you're
+
+2:07:59.120 --> 2:08:06.480
+ thinking about these, so you're still in search of an answer. I mean, yes and no, in the sense that
+
+2:08:06.480 --> 2:08:13.200
+ I think for people who really dedicate time to search for the answer, to ask the question,
+
+2:08:13.200 --> 2:08:17.680
+ what is the meaning of life? It does not necessarily bring you happiness.
+
+2:08:19.760 --> 2:08:25.920
+ Yeah, it's a question, we can say, right, like whether it's a well defined question and
+
+2:08:28.800 --> 2:08:34.960
+ but on the other hand, given that you get to answer yourself, you can define it yourself,
+
+2:08:34.960 --> 2:08:44.240
+ then sure, I can just give it an answer and in that sense, yes, it can help.
+
+2:08:46.240 --> 2:08:53.440
+ Like we discussed, if you say, oh, then my meaning of life is to create or to grow,
+
+2:08:54.000 --> 2:09:00.240
+ then yes, then I think it can help, but how do you know that that is really the meaning of life
+
+2:09:00.240 --> 2:09:05.680
+ or the meaning of your life? It's like there's no way for you to really answer the question.
+
+2:09:05.680 --> 2:09:11.360
+ Sure, but something about that certainty is liberating, so it might be an illusion,
+
+2:09:11.360 --> 2:09:16.160
+ you might not really know, you might be just convincing yourself falsely, but being sure
+
+2:09:16.160 --> 2:09:24.800
+ that that's the meaning, there's something liberating in that, there's something freeing
+
+2:09:24.800 --> 2:09:28.320
+ and knowing this is your purpose, so you can fully give yourself to that.
+
+2:09:28.320 --> 2:09:33.520
+ You know, for a long time, I thought like, isn't it all relative? Like why,
+
+2:09:35.360 --> 2:09:39.760
+ what's, how do we even know what's good and what's evil? Like isn't everything just relative?
+
+2:09:39.760 --> 2:09:47.760
+ Like how do we know, the question of meaning is ultimately the question of why do anything?
+
+2:09:48.320 --> 2:09:52.400
+ Why is anything good or bad? Why is anything so on?
+
+2:09:52.400 --> 2:09:59.280
+ Exactly. But the moment, then you start to, I think just like you said, I think it's a really
+
+2:09:59.280 --> 2:10:07.520
+ useful question to ask, but if you ask it for too long and too aggressively.
+
+2:10:07.520 --> 2:10:13.200
+ I mean, not be so productive. They have not be productive and not just for traditionally,
+
+2:10:13.200 --> 2:10:18.720
+ societally defined success, but also for happiness. It seems like asking the question
+
+2:10:18.720 --> 2:10:26.480
+ about the meaning of life is like a trap. We're destined to be asking, we're destined to look
+
+2:10:26.480 --> 2:10:30.320
+ up to the stars and ask these big, why questions we'll never be able to answer,
+
+2:10:30.320 --> 2:10:35.360
+ but we shouldn't get lost in them. I think that's probably the, that's at least the lesson I picked
+
+2:10:35.360 --> 2:10:41.520
+ up so far on that topic. Oh, let me just add one more thing. So it's interesting. So actually,
+
+2:10:41.520 --> 2:10:52.560
+ so sometimes, yes, it can help you to focus. So when I, when I shifted my focus more from
+
+2:10:52.560 --> 2:10:59.120
+ security to AI and machine learning, at the time, the, actually one of the main reasons that I,
+
+2:10:59.120 --> 2:11:08.320
+ I did that was because at the time, I thought my meaning, the meaning of my life and the purpose
+
+2:11:08.320 --> 2:11:16.960
+ of my life is to build intelligent machines. And that's, and then your inner voice said that this
+
+2:11:16.960 --> 2:11:22.000
+ is the right, this is the right journey to take to build intelligent machines. And that you actually
+
+2:11:22.000 --> 2:11:28.320
+ fully realized you took a really legitimate big step to become one of the world class researchers
+
+2:11:28.320 --> 2:11:36.320
+ to actually make it, to actually go down that journey. Yeah, that's profound. That's profound.
+
+2:11:36.320 --> 2:11:43.120
+ I don't think there's a better way to end a conversation than talking for, for a while about
+
+2:11:43.120 --> 2:11:47.440
+ the meaning of life. Don is a huge honor to talk to you. Thank you so much for talking today.
+
+2:11:47.440 --> 2:11:53.120
+ Thank you. Thank you. Thanks for listening to this conversation with Don Song and thank you
+
+2:11:53.120 --> 2:11:57.600
+ to our presenting sponsor, Cash App. Please consider supporting the podcast by downloading
+
+2:11:57.600 --> 2:12:03.760
+ Cash App and using code Lex Podcast. If you enjoy this podcast, subscribe on YouTube,
+
+2:12:03.760 --> 2:12:08.240
+ review it with five stars on Apple podcast, support on Patreon or simply connect with me
+
+2:12:08.240 --> 2:12:15.680
+ on Twitter at Lex Freedman. And now let me leave you with some words about hacking from the great
+
+2:12:15.680 --> 2:12:23.040
+ Steve Wozniak. A lot of hacking is playing with other people, you know, getting them to do strange
+
+2:12:23.040 --> 2:12:35.840
+ things. Thank you for listening and hope to see you next time.
+

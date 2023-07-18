@@ -1,0 +1,1871 @@
+WEBVTT
+
+00:00.000 --> 00:03.000
+ The following is a conversation with Elon Musk.
+
+00:03.000 --> 00:06.240
+ He's the CEO of Tesla, SpaceX, Neuralink,
+
+00:06.240 --> 00:09.200
+ and a cofounder of several other companies.
+
+00:09.200 --> 00:10.740
+ This conversation is part
+
+00:10.740 --> 00:13.200
+ of the artificial intelligence podcast.
+
+00:13.200 --> 00:15.640
+ The series includes leading researchers
+
+00:15.640 --> 00:19.320
+ in academia and industry, including CEOs and CTOs
+
+00:19.320 --> 00:24.080
+ of automotive, robotics, AI, and technology companies.
+
+00:24.080 --> 00:26.880
+ This conversation happened after the release of the paper
+
+00:26.880 --> 00:30.520
+ from our group at MIT on driver functional vigilance
+
+00:30.520 --> 00:32.880
+ during use of Tesla's autopilot.
+
+00:32.880 --> 00:34.560
+ The Tesla team reached out to me,
+
+00:34.560 --> 00:37.480
+ offering a podcast conversation with Mr. Musk.
+
+00:37.480 --> 00:40.640
+ I accepted with full control of questions I could ask
+
+00:40.640 --> 00:43.560
+ and the choice of what is released publicly.
+
+00:43.560 --> 00:46.840
+ I ended up editing out nothing of substance.
+
+00:46.840 --> 00:49.680
+ I've never spoken with Elon before this conversation,
+
+00:49.680 --> 00:51.720
+ publicly or privately.
+
+00:51.720 --> 00:54.360
+ Neither he nor his companies have any influence
+
+00:54.360 --> 00:57.840
+ on my opinion, nor on the rigor and integrity
+
+00:57.840 --> 00:59.760
+ of the scientific method that I practice
+
+00:59.760 --> 01:01.840
+ in my position at MIT.
+
+01:01.840 --> 01:04.640
+ Tesla has never financially supported my research
+
+01:04.640 --> 01:07.320
+ and I've never owned a Tesla vehicle.
+
+01:07.320 --> 01:10.160
+ I've never owned Tesla stock.
+
+01:10.160 --> 01:12.800
+ This podcast is not a scientific paper.
+
+01:12.800 --> 01:14.360
+ It is a conversation.
+
+01:14.360 --> 01:16.720
+ I respect Elon as I do all other leaders
+
+01:16.720 --> 01:18.680
+ and engineers I've spoken with.
+
+01:18.680 --> 01:21.440
+ We agree on some things and disagree on others.
+
+01:21.440 --> 01:23.480
+ My goal is always with these conversations
+
+01:23.480 --> 01:26.920
+ is to understand the way the guest sees the world.
+
+01:26.920 --> 01:28.600
+ One particular point of this agreement
+
+01:28.600 --> 01:30.640
+ in this conversation was the extent
+
+01:30.640 --> 01:33.240
+ to which camera based driver monitoring
+
+01:33.240 --> 01:36.120
+ will improve outcomes and for how long
+
+01:36.120 --> 01:39.120
+ it will remain relevant for AI assisted driving.
+
+01:39.960 --> 01:42.240
+ As someone who works on and is fascinated
+
+01:42.240 --> 01:45.200
+ by human centered artificial intelligence,
+
+01:45.200 --> 01:48.720
+ I believe that if implemented and integrated effectively,
+
+01:48.720 --> 01:51.840
+ camera based driver monitoring is likely to be of benefit
+
+01:51.840 --> 01:55.640
+ in both the short term and the long term.
+
+01:55.640 --> 01:59.240
+ In contrast, Elon and Tesla's focus
+
+01:59.240 --> 02:01.200
+ is on the improvement of autopilot
+
+02:01.200 --> 02:04.480
+ such that its statistical safety benefits
+
+02:04.480 --> 02:09.040
+ override any concern of human behavior and psychology.
+
+02:09.040 --> 02:12.040
+ Elon and I may not agree on everything
+
+02:12.040 --> 02:13.920
+ but I deeply respect the engineering
+
+02:13.920 --> 02:16.880
+ and innovation behind the efforts that he leads.
+
+02:16.880 --> 02:20.560
+ My goal here is to catalyze a rigorous, nuanced
+
+02:20.560 --> 02:23.520
+ and objective discussion in industry and academia
+
+02:23.520 --> 02:26.240
+ on AI assisted driving,
+
+02:26.240 --> 02:30.840
+ one that ultimately makes for a safer and better world.
+
+02:30.840 --> 02:34.600
+ And now here's my conversation with Elon Musk.
+
+02:35.600 --> 02:38.640
+ What was the vision, the dream of autopilot
+
+02:38.640 --> 02:41.400
+ when in the beginning the big picture system level
+
+02:41.400 --> 02:43.680
+ when it was first conceived
+
+02:43.680 --> 02:45.960
+ and started being installed in 2014
+
+02:45.960 --> 02:47.520
+ in the hardware and the cars?
+
+02:47.520 --> 02:49.760
+ What was the vision, the dream?
+
+02:49.760 --> 02:51.400
+ I would characterize the vision or dream
+
+02:51.400 --> 02:54.400
+ simply that there are obviously two
+
+02:54.400 --> 02:59.400
+ massive revolutions in the automobile industry.
+
+03:00.120 --> 03:04.440
+ One is the transition to electrification
+
+03:04.440 --> 03:06.400
+ and then the other is autonomy.
+
+03:07.720 --> 03:12.720
+ And it became obvious to me that in the future
+
+03:13.240 --> 03:16.240
+ any car that does not have autonomy
+
+03:16.240 --> 03:19.160
+ I would be about as useful as a horse.
+
+03:19.160 --> 03:22.040
+ Which is not to say that there's no use, it's just rare
+
+03:22.040 --> 03:23.640
+ and somewhat idiosyncratic
+
+03:23.640 --> 03:25.480
+ if somebody has a horse at this point.
+
+03:25.480 --> 03:28.000
+ It's just obvious that cars will drive themselves completely.
+
+03:28.000 --> 03:29.600
+ It's just a question of time
+
+03:29.600 --> 03:34.600
+ and if we did not participate in the autonomy revolution
+
+03:36.920 --> 03:40.840
+ then our cars would not be useful to people
+
+03:40.840 --> 03:43.680
+ relative to cars that are autonomous.
+
+03:43.680 --> 03:47.160
+ I mean an autonomous car is arguably worth
+
+03:47.160 --> 03:52.160
+ five to 10 times more than a car that which is not autonomous.
+
+03:53.760 --> 03:55.160
+ In the long term.
+
+03:55.160 --> 03:56.200
+ Turns out what you mean by long term,
+
+03:56.200 --> 03:59.520
+ but let's say at least for the next five years
+
+03:59.520 --> 04:00.520
+ perhaps 10 years.
+
+04:01.440 --> 04:04.080
+ So there are a lot of very interesting design choices
+
+04:04.080 --> 04:05.720
+ with autopilot early on.
+
+04:05.720 --> 04:09.960
+ First is showing on the instrument cluster
+
+04:09.960 --> 04:12.680
+ or in the Model 3 on the center stack display
+
+04:12.680 --> 04:15.720
+ what the combined sensor suite sees.
+
+04:15.720 --> 04:17.920
+ What was the thinking behind that choice?
+
+04:17.920 --> 04:18.960
+ Was there a debate?
+
+04:18.960 --> 04:20.480
+ What was the process?
+
+04:20.480 --> 04:24.840
+ The whole point of the display is to provide a health check
+
+04:24.840 --> 04:28.080
+ on the vehicle's perception of reality.
+
+04:28.080 --> 04:31.320
+ So the vehicle's taking information for a bunch of sensors
+
+04:31.320 --> 04:34.680
+ primarily cameras, but also radar and ultrasonics,
+
+04:34.680 --> 04:35.960
+ GPS and so forth.
+
+04:37.200 --> 04:42.200
+ And then that information is then rendered into vector space
+
+04:42.200 --> 04:46.360
+ and that with a bunch of objects with properties
+
+04:46.360 --> 04:49.920
+ like lane lines and traffic lights and other cars.
+
+04:49.920 --> 04:54.920
+ And then in vector space that is re rendered onto a display
+
+04:54.920 --> 04:57.400
+ so you can confirm whether the car knows
+
+04:57.400 --> 05:00.600
+ what's going on or not by looking out the window.
+
+05:01.600 --> 05:04.240
+ Right, I think that's an extremely powerful thing
+
+05:04.240 --> 05:06.480
+ for people to get an understanding
+
+05:06.480 --> 05:07.840
+ to become one with the system
+
+05:07.840 --> 05:10.400
+ and understanding what the system is capable of.
+
+05:10.400 --> 05:13.600
+ Now, have you considered showing more?
+
+05:13.600 --> 05:15.400
+ So if we look at the computer vision,
+
+05:16.400 --> 05:18.400
+ you know, like road segmentation, lane detection,
+
+05:18.400 --> 05:21.640
+ vehicle detection, object detection, underlying the system,
+
+05:21.640 --> 05:24.400
+ there is at the edges some uncertainty.
+
+05:24.400 --> 05:28.400
+ Have you considered revealing the parts
+
+05:28.400 --> 05:32.400
+ that the uncertainty in the system, the sort of problem
+
+05:32.400 --> 05:35.000
+ these associated with say image recognition
+
+05:35.000 --> 05:35.840
+ or something like that?
+
+05:35.840 --> 05:37.840
+ Yeah, so right now it shows like the vehicles
+
+05:37.840 --> 05:40.840
+ and the vicinity of very clean crisp image
+
+05:40.840 --> 05:43.840
+ and people do confirm that there's a car in front of me
+
+05:43.840 --> 05:45.840
+ and the system sees there's a car in front of me
+
+05:45.840 --> 05:47.840
+ but to help people build an intuition
+
+05:47.840 --> 05:51.840
+ of what computer vision is by showing some of the uncertainty.
+
+05:51.840 --> 05:53.840
+ Well, I think it's, in my car,
+
+05:53.840 --> 05:56.840
+ I always look at the sort of the debug view
+
+05:56.840 --> 05:58.840
+ and there's two debug views.
+
+05:58.840 --> 06:03.840
+ One is augmented vision, which I'm sure you've seen
+
+06:03.840 --> 06:07.840
+ where it's basically, we draw boxes and labels
+
+06:07.840 --> 06:10.840
+ around objects that are recognized.
+
+06:10.840 --> 06:14.840
+ And then there's what we call the visualizer,
+
+06:14.840 --> 06:16.840
+ which is basically a vector space representation
+
+06:16.840 --> 06:21.840
+ summing up the input from all sensors.
+
+06:21.840 --> 06:23.840
+ That does not show any pictures,
+
+06:23.840 --> 06:26.840
+ but it shows all of the,
+
+06:26.840 --> 06:32.840
+ it basically shows the cause view of the world in vector space.
+
+06:32.840 --> 06:36.840
+ But I think this is very difficult for normal people to understand.
+
+06:36.840 --> 06:38.840
+ They would not know what they're looking at.
+
+06:38.840 --> 06:40.840
+ So it's almost an HMI challenge.
+
+06:40.840 --> 06:42.840
+ The current things that are being displayed
+
+06:42.840 --> 06:46.840
+ is optimized for the general public understanding
+
+06:46.840 --> 06:48.840
+ of what the system is capable of.
+
+06:48.840 --> 06:50.840
+ It's like if you have no idea how computer vision works
+
+06:50.840 --> 06:52.840
+ or anything, you can still look at the screen
+
+06:52.840 --> 06:54.840
+ and see if the car knows what's going on.
+
+06:54.840 --> 06:57.840
+ And then if you're a development engineer
+
+06:57.840 --> 07:01.840
+ or if you have the development build like I do,
+
+07:01.840 --> 07:05.840
+ then you can see all the debug information.
+
+07:05.840 --> 07:10.840
+ But those would just be total diverse to most people.
+
+07:10.840 --> 07:13.840
+ What's your view on how to best distribute effort?
+
+07:13.840 --> 07:16.840
+ So there's three, I would say, technical aspects of autopilot
+
+07:16.840 --> 07:18.840
+ that are really important.
+
+07:18.840 --> 07:19.840
+ So it's the underlying algorithms,
+
+07:19.840 --> 07:21.840
+ like the neural network architecture.
+
+07:21.840 --> 07:23.840
+ There's the data that's trained on
+
+07:23.840 --> 07:25.840
+ and then there's the hardware development.
+
+07:25.840 --> 07:26.840
+ There may be others.
+
+07:26.840 --> 07:31.840
+ But so look, algorithm, data, hardware.
+
+07:31.840 --> 07:34.840
+ You only have so much money, only have so much time.
+
+07:34.840 --> 07:36.840
+ What do you think is the most important thing
+
+07:36.840 --> 07:39.840
+ to allocate resources to?
+
+07:39.840 --> 07:41.840
+ Do you see it as pretty evenly distributed
+
+07:41.840 --> 07:43.840
+ between those three?
+
+07:43.840 --> 07:46.840
+ We automatically get fast amounts of data
+
+07:46.840 --> 07:48.840
+ because all of our cars have
+
+07:50.840 --> 07:54.840
+ eight external facing cameras and radar
+
+07:54.840 --> 07:59.840
+ and usually 12 ultrasonic sensors, GPS, obviously,
+
+07:59.840 --> 08:03.840
+ and IMU.
+
+08:03.840 --> 08:08.840
+ And so we basically have a fleet that has,
+
+08:08.840 --> 08:11.840
+ we've got about 400,000 cars on the road
+
+08:11.840 --> 08:13.840
+ that have that level of data.
+
+08:13.840 --> 08:15.840
+ I think you keep quite close track of it, actually.
+
+08:15.840 --> 08:16.840
+ Yes.
+
+08:16.840 --> 08:19.840
+ So we're approaching half a million cars
+
+08:19.840 --> 08:22.840
+ on the road that have the full sensor suite.
+
+08:22.840 --> 08:26.840
+ So this is, I'm not sure how many other cars
+
+08:26.840 --> 08:28.840
+ on the road have this sensor suite,
+
+08:28.840 --> 08:31.840
+ but I'd be surprised if it's more than 5,000,
+
+08:31.840 --> 08:35.840
+ which means that we have 99% of all the data.
+
+08:35.840 --> 08:37.840
+ So there's this huge inflow of data.
+
+08:37.840 --> 08:39.840
+ Absolutely, massive inflow of data.
+
+08:39.840 --> 08:43.840
+ And then it's taken about three years,
+
+08:43.840 --> 08:46.840
+ but now we've finally developed our full self driving computer,
+
+08:46.840 --> 08:51.840
+ which can process
+
+08:51.840 --> 08:54.840
+ an order of magnitude as much as the NVIDIA system
+
+08:54.840 --> 08:56.840
+ that we currently have in the cars.
+
+08:56.840 --> 08:58.840
+ And it's really just to use it,
+
+08:58.840 --> 09:01.840
+ you unplug the NVIDIA computer and plug the Tesla computer in.
+
+09:01.840 --> 09:03.840
+ And that's it.
+
+09:03.840 --> 09:06.840
+ And it's, in fact, we're not even,
+
+09:06.840 --> 09:09.840
+ we're still exploring the boundaries of its capabilities,
+
+09:09.840 --> 09:11.840
+ but we're able to run the cameras at full frame rate,
+
+09:11.840 --> 09:14.840
+ full resolution, not even crop of the images,
+
+09:14.840 --> 09:19.840
+ and it's still got headroom, even on one of the systems.
+
+09:19.840 --> 09:22.840
+ The full self driving computer is really two computers,
+
+09:22.840 --> 09:25.840
+ two systems on a chip that are fully redundant.
+
+09:25.840 --> 09:28.840
+ So you could put a bolt through basically any part of that system
+
+09:28.840 --> 09:29.840
+ and it still works.
+
+09:29.840 --> 09:32.840
+ The redundancy, are they perfect copies of each other?
+
+09:32.840 --> 09:35.840
+ Or also it's purely for redundancy
+
+09:35.840 --> 09:37.840
+ as opposed to an arguing machine kind of architecture
+
+09:37.840 --> 09:39.840
+ where they're both making decisions.
+
+09:39.840 --> 09:41.840
+ This is purely for redundancy.
+
+09:41.840 --> 09:44.840
+ I think it's more like, if you have a twin engine aircraft,
+
+09:44.840 --> 09:46.840
+ commercial aircraft,
+
+09:46.840 --> 09:51.840
+ this system will operate best if both systems are operating,
+
+09:51.840 --> 09:55.840
+ but it's capable of operating safely on one.
+
+09:55.840 --> 09:59.840
+ So, but as it is right now, we can just run,
+
+09:59.840 --> 10:03.840
+ we haven't even hit the edge of performance,
+
+10:03.840 --> 10:08.840
+ so there's no need to actually distribute
+
+10:08.840 --> 10:12.840
+ functionality across both SoCs.
+
+10:12.840 --> 10:16.840
+ We can actually just run a full duplicate on each one.
+
+10:16.840 --> 10:20.840
+ You haven't really explored or hit the limit of the system?
+
+10:20.840 --> 10:21.840
+ Not yet, hit the limit now.
+
+10:21.840 --> 10:26.840
+ So the magic of deep learning is that it gets better with data.
+
+10:26.840 --> 10:28.840
+ You said there's a huge inflow of data,
+
+10:28.840 --> 10:33.840
+ but the thing about driving the really valuable data
+
+10:33.840 --> 10:35.840
+ to learn from is the edge cases.
+
+10:35.840 --> 10:42.840
+ So how do you, I mean, I've heard you talk somewhere about
+
+10:42.840 --> 10:46.840
+ autopilot disengagement as being an important moment of time to use.
+
+10:46.840 --> 10:51.840
+ Is there other edge cases or perhaps can you speak to those edge cases,
+
+10:51.840 --> 10:53.840
+ what aspects of them might be valuable,
+
+10:53.840 --> 10:55.840
+ or if you have other ideas,
+
+10:55.840 --> 10:59.840
+ how to discover more and more and more edge cases in driving?
+
+10:59.840 --> 11:01.840
+ Well, there's a lot of things that I learned.
+
+11:01.840 --> 11:05.840
+ There are certainly edge cases where I say somebody's on autopilot
+
+11:05.840 --> 11:07.840
+ and they take over.
+
+11:07.840 --> 11:12.840
+ And then, okay, that's a trigger that goes to a system that says,
+
+11:12.840 --> 11:14.840
+ okay, do they take over for convenience
+
+11:14.840 --> 11:18.840
+ or do they take over because the autopilot wasn't working properly?
+
+11:18.840 --> 11:21.840
+ There's also, like let's say we're trying to figure out
+
+11:21.840 --> 11:26.840
+ what is the optimal spline for traversing an intersection.
+
+11:26.840 --> 11:30.840
+ Then the ones where there are no interventions
+
+11:30.840 --> 11:32.840
+ and are the right ones.
+
+11:32.840 --> 11:36.840
+ So you then say, okay, when it looks like this, do the following.
+
+11:36.840 --> 11:40.840
+ And then you get the optimal spline for a complex,
+
+11:40.840 --> 11:44.840
+ now getting a complex intersection.
+
+11:44.840 --> 11:48.840
+ So that's for, there's kind of the common case.
+
+11:48.840 --> 11:51.840
+ You're trying to capture a huge amount of samples
+
+11:51.840 --> 11:54.840
+ of a particular intersection, how one thing went right.
+
+11:54.840 --> 11:58.840
+ And then there's the edge case where, as you said,
+
+11:58.840 --> 12:01.840
+ not for convenience, but something didn't go exactly right.
+
+12:01.840 --> 12:04.840
+ Somebody took over, somebody asserted manual control from autopilot.
+
+12:04.840 --> 12:08.840
+ And really, like the way to look at this is view all input is error.
+
+12:08.840 --> 12:11.840
+ If the user had to do input, it does something.
+
+12:11.840 --> 12:13.840
+ All input is error.
+
+12:13.840 --> 12:15.840
+ That's a powerful line to think of it that way,
+
+12:15.840 --> 12:17.840
+ because it may very well be error.
+
+12:17.840 --> 12:19.840
+ But if you want to exit the highway,
+
+12:19.840 --> 12:22.840
+ or if you want to, it's a navigation decision
+
+12:22.840 --> 12:24.840
+ that all autopilot is not currently designed to do,
+
+12:24.840 --> 12:26.840
+ then the driver takes over.
+
+12:26.840 --> 12:28.840
+ How do you know the difference?
+
+12:28.840 --> 12:30.840
+ Yeah, that's going to change with navigate and autopilot,
+
+12:30.840 --> 12:33.840
+ which we've just released, and without stall confirm.
+
+12:33.840 --> 12:36.840
+ So the navigation, like lane change based,
+
+12:36.840 --> 12:39.840
+ like asserting control in order to do a lane change,
+
+12:39.840 --> 12:43.840
+ or exit a freeway, or doing highway interchange,
+
+12:43.840 --> 12:47.840
+ the vast majority of that will go away with the release
+
+12:47.840 --> 12:49.840
+ that just went out.
+
+12:49.840 --> 12:52.840
+ Yeah, I don't think people quite understand
+
+12:52.840 --> 12:54.840
+ how big of a step that is.
+
+12:54.840 --> 12:55.840
+ Yeah, they don't.
+
+12:55.840 --> 12:57.840
+ If you drive the car, then you do.
+
+12:57.840 --> 12:59.840
+ So you still have to keep your hands on the steering wheel
+
+12:59.840 --> 13:02.840
+ currently when it does the automatic lane change?
+
+13:02.840 --> 13:04.840
+ What are...
+
+13:04.840 --> 13:07.840
+ So there's these big leaps through the development of autopilot
+
+13:07.840 --> 13:09.840
+ through its history,
+
+13:09.840 --> 13:12.840
+ and what stands out to you as the big leaps?
+
+13:12.840 --> 13:14.840
+ I would say this one,
+
+13:14.840 --> 13:19.840
+ navigate and autopilot without having to confirm,
+
+13:19.840 --> 13:20.840
+ is a huge leap.
+
+13:20.840 --> 13:21.840
+ It is a huge leap.
+
+13:21.840 --> 13:24.840
+ It also automatically overtakes slow cars.
+
+13:24.840 --> 13:30.840
+ So it's both navigation and seeking the fastest lane.
+
+13:30.840 --> 13:36.840
+ So it'll overtake a slow cause and exit the freeway
+
+13:36.840 --> 13:39.840
+ and take highway interchanges.
+
+13:39.840 --> 13:46.840
+ And then we have traffic light recognition,
+
+13:46.840 --> 13:49.840
+ which is introduced initially as a warning.
+
+13:49.840 --> 13:51.840
+ I mean, on the development version that I'm driving,
+
+13:51.840 --> 13:55.840
+ the car fully stops and goes at traffic lights.
+
+13:55.840 --> 13:57.840
+ So those are the steps, right?
+
+13:57.840 --> 13:59.840
+ You just mentioned something sort of
+
+13:59.840 --> 14:02.840
+ including a step towards full autonomy.
+
+14:02.840 --> 14:07.840
+ What would you say are the biggest technological roadblocks
+
+14:07.840 --> 14:09.840
+ to full cell driving?
+
+14:09.840 --> 14:10.840
+ Actually, I don't think...
+
+14:10.840 --> 14:11.840
+ I think we just...
+
+14:11.840 --> 14:13.840
+ the full cell driving computer that we just...
+
+14:13.840 --> 14:14.840
+ that has a...
+
+14:14.840 --> 14:16.840
+ what we call the FSD computer.
+
+14:16.840 --> 14:20.840
+ That's now in production.
+
+14:20.840 --> 14:25.840
+ So if you order any Model SRX or any Model 3
+
+14:25.840 --> 14:28.840
+ that has the full cell driving package,
+
+14:28.840 --> 14:31.840
+ you'll get the FSD computer.
+
+14:31.840 --> 14:36.840
+ That's important to have enough base computation.
+
+14:36.840 --> 14:40.840
+ Then refining the neural net and the control software.
+
+14:40.840 --> 14:44.840
+ But all of that can just be provided as an over there update.
+
+14:44.840 --> 14:46.840
+ The thing that's really profound,
+
+14:46.840 --> 14:50.840
+ and where I'll be emphasizing at the...
+
+14:50.840 --> 14:52.840
+ that investor day that we're having focused on autonomy,
+
+14:52.840 --> 14:55.840
+ is that the cars currently being produced,
+
+14:55.840 --> 14:57.840
+ or the hardware currently being produced,
+
+14:57.840 --> 15:00.840
+ is capable of full cell driving.
+
+15:00.840 --> 15:03.840
+ But capable is an interesting word because...
+
+15:03.840 --> 15:05.840
+ Like the hardware is.
+
+15:05.840 --> 15:08.840
+ And as we refine the software,
+
+15:08.840 --> 15:11.840
+ the capabilities will increase dramatically
+
+15:11.840 --> 15:13.840
+ and then the reliability will increase dramatically
+
+15:13.840 --> 15:15.840
+ and then it will receive regulatory approval.
+
+15:15.840 --> 15:18.840
+ So essentially buying a car today is an investment in the future.
+
+15:18.840 --> 15:21.840
+ You're essentially buying...
+
+15:21.840 --> 15:25.840
+ I think the most profound thing is that
+
+15:25.840 --> 15:27.840
+ if you buy a Tesla today,
+
+15:27.840 --> 15:29.840
+ I believe you are buying an appreciating asset,
+
+15:29.840 --> 15:32.840
+ not a depreciating asset.
+
+15:32.840 --> 15:34.840
+ So that's a really important statement there
+
+15:34.840 --> 15:36.840
+ because if hardware is capable enough,
+
+15:36.840 --> 15:39.840
+ that's the hard thing to upgrade usually.
+
+15:39.840 --> 15:40.840
+ Exactly.
+
+15:40.840 --> 15:43.840
+ So then the rest is a software problem.
+
+15:43.840 --> 15:47.840
+ Yes. Software has no marginal cost, really.
+
+15:47.840 --> 15:51.840
+ But what's your intuition on the software side?
+
+15:51.840 --> 15:55.840
+ How hard are the remaining steps
+
+15:55.840 --> 15:58.840
+ to get it to where...
+
+15:58.840 --> 16:02.840
+ you know, the experience,
+
+16:02.840 --> 16:05.840
+ not just the safety, but the full experience
+
+16:05.840 --> 16:08.840
+ is something that people would enjoy.
+
+16:08.840 --> 16:12.840
+ I think people would enjoy it very much on the highways.
+
+16:12.840 --> 16:16.840
+ It's a total game changer for quality of life,
+
+16:16.840 --> 16:20.840
+ for using Tesla autopilot on the highways.
+
+16:20.840 --> 16:24.840
+ So it's really just extending that functionality to city streets,
+
+16:24.840 --> 16:28.840
+ adding in the traffic light recognition,
+
+16:28.840 --> 16:31.840
+ navigating complex intersections,
+
+16:31.840 --> 16:36.840
+ and then being able to navigate complicated parking lots
+
+16:36.840 --> 16:39.840
+ so the car can exit a parking space
+
+16:39.840 --> 16:45.840
+ and come and find you even if it's in a complete maze of a parking lot.
+
+16:45.840 --> 16:51.840
+ And then you can just drop you off and find a parking spot by itself.
+
+16:51.840 --> 16:53.840
+ Yeah, in terms of enjoyability
+
+16:53.840 --> 16:57.840
+ and something that people would actually find a lot of use from,
+
+16:57.840 --> 17:00.840
+ the parking lot is a really...
+
+17:00.840 --> 17:03.840
+ it's rich of annoyance when you have to do it manually,
+
+17:03.840 --> 17:07.840
+ so there's a lot of benefit to be gained from automation there.
+
+17:07.840 --> 17:11.840
+ So let me start injecting the human into this discussion a little bit.
+
+17:11.840 --> 17:14.840
+ So let's talk about full autonomy.
+
+17:14.840 --> 17:17.840
+ If you look at the current level four vehicles,
+
+17:17.840 --> 17:19.840
+ being Tesla and road like Waymo and so on,
+
+17:19.840 --> 17:22.840
+ they're only technically autonomous.
+
+17:22.840 --> 17:25.840
+ They're really level two systems
+
+17:25.840 --> 17:28.840
+ with just a different design philosophy
+
+17:28.840 --> 17:31.840
+ because there's always a safety driver in almost all cases
+
+17:31.840 --> 17:33.840
+ and they're monitoring the system.
+
+17:33.840 --> 17:37.840
+ Maybe Tesla's full self driving
+
+17:37.840 --> 17:41.840
+ is still for a time to come,
+
+17:41.840 --> 17:44.840
+ requiring supervision of the human being.
+
+17:44.840 --> 17:47.840
+ So its capabilities are powerful enough to drive,
+
+17:47.840 --> 17:50.840
+ but nevertheless requires the human to still be supervising
+
+17:50.840 --> 17:56.840
+ just like a safety driver is in a other fully autonomous vehicles.
+
+17:56.840 --> 18:01.840
+ I think it will require detecting hands on wheel
+
+18:01.840 --> 18:08.840
+ or at least six months or something like that from here.
+
+18:08.840 --> 18:11.840
+ Really it's a question of like,
+
+18:11.840 --> 18:15.840
+ from a regulatory standpoint,
+
+18:15.840 --> 18:19.840
+ how much safer than a person does autopilot need to be
+
+18:19.840 --> 18:24.840
+ for it to be okay to not monitor the car?
+
+18:24.840 --> 18:27.840
+ And this is a debate that one can have.
+
+18:27.840 --> 18:31.840
+ But you need a large amount of data
+
+18:31.840 --> 18:34.840
+ so you can prove with high confidence,
+
+18:34.840 --> 18:36.840
+ statistically speaking,
+
+18:36.840 --> 18:39.840
+ that the car is dramatically safer than a person
+
+18:39.840 --> 18:42.840
+ and that adding in the person monitoring
+
+18:42.840 --> 18:45.840
+ does not materially affect the safety.
+
+18:45.840 --> 18:49.840
+ So it might need to be like two or three hundred percent safer than a person.
+
+18:49.840 --> 18:51.840
+ And how do you prove that?
+
+18:51.840 --> 18:53.840
+ Incidence per mile.
+
+18:53.840 --> 18:56.840
+ So crashes and fatalities.
+
+18:56.840 --> 18:58.840
+ Yeah, fatalities would be a factor,
+
+18:58.840 --> 19:00.840
+ but there are just not enough fatalities
+
+19:00.840 --> 19:03.840
+ to be statistically significant at scale.
+
+19:03.840 --> 19:06.840
+ But there are enough crashes,
+
+19:06.840 --> 19:10.840
+ there are far more crashes than there are fatalities.
+
+19:10.840 --> 19:15.840
+ So you can assess what is the probability of a crash,
+
+19:15.840 --> 19:19.840
+ then there's another step which probability of injury
+
+19:19.840 --> 19:21.840
+ and probability of permanent injury
+
+19:21.840 --> 19:23.840
+ and probability of death.
+
+19:23.840 --> 19:27.840
+ And all of those need to be much better than a person
+
+19:27.840 --> 19:32.840
+ by at least perhaps two hundred percent.
+
+19:32.840 --> 19:36.840
+ And you think there's the ability to have a healthy discourse
+
+19:36.840 --> 19:39.840
+ with the regulatory bodies on this topic?
+
+19:39.840 --> 19:43.840
+ I mean, there's no question that regulators pay
+
+19:43.840 --> 19:48.840
+ disproportionate amount of attention to that which generates press.
+
+19:48.840 --> 19:50.840
+ This is just an objective fact.
+
+19:50.840 --> 19:52.840
+ And Tesla generates a lot of press.
+
+19:52.840 --> 19:56.840
+ So that, you know, in the United States,
+
+19:56.840 --> 20:00.840
+ there's I think almost 40,000 automotive deaths per year.
+
+20:00.840 --> 20:03.840
+ But if there are four in Tesla,
+
+20:03.840 --> 20:06.840
+ they'll probably receive a thousand times more press
+
+20:06.840 --> 20:08.840
+ than anyone else.
+
+20:08.840 --> 20:10.840
+ So the psychology of that is actually fascinating.
+
+20:10.840 --> 20:12.840
+ I don't think we'll have enough time to talk about that,
+
+20:12.840 --> 20:16.840
+ but I have to talk to you about the human side of things.
+
+20:16.840 --> 20:20.840
+ So myself and our team at MIT recently released a paper
+
+20:20.840 --> 20:24.840
+ on functional vigilance of drivers while using autopilot.
+
+20:24.840 --> 20:27.840
+ This is work we've been doing since autopilot was first
+
+20:27.840 --> 20:30.840
+ released publicly over three years ago,
+
+20:30.840 --> 20:34.840
+ collecting video driver faces and driver body.
+
+20:34.840 --> 20:38.840
+ So I saw that you tweeted a quote from the abstract
+
+20:38.840 --> 20:43.840
+ so I can at least guess that you've glanced at it.
+
+20:43.840 --> 20:46.840
+ Can I talk you through what we found?
+
+20:46.840 --> 20:51.840
+ Okay, so it appears that in the data that we've collected
+
+20:51.840 --> 20:54.840
+ that drivers are maintaining functional vigilance
+
+20:54.840 --> 20:57.840
+ such that we're looking at 18,000 disengagement
+
+20:57.840 --> 21:02.840
+ from autopilot, 18,900 and annotating were they able
+
+21:02.840 --> 21:05.840
+ to take over control in a timely manner?
+
+21:05.840 --> 21:07.840
+ So they were there present looking at the road
+
+21:07.840 --> 21:09.840
+ to take over control.
+
+21:09.840 --> 21:14.840
+ Okay, so this goes against what many would predict
+
+21:14.840 --> 21:18.840
+ from the body of literature on vigilance with automation.
+
+21:18.840 --> 21:21.840
+ Now the question is, do you think these results
+
+21:21.840 --> 21:23.840
+ hold across the broader population?
+
+21:23.840 --> 21:26.840
+ So ours is just a small subset.
+
+21:26.840 --> 21:30.840
+ Do you think one of the criticism is that there's
+
+21:30.840 --> 21:34.840
+ a small minority of drivers that may be highly responsible
+
+21:34.840 --> 21:37.840
+ where their vigilance decrement would increase
+
+21:37.840 --> 21:39.840
+ with autopilot use?
+
+21:39.840 --> 21:41.840
+ I think this is all really going to be swept.
+
+21:41.840 --> 21:46.840
+ I mean, the system's improving so much so fast
+
+21:46.840 --> 21:50.840
+ that this is going to be a mood point very soon
+
+21:50.840 --> 21:56.840
+ where vigilance is, if something's many times safer
+
+21:56.840 --> 22:00.840
+ than a person, then adding a person does,
+
+22:00.840 --> 22:04.840
+ the effect on safety is limited.
+
+22:04.840 --> 22:09.840
+ And in fact, it could be negative.
+
+22:09.840 --> 22:11.840
+ That's really interesting.
+
+22:11.840 --> 22:16.840
+ So the fact that a human may, some percent of the population
+
+22:16.840 --> 22:20.840
+ may exhibit a vigilance decrement will not affect
+
+22:20.840 --> 22:22.840
+ overall statistics numbers of safety.
+
+22:22.840 --> 22:27.840
+ No, in fact, I think it will become very, very quickly,
+
+22:27.840 --> 22:29.840
+ maybe even towards the end of this year,
+
+22:29.840 --> 22:32.840
+ but I'd say I'd be shocked if it's not next year,
+
+22:32.840 --> 22:36.840
+ at the latest, that having a human intervene
+
+22:36.840 --> 22:39.840
+ will increase safety.
+
+22:39.840 --> 22:40.840
+ Decrease.
+
+22:40.840 --> 22:42.840
+ I can imagine if you're an elevator.
+
+22:42.840 --> 22:45.840
+ Now, it used to be that there were elevator operators
+
+22:45.840 --> 22:47.840
+ and you couldn't go on an elevator by yourself
+
+22:47.840 --> 22:51.840
+ and work the lever to move between floors.
+
+22:51.840 --> 22:56.840
+ And now, nobody wants an elevator operator
+
+22:56.840 --> 23:00.840
+ because the automated elevator that stops the floors
+
+23:00.840 --> 23:03.840
+ is much safer than the elevator operator.
+
+23:03.840 --> 23:05.840
+ And in fact, it would be quite dangerous
+
+23:05.840 --> 23:07.840
+ if someone with a lever that can move
+
+23:07.840 --> 23:09.840
+ the elevator between floors.
+
+23:09.840 --> 23:12.840
+ So that's a really powerful statement
+
+23:12.840 --> 23:14.840
+ and a really interesting one.
+
+23:14.840 --> 23:16.840
+ But I also have to ask, from a user experience
+
+23:16.840 --> 23:18.840
+ and from a safety perspective,
+
+23:18.840 --> 23:20.840
+ one of the passions for me algorithmically
+
+23:20.840 --> 23:25.840
+ is camera based detection of sensing the human,
+
+23:25.840 --> 23:27.840
+ but detecting what the driver is looking at,
+
+23:27.840 --> 23:29.840
+ cognitive load, body pose.
+
+23:29.840 --> 23:31.840
+ On the computer vision side, that's a fascinating problem,
+
+23:31.840 --> 23:34.840
+ but there's many in industry who believe
+
+23:34.840 --> 23:37.840
+ you have to have camera based driver monitoring.
+
+23:37.840 --> 23:39.840
+ Do you think this could be benefit gained
+
+23:39.840 --> 23:41.840
+ from driver monitoring?
+
+23:41.840 --> 23:45.840
+ If you have a system that's out or below
+
+23:45.840 --> 23:49.840
+ human level reliability, then driver monitoring makes sense.
+
+23:49.840 --> 23:51.840
+ But if your system is dramatically better,
+
+23:51.840 --> 23:53.840
+ more reliable than a human,
+
+23:53.840 --> 23:58.840
+ then driver monitoring is not help much.
+
+23:58.840 --> 24:03.840
+ And like I said, you wouldn't want someone into...
+
+24:03.840 --> 24:05.840
+ You wouldn't want someone in the elevator.
+
+24:05.840 --> 24:07.840
+ If you're in an elevator, do you really want someone
+
+24:07.840 --> 24:09.840
+ with a big lever, some random person operating
+
+24:09.840 --> 24:11.840
+ in the elevator between floors?
+
+24:11.840 --> 24:13.840
+ I wouldn't trust that.
+
+24:13.840 --> 24:16.840
+ I would rather have the buttons.
+
+24:16.840 --> 24:19.840
+ Okay, you're optimistic about the pace
+
+24:19.840 --> 24:21.840
+ of improvement of the system.
+
+24:21.840 --> 24:23.840
+ From what you've seen with the full self driving car,
+
+24:23.840 --> 24:25.840
+ computer.
+
+24:25.840 --> 24:27.840
+ The rate of improvement is exponential.
+
+24:27.840 --> 24:30.840
+ So one of the other very interesting design choices
+
+24:30.840 --> 24:34.840
+ early on that connects to this is the operational
+
+24:34.840 --> 24:37.840
+ design domain of autopilot.
+
+24:37.840 --> 24:41.840
+ So where autopilot is able to be turned on.
+
+24:41.840 --> 24:46.840
+ So contrast another vehicle system that we're studying
+
+24:46.840 --> 24:48.840
+ is the Cadillac SuperCrew system.
+
+24:48.840 --> 24:51.840
+ That's in terms of ODD, very constrained to this particular
+
+24:51.840 --> 24:54.840
+ kinds of highways, well mapped, tested,
+
+24:54.840 --> 24:58.840
+ but it's much narrower than the ODD of Tesla vehicles.
+
+24:58.840 --> 25:00.840
+ What's...
+
+25:00.840 --> 25:02.840
+ It's like ADD.
+
+25:02.840 --> 25:04.840
+ Yeah.
+
+25:04.840 --> 25:07.840
+ That's good. That's a good line.
+
+25:07.840 --> 25:10.840
+ What was the design decision
+
+25:10.840 --> 25:13.840
+ in that different philosophy of thinking where...
+
+25:13.840 --> 25:15.840
+ There's pros and cons.
+
+25:15.840 --> 25:20.840
+ What we see with a wide ODD is Tesla drivers are able
+
+25:20.840 --> 25:23.840
+ to explore more the limitations of the system,
+
+25:23.840 --> 25:26.840
+ at least early on, and they understand together
+
+25:26.840 --> 25:28.840
+ the instrument cluster display.
+
+25:28.840 --> 25:30.840
+ They start to understand what are the capabilities.
+
+25:30.840 --> 25:32.840
+ So that's a benefit.
+
+25:32.840 --> 25:37.840
+ The con is you're letting drivers use it basically anywhere.
+
+25:37.840 --> 25:41.840
+ Well, anyways, I could detect lanes with confidence.
+
+25:41.840 --> 25:46.840
+ Was there a philosophy design decisions that were challenging
+
+25:46.840 --> 25:48.840
+ that were being made there?
+
+25:48.840 --> 25:53.840
+ Or from the very beginning, was that done on purpose
+
+25:53.840 --> 25:55.840
+ with intent?
+
+25:55.840 --> 25:58.840
+ Frankly, it's pretty crazy letting people drive
+
+25:58.840 --> 26:02.840
+ a two ton death machine manually.
+
+26:02.840 --> 26:04.840
+ That's crazy.
+
+26:04.840 --> 26:06.840
+ In the future, people will be like,
+
+26:06.840 --> 26:09.840
+ I can't believe anyone was just allowed to drive
+
+26:09.840 --> 26:12.840
+ one of these two ton death machines
+
+26:12.840 --> 26:14.840
+ and they just drive wherever they wanted,
+
+26:14.840 --> 26:16.840
+ just like elevators.
+
+26:16.840 --> 26:18.840
+ You just move the elevator with the lever wherever you want.
+
+26:18.840 --> 26:21.840
+ It can stop at halfway between floors if you want.
+
+26:21.840 --> 26:24.840
+ It's pretty crazy.
+
+26:24.840 --> 26:29.840
+ So it's going to seem like a mad thing in the future
+
+26:29.840 --> 26:32.840
+ that people were driving cars.
+
+26:32.840 --> 26:35.840
+ So I have a bunch of questions about the human psychology,
+
+26:35.840 --> 26:37.840
+ about behavior and so on.
+
+26:37.840 --> 26:39.840
+ I don't know.
+
+26:39.840 --> 26:45.840
+ Because you have faith in the AI system,
+
+26:45.840 --> 26:50.840
+ not faith, but both on the hardware side
+
+26:50.840 --> 26:52.840
+ and the deep learning approach of learning from data
+
+26:52.840 --> 26:55.840
+ will make it just far safer than humans.
+
+26:55.840 --> 26:57.840
+ Yeah, exactly.
+
+26:57.840 --> 27:00.840
+ Recently, there are a few hackers who tricked autopilot
+
+27:00.840 --> 27:03.840
+ to act in unexpected ways with adversarial examples.
+
+27:03.840 --> 27:06.840
+ So we all know that neural network systems
+
+27:06.840 --> 27:08.840
+ are very sensitive to minor disturbances
+
+27:08.840 --> 27:10.840
+ to these adversarial examples on input.
+
+27:10.840 --> 27:13.840
+ Do you think it's possible to defend against something like this
+
+27:13.840 --> 27:15.840
+ for the industry?
+
+27:15.840 --> 27:17.840
+ Sure.
+
+27:17.840 --> 27:22.840
+ Can you elaborate on the confidence behind that answer?
+
+27:22.840 --> 27:27.840
+ Well, a neural net is just like a basic bunch of matrix math.
+
+27:27.840 --> 27:30.840
+ You have to be like a very sophisticated,
+
+27:30.840 --> 27:32.840
+ somebody who really understands neural nets
+
+27:32.840 --> 27:37.840
+ and basically reverse engineer how the matrix is being built
+
+27:37.840 --> 27:42.840
+ and then create a little thing that just exactly causes
+
+27:42.840 --> 27:44.840
+ the matrix math to be slightly off.
+
+27:44.840 --> 27:48.840
+ But it's very easy to then block that by having
+
+27:48.840 --> 27:51.840
+ basically anti negative recognition.
+
+27:51.840 --> 27:55.840
+ It's like if the system sees something that looks like a matrix hack
+
+27:55.840 --> 28:01.840
+ excluded, it's such an easy thing to do.
+
+28:01.840 --> 28:05.840
+ So learn both on the valid data and the invalid data.
+
+28:05.840 --> 28:07.840
+ So basically learn on the adversarial examples
+
+28:07.840 --> 28:09.840
+ to be able to exclude them.
+
+28:09.840 --> 28:12.840
+ Yeah, you basically want to both know what is a car
+
+28:12.840 --> 28:15.840
+ and what is definitely not a car.
+
+28:15.840 --> 28:18.840
+ You train for this is a car and this is definitely not a car.
+
+28:18.840 --> 28:20.840
+ Those are two different things.
+
+28:20.840 --> 28:23.840
+ People have no idea neural nets really.
+
+28:23.840 --> 28:25.840
+ They probably think neural nets involves like, you know,
+
+28:25.840 --> 28:28.840
+ fishing net or something.
+
+28:28.840 --> 28:35.840
+ So as you know, taking a step beyond just Tesla and autopilot,
+
+28:35.840 --> 28:39.840
+ current deep learning approaches still seem in some ways
+
+28:39.840 --> 28:44.840
+ to be far from general intelligence systems.
+
+28:44.840 --> 28:49.840
+ Do you think the current approaches will take us to general intelligence
+
+28:49.840 --> 28:55.840
+ or do totally new ideas need to be invented?
+
+28:55.840 --> 28:59.840
+ I think we're missing a few key ideas for general intelligence,
+
+28:59.840 --> 29:04.840
+ general, artificial general intelligence.
+
+29:04.840 --> 29:08.840
+ But it's going to be upon us very quickly
+
+29:08.840 --> 29:11.840
+ and then we'll need to figure out what shall we do
+
+29:11.840 --> 29:15.840
+ if we even have that choice.
+
+29:15.840 --> 29:18.840
+ But it's amazing how people can't differentiate between, say,
+
+29:18.840 --> 29:22.840
+ the narrow AI that, you know, allows a car to figure out
+
+29:22.840 --> 29:25.840
+ what a lane line is and, you know,
+
+29:25.840 --> 29:29.840
+ and navigate streets versus general intelligence.
+
+29:29.840 --> 29:32.840
+ Like these are just very different things.
+
+29:32.840 --> 29:35.840
+ Like your toaster and your computer are both machines,
+
+29:35.840 --> 29:38.840
+ but one's much more sophisticated than another.
+
+29:38.840 --> 29:43.840
+ You're confident with Tesla you can create the world's best toaster.
+
+29:43.840 --> 29:45.840
+ The world's best toaster, yes.
+
+29:45.840 --> 29:48.840
+ The world's best self driving.
+
+29:48.840 --> 29:51.840
+ I'm, yes.
+
+29:51.840 --> 29:54.840
+ To me, right now, this seems game set match.
+
+29:54.840 --> 29:57.840
+ I don't, I mean, that's, I don't want to be complacent or overconfident,
+
+29:57.840 --> 29:59.840
+ but that's what it appears.
+
+29:59.840 --> 30:02.840
+ That is just literally what it, how it appears right now.
+
+30:02.840 --> 30:06.840
+ It could be wrong, but it appears to be the case
+
+30:06.840 --> 30:10.840
+ that Tesla is vastly ahead of everyone.
+
+30:10.840 --> 30:13.840
+ Do you think we will ever create an AI system
+
+30:13.840 --> 30:17.840
+ that we can love and loves us back in a deep meaningful way
+
+30:17.840 --> 30:20.840
+ like in the movie, Her?
+
+30:20.840 --> 30:23.840
+ I think AI will be capable of convincing you
+
+30:23.840 --> 30:25.840
+ to fall in love with it very well.
+
+30:25.840 --> 30:28.840
+ And that's different than us humans?
+
+30:28.840 --> 30:31.840
+ You know, we start getting into a metaphysical question
+
+30:31.840 --> 30:35.840
+ and do emotions and thoughts exist in a different realm than the physical.
+
+30:35.840 --> 30:37.840
+ And maybe they do, maybe they don't.
+
+30:37.840 --> 30:39.840
+ I don't know, but from a physics standpoint,
+
+30:39.840 --> 30:43.840
+ I tend to think of things, you know,
+
+30:43.840 --> 30:47.840
+ like physics was my main sort of training.
+
+30:47.840 --> 30:50.840
+ And from a physics standpoint,
+
+30:50.840 --> 30:52.840
+ essentially, if it loves you in a way
+
+30:52.840 --> 30:57.840
+ that you can't tell whether it's real or not, it is real.
+
+30:57.840 --> 30:59.840
+ That's a physics view of love.
+
+30:59.840 --> 31:04.840
+ If you cannot prove that it does not,
+
+31:04.840 --> 31:07.840
+ if there's no test that you can apply
+
+31:07.840 --> 31:14.840
+ that would make it allow you to tell the difference,
+
+31:14.840 --> 31:16.840
+ then there is no difference.
+
+31:16.840 --> 31:20.840
+ And it's similar to seeing our world as simulation.
+
+31:20.840 --> 31:22.840
+ There may not be a test to tell the difference
+
+31:22.840 --> 31:24.840
+ between what the real world and the simulation.
+
+31:24.840 --> 31:26.840
+ And therefore, from a physics perspective,
+
+31:26.840 --> 31:28.840
+ it might as well be the same thing.
+
+31:28.840 --> 31:29.840
+ Yes.
+
+31:29.840 --> 31:32.840
+ There may be ways to test whether it's a simulation.
+
+31:32.840 --> 31:35.840
+ There might be, I'm not saying there aren't,
+
+31:35.840 --> 31:38.840
+ but you could certainly imagine that a simulation could correct
+
+31:38.840 --> 31:40.840
+ that once an entity in the simulation
+
+31:40.840 --> 31:42.840
+ found a way to detect the simulation,
+
+31:42.840 --> 31:44.840
+ it could either restart, you know,
+
+31:44.840 --> 31:47.840
+ pause the simulation, start a new simulation,
+
+31:47.840 --> 31:52.840
+ or do one of many other things that then corrects for that error.
+
+31:52.840 --> 31:58.840
+ So when maybe you or somebody else creates an AGI system
+
+31:58.840 --> 32:02.840
+ and you get to ask her one question,
+
+32:02.840 --> 32:16.840
+ what would that question be?
+
+32:16.840 --> 32:21.840
+ What's outside the simulation?
+
+32:21.840 --> 32:23.840
+ Milan, thank you so much for talking today.
+
+32:23.840 --> 32:52.840
+ All right, thank you.
+

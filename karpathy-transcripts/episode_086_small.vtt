@@ -1,0 +1,4166 @@
+WEBVTT
+
+00:00.000 --> 00:04.040
+ The following is a conversation with David Silver, who leads the Reinforcement Learning
+
+00:04.040 --> 00:11.160
+ Research Group at DeepMind, and was the lead researcher on AlphaGo, AlphaZero, and CoLED,
+
+00:11.160 --> 00:15.640
+ the AlphaStar and MuZero efforts, and a lot of important work in reinforcement learning
+
+00:15.640 --> 00:17.160
+ in general.
+
+00:17.160 --> 00:23.040
+ I believe AlphaZero is one of the most important accomplishments in the history of artificial
+
+00:23.040 --> 00:28.840
+ intelligence, and David is one of the key humans who brought AlphaZero to life together
+
+00:28.840 --> 00:32.000
+ with a lot of other great researchers at DeepMind.
+
+00:32.000 --> 00:34.440
+ He's humble, kind, and brilliant.
+
+00:34.440 --> 00:38.600
+ We were both jet lagged, but didn't care and made it happen.
+
+00:38.600 --> 00:43.400
+ It was a pleasure and truly an honor to talk with David.
+
+00:43.400 --> 00:47.040
+ This conversation was recorded before the outbreak of the pandemic.
+
+00:47.040 --> 00:51.840
+ For everyone feeling the medical, psychological, and financial burden of this crisis, I'm
+
+00:51.840 --> 00:53.480
+ sending love your way.
+
+00:53.480 --> 00:57.800
+ Stay strong, or in this together, we'll beat this thing.
+
+00:57.800 --> 00:59.920
+ This is the Artificial Intelligence Podcast.
+
+00:59.920 --> 01:05.120
+ If you enjoy it, subscribe on YouTube, review it with 5 stars on Apple Podcasts, support
+
+01:05.120 --> 01:12.120
+ on Patreon, or simply connect with me on Twitter at Lex Freedman, spelled F R I D M A N.
+
+01:12.120 --> 01:16.480
+ As usual, I'll do a few minutes of ads now and never any ads in the middle that can break
+
+01:16.480 --> 01:18.360
+ the flow of the conversation.
+
+01:18.360 --> 01:22.720
+ I hope that works for you and doesn't hurt the listening experience.
+
+01:22.720 --> 01:24.000
+ Quick summary of the ads.
+
+01:24.000 --> 01:25.360
+ Two sponsors.
+
+01:25.360 --> 01:27.480
+ Masterclass and Cash App.
+
+01:27.480 --> 01:32.640
+ Please consider supporting the podcast by signing up to masterclass and masterclass.com
+
+01:32.640 --> 01:38.920
+ slash lex, and downloading Cash App and using code Lex Podcast.
+
+01:38.920 --> 01:43.240
+ This show is presented by Cash App, the number one finance app in the App Store.
+
+01:43.240 --> 01:47.200
+ When you get it, use code Lex Podcast.
+
+01:47.200 --> 01:51.520
+ Cash App lets you send money to friends, buy Bitcoin, and invest in the stock market with
+
+01:51.520 --> 01:53.960
+ as little as $1.
+
+01:53.960 --> 01:58.560
+ This Cash App allows you to buy Bitcoin, let me mention that cryptocurrency in the context
+
+01:58.560 --> 02:01.400
+ of the history of money is fascinating.
+
+02:01.400 --> 02:05.360
+ I recommend Ascent of Money as a great book on this history.
+
+02:05.360 --> 02:09.720
+ Debits and credits on ledgers started around 30,000 years ago.
+
+02:09.720 --> 02:15.920
+ The US Dollar created over 200 years ago, and Bitcoin, the first decentralized cryptocurrency,
+
+02:15.920 --> 02:18.720
+ released just over 10 years ago.
+
+02:18.720 --> 02:24.000
+ So given that history, cryptocurrency is still very much in its early days of development,
+
+02:24.000 --> 02:29.160
+ but is still aiming to and just might redefine the nature of money.
+
+02:29.160 --> 02:34.720
+ So again, if you get Cash App from the App Store or Google Play and use the code Lex Podcast,
+
+02:34.720 --> 02:40.080
+ you get $10, and Cash App will also donate $10 the first, an organization that is helping
+
+02:40.080 --> 02:45.000
+ to advance robotics and STEM education for young people around the world.
+
+02:45.000 --> 02:50.360
+ This show is sponsored by Masterclass, sign up at masterclass.com slash Lex to get a discount
+
+02:50.360 --> 02:51.640
+ and to support this podcast.
+
+02:51.640 --> 02:56.760
+ In fact, for a limited time now, if you sign up for an All Access Pass for a year, you
+
+02:56.760 --> 03:01.280
+ get to get another All Access Pass to share with a friend.
+
+03:01.280 --> 03:02.720
+ Buy one, get one free.
+
+03:02.720 --> 03:06.400
+ When I first heard about Masterclass, I thought it was too good to be true.
+
+03:06.400 --> 03:13.000
+ For $180 a year, you get an All Access Pass to watch courses from to list some of my favorites.
+
+03:13.000 --> 03:18.160
+ Chris Hatfield on space exploration, Neil deGrasse Tyson on scientific thinking communication,
+
+03:18.160 --> 03:24.680
+ Will Wright, the creator of SimCity and Sims, on game design, Jane Goodall on conservation,
+
+03:24.680 --> 03:29.920
+ Carlos Santana on guitar, his song Europa could be the most beautiful guitar song ever
+
+03:29.920 --> 03:30.920
+ written.
+
+03:30.920 --> 03:35.680
+ Gary Gasparov on chess, Daniel Nagrano on poker, and many, many more.
+
+03:35.680 --> 03:39.400
+ Chris Hatfield explaining how rockets work and the experience of being launched into
+
+03:39.400 --> 03:41.680
+ space alone is worth the money.
+
+03:41.680 --> 03:46.320
+ For me, the key is to not be overwhelmed by the abundance of choice.
+
+03:46.320 --> 03:48.240
+ Pick three courses you want to complete.
+
+03:48.240 --> 03:49.680
+ Watch each of them all the way through.
+
+03:49.680 --> 03:53.600
+ It's not that long, but it's an experience that will stick with you for a long time.
+
+03:53.600 --> 03:54.600
+ I promise.
+
+03:54.600 --> 03:56.760
+ It's easily worth the money.
+
+03:56.760 --> 03:59.240
+ You can watch it on basically any device.
+
+03:59.240 --> 04:03.840
+ Once again, sign up on masterclass.com slash lex to get a discount and to support this
+
+04:03.840 --> 04:05.640
+ podcast.
+
+04:05.640 --> 04:09.800
+ And now here's my conversation with David Silver.
+
+04:09.800 --> 04:14.760
+ What was the first program you ever written and what programming language do you remember?
+
+04:14.760 --> 04:22.040
+ I remember very clearly, yeah, my parents brought home this BBC model B microcomputer.
+
+04:22.040 --> 04:24.160
+ It was just this fascinating thing to me.
+
+04:24.160 --> 04:30.040
+ I was about seven years old and couldn't resist just playing around with it.
+
+04:30.040 --> 04:37.160
+ So I think first program ever was writing my name out in different colors and getting
+
+04:37.160 --> 04:39.720
+ it to loop and repeat that.
+
+04:39.720 --> 04:44.520
+ And there was something magical about that, which just led to more and more.
+
+04:44.520 --> 04:46.760
+ How did you think about computers back then?
+
+04:46.760 --> 04:51.640
+ The magical aspect of it, that you can write a program and there's this thing that you
+
+04:51.640 --> 04:57.560
+ just gave birth to that's able to create visual elements and live in its own.
+
+04:57.560 --> 05:00.040
+ Or did you not think of it in those romantic notions?
+
+05:00.040 --> 05:02.400
+ Was it more like, oh, that's cool.
+
+05:02.400 --> 05:05.360
+ I can solve some puzzles.
+
+05:05.360 --> 05:06.920
+ It was always more than solving puzzles.
+
+05:06.920 --> 05:14.280
+ It was something where there was this limitless possibilities once you have a computer in
+
+05:14.280 --> 05:15.280
+ front of you.
+
+05:15.280 --> 05:16.280
+ You can do anything with it.
+
+05:16.280 --> 05:18.040
+ I used to play with Lego with the same feeling.
+
+05:18.040 --> 05:21.480
+ You can make anything you want out of Lego, but even more so with a computer.
+
+05:21.480 --> 05:24.600
+ You're not constrained by the amount of kit you've got.
+
+05:24.600 --> 05:28.960
+ And so I was fascinated by it and started pulling out the user guide and the advanced
+
+05:28.960 --> 05:30.760
+ user guide and then learning.
+
+05:30.760 --> 05:34.640
+ So I started in basic and then later 6502.
+
+05:34.640 --> 05:40.160
+ My father also became interested in this machine and gave up his career to go back to school
+
+05:40.160 --> 05:47.080
+ and study for a master's degree in artificial intelligence, funnily enough, at Essex University
+
+05:47.080 --> 05:48.720
+ when I was seven.
+
+05:48.720 --> 05:52.080
+ So I was exposed to those things at an early age.
+
+05:52.080 --> 05:57.880
+ He showed me how to program in Prologue and do things like querying your family tree.
+
+05:57.880 --> 06:04.280
+ And those are some of my earliest memories of trying to figure things out on a computer.
+
+06:04.280 --> 06:09.000
+ Those are the early steps in computer science programming, but when did you first fall in
+
+06:09.000 --> 06:14.840
+ love with artificial intelligence or with the ideas, the dreams of AI?
+
+06:14.840 --> 06:19.120
+ I think it was really when I went to study at university.
+
+06:19.120 --> 06:26.080
+ So I was an undergrad at Cambridge and studying computer science.
+
+06:26.080 --> 06:29.640
+ And I really started to question, you know, what really are the goals?
+
+06:29.640 --> 06:30.640
+ What's the goal?
+
+06:30.640 --> 06:33.000
+ Where do we want to go with computer science?
+
+06:33.000 --> 06:42.240
+ And it seemed to me that the only step of major significance to take was to try and recreate
+
+06:42.240 --> 06:44.240
+ something akin to human intelligence.
+
+06:44.240 --> 06:47.800
+ If we could do that, that would be a major leap forward.
+
+06:47.800 --> 06:52.440
+ And that idea certainly wasn't the first to have it, but it, you know, nestled within
+
+06:52.440 --> 06:58.600
+ me somewhere and became like a bug, you know, I really wanted to crack that problem.
+
+06:58.600 --> 07:03.200
+ So you thought it was like, you had a notion that this is something that human beings can
+
+07:03.200 --> 07:07.000
+ do, that it is possible to create an intelligent machine?
+
+07:07.000 --> 07:13.560
+ Well, I mean, unless you believe in something metaphysical, then what are our brains doing?
+
+07:13.560 --> 07:21.960
+ Well, at some level, their information processing systems, which are able to take whatever information
+
+07:21.960 --> 07:26.120
+ is in there, transform it through some form of program and produce some kind of output,
+
+07:26.120 --> 07:30.640
+ which enables that human being to do all the amazing things that they can do in this incredible
+
+07:30.640 --> 07:31.640
+ world.
+
+07:31.640 --> 07:38.160
+ So, so then do you remember the first time you've written a program that, because you
+
+07:38.160 --> 07:42.040
+ also had an interest in games, do you remember the first time you were in a program that
+
+07:42.040 --> 07:45.800
+ beat you in a game?
+
+07:45.800 --> 07:54.400
+ That or beat you at anything sort of achieved super David Silver level performance?
+
+07:54.400 --> 07:56.520
+ So I used to work in the games industry.
+
+07:56.520 --> 08:01.360
+ So for five years, I programmed games for my first job.
+
+08:01.360 --> 08:05.920
+ So it was an amazing opportunity to get involved in a startup company.
+
+08:05.920 --> 08:12.200
+ And so I was involved in building AI at that time.
+
+08:12.200 --> 08:19.480
+ And so for sure, there was a sense of building handcrafted what people used to call AI in
+
+08:19.480 --> 08:23.480
+ the games industry, which I think is not really what we might think of as AI in its fuller
+
+08:23.480 --> 08:31.400
+ sense, but something which is able to take actions in a way which makes things interesting
+
+08:31.400 --> 08:35.160
+ and challenging for the human player.
+
+08:35.160 --> 08:40.320
+ And at that time, I was able to build these handcrafted agents, which in certain limited
+
+08:40.320 --> 08:46.680
+ cases could do things which were able to do better than me, but mostly in these kind of
+
+08:46.680 --> 08:51.240
+ twitch like scenarios where they were able to do things faster or because they had some
+
+08:51.240 --> 08:55.400
+ pattern which was able to exploit repeatedly.
+
+08:55.400 --> 09:01.760
+ I think if we're talking about real AI, the first experience for me came after that when
+
+09:01.760 --> 09:08.360
+ I realized that this path I was on wasn't taking me towards, it wasn't dealing with
+
+09:08.360 --> 09:14.720
+ that bug which I still had inside me to really understand intelligence and try and solve it.
+
+09:14.720 --> 09:20.840
+ Everything people were doing in games was short term fixes rather than long term vision.
+
+09:20.840 --> 09:26.640
+ And so I went back to study for my PhD, which was finally enough trying to apply reinforcement
+
+09:26.640 --> 09:28.520
+ learning to the game of Go.
+
+09:28.520 --> 09:33.840
+ And I built my first Go program using reinforcement learning, a system which would by trial and
+
+09:33.840 --> 09:40.520
+ error play against itself and was able to learn which patterns were actually helpful
+
+09:40.520 --> 09:44.720
+ to predict whether it was going to win or lose the game and then choose the moves that
+
+09:44.720 --> 09:48.440
+ led to the combination of patterns that would mean that you're more likely to win.
+
+09:48.440 --> 09:51.040
+ And that system, that system beat me.
+
+09:51.040 --> 09:53.520
+ And how did that make you feel?
+
+09:53.520 --> 09:54.520
+ Make me feel good.
+
+09:54.520 --> 10:02.720
+ I mean, it's a mix of a sort of excitement and was there a tinge of sort of like almost
+
+10:02.720 --> 10:04.600
+ like a fearful awe?
+
+10:04.600 --> 10:11.880
+ You know, it's like in 2001 Space Odyssey kind of realizing that you've created something
+
+10:11.880 --> 10:21.240
+ that's achieved human level intelligence in this one particular little task.
+
+10:21.240 --> 10:24.440
+ And in that case, I suppose the neural networks weren't involved.
+
+10:24.440 --> 10:26.920
+ There were no neural networks in those days.
+
+10:26.920 --> 10:33.240
+ This was pre deep learning revolution, but it was a principled self learning system based
+
+10:33.240 --> 10:40.320
+ on a lot of the principles which people still use in deep reinforcement learning.
+
+10:40.320 --> 10:41.320
+ How did I feel?
+
+10:41.320 --> 10:50.080
+ I think I found it immensely satisfying that a system which was able to learn from first
+
+10:50.080 --> 10:56.360
+ principles for itself was able to reach the point that it was understanding this domain
+
+10:56.360 --> 11:00.000
+ better than I could and able to outwit me.
+
+11:00.000 --> 11:01.520
+ I don't think it was a sense of awe.
+
+11:01.520 --> 11:08.160
+ It was a sense that satisfaction that something I felt should work had worked.
+
+11:08.160 --> 11:13.120
+ So to me, Alpha Go, and I don't know how else to put it, but to me, Alpha Go and Alpha
+
+11:13.120 --> 11:20.360
+ Go Zero mastering the game of Go is, again, to me, the most profound and inspiring moment
+
+11:20.360 --> 11:23.560
+ in the history of artificial intelligence.
+
+11:23.560 --> 11:26.680
+ So you're one of the key people behind this achievement.
+
+11:26.680 --> 11:32.640
+ And I'm Russian, so I really felt the first sort of seminal achievement when deep blue
+
+11:32.640 --> 11:36.920
+ be Garakasparov in 1997.
+
+11:36.920 --> 11:42.720
+ So as far as I know, the AI community at that point largely saw the game of Go as unbeatable
+
+11:42.720 --> 11:49.080
+ in AI using the sort of the state of the art to brute force methods, search methods.
+
+11:49.080 --> 11:54.920
+ Even if you consider at least the way I saw it, even if you consider arbitrary exponential
+
+11:54.920 --> 12:02.640
+ scaling of compute, Go would still not be solvable, hence why it was thought to be impossible.
+
+12:02.640 --> 12:09.520
+ So given that the game of Go was impossible to master, when was the dream for you?
+
+12:09.520 --> 12:13.640
+ You just mentioned your PhD thesis of building the system that plays Go.
+
+12:13.640 --> 12:19.120
+ When was the dream for you that you could actually build a computer program that achieves
+
+12:19.120 --> 12:23.480
+ world class, not necessarily beats the world champion, but achieves that kind of level
+
+12:23.480 --> 12:24.480
+ of playing Go?
+
+12:24.480 --> 12:25.480
+ First of all, thank you.
+
+12:25.480 --> 12:28.640
+ That was very kind words.
+
+12:28.640 --> 12:34.600
+ And funnily enough, I just came from a panel where I was actually in a conversation with
+
+12:34.600 --> 12:39.200
+ Garakasparov and Murray Campbell, who was the author of Deep Blue.
+
+12:39.200 --> 12:44.560
+ And it was their first meeting together since the match, so that just occurred yesterday.
+
+12:44.560 --> 12:47.440
+ So I'm literally fresh from that experience.
+
+12:47.440 --> 12:52.000
+ So these are amazing moments when they happen, but where did it all start?
+
+12:52.000 --> 12:56.200
+ Well, for me, it started when I became fascinated in the game of Go.
+
+12:56.200 --> 13:01.800
+ So Go, for me, I've grown up playing games, I've always had a fascination in board games.
+
+13:01.800 --> 13:06.160
+ I played chess as a kid, I played Scrabble as a kid.
+
+13:06.160 --> 13:10.520
+ When I was at university, I discovered the game of Go, and to me, it just blew all of
+
+13:10.520 --> 13:15.480
+ those other games out of the water, it was just so deep and profound in its complexity
+
+13:15.480 --> 13:17.920
+ with endless levels to it.
+
+13:17.920 --> 13:27.320
+ What I discovered was that I could devote endless hours to this game, and I knew in
+
+13:27.320 --> 13:30.680
+ my heart of hearts that no matter how many hours I would devote to it, I would never
+
+13:30.680 --> 13:34.560
+ become a grandmaster.
+
+13:34.560 --> 13:39.400
+ Or there was another path, and the other path was to try and understand how you could get
+
+13:39.400 --> 13:43.560
+ some other intelligence to play this game better than I would be able to.
+
+13:43.560 --> 13:49.240
+ And so even in those days, I had this idea that, what if it was possible to build a program
+
+13:49.240 --> 13:51.160
+ that could crack this?
+
+13:51.160 --> 13:57.340
+ And as I started to explore the domain, I discovered that this was really the domain
+
+13:57.340 --> 14:04.520
+ where people felt deeply that if progress could be made in Go, it would really mean
+
+14:04.520 --> 14:06.380
+ a giant leap forward for AI.
+
+14:06.380 --> 14:11.000
+ It was the challenge where all other approaches had failed.
+
+14:11.000 --> 14:16.760
+ This is coming out of the era you mentioned, which was in some sense the golden era for
+
+14:16.760 --> 14:19.960
+ the classical methods of AI, like heuristic search.
+
+14:19.960 --> 14:26.720
+ In the 90s, they all fell one after another, not just chess with deep blue, but checkers,
+
+14:26.720 --> 14:28.920
+ batgammon, Othello.
+
+14:28.920 --> 14:36.560
+ There were numerous cases where systems built on top of heuristic search methods with these
+
+14:36.560 --> 14:40.640
+ high performance systems had been able to defeat the human world champion in each of
+
+14:40.640 --> 14:42.080
+ those domains.
+
+14:42.080 --> 14:49.520
+ And yet in that same time period, there was a million dollar prize available for the game
+
+14:49.520 --> 14:52.960
+ of Go, for the first system to be a human professional player.
+
+14:52.960 --> 14:58.480
+ And at the end of that time period, at year 2000, when the prize expired, the strongest
+
+14:58.480 --> 15:02.800
+ Go program in the world was defeated by a nine year old child.
+
+15:02.800 --> 15:06.920
+ When that nine year old child was giving nine free moves to the computer at the start of
+
+15:06.920 --> 15:09.960
+ the game to try and even things up.
+
+15:09.960 --> 15:18.200
+ And computer Go expert beat that same strongest program with 29 handicap stones, 29 free moves.
+
+15:18.200 --> 15:23.880
+ So that's what the state of affairs was when I became interested in this problem in around
+
+15:23.880 --> 15:29.560
+ 2003 when I started working on computer Go.
+
+15:29.560 --> 15:30.560
+ There was nothing.
+
+15:30.560 --> 15:36.640
+ There was just very, very little in the way of progress towards meaningful performance
+
+15:36.640 --> 15:39.240
+ again at anything approaching human level.
+
+15:39.240 --> 15:45.000
+ And so people, it wasn't through lack of effort, people who tried many, many things.
+
+15:45.000 --> 15:50.760
+ And so there was a strong sense that something different would be required for Go than had
+
+15:50.760 --> 15:54.280
+ been needed for all of these other domains where AI had been successful.
+
+15:54.280 --> 16:00.800
+ And maybe the single clearest example is that Go, unlike those other domains, had this kind
+
+16:00.800 --> 16:07.040
+ of intuitive property that a Go player would look at a position and say, hey, here's this
+
+16:07.040 --> 16:09.680
+ mess of black and white stones.
+
+16:09.680 --> 16:15.920
+ But from this mess, oh, I can predict that this part of the board has become my territory,
+
+16:15.920 --> 16:19.880
+ this part of the board has become your territory, and I've got this overall sense that I'm going
+
+16:19.880 --> 16:22.440
+ to win and that this is about the right move to play.
+
+16:22.440 --> 16:28.240
+ And that intuitive sense of judgment of being able to evaluate what's going on in a position,
+
+16:28.240 --> 16:32.840
+ it was pivotal to humans being able to play this game and something that people had no
+
+16:32.840 --> 16:35.120
+ idea how to put into computers.
+
+16:35.120 --> 16:39.960
+ So this question of how to evaluate a position, how to come up with these intuitive judgments
+
+16:39.960 --> 16:48.320
+ was the key reason why Go was so hard in addition to its enormous search space and the reason
+
+16:48.320 --> 16:53.040
+ why methods which had succeeded so well elsewhere failed in Go.
+
+16:53.040 --> 16:59.000
+ And so people really felt deep down that in order to crack Go, we would need to get something
+
+16:59.000 --> 17:00.520
+ akin to human intuition.
+
+17:00.520 --> 17:06.000
+ And if we got something akin to human intuition, we'd be able to solve many, many more problems
+
+17:06.000 --> 17:07.000
+ in AI.
+
+17:07.000 --> 17:11.240
+ So for me, that was the moment where it's like, okay, this is not just about playing
+
+17:11.240 --> 17:12.240
+ the game of Go.
+
+17:12.240 --> 17:13.680
+ This is about something profound.
+
+17:13.680 --> 17:17.800
+ And it was back to that bug which had been itching me all those years.
+
+17:17.800 --> 17:22.840
+ This is the opportunity to do something meaningful and transformative and I guess a dream was
+
+17:22.840 --> 17:23.840
+ born.
+
+17:23.840 --> 17:25.400
+ That's a really interesting way to put it.
+
+17:25.400 --> 17:30.840
+ So almost this realization that you need to find formulate Go as a kind of a prediction
+
+17:30.840 --> 17:34.720
+ problem versus a search problem was the intuition.
+
+17:34.720 --> 17:43.520
+ I mean, maybe that's the wrong crude term, but to give it the ability to kind of intuit
+
+17:43.520 --> 17:47.120
+ things about positional structure of the board.
+
+17:47.120 --> 17:51.040
+ Now, okay, but what about the learning part of it?
+
+17:51.040 --> 17:57.520
+ Did you have a sense that you have to, that learning has to be part of the system?
+
+17:57.520 --> 18:03.360
+ Again, something that hasn't really as far as I think, except with TD Gammon and the
+
+18:03.360 --> 18:08.800
+ 90s with RL a little bit, hasn't been part of those daily art game playing systems.
+
+18:08.800 --> 18:15.160
+ So I strongly felt that learning would be necessary and that's why my PhD topic back
+
+18:15.160 --> 18:20.240
+ then was trying to apply reinforcement learning to the game of Go.
+
+18:20.240 --> 18:26.040
+ And not just learning of any type, but I felt that the only way to really have a system
+
+18:26.040 --> 18:31.120
+ to progress beyond human levels of performance wouldn't just be to mimic how humans do it,
+
+18:31.120 --> 18:33.440
+ but to understand for themselves.
+
+18:33.440 --> 18:39.120
+ And how else can a machine hope to understand what's going on, except through learning?
+
+18:39.120 --> 18:40.480
+ If you're not learning, what else are you doing?
+
+18:40.480 --> 18:45.480
+ Well, you're putting all the knowledge into the system and that just feels like something
+
+18:45.480 --> 18:52.280
+ which decades of AI have told us is maybe not a dead end, but certainly has a ceiling
+
+18:52.280 --> 18:53.280
+ to the capabilities.
+
+18:53.280 --> 18:58.520
+ It's known as the knowledge acquisition bottleneck that the more you try to put into something,
+
+18:58.520 --> 19:00.520
+ the more brittle the system becomes.
+
+19:00.520 --> 19:02.840
+ And so you just have to have learning.
+
+19:02.840 --> 19:03.840
+ You have to have learning.
+
+19:03.840 --> 19:08.960
+ That's the only way you're going to be able to get a system which has sufficient knowledge
+
+19:08.960 --> 19:14.320
+ in it, millions and millions of pieces of knowledge, billions, trillions of a form that
+
+19:14.320 --> 19:18.520
+ can actually apply for itself and understand how those billions and trillions of pieces
+
+19:18.520 --> 19:23.480
+ of knowledge can be leveraged in a way which will actually lead it towards its goal without
+
+19:23.480 --> 19:26.520
+ conflict or other issues.
+
+19:26.520 --> 19:27.520
+ Yeah.
+
+19:27.520 --> 19:33.720
+ I mean, if I put myself back in that time, I just wouldn't think like that without a good
+
+19:33.720 --> 19:34.800
+ demonstration of RL.
+
+19:34.800 --> 19:42.720
+ I would think more in the symbolic AI, like the not learning, but sort of a simulation
+
+19:42.720 --> 19:48.840
+ of knowledge base, like a growing knowledge base, but it would still be sort of pattern
+
+19:48.840 --> 19:55.200
+ based, like basically have little rules that you kind of assemble together into a large
+
+19:55.200 --> 19:56.800
+ knowledge base.
+
+19:56.800 --> 19:59.840
+ Well, in a sense, that was the state of the art back then.
+
+19:59.840 --> 20:05.400
+ So if you look at the Go programs which had been competing for this prize I mentioned,
+
+20:05.400 --> 20:11.240
+ they were an assembly of different specialized systems, some of which used huge amounts of
+
+20:11.240 --> 20:16.240
+ human knowledge to describe how you should play the opening, how you should all the different
+
+20:16.240 --> 20:23.680
+ patterns that were required to play well in the game of Go, end game theory, combinatorial
+
+20:23.680 --> 20:29.120
+ game theory, and combined with more principled search based methods, which we're trying
+
+20:29.120 --> 20:36.880
+ to solve for particular sub parts of the game, like life and death, connecting groups together,
+
+20:36.880 --> 20:42.440
+ all these amazing sub problems that just emerge in the game of Go, there were different pieces
+
+20:42.440 --> 20:49.360
+ all put together into this collage, which together would try and play against a human.
+
+20:49.360 --> 20:56.280
+ And although not all of the pieces were handcrafted, the overall effect was nevertheless still
+
+20:56.280 --> 21:00.320
+ brittle and it was hard to make all these pieces work well together.
+
+21:00.320 --> 21:05.480
+ And so really, what I was pressing for and the main innovation of the approach I took
+
+21:05.480 --> 21:11.280
+ was to go back to first principles and say, well, let's back off that and try and find
+
+21:11.280 --> 21:17.240
+ a principled approach where the system can learn for itself.
+
+21:17.240 --> 21:21.080
+ Just from the outcome, like, you know, learn for itself, if you try something, did that
+
+21:21.080 --> 21:22.840
+ help or did it not help?
+
+21:22.840 --> 21:28.280
+ And only through that procedure can you arrive at knowledge which is verified, the system
+
+21:28.280 --> 21:32.400
+ has to verify it for itself, not relying on any other third party to say this is right
+
+21:32.400 --> 21:33.400
+ or this is wrong.
+
+21:33.400 --> 21:40.760
+ And so that principle was already very important in those days that unfortunately we were missing
+
+21:40.760 --> 21:43.360
+ some important pieces back then.
+
+21:43.360 --> 21:49.400
+ So before we dive into maybe discussing the beauty of reinforcement learning, let's take
+
+21:49.400 --> 21:58.920
+ a step back, we kind of skipped it a bit, but the rules of the game of Go, the elements
+
+21:58.920 --> 22:07.280
+ of it perhaps contrasting to chess that sort of you really enjoyed as a human being and
+
+22:07.280 --> 22:13.160
+ also that make it really difficult as a AI machine learning problem.
+
+22:13.160 --> 22:19.080
+ So the game of Go has remarkably simple rules, in fact, so simple that people have speculated
+
+22:19.080 --> 22:23.360
+ that if we were to meet alien life at some point that we wouldn't be able to communicate
+
+22:23.360 --> 22:26.880
+ with them, but we would be able to play a game of Go with them, probably have discovered
+
+22:26.880 --> 22:33.640
+ the same ruleset, so the game is played on a 19 by 19 grid and you play on the intersections
+
+22:33.640 --> 22:36.000
+ of the grid and the players take turns.
+
+22:36.000 --> 22:40.800
+ And the aim of the game is very simple, it's to surround as much territory as you can as
+
+22:40.800 --> 22:46.480
+ many of these intersections with your stones and to surround more than your opponent does.
+
+22:46.480 --> 22:50.520
+ And the only nuance to the game is that if you fully surround your opponent's piece,
+
+22:50.520 --> 22:54.480
+ then you get to capture it and remove it from the board and it counts as your own territory.
+
+22:54.480 --> 22:59.080
+ Now from those very simple rules, immense complexity arises, there's kind of profound
+
+22:59.080 --> 23:05.240
+ strategies in how to surround territory, how to kind of trade off between making solid
+
+23:05.240 --> 23:10.440
+ territory yourself now, compared to building up influence that will help you acquire territory
+
+23:10.440 --> 23:17.800
+ later in the game, how to connect groups together, how to keep your own groups alive, which patterns
+
+23:17.800 --> 23:21.560
+ of stones are most useful compared to others.
+
+23:21.560 --> 23:27.520
+ There's just immense knowledge and human Go players have played this game for, it was
+
+23:27.520 --> 23:31.600
+ discovered thousands of years ago and human Go players have built up this immense knowledge
+
+23:31.600 --> 23:33.840
+ base over the years.
+
+23:33.840 --> 23:39.000
+ It's studied very deeply and played by something like 50 million players across the world, mostly
+
+23:39.000 --> 23:44.400
+ in China, Japan and Korea, where it's an important part of the culture, so much so that it's
+
+23:44.400 --> 23:49.960
+ considered one of the four ancient arts that was required by Chinese scholars.
+
+23:49.960 --> 23:51.760
+ There's a deep history there.
+
+23:51.760 --> 23:57.320
+ But there's interesting quality, so if I were to compare it to chess, chess is in the same
+
+23:57.320 --> 24:02.040
+ way as it is in Chinese culture for Go, and chess in Russia is also considered one of
+
+24:02.040 --> 24:04.040
+ the sacred arts.
+
+24:04.040 --> 24:10.040
+ So if we contrast Go with chess, there's interesting qualities about Go, maybe you can correct
+
+24:10.040 --> 24:18.960
+ me if I'm wrong, but the evaluation of a particular static board is not as reliable, like you
+
+24:18.960 --> 24:25.800
+ can't, in chess you can kind of assign points to the different units, and it's kind of a
+
+24:25.800 --> 24:28.080
+ pretty good measure of who's winning, who's losing.
+
+24:28.080 --> 24:30.040
+ It's not so clear to do some Go.
+
+24:30.040 --> 24:34.200
+ Yeah, so in the game of Go, you find yourself in a situation where both players have played
+
+24:34.200 --> 24:39.400
+ the same number of stones, actually captures at strong level of play happen very rarely,
+
+24:39.400 --> 24:42.320
+ which means that at any moment in the game you've got the same number of white stones
+
+24:42.320 --> 24:47.160
+ and black stones, and the only thing which differentiates how well you're doing is this
+
+24:47.160 --> 24:52.640
+ intuitive sense of where are the territories ultimately going to form on this board?
+
+24:52.640 --> 25:00.480
+ And if you look at the complexity of a real Go position, it's mind boggling that question
+
+25:00.480 --> 25:05.320
+ of what will happen in 300 moves from now when you see just a scattering of 20 white
+
+25:05.320 --> 25:14.120
+ and black stones intermingled, and so that challenge is the reason why position evaluation
+
+25:14.120 --> 25:17.480
+ is so hard in Go compared to other games.
+
+25:17.480 --> 25:23.280
+ In addition to that, it has an enormous search space, so there's around 10 to 170 positions
+
+25:23.280 --> 25:28.440
+ in the game of Go, that's an astronomical number, and that search space is so great
+
+25:28.440 --> 25:32.080
+ that traditional heuristic search methods that were so successful and things like Deep
+
+25:32.080 --> 25:36.240
+ Blue and chess programs just kind of fall over in Go.
+
+25:36.240 --> 25:43.360
+ So at which point did reinforcement learning enter your life, your research life, your way
+
+25:43.360 --> 25:44.360
+ of thinking?
+
+25:44.360 --> 25:49.840
+ We just talked about learning, but reinforcement learning is a very particular kind of learning,
+
+25:49.840 --> 25:55.080
+ one that's both philosophically sort of profound, but also one that's pretty difficult to get
+
+25:55.080 --> 25:58.560
+ to work as if we look back in the early days.
+
+25:58.560 --> 26:02.480
+ So when did that enter your life and how did that work progress?
+
+26:02.480 --> 26:09.720
+ So I had just finished working in the games industry at this startup company, and I took
+
+26:09.720 --> 26:15.360
+ a year out to discover for myself exactly which path I wanted to take, I knew I wanted
+
+26:15.360 --> 26:20.080
+ to study intelligence, but I wasn't sure what that meant at that stage, I really didn't
+
+26:20.080 --> 26:24.920
+ feel I had the tools to decide on exactly which path I wanted to follow.
+
+26:24.920 --> 26:31.280
+ So during that year, I read a lot, and one of the things I read was Sutton and Bartow,
+
+26:31.280 --> 26:37.960
+ the sort of seminal textbook on an introduction to reinforcement learning, and when I read
+
+26:37.960 --> 26:46.320
+ that textbook, I just had this resonating feeling that this is what I understood intelligence
+
+26:46.320 --> 26:48.080
+ to be.
+
+26:48.080 --> 26:55.920
+ And this was the path that I felt would be necessary to go down to make progress in AI.
+
+26:55.920 --> 27:03.560
+ So I got in touch with Rich Sutton and asked him if he would be interested in supervising
+
+27:03.560 --> 27:14.840
+ me on a PhD thesis in computer go, and he basically said that if he's still alive he'd
+
+27:14.840 --> 27:22.000
+ be happy to, but unfortunately he'd been struggling with very serious cancer for some years, and
+
+27:22.000 --> 27:26.560
+ he really wasn't confident at that stage that he'd even be around to see the end event.
+
+27:26.560 --> 27:32.160
+ But fortunately that part of the story worked out very happily, and I found myself out there
+
+27:32.160 --> 27:36.200
+ in Alberta, they've got a great games group out there with a history of fantastic work
+
+27:36.200 --> 27:42.440
+ in board games as well, as Rich Sutton, the father of RL, so it was the natural place
+
+27:42.440 --> 27:46.320
+ for me to go in some sense to study this question.
+
+27:46.320 --> 27:55.440
+ And the more I looked into it, the more strongly I felt that this wasn't just the path to progress
+
+27:55.440 --> 27:59.440
+ in computer go, but really this was the thing I'd been looking for.
+
+27:59.440 --> 28:09.800
+ This was really an opportunity to frame what intelligence means, like what are the goals
+
+28:09.800 --> 28:16.040
+ of AI in a single, clear problem definition such that if we're able to solve that clear
+
+28:16.040 --> 28:21.280
+ single problem definition, in some sense we've cracked the problem of AI.
+
+28:21.280 --> 28:27.000
+ So to you, reinforcement learning ideas, at least sort of echoes of it, would be at the
+
+28:27.000 --> 28:29.800
+ core of intelligence.
+
+28:29.800 --> 28:31.480
+ Is it the core of intelligence?
+
+28:31.480 --> 28:36.440
+ And if we ever create a human level intelligence system, it would be at the core of that kind
+
+28:36.440 --> 28:37.440
+ of system.
+
+28:37.440 --> 28:42.480
+ Let me say it this way, that I think it's helpful to separate out the problem from the solution.
+
+28:42.480 --> 28:49.640
+ So I see the problem of intelligence, I would say it can be formalized as the reinforcement
+
+28:49.640 --> 28:55.880
+ learning problem, and that that formalization is enough to capture most if not all of the
+
+28:55.880 --> 29:01.000
+ things that we mean by intelligence, that they can all be brought within this framework
+
+29:01.000 --> 29:07.920
+ and gives us a way to access them in a meaningful way that allows us as scientists to understand
+
+29:07.920 --> 29:12.920
+ intelligence and us as computer scientists to build them.
+
+29:12.920 --> 29:17.600
+ And so in that sense, I feel that it gives us a path, maybe not the only path, but a
+
+29:17.600 --> 29:20.640
+ path towards AI.
+
+29:20.640 --> 29:29.320
+ And so do I think that any system in the future that's solved AI would have to have RL within
+
+29:29.320 --> 29:30.320
+ it?
+
+29:30.320 --> 29:33.440
+ Well, I think if you ask that, you're asking about the solution methods.
+
+29:33.440 --> 29:38.000
+ I would say that if we have such a thing, it would be a solution to the RL problem.
+
+29:38.000 --> 29:40.960
+ Now, what particular methods have been used to get there?
+
+29:40.960 --> 29:46.040
+ Well, we should keep an open mind about the best approaches to actually solve any problem.
+
+29:46.040 --> 29:53.080
+ And the things we have right now for reinforcement learning, maybe I believe they've got a lot
+
+29:53.080 --> 29:55.040
+ of legs, but maybe we're missing some things.
+
+29:55.040 --> 29:56.200
+ Maybe there's going to be better ideas.
+
+29:56.200 --> 30:02.880
+ I think we should keep, let's remain modest, and we're at the early days of this field,
+
+30:02.880 --> 30:05.080
+ and there are many amazing discoveries ahead of us.
+
+30:05.080 --> 30:06.080
+ For sure.
+
+30:06.080 --> 30:09.840
+ The specifics, especially of the different kinds of RL approaches currently, there could
+
+30:09.840 --> 30:13.600
+ be other things that fall into the very large umbrella of RL.
+
+30:13.600 --> 30:20.360
+ But if it's okay, can we take a step back and ask the basic question of what is, do
+
+30:20.360 --> 30:22.720
+ you, reinforcement learning?
+
+30:22.720 --> 30:31.400
+ So reinforcement learning is the study and the science and the problem of intelligence
+
+30:31.400 --> 30:35.600
+ in the form of an agent that interacts with an environment.
+
+30:35.600 --> 30:38.880
+ So the problem you're trying to solve is represented by some environment, like the world in which
+
+30:38.880 --> 30:40.880
+ that agent is situated.
+
+30:40.880 --> 30:45.760
+ And the goal of RL is clear, that the agent gets to take actions.
+
+30:45.760 --> 30:49.160
+ Those actions have some effect on the environment, and the environment gives back an observation
+
+30:49.160 --> 30:52.960
+ to the agent saying, you know, this is what you see or sense.
+
+30:52.960 --> 30:56.760
+ And one special thing which it gives back is called the reward signal, how well it's
+
+30:56.760 --> 30:58.240
+ doing in the environment.
+
+30:58.240 --> 31:05.200
+ And the reinforcement learning problem is to simply take actions over time so as to maximize
+
+31:05.200 --> 31:07.480
+ that reward signal.
+
+31:07.480 --> 31:14.000
+ So a couple of basic questions, what types of RL approaches are there?
+
+31:14.000 --> 31:21.840
+ So I don't know if there's a nice brief inwards way to paint a picture of sort of value based,
+
+31:21.840 --> 31:25.400
+ model based, policy based reinforcement learning.
+
+31:25.400 --> 31:26.400
+ Yeah.
+
+31:26.400 --> 31:32.040
+ So now if we think about, okay, so there's this ambitious problem definition of RL.
+
+31:32.040 --> 31:33.480
+ It's really, you know, it's truly ambitious.
+
+31:33.480 --> 31:37.080
+ It's trying to capture and encircle all of the things in which an agent interacts with
+
+31:37.080 --> 31:42.200
+ an environment and say, well, how can we formalize and understand what it means to crack that?
+
+31:42.200 --> 31:43.760
+ Now let's think about the solution method.
+
+31:43.760 --> 31:46.320
+ Well, how do you solve a really hard problem like that?
+
+31:46.320 --> 31:53.400
+ Well, one approach you can take is to decompose that very hard problem into pieces that work
+
+31:53.400 --> 31:56.240
+ together to solve that hard problem.
+
+31:56.240 --> 32:00.880
+ And so you can kind of look at the decomposition that's inside the agent's head, if you like,
+
+32:00.880 --> 32:03.960
+ and ask, well, what form does that decomposition take?
+
+32:03.960 --> 32:07.920
+ And some of the most common pieces that people use when they're kind of putting this system,
+
+32:07.920 --> 32:12.480
+ the solution method together, some of the most common pieces that people use are whether
+
+32:12.480 --> 32:15.000
+ or not that solution has a value function.
+
+32:15.000 --> 32:18.920
+ That means is it trying to predict, explicitly trying to predict how much reward it will get
+
+32:18.920 --> 32:19.920
+ in the future?
+
+32:19.920 --> 32:22.960
+ Does it have a representation of a policy?
+
+32:22.960 --> 32:25.880
+ That means something which is deciding how to pick actions.
+
+32:25.880 --> 32:29.480
+ Is that decision making process explicitly represented?
+
+32:29.480 --> 32:32.160
+ And is there a model in the system?
+
+32:32.160 --> 32:36.760
+ Is there something which is explicitly trying to predict what will happen in the environment?
+
+32:36.760 --> 32:42.680
+ And so those three pieces are, to me, some of the most common building blocks.
+
+32:42.680 --> 32:49.240
+ And I understand the different choices in RL as choices of whether or not to use those
+
+32:49.240 --> 32:52.800
+ building blocks when you're trying to decompose the solution.
+
+32:52.800 --> 32:54.440
+ Should I have a value function represented?
+
+32:54.440 --> 32:56.880
+ Should I have a policy represented?
+
+32:56.880 --> 32:58.640
+ Should I have a model represented?
+
+32:58.640 --> 33:01.400
+ And there are combinations of those pieces and, of course, other things that you could
+
+33:01.400 --> 33:03.320
+ add into the picture as well.
+
+33:03.320 --> 33:07.240
+ But those three fundamental choices give rise to some of the branches of RL with which
+
+33:07.240 --> 33:08.760
+ we are very familiar.
+
+33:08.760 --> 33:17.600
+ And so those, as you mentioned, there is a choice of what's specified or modeled explicitly.
+
+33:17.600 --> 33:23.560
+ And the idea is that all of these are somehow implicitly learned within the system.
+
+33:23.560 --> 33:28.560
+ So it's almost a choice of how you approach a problem.
+
+33:28.560 --> 33:35.600
+ Do you see those as fundamental differences or are these almost like small specifics,
+
+33:35.600 --> 33:39.040
+ like the details of how you solve the problem, but they're not fundamentally different from
+
+33:39.040 --> 33:40.920
+ each other?
+
+33:40.920 --> 33:46.000
+ I think the fundamental idea is maybe at the higher level.
+
+33:46.000 --> 33:52.440
+ The fundamental idea is the first step of the decomposition is really to say, well,
+
+33:52.440 --> 33:56.520
+ how are we really going to solve any kind of problem where you're trying to figure out
+
+33:56.520 --> 34:00.240
+ how to take actions and just from this stream of observations, you know, you've got some
+
+34:00.240 --> 34:04.520
+ agent situated in its sensory motor stream and getting all these observations in, getting
+
+34:04.520 --> 34:05.520
+ to take these actions.
+
+34:05.520 --> 34:06.520
+ And what should it do?
+
+34:06.520 --> 34:07.520
+ How can you even broach that problem?
+
+34:07.520 --> 34:12.400
+ You know, maybe the complexity of the world is so great that you can't even imagine how
+
+34:12.400 --> 34:15.880
+ to build a system that would understand how to deal with that.
+
+34:15.880 --> 34:19.600
+ And so the first step of this decomposition is to say, well, you have to learn.
+
+34:19.600 --> 34:22.160
+ The system has to learn for itself.
+
+34:22.160 --> 34:26.240
+ And so note that the reinforcement learning problem doesn't actually stipulate that you
+
+34:26.240 --> 34:27.240
+ have to learn.
+
+34:27.240 --> 34:30.680
+ Like you could maximize your rewards without learning, it would just say wouldn't do a
+
+34:30.680 --> 34:32.520
+ very good job of it.
+
+34:32.520 --> 34:37.880
+ So learning is required because it's the only way to achieve good performance in any sufficiently
+
+34:37.880 --> 34:40.600
+ large and complex environment.
+
+34:40.600 --> 34:42.080
+ So that's the first step.
+
+34:42.080 --> 34:45.920
+ And so that step gives commonality to all of the other pieces, because now you might
+
+34:45.920 --> 34:48.920
+ ask, well, what should you be learning?
+
+34:48.920 --> 34:49.920
+ What does learning even mean?
+
+34:49.920 --> 34:54.480
+ You know, in this sense, you know, learning might mean, well, you're trying to update
+
+34:54.480 --> 35:01.480
+ the parameters of some system, which is then the thing that actually picks the actions.
+
+35:01.480 --> 35:05.280
+ And those parameters could be representing anything, they could be parametrizing a value
+
+35:05.280 --> 35:08.640
+ function or a model or a policy.
+
+35:08.640 --> 35:12.320
+ And so in that sense, there's a lot of commonality in that whatever is being represented there
+
+35:12.320 --> 35:16.320
+ is the thing which is being learned and it's being learned with the ultimate goal of maximizing
+
+35:16.320 --> 35:17.480
+ rewards.
+
+35:17.480 --> 35:22.560
+ But the way in which you decompose the problem is really what gives the semantics to the
+
+35:22.560 --> 35:23.560
+ whole system.
+
+35:23.560 --> 35:28.640
+ You're trying to learn something to predict well, like a value function or a model, or
+
+35:28.640 --> 35:32.200
+ you're learning something to perform well, like a policy.
+
+35:32.200 --> 35:36.440
+ And the form of that objective is kind of giving the semantics to the system.
+
+35:36.440 --> 35:40.360
+ And so it really is, at the next level down, a fundamental choice.
+
+35:40.360 --> 35:46.120
+ And we have to make those fundamental choices as system designers or enable our algorithms
+
+35:46.120 --> 35:49.440
+ to be able to learn how to make those choices for themselves.
+
+35:49.440 --> 35:56.280
+ So then the next step you mentioned, the very first thing you have to deal with is can you
+
+35:56.280 --> 36:01.640
+ even take in this huge stream of observations and do anything with it?
+
+36:01.640 --> 36:07.960
+ So the natural next basic question is what is the, what is deeper enforcement learning
+
+36:07.960 --> 36:14.640
+ and what is this idea of using neural networks to deal with this huge incoming stream?
+
+36:14.640 --> 36:19.400
+ So amongst all the approaches for reinforcement learning, deep reinforcement learning is
+
+36:19.400 --> 36:29.840
+ one family of solution methods that tries to utilize powerful representations that are
+
+36:29.840 --> 36:37.080
+ offered by neural networks to represent any of these different components of the solution,
+
+36:37.080 --> 36:38.080
+ of the agent.
+
+36:38.080 --> 36:42.640
+ Like whether it's the value function or the model or the policy, the idea of deep learning
+
+36:42.640 --> 36:47.800
+ is to say, well, here's a powerful toolkit that's so powerful that it's universal in
+
+36:47.800 --> 36:52.280
+ the sense that it can represent any function and it can learn any function.
+
+36:52.280 --> 36:57.880
+ And so if we can leverage that universality, that means that whatever we need to represent
+
+36:57.880 --> 37:02.000
+ for our policy or for our value function for a model, deep learning can do it.
+
+37:02.000 --> 37:08.680
+ So that deep learning is one approach that offers us a toolkit that has no ceiling to
+
+37:08.680 --> 37:13.600
+ its performance, that as we start to put more resources into the system, more memory and
+
+37:13.600 --> 37:20.680
+ more computation and more data, more experience, more interactions with the environment, that
+
+37:20.680 --> 37:24.000
+ these are systems that can just get better and better and better at doing whatever the
+
+37:24.000 --> 37:25.760
+ job is they've asked them to do.
+
+37:25.760 --> 37:31.600
+ Whatever we've asked that function to represent, it can learn a function that does a better
+
+37:31.600 --> 37:36.920
+ and better job of representing that knowledge, whether that knowledge be estimating how well
+
+37:36.920 --> 37:40.040
+ you're going to do in the world, the value function, whether it's going to be choosing
+
+37:40.040 --> 37:45.040
+ what to do in the world, the policy, or whether it's understanding the world itself, what's
+
+37:45.040 --> 37:47.120
+ going to happen next, the model.
+
+37:47.120 --> 37:54.840
+ Nevertheless, the fact that neural networks are able to learn incredibly complex representations
+
+37:54.840 --> 38:01.640
+ that allow you to do the policy, the model or the value function is at least to my mind
+
+38:01.640 --> 38:04.200
+ exceptionally beautiful and surprising.
+
+38:04.200 --> 38:08.880
+ Was it surprising to you?
+
+38:08.880 --> 38:11.560
+ Can you still believe it works as well as it does?
+
+38:11.560 --> 38:19.280
+ Do you have good intuition about why it works at all and works as well as it does?
+
+38:19.280 --> 38:22.880
+ I think let me take two parts to that question.
+
+38:22.880 --> 38:31.000
+ I think it's not surprising to me that the idea of reinforcement learning works because
+
+38:31.000 --> 38:37.600
+ in some sense, I feel it's the only thing which can ultimately.
+
+38:37.600 --> 38:43.440
+ I feel we have to address it and there must be success as possible because we have examples
+
+38:43.440 --> 38:45.840
+ of intelligence.
+
+38:45.840 --> 38:51.000
+ It must at some level be able to possible to acquire experience and use that experience
+
+38:51.000 --> 38:57.040
+ to do better in a way which is meaningful to environments of the complexity that humans
+
+38:57.040 --> 38:58.040
+ can deal with.
+
+38:58.040 --> 38:59.040
+ It must be.
+
+38:59.040 --> 39:04.000
+ Am I surprised that our current systems can do as well as they can do?
+
+39:04.000 --> 39:11.760
+ I think one of the big surprises for me and a lot of the community is really the fact
+
+39:11.760 --> 39:22.200
+ that deep learning can continue to perform so well despite the facts that these neural
+
+39:22.200 --> 39:27.960
+ networks that they're representing have these incredibly nonlinear kind of bumpy surfaces
+
+39:27.960 --> 39:33.280
+ which to our kind of low dimensional intuitions make it feel like surely you're just going
+
+39:33.280 --> 39:38.840
+ to get stuck and learning will get stuck because you won't be able to make any further progress.
+
+39:38.840 --> 39:46.640
+ Yet, the big surprise is that learning continues and these what appear to be local optima turn
+
+39:46.640 --> 39:50.800
+ out not to be because in high dimensions when we make really big neural nets, there's always
+
+39:50.800 --> 39:56.440
+ a way out and there's a way to go even lower and then you're still not in a local optima
+
+39:56.440 --> 40:00.440
+ because there's some other pathway that will take you out and take you lower still.
+
+40:00.440 --> 40:05.560
+ No matter where you are, learning can proceed and do better and better and better without
+
+40:05.560 --> 40:08.360
+ bound.
+
+40:08.360 --> 40:17.960
+ That is a surprising and beautiful property of neural nets which I find elegant and beautiful
+
+40:17.960 --> 40:21.120
+ and somewhat shocking that it turns out to be the case.
+
+40:21.120 --> 40:28.160
+ As you said, which I really like, to our low dimensional intuitions, that's surprising.
+
+40:28.160 --> 40:29.160
+ Yeah.
+
+40:29.160 --> 40:36.160
+ We're very tuned to working within a three dimensional environment and so to start to
+
+40:36.160 --> 40:42.600
+ visualize what a billion dimensional neural network surface that you're trying to optimize
+
+40:42.600 --> 40:48.280
+ over, what that even looks like is very hard for us and so I think that really if you try
+
+40:48.280 --> 40:57.040
+ to account for essentially the AI winter where people gave up on neural networks, I think
+
+40:57.040 --> 41:03.160
+ it's really down to that lack of ability to generalize from low dimensions to high dimensions
+
+41:03.160 --> 41:07.120
+ because back then we were in the low dimensional case, people could only build neural nets
+
+41:07.120 --> 41:14.560
+ with 50 nodes in them or something and to imagine that it might be possible to build
+
+41:14.560 --> 41:18.120
+ a billion dimensional neural net and it might have a completely different qualitatively
+
+41:18.120 --> 41:23.480
+ different property was very hard to anticipate and I think even now we're starting to build
+
+41:23.480 --> 41:29.480
+ the theory to support that and it's incomplete at the moment but all of the theory seems
+
+41:29.480 --> 41:34.760
+ to be pointing in the direction that indeed this is an approach which truly is universal
+
+41:34.760 --> 41:38.400
+ both in its representational capacity which was known but also in its learning ability
+
+41:38.400 --> 41:41.520
+ which is surprising.
+
+41:41.520 --> 41:48.880
+ It makes one wonder what else we're missing due to our low dimensional intuitions that
+
+41:48.880 --> 41:51.720
+ will seem obvious once it's discovered.
+
+41:51.720 --> 42:01.800
+ I often wonder when we one day do have AIs which are superhuman in their abilities to
+
+42:01.800 --> 42:09.040
+ understand the world, what will they think of the algorithms that we developed back now?
+
+42:09.040 --> 42:17.200
+ Will it be looking back at these days and thinking that will we look back and feel that
+
+42:17.200 --> 42:21.560
+ these algorithms were naive first steps or will they still be the fundamental ideas which
+
+42:21.560 --> 42:26.840
+ are used even in 100,000, 10,000 years?
+
+42:26.840 --> 42:35.480
+ They'll watch back to this conversation and with a smile and do a little bit of a laugh.
+
+42:35.480 --> 42:44.800
+ My sense is I think just like when we used to think that the sun revolved around the
+
+42:44.800 --> 42:52.200
+ earth they'll see our systems of today reinforcement learning as too complicated that the answer
+
+42:52.200 --> 42:54.560
+ was simple all along.
+
+42:54.560 --> 43:00.040
+ There's something just like you said in the game of Go, I mean I love the systems of like
+
+43:00.040 --> 43:06.160
+ cellular automata that there's simple rules from which incredible complexity emerges.
+
+43:06.160 --> 43:10.720
+ So it feels like there might be some very simple approaches.
+
+43:10.720 --> 43:19.600
+ Just like Rich Sutton says, these simple methods would compute over time seem to prove to be
+
+43:19.600 --> 43:20.600
+ the most effective.
+
+43:20.600 --> 43:30.640
+ I 100% agree I think that if we try to anticipate what will generalize well into the future
+
+43:30.640 --> 43:36.080
+ I think it's likely to be the case that it's the simple clear ideas which will have the
+
+43:36.080 --> 43:39.440
+ longest legs and which will carry us further into the future.
+
+43:39.440 --> 43:43.800
+ And nevertheless we're in a situation where we need to make things work today and sometimes
+
+43:43.800 --> 43:48.800
+ that requires putting together more complex systems where we don't have the full answers
+
+43:48.800 --> 43:51.680
+ yet as to what those minimal ingredients might be.
+
+43:51.680 --> 43:58.880
+ So speaking of which, if we could take a step back to Go, what was Mogo and what was the
+
+43:58.880 --> 44:00.920
+ key idea behind the system?
+
+44:00.920 --> 44:08.000
+ So back during my PhD on computer Go around about that time there was a major new development
+
+44:08.000 --> 44:16.360
+ in which actually happened in the context of computer Go and it was really a revolution
+
+44:16.360 --> 44:24.320
+ in the way that heuristic search was done and the idea was essentially that a position
+
+44:24.320 --> 44:30.840
+ could be evaluated or a state in general could be evaluated not by humans saying whether
+
+44:30.840 --> 44:36.240
+ that position is good or not or even humans providing rules as to how you might evaluate
+
+44:36.240 --> 44:45.800
+ it but instead by allowing the system to randomly play out the game until the end multiple times
+
+44:45.800 --> 44:50.680
+ and taking the average of those outcomes as the prediction of what will happen.
+
+44:50.680 --> 44:55.280
+ So for example if you're in the game of Go the intuition is that you take a position
+
+44:55.280 --> 44:59.480
+ and you get the system to kind of play random moves against itself all the way to the end
+
+44:59.480 --> 45:04.080
+ of the game and you see who wins and if black ends up winning more of those random games
+
+45:04.080 --> 45:08.560
+ than white well you say hey this is a position that favors white and if white ends up winning
+
+45:08.560 --> 45:13.680
+ more of those random games than black then it favors white.
+
+45:13.680 --> 45:23.080
+ So that idea was known as Monte Carlo search and a particular form of Monte Carlo search
+
+45:23.080 --> 45:28.640
+ that became very effective and was developed in computer Go first by Remy Coulomb in 2006
+
+45:28.640 --> 45:34.200
+ and then taken further by others was something called Monte Carlo tree search which basically
+
+45:34.200 --> 45:41.080
+ takes that same idea and uses that insight to evaluate every node of a search tree is
+
+45:41.080 --> 45:46.880
+ evaluated by the average of the random playouts from that node onwards.
+
+45:46.880 --> 45:52.040
+ And this idea was very powerful and suddenly led to huge leaps forward in the strength
+
+45:52.040 --> 45:58.360
+ of computer Go playing programs and among those the strongest of the Go playing programs
+
+45:58.360 --> 46:04.400
+ in those days was a program called Mogo which was the first program to actually reach human
+
+46:04.400 --> 46:07.960
+ master level on small boards nine by nine boards.
+
+46:07.960 --> 46:13.000
+ And so this was a program by someone called Sylvangeli who's a good colleague of mine
+
+46:13.000 --> 46:20.640
+ but I worked with him a little bit in those days part of my PhD thesis and Mogo was a
+
+46:20.640 --> 46:26.160
+ first step towards the latest successes we saw in computer Go but it was still missing
+
+46:26.160 --> 46:34.000
+ a key ingredient Mogo was evaluating purely by random rollouts against itself and in a
+
+46:34.000 --> 46:40.200
+ way it's truly remarkable that random play should give you anything at all like why in
+
+46:40.200 --> 46:46.680
+ this perfectly deterministic game that's very precise and involves these very exact sequences
+
+46:46.680 --> 46:54.040
+ why is it that random randomization is helpful and so the intuition is that randomization
+
+46:54.040 --> 47:01.640
+ captures something about the nature of the search tree from a position that you're understanding
+
+47:01.640 --> 47:07.240
+ the nature of the search tree from that node onwards by using randomization and this was
+
+47:07.240 --> 47:09.400
+ a very powerful idea.
+
+47:09.400 --> 47:15.080
+ And I've seen this in other spaces when I talk to Richard Karp and so on, randomized
+
+47:15.080 --> 47:22.560
+ algorithms somehow magically are able to do exceptionally well and simplifying the problem
+
+47:22.560 --> 47:27.680
+ somehow makes you wonder about the fundamental nature of randomness in our universe.
+
+47:27.680 --> 47:33.440
+ It seems to be a useful thing but so from that moment, can you maybe tell the origin
+
+47:33.440 --> 47:36.160
+ story in the journey of AlphaGo?
+
+47:36.160 --> 47:41.960
+ Yeah, so programs based on Monte Carlo tree search were a first revolution in the sense
+
+47:41.960 --> 47:48.040
+ that they led to suddenly programs that could play the game to any reasonable level but
+
+47:48.040 --> 47:53.120
+ they plateaued, it seemed that no matter how much effort people put into these techniques
+
+47:53.120 --> 47:58.160
+ they couldn't exceed the level of amateur, Dan level go players.
+
+47:58.160 --> 48:03.200
+ So strong players but not anywhere near the level of professionals, never mind the world
+
+48:03.200 --> 48:04.600
+ champion.
+
+48:04.600 --> 48:11.880
+ And so that brings us to the birth of AlphaGo which happened in the context of a startup
+
+48:11.880 --> 48:21.880
+ company known as DeepMind where a project was born and the project was really a scientific
+
+48:21.880 --> 48:31.480
+ investigation where myself and Ajah Huang and an intern Chris Madison were exploring
+
+48:31.480 --> 48:38.680
+ a scientific question and that scientific question was really, is there another fundamentally
+
+48:38.680 --> 48:44.600
+ different approach to this key question of go, the key challenge of how can you build
+
+48:44.600 --> 48:46.040
+ that intuition in?
+
+48:46.040 --> 48:50.800
+ How can you just have a system that could look at a position and understand what move
+
+48:50.800 --> 48:54.920
+ to play or how well you're doing in that position, who's going to win?
+
+48:54.920 --> 49:02.920
+ And so the deep learning revolution had just begun, the systems like ImageNet had suddenly
+
+49:02.920 --> 49:08.040
+ been won by deep learning techniques back in 2012 and following that it was natural
+
+49:08.040 --> 49:14.160
+ to ask, well, if deep learning is able to scale up so effectively with images to understand
+
+49:14.160 --> 49:21.800
+ them enough to classify them, well, why not go, why not take the black and white stones
+
+49:21.800 --> 49:26.360
+ of the go board and build a system which can understand for itself what that means in terms
+
+49:26.360 --> 49:31.200
+ of what move to pick or who's going to win the game, black or white?
+
+49:31.200 --> 49:36.600
+ And so that was our scientific question which we were probing and trying to understand and
+
+49:36.600 --> 49:41.320
+ as we started to look at it, we discovered that we could build a system, so in fact our
+
+49:41.320 --> 49:48.080
+ very first paper on AlphaGo was actually a pure deep learning system which was trying
+
+49:48.080 --> 49:52.440
+ to answer this question and we showed that actually a pure deep learning system with
+
+49:52.440 --> 49:58.640
+ no search at all was actually able to reach human band level, master level at the full
+
+49:58.640 --> 50:01.840
+ game of go, 19 by 19 boards.
+
+50:01.840 --> 50:06.600
+ And so without any search at all, suddenly we had systems which were playing at the level
+
+50:06.600 --> 50:11.840
+ of the best Monte Carlo tree set systems, the ones with randomized rollouts.
+
+50:11.840 --> 50:17.440
+ So first of all, sorry to interrupt, but that's kind of a groundbreaking notion that's like
+
+50:17.440 --> 50:24.920
+ basically a definitive step away from a couple of decades of essentially search dominating
+
+50:24.920 --> 50:25.920
+ AI.
+
+50:25.920 --> 50:26.920
+ Yeah.
+
+50:26.920 --> 50:33.080
+ How did that make you feel, was it surprising from a scientific perspective in general how
+
+50:33.080 --> 50:34.080
+ to make you feel?
+
+50:34.080 --> 50:37.360
+ I found this to be profoundly surprising.
+
+50:37.360 --> 50:43.640
+ In fact, it was so surprising that we had a bet back then and like many good projects,
+
+50:43.640 --> 50:50.240
+ bets are quite motivating and the bet was whether it was possible for a system based
+
+50:50.240 --> 50:56.680
+ purely on deep learning, no search at all to beat a Dan level human player.
+
+50:56.680 --> 51:03.040
+ And so we had someone who joined our team, who was a Dan level player, he came in and
+
+51:03.040 --> 51:06.120
+ we had this first match against him.
+
+51:06.120 --> 51:11.640
+ And which side of the bet were you on, by the way, the losing and the winning side?
+
+51:11.640 --> 51:18.520
+ I tend to be an optimist with the power of deep learning and reinforcement learning.
+
+51:18.520 --> 51:24.320
+ So the system won and we were able to beat this human Dan level player.
+
+51:24.320 --> 51:28.880
+ And for me, that was the moment where it was like, okay, something special is afoot
+
+51:28.880 --> 51:29.880
+ here.
+
+51:29.880 --> 51:36.160
+ We have a system which without search is able to already just look at this position and
+
+51:36.160 --> 51:39.760
+ understand things as well as a strong human player.
+
+51:39.760 --> 51:48.560
+ And from that point onwards, I really felt that reaching the top levels of human play,
+
+51:48.560 --> 51:52.880
+ you know, professional level, world champion level, I felt it was actually an inevitability
+
+51:52.880 --> 52:01.560
+ and, and if it was an inevitable outcome, I was rather keen that it would be us that
+
+52:01.560 --> 52:03.120
+ achieved it.
+
+52:03.120 --> 52:05.440
+ So we scaled up.
+
+52:05.440 --> 52:10.320
+ This was something where, you know, so had lots of conversations back then with Dennis
+
+52:10.320 --> 52:17.440
+ the service at the head of DeepMind, who was extremely excited.
+
+52:17.440 --> 52:24.640
+ And we made the decision to scale up the project, brought more people on board.
+
+52:24.640 --> 52:32.400
+ And so AlphaGo became something where we had a clear goal, which was to try and crack this
+
+52:32.400 --> 52:37.680
+ outstanding challenge of AI to see if we could beat the world's best players.
+
+52:37.680 --> 52:44.800
+ And this led within the space of not so many months to playing against the European champion
+
+52:44.800 --> 52:50.200
+ Fan Hui in a match which became, you know, memorable in history as the first time a go
+
+52:50.200 --> 52:54.040
+ program had ever beaten a professional player.
+
+52:54.040 --> 52:59.560
+ And at that time, we had to make a judgment as to whether when and whether we should go
+
+52:59.560 --> 53:02.120
+ and challenge the world champion.
+
+53:02.120 --> 53:04.560
+ And this was a difficult decision to make again.
+
+53:04.560 --> 53:10.800
+ We were basing our predictions on our own progress and had to estimate based on the
+
+53:10.800 --> 53:16.600
+ rapidity of our own progress when we thought we would exceed the level of the human world
+
+53:16.600 --> 53:22.520
+ champion and we tried to make an estimate and set up a match and that became the AlphaGo
+
+53:22.520 --> 53:27.440
+ versus LisaDoll match in 2016.
+
+53:27.440 --> 53:33.920
+ And we should say spoiler alert that AlphaGo was able to defeat LisaDoll.
+
+53:33.920 --> 53:34.920
+ That's right.
+
+53:34.920 --> 53:35.920
+ Yeah.
+
+53:35.920 --> 53:45.840
+ Maybe we could take even a broader view, AlphaGo involves both learning from expert games
+
+53:45.840 --> 53:54.440
+ and as far as I remember a self played component to where it learns by playing against itself.
+
+53:54.440 --> 53:59.240
+ But in your sense, what was the role of learning from expert games there?
+
+53:59.240 --> 54:04.760
+ And in terms of your self evaluation, whether you can take on the world champion, what was
+
+54:04.760 --> 54:09.520
+ the thing that you're trying to do more of, sort of train more on expert games?
+
+54:09.520 --> 54:17.960
+ Or was there's now another, I'm asking so many poorly faced questions, but did you have
+
+54:17.960 --> 54:24.560
+ a hope or dream that self play would be the key component at that moment yet?
+
+54:24.560 --> 54:30.480
+ So in the early days of AlphaGo, we used human data to explore the science of what deep learning
+
+54:30.480 --> 54:31.480
+ can achieve.
+
+54:31.480 --> 54:37.360
+ And so when we had our first paper that showed that it was possible to predict the winner
+
+54:37.360 --> 54:41.160
+ of the game, that it was possible to suggest moves, that was done using human data.
+
+54:41.160 --> 54:42.800
+ Oh, solely human data.
+
+54:42.800 --> 54:43.800
+ Yeah.
+
+54:43.800 --> 54:47.560
+ And so the reason that we did it that way was at that time we were exploring separately
+
+54:47.560 --> 54:51.240
+ the deep learning aspect from the reinforcement learning aspect.
+
+54:51.240 --> 54:56.440
+ That was the part which was new and unknown to me at that time was how far could that
+
+54:56.440 --> 54:58.440
+ be stretched?
+
+54:58.440 --> 55:03.200
+ Once we had that, it then became natural to try and use that same representation and
+
+55:03.200 --> 55:06.680
+ see if we could learn for ourselves using that same representation.
+
+55:06.680 --> 55:12.160
+ And so right from the beginning, actually, our goal had been to build a system using
+
+55:12.160 --> 55:14.320
+ self play.
+
+55:14.320 --> 55:20.280
+ And to us, the human data right from the beginning was an expedient step to help us for pragmatic
+
+55:20.280 --> 55:25.760
+ reasons to go faster towards the goals of the project than we might be able to starting
+
+55:25.760 --> 55:27.920
+ solely from self play.
+
+55:27.920 --> 55:32.960
+ And so in those days, we were very aware that we were choosing to use human data and that
+
+55:32.960 --> 55:40.120
+ might not be the long term holy grail of AI, but that it was something which was extremely
+
+55:40.120 --> 55:41.120
+ useful to us.
+
+55:41.120 --> 55:42.120
+ It helped us to understand the system.
+
+55:42.120 --> 55:48.480
+ It helped us to build deep learning representations which were clear and simple and easy to use.
+
+55:48.480 --> 55:54.120
+ And so really, I would say it served a purpose not just as part of the algorithm, but something
+
+55:54.120 --> 55:59.400
+ which I continue to use in our research today, which is trying to break down a very hard
+
+55:59.400 --> 56:04.240
+ challenge into pieces which are easier to understand for us as researchers and develop.
+
+56:04.240 --> 56:10.480
+ So if you use a component based on human data, it can help you to understand the system such
+
+56:10.480 --> 56:15.360
+ that then you can build the more principled version later that does it for itself.
+
+56:15.360 --> 56:23.400
+ So as I said, the AlphaGo victory, and I don't think I'm being sort of romanticizing this
+
+56:23.400 --> 56:24.400
+ notion.
+
+56:24.400 --> 56:27.120
+ I think it's one of the greatest moments in the history of AI.
+
+56:27.120 --> 56:32.080
+ So were you cognizant of this magnitude of the accomplishment of the time?
+
+56:32.080 --> 56:35.560
+ I mean, are you cognizant of it even now?
+
+56:35.560 --> 56:40.800
+ Because to me, I feel like it's something that we mentioned, what the AGI systems of
+
+56:40.800 --> 56:42.440
+ the future will look back.
+
+56:42.440 --> 56:49.240
+ I think they'll look back at the AlphaGo victory as like, holy crap, they figured it out.
+
+56:49.240 --> 56:51.800
+ This is where it started.
+
+56:51.800 --> 56:52.800
+ Well thank you again.
+
+56:52.800 --> 56:57.120
+ I mean, it's funny because I guess I've been working on, I've been working on computer
+
+56:57.120 --> 56:58.120
+ go for a long time.
+
+56:58.120 --> 57:03.120
+ So I'd been working at the time of the AlphaGo match on computer go for more than a decade.
+
+57:03.120 --> 57:07.960
+ And throughout that decade, I'd had this dream of what would it be like to, what would it
+
+57:07.960 --> 57:13.280
+ be like really to actually be able to build a system that could play against the world
+
+57:13.280 --> 57:14.280
+ champion.
+
+57:14.280 --> 57:19.160
+ And I imagined that that would be an interesting moment that maybe, you know, some people might
+
+57:19.160 --> 57:24.200
+ care about that and that this might be, you know, a nice achievement.
+
+57:24.200 --> 57:32.160
+ But I think when I arrived in Seoul and discovered the legions of journalists that were following
+
+57:32.160 --> 57:38.120
+ us around and the hundred million people that were watching the match online live, I realized
+
+57:38.120 --> 57:42.600
+ that I'd been off in my estimation of how significant this moment was by several orders
+
+57:42.600 --> 57:44.440
+ of magnitude.
+
+57:44.440 --> 57:53.040
+ And so there was definitely an adjustment process to realize that this was something
+
+57:53.040 --> 57:58.000
+ which the world really cared about and which was a watershed moment.
+
+57:58.000 --> 58:03.160
+ And I think there was that moment of realization, which was also a little bit scary because,
+
+58:03.160 --> 58:08.640
+ you know, if you go into something thinking it's going to be maybe of interest and then
+
+58:08.640 --> 58:12.120
+ discover that a hundred million people are watching, it suddenly makes you worry about
+
+58:12.120 --> 58:16.240
+ whether some of the decisions you've made were really the best ones or the wisest or
+
+58:16.240 --> 58:18.400
+ were going to lead to the best outcome.
+
+58:18.400 --> 58:22.040
+ And we knew for sure that there were still imperfections in AlphaGo, which were going
+
+58:22.040 --> 58:24.480
+ to be exposed to the whole world watching.
+
+58:24.480 --> 58:28.280
+ And so, yeah, it was, I think, a great experience.
+
+58:28.280 --> 58:35.880
+ And I feel privileged to have been part of it, privileged to have led that amazing team.
+
+58:35.880 --> 58:40.960
+ I feel privileged to have been in a moment of history, like you say.
+
+58:40.960 --> 58:46.600
+ But also lucky that, you know, in a sense, I was insulated from the knowledge of, I think
+
+58:46.600 --> 58:51.320
+ it would have been harder to focus on the research if the full kind of reality of what
+
+58:51.320 --> 58:55.280
+ was going to come to pass had been known to me and the team.
+
+58:55.280 --> 58:58.840
+ I think it was, you know, we were in our bubble and we were working on research and we were
+
+58:58.840 --> 59:01.640
+ trying to answer the scientific questions.
+
+59:01.640 --> 59:04.880
+ And then bam, you know, the public sees it.
+
+59:04.880 --> 59:07.600
+ And I think it was better that way in retrospect.
+
+59:07.600 --> 59:13.720
+ Were you confident that, I guess, what were the chances that you could get the win?
+
+59:13.720 --> 59:20.320
+ So just like you said, I'm a little bit more familiar with another accomplishment than
+
+59:20.320 --> 59:22.320
+ we may not even get a chance to talk to.
+
+59:22.320 --> 59:26.360
+ I talked to Oriel Villalos about AlphaStar, which is another incredible accomplishment.
+
+59:26.360 --> 59:32.480
+ But here, you know, with AlphaStar and beating the StarCraft, there was like already a track
+
+59:32.480 --> 59:34.560
+ record with AlphaGo.
+
+59:34.560 --> 59:40.800
+ This is like the really first time you get to see reinforcement learning face the best
+
+59:40.800 --> 59:41.800
+ human in the world.
+
+59:41.800 --> 59:43.400
+ So what was your confidence like?
+
+59:43.400 --> 59:44.400
+ What was the odds?
+
+59:44.400 --> 59:45.400
+ Well, we actually...
+
+59:45.400 --> 59:46.400
+ Was there a bet?
+
+59:46.400 --> 59:50.520
+ Funnily enough, there was.
+
+59:50.520 --> 59:55.880
+ So just before the match, we weren't betting on anything concrete, but we all held out
+
+59:55.880 --> 59:56.880
+ a hand.
+
+59:56.880 --> 59:59.760
+ Everyone in the team held out a hand at the beginning of the match.
+
+59:59.760 --> 1:00:02.960
+ And the number of fingers that they had out on that hand was supposed to represent how
+
+1:00:02.960 --> 1:00:06.480
+ many games they thought we would win against Lisa Dahl.
+
+1:00:06.480 --> 1:00:10.600
+ And there was an amazing spread in the team's predictions.
+
+1:00:10.600 --> 1:00:15.520
+ But I have to say, I predicted four one.
+
+1:00:15.520 --> 1:00:18.680
+ And the reason was based purely on data.
+
+1:00:18.680 --> 1:00:20.840
+ So I'm a scientist first and foremost.
+
+1:00:20.840 --> 1:00:27.200
+ And one of the things which we had established was that AlphaGo in around one in five games
+
+1:00:27.200 --> 1:00:31.480
+ would develop something which we called a delusion, which was a kind of hole in its
+
+1:00:31.480 --> 1:00:36.200
+ knowledge where it wasn't able to fully understand everything about the position.
+
+1:00:36.200 --> 1:00:41.800
+ And that hole in its knowledge would persist for tens of moves throughout the game.
+
+1:00:41.800 --> 1:00:42.800
+ And we knew two things.
+
+1:00:42.800 --> 1:00:46.680
+ We knew that if there were no delusions that AlphaGo seemed to be playing at a level that
+
+1:00:46.680 --> 1:00:49.520
+ was far beyond any human capabilities.
+
+1:00:49.520 --> 1:00:55.360
+ But we also knew that if there were delusions, the opposite was true.
+
+1:00:55.360 --> 1:00:58.320
+ And in fact, that's what came to pass.
+
+1:00:58.320 --> 1:01:03.920
+ We saw all of those outcomes and Lisa Dahl in one of the games played a really beautiful
+
+1:01:03.920 --> 1:01:08.320
+ sequence that AlphaGo just hadn't predicted.
+
+1:01:08.320 --> 1:01:14.280
+ And after that, it led it into this situation where it was unable to really understand the
+
+1:01:14.280 --> 1:01:18.480
+ position fully and found itself in one of these delusions.
+
+1:01:18.480 --> 1:01:20.880
+ So indeed, four one was the outcome.
+
+1:01:20.880 --> 1:01:21.880
+ So yeah.
+
+1:01:21.880 --> 1:01:23.400
+ And can you maybe speak to it a little bit more?
+
+1:01:23.400 --> 1:01:25.880
+ What were the five games?
+
+1:01:25.880 --> 1:01:31.520
+ What happened, is there interesting things that come to memory in terms of the play of
+
+1:01:31.520 --> 1:01:33.720
+ the human machine?
+
+1:01:33.720 --> 1:01:37.440
+ So I remember all of these games vividly, of course.
+
+1:01:37.440 --> 1:01:42.760
+ Moments like these don't come too often in the lifetime of a scientist.
+
+1:01:42.760 --> 1:01:52.680
+ And the first game was magical because it was the first time that a computer program
+
+1:01:52.680 --> 1:01:57.320
+ had defeated a world champion in this grand challenge of go.
+
+1:01:57.320 --> 1:02:06.120
+ And there was a moment where AlphaGo invaded Lisa Dahl's territory towards the end of the
+
+1:02:06.120 --> 1:02:08.600
+ game.
+
+1:02:08.600 --> 1:02:10.040
+ And that's quite an audacious thing to do.
+
+1:02:10.040 --> 1:02:12.680
+ It's like saying, hey, you thought this was going to be your territory in the game, but
+
+1:02:12.680 --> 1:02:17.080
+ I'm going to stick a stone right in the middle of it and prove to you that I can break it
+
+1:02:17.080 --> 1:02:18.280
+ up.
+
+1:02:18.280 --> 1:02:20.320
+ And Lisa Dahl's face just dropped.
+
+1:02:20.320 --> 1:02:26.200
+ She wasn't expecting a computer to do something that audacious.
+
+1:02:26.200 --> 1:02:30.920
+ The second game became famous for a move known as Move 37.
+
+1:02:30.920 --> 1:02:38.560
+ This was a move that was played by AlphaGo that broke all of the conventions of go.
+
+1:02:38.560 --> 1:02:43.840
+ That the go players were so shocked by this, they thought that maybe the operator had made
+
+1:02:43.840 --> 1:02:45.960
+ a mistake.
+
+1:02:45.960 --> 1:02:50.480
+ They thought there was something crazy going on, and it just broke every rule that go players
+
+1:02:50.480 --> 1:02:52.280
+ are taught from a very young age.
+
+1:02:52.280 --> 1:02:56.320
+ They're just taught, you know, this kind of move called a shoulder hit.
+
+1:02:56.320 --> 1:02:59.720
+ You can only play it on the third line or the fourth line, and AlphaGo played it on
+
+1:02:59.720 --> 1:03:01.560
+ the fifth line.
+
+1:03:01.560 --> 1:03:05.240
+ And it turned out to be a brilliant move and made this beautiful pattern in the middle
+
+1:03:05.240 --> 1:03:08.680
+ of the board that ended up winning the game.
+
+1:03:08.680 --> 1:03:16.120
+ And so this really was a clear instance where we could say computers exhibited creativity,
+
+1:03:16.120 --> 1:03:22.840
+ that this was really a move that was something humans hadn't known about, hadn't anticipated.
+
+1:03:22.840 --> 1:03:24.800
+ And computers discovered this idea.
+
+1:03:24.800 --> 1:03:30.320
+ They were the ones to say, actually, here's a new idea, something new, not in the domains
+
+1:03:30.320 --> 1:03:34.320
+ of human knowledge of the game.
+
+1:03:34.320 --> 1:03:40.160
+ And now the humans think this is a reasonable thing to do, and it's part of go knowledge
+
+1:03:40.160 --> 1:03:41.160
+ now.
+
+1:03:41.160 --> 1:03:46.720
+ The third game, something special happens when you play against a human world champion,
+
+1:03:46.720 --> 1:03:52.080
+ which again, I hadn't anticipated before going there, which is, you know, these players
+
+1:03:52.080 --> 1:03:53.080
+ are amazing.
+
+1:03:53.080 --> 1:03:59.360
+ Lee Siddle was a true champion, 18 time world champion, and had this amazing ability to
+
+1:03:59.360 --> 1:04:03.520
+ probe AlphaGo for weaknesses of any kind.
+
+1:04:03.520 --> 1:04:09.880
+ And in the third game, he was losing, and we felt we were sailing comfortably to victory,
+
+1:04:09.880 --> 1:04:17.120
+ but he managed to, from nothing, stir up this fight and build what's called a double co,
+
+1:04:17.120 --> 1:04:20.560
+ these kind of repetitive positions.
+
+1:04:20.560 --> 1:04:25.200
+ And he knew that historically, no computer go program had ever been able to deal correctly
+
+1:04:25.200 --> 1:04:30.000
+ with double code positions, and he managed to summon one out of nothing.
+
+1:04:30.000 --> 1:04:35.320
+ And so for us, you know, this was a real challenge, like would AlphaGo be able to deal with this,
+
+1:04:35.320 --> 1:04:38.800
+ or would it just kind of crumble in the face of this situation?
+
+1:04:38.800 --> 1:04:41.480
+ And fortunately, it dealt with it perfectly.
+
+1:04:41.480 --> 1:04:48.880
+ The fourth game was amazing in that Lee Siddle appeared to be losing this game, AlphaGo thought
+
+1:04:48.880 --> 1:04:54.720
+ it was winning, and then Lee Siddle did something which I think only a true world champion can
+
+1:04:54.720 --> 1:04:59.760
+ do, which is he found a brilliant sequence in the middle of the game, a brilliant sequence
+
+1:04:59.760 --> 1:05:09.400
+ that led him to really just transform the position, it kind of, he found just a piece
+
+1:05:09.400 --> 1:05:11.000
+ of genius really.
+
+1:05:11.000 --> 1:05:17.240
+ And after that, AlphaGo, its evaluation just tumbled, it thought it was winning this game,
+
+1:05:17.240 --> 1:05:22.160
+ and all of a sudden it tumbled and said, oh, now I've got no chance, and it starts to behave
+
+1:05:22.160 --> 1:05:24.440
+ rather oddly at that point.
+
+1:05:24.440 --> 1:05:29.400
+ In the final game, for some reason, we as a team were convinced having seen AlphaGo in
+
+1:05:29.400 --> 1:05:34.560
+ the previous game suffer from delusions, we as a team were convinced that it was suffering
+
+1:05:34.560 --> 1:05:38.280
+ from another delusion, we were convinced that it was misevaluating the position and
+
+1:05:38.280 --> 1:05:41.280
+ that something was going terribly wrong.
+
+1:05:41.280 --> 1:05:46.600
+ And it was only in the last few moves of the game that we realized that actually, although
+
+1:05:46.600 --> 1:05:51.440
+ it had been predicting it was going to win all the way through, it really was.
+
+1:05:51.440 --> 1:05:55.680
+ And so somehow, you know, it just taught us yet again that you have to have faith in your
+
+1:05:55.680 --> 1:06:00.720
+ systems when they exceed your own level of ability and your own judgment, you have to
+
+1:06:00.720 --> 1:06:07.040
+ trust in them to know better than you, the designer, once you've bestowed in them the
+
+1:06:07.040 --> 1:06:13.160
+ ability to judge better than you can, then trust the system to do so.
+
+1:06:13.160 --> 1:06:21.680
+ So just like in the case of Deep Blue beating Gary Kasparov, so Gary is, I think the first
+
+1:06:21.680 --> 1:06:27.120
+ time he's ever lost actually to anybody, and I mean, there's a similar situation with
+
+1:06:27.120 --> 1:06:36.400
+ Lisa Dahl, it's a tragic, it's a tragic loss for humans, but a beautiful one.
+
+1:06:36.400 --> 1:06:45.280
+ I think that's kind of, from the tragedy, sort of emerges over time, emerges a kind
+
+1:06:45.280 --> 1:06:54.600
+ of inspiring story, but Lisa Dahl recently analysis retirement, I don't know if we can
+
+1:06:54.600 --> 1:07:00.220
+ look too deeply into it, but he did say that even if I become number one, there's an entity
+
+1:07:00.220 --> 1:07:02.720
+ that cannot be defeated.
+
+1:07:02.720 --> 1:07:05.560
+ So what do you think about these words?
+
+1:07:05.560 --> 1:07:07.720
+ What do you think about his retirement from the game ago?
+
+1:07:07.720 --> 1:07:12.560
+ Well, let me take you back first of all to the first part of your comment about Gary Kasparov,
+
+1:07:12.560 --> 1:07:15.760
+ who was actually at the panel yesterday.
+
+1:07:15.760 --> 1:07:22.420
+ He specifically said that when he first lost to Deep Blue, he viewed it as a failure.
+
+1:07:22.420 --> 1:07:27.240
+ He viewed that this had been a failure of his, but later on in his career, he said he'd
+
+1:07:27.240 --> 1:07:32.240
+ come to realize that actually it was a success, it was a success for everyone, because this
+
+1:07:32.240 --> 1:07:40.080
+ marked a transformational moment for AI, and so even for Gary Kasparov, he came to realize
+
+1:07:40.080 --> 1:07:47.480
+ that that moment was pivotal and actually meant something much more than his personal
+
+1:07:47.480 --> 1:07:49.920
+ loss in that moment.
+
+1:07:49.920 --> 1:07:54.920
+ Lisa Dahl, I think, was much more cognizant of that even at the time.
+
+1:07:54.920 --> 1:08:02.080
+ So in his closing remarks to the match, he really felt very strongly that what had happened
+
+1:08:02.080 --> 1:08:06.920
+ in the AlphaGo match was not only meaningful for AI, but for humans as well, and he felt
+
+1:08:06.920 --> 1:08:12.280
+ as a go player that it had opened his horizons and meant that he could start exploring new
+
+1:08:12.280 --> 1:08:13.280
+ things.
+
+1:08:13.280 --> 1:08:17.960
+ It brought his joy back for the game of go because it had broken all of the conventions
+
+1:08:17.960 --> 1:08:23.640
+ and barriers and meant that suddenly anything was possible again.
+
+1:08:23.640 --> 1:08:29.800
+ And so I was sad to hear that he'd retired, but he's been a great world champion over
+
+1:08:29.800 --> 1:08:36.280
+ many, many years, and I think he'll be remembered for that ever more.
+
+1:08:36.280 --> 1:08:39.360
+ He'll be remembered as the last person to beat AlphaGo.
+
+1:08:39.360 --> 1:08:45.760
+ I mean, after that, we increased the power of the system, and the next version of AlphaGo
+
+1:08:45.760 --> 1:08:52.400
+ beats the other strong human players 60 games to nil.
+
+1:08:52.400 --> 1:08:58.120
+ So what a great moment for him and something to be remembered for.
+
+1:08:58.120 --> 1:09:05.440
+ It's interesting that you spent time at AAAI on a panel with Gary Kasparov.
+
+1:09:05.440 --> 1:09:12.680
+ But I mean, it's almost, I'm just curious to learn the conversations you've had with
+
+1:09:12.680 --> 1:09:17.480
+ Gary because he's also now, he's written a book about artificial intelligence.
+
+1:09:17.480 --> 1:09:18.960
+ He's thinking about AI.
+
+1:09:18.960 --> 1:09:24.080
+ He has kind of a view of it, and he talks about AlphaGo a lot.
+
+1:09:24.080 --> 1:09:30.560
+ What's your sense, arguably, I'm not just being Russian, but I think Gary is the greatest
+
+1:09:30.560 --> 1:09:32.880
+ chess player of all time.
+
+1:09:32.880 --> 1:09:36.840
+ Probably one of the greatest game players of all time.
+
+1:09:36.840 --> 1:09:44.440
+ And you sort of at the center of creating a system that beats one of the greatest players
+
+1:09:44.440 --> 1:09:45.440
+ of all time.
+
+1:09:45.440 --> 1:09:46.720
+ So what is that conversation like?
+
+1:09:46.720 --> 1:09:53.760
+ Is there anything, any interesting digs, any bets, any funny things, any profound things?
+
+1:09:53.760 --> 1:10:02.560
+ So Gary Kasparov has an incredible respect for what we did with AlphaGo, and it's an
+
+1:10:02.560 --> 1:10:10.120
+ amazing tribute coming from him, of all people, that he really appreciates and respects what
+
+1:10:10.120 --> 1:10:11.880
+ we've done.
+
+1:10:11.880 --> 1:10:17.880
+ And I think he feels that the progress which has happened in computer chess, which later
+
+1:10:17.880 --> 1:10:24.920
+ after AlphaGo, we built the AlphaZero system, which defeated the world's strongest chess
+
+1:10:24.920 --> 1:10:26.920
+ programs.
+
+1:10:26.920 --> 1:10:33.160
+ And to Gary Kasparov, that moment in computer chess was more profound than deep blue.
+
+1:10:33.160 --> 1:10:37.680
+ And the reason he believes it mattered more was because it was done with learning and
+
+1:10:37.680 --> 1:10:42.720
+ a system which was able to discover for itself new principles, new ideas, which were able
+
+1:10:42.720 --> 1:10:50.320
+ to play the game in a way which he hadn't always known about, or anyone.
+
+1:10:50.320 --> 1:10:55.240
+ And in fact, one of the things I discovered at this panel was that the current world champion
+
+1:10:55.240 --> 1:11:02.400
+ Magnus Carlsen apparently recently commented on his improvement in performance, and he
+
+1:11:02.400 --> 1:11:06.280
+ attributes it to AlphaZero, that he's been studying the games of AlphaZero, he's changed
+
+1:11:06.280 --> 1:11:08.920
+ his style to play more like AlphaZero.
+
+1:11:08.920 --> 1:11:14.800
+ And it's led to him actually increasing his rating to a new peak.
+
+1:11:14.800 --> 1:11:20.960
+ Yeah, I guess to me, just like to Gary, the inspiring thing is that, and just like you
+
+1:11:20.960 --> 1:11:26.920
+ said with reinforcement learning, reinforcement learning and deep learning, machine learning
+
+1:11:26.920 --> 1:11:30.000
+ feels like what intelligence is.
+
+1:11:30.000 --> 1:11:38.240
+ And you could attribute it to sort of a bitter viewpoint from Gary's perspective, from us
+
+1:11:38.240 --> 1:11:44.600
+ humans perspective, saying that pure search that IBM Deep Blue was doing is not really
+
+1:11:44.600 --> 1:11:47.840
+ intelligence, but somehow it didn't feel like it.
+
+1:11:47.840 --> 1:11:49.040
+ And so that's the magical.
+
+1:11:49.040 --> 1:11:54.720
+ I'm not sure what it is about learning that feels like intelligence, but it does.
+
+1:11:54.720 --> 1:12:00.040
+ So I think we should not demean the achievements of what was done in previous areas of AI.
+
+1:12:00.040 --> 1:12:06.800
+ I think that Deep Blue was an amazing achievement in itself, and that heuristic search of the
+
+1:12:06.800 --> 1:12:11.480
+ kind that was used by Deep Blue had some powerful ideas that were in there.
+
+1:12:11.480 --> 1:12:13.320
+ But it also missed some things.
+
+1:12:13.320 --> 1:12:18.720
+ So the fact that the evaluation function, the way that the chess position was understood,
+
+1:12:18.720 --> 1:12:26.640
+ was created by humans and not by the machine is a limitation, which means that there's
+
+1:12:26.640 --> 1:12:29.000
+ a ceiling on how well it can do.
+
+1:12:29.000 --> 1:12:33.600
+ But maybe more importantly, it means that the same idea cannot be applied in other domains
+
+1:12:33.600 --> 1:12:39.400
+ where we don't have access to the kind of human grandmasters and that ability to kind
+
+1:12:39.400 --> 1:12:42.760
+ of encode exactly their knowledge into an evaluation function.
+
+1:12:42.760 --> 1:12:48.200
+ And the reality is that the story of AI is that most domains turn out to be of the second
+
+1:12:48.200 --> 1:12:54.120
+ type where knowledge is messy, it's hard to extract from experts or it isn't even available.
+
+1:12:54.120 --> 1:12:59.920
+ And so we need to solve problems in a different way.
+
+1:12:59.920 --> 1:13:06.760
+ And I think AlphaGo is a step towards solving things in a way which puts learning as a first
+
+1:13:06.760 --> 1:13:14.080
+ class citizen and says, systems need to understand for themselves how to understand the world,
+
+1:13:14.080 --> 1:13:21.360
+ how to judge the value of any action that they might take within that world in any state
+
+1:13:21.360 --> 1:13:23.080
+ they might find themselves in.
+
+1:13:23.080 --> 1:13:28.920
+ And in order to do that, we make progress towards AI.
+
+1:13:28.920 --> 1:13:29.920
+ Yeah.
+
+1:13:29.920 --> 1:13:35.040
+ So one of the nice things about this, about taking a learning approach to the game of
+
+1:13:35.040 --> 1:13:39.680
+ go or game playing is that the things you learn, the things you figure out are actually
+
+1:13:39.680 --> 1:13:44.320
+ going to be applicable to other problems that are real world problems.
+
+1:13:44.320 --> 1:13:49.280
+ That's ultimately, I mean, there's two really interesting things about AlphaGo.
+
+1:13:49.280 --> 1:13:54.720
+ One is the science of it, just the science of learning, the science of intelligence.
+
+1:13:54.720 --> 1:13:59.680
+ And then the other is, while you're actually learning to figuring out how to build systems
+
+1:13:59.680 --> 1:14:05.960
+ that would be potentially applicable in other applications, medical, autonomous vehicles,
+
+1:14:05.960 --> 1:14:06.960
+ robotics.
+
+1:14:06.960 --> 1:14:10.800
+ And it's just open the door to all kinds of applications.
+
+1:14:10.800 --> 1:14:18.080
+ So the next incredible step, really the profound step is probably AlphaGo Zero.
+
+1:14:18.080 --> 1:14:23.720
+ I mean, it's arguable I kind of see them all as the same place, but really, and perhaps
+
+1:14:23.720 --> 1:14:28.040
+ you were already thinking that AlphaGo Zero is the natural, it was always going to be
+
+1:14:28.040 --> 1:14:34.480
+ the next step, but it's removing the reliance on human expert games for pre training as
+
+1:14:34.480 --> 1:14:35.600
+ you mentioned.
+
+1:14:35.600 --> 1:14:43.480
+ So how big of an intellectual leap was this, that self play could achieve super human level
+
+1:14:43.480 --> 1:14:45.800
+ performance in its own?
+
+1:14:45.800 --> 1:14:51.840
+ And maybe could you also say what is self play, we kind of mentioned it a few times.
+
+1:14:51.840 --> 1:14:55.440
+ So let me start with self play.
+
+1:14:55.440 --> 1:15:02.240
+ So the idea of self play is something which is really about systems learning for themselves,
+
+1:15:02.240 --> 1:15:05.840
+ but in the situation where there's more than one agent.
+
+1:15:05.840 --> 1:15:11.040
+ And so if you're in a game, and the game is played between two players, then self play
+
+1:15:11.040 --> 1:15:17.840
+ is really about understanding that game just by playing games against yourself rather than
+
+1:15:17.840 --> 1:15:20.120
+ against any actual real opponent.
+
+1:15:20.120 --> 1:15:27.520
+ And so it's a way to kind of discover strategies without having to actually need to go out and
+
+1:15:27.520 --> 1:15:36.080
+ play against any particular human player, for example.
+
+1:15:36.080 --> 1:15:45.240
+ The main idea of Alpha Zero was really to try and step back from any of the knowledge
+
+1:15:45.240 --> 1:15:52.040
+ that we put into the system and ask the question, is it possible to come up with a single elegant
+
+1:15:52.040 --> 1:15:58.000
+ principle by which a system can learn for itself all of the knowledge which it requires
+
+1:15:58.000 --> 1:16:01.440
+ to play a game such as Go.
+
+1:16:01.440 --> 1:16:08.760
+ Importantly by taking knowledge out, you not only make the system less brittle in the sense
+
+1:16:08.760 --> 1:16:12.840
+ that perhaps the knowledge you were putting in was just getting in the way and maybe stopping
+
+1:16:12.840 --> 1:16:17.920
+ the system learning for itself, but also you make it more general.
+
+1:16:17.920 --> 1:16:23.640
+ The more knowledge you put in, the harder it is for a system to actually be placed,
+
+1:16:23.640 --> 1:16:28.320
+ taken out of the system in which it's kind of been designed, and placed in some other
+
+1:16:28.320 --> 1:16:31.440
+ system that maybe would need a completely different knowledge base to understand and
+
+1:16:31.440 --> 1:16:32.920
+ perform well.
+
+1:16:32.920 --> 1:16:38.040
+ And so the real goal here is to strip out all of the knowledge that we put in to the
+
+1:16:38.040 --> 1:16:41.960
+ point that we can just plug it into something totally different.
+
+1:16:41.960 --> 1:16:47.360
+ And that to me is really the promise of AI is that we can have systems such as that,
+
+1:16:47.360 --> 1:16:53.760
+ which no matter what the goal is, no matter what goal we set to the system, we can come
+
+1:16:53.760 --> 1:16:58.640
+ up with, we have an algorithm which can be placed into that world, into that environment
+
+1:16:58.640 --> 1:17:02.000
+ and can succeed in achieving that goal.
+
+1:17:02.000 --> 1:17:08.120
+ And then that to me is almost the essence of intelligence if we can achieve that.
+
+1:17:08.120 --> 1:17:13.600
+ And so AlphaZero is a step towards that, and it's a step that was taken in the context
+
+1:17:13.600 --> 1:17:18.840
+ of two player perfect information games like Go and chess.
+
+1:17:18.840 --> 1:17:21.560
+ We also applied it to Japanese chess.
+
+1:17:21.560 --> 1:17:25.560
+ So just to clarify, the first step was AlphaGo Zero.
+
+1:17:25.560 --> 1:17:31.520
+ The first step was to try and take all of the knowledge out of AlphaGo in such a way
+
+1:17:31.520 --> 1:17:39.680
+ that it could play in a fully self discovered way, purely from self play.
+
+1:17:39.680 --> 1:17:45.080
+ And to me, the motivation for that was always that we could then plug it into other domains,
+
+1:17:45.080 --> 1:17:48.080
+ but we saved that until later.
+
+1:17:48.080 --> 1:17:55.280
+ Well, in fact, I mean, just for fun, I could tell you exactly the moment where the idea
+
+1:17:55.280 --> 1:18:00.280
+ for AlphaZero occurred to me, because I think there's maybe a lesson there for researchers
+
+1:18:00.280 --> 1:18:05.840
+ who are kind of too deeply embedded in their research and working 24 sevens, try and come
+
+1:18:05.840 --> 1:18:14.440
+ up with the next idea, which is, it actually occurred to me on honeymoon, and I was at
+
+1:18:14.440 --> 1:18:23.600
+ my most fully relaxed state, really enjoying myself, and just being this, like, the algorithm
+
+1:18:23.600 --> 1:18:31.240
+ for AlphaZero just appeared, and in its full form, and this was actually before we played
+
+1:18:31.240 --> 1:18:39.360
+ against Lisa Dahl, but we just didn't, I think we were so busy trying to make sure we could
+
+1:18:39.360 --> 1:18:46.280
+ beat the world champion, that it was only later that we had the opportunity to step
+
+1:18:46.280 --> 1:18:51.280
+ back and start examining that sort of deeper scientific question of whether this could
+
+1:18:51.280 --> 1:18:52.440
+ really work.
+
+1:18:52.440 --> 1:19:02.200
+ So nevertheless, so self play is probably one of the most profound ideas that represents
+
+1:19:02.200 --> 1:19:05.760
+ to me at least, artificial intelligence.
+
+1:19:05.760 --> 1:19:13.240
+ But the fact that you could use that kind of mechanism to, again, beat world class players,
+
+1:19:13.240 --> 1:19:14.920
+ that's very surprising.
+
+1:19:14.920 --> 1:19:21.380
+ So we kind of, to me, it feels like you have to train in a large number of expert games.
+
+1:19:21.380 --> 1:19:22.840
+ So was it surprising to you?
+
+1:19:22.840 --> 1:19:23.840
+ What was the intuition?
+
+1:19:23.840 --> 1:19:28.080
+ Can you sort of think, not necessarily at that time, even now, what's your intuition?
+
+1:19:28.080 --> 1:19:29.560
+ Why this thing works so well?
+
+1:19:29.560 --> 1:19:31.600
+ Why is it able to learn from scratch?
+
+1:19:31.600 --> 1:19:34.640
+ Well, let me first say why we tried it.
+
+1:19:34.640 --> 1:19:40.160
+ So we tried it both because I feel that it was the deeper scientific question to be asking,
+
+1:19:40.160 --> 1:19:42.200
+ to make progress towards AI.
+
+1:19:42.200 --> 1:19:47.520
+ And also because in general, in my research, I don't like to do research on questions for
+
+1:19:47.520 --> 1:19:51.080
+ which we already know the likely outcome.
+
+1:19:51.080 --> 1:19:57.720
+ I don't see much value in running an experiment where you're 95% confident that you will succeed.
+
+1:19:57.720 --> 1:20:03.840
+ And so we could have tried maybe to take AlphaGo and do something which we knew for sure it
+
+1:20:03.840 --> 1:20:04.840
+ would succeed on.
+
+1:20:04.840 --> 1:20:09.640
+ But much more interesting to me was to try it on the things which we weren't sure about.
+
+1:20:09.640 --> 1:20:15.160
+ And one of the big questions on our minds back then was, could you really do this with
+
+1:20:15.160 --> 1:20:16.280
+ self play alone?
+
+1:20:16.280 --> 1:20:17.800
+ How far could that go?
+
+1:20:17.800 --> 1:20:19.720
+ Would it be as strong?
+
+1:20:19.720 --> 1:20:21.960
+ And honestly, we weren't sure.
+
+1:20:21.960 --> 1:20:25.440
+ It was 50, 50, I think.
+
+1:20:25.440 --> 1:20:30.800
+ If you'd asked me, I wasn't confident that it could reach the same level as these systems,
+
+1:20:30.800 --> 1:20:33.960
+ but it felt like the right question to ask.
+
+1:20:33.960 --> 1:20:41.640
+ And even if it had not achieved the same level, I felt that that was an important direction
+
+1:20:41.640 --> 1:20:43.040
+ to be studying.
+
+1:20:43.040 --> 1:20:52.280
+ And so then, lo and behold, it actually ended up outperforming the previous version of AlphaGo
+
+1:20:52.280 --> 1:20:56.080
+ and indeed was able to beat it by 100 games to zero.
+
+1:20:56.080 --> 1:20:59.760
+ So what's the intuition as to why?
+
+1:20:59.760 --> 1:21:08.640
+ I think the intuition to me is clear that whenever you have errors in a system, as we
+
+1:21:08.640 --> 1:21:11.760
+ did in AlphaGo, AlphaGo suffered from these delusions.
+
+1:21:11.760 --> 1:21:15.280
+ Occasionally, it would misunderstand what was going on in a position and misevaluate
+
+1:21:15.280 --> 1:21:16.280
+ it.
+
+1:21:16.280 --> 1:21:20.000
+ How can you remove all of these errors?
+
+1:21:20.000 --> 1:21:21.960
+ Errors arise from many sources.
+
+1:21:21.960 --> 1:21:27.120
+ For us, they were arising both from starting from the human data, but also from the nature
+
+1:21:27.120 --> 1:21:29.960
+ of the search and the nature of the algorithm itself.
+
+1:21:29.960 --> 1:21:36.280
+ But the only way to address them in any complex system is to give the system the ability to
+
+1:21:36.280 --> 1:21:38.120
+ correct its own errors.
+
+1:21:38.120 --> 1:21:39.560
+ It must be able to correct them.
+
+1:21:39.560 --> 1:21:44.800
+ It must be able to learn for itself when it's doing something wrong and correct for it.
+
+1:21:44.800 --> 1:21:50.600
+ And so it seemed to me that the way to correct delusions was indeed to have more iterations
+
+1:21:50.600 --> 1:21:54.720
+ of reinforcement learning, that no matter where you start, you should be able to correct
+
+1:21:54.720 --> 1:22:00.160
+ those errors until it gets to play that out and understand, oh, well, I thought that I
+
+1:22:00.160 --> 1:22:03.480
+ was going to win in this situation, but then I ended up losing.
+
+1:22:03.480 --> 1:22:07.320
+ That suggests that I was misevaluating something, there's a hole in my knowledge and now the
+
+1:22:07.320 --> 1:22:11.600
+ system can correct for itself and understand how to do better.
+
+1:22:11.600 --> 1:22:16.480
+ Now if you take that same idea and trace it back all the way to the beginning, it should
+
+1:22:16.480 --> 1:22:22.080
+ be able to take you from no knowledge, from completely random starting point, all the
+
+1:22:22.080 --> 1:22:27.280
+ way to the highest levels of knowledge that you can achieve in a domain.
+
+1:22:27.280 --> 1:22:31.800
+ And the principle is the same, that if you give, if you bestow a system with the ability
+
+1:22:31.800 --> 1:22:36.400
+ to correct its own errors, then it can take you from random to something slightly better
+
+1:22:36.400 --> 1:22:41.160
+ than random because it sees the stupid things that the random is doing and it can correct
+
+1:22:41.160 --> 1:22:42.160
+ them.
+
+1:22:42.160 --> 1:22:44.920
+ And then it can take you from that slightly better system and understand, well, what's
+
+1:22:44.920 --> 1:22:45.920
+ that doing wrong?
+
+1:22:45.920 --> 1:22:53.120
+ And it takes you on to the next level and the next level and this progress can go on indefinitely.
+
+1:22:53.120 --> 1:22:59.520
+ And indeed, what would have happened if we'd carried on training AlphaGo Zero for longer?
+
+1:22:59.520 --> 1:23:04.960
+ We saw no sign of it slowing down its improvements, or at least it was certainly carrying on to
+
+1:23:04.960 --> 1:23:06.920
+ improve.
+
+1:23:06.920 --> 1:23:13.760
+ And presumably, if you had the computational resources, this could lead to better and better
+
+1:23:13.760 --> 1:23:15.840
+ systems that discover more and more.
+
+1:23:15.840 --> 1:23:21.960
+ So your intuition is fundamentally there's not a ceiling to this process.
+
+1:23:21.960 --> 1:23:27.560
+ One of the surprising things, just like you said, is the process of patching errors.
+
+1:23:27.560 --> 1:23:33.760
+ It's intuitively makes sense that reinforcement learning should be part of that process.
+
+1:23:33.760 --> 1:23:40.120
+ But what is surprising is in the process of patching your own lack of knowledge, you don't
+
+1:23:40.120 --> 1:23:42.440
+ open up other patches.
+
+1:23:42.440 --> 1:23:47.880
+ You keep sort of like there's a monotonic decrease of your weaknesses.
+
+1:23:47.880 --> 1:23:50.120
+ Well, let me back this up.
+
+1:23:50.120 --> 1:23:53.000
+ I think science always should make falsifiable hypotheses.
+
+1:23:53.000 --> 1:23:54.000
+ Yes.
+
+1:23:54.000 --> 1:23:59.240
+ So let me back up this claim with a falsifiable hypothesis, which is that if someone was to,
+
+1:23:59.240 --> 1:24:06.840
+ in the future, take AlphaZero as an algorithm and run it on with greater computational
+
+1:24:06.840 --> 1:24:12.880
+ resources that we had available today, then I would predict that they would be able to
+
+1:24:12.880 --> 1:24:15.480
+ beat the previous system 100 games to zero.
+
+1:24:15.480 --> 1:24:19.640
+ And that if they were then to do the same thing a couple of years later, that that would
+
+1:24:19.640 --> 1:24:25.120
+ beat that previous system 100 games to zero, and that that process would continue indefinitely
+
+1:24:25.120 --> 1:24:28.000
+ throughout at least my human lifetime.
+
+1:24:28.000 --> 1:24:30.640
+ Probably the game of go would set the ceiling.
+
+1:24:30.640 --> 1:24:35.320
+ I mean, the game of go would set the ceiling, but the game of go has 10 to the 170 states
+
+1:24:35.320 --> 1:24:36.320
+ in it.
+
+1:24:36.320 --> 1:24:43.880
+ So the ceiling is unreachable by any computational device that can be built out of the 10 to
+
+1:24:43.880 --> 1:24:46.720
+ the 80 atoms in the universe.
+
+1:24:46.720 --> 1:24:52.360
+ You asked a really good question, which is, do you not open up other errors when you correct
+
+1:24:52.360 --> 1:24:53.800
+ your previous ones?
+
+1:24:53.800 --> 1:24:56.320
+ And the answer is yes, you do.
+
+1:24:56.320 --> 1:25:03.520
+ And so it's a remarkable fact about this class of two player game and also true of single
+
+1:25:03.520 --> 1:25:13.640
+ agent games that essentially progress will always lead you to, if you have sufficient
+
+1:25:13.640 --> 1:25:17.920
+ representational resource like imagine you had, could represent every state in a big
+
+1:25:17.920 --> 1:25:25.040
+ table of the game, then we know for sure that a progress of self improvement will lead all
+
+1:25:25.040 --> 1:25:29.960
+ the way in the single agent case to the optimal possible behavior, and in the two player case
+
+1:25:29.960 --> 1:25:35.760
+ to the minimax optimal behavior that is the best way that I can play knowing that you're
+
+1:25:35.760 --> 1:25:38.120
+ playing perfectly against me.
+
+1:25:38.120 --> 1:25:45.080
+ And so for those cases, we know that even if you do open up some new error that in some
+
+1:25:45.080 --> 1:25:50.600
+ sense you've made progress, you're progressing towards the best that can be done.
+
+1:25:50.600 --> 1:25:57.960
+ So AlphaGo was initially trained on expert games with some self play AlphaGo zero removed
+
+1:25:57.960 --> 1:26:00.520
+ the need to be trained on expert games.
+
+1:26:00.520 --> 1:26:07.880
+ And then another incredible step for me because I just love chess is to generalize that further
+
+1:26:07.880 --> 1:26:14.880
+ to be in Alpha zero to be able to play the game of go beating AlphaGo zero and AlphaGo,
+
+1:26:14.880 --> 1:26:19.320
+ and then also being able to play the game of chess and others.
+
+1:26:19.320 --> 1:26:21.200
+ So what was that step like?
+
+1:26:21.200 --> 1:26:26.640
+ What's the interesting aspects there that required to make that happen?
+
+1:26:26.640 --> 1:26:33.240
+ I think the remarkable observation which we saw with Alpha zero was that actually without
+
+1:26:33.240 --> 1:26:39.800
+ modifying the algorithm at all, it was able to play and crack some of AI's greatest previous
+
+1:26:39.800 --> 1:26:41.400
+ challenges.
+
+1:26:41.400 --> 1:26:45.080
+ In particular, we dropped it into the game of chess.
+
+1:26:45.080 --> 1:26:51.800
+ And unlike the previous systems like Deep Blue, which had been worked on for years and years,
+
+1:26:51.800 --> 1:26:57.520
+ we were able to beat the world's strongest computer chess program convincingly using
+
+1:26:57.520 --> 1:27:05.080
+ a system that was fully discovered by its own from scratch with its own principles.
+
+1:27:05.080 --> 1:27:10.960
+ And in fact, one of the nice things that we found was that in fact, we also achieved the
+
+1:27:10.960 --> 1:27:15.600
+ same result in Japanese chess, a variant of chess where you get to capture pieces and then
+
+1:27:15.600 --> 1:27:19.120
+ place them back down on your own side as an extra piece.
+
+1:27:19.120 --> 1:27:22.040
+ So a much more complicated variant of chess.
+
+1:27:22.040 --> 1:27:26.840
+ And we also beat the world's strongest programs and reached superhuman performance in that
+
+1:27:26.840 --> 1:27:28.440
+ game too.
+
+1:27:28.440 --> 1:27:34.760
+ And it was the very first time that we'd ever run the system on that particular game was
+
+1:27:34.760 --> 1:27:38.880
+ the version that we published in the paper on Alpha zero.
+
+1:27:38.880 --> 1:27:42.880
+ It just worked out of the box, literally no touching it, we didn't have to do anything
+
+1:27:42.880 --> 1:27:48.040
+ and there it was, superhuman performance, no tweaking, no twiddling.
+
+1:27:48.040 --> 1:27:52.080
+ And so I think there's something beautiful about that principle that you can take an
+
+1:27:52.080 --> 1:27:57.880
+ algorithm and without twiddling anything, it just works.
+
+1:27:57.880 --> 1:28:03.040
+ Now to go beyond Alpha zero, what's required?
+
+1:28:03.040 --> 1:28:05.640
+ Alpha zero is just a step.
+
+1:28:05.640 --> 1:28:10.360
+ And there's a long way to go beyond that to really crack the deep problems of AI.
+
+1:28:10.360 --> 1:28:16.360
+ But one of the important steps is to acknowledge that the world is a really messy place.
+
+1:28:16.360 --> 1:28:22.560
+ It's this rich, complex, beautiful, but messy environment that we live in and no one gives
+
+1:28:22.560 --> 1:28:23.560
+ us the rules.
+
+1:28:23.560 --> 1:28:28.440
+ Like no one knows the rules of the world, at least maybe we understand that it operates
+
+1:28:28.440 --> 1:28:33.960
+ according to Newtonian or quantum mechanics at the micro level or according to relativity
+
+1:28:33.960 --> 1:28:39.280
+ at the macro level, but that's not a model that's useful for us as people to operate
+
+1:28:39.280 --> 1:28:40.520
+ in it.
+
+1:28:40.520 --> 1:28:45.240
+ Somehow the agent needs to understand the world for itself in a way where no one tells
+
+1:28:45.240 --> 1:28:51.080
+ it the rules of the game and yet it can still figure out what to do in that world, deal
+
+1:28:51.080 --> 1:28:55.920
+ with this stream of observations coming in, rich sensory input coming in, actions going
+
+1:28:55.920 --> 1:29:01.720
+ out in a way that allows it to reason in the way that Alpha zero can reason in the way
+
+1:29:01.720 --> 1:29:07.320
+ that these go and chess playing programs can reason, but in a way that allows it to take
+
+1:29:07.320 --> 1:29:11.600
+ actions in that messy world to achieve its goals.
+
+1:29:11.600 --> 1:29:18.160
+ And so this led us to the most recent step in the story of AlphaGo, which was a system
+
+1:29:18.160 --> 1:29:24.240
+ called Mu Zero, and Mu Zero is a system which learns for itself even when the rules are
+
+1:29:24.240 --> 1:29:25.520
+ not given to it.
+
+1:29:25.520 --> 1:29:29.800
+ It actually can be dropped into a system with messy perceptual inputs.
+
+1:29:29.800 --> 1:29:36.720
+ We actually tried it in some Atari games, the canonical domains of Atari that have
+
+1:29:36.720 --> 1:29:43.280
+ been used for reinforcement learning, and this system learned to build a model of these
+
+1:29:43.280 --> 1:29:51.520
+ Atari games that was sufficiently rich and useful enough for it to be able to plan successfully.
+
+1:29:51.520 --> 1:29:56.800
+ And in fact, that system not only went on to beat the state of the art in Atari, but
+
+1:29:56.800 --> 1:30:03.000
+ the same system without modification was able to reach the same level of superhuman performance
+
+1:30:03.000 --> 1:30:08.280
+ in Go, Chess, and Shogi that we'd seen in Alpha Zero, showing that even without the
+
+1:30:08.280 --> 1:30:12.440
+ rules, the system can learn for itself just by trial and error, just by playing this game
+
+1:30:12.440 --> 1:30:16.880
+ of Go, and no one tells you what the rules are, but you just get to the end and someone
+
+1:30:16.880 --> 1:30:22.080
+ says, you know, win or loss, or you play this game of chess and someone says win or loss,
+
+1:30:22.080 --> 1:30:27.160
+ or you play a game of breakout in Atari and someone just tells you, you know, your score
+
+1:30:27.160 --> 1:30:28.160
+ at the end.
+
+1:30:28.160 --> 1:30:32.720
+ And the system for itself figures out essentially the rules of the system, the dynamics of the
+
+1:30:32.720 --> 1:30:40.720
+ world, how the world works, and not in any explicit way, but just implicitly enough understanding
+
+1:30:40.720 --> 1:30:45.600
+ for it to be able to plan in that system in order to achieve its goals.
+
+1:30:45.600 --> 1:30:49.920
+ And that's the fundamental process that you have to go through when you're facing in
+
+1:30:49.920 --> 1:30:54.040
+ any uncertain kind of environment that you would in the real world is figuring out the
+
+1:30:54.040 --> 1:30:56.720
+ sort of the rules, the basic rules of the game.
+
+1:30:56.720 --> 1:30:57.720
+ That's right.
+
+1:30:57.720 --> 1:31:06.000
+ So that allows it to be applicable to basically any domain that could be digitized in the
+
+1:31:06.000 --> 1:31:11.680
+ way that it needs to in order to be consumable, sort of in order for the reinforcement learning
+
+1:31:11.680 --> 1:31:15.640
+ framework to be able to sense the environment, to be able to act in the environment, so on.
+
+1:31:15.640 --> 1:31:21.280
+ The full reinforcement learning problem needs to deal with worlds that are unknown and complex
+
+1:31:21.280 --> 1:31:24.960
+ and the agent needs to learn for itself how to deal with that.
+
+1:31:24.960 --> 1:31:29.880
+ And so Musero is a step, a further step in that direction.
+
+1:31:29.880 --> 1:31:33.960
+ One of the things that inspired the general public, and just in conversations I have with
+
+1:31:33.960 --> 1:31:39.640
+ my parents or something with my mom, that just loves what was done is kind of at least
+
+1:31:39.640 --> 1:31:45.320
+ a notion that there was some display of creativity, some new strategies, new behaviors that were
+
+1:31:45.320 --> 1:31:46.320
+ created.
+
+1:31:46.320 --> 1:31:49.000
+ That again has echoes of intelligence.
+
+1:31:49.000 --> 1:31:50.840
+ So is there something that stands out?
+
+1:31:50.840 --> 1:31:56.640
+ Do you see it the same way that there's creativity and there's some behaviors, patterns that
+
+1:31:56.640 --> 1:32:02.040
+ you saw that AlphaZero was able to display that are truly creative?
+
+1:32:02.040 --> 1:32:08.360
+ So let me start by saying that I think we should ask what creativity really means.
+
+1:32:08.360 --> 1:32:17.120
+ So to me, creativity means discovering something which wasn't known before, something unexpected,
+
+1:32:17.120 --> 1:32:19.800
+ something outside of our norms.
+
+1:32:19.800 --> 1:32:27.920
+ And so in that sense, the process of reinforcement learning or the self play approach that was
+
+1:32:27.920 --> 1:32:32.240
+ used by AlphaZero is the essence of creativity.
+
+1:32:32.240 --> 1:32:37.280
+ It's really saying at every stage, you're playing according to your current norms and
+
+1:32:37.280 --> 1:32:39.040
+ you try something.
+
+1:32:39.040 --> 1:32:45.040
+ And if it works out, you say, hey, here's something great, I'm going to start using that.
+
+1:32:45.040 --> 1:32:49.920
+ And then that process, it's like a micro discovery that happens millions and millions of times
+
+1:32:49.920 --> 1:32:55.000
+ over the course of the algorithm's life, where it just discovers some new idea, oh, this
+
+1:32:55.000 --> 1:32:58.400
+ pattern, this pattern's working really well for me, I'm going to start using that.
+
+1:32:58.400 --> 1:33:03.080
+ Oh, now, oh, here's this other thing I can do, I can start to connect these stones together
+
+1:33:03.080 --> 1:33:10.520
+ in this way, or I can start to sacrifice stones or give up on pieces or play shoulder hits
+
+1:33:10.520 --> 1:33:12.460
+ on the fifth line or whatever it is.
+
+1:33:12.460 --> 1:33:16.160
+ The system's discovering things like this for itself continually, repeatedly all the
+
+1:33:16.160 --> 1:33:17.160
+ time.
+
+1:33:17.160 --> 1:33:22.200
+ And so it should come as no surprise to us then, when if you leave these systems going,
+
+1:33:22.200 --> 1:33:29.520
+ that they discover things that are not known to humans, that to the human norms are considered
+
+1:33:29.520 --> 1:33:30.720
+ creative.
+
+1:33:30.720 --> 1:33:37.560
+ And we've seen this several times, in fact, in AlphaGo Zero, we saw this beautiful timeline
+
+1:33:37.560 --> 1:33:44.520
+ of discovery where what we saw was that there are these opening patterns that humans play
+
+1:33:44.520 --> 1:33:48.800
+ called joseki, these are like the patterns that humans learn to play in the corners and
+
+1:33:48.800 --> 1:33:53.360
+ they've been developed and refined over literally thousands of years in the game of Go.
+
+1:33:53.360 --> 1:34:00.000
+ And what we saw was in the course of the training AlphaGo Zero, over the course of the 40 days
+
+1:34:00.000 --> 1:34:05.920
+ that we trained this system, it starts to discover exactly these patterns that human
+
+1:34:05.920 --> 1:34:07.200
+ players play.
+
+1:34:07.200 --> 1:34:12.760
+ And over time, we found that all of the joseki that humans played were discovered by the
+
+1:34:12.760 --> 1:34:19.720
+ system through this process of self play and this sort of essential notion of creativity.
+
+1:34:19.720 --> 1:34:24.320
+ But what was really interesting was that over time, it then starts to discard some of these
+
+1:34:24.320 --> 1:34:27.880
+ in favor of its own joseki that humans didn't know about.
+
+1:34:27.880 --> 1:34:33.400
+ And it starts to say, oh, well, you thought that the Knights move pincer joseki was a great
+
+1:34:33.400 --> 1:34:35.200
+ idea.
+
+1:34:35.200 --> 1:34:38.920
+ But here's something different you can do there, which makes some new variation that
+
+1:34:38.920 --> 1:34:40.520
+ the humans didn't know about.
+
+1:34:40.520 --> 1:34:45.600
+ And actually now the human Go players study the joseki that AlphaGo played and they become
+
+1:34:45.600 --> 1:34:51.440
+ the new norms that are used in today's top level Go competitions.
+
+1:34:51.440 --> 1:34:52.800
+ That never gets old.
+
+1:34:52.800 --> 1:34:59.160
+ And just the first to me, maybe just makes me feel good as a human being that a self
+
+1:34:59.160 --> 1:35:04.920
+ play mechanism that knows nothing about us humans discovers patterns that we humans do.
+
+1:35:04.920 --> 1:35:10.640
+ It says like an affirmation that we're doing okay as humans.
+
+1:35:10.640 --> 1:35:15.960
+ In this domain and other domains, we figured out it's like the Churchill quote about democracy.
+
+1:35:15.960 --> 1:35:20.440
+ It's the, you know, it sucks, but it's the best one we've tried.
+
+1:35:20.440 --> 1:35:27.160
+ So in general, it's taking a step outside of Go and you have like a million accomplishment
+
+1:35:27.160 --> 1:35:33.120
+ that I have no time to talk about with AlphaStar and so on and the current work.
+
+1:35:33.120 --> 1:35:39.080
+ But in general, this self play mechanism that you've inspired the world with by beating
+
+1:35:39.080 --> 1:35:42.380
+ the world champion Go player.
+
+1:35:42.380 --> 1:35:50.400
+ Do you see that as DC being applied in other domains, do you have sort of dreams and hope
+
+1:35:50.400 --> 1:35:56.600
+ that it's applied in both the simulated environments and the constrained environments of games constrained?
+
+1:35:56.600 --> 1:36:00.760
+ I mean, AlphaStar really demonstrates that you can remove a lot of the constraints, but
+
+1:36:00.760 --> 1:36:04.160
+ nevertheless, it's an individual simulated environment.
+
+1:36:04.160 --> 1:36:09.040
+ Do you have a hope or dream that it starts being applied in the robotics environment
+
+1:36:09.040 --> 1:36:15.280
+ and maybe even in domains that are safety critical and so on and have, you know, have
+
+1:36:15.280 --> 1:36:19.000
+ a real impact in the real world like autonomous vehicles, for example, which seems like a very
+
+1:36:19.000 --> 1:36:21.280
+ far out dream at this point.
+
+1:36:21.280 --> 1:36:28.280
+ So I absolutely do hope and imagine that we will get to the point where ideas just like
+
+1:36:28.280 --> 1:36:30.600
+ these are used in all kinds of different domains.
+
+1:36:30.600 --> 1:36:34.980
+ In fact, one of the most satisfying things as a researcher is when you start to see other
+
+1:36:34.980 --> 1:36:39.200
+ people use your algorithms in unexpected ways.
+
+1:36:39.200 --> 1:36:43.080
+ So in the last couple of years, there have been, you know, a couple of nature papers
+
+1:36:43.080 --> 1:36:51.840
+ where different teams unbeknownst to us took AlphaZero and applied exactly those same algorithms
+
+1:36:51.840 --> 1:36:57.640
+ and ideas to real world problems of huge meaning to society.
+
+1:36:57.640 --> 1:37:02.040
+ So one of them was the problem of chemical synthesis and they were able to beat the state
+
+1:37:02.040 --> 1:37:12.040
+ of the art in finding pathways of how to actually synthesize chemicals, retrochemical synthesis.
+
+1:37:12.040 --> 1:37:17.920
+ And the second paper actually just came out a couple of weeks ago in Nature showed that
+
+1:37:17.920 --> 1:37:22.760
+ in quantum computation, you know, one of the big questions is how to understand the
+
+1:37:22.760 --> 1:37:29.840
+ nature of the function in quantum computation and a system based on AlphaZero beat the state
+
+1:37:29.840 --> 1:37:33.000
+ of the art by quite some distance there again.
+
+1:37:33.000 --> 1:37:34.080
+ So these are just examples.
+
+1:37:34.080 --> 1:37:38.800
+ And I think, you know, the lesson which we've seen elsewhere in machine learning time and
+
+1:37:38.800 --> 1:37:44.200
+ time again is that if you make something general, it will be used in all kinds of ways.
+
+1:37:44.200 --> 1:37:49.680
+ You know, you provide a really powerful tool to society and those tools can be used in
+
+1:37:49.680 --> 1:37:51.800
+ amazing ways.
+
+1:37:51.800 --> 1:37:56.720
+ And so I think we're just at the beginning and for sure, I hope that we see all kinds
+
+1:37:56.720 --> 1:37:59.000
+ of outcomes.
+
+1:37:59.000 --> 1:38:06.080
+ So the other side of the question of reinforcement learning framework is, you know, usually want
+
+1:38:06.080 --> 1:38:11.440
+ to specify a reward function and an objective function.
+
+1:38:11.440 --> 1:38:17.080
+ What do you think about sort of ideas of intrinsic rewards of when we're not really sure about,
+
+1:38:17.080 --> 1:38:24.440
+ you know, if we take, you know, human beings as existence proof that we don't seem to
+
+1:38:24.440 --> 1:38:27.960
+ be operating according to a single reward.
+
+1:38:27.960 --> 1:38:34.640
+ Do you think that there's interesting ideas for when you don't know how to truly specify
+
+1:38:34.640 --> 1:38:40.520
+ the reward, you know, that there's some flexibility for discovering it intrinsically or so on
+
+1:38:40.520 --> 1:38:42.820
+ in the context of reinforcement learning?
+
+1:38:42.820 --> 1:38:46.280
+ So I think, you know, when we think about intelligence, it's really important to be
+
+1:38:46.280 --> 1:38:48.480
+ clear about the problem of intelligence.
+
+1:38:48.480 --> 1:38:52.720
+ And I think it's clearest to understand that problem in terms of some ultimate goal that
+
+1:38:52.720 --> 1:38:55.520
+ we want the system to try and solve for.
+
+1:38:55.520 --> 1:39:00.360
+ And after all, if we don't understand the ultimate purpose of the system, do we really
+
+1:39:00.360 --> 1:39:04.400
+ even have a clearly defined problem that we're solving at all?
+
+1:39:04.400 --> 1:39:12.920
+ Now within that, as with your example for humans, the system may choose to create its
+
+1:39:12.920 --> 1:39:19.320
+ own motivations and sub goals that help the system to achieve its ultimate goal.
+
+1:39:19.320 --> 1:39:23.920
+ And that may indeed be a hugely important mechanism to achieve those ultimate goals.
+
+1:39:23.920 --> 1:39:28.360
+ But there is still some ultimate goal I think the system needs to be measurable and evaluated
+
+1:39:28.360 --> 1:39:29.360
+ against.
+
+1:39:29.360 --> 1:39:32.480
+ And even for humans, I mean, humans, we're incredibly flexible.
+
+1:39:32.480 --> 1:39:38.440
+ We feel that we can, you know, any goal that we're given, we feel we can master to some
+
+1:39:38.440 --> 1:39:40.320
+ degree.
+
+1:39:40.320 --> 1:39:44.120
+ But if we think of those goals really, you know, like the goal of being able to pick
+
+1:39:44.120 --> 1:39:49.800
+ up an object or the goal of being able to communicate or influence people to do things
+
+1:39:49.800 --> 1:39:57.320
+ in a particular way or whatever those goals are, really, they're sub goals really that
+
+1:39:57.320 --> 1:39:58.320
+ we set ourselves.
+
+1:39:58.320 --> 1:40:01.000
+ You know, we choose to pick up the object.
+
+1:40:01.000 --> 1:40:02.200
+ We choose to communicate.
+
+1:40:02.200 --> 1:40:05.400
+ We choose to influence someone else.
+
+1:40:05.400 --> 1:40:10.520
+ And we choose those because we think it will lead us to something, you know, in later on.
+
+1:40:10.520 --> 1:40:15.160
+ We think that that's helpful to us to achieve some ultimate goal.
+
+1:40:15.160 --> 1:40:20.160
+ Now I don't want to speculate whether or not humans as a system necessarily have a singular
+
+1:40:20.160 --> 1:40:23.560
+ overall goal of survival or whatever it is.
+
+1:40:23.560 --> 1:40:27.840
+ But I think the principle for understanding and implementing intelligence is has to be
+
+1:40:27.840 --> 1:40:32.120
+ that if we're trying to understand intelligence or implement our own, there has to be a well
+
+1:40:32.120 --> 1:40:33.120
+ defined problem.
+
+1:40:33.120 --> 1:40:39.880
+ Otherwise, if it's not, I think it's like an admission of defeat that for that to be
+
+1:40:39.880 --> 1:40:44.080
+ hoped for understanding or implementing intelligence, we have to know what we're doing.
+
+1:40:44.080 --> 1:40:46.240
+ We have to know what we're asking the system to do.
+
+1:40:46.240 --> 1:40:49.560
+ Otherwise, if you don't have a clearly defined purpose, you're not going to get a clearly
+
+1:40:49.560 --> 1:40:52.240
+ defined answer.
+
+1:40:52.240 --> 1:41:00.720
+ The ridiculous big question that has to naturally follow is I have to pin you down on this thing
+
+1:41:00.720 --> 1:41:06.920
+ that nevertheless, one of the big silly or big real questions before humans is the meaning
+
+1:41:06.920 --> 1:41:11.320
+ of life is us trying to figure out our own reward function.
+
+1:41:11.320 --> 1:41:15.480
+ And you just kind of mentioned that if you want to build intelligence systems and you
+
+1:41:15.480 --> 1:41:19.040
+ know what you're doing, you should be at least cognizant to some degree of what the reward
+
+1:41:19.040 --> 1:41:20.360
+ function is.
+
+1:41:20.360 --> 1:41:26.360
+ So the natural question is, what do you think is the reward function of human life, the
+
+1:41:26.360 --> 1:41:32.960
+ meaning of life for us humans, the meaning of our existence?
+
+1:41:32.960 --> 1:41:39.760
+ I think I'd be speculating beyond my own expertise, but just for fun, let me do that and say
+
+1:41:39.760 --> 1:41:44.360
+ I think that there are many levels at which you can understand a system and you can understand
+
+1:41:44.360 --> 1:41:49.040
+ something as optimizing for a goal at many levels.
+
+1:41:49.040 --> 1:41:55.080
+ And so you can understand the, let's start with the universe, like does the universe
+
+1:41:55.080 --> 1:41:56.080
+ have a purpose?
+
+1:41:56.080 --> 1:42:02.240
+ It feels like it's just at one level, just following certain mechanical laws of physics
+
+1:42:02.240 --> 1:42:04.720
+ and that that's led to the development of the universe.
+
+1:42:04.720 --> 1:42:09.880
+ But at another level, you can view it as actually, there's the second law of thermodynamics
+
+1:42:09.880 --> 1:42:13.440
+ that says that this is increasing in entropy over time forever.
+
+1:42:13.440 --> 1:42:18.320
+ And now there's a view that's been developed by certain people at MIT that you can think
+
+1:42:18.320 --> 1:42:23.200
+ of this as almost like a goal of the universe, that the purpose of the universe is to maximize
+
+1:42:23.200 --> 1:42:25.000
+ entropy.
+
+1:42:25.000 --> 1:42:28.880
+ So there are multiple levels at which you can understand a system.
+
+1:42:28.880 --> 1:42:38.520
+ The next level down, you might say, well, if the goal is to maximize entropy, well,
+
+1:42:38.520 --> 1:42:40.080
+ how can that be done by a particular system?
+
+1:42:40.080 --> 1:42:45.520
+ And maybe evolution is something that the universe discovered in order to kind of dissipate
+
+1:42:45.520 --> 1:42:47.320
+ energy as efficiently as possible.
+
+1:42:47.320 --> 1:42:54.000
+ And by the way, I'm borrowing from Max Tegmark for some of these metaphors, the physicist.
+
+1:42:54.000 --> 1:43:01.720
+ But if you can think of evolution as a mechanism for dispersing energy, then evolution, you
+
+1:43:01.720 --> 1:43:07.320
+ might say, then becomes a goal, which is if evolution disperses energy by reproducing
+
+1:43:07.320 --> 1:43:10.720
+ as efficiently as possible, what's evolution then?
+
+1:43:10.720 --> 1:43:17.960
+ Well, it's now got its own goal within that, which is to actually reproduce as effectively
+
+1:43:17.960 --> 1:43:18.960
+ as possible.
+
+1:43:18.960 --> 1:43:24.280
+ And now, how does reproduction, how is that made as effective as possible?
+
+1:43:24.280 --> 1:43:30.000
+ Well, you need entities within that that can survive and reproduce as effectively as possible.
+
+1:43:30.000 --> 1:43:33.800
+ And so it's natural that in order to achieve that high level goal, those individual organisms
+
+1:43:33.800 --> 1:43:43.320
+ discover brains, intelligences, which enable them to support the goals of evolution.
+
+1:43:43.320 --> 1:43:45.560
+ And those brains, what do they do?
+
+1:43:45.560 --> 1:43:52.160
+ Well, perhaps the early brains, maybe they were controlling things at some direct level.
+
+1:43:52.160 --> 1:43:55.800
+ Maybe they were the equivalent of preprogrammed systems, which were directly controlling what
+
+1:43:55.800 --> 1:44:03.160
+ was going on and setting certain things in order to achieve these particular goals.
+
+1:44:03.160 --> 1:44:07.840
+ But that led to another level of discovery, which was learning systems, parts of the brain
+
+1:44:07.840 --> 1:44:12.360
+ which were able to learn for themselves and learn how to program themselves to achieve
+
+1:44:12.360 --> 1:44:18.720
+ any goal, and presumably there are parts of the brain where goals are set to parts of
+
+1:44:18.720 --> 1:44:24.400
+ that system and provides this very flexible notion of intelligence that we as humans presumably
+
+1:44:24.400 --> 1:44:29.080
+ have, which is the ability to kind of write the reason we feel that we can achieve any
+
+1:44:29.080 --> 1:44:30.080
+ goal.
+
+1:44:30.080 --> 1:44:34.640
+ So, it's a very long winded answer to say that, you know, I think there are many perspectives
+
+1:44:34.640 --> 1:44:38.960
+ and many levels at which intelligence can be understood.
+
+1:44:38.960 --> 1:44:42.600
+ And at each of those levels, you can take multiple perspectives, you know, you can view
+
+1:44:42.600 --> 1:44:46.640
+ the system as something which is optimizing for a goal, which is understanding it at a
+
+1:44:46.640 --> 1:44:52.320
+ level by which we can maybe implement it and understand it as AI researchers or computer
+
+1:44:52.320 --> 1:44:56.120
+ scientists, or you can understand it at the level of the mechanistic thing which is going
+
+1:44:56.120 --> 1:45:00.320
+ on, that there are these atoms bouncing around in the brain and they lead to the outcome
+
+1:45:00.320 --> 1:45:06.680
+ of that system is not in contradiction with the fact that it's also a decision making
+
+1:45:06.680 --> 1:45:10.120
+ system that's optimizing for some goal and purpose.
+
+1:45:10.120 --> 1:45:16.520
+ I've never heard the description of the meaning of life structured so beautifully in layers,
+
+1:45:16.520 --> 1:45:21.840
+ but you did miss one layer, which is the next step, which you're responsible for, which
+
+1:45:21.840 --> 1:45:28.440
+ is creating the artificial intelligence layer on top of that.
+
+1:45:28.440 --> 1:45:29.440
+ Indeed.
+
+1:45:29.440 --> 1:45:34.280
+ And I can't wait to see, well, I may not be around, but I can't wait to see what the
+
+1:45:34.280 --> 1:45:36.920
+ next layer beyond that will be.
+
+1:45:36.920 --> 1:45:41.640
+ Well, let's just take that argument and pursue it to its natural conclusion.
+
+1:45:41.640 --> 1:45:49.280
+ So the next level indeed is for how can our learning brain achieve its goals most effectively?
+
+1:45:49.280 --> 1:45:59.600
+ Well, maybe it does so by us as learning beings, building a system which is able to solve for
+
+1:45:59.600 --> 1:46:02.200
+ those goals more effectively than we can.
+
+1:46:02.200 --> 1:46:06.480
+ And so when we build a system to play the game of go, when I said that I wanted to build
+
+1:46:06.480 --> 1:46:10.600
+ a system that can play go better than I can, I've enabled myself to achieve that goal of
+
+1:46:10.600 --> 1:46:15.880
+ playing go better than I could by directly playing it and learning it myself.
+
+1:46:15.880 --> 1:46:21.240
+ And so now a new layer has been created, which is systems which are able to achieve goals
+
+1:46:21.240 --> 1:46:22.840
+ for themselves.
+
+1:46:22.840 --> 1:46:27.480
+ And ultimately, there may be layers beyond that where they set subgoals to parts of their
+
+1:46:27.480 --> 1:46:33.120
+ own system in order to achieve those and so forth.
+
+1:46:33.120 --> 1:46:40.040
+ So the story of intelligence I think is a multi layered one and a multi perspective one.
+
+1:46:40.040 --> 1:46:41.920
+ We live in an incredible universe.
+
+1:46:41.920 --> 1:46:48.040
+ David, thank you so much first of all for dreaming of using learning to solve go and
+
+1:46:48.040 --> 1:46:54.680
+ building intelligence systems and for actually making it happen and for inspiring millions
+
+1:46:54.680 --> 1:46:56.160
+ of people in the process.
+
+1:46:56.160 --> 1:46:57.160
+ It's truly an honor.
+
+1:46:57.160 --> 1:46:58.160
+ Thank you so much for talking today.
+
+1:46:58.160 --> 1:46:59.160
+ Okay.
+
+1:46:59.160 --> 1:47:00.160
+ Thank you.
+
+1:47:00.160 --> 1:47:02.440
+ Thanks for listening to this conversation with David Silver.
+
+1:47:02.440 --> 1:47:06.080
+ And thank you to our sponsors masterclass and cash app.
+
+1:47:06.080 --> 1:47:11.200
+ Please consider supporting the podcast by signing up to masterclass at masterclass.com slash
+
+1:47:11.200 --> 1:47:15.760
+ Lex and downloading cash app and using code Lex podcast.
+
+1:47:15.760 --> 1:47:20.560
+ If you enjoy this podcast, subscribe on YouTube, review it with five stars and Apple podcast,
+
+1:47:20.560 --> 1:47:25.320
+ support on Patreon or simply connect with me on Twitter at Lex Friedman.
+
+1:47:25.320 --> 1:47:28.720
+ And now let me leave you some words from David Silver.
+
+1:47:28.720 --> 1:47:33.600
+ My personal belief is that we've seen something of a turning point where we're starting to
+
+1:47:33.600 --> 1:47:39.600
+ understand that many abilities like intuition and creativity that we've previously thought
+
+1:47:39.600 --> 1:47:44.240
+ were in the domain only of the human mind are actually accessible to machine intelligence
+
+1:47:44.240 --> 1:47:45.560
+ as well.
+
+1:47:45.560 --> 1:47:49.400
+ And I think that's a really exciting moment in history.
+
+1:47:49.400 --> 1:47:55.520
+ Thank you for listening and hope to see you next time.
+

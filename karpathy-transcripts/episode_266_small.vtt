@@ -1,0 +1,4763 @@
+WEBVTT
+
+00:00.000 --> 00:03.520
+ If one site is hacked, you can just unleash all health.
+
+00:03.520 --> 00:08.960
+ We have stumbled into this new era of mutually assured digital distraction.
+
+00:08.960 --> 00:11.120
+ How far are people willing to go?
+
+00:11.120 --> 00:16.960
+ And you can capture their location, you can capture their contacts that record their
+
+00:16.960 --> 00:20.160
+ telephone calls, record their camera without them knowing about it.
+
+00:20.720 --> 00:25.920
+ Basically, you can put an invisible ankle bracelet on someone without them knowing.
+
+00:25.920 --> 00:31.600
+ You could sell that to a zero day broker for two million dollars.
+
+00:34.080 --> 00:37.200
+ The following is a conversation with Nicole Pearlroth,
+
+00:37.200 --> 00:42.400
+ cybersecurity journalist and author of This Is How They Tell Me The World Ends,
+
+00:42.400 --> 00:44.000
+ The Cyber Weapons Arm Race.
+
+00:44.800 --> 00:46.800
+ This is the Lex Friedman podcast.
+
+00:46.800 --> 00:50.240
+ To support it, please check out our sponsors in the description.
+
+00:50.240 --> 00:54.000
+ And now, dear friends, here's Nicole Pearlroth.
+
+00:54.000 --> 01:00.160
+ You've interviewed hundreds of cybersecurity hackers, activists, dissidents, computer
+
+01:00.160 --> 01:05.520
+ scientists, government officials, forensic investigators, and mercenaries.
+
+01:05.520 --> 01:08.800
+ So let's talk about cybersecurity and cyber war.
+
+01:09.360 --> 01:10.400
+ Start with the basics.
+
+01:10.400 --> 01:16.480
+ What is a zero day vulnerability and then a zero day exploit or attack?
+
+01:16.480 --> 01:27.440
+ So, at the most basic level, let's say I'm a hacker and I find a bug in your iPhone iOS
+
+01:27.440 --> 01:30.480
+ software that no one else knows about, especially Apple.
+
+01:31.040 --> 01:34.240
+ That's called a zero day because the minute it's discovered,
+
+01:34.240 --> 01:36.240
+ engineers have had zero days to fix it.
+
+01:37.600 --> 01:44.000
+ If I can study that zero day, I could potentially write a program to exploit it.
+
+01:44.000 --> 01:47.280
+ And that program would be called a zero day exploit.
+
+01:48.000 --> 01:55.360
+ And for iOS, the dream is that you craft a zero day exploit that can remotely exploit
+
+01:55.360 --> 01:58.720
+ someone else's iPhone without them ever knowing about it.
+
+01:59.120 --> 02:01.040
+ And you can capture their location.
+
+02:01.040 --> 02:07.120
+ You can capture their contacts that record their telephone calls, record their camera
+
+02:07.120 --> 02:08.320
+ without them knowing about it.
+
+02:08.800 --> 02:13.920
+ Basically, you can put an invisible ankle bracelet on someone with a
+
+02:13.920 --> 02:14.880
+ phone without them knowing.
+
+02:14.880 --> 02:19.680
+ And you can see why that capability, that zero day exploit, would have immense value
+
+02:20.400 --> 02:26.880
+ for a spy agency or a government that wants to monitor its critics or dissidents.
+
+02:27.520 --> 02:31.920
+ And so there's a very lucrative market now for zero day exploits.
+
+02:31.920 --> 02:33.280
+ So you said a few things there.
+
+02:33.280 --> 02:34.720
+ One is iOS.
+
+02:34.720 --> 02:36.080
+ Why iOS?
+
+02:36.080 --> 02:37.520
+ Which operating system?
+
+02:37.520 --> 02:41.600
+ Which one is the sexier thing to try to get to or the most impactful thing?
+
+02:41.600 --> 02:47.520
+ And the other thing you mentioned is remote versus like having to actually come in physical
+
+02:47.520 --> 02:48.480
+ contact with it.
+
+02:48.480 --> 02:49.520
+ Is that the distinction?
+
+02:50.160 --> 02:56.960
+ So iPhone exploits have just been a government's number one priority.
+
+02:57.600 --> 03:02.720
+ Recently, actually the price of an Android remote zero day exploit,
+
+03:02.720 --> 03:07.280
+ something that can get you into Android phones, is actually higher.
+
+03:07.280 --> 03:11.840
+ The value of that is now higher on this underground market for zero day exploits
+
+03:12.400 --> 03:14.640
+ than an iPhone iOS exploit.
+
+03:15.200 --> 03:16.560
+ So things are changing.
+
+03:16.560 --> 03:19.840
+ So there's probably more Android devices.
+
+03:19.840 --> 03:20.960
+ So that's why it's better.
+
+03:21.520 --> 03:27.200
+ But on the iPhone side, I'm an Android person because I'm a man of the people.
+
+03:28.400 --> 03:32.960
+ But it seems like all the elites use iPhone, all the people at nice dinner parties.
+
+03:32.960 --> 03:38.000
+ So is that the reason that the more powerful people use iPhones?
+
+03:38.000 --> 03:38.640
+ Is that why?
+
+03:38.640 --> 03:39.680
+ I don't think so.
+
+03:39.680 --> 03:43.520
+ I actually, so it was about two years ago that the price has flipped.
+
+03:43.520 --> 03:52.560
+ It used to be that if you could craft a remote zero click exploit for iOS,
+
+03:53.200 --> 03:55.280
+ then that was about as good as it gets.
+
+03:55.280 --> 04:00.480
+ You could sell that to a zero day broker for $2 million.
+
+04:00.480 --> 04:05.760
+ The caveat is you can never tell anyone about it, because the minute you tell someone about it,
+
+04:05.760 --> 04:12.400
+ Apple learns about it, they patch it in that $2.5 million investment that that zero day broker
+
+04:12.400 --> 04:13.840
+ just made goes to dust.
+
+04:14.800 --> 04:23.680
+ So a couple years ago, and don't quote me on the prices, but an Android zero click remote
+
+04:23.680 --> 04:30.720
+ exploit for the first time topped the iOS. And actually, a lot of people's read on that
+
+04:31.360 --> 04:41.840
+ was that it might be a sign that Apple security was falling and that it might actually be easier
+
+04:41.840 --> 04:48.160
+ to find an iOS zero day exploit than find an Android zero day exploit.
+
+04:48.160 --> 04:49.760
+ The other thing is market share.
+
+04:49.760 --> 04:53.840
+ There are just more people around the world that use Android.
+
+04:54.640 --> 05:00.400
+ And a lot of governments that are paying top dollar for zero day exploits these days
+
+05:01.280 --> 05:07.680
+ are deep pocketed governments in the Gulf that want to use these exploits to monitor
+
+05:07.680 --> 05:10.080
+ their own citizens, monitor their critics.
+
+05:10.720 --> 05:13.760
+ And so it's not necessarily that they're trying to find elites.
+
+05:14.480 --> 05:19.120
+ It's that they want to find out who these people are that are criticizing them or perhaps
+
+05:19.120 --> 05:20.400
+ planning the next Arab Spring.
+
+05:21.040 --> 05:26.400
+ So in your experience, are most of these attacks targeted to cover a large population
+
+05:26.400 --> 05:30.320
+ or is there attacks that are targeted towards specific individuals?
+
+05:31.120 --> 05:32.160
+ So I think it's both.
+
+05:32.720 --> 05:38.320
+ Some of the zero day exploits that have fetched top dollar that I've heard of in my reporting in
+
+05:38.320 --> 05:40.400
+ the United States were highly targeted.
+
+05:41.120 --> 05:43.440
+ There was a potential terrorist attack.
+
+05:43.440 --> 05:45.280
+ They wanted to get into this person's phone.
+
+05:45.280 --> 05:47.920
+ It had to be done in the next 24 hours.
+
+05:47.920 --> 05:52.800
+ They approached hackers and say, we'll pay you X millions of dollars if you can do this.
+
+05:53.600 --> 05:59.760
+ But then you look at when we've discovered iOS zero day exploits in the wild,
+
+06:00.640 --> 06:04.240
+ some of them have been targeting large populations like Uighurs.
+
+06:05.200 --> 06:10.080
+ So a couple of years ago, there was a watering hole attack.
+
+06:10.080 --> 06:12.000
+ Okay, what's a watering hole attack?
+
+06:12.000 --> 06:13.120
+ There's a website.
+
+06:13.120 --> 06:16.960
+ It was actually had information aimed at Uighurs.
+
+06:16.960 --> 06:20.160
+ Uighurs and you could access it all over the world.
+
+06:20.880 --> 06:28.560
+ And if you visited this website, it would drop an iOS zero day exploit onto your phone.
+
+06:29.440 --> 06:34.320
+ And so anyone that visited this website that was about Uighurs anywhere,
+
+06:34.320 --> 06:40.480
+ I mean Uighurs, Uighurs living abroad, basically the Uighur diaspora would have
+
+06:40.480 --> 06:43.840
+ gotten infected with this zero day exploit.
+
+06:43.840 --> 06:50.560
+ So in that case, they were targeting huge swaths of this one population
+
+06:50.560 --> 06:54.400
+ or people interested in this one population basically in real time.
+
+06:57.120 --> 07:02.000
+ Who are these attackers from the individual level to the group level?
+
+07:02.640 --> 07:05.040
+ Psychologically speaking, what's their motivation?
+
+07:05.040 --> 07:06.400
+ Is it purely money?
+
+07:07.360 --> 07:08.480
+ Is it the challenge?
+
+07:09.120 --> 07:10.480
+ Are they malevolent?
+
+07:10.480 --> 07:11.280
+ Is it power?
+
+07:11.280 --> 07:15.280
+ Or these are big philosophical human questions, I guess.
+
+07:15.280 --> 07:19.440
+ So these are the questions I set out to answer for my book.
+
+07:20.240 --> 07:25.200
+ I wanted to know, are these people that are just after money?
+
+07:26.720 --> 07:29.600
+ If they're just after money, how do they sleep at night?
+
+07:29.600 --> 07:34.000
+ Not knowing whether that zero day exploit they just sold to a broker is being used
+
+07:34.560 --> 07:36.880
+ to basically make someone's life a living hell.
+
+07:36.880 --> 07:42.640
+ And what I found was there's kind of this long sordid history to this question.
+
+07:43.600 --> 07:51.120
+ It started out in the 80s and 90s when hackers were just finding holes and bugs in software
+
+07:51.120 --> 07:56.800
+ for curiosity's sake, really as a hobby, and some of them would go to the tech companies
+
+07:56.800 --> 08:00.880
+ like Microsoft or Sun Microsystems at the time or Oracle.
+
+08:01.680 --> 08:06.480
+ And they'd say, hey, I just found this zero day in your software and I can use it to break
+
+08:06.480 --> 08:07.200
+ into NASA.
+
+08:08.080 --> 08:13.840
+ And the general response at the time wasn't, thank you so much for pointing out this flaw
+
+08:13.840 --> 08:16.560
+ and our software will get it fixed as soon as possible.
+
+08:17.200 --> 08:23.120
+ It was, don't ever poke around our software ever again or we'll stick our general counsel on you.
+
+08:24.080 --> 08:29.280
+ And that was really sort of the common thread for years.
+
+08:29.280 --> 08:37.200
+ And so hackers who set out to do the right thing were basically told to shut up and stop
+
+08:37.200 --> 08:38.240
+ doing what you're doing.
+
+08:39.280 --> 08:45.280
+ And what happened next was they basically started trading this information online.
+
+08:45.280 --> 08:51.040
+ Now, when you go back and interview people from those early days, they all tell a very
+
+08:51.040 --> 08:56.000
+ similar story, which is they're curious, they're tinkers.
+
+08:56.000 --> 09:00.880
+ They remind me of like the kid down the block that was constantly poking around the hood
+
+09:00.880 --> 09:01.920
+ of his dad's car.
+
+09:01.920 --> 09:04.720
+ They just couldn't help themselves.
+
+09:04.720 --> 09:10.400
+ They wanted to figure out how a system is designed and how they could potentially exploit
+
+09:10.400 --> 09:11.840
+ it for some other purpose.
+
+09:11.840 --> 09:13.440
+ It doesn't have to be good or bad.
+
+09:14.400 --> 09:22.320
+ But they were basically kind of beat down for so long by these big tech companies that
+
+09:22.320 --> 09:26.800
+ they started just silently trading them with other hackers.
+
+09:26.800 --> 09:33.760
+ And that's how you got these really heated debates in the 90s about disclosure.
+
+09:34.640 --> 09:39.600
+ Should you just dump these things online because any script kitty can pick them up and use it
+
+09:39.600 --> 09:40.960
+ for all kinds of mischief.
+
+09:42.160 --> 09:46.320
+ But, you know, don't you want to just stick a middle finger to all these companies that are
+
+09:46.320 --> 09:48.000
+ basically threatening you all the time.
+
+09:48.000 --> 09:54.400
+ So there was this really interesting dynamic at play and what I learned in the course of
+
+09:54.400 --> 10:01.280
+ doing my book was that government agencies and their contractors sort of tapped into
+
+10:01.280 --> 10:03.760
+ that frustration and that resentment.
+
+10:03.760 --> 10:10.240
+ And they started quietly reaching out to hackers on these forums and they said, hey,
+
+10:10.240 --> 10:12.800
+ you know that zero day you just dropped online.
+
+10:12.800 --> 10:15.520
+ Could you could you come up with something custom for me?
+
+10:15.520 --> 10:18.080
+ And I'll pay you six figures for it.
+
+10:18.080 --> 10:23.440
+ So long as you shut up and never tell anyone that we that I paid you for this and that's
+
+10:23.440 --> 10:24.480
+ what happened.
+
+10:24.480 --> 10:30.560
+ So throughout the 90s, there was a bunch of boutique contractors that started reaching
+
+10:30.560 --> 10:35.760
+ out to hackers on these forums and saying, hey, I'll pay you six figures for that bug.
+
+10:35.760 --> 10:41.840
+ You were trying to get Microsoft to fix for free and sort of so began or so catalyzed
+
+10:41.840 --> 10:48.640
+ this market where governments and their intermediaries started reaching out to these hackers and
+
+10:48.640 --> 10:50.560
+ buying their bugs for free.
+
+10:50.560 --> 10:55.360
+ And in those early days, I think a lot of it was just for quiet counterintelligence,
+
+10:55.360 --> 10:57.120
+ traditional espionage.
+
+10:57.760 --> 11:05.120
+ But as we started baking the software, Windows software, Schneider Electric,
+
+11:05.120 --> 11:14.800
+ Siemens industrial software into our nuclear plants and our factories and our power grid
+
+11:14.800 --> 11:22.000
+ and our petrochemical facilities and our pipelines, those same zero days came to be just as valuable
+
+11:22.000 --> 11:24.240
+ for sabotage and war planning.
+
+11:24.960 --> 11:28.880
+ Does the fact that the market sprung up and you cannot make a lot of money change the
+
+11:28.880 --> 11:33.760
+ nature of the attackers that came to the table or grow the number of attackers?
+
+11:33.760 --> 11:41.680
+ I mean, what is, I guess you told the psychology of the hackers in the 90s, what is the culture
+
+11:41.680 --> 11:43.520
+ today and where is it heading?
+
+11:43.520 --> 11:49.280
+ So I think there are people who will tell you they would never sell a zero day to a
+
+11:49.280 --> 11:51.120
+ zero day broker or a government.
+
+11:52.080 --> 11:55.920
+ One, because they don't know how it's going to get used when they throw it over the fence.
+
+11:55.920 --> 12:00.160
+ You know, most of these get rolled into classified programs and you don't know how they get used.
+
+12:00.160 --> 12:05.280
+ If you sell it to a zero day broker, you don't even know which nation state might use it
+
+12:06.720 --> 12:10.400
+ or potentially which criminal group might use it if you sell it on the dark web.
+
+12:11.200 --> 12:16.640
+ The other thing that they say is that they want to be able to sleep at night.
+
+12:17.840 --> 12:22.800
+ And they lose a lot of sleep if they found out their zero day was being used to, you know,
+
+12:22.800 --> 12:24.560
+ make a dissident's life living hell.
+
+12:24.560 --> 12:30.560
+ But there are a lot of people, good people who also say, no, this is not my problem.
+
+12:31.200 --> 12:33.520
+ This is the technology company's problem.
+
+12:34.080 --> 12:39.040
+ If they weren't writing new bugs into their software every day, then there wouldn't be a market.
+
+12:39.040 --> 12:43.840
+ You know, then there wouldn't be a problem, but they continue to write bugs into their
+
+12:43.840 --> 12:46.960
+ software all the time and they continue to profit off that software.
+
+12:46.960 --> 12:51.120
+ So why shouldn't I profit off my labor too?
+
+12:51.120 --> 12:56.480
+ And one of the things that has happened, which is I think a positive development over the last
+
+12:56.480 --> 13:03.040
+ 10 years, are bug bounty programs, you know, companies like Google and Facebook and then
+
+13:03.040 --> 13:08.720
+ Microsoft and finally Apple, which resisted it for a really long time, have said, okay,
+
+13:09.680 --> 13:13.280
+ we are going to shift our perspective about hackers.
+
+13:13.280 --> 13:16.240
+ We're no longer going to treat them as the enemy here.
+
+13:16.720 --> 13:19.680
+ We're going to start paying them for what it's essential to do.
+
+13:19.680 --> 13:22.720
+ Paying them for what it's essentially free quality assurance.
+
+13:23.680 --> 13:28.720
+ And we're going to pay them good money in some cases, you know, six figures in some cases.
+
+13:28.720 --> 13:33.920
+ We're never going to be able to bid against a zero day broker who sells to government agencies,
+
+13:34.560 --> 13:40.240
+ but we can reward them and hopefully get that to that bug earlier where we can neutralize it
+
+13:40.800 --> 13:44.640
+ so that they don't have to spend another year developing the zero day exploit.
+
+13:44.640 --> 13:47.440
+ And in that way, we can keep our software more secure.
+
+13:47.440 --> 13:54.720
+ But every week I get messages from some hacker that says, you know, I tried to see this zero day
+
+13:54.720 --> 13:59.120
+ exploit that was just found in the wild, you know, being used by this nation state.
+
+13:59.600 --> 14:05.360
+ I tried to tell Microsoft about this two years ago and they were going to pay me peanuts.
+
+14:05.360 --> 14:07.360
+ So it never got fixed.
+
+14:07.840 --> 14:11.120
+ You know, there are all sorts of those stories that can continue on.
+
+14:11.120 --> 14:18.400
+ And, you know, I think just generally hackers are not very good at diplomacy, you know,
+
+14:18.400 --> 14:26.560
+ they tend to be pretty snipey, technical, crowd and very philosophical in my experience.
+
+14:26.560 --> 14:29.680
+ But, you know, diplomacy is not their strong suit.
+
+14:30.560 --> 14:34.080
+ Well, there almost has to be a broker between companies and hackers.
+
+14:34.640 --> 14:39.760
+ We can translate effectively just like you have a zero day broker between governments and hackers.
+
+14:39.760 --> 14:41.360
+ Yeah.
+
+14:41.360 --> 14:43.040
+ Because you have to speak their language.
+
+14:43.040 --> 14:43.600
+ Yeah.
+
+14:43.600 --> 14:47.680
+ And there have been some of those companies who've risen up to meet that demand.
+
+14:47.680 --> 14:50.240
+ And Hacker One is one of them.
+
+14:50.240 --> 14:51.600
+ Bug Crowd is another.
+
+14:52.480 --> 14:54.160
+ CINAC has an interesting model.
+
+14:54.160 --> 14:59.680
+ So that's a company that you pay for a private bug bounty program, essentially.
+
+14:59.680 --> 15:05.920
+ So you pay this company, they tap hackers all over the world to come hack your software,
+
+15:05.920 --> 15:10.080
+ hack your system, and then they'll quietly tell you what they found.
+
+15:11.040 --> 15:13.600
+ And I think that's a really positive development.
+
+15:13.600 --> 15:19.120
+ And actually, the Department of Defense hired all three of those companies,
+
+15:19.120 --> 15:21.920
+ I just mentioned, to help secure their systems.
+
+15:21.920 --> 15:26.800
+ Now, I think they're still a little timid in terms of letting those hackers into the really
+
+15:26.800 --> 15:31.680
+ sensitive, high side classified stuff, but, you know, baby steps.
+
+15:31.680 --> 15:37.840
+ Just to understand what you were saying, you think it's impossible for companies to
+
+15:37.840 --> 15:41.120
+ financially compete with the zero day brokers with governments,
+
+15:41.840 --> 15:47.600
+ so like the defense can't outpay the hackers?
+
+15:47.600 --> 15:48.320
+ It's interesting.
+
+15:48.320 --> 15:55.280
+ You know, they shouldn't outpay them because what would happen if they started offering
+
+15:55.280 --> 16:03.920
+ $2.5 million at Apple for any zero day exploit that governments would pay that much for
+
+16:04.640 --> 16:09.520
+ is their own engineers would say, why the hell am I working for less than that
+
+16:10.160 --> 16:12.320
+ and doing my nine to five every day?
+
+16:12.320 --> 16:14.560
+ So you would create a perverse incentive.
+
+16:14.560 --> 16:19.040
+ And I didn't think about that until I started this research and I realized,
+
+16:19.040 --> 16:20.400
+ okay, yeah, that makes sense.
+
+16:20.400 --> 16:26.720
+ You don't want to incentivize offense so much that it's to your own detriment.
+
+16:27.360 --> 16:31.760
+ And so I think what they have though, what the companies have on government agencies
+
+16:32.560 --> 16:35.920
+ is if they pay you, you get to talk about it.
+
+16:35.920 --> 16:38.000
+ You know, you get the street cred.
+
+16:38.000 --> 16:44.080
+ You get to brag about the fact you just found that $2.5 million, you know,
+
+16:44.080 --> 16:46.240
+ iOS zero day that no one else did.
+
+16:46.960 --> 16:49.920
+ And if you sell it to a broker, you never get to talk about it.
+
+16:49.920 --> 16:51.840
+ And I think that really does eat at people.
+
+16:52.960 --> 16:56.080
+ Can I ask you a big philosophical question about human nature here?
+
+16:57.120 --> 17:03.280
+ So if you have in what you've seen, if a human being has a zero day,
+
+17:03.280 --> 17:09.680
+ they found a zero day vulnerability that can hack into, I don't know,
+
+17:09.680 --> 17:13.680
+ what's the worst thing you can hack into something that could launch nuclear weapons.
+
+17:14.880 --> 17:19.360
+ Which percentage of the people in the world that have the skill would not share that with
+
+17:19.360 --> 17:22.400
+ anyone with any bad party.
+
+17:23.280 --> 17:31.680
+ I guess how many people are completely devoid of ethical concerns in your sense?
+
+17:31.680 --> 17:38.400
+ So my belief is all the ultra competent people or very, very high percentage of
+
+17:38.400 --> 17:40.640
+ ultra competent people are also ethical people.
+
+17:41.440 --> 17:42.800
+ That's been my experience.
+
+17:42.800 --> 17:44.880
+ But then again, my experience is narrow.
+
+17:45.680 --> 17:48.560
+ What's your experience been like?
+
+17:48.560 --> 17:52.240
+ So this was another question I wanted to answer.
+
+17:53.600 --> 17:58.720
+ Who are these people who would sell a zero day exploit that would neutralize
+
+17:59.440 --> 18:03.040
+ a Schneider electric safety lock at a petrochemical plant?
+
+18:03.040 --> 18:07.360
+ Basically the last thing you would need to neutralize before you trigger some kind of explosion.
+
+18:07.920 --> 18:08.800
+ Who would sell that?
+
+18:11.280 --> 18:13.440
+ And I got my answer.
+
+18:15.360 --> 18:16.720
+ Well, the answer was different.
+
+18:16.720 --> 18:20.880
+ A lot of people said, I would never even look there because I don't even want to know.
+
+18:20.880 --> 18:22.880
+ I don't even want to have that capability.
+
+18:23.520 --> 18:28.560
+ I don't even want to have to make that decision about whether I'm going to profit off of that knowledge.
+
+18:29.840 --> 18:37.680
+ I went down to Argentina and this whole kind of moral calculus I had in my head was completely
+
+18:37.680 --> 18:38.320
+ flipped around.
+
+18:39.200 --> 18:41.520
+ So just a backup for a moment.
+
+18:41.520 --> 18:46.080
+ So Argentina actually is a real hackers paradise.
+
+18:47.440 --> 18:50.640
+ People grew up in Argentina and I went down there.
+
+18:50.640 --> 18:56.160
+ I guess I was there around 2015, 2016, but you still couldn't get an iPhone.
+
+18:57.280 --> 18:58.800
+ They didn't have Amazon Prime.
+
+18:58.800 --> 19:01.840
+ You couldn't get access to any of the apps we all take for granted.
+
+19:02.480 --> 19:06.720
+ To get those things in Argentina as a kid, you have to find a way to hack them.
+
+19:06.720 --> 19:10.720
+ And it's the whole culture is really like a hacker culture.
+
+19:11.280 --> 19:14.000
+ They say it's really like a MacGyver culture.
+
+19:14.000 --> 19:17.920
+ You have to figure out how to break into something with wire and tape.
+
+19:18.640 --> 19:25.120
+ And that means that there are a lot of really good hackers in Argentina who
+
+19:25.120 --> 19:28.720
+ specialize in developing zero day exploits.
+
+19:29.680 --> 19:34.240
+ And I went down to this Argentina conference called Echo Party.
+
+19:34.240 --> 19:40.240
+ And I asked the organizer, okay, can you introduce me to someone who's selling zero day exploits
+
+19:40.240 --> 19:40.960
+ to governments?
+
+19:41.520 --> 19:46.960
+ And he was like, just throw a stone, throw a stone anywhere and you're going to hit someone.
+
+19:47.520 --> 19:52.800
+ And all over this conference, you saw these guys who were clearly from these Gulf States,
+
+19:52.800 --> 19:54.000
+ who only spoke Arabic.
+
+19:54.000 --> 19:58.960
+ What are they doing at a young hacking conference in Buenos Aires?
+
+19:58.960 --> 19:59.600
+ Oh boy.
+
+19:59.600 --> 20:06.080
+ And so I went out to lunch with kind of this godfather of the hacking scene
+
+20:06.800 --> 20:07.200
+ there.
+
+20:07.200 --> 20:12.240
+ And I asked this really dumb question and I'm still embarrassed about how I phrased it.
+
+20:12.960 --> 20:18.640
+ But I said, so, you know, well, these guys only sell these zero day exploits to good Western
+
+20:18.640 --> 20:19.200
+ governments.
+
+20:20.160 --> 20:24.880
+ And he said, Nicole, last time I checked the United States wasn't a good Western government.
+
+20:24.880 --> 20:30.880
+ You know, the last country that bombed another country into oblivion wasn't China or Iran.
+
+20:30.880 --> 20:32.240
+ It was the United States.
+
+20:32.800 --> 20:36.800
+ So if we're going to go by your whole moral calculus, you know, just know that we have
+
+20:36.800 --> 20:38.640
+ a very different calculus down here.
+
+20:39.120 --> 20:45.440
+ And we'd actually rather sell to Iran or Russia or China, maybe, than the United States.
+
+20:46.080 --> 20:47.600
+ And that just blew me away.
+
+20:48.080 --> 20:48.960
+ Like, wow.
+
+20:49.200 --> 20:53.040
+ You know, he's like, we'll just sell to whoever brings us the biggest bag of cash.
+
+20:53.040 --> 20:56.560
+ Have you checked into our inflation situation recently?
+
+20:57.280 --> 21:00.960
+ So, you know, I had some of those like reality checks along the way.
+
+21:01.440 --> 21:06.640
+ You know, we tend to think of things as is this moral, you know, is this ethical, especially
+
+21:06.640 --> 21:12.000
+ as journalists, you know, we kind of sit on our high horse sometimes and write about a
+
+21:12.000 --> 21:14.880
+ lot of things that seem to push the moral bounds.
+
+21:15.600 --> 21:20.640
+ But in this market, which is essentially an underground market that, you know, the one
+
+21:20.640 --> 21:22.960
+ rule is like fight club, you know, no one's going to do that.
+
+21:22.960 --> 21:24.240
+ No one talks about fight club.
+
+21:24.240 --> 21:28.400
+ First rule of the zero day market, nobody talks about the zero day market on both sides
+
+21:28.960 --> 21:34.960
+ because the hacker doesn't want to lose their $2.5 million bounty and governments roll
+
+21:34.960 --> 21:38.880
+ these into classified programs and they don't want anyone to know what they have.
+
+21:38.880 --> 21:40.480
+ So no one talks about this thing.
+
+21:41.040 --> 21:46.480
+ And when you're operating in the dark like that, it's really easy to put aside your morals sometimes.
+
+21:46.480 --> 21:54.400
+ Can I, as a small tangent, ask you by way of advice, you must have done some incredible interviews.
+
+21:55.440 --> 21:59.680
+ And you've also spoken about how serious you take protecting your sources.
+
+22:01.360 --> 22:07.600
+ If you were to give me advice for interviewing when you're recording on mic with a video camera,
+
+22:10.080 --> 22:12.320
+ how is it possible to get into this world?
+
+22:12.880 --> 22:15.840
+ Like, is it basically impossible?
+
+22:15.840 --> 22:18.000
+ So you've spoken with a few people.
+
+22:18.960 --> 22:23.040
+ What is it like the godfather of cyber war, cyber security?
+
+22:23.040 --> 22:24.320
+ So people that are already out.
+
+22:25.120 --> 22:28.160
+ And they still have to be pretty brave to speak publicly.
+
+22:29.600 --> 22:34.480
+ But is it virtually impossible to really talk to anybody who's a current hacker?
+
+22:34.480 --> 22:36.640
+ You're always like 10, 20 years behind.
+
+22:37.520 --> 22:38.640
+ It's a good question.
+
+22:38.640 --> 22:40.400
+ And this is why I'm a print journalist.
+
+22:40.400 --> 22:49.040
+ But when I've seen people do it, it's always the guy who's behind the shadows,
+
+22:49.040 --> 22:50.800
+ whose voice has been altered.
+
+22:51.600 --> 22:54.720
+ When they've gotten someone on camera, that's usually how they do it.
+
+22:56.720 --> 22:58.800
+ Very, very few people talk in this space.
+
+22:58.800 --> 23:04.240
+ And there's actually a pretty well known case study in why you don't talk publicly in this space
+
+23:04.240 --> 23:05.920
+ and you don't get photographed.
+
+23:05.920 --> 23:06.720
+ And that's the gruck.
+
+23:06.720 --> 23:14.400
+ So, you know, the gruck is or was this zero day broker, South African guy lives in Thailand.
+
+23:15.120 --> 23:19.600
+ And right when I was starting on this subject at the New York Times,
+
+23:20.160 --> 23:25.440
+ he'd given an interview to Forbes and he talked about being a zero day broker.
+
+23:25.440 --> 23:30.880
+ And he even posed next to this giant defil bag filled with cash ostensibly.
+
+23:31.680 --> 23:35.280
+ And later he would say he was speaking off the record.
+
+23:35.280 --> 23:37.200
+ He didn't understand the rules of the game.
+
+23:38.000 --> 23:42.560
+ But what I heard from people who did business with him was that the minute that that story
+
+23:42.560 --> 23:44.320
+ came out, he became PNG'd.
+
+23:45.280 --> 23:46.640
+ No one did business with him.
+
+23:47.440 --> 23:50.000
+ His business plummeted by at least half.
+
+23:50.000 --> 23:53.680
+ No one wants to do business with anyone who's going to get on camera
+
+23:53.680 --> 23:56.240
+ and talk about how they're selling zero days to governments.
+
+23:58.080 --> 23:59.600
+ It puts you at danger.
+
+23:59.600 --> 24:03.200
+ And I did hear that he got some visits from some security folks.
+
+24:03.200 --> 24:05.440
+ And, you know, that's another thing for these people to consider.
+
+24:05.440 --> 24:10.800
+ You know, if they have those zero day exploits at their disposal,
+
+24:11.600 --> 24:16.640
+ they become a huge target for nation states all over the world.
+
+24:17.280 --> 24:19.680
+ You know, talk about having perfect opsec.
+
+24:19.680 --> 24:23.520
+ You know, you better have some perfect opsec if people know
+
+24:23.520 --> 24:26.080
+ that you have access to those zero day exploits.
+
+24:26.880 --> 24:31.680
+ Which sucks because, I mean, transparency here.
+
+24:31.680 --> 24:37.920
+ Would be really powerful for educating the world and also inspiring other engineers to do good.
+
+24:37.920 --> 24:44.080
+ It just feels like when you operate in the shadows, it doesn't help us move in the positive
+
+24:44.080 --> 24:48.640
+ direction in terms of like getting more people on the defense side versus on the attack side.
+
+24:48.640 --> 24:49.120
+ Right.
+
+24:49.120 --> 24:50.400
+ But of course, what can you do?
+
+24:50.400 --> 24:56.160
+ I mean, the best you can possibly do is have great journalists just like you did interview
+
+24:56.160 --> 25:00.400
+ and write books about it and integrate the information you get while high.
+
+25:00.400 --> 25:02.000
+ Yeah.
+
+25:02.000 --> 25:07.920
+ And I think, you know, what hacker one has told me was, okay, let's just put away the people that
+
+25:07.920 --> 25:12.160
+ are finding and developing zero day exploits all day long.
+
+25:12.160 --> 25:13.520
+ Let's put that aside.
+
+25:13.520 --> 25:19.200
+ What about the, you know, however many millions of programmers all over the world who've never
+
+25:19.200 --> 25:21.360
+ even heard of a zero day exploit?
+
+25:21.360 --> 25:27.920
+ Why not tap into them and say, hey, we'll start paying you if you can find a bug in
+
+25:27.920 --> 25:34.400
+ United Airlines software or in Schneider Electric or in Ford or Tesla.
+
+25:34.400 --> 25:37.680
+ And I think that is a really smart approach.
+
+25:37.680 --> 25:44.480
+ Let's go find this untapped army of programmers to neutralize these bugs before the people
+
+25:44.480 --> 25:48.400
+ who will continue to sell these to governments can find them and exploit them.
+
+25:48.400 --> 25:48.880
+ Okay.
+
+25:48.880 --> 25:55.120
+ I have to ask you about this from a personal side of it's funny enough after we agree to
+
+25:55.120 --> 26:01.040
+ talk, I've gotten for the first time in my life was a victim of a cyber attack.
+
+26:01.040 --> 26:05.600
+ So this is ransomware, it's called Deadbolt.
+
+26:05.600 --> 26:07.040
+ People can look it up.
+
+26:07.040 --> 26:12.640
+ I have a QNAP device for basically kind of cold dish storage.
+
+26:12.640 --> 26:20.800
+ So it's about 60 terabytes with 50 terabytes of data on it in RAID 5 and apparently about
+
+26:20.800 --> 26:27.680
+ 4,000 to 5,000 QNAP devices were hacked and taken over with this ransomware.
+
+26:27.680 --> 26:34.880
+ And what ransomware does there is it goes file by file almost all the files on the QNAP
+
+26:34.880 --> 26:37.600
+ storage device and encrypts them.
+
+26:37.600 --> 26:43.600
+ And then there's this very eloquently and politely written page that pops up.
+
+26:43.600 --> 26:45.440
+ It describes what happened.
+
+26:45.440 --> 26:47.440
+ All your files have been encrypted.
+
+26:47.440 --> 26:51.040
+ This includes, but is not limited to photos, documents and spreadsheets.
+
+26:51.040 --> 26:53.040
+ Why me?
+
+26:53.040 --> 26:58.000
+ This is a lot of people commented about how friendly and eloquent this is.
+
+26:58.000 --> 27:03.200
+ And I have to commend them, it is and it's pretty user friendly.
+
+27:03.200 --> 27:04.000
+ Why me?
+
+27:04.000 --> 27:05.520
+ This is not a personal attack.
+
+27:05.520 --> 27:12.560
+ You have been targeted because of the inadequate security provided by your vendor, QNAP.
+
+27:12.560 --> 27:13.760
+ What now?
+
+27:13.760 --> 27:20.640
+ You can make a payment of exactly 0.03 Bitcoin, which is about $1,000, to the following address.
+
+27:20.640 --> 27:25.760
+ Once the payment has been made, we'll follow up with transaction to the same address, blah,
+
+27:25.760 --> 27:29.760
+ blah, blah, they give you instructions of what happens next and they'll give you a
+
+27:29.760 --> 27:32.160
+ decryption key that you can then use.
+
+27:32.160 --> 27:37.840
+ And then there's another message for QNAP that says all your affected customers have
+
+27:37.840 --> 27:41.280
+ been targeted using a zero day vulnerability in your product.
+
+27:41.280 --> 27:45.600
+ We offer you two options to mitigate this and future damage.
+
+27:45.600 --> 27:52.240
+ One, make a Bitcoin payment of five Bitcoin to the following address and that will reveal
+
+27:52.240 --> 27:58.320
+ to QNAP the, I'm summarizing things here, what the actual vulnerability is or you can
+
+27:58.320 --> 28:04.480
+ make a Bitcoin payment of 50 Bitcoin to get a master decryption key for all your customers.
+
+28:04.480 --> 28:07.600
+ 50 Bitcoin is about $1.8 million.
+
+28:07.600 --> 28:09.600
+ Okay.
+
+28:09.600 --> 28:17.040
+ So, first of all, on a personal level, this one hurt for me.
+
+28:17.040 --> 28:26.520
+ I mean, I learned a lot because I wasn't, for the most part, backing up much of that
+
+28:26.520 --> 28:31.160
+ data because I thought I can afford to lose that data.
+
+28:31.160 --> 28:32.160
+ It's not horrible.
+
+28:32.160 --> 28:37.480
+ I mean, I think you've spoken about the crown jewels, making sure there's things you really
+
+28:37.480 --> 28:38.480
+ protect.
+
+28:38.480 --> 28:45.920
+ I mean, I have very conscious security wise on the crown jewels, but there's a bunch
+
+28:45.920 --> 28:51.000
+ of stuff like, you know, personal videos, they're not like, I don't know anything creepy, but
+
+28:51.000 --> 28:56.200
+ just like fun things I did that because they're very large or 4K or something like that, I
+
+28:56.200 --> 29:00.040
+ kept them on there, thinking RAID 5 will protect it.
+
+29:00.040 --> 29:06.600
+ Just I lost a bunch of stuff, including raw footage from interviews and all that kind
+
+29:06.600 --> 29:08.400
+ of stuff.
+
+29:08.400 --> 29:09.640
+ So it's painful.
+
+29:09.640 --> 29:13.800
+ And I'm sure there's a lot of painful stuff like that for the 4,000 to 5,000 people that
+
+29:13.800 --> 29:14.800
+ use QNAP.
+
+29:14.800 --> 29:18.480
+ And there's a lot of interesting ethical questions here.
+
+29:18.480 --> 29:20.800
+ Do you pay them?
+
+29:20.800 --> 29:23.360
+ Does QNAP pay them?
+
+29:23.360 --> 29:25.680
+ Do the individuals pay them?
+
+29:25.680 --> 29:29.080
+ Especially when you don't know if it's going to work or not.
+
+29:29.080 --> 29:30.080
+ Do you wait?
+
+29:30.080 --> 29:36.160
+ So, QNAP said that please don't pay them.
+
+29:36.160 --> 29:42.120
+ We're working very hard day and night to solve this.
+
+29:42.120 --> 29:46.680
+ It's so philosophically interesting to me because I also project onto them thinking,
+
+29:46.680 --> 29:48.440
+ what is their motivation?
+
+29:48.440 --> 29:52.960
+ Because the way they phrase that on purpose, perhaps, but I'm not sure if that actually
+
+29:52.960 --> 29:59.600
+ reflects their real motivation is maybe they're trying to help themselves sleep at night, basically
+
+29:59.600 --> 30:01.360
+ saying this is not about you.
+
+30:01.360 --> 30:04.480
+ This is about the company with the vulnerabilities.
+
+30:04.480 --> 30:09.600
+ Just like you mentioned, this is the justification they have, but they're hurting real people.
+
+30:09.600 --> 30:14.800
+ They hurt me, but I'm sure there's a few others that are really hurt.
+
+30:14.800 --> 30:18.880
+ And the zero day factor is a big one.
+
+30:18.880 --> 30:23.920
+ Their QNAP right now is trying to figure out what the hell is wrong with their system that
+
+30:23.920 --> 30:26.000
+ would let this in.
+
+30:26.000 --> 30:31.320
+ And even if they pay, if they still don't know where the zero day is, what's to say
+
+30:31.320 --> 30:34.320
+ that they won't just hit them again and hit you again.
+
+30:34.320 --> 30:41.000
+ So that really complicates things and that is a huge advancement for ransomware.
+
+30:41.000 --> 30:46.280
+ It's really only been, I think, in the last 18 months that we've ever really seen ransomware
+
+30:46.280 --> 30:49.640
+ exploit zero days to pull these off.
+
+30:49.640 --> 30:56.680
+ Usually 80% of them, I think the data shows 80% of them come down to a lack of two factor
+
+30:56.680 --> 30:57.680
+ authentication.
+
+30:57.680 --> 31:03.000
+ So when someone gets hit by a ransomware attack, they don't have two factor authentication
+
+31:03.000 --> 31:07.680
+ on, their employees were using stupid passwords.
+
+31:07.680 --> 31:09.800
+ You can mitigate that in the future.
+
+31:09.800 --> 31:10.800
+ This one, they don't know.
+
+31:10.800 --> 31:11.800
+ They probably don't know.
+
+31:11.800 --> 31:12.800
+ Yeah.
+
+31:12.800 --> 31:16.240
+ And it was, I guess it's zero click because I didn't have to do anything.
+
+31:16.240 --> 31:21.760
+ The only thing, well, here's the thing.
+
+31:21.760 --> 31:29.600
+ I did basics of putting it behind a firewall, I followed instructions, but I didn't really
+
+31:29.600 --> 31:30.600
+ pay attention.
+
+31:30.600 --> 31:36.400
+ So maybe there's a misconfiguration of some sort that's easy to make.
+
+31:36.400 --> 31:37.400
+ It's difficult.
+
+31:37.400 --> 31:47.440
+ We have a personal NAS, so I'm not willing to say that I did everything I possibly could,
+
+31:47.440 --> 31:51.480
+ but I did a lot of reasonable stuff and they still hit it with zero clicks.
+
+31:51.480 --> 31:52.480
+ I didn't have to do anything.
+
+31:52.480 --> 31:53.480
+ Yeah.
+
+31:53.480 --> 31:57.160
+ Well, it's like a zero day and it's a supply chain attack.
+
+31:57.160 --> 31:59.680
+ You're getting hit from your supplier.
+
+31:59.680 --> 32:01.800
+ You're getting hit because of your vendor.
+
+32:01.800 --> 32:07.160
+ And it's also a new thing for ransomware groups to go to the individuals to pressure them
+
+32:07.160 --> 32:08.160
+ to pay it.
+
+32:08.160 --> 32:13.160
+ There was this really interesting case, I think it was in Norway where there was a mental
+
+32:13.160 --> 32:20.280
+ health clinic that got hit and the cyber criminals were going to the patients themselves to
+
+32:20.280 --> 32:28.240
+ say, pay this or we're going to release your psychiatric records, I mean, talk about hell.
+
+32:28.240 --> 32:33.800
+ In terms of whether to pay, that is on the cheaper end of the spectrum.
+
+32:33.800 --> 32:35.960
+ From the individual or from the company?
+
+32:35.960 --> 32:36.960
+ Both.
+
+32:36.960 --> 32:44.840
+ We've seen, for instance, there was an Apple supplier in Taiwan, they got hit and the ransom
+
+32:44.840 --> 32:47.360
+ demand was 50 million.
+
+32:47.360 --> 32:49.440
+ I'm surprised it's only 1.8 million.
+
+32:49.440 --> 32:52.320
+ I'm sure it's going to go up.
+
+32:52.320 --> 32:53.320
+ And it's hard.
+
+32:53.320 --> 32:58.200
+ There's obviously governments and maybe in this case, the company are going to tell you
+
+32:58.200 --> 33:02.560
+ we recommend you don't pay or please don't pay.
+
+33:02.560 --> 33:08.600
+ But the reality on the ground is that some businesses can't operate, some countries
+
+33:08.600 --> 33:09.600
+ can't function.
+
+33:09.600 --> 33:19.400
+ I mean, the under reported storyline of colonial pipeline was after the company got hit and
+
+33:19.400 --> 33:23.600
+ took the preemptive step of shutting down the pipeline because their billing systems
+
+33:23.600 --> 33:27.680
+ were frozen, they couldn't charge customers downstream.
+
+33:27.680 --> 33:33.800
+ My colleague David Sanger and I got our hands on a classified assessment that said that
+
+33:33.800 --> 33:39.400
+ as a country, we could have only afforded two to three more days of colonial pipeline
+
+33:39.400 --> 33:40.400
+ being down.
+
+33:40.400 --> 33:42.080
+ And it was really interesting.
+
+33:42.080 --> 33:45.720
+ I thought it was the gas and the jet fuel, but it wasn't.
+
+33:45.720 --> 33:47.560
+ We were sort of prepared for that.
+
+33:47.560 --> 33:49.400
+ It was the diesel.
+
+33:49.400 --> 33:53.800
+ Without the diesel, the refineries couldn't function and it would have totally screwed
+
+33:53.800 --> 33:54.960
+ up the economy.
+
+33:54.960 --> 34:03.120
+ And so there was almost this like national security, economic impetus for them to pay
+
+34:03.120 --> 34:04.120
+ this ransom.
+
+34:04.120 --> 34:06.560
+ And the other one I always think about is Baltimore.
+
+34:06.560 --> 34:11.480
+ You know, when the city of Baltimore got hit, I think the initial ransom demand was
+
+34:11.480 --> 34:13.880
+ something around 76,000.
+
+34:13.880 --> 34:17.120
+ It may have even started smaller than that.
+
+34:17.120 --> 34:22.920
+ And Baltimore stood its ground and didn't pay, but ultimately the cost to remediate
+
+34:22.920 --> 34:25.160
+ was $18 million.
+
+34:25.160 --> 34:26.840
+ It's a lot for the city of Baltimore.
+
+34:26.840 --> 34:32.800
+ That's money that could have gone to public school education and roads and public health.
+
+34:32.800 --> 34:36.360
+ And instead, it just went to rebuilding the systems from scratch.
+
+34:36.360 --> 34:43.640
+ And so a lot of residents in Baltimore were like, why the hell didn't you pay the $76,000?
+
+34:43.640 --> 34:46.280
+ So it's not obvious.
+
+34:46.280 --> 34:52.200
+ It's easy to say, don't pay, because why you're funding their R&D for the next go round?
+
+34:52.200 --> 34:57.040
+ But it's too often, it's too complicated.
+
+34:57.040 --> 35:03.400
+ So on the individual level, just like the way I feel personally from this attack, have
+
+35:03.400 --> 35:07.480
+ you talked to people that were kind of victims in the same way I was, but maybe more dramatic
+
+35:07.480 --> 35:13.360
+ ways or so on, in the same way that violence hurts people?
+
+35:13.360 --> 35:16.720
+ How much is this hurt people in your sense and the way you researched it?
+
+35:16.720 --> 35:26.160
+ The worst ransomware attack I've covered on a personal level was an attack on a hospital
+
+35:26.160 --> 35:28.440
+ in Vermont.
+
+35:28.440 --> 35:31.800
+ And you think of this as like, okay, it's hitting their IT networks.
+
+35:31.800 --> 35:34.840
+ They should still be able to treat patients.
+
+35:34.840 --> 35:40.640
+ But it turns out that cancer patients couldn't get their chemo anymore, because the protocol
+
+35:40.640 --> 35:46.680
+ of who gets what is very complicated and without it, nurses and doctors couldn't access it.
+
+35:46.680 --> 35:52.440
+ So they were turning chemo patients away, cancer patients away.
+
+35:52.440 --> 35:57.880
+ One nurse told us, I don't know why people aren't screaming about this, that the only
+
+35:57.880 --> 36:02.240
+ thing I've seen that even compares to what we're seeing at this hospital right now was
+
+36:02.240 --> 36:07.000
+ when I worked in the burn unit after the Boston Marathon bombing.
+
+36:07.000 --> 36:10.800
+ They really put it in these super dramatic terms.
+
+36:10.800 --> 36:17.440
+ And last year, there was a report in the Wall Street Journal where they attributed an infant
+
+36:17.440 --> 36:26.360
+ death to a ransomware attack because a mom came in and whatever device they were using
+
+36:26.360 --> 36:30.760
+ to monitor the fetus wasn't working because of the ransomware attack.
+
+36:30.760 --> 36:34.720
+ And so they attributed this infant death to the ransomware attack.
+
+36:34.720 --> 36:41.400
+ Now on a bigger scale, but less personal, when there was the not Petya attack.
+
+36:41.400 --> 36:50.520
+ So this was an attack by Russia on Ukraine that came at them through a supplier attacks
+
+36:50.520 --> 36:57.200
+ a software company in that case that didn't just hit any government agency or business
+
+36:57.200 --> 37:02.560
+ in Ukraine that use this tax software, it actually hit any business all over the world
+
+37:02.560 --> 37:07.440
+ that had even a single employee working remotely in Ukraine.
+
+37:07.440 --> 37:12.400
+ So it hit Marysk, the shipping company, but hit Pfizer, hit FedEx, but the one I will
+
+37:12.400 --> 37:14.840
+ never forget is Merck.
+
+37:14.840 --> 37:17.680
+ It paralyzed Merck's factories.
+
+37:17.680 --> 37:22.040
+ I mean, it really created an existential crisis for the company.
+
+37:22.040 --> 37:27.680
+ Merck had to tap into the CDC's emergency supplies of the Gardasil vaccine that year
+
+37:27.680 --> 37:32.080
+ because their whole vaccine production line had been paralyzed in that attack.
+
+37:32.080 --> 37:39.520
+ Imagine if that was going to happen right now to Pfizer or Moderna or Johnson and Johnson,
+
+37:39.520 --> 37:47.320
+ you know, imagine, I mean, that would really create a global cyber terrorist attack essentially.
+
+37:47.320 --> 37:49.280
+ And that's almost unintentional.
+
+37:49.280 --> 37:56.400
+ I thought for a long time, I always labeled it as collateral damage, but actually just
+
+37:56.400 --> 38:03.600
+ today, there was a really impressive threat researcher at Cisco, which has the threat
+
+38:03.600 --> 38:09.040
+ intelligence division called TALOS, who said, stop calling it collateral damage.
+
+38:09.040 --> 38:15.740
+ They could see who was going to get hit before they deployed that malware.
+
+38:15.740 --> 38:18.000
+ It wasn't collateral damage.
+
+38:18.000 --> 38:19.160
+ It was intentional.
+
+38:19.160 --> 38:23.280
+ They meant to hit any business that did business with Ukraine.
+
+38:23.280 --> 38:26.380
+ It was to send a message to them, too.
+
+38:26.380 --> 38:28.640
+ So I don't know if that's accurate.
+
+38:28.640 --> 38:33.240
+ I always thought of it as sort of the sloppy collateral damage, but it definitely made
+
+38:33.240 --> 38:34.880
+ me think.
+
+38:34.880 --> 38:42.880
+ So how much of this between states is going to be a part of war, these kinds of attacks
+
+38:42.880 --> 38:51.200
+ on Ukraine, between Russia and US, Russia and China, China and US?
+
+38:51.200 --> 38:53.320
+ Let's look at China and US.
+
+38:53.320 --> 39:01.640
+ Do you think China and US are going to escalate something that would be called a war purely
+
+39:01.640 --> 39:04.200
+ in the space of cyber?
+
+39:04.200 --> 39:15.640
+ I believe any geopolitical conflict from now on is guaranteed to have some cyber element
+
+39:15.640 --> 39:17.320
+ to it.
+
+39:17.320 --> 39:21.880
+ The Department of Justice recently declassified a report that said China's been hacking into
+
+39:21.880 --> 39:25.400
+ our pipelines, and it's not for intellectual property theft.
+
+39:25.400 --> 39:31.120
+ It's to get a foothold so that if things escalate in Taiwan, for example, they are where they
+
+39:31.120 --> 39:35.340
+ need to be to shut our pipelines down, and we just got a little glimpse of what that
+
+39:35.340 --> 39:41.040
+ looked like with colonial pipeline and the panic buying and the jet fuel shortages and
+
+39:41.040 --> 39:44.680
+ that assessment I just mentioned about the diesel.
+
+39:44.680 --> 39:47.240
+ So they're there.
+
+39:47.240 --> 39:49.400
+ They've gotten there.
+
+39:49.400 --> 39:58.000
+ Anytime I read a report about new aggression from Chinese fighter jets in Taiwan, or what's
+
+39:58.000 --> 40:04.560
+ happening right now with Russia's buildup on the Ukraine border, or India, Pakistan,
+
+40:04.560 --> 40:09.880
+ I'm always looking at it through a cyber lens, and it really bothers me that other people
+
+40:09.880 --> 40:17.360
+ aren't because there is no way that these governments and these nation states are not
+
+40:17.360 --> 40:24.240
+ going to use their access to gain some advantage in those conflicts.
+
+40:24.240 --> 40:32.080
+ And I'm now in a position where I'm an advisor to the cybersecurity infrastructure security
+
+40:32.080 --> 40:39.920
+ agency at DHS, so I'm not saying anything classified here, but I just think that it's
+
+40:39.920 --> 40:47.680
+ really important to understand just generally what the collateral damage could be for American
+
+40:47.680 --> 40:53.000
+ businesses and critical infrastructure in any of these escalated conflicts around the
+
+40:53.000 --> 41:01.680
+ world, because just generally, our adversaries have learned that they might never be able
+
+41:01.680 --> 41:06.640
+ to match us in terms of our traditional military spending on traditional weapons and fighter
+
+41:06.640 --> 41:08.320
+ jets.
+
+41:08.320 --> 41:13.040
+ But we have a very soft underbelly when it comes to cyber.
+
+41:13.040 --> 41:22.000
+ 80% or more of America's critical infrastructure, so pipelines, power grid, nuclear plants,
+
+41:22.000 --> 41:26.960
+ water systems, is owned and operated by the private sector.
+
+41:26.960 --> 41:34.080
+ And for the most part, there is nothing out there legislating that those companies share
+
+41:34.080 --> 41:37.400
+ the fact they've been breached, they don't even have to tell the government they've
+
+41:37.400 --> 41:38.880
+ been hit.
+
+41:38.880 --> 41:45.080
+ There's nothing mandating that they even meet a bare minimum standard of cybersecurity.
+
+41:45.080 --> 41:46.800
+ And that's it.
+
+41:46.800 --> 41:51.440
+ So even when there are these attacks, most of the time, we don't even know about it.
+
+41:51.440 --> 41:58.040
+ So that is, if you were going to design a system to be as blind and vulnerable as possible,
+
+41:58.040 --> 42:00.800
+ that is pretty good.
+
+42:00.800 --> 42:04.920
+ That's what it looks like is what we have here in the United States.
+
+42:04.920 --> 42:10.800
+ And everyone here is just operating like, let's just keep hooking up everything for
+
+42:10.800 --> 42:15.080
+ convenience, software eats the world.
+
+42:15.080 --> 42:21.080
+ Let's just keep going for cost, for convenience sake, just because we can.
+
+42:21.080 --> 42:26.880
+ And when you study these issues and you study these attacks and you study the advancement
+
+42:26.880 --> 42:33.960
+ and the uptick in frequency and the lower barrier to entry that we see every single
+
+42:33.960 --> 42:40.000
+ year, you realize just how dumb software eats world is.
+
+42:40.000 --> 42:45.480
+ And no one has ever stopped to pause and think, should we be hooking up these systems to the
+
+42:45.480 --> 42:46.480
+ internet?
+
+42:46.480 --> 42:51.400
+ They've just been saying, can we, let's do it.
+
+42:51.400 --> 42:52.600
+ And that's a real problem.
+
+42:52.600 --> 42:56.640
+ And this, and just in the last year, you know, we've seen a record number of zero day attacks.
+
+42:56.640 --> 43:03.160
+ I think there were 80 last year, which is probably more than double what it was in 2019.
+
+43:03.160 --> 43:09.680
+ A lot of those were nation states, you know, we live in a world with a lot of geopolitical
+
+43:09.680 --> 43:12.080
+ hot points right now.
+
+43:12.080 --> 43:18.320
+ And where those geopolitical hot points are, are places where countries have been investing
+
+43:18.320 --> 43:21.880
+ heavily in offensive cyber tools.
+
+43:21.880 --> 43:30.040
+ If you're a nation state, the goal would be to maximize the footprint of zero day, like
+
+43:30.040 --> 43:36.560
+ super secret zero day that nobody's aware of, that whenever war is initiated, the huge
+
+43:36.560 --> 43:42.080
+ negative effects of shutting down infrastructure or any kind of zero day is the chaos it creates.
+
+43:42.080 --> 43:46.640
+ So if you just, there's a certain threshold when you create the chaos, the markets plummeted,
+
+43:46.640 --> 43:49.480
+ just everything goes, goes to hell.
+
+43:49.480 --> 43:56.640
+ So it's not just zero days, you know, we make it so easy for threat actors.
+
+43:56.640 --> 44:02.840
+ I mean, we're not using two factor authentication, we're not patching.
+
+44:02.840 --> 44:08.360
+ There was the shell shock vulnerability that was discovered a couple years ago.
+
+44:08.360 --> 44:14.040
+ It's still being exploited because so many people haven't fixed it.
+
+44:14.040 --> 44:17.160
+ So you know, the zero days are really the sexy stuff.
+
+44:17.160 --> 44:24.080
+ And what really got drew me to the zero day market was the moral calculus we talked about.
+
+44:24.080 --> 44:30.400
+ Really from the US government's point of view, how do they justify leaving these systems
+
+44:30.400 --> 44:36.520
+ so vulnerable when we use them here and we're baking more of our critical infrastructure
+
+44:36.520 --> 44:38.720
+ with this vulnerable software?
+
+44:38.720 --> 44:43.560
+ It's not like we're using one set of technology and Russia is using another and China is using
+
+44:43.560 --> 44:46.040
+ this, we're all using the same technology.
+
+44:46.040 --> 44:51.760
+ So when you find a zero day in windows, you're not just leaving it open so you can spy on
+
+44:51.760 --> 44:57.720
+ Russia or implant yourself in the Russian grid, you're leaving Americans vulnerable too.
+
+44:57.720 --> 45:03.400
+ But you know, but zero days are like, that is the secret sauce, you know, that's the
+
+45:03.400 --> 45:04.400
+ superpower.
+
+45:04.400 --> 45:09.640
+ You know, and I always say like every country now with the exception of Antarctica, someone
+
+45:09.640 --> 45:16.960
+ added the Vatican to my list is trying to find offensive hacking tools and zero days to make
+
+45:16.960 --> 45:17.960
+ them work.
+
+45:17.960 --> 45:23.680
+ And those that don't have the skills now have this market that they can tap into where,
+
+45:23.680 --> 45:28.200
+ you know, $2.5 million, that's chump change for a lot of these nation states.
+
+45:28.200 --> 45:32.080
+ It's a hell of a lot less than trying to build the next fighter jet.
+
+45:32.080 --> 45:34.440
+ But yeah, the goal is chaos.
+
+45:34.440 --> 45:39.120
+ I mean, why did Russia turn off the lights twice in Ukraine?
+
+45:39.120 --> 45:46.280
+ You know, I think part of it is chaos, I think part of it is to sow the seeds of doubt in
+
+45:46.280 --> 45:50.480
+ their current government, your government can't even keep your lights on.
+
+45:50.480 --> 45:55.040
+ Why are you sticking with them, you know, come over here and we'll keep your lights
+
+45:55.040 --> 45:58.720
+ on at least, you know, there's like a little bit of that.
+
+45:58.720 --> 46:04.760
+ Nuclear weapons seems to have helped prevent nuclear war.
+
+46:04.760 --> 46:11.480
+ Is it possible that we have so many vulnerabilities and so many attack vectors on each other that
+
+46:11.480 --> 46:17.200
+ it will kind of achieve the same kind of equilibrium like mutually assured destruction?
+
+46:17.200 --> 46:20.520
+ Yeah, that's one hopeful solution to this.
+
+46:20.520 --> 46:23.800
+ Do you have any hope for this particular solution?
+
+46:23.800 --> 46:27.920
+ You know, nuclear analogies always tend to fall apart when it comes to cyber, mainly
+
+46:27.920 --> 46:33.160
+ because you don't need fissile material, you know, you just need a laptop and the skills
+
+46:33.160 --> 46:34.660
+ and you're in the game.
+
+46:34.660 --> 46:38.240
+ So it's a really low barrier to entry.
+
+46:38.240 --> 46:44.440
+ The other thing is attributions harder and we've seen countries muck around with attribution.
+
+46:44.440 --> 46:49.560
+ We've seen, you know, nation states piggyback on other countries by operations and just
+
+46:49.560 --> 46:53.400
+ sit there and siphon out whatever they're getting.
+
+46:53.400 --> 46:56.320
+ We learned some of that from the Snowden documents.
+
+46:56.320 --> 47:01.480
+ We've seen Russia hack into Iran's command and control attack servers.
+
+47:01.480 --> 47:07.560
+ We've seen them hit a Saudi petrochemical plant where they did neutralize the safety locks
+
+47:07.560 --> 47:11.920
+ at the plant and everyone assumed that it was Iran, given Iran had been targeting Saudi
+
+47:11.920 --> 47:16.760
+ oil companies forever, but nope, it turned out that it was a graduate research institute
+
+47:16.760 --> 47:17.840
+ outside Moscow.
+
+47:17.840 --> 47:21.160
+ So you see countries kind of playing around with attribution.
+
+47:21.160 --> 47:22.160
+ Why?
+
+47:22.160 --> 47:26.800
+ I think because they think, okay, if I do this, like how am I going to cover up that
+
+47:26.800 --> 47:30.960
+ it came from me because I don't want to risk the response?
+
+47:30.960 --> 47:33.200
+ So people are sort of dancing around this.
+
+47:33.200 --> 47:35.360
+ It's just in a very different way.
+
+47:35.360 --> 47:41.560
+ And, you know, at the times I'd covered the Chinese hacks of infrastructure companies
+
+47:41.560 --> 47:42.560
+ like pipelines.
+
+47:42.560 --> 47:46.000
+ I'd covered the Russian probes of nuclear plants.
+
+47:46.000 --> 47:50.200
+ I'd covered the Russian attacks on the Ukraine grid.
+
+47:50.200 --> 47:57.120
+ And then in 2018, my colleague David Sanger and I covered the fact that U.S. cyber command
+
+47:57.120 --> 48:02.440
+ had been hacking into the Russian grid and making a pretty loud show of it.
+
+48:02.440 --> 48:06.560
+ And when we went to the National Security Council, because that's what journalists do
+
+48:06.560 --> 48:12.200
+ before they publish a story, they give the other side a chance to respond, I assumed
+
+48:12.200 --> 48:17.400
+ we would be in for that really awkward, painful conversation where they would say, you will
+
+48:17.400 --> 48:20.400
+ have blood on your hands if you publish this story.
+
+48:20.400 --> 48:23.040
+ And instead they gave us the opposite answer.
+
+48:23.040 --> 48:27.160
+ They said, we have no problem with you publishing this story.
+
+48:27.160 --> 48:28.160
+ Why?
+
+48:28.160 --> 48:32.320
+ Well, they didn't say it out loud, but it was pretty obvious they wanted Russia to
+
+48:32.320 --> 48:37.320
+ know that we're hacking into their power grid too, and they better think twice before
+
+48:37.320 --> 48:40.280
+ they do to us what they had done to Ukraine.
+
+48:40.280 --> 48:47.720
+ So yeah, you know, we have stumbled into this new era of mutually assured digital destruction.
+
+48:47.720 --> 48:57.000
+ I think another sort of quasi norm we've stumbled into is proportional responses.
+
+48:57.000 --> 49:03.440
+ You know, there's this idea that if you get hit, you're allowed to respond proportionally
+
+49:03.440 --> 49:05.440
+ at a time and place of your choosing.
+
+49:05.440 --> 49:08.600
+ You know, that is how the language always goes.
+
+49:08.600 --> 49:12.960
+ That's what Obama said after North Korea hit Sony.
+
+49:12.960 --> 49:17.080
+ We will respond at a time and place of our choosing.
+
+49:17.080 --> 49:21.240
+ But no one really knows, like, what that response looks like.
+
+49:21.240 --> 49:27.240
+ And so what you see a lot of the time are just these, like, just short of war attacks.
+
+49:27.240 --> 49:31.480
+ You know, Russia turned off the power in Ukraine, but it wasn't like it stayed off for a week.
+
+49:31.480 --> 49:34.880
+ You know, it stayed off for a number of hours.
+
+49:34.880 --> 49:41.000
+ You know, not Petya hit those companies pretty hard, but no one died.
+
+49:41.000 --> 49:45.120
+ You know, and the question is, what's going to happen when someone dies?
+
+49:45.120 --> 49:51.840
+ And Canaanation State masquerade as a cyber criminal group, as a ransomware group.
+
+49:51.840 --> 49:56.600
+ And that's what really complicates coming to some sort of digital Geneva convention.
+
+49:56.600 --> 50:01.240
+ Like, there's been, there's been a push from Brad Smith at Microsoft.
+
+50:01.240 --> 50:04.120
+ We need a digital Geneva convention.
+
+50:04.120 --> 50:06.440
+ And on its face, it sounds like a no brainer.
+
+50:06.440 --> 50:07.440
+ Yeah.
+
+50:07.440 --> 50:11.520
+ Why wouldn't we all agree to stop hacking into each other's civilian hospital systems,
+
+50:11.520 --> 50:20.640
+ power grid, pipelines, but when you talk to people in the West, officials in the West,
+
+50:20.640 --> 50:25.840
+ they'll say, we would never, we'd love to agree to it, but we never do it when you're
+
+50:25.840 --> 50:34.400
+ dealing with Xi or Putin or Kim Jong Un, because a lot of times they outsource these
+
+50:34.400 --> 50:37.160
+ operations to cyber criminals.
+
+50:37.160 --> 50:42.360
+ In China, we see a lot of these attacks come from this loose satellite network of private
+
+50:42.360 --> 50:46.800
+ citizens that work at the behest of the Ministry of State Security.
+
+50:46.800 --> 50:54.120
+ So how do you come to some sort of state to state agreement when you're dealing with
+
+50:54.120 --> 50:59.360
+ transnational actors and cyber criminals, where it's really hard to pin down whether
+
+50:59.360 --> 51:05.320
+ that person was acting alone or whether they were acting at the behest of the MSS or the
+
+51:05.320 --> 51:06.920
+ FSB?
+
+51:06.920 --> 51:11.920
+ And a couple of years ago, I can't remember if it was before or after not pet you, but
+
+51:11.920 --> 51:16.880
+ Putin said, hackers are like artists who wake up in the morning in a good mood and start
+
+51:16.880 --> 51:17.880
+ painting.
+
+51:17.880 --> 51:21.520
+ In other words, I have no say over what they do or don't do.
+
+51:21.520 --> 51:26.800
+ So how do you come to some kind of norm when that's how he's talking about these issues
+
+51:26.800 --> 51:34.320
+ and he's just decimated Merck and Pfizer and however many thousand companies?
+
+51:34.320 --> 51:40.240
+ That is the fundamental difference between nuclear weapons and cyber attacks is the attribution
+
+51:40.240 --> 51:42.240
+ or one of the fundamental differences.
+
+51:42.240 --> 51:48.000
+ If you can fix one thing in the world in terms of cyber security that would make the world
+
+51:48.000 --> 51:51.160
+ a better place, what would you fix?
+
+51:51.160 --> 51:57.960
+ So you're not allowed to fix authoritarian regimes and you have to keep that.
+
+51:57.960 --> 52:00.640
+ You have to keep human nature as it is.
+
+52:00.640 --> 52:06.400
+ In terms of on the security side, technologically speaking, you mentioned there's no regulation
+
+52:06.400 --> 52:10.400
+ on companies in the United States.
+
+52:10.400 --> 52:15.760
+ What if you could just fix with the snap of a finger, what would you fix?
+
+52:15.760 --> 52:21.200
+ Two factor authentication, multifactor authentication.
+
+52:21.200 --> 52:26.760
+ It's ridiculous how many of these attacks come in because someone didn't turn on multifactor
+
+52:26.760 --> 52:27.760
+ authentication.
+
+52:27.760 --> 52:35.320
+ I mean, colonial pipeline, okay, they took down the biggest conduit for gas, jet fuel
+
+52:35.320 --> 52:39.460
+ and diesel to the east coast of the United States of America, how?
+
+52:39.460 --> 52:43.600
+ Because they forgot to deactivate an old employee account whose password had been traded on
+
+52:43.600 --> 52:48.120
+ the dark web and they'd never turned on two factor authentication.
+
+52:48.120 --> 52:51.840
+ This water treatment facility outside Florida was hacked last year.
+
+52:51.840 --> 52:53.280
+ How did it happen?
+
+52:53.280 --> 52:58.400
+ They were using Windows XP from like a decade ago that can't even get patches if you want
+
+52:58.400 --> 53:01.920
+ it to and they didn't have two factor authentication.
+
+53:01.920 --> 53:07.080
+ Time and time again, if they just switched on two factor authentication, some of these
+
+53:07.080 --> 53:08.400
+ attacks wouldn't have been possible.
+
+53:08.400 --> 53:11.880
+ Now, if I could snap my fingers, that's a thing I would do right now.
+
+53:11.880 --> 53:17.640
+ But of course, this is a cat and mouse game and then the attackers onto the next thing.
+
+53:17.640 --> 53:25.160
+ But I think right now, that is like bar none, that is the easiest, simplest way to deflect
+
+53:25.160 --> 53:30.120
+ the most attacks and the name of the game right now isn't perfect security.
+
+53:30.120 --> 53:32.280
+ Perfect security is impossible.
+
+53:32.280 --> 53:34.360
+ They will always find a way in.
+
+53:34.360 --> 53:39.960
+ The name of the game right now is make yourself a little bit harder to attack than your competitor
+
+53:39.960 --> 53:45.040
+ or than anyone else out there so that they just give up and move along.
+
+53:45.040 --> 53:51.960
+ Maybe if you are a target for an advanced nation state or the SVR, you're going to get
+
+53:51.960 --> 53:57.800
+ hacked no matter what, but you can make cyber criminal groups deadbolt, is it?
+
+53:57.800 --> 54:03.480
+ You can make their jobs a lot harder simply by doing the bare basics.
+
+54:03.480 --> 54:08.120
+ And the other thing is stop reusing your passwords, but if I only get one, then two factor authentication.
+
+54:08.120 --> 54:10.720
+ So what is two factor authentication?
+
+54:10.720 --> 54:15.800
+ Factor one is what logging in with a password, and factor two is like have another device
+
+54:15.800 --> 54:19.640
+ or another channel through which you can confirm, yeah, that's me.
+
+54:19.640 --> 54:20.640
+ Yes.
+
+54:20.640 --> 54:24.640
+ You know, usually this happens through some kind of text, you know, you get your one time
+
+54:24.640 --> 54:31.640
+ code from Bank of America or from Google, and the better way to do it is spend $20 buying
+
+54:31.640 --> 54:34.360
+ yourself a Fido key on Amazon.
+
+54:34.360 --> 54:36.200
+ That's a hardware device.
+
+54:36.200 --> 54:41.440
+ And if you don't have that hardware device with you, then you're not going to get in.
+
+54:41.440 --> 54:45.600
+ And the whole goal is, I mean, basically, you know, my first half of my decade at the
+
+54:45.600 --> 54:48.600
+ Times was spent covering like the copy.
+
+54:48.600 --> 54:54.480
+ It was like Home Depot got breached, News at 11, you know, Target, Neumann Marcus,
+
+54:54.480 --> 54:58.560
+ like who wasn't hacked over the course of those five years.
+
+54:58.560 --> 55:02.200
+ And a lot of those companies that got hacked, what did hackers take?
+
+55:02.200 --> 55:03.760
+ They took the credentials.
+
+55:03.760 --> 55:05.560
+ They took the passwords.
+
+55:05.560 --> 55:11.600
+ They can make a pretty penny selling them on the dark web and people reuse their passwords.
+
+55:11.600 --> 55:17.920
+ So you get one from, you know, God knows who, I don't know, LastPass, the worst case example
+
+55:17.920 --> 55:23.480
+ actually LastPass, but you get one and then you go test it on their email account and
+
+55:23.480 --> 55:27.920
+ you go test it on their brokerage account and you test it on their cold storage account.
+
+55:27.920 --> 55:28.920
+ Yeah.
+
+55:28.920 --> 55:29.920
+ You know, that's how it works.
+
+55:29.920 --> 55:35.160
+ But if you have multi factor authentication, then they can't get in because they might
+
+55:35.160 --> 55:38.040
+ have your password, but they don't have your phone.
+
+55:38.040 --> 55:43.120
+ They don't have your phyto key, you know, and so you keep them out.
+
+55:43.120 --> 55:49.200
+ And you know, I get a lot of alerts that tell me someone is trying to get into your Instagram
+
+55:49.200 --> 55:54.480
+ account or your Twitter account or your email account and I don't worry because I use multi
+
+55:54.480 --> 55:55.480
+ factor authentication.
+
+55:55.480 --> 55:57.480
+ They can try all day.
+
+55:57.480 --> 55:58.480
+ Okay.
+
+55:58.480 --> 56:04.280
+ I worry a little bit, but, you know, it's the simplest thing to do and we don't even
+
+56:04.280 --> 56:05.280
+ do it.
+
+56:05.280 --> 56:09.960
+ Well, there's an interface aspect to it because it's pretty annoying if it's implemented poorly.
+
+56:09.960 --> 56:10.960
+ Yeah.
+
+56:10.960 --> 56:17.800
+ So, so actually bad implementation of two factor authentication, not just bad, but just something
+
+56:17.800 --> 56:23.000
+ that adds friction is a security vulnerability, I guess, because it's really annoying.
+
+56:23.000 --> 56:28.560
+ Like, I think MIT for a while had two factor authentication, it was really annoying.
+
+56:28.560 --> 56:36.160
+ I just, like the, the time, the number of times it pings you, like, uh, it re, it asked
+
+56:36.160 --> 56:42.720
+ to reauthenticate across multiple subdomains, like, it just feels like a pain.
+
+56:42.720 --> 56:44.280
+ I don't know what the right balance there.
+
+56:44.280 --> 56:45.280
+ Yeah.
+
+56:45.280 --> 56:51.240
+ It feels like friction in our frictionless society, it feels like friction, it's annoying.
+
+56:51.240 --> 56:53.040
+ That security is biggest problem.
+
+56:53.040 --> 56:54.040
+ It's annoying.
+
+56:54.040 --> 57:00.000
+ You know, we need the Steve Jobs of security to come along and we need to make it painless.
+
+57:00.000 --> 57:06.880
+ And actually, you know, on that point, Apple has probably done more for security than anyone
+
+57:06.880 --> 57:12.760
+ else simply by introducing biometric authentication first with the fingerprint and then with face
+
+57:12.760 --> 57:13.760
+ ID.
+
+57:13.760 --> 57:18.040
+ And it's not perfect, but, you know, if you think just eight years ago, everyone was running
+
+57:18.040 --> 57:23.480
+ around with either no passcode and optional passcode or four digit passcode on their phone
+
+57:23.480 --> 57:27.480
+ that anyone, you know, think of what you can get when you get someone's iPhone, if you
+
+57:27.480 --> 57:32.800
+ steal someone's iPhone and, you know, props to them for introducing the fingerprint and
+
+57:32.800 --> 57:33.800
+ face ID.
+
+57:33.800 --> 57:37.040
+ And again, it wasn't perfect, but it was a huge step forward.
+
+57:37.040 --> 57:41.080
+ Now it's time to make another huge step forward.
+
+57:41.080 --> 57:42.760
+ I want to see the password die.
+
+57:42.760 --> 57:47.040
+ I mean, it's gotten us as far as it was ever going to get us.
+
+57:47.040 --> 57:52.480
+ And I hope whatever we come up with next is not going to be annoying, is going to be seamless.
+
+57:52.480 --> 57:56.920
+ When I was at Google, that's what we worked on is, and there's a lot of ways to call it
+
+57:56.920 --> 57:59.960
+ active authentication, passive authentication.
+
+57:59.960 --> 58:05.000
+ So basically you use biometric data, not just like a fingerprint, but everything from your
+
+58:05.000 --> 58:07.280
+ body to identify who you are.
+
+58:07.280 --> 58:14.240
+ Like movement patterns, so it basically creates a lot of layers of protection where it's very
+
+58:14.240 --> 58:21.480
+ difficult to fake, including like face unlock, checking that it's your actual face, like
+
+58:21.480 --> 58:23.120
+ the liveness tests.
+
+58:23.120 --> 58:31.160
+ So like from video, so unlocking it with video, voice, the way you move the phone, the way
+
+58:31.160 --> 58:33.440
+ you take it out of the pocket, that kind of thing.
+
+58:33.440 --> 58:37.600
+ All of those factors, it's a really hard problem though.
+
+58:37.600 --> 58:43.360
+ And ultimately, it's very difficult to beat the password to have a security.
+
+58:43.360 --> 58:48.280
+ Well, there's a company that I actually will call out and that's abnormal security.
+
+58:48.280 --> 58:51.880
+ So they work on email attacks.
+
+58:51.880 --> 58:59.440
+ And it was started by a couple guys who were doing, I think, ad tech at Twitter.
+
+58:59.440 --> 59:04.040
+ So you know, ad technology now, like it's a joke how much they know about us, you know,
+
+59:04.040 --> 59:08.480
+ you always hear the conspiracy theories that, you know, you saw someone's shoes and next
+
+59:08.480 --> 59:13.720
+ thing you know, it's on your phone, it's amazing what they know about you.
+
+59:13.720 --> 59:19.760
+ And they're basically taking that and they're applying it to attacks.
+
+59:19.760 --> 59:25.160
+ So they're saying, okay, you know, if you're, this is what your email patterns are, it might
+
+59:25.160 --> 59:28.880
+ be different for you and me because we're emailing strangers all the time.
+
+59:28.880 --> 59:34.000
+ But for most people, their email patterns are pretty predictable.
+
+59:34.000 --> 59:38.680
+ And if something strays from that pattern, that's abnormal.
+
+59:38.680 --> 59:43.600
+ And they'll block it, they'll investigate it, you know, and that's great.
+
+59:43.600 --> 59:50.840
+ You know, let's start using that kind of targeted ad technology to protect people.
+
+59:50.840 --> 59:55.360
+ And yeah, I mean, it's not going to get us away from the password and using multi factor
+
+59:55.360 --> 1:00:01.120
+ authentication, but you know, the technology is out there and we just have to figure out
+
+1:00:01.120 --> 1:00:06.520
+ how to use it in a really seamless way because it doesn't matter if you have the perfect
+
+1:00:06.520 --> 1:00:08.320
+ security solution if no one uses it.
+
+1:00:08.320 --> 1:00:14.280
+ I mean, when I started at the times, when I was trying to be really good about protecting
+
+1:00:14.280 --> 1:00:19.880
+ sources, I was trying to use PGP encryption and it's like, it didn't work, you know, the
+
+1:00:19.880 --> 1:00:25.880
+ number of mistakes I would probably make just trying to email someone with PGP just wasn't
+
+1:00:25.880 --> 1:00:27.480
+ worth it.
+
+1:00:27.480 --> 1:00:32.840
+ And then Signal came along and, and Signal made it a wicker, you know, they made it
+
+1:00:32.840 --> 1:00:37.040
+ a lot easier to send someone an encrypted text message.
+
+1:00:37.040 --> 1:00:45.560
+ So we, we have to start investing in creative minds in good security design, you know, I
+
+1:00:45.560 --> 1:00:50.160
+ really think that's the hack that's going to get us out of where we are today.
+
+1:00:50.160 --> 1:00:52.600
+ What about social engineering?
+
+1:00:52.600 --> 1:00:56.480
+ Do you worry about this sort of hacking people?
+
+1:00:56.480 --> 1:01:03.560
+ Yes, I mean, this is the worst nightmare of every chief information security officer out
+
+1:01:03.560 --> 1:01:04.560
+ there.
+
+1:01:04.560 --> 1:01:10.040
+ You know, social engineering, we work from home now.
+
+1:01:10.040 --> 1:01:16.920
+ I saw this, this woman posted online about how her husband, it went viral today, but
+
+1:01:16.920 --> 1:01:20.040
+ it was her husband had this problem at work.
+
+1:01:20.040 --> 1:01:26.640
+ They hired a guy named John and now the guy that shows up for work every day doesn't act
+
+1:01:26.640 --> 1:01:29.640
+ like John.
+
+1:01:29.640 --> 1:01:31.120
+ I mean, think about that.
+
+1:01:31.120 --> 1:01:35.600
+ Like think about the potential for social engineering in that context.
+
+1:01:35.600 --> 1:01:40.360
+ You know, you apply for a job and you put on a pretty face, you hire an actor or something
+
+1:01:40.360 --> 1:01:44.440
+ and then you just get inside the organization and get access to all that organization's
+
+1:01:44.440 --> 1:01:45.440
+ data.
+
+1:01:45.440 --> 1:01:52.400
+ You know, a couple of years ago, Saudi Arabia planted spies inside Twitter, you know, why?
+
+1:01:52.400 --> 1:01:56.320
+ Probably because they were trying to figure out who these people were, who were criticizing
+
+1:01:56.320 --> 1:02:00.080
+ the regime on Twitter, you know, they couldn't do it with a hack from the outside.
+
+1:02:00.080 --> 1:02:02.760
+ You know, why not plant people on the inside?
+
+1:02:02.760 --> 1:02:04.640
+ And that's like the worst nightmare.
+
+1:02:04.640 --> 1:02:11.280
+ And it also, unfortunately, creates all kinds of xenophobia at a lot of these organizations.
+
+1:02:11.280 --> 1:02:15.760
+ I mean, if you're going to have to take that into consideration, then organizations are
+
+1:02:15.760 --> 1:02:20.480
+ going to start looking really skeptically and suspiciously at someone who applies for
+
+1:02:20.480 --> 1:02:23.320
+ that job from China.
+
+1:02:23.320 --> 1:02:29.120
+ And we've seen that go really badly at places like the Department of Commerce where they
+
+1:02:29.120 --> 1:02:32.000
+ basically accuse people of being spies that aren't spies.
+
+1:02:32.000 --> 1:02:35.680
+ So it is the hardest problem to solve.
+
+1:02:35.680 --> 1:02:40.440
+ And it's never been harder to solve than right at this very moment when there's so much pressure
+
+1:02:40.440 --> 1:02:44.000
+ for companies to let people work remotely.
+
+1:02:44.000 --> 1:02:49.640
+ That's actually why I'm single, I'm suspicious that China and Russia, every time I meet somebody,
+
+1:02:49.640 --> 1:02:54.640
+ are trying to plant and get insider information, so I'm very, very suspicious.
+
+1:02:54.640 --> 1:02:57.960
+ I keep putting the Turing test in front, no.
+
+1:02:57.960 --> 1:03:05.200
+ No, I have a friend who worked inside NSA and was one of their top hackers.
+
+1:03:05.200 --> 1:03:10.920
+ And he's like, every time I go to Russia, I get hit on by these 10s.
+
+1:03:10.920 --> 1:03:16.880
+ And I come home, my friends are like, I'm sorry, you're not a 10, like the common story.
+
+1:03:16.880 --> 1:03:23.800
+ I mean, it's difficult to trust humans in this day and age online, you know, because
+
+1:03:23.800 --> 1:03:31.320
+ so we're working remotely, that's one thing, but just interacting with people on the internet.
+
+1:03:31.320 --> 1:03:35.880
+ It sounds ridiculous, but, you know, because of this podcast in part, I've gotten to meet
+
+1:03:35.880 --> 1:03:43.440
+ some incredible people, but it, you know, it makes you nervous to trust folks.
+
+1:03:43.440 --> 1:03:48.240
+ And I don't know how to solve that problem.
+
+1:03:48.240 --> 1:03:55.680
+ So I'm talking with Mark Zuckerberg, who dreams about creating the metaverse.
+
+1:03:55.680 --> 1:04:01.640
+ What do you do about that world where more and more our lives is in the digital sphere?
+
+1:04:01.640 --> 1:04:12.240
+ Like one way to phrase it is most of our meaningful experiences at some point will be online,
+
+1:04:12.240 --> 1:04:20.000
+ like falling in love, getting a job, or experiencing a moment of happiness with a friend, with
+
+1:04:20.000 --> 1:04:25.800
+ a new friend made online, all of those things, like more and more, the fun we do, the things
+
+1:04:25.800 --> 1:04:29.200
+ that make us love life will happen online.
+
+1:04:29.200 --> 1:04:35.960
+ And if those things have an avatar that's digital, that's like a way to hack into people's minds,
+
+1:04:35.960 --> 1:04:41.440
+ whether it's with AI or kind of troll farms or something like that, I don't know if there's
+
+1:04:41.440 --> 1:04:44.960
+ a way to protect against that.
+
+1:04:44.960 --> 1:04:52.000
+ That might fundamentally rely on our faith in how good human nature is.
+
+1:04:52.000 --> 1:04:55.000
+ So if most people are good, we're going to be okay.
+
+1:04:55.000 --> 1:05:03.440
+ But if people will tend towards manipulation and a level of behavior in search of power,
+
+1:05:03.440 --> 1:05:05.640
+ then we're screwed.
+
+1:05:05.640 --> 1:05:10.160
+ So I don't know if you can comment on how to keep the metaverse secure.
+
+1:05:10.160 --> 1:05:19.920
+ I mean, all I thought about when you were talking just now is my three year old son.
+
+1:05:19.920 --> 1:05:24.080
+ He asked me the other day, what's the internet, mom?
+
+1:05:24.080 --> 1:05:27.880
+ And I just almost wanted to cry.
+
+1:05:27.880 --> 1:05:30.280
+ I don't want that for him.
+
+1:05:30.280 --> 1:05:34.240
+ I don't want all of his most meaningful experiences to be online.
+
+1:05:34.240 --> 1:05:42.440
+ By the time that happens, how do you know that person's human, that avatar is human?
+
+1:05:42.440 --> 1:05:43.600
+ I believe in free speech.
+
+1:05:43.600 --> 1:05:47.600
+ I don't believe in free speech for robots and bots.
+
+1:05:47.600 --> 1:05:52.600
+ And look what just happened over the last six years.
+
+1:05:52.600 --> 1:06:00.520
+ We had bots pretending to be Black Lives Matter activists just to sow some division or Texas
+
+1:06:00.520 --> 1:06:09.920
+ secessionists or organizing anti Hillary protests or just to sow more division, tie us up in
+
+1:06:09.920 --> 1:06:15.760
+ our own politics so that we're so paralyzed, we can't get anything done.
+
+1:06:15.760 --> 1:06:20.480
+ We can't make any progress and we definitely can't handle our adversaries and their long
+
+1:06:20.480 --> 1:06:23.120
+ term thinking.
+
+1:06:23.120 --> 1:06:31.280
+ It really scares me and here's where I just come back to just because we can create the
+
+1:06:31.280 --> 1:06:39.920
+ metaverse, just because it sounds like the next logical step in our digital revolution.
+
+1:06:39.920 --> 1:06:45.640
+ Do I really want my child's most significant moments to be online?
+
+1:06:45.640 --> 1:06:48.080
+ They weren't for me.
+
+1:06:48.080 --> 1:06:55.120
+ So maybe I'm just stuck in that old school thinking or maybe I've seen too much.
+
+1:06:55.120 --> 1:07:01.720
+ And I'm really sick of being the guinea pig parent generation for these things.
+
+1:07:01.720 --> 1:07:08.560
+ I mean, it's hard enough with screen time, thinking about how to manage the metaverse
+
+1:07:08.560 --> 1:07:11.640
+ as a parent to a young boy.
+
+1:07:11.640 --> 1:07:13.840
+ I can't even let my head go there.
+
+1:07:13.840 --> 1:07:16.640
+ That's so terrifying for me.
+
+1:07:16.640 --> 1:07:24.120
+ But we've never stopped any new technology just because it introduces risks.
+
+1:07:24.120 --> 1:07:30.360
+ We've always said, okay, the promise of this technology means we should keep going, keep
+
+1:07:30.360 --> 1:07:31.760
+ pressing ahead.
+
+1:07:31.760 --> 1:07:35.640
+ We just need to figure out new ways to manage that risk.
+
+1:07:35.640 --> 1:07:40.840
+ And that's the blockchain right now.
+
+1:07:40.840 --> 1:07:46.800
+ When I was covering all of these ransomware attacks, I thought, okay, this is going to
+
+1:07:46.800 --> 1:07:49.600
+ be it for cryptocurrency.
+
+1:07:49.600 --> 1:07:51.400
+ Governments are going to put the kibosh down.
+
+1:07:51.400 --> 1:07:54.800
+ They're going to put the hammer down and say, enough is enough.
+
+1:07:54.800 --> 1:07:58.560
+ We have to put this genie back in the bottle because it's enabled ransomware.
+
+1:07:58.560 --> 1:08:05.600
+ I mean, five years ago, they would hijack your PC and they'd say, go to the local pharmacy,
+
+1:08:05.600 --> 1:08:10.480
+ get an eGift card and tell us what the pin is, and then we'll get your $200.
+
+1:08:10.480 --> 1:08:14.520
+ Now it's pay us, you know, five Bitcoin.
+
+1:08:14.520 --> 1:08:20.160
+ And so there's no doubt cryptocurrencies enabled ransomware attacks, but after the colonial
+
+1:08:20.160 --> 1:08:24.760
+ pipeline ransom was seized, because if you remember, the FBI was actually able to go
+
+1:08:24.760 --> 1:08:31.560
+ in and claw some of it back from dark side, which was the ransomware group that hit it.
+
+1:08:31.560 --> 1:08:34.160
+ And I spoke to these guys at TRM Labs.
+
+1:08:34.160 --> 1:08:37.000
+ So they're one of these blockchain intelligence companies.
+
+1:08:37.000 --> 1:08:41.080
+ And a lot of people that work there are used to work at the Treasury.
+
+1:08:41.080 --> 1:08:49.000
+ And what they said to me was, yeah, cryptocurrency has enabled ransomware, but to track down
+
+1:08:49.000 --> 1:08:54.840
+ that ransom payment would have taken, you know, if we were dealing with fiat currency,
+
+1:08:54.840 --> 1:08:59.760
+ would have taken us years to get to that one bank account or belonging to that one front
+
+1:08:59.760 --> 1:09:01.960
+ company in the Seychelles.
+
+1:09:01.960 --> 1:09:08.440
+ And now, thanks to blockchain, we can track the movement of those funds in real time.
+
+1:09:08.440 --> 1:09:13.400
+ And you know what, you know, these payments are not as anonymous as people think.
+
+1:09:13.400 --> 1:09:18.920
+ Like we still can use our old hacking ways and zero days and, you know, old school intelligence
+
+1:09:18.920 --> 1:09:23.640
+ methods to find out who owns that private wallet and how to get to it.
+
+1:09:23.640 --> 1:09:29.600
+ So it's a curse in some ways in that it's an enabler, but it's also a blessing.
+
+1:09:29.600 --> 1:09:34.160
+ And they said that same thing to me that I just said to you, they said, we've never
+
+1:09:34.160 --> 1:09:39.200
+ shut down a promising new technology because it introduced risk.
+
+1:09:39.200 --> 1:09:42.200
+ We just figured out how to manage that risk.
+
+1:09:42.200 --> 1:09:47.760
+ And I think that's where the conversation unfortunately has to go, is how do we, in
+
+1:09:47.760 --> 1:09:53.680
+ the metaverse, use technology to fix things.
+
+1:09:53.680 --> 1:10:00.360
+ So maybe we'll finally be able to not finally, but figure out a way to solve the identity
+
+1:10:00.360 --> 1:10:05.840
+ problem on the internet, meaning like a blue check mark for actual human and connect it
+
+1:10:05.840 --> 1:10:13.880
+ to identity, like a fingerprint, so you can prove your you and yet do it in a way that
+
+1:10:13.880 --> 1:10:17.720
+ doesn't involve the company having all your data.
+
+1:10:17.720 --> 1:10:25.200
+ So allowing you to maintain control over your data or if you don't, then there's a complete
+
+1:10:25.200 --> 1:10:29.160
+ transparency of how that data is being used, all those kinds of things.
+
+1:10:29.160 --> 1:10:36.320
+ And maybe as you educate more and more people, they would demand in a capitalist society that
+
+1:10:36.320 --> 1:10:40.840
+ the companies that they give their data to will respect that data.
+
+1:10:40.840 --> 1:10:41.840
+ Yeah.
+
+1:10:41.840 --> 1:10:44.920
+ I mean, there is this company and I hope they succeed.
+
+1:10:44.920 --> 1:10:52.520
+ Their name's PIIano and they want to create a vault for your personal information inside
+
+1:10:52.520 --> 1:10:54.800
+ every organization.
+
+1:10:54.800 --> 1:10:59.960
+ And ultimately, if I'm going to call Delta Airlines to book a flight, they don't need
+
+1:10:59.960 --> 1:11:05.680
+ to know my social security number, they don't need to know my birth date.
+
+1:11:05.680 --> 1:11:08.920
+ They're just going to send me a one time token to my phone.
+
+1:11:08.920 --> 1:11:13.600
+ My phone's going to say, or my Fido key is going to say, yep, it's her.
+
+1:11:13.600 --> 1:11:17.640
+ And then we're going to talk about my identity like a token, some random token.
+
+1:11:17.640 --> 1:11:20.120
+ They don't need to know exactly who I am.
+
+1:11:20.120 --> 1:11:26.600
+ They just need to know the system trust that I am, who I say I am, but they don't get access
+
+1:11:26.600 --> 1:11:27.960
+ to my PII data.
+
+1:11:27.960 --> 1:11:33.200
+ They don't get access to my social security number, my location, or the fact I'm a Times
+
+1:11:33.200 --> 1:11:34.200
+ journalist.
+
+1:11:34.200 --> 1:11:38.560
+ I think that's the way the world's going to go.
+
+1:11:38.560 --> 1:11:45.160
+ Enough is enough on sort of losing our personal information everywhere, letting data marketing
+
+1:11:45.160 --> 1:11:48.920
+ companies track our every move.
+
+1:11:48.920 --> 1:11:52.520
+ They don't need to know who I am, okay, I get it.
+
+1:11:52.520 --> 1:12:00.200
+ We're stuck in this world where the internet runs on ads, so ads are not going to go away,
+
+1:12:00.200 --> 1:12:03.600
+ but they don't need to know I'm Nicole Perlera.
+
+1:12:03.600 --> 1:12:08.800
+ They can know that I am token number X567.
+
+1:12:08.800 --> 1:12:13.080
+ And they can let you know what they know and give you control about removing the things
+
+1:12:13.080 --> 1:12:14.080
+ they know.
+
+1:12:14.080 --> 1:12:15.920
+ Yeah, right to be forgotten.
+
+1:12:15.920 --> 1:12:20.440
+ To me, you should be able to walk away with a single press of a button.
+
+1:12:20.440 --> 1:12:25.320
+ And I also believe that most people given the choice to walk away won't walk away.
+
+1:12:25.320 --> 1:12:30.720
+ They'll just feel better about having the option to walk away when they understand the tradeoffs.
+
+1:12:30.720 --> 1:12:35.000
+ If you walk away, you're not going to get some of the personalized experiences that you would
+
+1:12:35.000 --> 1:12:38.840
+ otherwise get, like a personalized feed and all those kinds of things.
+
+1:12:38.840 --> 1:12:44.200
+ But the freedom to walk away is, I think, really powerful.
+
+1:12:44.200 --> 1:12:48.720
+ And obviously, what you're saying, there's all of these HTML forms.
+
+1:12:48.720 --> 1:12:53.600
+ We have to enter your phone number and email and private information from Delta, every
+
+1:12:53.600 --> 1:12:55.960
+ single airline.
+
+1:12:55.960 --> 1:13:03.800
+ Longer times, I have so many opinions on this, just the friction and the sign up and all
+
+1:13:03.800 --> 1:13:04.800
+ of those kinds of things.
+
+1:13:04.800 --> 1:13:07.240
+ I should be able to, this has to do with everything.
+
+1:13:07.240 --> 1:13:10.160
+ This has to do with payment too.
+
+1:13:10.160 --> 1:13:11.880
+ Payment should be trivial.
+
+1:13:11.880 --> 1:13:18.560
+ It should be one click and one click to unsubscribe and subscribe and one click to provide all
+
+1:13:18.560 --> 1:13:23.120
+ of your information that's necessary for the subscription service, for the transaction
+
+1:13:23.120 --> 1:13:27.160
+ service, whatever, that is getting a ticket as opposed to, I have all these fake phone
+
+1:13:27.160 --> 1:13:34.440
+ numbers and emails that I use in Delta sign up because you never know if one site is hacked,
+
+1:13:34.440 --> 1:13:37.760
+ then it's just going to propagate to everything else.
+
+1:13:37.760 --> 1:13:38.760
+ Yeah.
+
+1:13:38.760 --> 1:13:45.160
+ And there's low hanging fruit and I hope Congress does something and frankly, I think
+
+1:13:45.160 --> 1:13:51.960
+ it's negligent they haven't on the fact that elderly people are getting spammed to death
+
+1:13:51.960 --> 1:13:56.040
+ on their phones these days with fake car warranty scams.
+
+1:13:56.040 --> 1:14:01.240
+ I mean, my dad was in the hospital last year and I was in the hospital room and his phone
+
+1:14:01.240 --> 1:14:09.440
+ kept buzzing and I look at it and it's just spam attack after spam attack, people nonstop
+
+1:14:09.440 --> 1:14:15.400
+ calling about his freaking car warranty, why they're trying to get his social security
+
+1:14:15.400 --> 1:14:19.960
+ number, they're trying to get his PII, they're trying to get their information.
+
+1:14:19.960 --> 1:14:28.680
+ We need to figure out how to put those people in jail for life and we need to figure out
+
+1:14:28.680 --> 1:14:37.080
+ why in the hell we are being required or asked to hand over our social security number and
+
+1:14:37.080 --> 1:14:43.320
+ our home address and our password, all of that information to every retailer who asks.
+
+1:14:43.320 --> 1:14:46.720
+ I mean, that's insanity.
+
+1:14:46.720 --> 1:14:54.440
+ And there's no question they're not protecting it because it keeps showing up in spam or identity
+
+1:14:54.440 --> 1:14:56.800
+ theft or credit card theft or worse.
+
+1:14:56.800 --> 1:15:02.720
+ Well, spam is getting better and maybe as a side note, make a public announcement, please
+
+1:15:02.720 --> 1:15:10.560
+ clip this out, which is if you get an email or a message from Lex Friedman saying how
+
+1:15:10.560 --> 1:15:19.040
+ much I, Lex, appreciate you and love you and so on and please connect with me on my WhatsApp
+
+1:15:19.040 --> 1:15:25.400
+ number and I will give you Bitcoin or something like that, please do not click.
+
+1:15:25.400 --> 1:15:31.160
+ And I'm aware that there's a lot of this going on, a very large amount, I can't do anything
+
+1:15:31.160 --> 1:15:32.160
+ about it.
+
+1:15:32.160 --> 1:15:38.120
+ This is on every single platform, it's happening more and more and more, which I've been recently
+
+1:15:38.120 --> 1:15:41.080
+ informed that they're not emailing.
+
+1:15:41.080 --> 1:15:47.280
+ So it's cross platform, they're taking people's, they're somehow, this is fascinating to me
+
+1:15:47.280 --> 1:15:54.840
+ because they are taking people who comment on various social platforms and they somehow
+
+1:15:54.840 --> 1:16:00.280
+ reverse engineer, they figure out what their email is and they send an email to that person
+
+1:16:00.280 --> 1:16:05.320
+ saying from Lex Friedman and it's like a heartfelt email with links.
+
+1:16:05.320 --> 1:16:11.000
+ It's fascinating because it's cross platform now, it's not just a spam bot that's messaging
+
+1:16:11.000 --> 1:16:17.360
+ and a comment that's in reply, they are saying, okay, this person cares about this other person
+
+1:16:17.360 --> 1:16:22.600
+ on social media, so I'm going to find another channel, which in their mind probably increases
+
+1:16:22.600 --> 1:16:28.960
+ and it does the likelihood that they'll get the people to click and they do.
+
+1:16:28.960 --> 1:16:33.840
+ I don't know what to do about that, it makes me really, really sad, especially with podcasting,
+
+1:16:33.840 --> 1:16:39.120
+ there's an intimacy that people feel connected and they get really excited, okay, cool.
+
+1:16:39.120 --> 1:16:51.120
+ I want to talk to Lex and they click and I get angry at the people that do this.
+
+1:16:51.120 --> 1:16:57.800
+ I mean, it's like the John that gets hired, the fake employee, I mean, I don't know what
+
+1:16:57.800 --> 1:16:58.800
+ to do about that.
+
+1:16:58.800 --> 1:17:05.360
+ I suppose the solution is education, it's telling people to be skeptical on the stuff
+
+1:17:05.360 --> 1:17:12.960
+ they click, that balance with the technology solution of creating a maybe like two factor
+
+1:17:12.960 --> 1:17:19.440
+ authentication and maybe helping identify things that are likely to be spam, I don't
+
+1:17:19.440 --> 1:17:23.160
+ know, but then the machine learning there is tricky because you don't want to add a lot
+
+1:17:23.160 --> 1:17:28.400
+ of extra friction that just annoys people because they'll turn it off because you have
+
+1:17:28.400 --> 1:17:31.040
+ the accept cookies thing, right?
+
+1:17:31.040 --> 1:17:35.040
+ That everybody has to click on us and now they completely ignore the accept cookies.
+
+1:17:35.040 --> 1:17:42.360
+ This is very difficult to find that frictionless security.
+
+1:17:42.360 --> 1:17:50.080
+ You mentioned Snowden, you talked about looking through the NSA documents he leaked and doing
+
+1:17:50.080 --> 1:17:52.200
+ the hard work of that.
+
+1:17:52.200 --> 1:17:54.640
+ What do you make of Edward Snowden?
+
+1:17:54.640 --> 1:17:56.800
+ What have you learned from those documents?
+
+1:17:56.800 --> 1:18:00.760
+ What do you think of him?
+
+1:18:00.760 --> 1:18:05.440
+ In the long arc of history, is Edward Snowden a hero or a villain?
+
+1:18:05.440 --> 1:18:07.400
+ I think he's neither.
+
+1:18:07.400 --> 1:18:13.000
+ I have really complicated feelings about Edward Snowden.
+
+1:18:13.000 --> 1:18:21.200
+ On the one hand, I'm a journalist at heart and more transparency is good and I'm grateful
+
+1:18:21.200 --> 1:18:29.560
+ for the conversations that we had in the post Snowden era about the limits to surveillance
+
+1:18:29.560 --> 1:18:33.960
+ and how critical privacy is.
+
+1:18:33.960 --> 1:18:39.000
+ When you have no transparency and you don't really know in that case what our secret courts
+
+1:18:39.000 --> 1:18:47.120
+ were doing, how can you truly believe that our country is taking our civil liberties
+
+1:18:47.120 --> 1:18:49.760
+ seriously?
+
+1:18:49.760 --> 1:18:56.320
+ On the one hand, I'm grateful that he cracked open these debates.
+
+1:18:56.320 --> 1:19:05.800
+ On the other hand, when I walked into the storage closet of classified NSA secrets,
+
+1:19:05.800 --> 1:19:15.560
+ I had just spent two years covering Chinese cyber espionage almost every day and the sort
+
+1:19:15.560 --> 1:19:23.400
+ of advancement of Russian attacks that were just getting worse and worse and more destructive.
+
+1:19:23.400 --> 1:19:31.040
+ There were no limits to Chinese cyber espionage and Chinese surveillance of its own citizens.
+
+1:19:31.040 --> 1:19:37.120
+ There seemed to be no limit to what Russia was willing to do in terms of cyber attacks
+
+1:19:37.120 --> 1:19:41.640
+ and also in some cases assassinating journalists.
+
+1:19:41.640 --> 1:19:48.520
+ When I walked into that room, there was a part of me quite honestly that was relieved
+
+1:19:48.520 --> 1:19:54.880
+ to know that the NSA was as good as I hoped they were.
+
+1:19:54.880 --> 1:20:03.360
+ We weren't using that knowledge to, as far as I know, assassinate journalists.
+
+1:20:03.360 --> 1:20:11.040
+ We weren't using our access to take out pharmaceutical companies.
+
+1:20:11.040 --> 1:20:16.640
+ For the most part, we were using it for traditional espionage.
+
+1:20:16.640 --> 1:20:23.200
+ That set of documents also set me on the journey of my book because to me, the American people's
+
+1:20:23.200 --> 1:20:28.880
+ reaction to the Snowden documents was a little bit misplaced.
+
+1:20:28.880 --> 1:20:34.160
+ They were upset about the phone call metadata collection program.
+
+1:20:34.160 --> 1:20:39.680
+ Angela Merkel, I think, rightfully was upset that we were hacking her cell phone.
+
+1:20:39.680 --> 1:20:45.720
+ But in the spy eat spy world, hacking world leader's cell phones is pretty much what most
+
+1:20:45.720 --> 1:20:47.720
+ spy agencies do.
+
+1:20:47.720 --> 1:20:54.640
+ There wasn't a lot that I saw in those documents that was beyond what I thought a spy agency
+
+1:20:54.640 --> 1:20:57.880
+ does.
+
+1:20:57.880 --> 1:21:04.520
+ I think if there was another 911 tomorrow, God forbid, we would all say, how did the NSA
+
+1:21:04.520 --> 1:21:05.880
+ miss this?
+
+1:21:05.880 --> 1:21:07.960
+ Why weren't they spying on those terrorists?
+
+1:21:07.960 --> 1:21:11.080
+ Why weren't they spying on those world leaders?
+
+1:21:11.080 --> 1:21:13.520
+ There's some of that too.
+
+1:21:13.520 --> 1:21:22.840
+ But I think that there was great damage done to the US's reputation.
+
+1:21:22.840 --> 1:21:31.000
+ I think we really lost our halo in terms of a protector of civil liberties.
+
+1:21:31.000 --> 1:21:37.080
+ And I think a lot of what was reported was unfortunately reported in a vacuum.
+
+1:21:37.080 --> 1:21:44.200
+ That was my biggest gripe that we were always reporting, the NSA has this program and here's
+
+1:21:44.200 --> 1:21:52.880
+ what it does and the NSA is in Angela Merkel's cell phone and the NSA can do this and no one
+
+1:21:52.880 --> 1:22:00.680
+ was saying, and by the way, China has been hacking into our pipelines and they've been
+
+1:22:00.680 --> 1:22:06.440
+ making off with all of our intellectual property and Russia's been hacking into our energy
+
+1:22:06.440 --> 1:22:11.680
+ infrastructure and they've been using the same methods to spy on track and in many
+
+1:22:11.680 --> 1:22:16.600
+ cases kill their own journalists and the Saudis have been doing this to their own critics
+
+1:22:16.600 --> 1:22:17.600
+ and dissidents.
+
+1:22:17.600 --> 1:22:22.840
+ And so you can't talk about any of these countries in isolation.
+
+1:22:22.840 --> 1:22:26.160
+ It is really like spy eat spy out there.
+
+1:22:26.160 --> 1:22:28.760
+ And so I just have complicated feelings.
+
+1:22:28.760 --> 1:22:34.600
+ And the other thing is, and I'm sorry, this is a little bit of a tangent, but the amount
+
+1:22:34.600 --> 1:22:42.000
+ of documents that we had, like thousands of documents, most of which were just crap, but
+
+1:22:42.000 --> 1:22:49.240
+ had people's names on them, you know, part of me wishes that those documents had been
+
+1:22:49.240 --> 1:22:53.200
+ released in a much more targeted, limited way.
+
+1:22:53.200 --> 1:23:00.600
+ Just a lot of it just felt like a PowerPoint that was taken out of context.
+
+1:23:00.600 --> 1:23:07.680
+ And you just sort of wish that there had been a little bit more thought into what was released
+
+1:23:07.680 --> 1:23:14.000
+ because I think a lot of the impact from someone was just the volume of the reporting.
+
+1:23:14.000 --> 1:23:19.880
+ But I think, you know, based on what I saw personally, there was a lot of stuff that
+
+1:23:19.880 --> 1:23:24.160
+ I just I don't know why that that particular thing got released.
+
+1:23:24.160 --> 1:23:26.800
+ As a whistleblower, what's the better way to do it?
+
+1:23:26.800 --> 1:23:32.640
+ Because, I mean, there's fear, there's it takes a lot of effort to do a more targeted
+
+1:23:32.640 --> 1:23:33.640
+ release.
+
+1:23:33.640 --> 1:23:38.200
+ You know, if there's proper channels, you're afraid that those channels will be manipulated
+
+1:23:38.200 --> 1:23:41.360
+ like who do you trust?
+
+1:23:41.360 --> 1:23:45.440
+ What's a better way to do this, do you think as a journalist, this is almost like a journalistic
+
+1:23:45.440 --> 1:23:50.840
+ question, reveal some fundamental flaw in the system without destroying the system.
+
+1:23:50.840 --> 1:23:58.480
+ And I bring up, you know, again, Mark Zuckerberg and Metta, there was a whistleblower that
+
+1:23:58.480 --> 1:24:02.480
+ came out about Instagram internal studies.
+
+1:24:02.480 --> 1:24:09.480
+ And I also torn about how to feel about that whistleblower, because from a company perspective,
+
+1:24:09.480 --> 1:24:11.880
+ that's an open culture.
+
+1:24:11.880 --> 1:24:16.720
+ How can you operate successfully if you have an open culture where any one whistleblower
+
+1:24:16.720 --> 1:24:23.080
+ can come out out of context, take a study whether it represents a larger context or not.
+
+1:24:23.080 --> 1:24:25.520
+ And the press eats it up.
+
+1:24:25.520 --> 1:24:31.200
+ And then that creates a narrative that is just like with the NSA, you said it's out
+
+1:24:31.200 --> 1:24:38.360
+ of context, very targeted to wear while Facebook is evil, clearly, because of this one leak.
+
+1:24:38.360 --> 1:24:42.560
+ It's really hard to know what to do there, because we're now in a society that's deeply
+
+1:24:42.560 --> 1:24:44.640
+ distressed institutions.
+
+1:24:44.640 --> 1:24:50.680
+ And so narratives by whistleblowers make that whistleblower and their forthcoming book very
+
+1:24:50.680 --> 1:24:52.320
+ popular.
+
+1:24:52.320 --> 1:24:57.120
+ And so there's a huge incentive to take stuff out of context and to tell stories that don't
+
+1:24:57.120 --> 1:25:01.440
+ represent the full context, the full truth.
+
+1:25:01.440 --> 1:25:06.800
+ It's hard to know what to do with that, because then that forces Facebook and Metta and governments
+
+1:25:06.800 --> 1:25:10.720
+ to be much more conservative, much more secretive.
+
+1:25:10.720 --> 1:25:16.440
+ It's like a race to the bottom, I don't know if you can comment on any of that, how to
+
+1:25:16.440 --> 1:25:20.720
+ be a whistleblower ethically and properly.
+
+1:25:20.720 --> 1:25:21.720
+ I don't know.
+
+1:25:21.720 --> 1:25:23.840
+ I mean, these are hard questions.
+
+1:25:23.840 --> 1:25:31.560
+ And even for myself, in some ways, I think of my book as sort of blowing the whistle
+
+1:25:31.560 --> 1:25:38.360
+ on the underground zero day market, but it's not like I was in the market myself.
+
+1:25:38.360 --> 1:25:44.440
+ It's not like I had access to classified data when I was reporting out that book.
+
+1:25:44.440 --> 1:25:50.320
+ As I say in the book, listen, I'm just trying to scrape the surface here so we can have these
+
+1:25:50.320 --> 1:25:53.320
+ conversations before it's too late.
+
+1:25:53.320 --> 1:26:02.400
+ And I'm sure there's plenty in there that someone who's US intelligence agency's preeminent
+
+1:26:02.400 --> 1:26:07.280
+ zero day broker probably has some voodoo doll of me out there.
+
+1:26:07.280 --> 1:26:12.240
+ And you're never going to get it 100%.
+
+1:26:12.240 --> 1:26:20.200
+ But I really applaud whistleblowers like the whistleblower who blew the whistle on the Trump
+
+1:26:20.200 --> 1:26:23.960
+ call with Zelensky.
+
+1:26:23.960 --> 1:26:29.640
+ People needed to know about that, that we were basically in some ways blackmailing an
+
+1:26:29.640 --> 1:26:34.880
+ ally to try to influence an election.
+
+1:26:34.880 --> 1:26:37.360
+ They went through the proper channels.
+
+1:26:37.360 --> 1:26:39.560
+ They weren't trying to profit off of it, right?
+
+1:26:39.560 --> 1:26:44.200
+ There was no book that came out afterwards from that whistleblower.
+
+1:26:44.200 --> 1:26:47.960
+ That whistleblower's not like, they went through the channels.
+
+1:26:47.960 --> 1:26:49.800
+ They're not living in Moscow.
+
+1:26:49.800 --> 1:26:50.800
+ Let's put it that way.
+
+1:26:50.800 --> 1:26:52.000
+ Can I ask you a question?
+
+1:26:52.000 --> 1:26:59.320
+ You mentioned NSA, one of the things it showed, is they're pretty good at what they do?
+
+1:26:59.320 --> 1:27:06.440
+ Again, this is a touchy subject, I suppose, but there's a lot of conspiracy theories about
+
+1:27:06.440 --> 1:27:08.200
+ intelligence agencies.
+
+1:27:08.200 --> 1:27:17.000
+ From your understanding of intelligence agencies, CIA, NSA, and the equivalent of in other countries,
+
+1:27:17.000 --> 1:27:22.200
+ are they one question, this could be a dangerous question, are they competent?
+
+1:27:22.200 --> 1:27:24.920
+ Are they good at what they do?
+
+1:27:24.920 --> 1:27:31.480
+ And two, are they malevolent in any way?
+
+1:27:31.480 --> 1:27:39.760
+ A recent conversation about tobacco companies, they see their customers as dupes.
+
+1:27:39.760 --> 1:27:43.920
+ They can just play games with people.
+
+1:27:43.920 --> 1:27:48.760
+ Conspiracy theories tell that similar story about intelligence agencies, that they're
+
+1:27:48.760 --> 1:27:57.200
+ interested in manipulating the populace for whatever ends the powerful in dark rooms,
+
+1:27:57.200 --> 1:28:03.680
+ cigarette smoke, cigar smoke filled rooms.
+
+1:28:03.680 --> 1:28:04.680
+ What's your sense?
+
+1:28:04.680 --> 1:28:13.440
+ Do these conspiracy theories have any truth to them or are intelligence agencies for the
+
+1:28:13.440 --> 1:28:15.600
+ most part good for society?
+
+1:28:15.600 --> 1:28:18.720
+ Okay, well, that's an easy one.
+
+1:28:18.720 --> 1:28:19.720
+ Is it?
+
+1:28:19.720 --> 1:28:20.720
+ No.
+
+1:28:20.720 --> 1:28:23.960
+ I think it depends which intelligence agency.
+
+1:28:23.960 --> 1:28:26.000
+ Think about the Mossad.
+
+1:28:26.000 --> 1:28:37.520
+ They're killing every Iranian nuclear scientist they can over the years, but have they delayed
+
+1:28:37.520 --> 1:28:42.960
+ the time horizon before Iran gets the bomb?
+
+1:28:42.960 --> 1:28:49.120
+ Have they probably staved off terror attacks on their own citizens?
+
+1:28:49.120 --> 1:28:53.720
+ None of these, intelligence is intelligence.
+
+1:28:53.720 --> 1:29:00.600
+ You can't just say they're malevolent or they're heroes.
+
+1:29:00.600 --> 1:29:09.080
+ Everyone I have met in this space is not the pound your chest patriot that you see on the
+
+1:29:09.080 --> 1:29:11.520
+ beach on the 4th of July.
+
+1:29:11.520 --> 1:29:18.240
+ A lot of them have complicated feelings about their former employers, well, at least at
+
+1:29:18.240 --> 1:29:28.960
+ the NSA reminded me to do what we were accused of doing after Snowden, to spy on Americans.
+
+1:29:28.960 --> 1:29:37.760
+ You have no idea the amount of red tape and paperwork and bureaucracy it would have taken
+
+1:29:37.760 --> 1:29:45.480
+ to do whatever one thinks that we were supposedly doing, but then we find out in the course
+
+1:29:45.480 --> 1:29:51.800
+ of the Snowden reporting about a program called Love In where a couple of the NSA analysts
+
+1:29:51.800 --> 1:29:56.760
+ were using their access to spy on their ex girlfriends.
+
+1:29:56.760 --> 1:30:00.760
+ There's an exception to every case.
+
+1:30:00.760 --> 1:30:10.960
+ Probably I will probably get accused of my Western bias here again, but I think you can
+
+1:30:10.960 --> 1:30:21.280
+ almost barely compare some of these Western intelligence agencies to China, for instance.
+
+1:30:21.280 --> 1:30:27.640
+ The surveillance that they're deploying on the Uyghurs to the level they're deploying
+
+1:30:27.640 --> 1:30:33.080
+ it, and the surveillance they're starting to export abroad with some of the programs
+
+1:30:33.080 --> 1:30:37.680
+ like the watering hole attack I mentioned earlier, where it's not just hitting the Uyghurs
+
+1:30:37.680 --> 1:30:42.480
+ inside China, it's hitting anyone interested in the Uyghur plight outside China.
+
+1:30:42.480 --> 1:30:46.600
+ It could be an American high school student writing a paper on the Uyghurs.
+
+1:30:46.600 --> 1:30:49.480
+ They want to spy on that person too.
+
+1:30:49.480 --> 1:30:56.160
+ There's no rules in China really limiting the extent of that surveillance.
+
+1:30:56.160 --> 1:31:02.880
+ We all better pay attention to what's happening with the Uyghurs because just as Ukraine has
+
+1:31:02.880 --> 1:31:09.920
+ been to Russia in terms of a test kitchen for cyber attacks, the Uyghurs are China's
+
+1:31:09.920 --> 1:31:13.120
+ test kitchen for surveillance.
+
+1:31:13.120 --> 1:31:17.960
+ There's no doubt in my mind that they're testing them on the Uyghurs.
+
+1:31:17.960 --> 1:31:22.440
+ Uyghurs are their petri dish and eventually they will export that level of surveillance
+
+1:31:22.440 --> 1:31:23.440
+ overseas.
+
+1:31:23.440 --> 1:31:34.480
+ I mean, in 2015, Obama and Xi Jinping reached a deal where basically the White House said
+
+1:31:34.480 --> 1:31:39.160
+ you better cut it out on intellectual property theft.
+
+1:31:39.160 --> 1:31:43.920
+ They made this agreement that they would not hack each other for commercial benefit.
+
+1:31:43.920 --> 1:31:49.080
+ For a period of about 18 months, we saw this huge drop off in Chinese cyber attacks on
+
+1:31:49.080 --> 1:31:51.320
+ American companies.
+
+1:31:51.320 --> 1:31:54.360
+ Some of them continued.
+
+1:31:54.360 --> 1:32:02.120
+ They continued on aviation companies, on hospitality companies like Marriott.
+
+1:32:02.120 --> 1:32:03.120
+ Why?
+
+1:32:03.120 --> 1:32:05.640
+ Because that was still considered fair game to China.
+
+1:32:05.640 --> 1:32:06.880
+ It wasn't IP theft.
+
+1:32:06.880 --> 1:32:07.880
+ They were after it.
+
+1:32:07.880 --> 1:32:14.280
+ They wanted to know who was staying in this city at this time when Chinese citizens were
+
+1:32:14.280 --> 1:32:19.040
+ staying there so they could cross match for counterintelligence who might be a likely Chinese
+
+1:32:19.040 --> 1:32:20.200
+ spy.
+
+1:32:20.200 --> 1:32:23.560
+ I'm sure we're doing some of that too.
+
+1:32:23.560 --> 1:32:24.800
+ Counterintelligence is counterintelligence.
+
+1:32:24.800 --> 1:32:28.200
+ It's considered fair game.
+
+1:32:28.200 --> 1:32:37.400
+ Where I think it gets evil is when you use it for censorship to suppress any dissent,
+
+1:32:37.400 --> 1:32:45.160
+ to do what I've seen the UAE do to its citizens, where people who've gone on Twitter just to
+
+1:32:45.160 --> 1:32:49.800
+ advocate for better voting rights, more enfranchisement.
+
+1:32:49.800 --> 1:32:53.720
+ Only find their passports confiscated.
+
+1:32:53.720 --> 1:33:01.240
+ I talked to one critic, Ahmed Mansour, and he told me, you might find yourself a terrorist,
+
+1:33:01.240 --> 1:33:04.960
+ labeled a terrorist one day, and you don't even know how to operate a gun.
+
+1:33:04.960 --> 1:33:07.960
+ He'd been beaten up every time he tried to go somewhere.
+
+1:33:07.960 --> 1:33:09.640
+ His passport had been confiscated.
+
+1:33:09.640 --> 1:33:12.680
+ By that point, it turned out they'd already hacked into his phone, so they were listening
+
+1:33:12.680 --> 1:33:14.180
+ to us talking.
+
+1:33:14.180 --> 1:33:23.400
+ He'd hacked into his baby monitor, so they're spying on his child, and they stole his car.
+
+1:33:23.400 --> 1:33:28.120
+ Then they created a new law that you couldn't criticize the ruling family or the ruling
+
+1:33:28.120 --> 1:33:29.840
+ party on Twitter.
+
+1:33:29.840 --> 1:33:34.920
+ He's been in solitary confinement every day since on hunger strike.
+
+1:33:34.920 --> 1:33:36.440
+ That's evil.
+
+1:33:36.440 --> 1:33:38.800
+ That's evil.
+
+1:33:38.800 --> 1:33:40.800
+ We don't do that here.
+
+1:33:40.800 --> 1:33:42.080
+ We have rules here.
+
+1:33:42.080 --> 1:33:44.960
+ We don't cross that line.
+
+1:33:44.960 --> 1:33:48.760
+ In some cases, I won't go to Dubai.
+
+1:33:48.760 --> 1:33:50.000
+ I won't go to Abu Dhabi.
+
+1:33:50.000 --> 1:33:55.240
+ If I ever want to go to the Maldives, too bad, most of the flights go through Dubai.
+
+1:33:55.240 --> 1:33:59.160
+ There's some lines we're not willing to cross, but then again, just like you said, there's
+
+1:33:59.160 --> 1:34:05.960
+ individuals within NSA, within CIA, and they may have power.
+
+1:34:05.960 --> 1:34:07.920
+ To me, there's levels of evil.
+
+1:34:07.920 --> 1:34:13.440
+ To me, personally, this is the stuff of conspiracy theories is the things you've mentioned as
+
+1:34:13.440 --> 1:34:21.520
+ evil are more direct attacks, but there's also psychological warfare, so blackmail.
+
+1:34:21.520 --> 1:34:25.280
+ What does spying allow you to do?
+
+1:34:25.280 --> 1:34:30.720
+ It allows you to collect information if you have something that's embarrassing, or if
+
+1:34:30.720 --> 1:34:37.560
+ you have like Jeffrey Epstein conspiracy theories active, what is it, manufacture of embarrassing
+
+1:34:37.560 --> 1:34:42.240
+ things, and then use blackmail to manipulate the population or all the powerful people
+
+1:34:42.240 --> 1:34:43.240
+ involved.
+
+1:34:43.240 --> 1:34:48.960
+ It troubles me deeply that MIT allowed somebody like Jeffrey Epstein in their midst, especially
+
+1:34:48.960 --> 1:34:56.280
+ some of the scientists I admire that they would hang out with that person at all.
+
+1:34:56.280 --> 1:35:01.640
+ I'll talk about it sometimes, and then a lot of people tell me, well, obviously, Jeffrey
+
+1:35:01.640 --> 1:35:09.560
+ Epstein is the front for intelligence, and I struggle to see that level of competence
+
+1:35:09.560 --> 1:35:18.280
+ and malevolence, but who the hell am I?
+
+1:35:18.280 --> 1:35:21.280
+ I guess I was trying to get to that point.
+
+1:35:21.280 --> 1:35:25.720
+ You said that there's bureaucracy and so on, which makes some of these things very difficult.
+
+1:35:25.720 --> 1:35:31.920
+ I wonder how much malevolence, how much competence there is in these institutions.
+
+1:35:31.920 --> 1:35:39.040
+ How far, it takes us back to the hacking question, how far are people willing to go if they have
+
+1:35:39.040 --> 1:35:40.040
+ the power?
+
+1:35:40.040 --> 1:35:44.240
+ This has to do with social engineering, this has to do with hacking, this has to do with
+
+1:35:44.240 --> 1:35:48.560
+ manipulating people, attacking people, doing evil onto people, psychological warfare and
+
+1:35:48.560 --> 1:35:50.200
+ stuff like that.
+
+1:35:50.200 --> 1:35:58.360
+ I don't know, I believe that most people are good, and I don't think that's possible in
+
+1:35:58.360 --> 1:35:59.360
+ a free society.
+
+1:35:59.360 --> 1:36:04.640
+ There's something that happens when you have a centralized government where power corrupts
+
+1:36:04.640 --> 1:36:12.840
+ over time and you start surveillance programs, it's like a slippery slope that over time
+
+1:36:12.840 --> 1:36:21.440
+ starts to both use fear and direct manipulation to control the populace, but in a free society
+
+1:36:21.440 --> 1:36:27.160
+ I just, it's difficult for me to imagine that you can have like somebody like a Jeffrey
+
+1:36:27.160 --> 1:36:29.280
+ Epps in the front for intelligence.
+
+1:36:29.280 --> 1:36:36.880
+ I don't know what I'm asking you, but I'm just, I have a hope that for the most part
+
+1:36:36.880 --> 1:36:43.480
+ intelligence agencies are trying to do good and are actually doing good for the world
+
+1:36:43.480 --> 1:36:51.720
+ when you view it in the full context of the complexities of the world.
+
+1:36:51.720 --> 1:36:55.520
+ But then again, if they're not, would we know?
+
+1:36:55.520 --> 1:36:58.480
+ That's why Edwin Snowden might be a good thing.
+
+1:36:58.480 --> 1:37:02.400
+ Let me ask you on a personal question, you have investigated some of the most powerful
+
+1:37:02.400 --> 1:37:07.720
+ organizations and people in the world of cyber warfare, cyber security.
+
+1:37:07.720 --> 1:37:13.240
+ Are you ever afraid for your own life, your own well being digital or physical?
+
+1:37:13.240 --> 1:37:15.600
+ I mean, I've had my moments.
+
+1:37:15.600 --> 1:37:22.640
+ You know, I've had our security team at the times called me at one point and said someone's
+
+1:37:22.640 --> 1:37:30.080
+ on the dark web offering good money to anyone who can hack your phone or your laptop.
+
+1:37:30.080 --> 1:37:35.200
+ I describe in my book how when I was at that hacking conference in Argentina, I came back
+
+1:37:35.200 --> 1:37:41.560
+ and I brought a burner laptop with me, but I'd kept it in the safe anyway and it didn't
+
+1:37:41.560 --> 1:37:46.720
+ have anything on it, but someone had broken in and it was moved.
+
+1:37:46.720 --> 1:37:53.840
+ You know, I've had all sorts of sort of scary moments and then I've had moments where I
+
+1:37:53.840 --> 1:37:58.720
+ think I went just way too far into the paranoid side.
+
+1:37:58.720 --> 1:38:05.840
+ I mean, I remember writing about the times hack by China and I'd just covered a number
+
+1:38:05.840 --> 1:38:10.840
+ of Chinese cyber attacks where they'd gotten into the thermostat at someone's corporate
+
+1:38:10.840 --> 1:38:17.640
+ apartment and, you know, they've gotten into all sorts of stuff and I was living by myself.
+
+1:38:17.640 --> 1:38:25.000
+ I was single in San Francisco and my cable box on my television started making some weird
+
+1:38:25.000 --> 1:38:30.120
+ noises in the middle of the night and I got up and I ripped it out of the wall and I think
+
+1:38:30.120 --> 1:38:37.320
+ I said something like embarrassing like, fuck you China, you know, and then I went back
+
+1:38:37.320 --> 1:38:42.040
+ to bed and I woke up and like, it's like beautiful morning light, I mean, I'll never
+
+1:38:42.040 --> 1:38:43.040
+ forget it.
+
+1:38:43.040 --> 1:38:46.840
+ Like this is like glimmering morning light shining on my cable box, which has now been
+
+1:38:46.840 --> 1:38:52.560
+ ripped out and is sitting on my floor and like the morning light and I was just like,
+
+1:38:52.560 --> 1:38:57.040
+ no, no, no, like I'm not going down that road.
+
+1:38:57.040 --> 1:39:06.240
+ Like you basically, I came to a fork in the road where I could either go full tinfoil hat,
+
+1:39:06.240 --> 1:39:11.840
+ go live off the grid, never have a car with navigation, never use Google Maps, never own
+
+1:39:11.840 --> 1:39:20.680
+ an iPhone, never order diapers off Amazon, you know, create an alias or I could just
+
+1:39:20.680 --> 1:39:26.440
+ do the best I can and live in this new digital world we're living in.
+
+1:39:26.440 --> 1:39:28.040
+ And what does that look like for me?
+
+1:39:28.040 --> 1:39:30.600
+ I mean, what are my crown jewels?
+
+1:39:30.600 --> 1:39:34.160
+ This is what I tell people, what are your crown jewels because just focus on that.
+
+1:39:34.160 --> 1:39:37.520
+ You can't protect everything, but you can protect your crown jewels.
+
+1:39:37.520 --> 1:39:42.280
+ For me, for the longest time, my crown jewels were my sources.
+
+1:39:42.280 --> 1:39:44.640
+ I was nothing without my sources.
+
+1:39:44.640 --> 1:39:50.640
+ So I had some sources, I would meet the same dim sum place or maybe it was a different
+
+1:39:50.640 --> 1:39:59.120
+ restaurant on the same date, you know, every quarter and we would never drive there.
+
+1:39:59.120 --> 1:40:00.400
+ We would never Uber there.
+
+1:40:00.400 --> 1:40:02.040
+ We wouldn't bring any devices.
+
+1:40:02.040 --> 1:40:05.600
+ I could bring a pencil and a notepad.
+
+1:40:05.600 --> 1:40:09.480
+ And if someone wasn't in town, like there were a couple of times where I'd show up and
+
+1:40:09.480 --> 1:40:14.280
+ the source never came, but we never communicated digitally.
+
+1:40:14.280 --> 1:40:18.200
+ And those were the lengths I was willing to go to protect that source, but you can't do
+
+1:40:18.200 --> 1:40:19.600
+ it for everyone.
+
+1:40:19.600 --> 1:40:24.880
+ So for everyone else, you know, it was signal using two factor authentication, you know,
+
+1:40:24.880 --> 1:40:30.760
+ keeping my devices up to date, not clicking on phishing emails, using a password manager,
+
+1:40:30.760 --> 1:40:34.720
+ all the things that, you know, we know we're supposed to do.
+
+1:40:34.720 --> 1:40:38.920
+ And that's what I tell everyone, like don't go crazy because then that's like the ultimate
+
+1:40:38.920 --> 1:40:39.920
+ hack.
+
+1:40:39.920 --> 1:40:43.680
+ Then they've hacked your mind, whoever they is for you.
+
+1:40:43.680 --> 1:40:45.400
+ But just do the best you can.
+
+1:40:45.400 --> 1:40:54.720
+ Now, my whole risk model changed when I had a kid, you know, now it's, oh God, you know,
+
+1:40:54.720 --> 1:41:11.240
+ if anyone threatened my family, God help them, but it's, it changes you and, you know, unfortunately,
+
+1:41:11.240 --> 1:41:16.960
+ there are some things like I was really scared to go deep on, like Russian cybercrime, you
+
+1:41:16.960 --> 1:41:22.680
+ know, like Putin himself, you know, and, and it's interesting, like I have a mentor who's
+
+1:41:22.680 --> 1:41:29.920
+ an incredible person who was the Times Moscow bureau chief during the Cold War.
+
+1:41:29.920 --> 1:41:34.000
+ And after I wrote a series of stories about Chinese cyber espionage, he took me out to
+
+1:41:34.000 --> 1:41:39.880
+ lunch and he told me that when he was living in Moscow, he would drop his kids off at preschool
+
+1:41:39.880 --> 1:41:42.840
+ when they were my son's age now.
+
+1:41:42.840 --> 1:41:48.280
+ And the KGB would follow him and they would make a really like loud show of it.
+
+1:41:48.280 --> 1:41:54.360
+ You know, they'd tail him, they'd, you know, honk, they'd just be a wreck, make a wreck
+
+1:41:54.360 --> 1:41:55.360
+ us.
+
+1:41:55.360 --> 1:41:58.960
+ And he said, you know what, they never actually did anything, but they wanted me to know that
+
+1:41:58.960 --> 1:42:03.320
+ they were following me and I operated accordingly.
+
+1:42:03.320 --> 1:42:08.320
+ And he says, that's how you should operate in, in the digital world.
+
+1:42:08.320 --> 1:42:12.160
+ You know that there are probably people following you.
+
+1:42:12.160 --> 1:42:14.760
+ Sometimes they'll make a little bit of noise.
+
+1:42:14.760 --> 1:42:19.240
+ But one thing you need to know is that while you're at the New York Times, you have a little
+
+1:42:19.240 --> 1:42:23.840
+ bit of an invisible shield on you, you know, if something were to happen to you, that would
+
+1:42:23.840 --> 1:42:24.840
+ be a really big deal.
+
+1:42:24.840 --> 1:42:27.080
+ That would be an international incident.
+
+1:42:27.080 --> 1:42:31.680
+ So I kind of carried that invisible shield with me for years.
+
+1:42:31.680 --> 1:42:39.400
+ And then a Jamal Khashoggi happened and that destroyed my vision of my invisible shield.
+
+1:42:39.400 --> 1:42:45.680
+ You know, sure, you know, he was a Saudi, but he was a Washington Post columnist.
+
+1:42:45.680 --> 1:42:50.440
+ You know, for the most part, he was living in the United States, he was a journalist.
+
+1:42:50.440 --> 1:42:58.720
+ And for them to do what they did to him pretty much in the open and get away with it.
+
+1:42:58.720 --> 1:43:03.280
+ And for the United States to let them get away with it because we wanted to preserve
+
+1:43:03.280 --> 1:43:11.120
+ diplomatic relations with the Saudis, that really threw my worldview upside down.
+
+1:43:11.120 --> 1:43:17.120
+ And you know, I think that sent a message to a lot of countries that it was sort of
+
+1:43:17.120 --> 1:43:19.840
+ open season on journalists.
+
+1:43:19.840 --> 1:43:27.840
+ And to me, that was one of the most destructive things that happened under the previous administration.
+
+1:43:27.840 --> 1:43:32.120
+ And you know, I don't really know what to think of my invisible shield anymore.
+
+1:43:32.120 --> 1:43:36.320
+ Like you said, that really worries me on the journalism side that people would be afraid
+
+1:43:36.320 --> 1:43:41.320
+ to dig deep on fascinating topics.
+
+1:43:41.320 --> 1:43:50.320
+ And you know, I have my own, that's part of the reason I would love to have kids, I would
+
+1:43:50.320 --> 1:43:52.960
+ love to have a family.
+
+1:43:52.960 --> 1:43:58.240
+ Part of the reason I'm a little bit afraid, there's many ways to phrase this, but the
+
+1:43:58.240 --> 1:44:05.560
+ loss of freedom in the way of doing all the crazy shit that I naturally do, which I would
+
+1:44:05.560 --> 1:44:10.640
+ say the ethic of journalism is kind of not is doing crazy shit without really thinking
+
+1:44:10.640 --> 1:44:11.640
+ about it.
+
+1:44:11.640 --> 1:44:18.640
+ This is letting your curiosity really allow you to be free and explore.
+
+1:44:18.640 --> 1:44:24.200
+ I mean, whether it's stupidity or fearlessness, whatever it is, that's what great journalism
+
+1:44:24.200 --> 1:44:25.480
+ is.
+
+1:44:25.480 --> 1:44:32.840
+ And all the concerns about security risks have made me like become a better person.
+
+1:44:32.840 --> 1:44:37.200
+ The way I approach it is just make sure you don't have anything to hide.
+
+1:44:37.200 --> 1:44:41.880
+ I know this is not a thing, this is not a, this is not an approach to security.
+
+1:44:41.880 --> 1:44:45.160
+ I'm just, this is like a motivational speech or something.
+
+1:44:45.160 --> 1:44:49.400
+ It's just like, if you can lose, you can be hacked at any moment.
+
+1:44:49.400 --> 1:44:54.480
+ Just don't be a douchebag secretly, just be like a good person.
+
+1:44:54.480 --> 1:45:02.240
+ Because then I see this actually with social media in general, just present yourself in
+
+1:45:02.240 --> 1:45:07.000
+ the most authentic way possible, meaning be the same person online as you are privately,
+
+1:45:07.000 --> 1:45:08.240
+ have nothing to hide.
+
+1:45:08.240 --> 1:45:14.720
+ That's one, not the only, but one of the ways to achieve security.
+
+1:45:14.720 --> 1:45:19.560
+ I'm totally wrong on this, but don't be secretly weird.
+
+1:45:19.560 --> 1:45:21.960
+ If you're weird, be publicly weird.
+
+1:45:21.960 --> 1:45:24.360
+ So it's impossible to blackmail you.
+
+1:45:24.360 --> 1:45:25.360
+ That's my approach to it.
+
+1:45:25.360 --> 1:45:26.360
+ Yeah.
+
+1:45:26.360 --> 1:45:30.680
+ Well, they call it the New York Times front page phenomenon, you know, don't put anything
+
+1:45:30.680 --> 1:45:36.120
+ in email or I guess social media these days that you wouldn't want to read on the front
+
+1:45:36.120 --> 1:45:38.000
+ page of the New York Times.
+
+1:45:38.000 --> 1:45:44.640
+ And that works, but you know, sometimes I even get carry, I mean, I have not as many
+
+1:45:44.640 --> 1:45:48.720
+ followers as you, but a lot of followers and sometimes even I get carried away.
+
+1:45:48.720 --> 1:45:50.880
+ Just be emotional and stuff to say something.
+
+1:45:50.880 --> 1:45:51.880
+ Yeah.
+
+1:45:51.880 --> 1:45:52.880
+ Yeah.
+
+1:45:52.880 --> 1:45:59.720
+ I mean, just the cortisol response on Twitter, you know, Twitter is basically like designed
+
+1:45:59.720 --> 1:46:01.520
+ to elicit those responses.
+
+1:46:01.520 --> 1:46:07.120
+ I mean, every day I turn on my computer, I look at my phone, I look at what's trending
+
+1:46:07.120 --> 1:46:12.760
+ on Twitter and it's like, what are the topics that are going to make people the most angry
+
+1:46:12.760 --> 1:46:21.120
+ today, you know, and, um, you know, it's easy to get carried away, but it's also just that
+
+1:46:21.120 --> 1:46:26.840
+ sucks too that you have to be constantly censoring yourself and maybe it's for the better.
+
+1:46:26.840 --> 1:46:31.640
+ Maybe you can't be a secret asshole and we can put that in the good bucket.
+
+1:46:31.640 --> 1:46:41.240
+ But at the same time, you know, there is a danger to that other voice, to creativity,
+
+1:46:41.240 --> 1:46:43.200
+ you know, to being weird.
+
+1:46:43.200 --> 1:46:47.720
+ There's a danger to that little whispered voice that's like, well, how would people
+
+1:46:47.720 --> 1:46:48.720
+ read that?
+
+1:46:48.720 --> 1:46:51.280
+ You know, how could that be manipulated?
+
+1:46:51.280 --> 1:46:53.840
+ How could that be used against you?
+
+1:46:53.840 --> 1:47:03.680
+ And that stifles creativity and innovation and free thought and, you know, that is on
+
+1:47:03.680 --> 1:47:09.120
+ a very micro level and that's something I think about a lot.
+
+1:47:09.120 --> 1:47:13.560
+ And that's actually something that Tim Cook has talked about a lot.
+
+1:47:13.560 --> 1:47:19.560
+ And why he has, you know, said he goes full force on privacy is it's just that little
+
+1:47:19.560 --> 1:47:25.200
+ voice that is at some level censoring you.
+
+1:47:25.200 --> 1:47:31.000
+ And what, what is sort of the longterm impact of that little voice over time?
+
+1:47:31.000 --> 1:47:36.840
+ I think there's a ways, I think that self censorship is an attack factor that there's
+
+1:47:36.840 --> 1:47:37.840
+ solutions to.
+
+1:47:37.840 --> 1:47:40.240
+ In a way, I'm really inspired by Elon Musk.
+
+1:47:40.240 --> 1:47:47.160
+ The solution to that is just be privately and publicly the same person and be ridiculous.
+
+1:47:47.160 --> 1:47:49.880
+ Embrace the full weirdness and show it more and more.
+
+1:47:49.880 --> 1:47:54.200
+ So it, you know, that's, that's memes that has like ridiculous humor.
+
+1:47:54.200 --> 1:48:01.320
+ And I think, and if there is something you really want to hide, deeply consider if that
+
+1:48:01.320 --> 1:48:05.520
+ you want to be that, like, why are you hiding it?
+
+1:48:05.520 --> 1:48:07.120
+ What exactly are you afraid of?
+
+1:48:07.120 --> 1:48:13.400
+ Because I think my hopeful vision for the internet is the internet loves authenticity.
+
+1:48:13.400 --> 1:48:15.200
+ They want to see you weird.
+
+1:48:15.200 --> 1:48:20.800
+ So be that and like live that fully because I think that gray area where you're kind of
+
+1:48:20.800 --> 1:48:25.320
+ censoring yourself, that, that's where the destruction is.
+
+1:48:25.320 --> 1:48:28.880
+ You have to go all the way, step over, be weird, be weird.
+
+1:48:28.880 --> 1:48:33.080
+ And then it feels, it can be painful because people can attack you and so on, but just
+
+1:48:33.080 --> 1:48:34.080
+ ride it.
+
+1:48:34.080 --> 1:48:41.360
+ It's just like a skill on a social psychological level that ends up being a, an approach to
+
+1:48:41.360 --> 1:48:47.400
+ security, which is like, remove the attack vector of having private information by being
+
+1:48:47.400 --> 1:48:51.800
+ your full weird self publicly.
+
+1:48:51.800 --> 1:48:58.920
+ What, what advice would you give to young folks today, you know, operating in, in this
+
+1:48:58.920 --> 1:49:04.360
+ complicated space about how to have a successful life, a life they can be proud of, a career
+
+1:49:04.360 --> 1:49:10.120
+ they can be proud of, maybe somebody in high school and college thinking about what they're
+
+1:49:10.120 --> 1:49:11.120
+ going to do.
+
+1:49:11.120 --> 1:49:18.920
+ Be a hacker, you know, if you have any interest, become a hacker and apply yourself to defense.
+
+1:49:18.920 --> 1:49:24.680
+ You know, every time, like we do have these, these amazing scholarship programs, for instance,
+
+1:49:24.680 --> 1:49:30.080
+ where, you know, they find you early, they'll pay your college as long as you commit to
+
+1:49:30.080 --> 1:49:35.440
+ some kind of federal commitment to sort of help federal agencies with cybersecurity.
+
+1:49:35.440 --> 1:49:39.080
+ And where does everyone want to go every year from the scholarship program?
+
+1:49:39.080 --> 1:49:44.240
+ They want to go work at the NSA or cyber command, you know, they want to go work on offense.
+
+1:49:44.240 --> 1:49:46.360
+ They want to go do the sexy stuff.
+
+1:49:46.360 --> 1:49:50.000
+ It's really hard to get people to work on defense.
+
+1:49:50.000 --> 1:49:54.760
+ It's just, it's always been more fun to be a pirate than be in the Coast Guard, you know,
+
+1:49:54.760 --> 1:50:01.440
+ and so we have a huge deficit when it comes to filling those roles.
+
+1:50:01.440 --> 1:50:07.560
+ There's 3.5 million unfilled cybersecurity positions around the world.
+
+1:50:07.560 --> 1:50:12.800
+ I mean, talk about job security, like be a hacker and work on cybersecurity.
+
+1:50:12.800 --> 1:50:15.640
+ You will always have a job.
+
+1:50:15.640 --> 1:50:23.120
+ And we're actually had a huge deficit and disadvantage as a free market economy because
+
+1:50:23.120 --> 1:50:30.120
+ we can't match cybersecurity salaries at Palantir or Facebook or Google or Microsoft.
+
+1:50:30.120 --> 1:50:35.320
+ And so it's really hard for the United States to fill those roles.
+
+1:50:35.320 --> 1:50:39.400
+ And you know, other countries have had this work around where they basically have forced
+
+1:50:39.400 --> 1:50:45.080
+ conscription on some level, you know, China tells people, like, you do whatever you're
+
+1:50:45.080 --> 1:50:50.840
+ going to do during the day, work at Alibaba, you know, if you need to do some ransomware,
+
+1:50:50.840 --> 1:50:56.320
+ okay, but the minute we tap you on the shoulder and ask you to come do this sensitive operation
+
+1:50:56.320 --> 1:51:01.760
+ for us, the answer is yes, you know, same with Russia, you know, a couple years ago
+
+1:51:01.760 --> 1:51:06.600
+ when Yahoo was hacked, and they laid it all out in an indictment, it came down to two
+
+1:51:06.600 --> 1:51:11.080
+ cyber criminals and two guys from the FSB, cyber criminals were allowed to have their
+
+1:51:11.080 --> 1:51:16.200
+ fun, but the minute they came across the username and password for someone's personal Yahoo
+
+1:51:16.200 --> 1:51:20.840
+ account that worked at the White House or the State Department or military, they were
+
+1:51:20.840 --> 1:51:23.720
+ expected to pass that over to the FSB.
+
+1:51:23.720 --> 1:51:25.080
+ So we don't do that here.
+
+1:51:25.080 --> 1:51:30.040
+ And it's even worse on defense, we really can't fill these positions.
+
+1:51:30.040 --> 1:51:36.680
+ So you know, if you are a hacker, if you're interested in code, if you're a tinker, you
+
+1:51:36.680 --> 1:51:43.080
+ know, learn how to hack, there are all sorts of amazing hacking competitions you can do
+
+1:51:43.080 --> 1:51:49.000
+ through the SANS org, for example, SANS.
+
+1:51:49.000 --> 1:51:54.280
+ And then use those skills for good, you know, neuter the bugs in that code that get used
+
+1:51:54.280 --> 1:52:00.640
+ by autocratic regimes to make people's life, you know, a living prison, you know, plug
+
+1:52:00.640 --> 1:52:06.120
+ those holes, you know, defend industrial systems, defend our water treatment facilities from
+
+1:52:06.120 --> 1:52:10.640
+ hacks where people are trying to come in and poison the water, you know, that I think is
+
+1:52:10.640 --> 1:52:19.680
+ just an amazing, it's an amazing job on so many levels, it's intellectually stimulating,
+
+1:52:19.680 --> 1:52:24.120
+ you can tell yourself you're serving your country, you can tell yourself you're saving
+
+1:52:24.120 --> 1:52:28.480
+ lives and keeping people safe, and you'll always have amazing job security.
+
+1:52:28.480 --> 1:52:32.520
+ And if you need to go get that job that pays you, you know, $2 million a year, you can
+
+1:52:32.520 --> 1:52:33.520
+ do that too.
+
+1:52:33.520 --> 1:52:37.960
+ And you can have a public profile, more so of a public profile, you can be a public rock
+
+1:52:37.960 --> 1:52:38.960
+ star.
+
+1:52:38.960 --> 1:52:42.920
+ I mean, it's the same thing as sort of the military.
+
+1:52:42.920 --> 1:52:50.920
+ There's a lot of, there's a lot of well known sort of people commenting on the fact that
+
+1:52:50.920 --> 1:52:56.000
+ veterans are not treated as well as they should be, but it's still the fact that soldiers
+
+1:52:56.000 --> 1:53:02.880
+ are deeply respected for defending the country, the freedoms, the ideals that we stand for.
+
+1:53:02.880 --> 1:53:08.000
+ And in the same way, I mean, in some ways, the cyber security defense are the soldiers
+
+1:53:08.000 --> 1:53:09.000
+ of the future.
+
+1:53:09.000 --> 1:53:10.000
+ Yeah.
+
+1:53:10.000 --> 1:53:11.000
+ And you know what's interesting?
+
+1:53:11.000 --> 1:53:16.640
+ I mean, in cybersecurity, the difference is oftentimes you see the more interesting
+
+1:53:16.640 --> 1:53:21.560
+ threats in the private sector, because that's where the attacks come, you know, when cyber
+
+1:53:21.560 --> 1:53:26.400
+ criminals and nation state adversaries come for the United States, they don't go directly
+
+1:53:26.400 --> 1:53:28.600
+ for cyber command or the NSA.
+
+1:53:28.600 --> 1:53:31.000
+ No, they go for banks.
+
+1:53:31.000 --> 1:53:36.800
+ They go for Google, they go for Microsoft, they go for critical infrastructure.
+
+1:53:36.800 --> 1:53:41.720
+ And so those companies, those private sector companies get to see some of the most advanced
+
+1:53:41.720 --> 1:53:46.120
+ sophisticated attacks out there.
+
+1:53:46.120 --> 1:53:50.760
+ And you know, if you're working at FireEye and you're calling out the SolarWinds attack,
+
+1:53:50.760 --> 1:53:58.040
+ for instance, I mean, you just saved God knows how many systems from, you know, that compromise
+
+1:53:58.040 --> 1:54:03.800
+ turning into something that more closely resembles sabotage.
+
+1:54:03.800 --> 1:54:11.080
+ So you know, go be a hacker or go be a journalist.
+
+1:54:11.080 --> 1:54:17.680
+ So you wrote the book, this is how they tell me the world ends, as we've been talking about,
+
+1:54:17.680 --> 1:54:21.800
+ of course, referring to cyber war, cyber security.
+
+1:54:21.800 --> 1:54:25.400
+ What gives you hope about the future of our world?
+
+1:54:25.400 --> 1:54:31.720
+ If it doesn't end, how will it not end?
+
+1:54:31.720 --> 1:54:32.720
+ That's a good question.
+
+1:54:32.720 --> 1:54:34.920
+ I mean, I have to have hope, right?
+
+1:54:34.920 --> 1:54:37.640
+ Because I have a kid and I have another on the way.
+
+1:54:37.640 --> 1:54:41.040
+ And if I didn't have hope, I wouldn't be having kids.
+
+1:54:41.040 --> 1:54:46.920
+ But it's a scary time to be having kids.
+
+1:54:46.920 --> 1:54:55.160
+ And it's like pandemic, climate change, disinformation, increasingly advanced, perhaps
+
+1:54:55.160 --> 1:54:57.800
+ deadly cyber attacks.
+
+1:54:57.800 --> 1:55:05.400
+ What gives me hope is that I share your worldview that I think people are fundamentally good.
+
+1:55:05.400 --> 1:55:10.200
+ And sometimes, and this is why the metaverse scares me to death, but when I'm reminded
+
+1:55:10.200 --> 1:55:16.480
+ of that is not online, like online, I get the opposite, you know, you start to lose hope
+
+1:55:16.480 --> 1:55:20.440
+ and humanity when you're on Twitter half your day.
+
+1:55:20.440 --> 1:55:25.640
+ It's like when I go to the grocery store or I go on a hike or like someone smiles at
+
+1:55:25.640 --> 1:55:33.320
+ me or, you know, or someone just says something nice, you know, people are fundamentally good.
+
+1:55:33.320 --> 1:55:37.600
+ We just don't hear from those people enough.
+
+1:55:37.600 --> 1:55:43.520
+ And my hope is, you know, I just think our current political climate, like we've hit
+
+1:55:43.520 --> 1:55:45.020
+ rock bottom.
+
+1:55:45.020 --> 1:55:46.720
+ This is as bad as it gets.
+
+1:55:46.720 --> 1:55:47.720
+ We can't do anything.
+
+1:55:47.720 --> 1:55:48.720
+ Don't jinx it.
+
+1:55:48.720 --> 1:55:52.040
+ Well, but I think it's a generational thing.
+
+1:55:52.040 --> 1:55:57.080
+ You know, I think baby boomers, like it's time to move along.
+
+1:55:57.080 --> 1:56:01.240
+ I think it's time for a new generation to come in.
+
+1:56:01.240 --> 1:56:08.080
+ And I actually have a lot of hope when I look at, you know, I'm sort of like this, I guess
+
+1:56:08.080 --> 1:56:14.320
+ they call me a geriatric millennial or a young gen X, but like we have this unique responsibility
+
+1:56:14.320 --> 1:56:21.120
+ because I grew up without the internet and without social media, but I'm native to it.
+
+1:56:21.120 --> 1:56:25.600
+ So I know the good and I know the bad.
+
+1:56:25.600 --> 1:56:28.320
+ And that's true on so many different things.
+
+1:56:28.320 --> 1:56:32.200
+ You know, I grew up without climate change anxiety.
+
+1:56:32.200 --> 1:56:34.920
+ And now I'm feeling it and I know it's not a given.
+
+1:56:34.920 --> 1:56:41.280
+ We don't have to just resign ourselves to climate change, you know, same with disinformation.
+
+1:56:41.280 --> 1:56:47.600
+ And I think a lot of the problems we face today have just exposed the sort of inertia
+
+1:56:47.600 --> 1:56:50.000
+ that there has been on so many of these issues.
+
+1:56:50.000 --> 1:56:54.760
+ And I really think it's a generational shift that has to happen.
+
+1:56:54.760 --> 1:56:58.800
+ And I think this next generation is going to come in and say, like, we're not doing
+
+1:56:58.800 --> 1:57:02.520
+ business like you guys did it anymore, you know, we're not just going to like rape and
+
+1:57:02.520 --> 1:57:07.840
+ pillage the earth and try and turn everyone against each other and play dirty tricks and
+
+1:57:07.840 --> 1:57:14.480
+ let lobbyists dictate, you know, what we do or don't do as a country anymore.
+
+1:57:14.480 --> 1:57:16.600
+ And that's really where I see the hope.
+
+1:57:16.600 --> 1:57:22.240
+ It feels like there's a lot of low hanging fruit for young minds to step up and create
+
+1:57:22.240 --> 1:57:23.840
+ solutions and lead.
+
+1:57:23.840 --> 1:57:32.880
+ So whenever like politicians or leaders that are older, like you said, are acting shitty,
+
+1:57:32.880 --> 1:57:34.200
+ I see that as a positive.
+
+1:57:34.200 --> 1:57:39.120
+ They're inspiring a large number of young people to replace them.
+
+1:57:39.120 --> 1:57:40.120
+ Yeah.
+
+1:57:40.120 --> 1:57:44.200
+ And so it's, I think you're right, there's going to be, it's almost like you need people
+
+1:57:44.200 --> 1:57:49.200
+ to act shitty to remind them, oh, wow, we need good leaders, we need great creators
+
+1:57:49.200 --> 1:57:54.800
+ and builders and entrepreneurs and scientists and engineers and journalists, you know, all
+
+1:57:54.800 --> 1:57:58.800
+ the discussions about how the journalism is quote unquote broken and so on.
+
+1:57:58.800 --> 1:58:03.880
+ That's just an inspiration for new institutions to rise up that do journalism better.
+
+1:58:03.880 --> 1:58:06.400
+ We need journalists to step up and do journalism better.
+
+1:58:06.400 --> 1:58:11.920
+ So I, and I've been constantly, when I talk to young people, I'm constantly impressed
+
+1:58:11.920 --> 1:58:16.520
+ by the ones that dream to build solutions.
+
+1:58:16.520 --> 1:58:22.280
+ And so that's, that's, that's ultimately why I put the hope, but the world is a messy
+
+1:58:22.280 --> 1:58:23.280
+ place.
+
+1:58:23.280 --> 1:58:26.680
+ Like we've been talking about the scary place.
+
+1:58:26.680 --> 1:58:27.680
+ Yeah.
+
+1:58:27.680 --> 1:58:33.240
+ And I think you hit something, hit on something earlier, which is authenticity.
+
+1:58:33.240 --> 1:58:40.120
+ Like no one is going to rise above that is plastic anymore.
+
+1:58:40.120 --> 1:58:45.720
+ You know, people are craving authenticity, you know, the benefit of the internet is it's
+
+1:58:45.720 --> 1:58:51.240
+ really hard to hide who you are on every single platform, you know, and some level it's going
+
+1:58:51.240 --> 1:58:54.000
+ to come out who you really are.
+
+1:58:54.000 --> 1:59:00.480
+ And so you hope that, you know, by the time my kids are grown, like no one's going to
+
+1:59:00.480 --> 1:59:08.120
+ care if they made one mistake online so long as they're authentic, you know, and I used
+
+1:59:08.120 --> 1:59:09.680
+ to worry about this.
+
+1:59:09.680 --> 1:59:15.640
+ My nephew was born the day I graduated from college and I just always, you know, he's
+
+1:59:15.640 --> 1:59:22.280
+ like born into Facebook and just think like, how is a kid like that ever going to be president
+
+1:59:22.280 --> 1:59:24.360
+ of the United States of America?
+
+1:59:24.360 --> 1:59:30.680
+ Because if Facebook had been around when I was in college, you know, like Jesus, you
+
+1:59:30.680 --> 1:59:34.280
+ know, what, how is, how are those kids are going to ever be president?
+
+1:59:34.280 --> 1:59:40.160
+ There's going to be some photo of them at some point making some mistake and that's
+
+1:59:40.160 --> 1:59:41.840
+ going to be all over for them.
+
+1:59:41.840 --> 1:59:43.160
+ And now I take that back.
+
+1:59:43.160 --> 1:59:46.920
+ Now it's like, no, everyone's going to make mistakes.
+
+1:59:46.920 --> 1:59:51.840
+ There's going to be a picture for everyone and we're all going to have to come and grow
+
+1:59:51.840 --> 1:59:57.160
+ up to the view that as humans, we're going to make huge mistakes and hopefully they're
+
+1:59:57.160 --> 2:00:01.560
+ not so big that they're going to ruin the rest of your life, but we're going to have
+
+2:00:01.560 --> 2:00:05.480
+ to come around to this view that we're all human and we're going to have to be a little
+
+2:00:05.480 --> 2:00:10.720
+ bit more forgiving and a little bit more tolerant when people mess up and we're going to have
+
+2:00:10.720 --> 2:00:15.560
+ to be a little bit more humble when we do and like keep moving forward.
+
+2:00:15.560 --> 2:00:18.000
+ Otherwise, you can't like cancel everyone, you know?
+
+2:00:18.000 --> 2:00:21.960
+ Nicole, this was an incredible, hopeful conversation.
+
+2:00:21.960 --> 2:00:30.320
+ Also one that reveals that in the shadows, there's a lot of challenges to be solved.
+
+2:00:30.320 --> 2:00:34.480
+ So I really appreciate that you took on this really difficult subject with your book.
+
+2:00:34.480 --> 2:00:35.880
+ That's journalism is best.
+
+2:00:35.880 --> 2:00:40.600
+ So I'm really grateful that you did the, that you took the risk that you took that on and
+
+2:00:40.600 --> 2:00:42.640
+ that you plugged the cable box back in.
+
+2:00:42.640 --> 2:00:45.440
+ That means you have hope.
+
+2:00:45.440 --> 2:00:47.880
+ And thank you so much for spending your valuable time with me today.
+
+2:00:47.880 --> 2:00:48.880
+ Thank you.
+
+2:00:48.880 --> 2:00:50.880
+ Thanks for having me.
+
+2:00:50.880 --> 2:00:53.680
+ Thanks for listening to this conversation with Nicole Pearlroth.
+
+2:00:53.680 --> 2:00:57.760
+ To support this podcast, please check out our sponsors in the description.
+
+2:00:57.760 --> 2:01:02.040
+ And now let me leave you with some words from Nicole herself.
+
+2:01:02.040 --> 2:01:08.160
+ Here we are, entrusting our entire digital lives, passwords, texts, love letters, banking
+
+2:01:08.160 --> 2:01:14.200
+ records, health records, credit card sources, and deepest thoughts to this mystery box whose
+
+2:01:14.200 --> 2:01:17.840
+ inner circuitry most of us would never vet.
+
+2:01:17.840 --> 2:01:23.560
+ Run by code written in a language most of us will never fully understand.
+
+2:01:23.560 --> 2:01:48.320
+ Thank you for listening and hope to see you next time.
+

@@ -1,0 +1,3884 @@
+WEBVTT
+
+00:00.000 --> 00:03.400
+ The following is a conversation with Jay McClelland,
+
+00:03.400 --> 00:05.400
+ a cognitive scientist at Stanford
+
+00:05.400 --> 00:07.000
+ and one of the seminal figures
+
+00:07.000 --> 00:09.560
+ in the history of artificial intelligence
+
+00:09.560 --> 00:12.320
+ and specifically neural networks.
+
+00:12.320 --> 00:15.920
+ Having written the parallel distributed processing book
+
+00:15.920 --> 00:17.560
+ with David Romel Hart,
+
+00:17.560 --> 00:21.680
+ who coauthored the back propagation paper with Jeff Hinton.
+
+00:21.680 --> 00:24.440
+ In their collaborations, they've paved the way
+
+00:24.440 --> 00:26.160
+ for many of the ideas at the center
+
+00:26.160 --> 00:29.440
+ of the neural network based machine learning revolution
+
+00:29.440 --> 00:32.040
+ of the past 15 years.
+
+00:32.040 --> 00:33.560
+ To support this podcast,
+
+00:33.560 --> 00:36.360
+ please check out our sponsors in the description.
+
+00:36.360 --> 00:38.840
+ This is the Lex Friedman podcast
+
+00:38.840 --> 00:42.320
+ and here is my conversation with Jay McClelland.
+
+00:43.440 --> 00:45.480
+ You are one of the seminal figures
+
+00:45.480 --> 00:47.400
+ in the history of neural networks.
+
+00:47.400 --> 00:49.840
+ At the intersection of cognitive psychology
+
+00:49.840 --> 00:51.720
+ and computer science,
+
+00:51.720 --> 00:54.240
+ what do you has over the decades emerged
+
+00:54.240 --> 00:57.480
+ as the most beautiful aspect about neural networks,
+
+00:57.480 --> 00:59.520
+ both artificial and biological?
+
+01:00.920 --> 01:03.800
+ The fundamental thing I think about with neural networks
+
+01:03.800 --> 01:08.800
+ is how they allow us to link biology
+
+01:10.120 --> 01:13.600
+ with the mysteries of thought.
+
+01:13.600 --> 01:18.600
+ And when I was first entering the field,
+
+01:19.280 --> 01:23.040
+ myself in the late 60s, early 70s,
+
+01:23.040 --> 01:28.040
+ cognitive psychology had just become a field.
+
+01:29.560 --> 01:33.400
+ There was a book published in 67 called Cognitive Psychology.
+
+01:36.080 --> 01:41.080
+ And the author said that the study of the nervous system
+
+01:42.040 --> 01:44.520
+ was only of peripheral interest.
+
+01:44.520 --> 01:47.120
+ It wasn't gonna tell us anything about the mind.
+
+01:48.400 --> 01:51.920
+ And I didn't agree with that.
+
+01:51.920 --> 01:56.920
+ I always felt, oh, look, I'm a physical being.
+
+01:58.800 --> 02:02.320
+ From dust to dust, ashes to ashes,
+
+02:02.320 --> 02:04.840
+ and somehow I emerged from that.
+
+02:06.520 --> 02:07.960
+ So that's really interesting.
+
+02:07.960 --> 02:11.680
+ So there was a sense with cognitive psychology
+
+02:11.680 --> 02:16.560
+ that in understanding the sort of neuronal structure
+
+02:16.560 --> 02:20.000
+ of things, you're not going to be able to understand the mind.
+
+02:20.000 --> 02:23.680
+ And then your sense is if we study these neural networks,
+
+02:23.680 --> 02:25.880
+ we might be able to get at least very close
+
+02:25.880 --> 02:28.200
+ to understanding the fundamentals of the human mind.
+
+02:28.200 --> 02:29.280
+ Yeah.
+
+02:29.280 --> 02:32.560
+ I used to think, or I used to talk about the idea
+
+02:32.560 --> 02:35.240
+ of awakening from the Cartesian dream.
+
+02:36.600 --> 02:41.600
+ So Descartes thought about these things, right?
+
+02:41.680 --> 02:46.240
+ He was walking in the gardens of Versailles one day
+
+02:46.240 --> 02:48.000
+ and he stepped on a stone.
+
+02:48.000 --> 02:53.000
+ And a statue moved, and he walked a little further.
+
+02:53.520 --> 02:55.880
+ He stepped on another stone and another statue moved.
+
+02:55.880 --> 02:59.280
+ And he like, why did the statue move
+
+02:59.280 --> 03:00.520
+ when I stepped on the stone?
+
+03:00.520 --> 03:02.840
+ And he went and talked to the gardeners
+
+03:02.840 --> 03:05.800
+ and he found out that they had a hydraulic system
+
+03:06.760 --> 03:10.600
+ that allowed the physical contact with the stone
+
+03:10.600 --> 03:12.760
+ to cause water to flow in various directions,
+
+03:12.760 --> 03:14.760
+ which caused water to flow into the statue
+
+03:14.760 --> 03:15.840
+ and move the statue.
+
+03:15.840 --> 03:20.840
+ And he used this as the beginnings of a theory
+
+03:22.840 --> 03:26.480
+ about how animals act.
+
+03:28.280 --> 03:33.280
+ And he had this notion that these little fibers
+
+03:33.360 --> 03:36.440
+ that people had identified that weren't carrying the blood,
+
+03:37.440 --> 03:39.920
+ you know, were these little hydraulic tubes
+
+03:39.920 --> 03:42.160
+ that if you touch something that would be pressure
+
+03:42.160 --> 03:43.720
+ and it would send a signal of pressure
+
+03:43.720 --> 03:47.960
+ to the other parts of the system and that would cause action.
+
+03:49.200 --> 03:54.200
+ So he had a mechanistic theory of animal behavior.
+
+03:54.240 --> 03:59.040
+ And he thought that the human had this animal body,
+
+04:00.080 --> 04:05.080
+ but that some divine something else had to have come down
+
+04:05.080 --> 04:09.080
+ and been placed in him to give him the ability to think.
+
+04:09.080 --> 04:14.080
+ Right, so the physical world includes the body in action,
+
+04:14.400 --> 04:18.080
+ but it doesn't include thought according to Descartes, right?
+
+04:18.080 --> 04:21.560
+ And so the study of physiology at that time
+
+04:21.560 --> 04:25.040
+ was the study of sensory systems and motor systems
+
+04:25.040 --> 04:28.800
+ and things that you could directly measure
+
+04:28.800 --> 04:31.920
+ when you stimulated neurons and stuff like that.
+
+04:31.920 --> 04:36.920
+ And the study of cognition was something that, you know,
+
+04:36.920 --> 04:40.640
+ was tied in with abstract computer algorithms
+
+04:40.640 --> 04:41.880
+ and things like that.
+
+04:42.880 --> 04:44.600
+ But when I was an undergraduate,
+
+04:44.600 --> 04:48.240
+ I learned about the physiological mechanisms.
+
+04:48.240 --> 04:50.800
+ And so when I'm studying cognitive psychology
+
+04:50.800 --> 04:53.320
+ as a first year PhD student, I'm saying,
+
+04:53.320 --> 04:55.840
+ wait a minute, the whole thing is biological.
+
+04:57.600 --> 04:59.200
+ You had that intuition right away.
+
+04:59.200 --> 05:00.480
+ That seemed obvious to you.
+
+05:00.480 --> 05:02.560
+ Yeah, yeah.
+
+05:02.560 --> 05:04.000
+ Isn't that magical though,
+
+05:04.000 --> 05:07.760
+ that from just the little bit of biology can emerge
+
+05:07.760 --> 05:10.440
+ the full beauty of the human experience?
+
+05:10.440 --> 05:12.760
+ Why is that so obvious to you?
+
+05:12.760 --> 05:16.760
+ Well, obvious and not obvious at the same time.
+
+05:17.760 --> 05:20.000
+ And I think about Darwin in this context too,
+
+05:20.000 --> 05:24.600
+ because Darwin knew very early on
+
+05:24.600 --> 05:28.840
+ that none of the ideas that anybody had ever offered
+
+05:28.840 --> 05:30.840
+ gave him a sense of understanding
+
+05:30.840 --> 05:34.160
+ how evolution could have worked.
+
+05:36.040 --> 05:40.120
+ But he wanted to figure out how it could have worked.
+
+05:40.120 --> 05:42.120
+ That was his goal.
+
+05:42.120 --> 05:47.120
+ And he spent a lot of time working on this idea
+
+05:48.080 --> 05:50.880
+ and coming, you know, reading about things
+
+05:50.880 --> 05:53.120
+ that gave him hints and thinking they were interesting,
+
+05:53.120 --> 05:56.360
+ but not knowing why and drawing more and more pictures
+
+05:56.360 --> 05:58.680
+ of different birds that differ slightly from each other
+
+05:58.680 --> 05:59.600
+ and so on, you know.
+
+05:59.600 --> 06:02.520
+ And then he figured it out.
+
+06:03.400 --> 06:06.960
+ But after he figured it out, he had nightmares about it.
+
+06:06.960 --> 06:10.000
+ He would dream about the complexity of the eye
+
+06:10.000 --> 06:12.720
+ and the arguments that people had given
+
+06:12.720 --> 06:16.200
+ about how ridiculous it was to imagine
+
+06:16.200 --> 06:20.480
+ that that could have ever emerged from some sort of,
+
+06:20.480 --> 06:24.680
+ you know, unguided process,
+
+06:24.680 --> 06:29.840
+ that it hadn't been the product of design.
+
+06:29.840 --> 06:32.000
+ So he didn't publish for a long time,
+
+06:32.000 --> 06:35.440
+ in part because he was scared of his own ideas.
+
+06:35.440 --> 06:38.360
+ He didn't think they could probably possibly be true.
+
+06:38.360 --> 06:39.360
+ Yeah.
+
+06:40.960 --> 06:45.680
+ But then, you know, by the time the 20th century
+
+06:45.680 --> 06:49.840
+ rolls around, we all, you know,
+
+06:49.840 --> 06:54.440
+ we understand that many people understand
+
+06:54.440 --> 06:57.960
+ or believe that evolution produced, you know,
+
+06:57.960 --> 07:02.120
+ the entire range of animals that there are.
+
+07:03.560 --> 07:06.040
+ And, you know, Descartes's idea starts
+
+07:06.040 --> 07:08.240
+ to seem a little wonky after a while, right?
+
+07:08.240 --> 07:09.480
+ Like, well, wait a minute.
+
+07:11.240 --> 07:15.400
+ There's the apes and the chimpanzees and the bonobos
+
+07:15.400 --> 07:18.400
+ and, you know, like, they're pretty smart in some ways,
+
+07:18.400 --> 07:19.360
+ you know, so what?
+
+07:20.600 --> 07:22.040
+ Oh, you know, somebody comes up,
+
+07:22.040 --> 07:23.720
+ oh, there's a certain part of the brain
+
+07:23.720 --> 07:24.560
+ that's still different.
+
+07:24.560 --> 07:26.720
+ They don't, you know, there's no hippocampus
+
+07:26.720 --> 07:28.760
+ in the monkey brain.
+
+07:28.760 --> 07:30.160
+ It's only in the human brain.
+
+07:31.160 --> 07:34.280
+ Huxley had to do a surgery in front of many, many people
+
+07:34.280 --> 07:36.280
+ in the late 19th century to show to them
+
+07:36.280 --> 07:40.360
+ there's actually a hippocampus in the chimpanzees brain,
+
+07:40.360 --> 07:42.000
+ you know?
+
+07:42.000 --> 07:45.840
+ So their continuity of the species
+
+07:45.840 --> 07:49.680
+ is another element that, you know,
+
+07:49.680 --> 07:54.400
+ contributes to this sort of, you know,
+
+07:55.680 --> 08:00.680
+ idea that we are ourselves a total product of nature.
+
+08:01.920 --> 08:06.920
+ And that, to me, is the magic and the mystery how.
+
+08:06.960 --> 08:11.880
+ How nature could actually, you know,
+
+08:11.880 --> 08:16.880
+ give rise to organisms that have the capabilities
+
+08:16.880 --> 08:18.440
+ that we have.
+
+08:18.440 --> 08:21.440
+ So it's interesting because even the idea of evolution
+
+08:21.440 --> 08:25.440
+ is hard for me to keep all together in my mind.
+
+08:25.440 --> 08:28.440
+ So because we think of a human timescale,
+
+08:28.440 --> 08:30.800
+ it's hard to imagine that, like,
+
+08:30.800 --> 08:34.480
+ the development of the human eye will give me nightmares, too.
+
+08:34.480 --> 08:38.120
+ Because you have to think across many, many, many generations.
+
+08:38.120 --> 08:40.880
+ And it's very tempting to think about, kind of,
+
+08:40.880 --> 08:43.040
+ a growth of a complicated object.
+
+08:43.040 --> 08:45.880
+ And it's like, how is it possible for that to happen?
+
+08:45.880 --> 08:50.080
+ Is it possible for that such a thing to be built?
+
+08:50.080 --> 08:53.240
+ Because also, me, from a robotics engineering perspective,
+
+08:53.240 --> 08:55.320
+ it's very hard to build these systems.
+
+08:55.320 --> 08:58.600
+ How can, through an undirected process,
+
+08:58.600 --> 09:00.960
+ can a complex thing be designed?
+
+09:00.960 --> 09:03.440
+ It seems not, it seems wrong.
+
+09:03.440 --> 09:05.640
+ Yeah, so that's absolutely right.
+
+09:05.640 --> 09:08.680
+ And, you know, a slightly different career path
+
+09:08.680 --> 09:10.600
+ that would have been equally interesting to me
+
+09:10.600 --> 09:15.880
+ would have been to actually study the process
+
+09:15.880 --> 09:21.400
+ of embryological development flowing on
+
+09:21.400 --> 09:28.800
+ into brain development and the exquisite, sort of,
+
+09:28.800 --> 09:32.320
+ laying down of pathways and so on that occurs in the brain.
+
+09:32.320 --> 09:35.720
+ And I know the slightest bit about that is not my field,
+
+09:35.720 --> 09:43.800
+ but there are, you know, fascinating aspects
+
+09:43.800 --> 09:47.600
+ to this process that eventually result
+
+09:47.600 --> 09:53.960
+ in the, you know, the complexity of various brains.
+
+09:53.960 --> 10:00.600
+ At least, you know, one thing we're in the field,
+
+10:00.600 --> 10:02.480
+ I think people have felt for a long time.
+
+10:02.480 --> 10:05.920
+ And in the study of vision, the continuity
+
+10:05.920 --> 10:08.480
+ between humans and nonhuman animals
+
+10:08.480 --> 10:12.520
+ has been second nature for a lot longer.
+
+10:12.520 --> 10:15.360
+ I was having, I had this conversation
+
+10:15.360 --> 10:17.480
+ with somebody who's a vision scientist,
+
+10:17.480 --> 10:19.880
+ and you're saying, oh, we don't have any problem with this.
+
+10:19.880 --> 10:21.440
+ You know, the monkey's visual system
+
+10:21.440 --> 10:26.280
+ and the human visual system, extremely similar,
+
+10:26.280 --> 10:29.720
+ up to certain levels, of course, they diverge after a while.
+
+10:29.720 --> 10:35.560
+ But the first, the visual pathway from the eye to the brain
+
+10:35.560 --> 10:43.360
+ and the first few layers of cortex or cortical areas,
+
+10:43.360 --> 10:49.200
+ I guess, one would say, are extremely similar.
+
+10:49.200 --> 10:52.600
+ Yeah, so on the cognition side is where the leap seems
+
+10:52.600 --> 10:55.040
+ to happen with humans, that it does seem
+
+10:55.040 --> 10:56.680
+ to work kind of special.
+
+10:56.680 --> 10:58.520
+ And that's a really interesting question
+
+10:58.520 --> 11:00.320
+ when thinking about alien life,
+
+11:00.320 --> 11:03.120
+ or if there's other intelligent alien civilizations
+
+11:03.120 --> 11:06.040
+ out there, is how special is this leap?
+
+11:06.040 --> 11:09.320
+ So one special thing seems to be the origin of life itself.
+
+11:09.320 --> 11:11.880
+ However you define that, there's a gray area.
+
+11:11.880 --> 11:14.840
+ And the other leap, this is very biased perspective
+
+11:14.840 --> 11:19.760
+ of a human, is the origin of intelligence.
+
+11:19.760 --> 11:22.080
+ And again, from an engineer perspective,
+
+11:22.080 --> 11:24.440
+ it's a difficult question to ask.
+
+11:24.440 --> 11:28.000
+ An important one is how difficult does that leap?
+
+11:28.000 --> 11:30.080
+ How special were humans?
+
+11:30.080 --> 11:32.360
+ Did a monolith come down?
+
+11:32.360 --> 11:33.720
+ Did aliens bring down a monolith?
+
+11:33.720 --> 11:38.120
+ And some apes had to touch a monolith to get it?
+
+11:38.120 --> 11:41.640
+ It's a lot like Descartes's idea, right?
+
+11:41.640 --> 11:46.640
+ Exactly, but it just seems one heck of a leap
+
+11:46.640 --> 11:48.520
+ to get to this level of intelligence.
+
+11:48.520 --> 12:00.640
+ Yeah, and so Chomsky argued that some genetic fluke occurred
+
+12:00.640 --> 12:02.320
+ 100,000 years ago.
+
+12:02.320 --> 12:07.120
+ And just happened that some human,
+
+12:07.120 --> 12:13.040
+ some hominin predecessor of current humans
+
+12:13.040 --> 12:20.360
+ had this one genetic tweak that resulted in language.
+
+12:20.360 --> 12:28.440
+ And language then provided this special thing that
+
+12:28.440 --> 12:30.920
+ separates us from all other animals.
+
+12:36.320 --> 12:39.440
+ I think there's a lot of truth to the value and importance
+
+12:39.440 --> 12:43.440
+ of language, but I think it comes along
+
+12:43.440 --> 12:49.000
+ with the evolution of a lot of other related things related
+
+12:49.000 --> 12:54.120
+ to sociality and mutual engagement with others
+
+12:54.120 --> 13:01.480
+ and establishment of, I don't know,
+
+13:01.480 --> 13:07.080
+ rich mechanisms for organizing and understanding
+
+13:07.080 --> 13:12.960
+ of the world, which language then plugs into.
+
+13:12.960 --> 13:16.600
+ Right, so language is a tool that
+
+13:16.600 --> 13:19.040
+ allows you to do this kind of collective intelligence.
+
+13:19.040 --> 13:21.560
+ And whatever is at the core of the thing
+
+13:21.560 --> 13:23.800
+ that allows for this collective intelligence
+
+13:23.800 --> 13:25.320
+ is the main thing.
+
+13:25.320 --> 13:29.240
+ And it's interesting to think about that one fluke,
+
+13:29.240 --> 13:34.840
+ one mutation could lead to the first crack opening
+
+13:34.840 --> 13:37.880
+ of the door to human intelligence.
+
+13:37.880 --> 13:39.200
+ Like all it takes is one.
+
+13:39.200 --> 13:41.520
+ Like evolution just kind of opens the door a little bit
+
+13:41.520 --> 13:45.880
+ and then time and selection takes care of the rest.
+
+13:45.880 --> 13:48.160
+ You know, there's so many fascinating aspects
+
+13:48.160 --> 13:49.120
+ to these kinds of things.
+
+13:49.120 --> 13:54.160
+ So we think of evolution as continuous, right?
+
+13:54.160 --> 13:58.680
+ We think, oh, yes, OK, over 500 million years,
+
+13:58.680 --> 14:04.840
+ there could have been this relatively continuous changes.
+
+14:04.840 --> 14:13.120
+ And but that's not what anthropologists, evolutionary
+
+14:13.120 --> 14:15.600
+ biologists found from the fossil record.
+
+14:15.600 --> 14:24.440
+ They found hundreds of millions of years of stasis.
+
+14:24.440 --> 14:27.040
+ And then suddenly a change occurs.
+
+14:27.040 --> 14:31.600
+ Well, suddenly on that scale is a million years or something.
+
+14:31.600 --> 14:33.920
+ But or even 10 million years.
+
+14:33.920 --> 14:38.880
+ But the concept of punctuated equilibrium
+
+14:38.880 --> 14:44.160
+ was a very important concept in evolutionary biology
+
+14:44.160 --> 14:53.840
+ and that also feels somehow right about the stages
+
+14:53.840 --> 14:55.200
+ of our mental abilities.
+
+14:55.200 --> 14:59.200
+ We seem to have a certain kind of mindset at a certain age.
+
+14:59.200 --> 15:04.240
+ And then at another age, we look at that four year old
+
+15:04.240 --> 15:07.200
+ and say, oh, my god, how could they have thought that way?
+
+15:07.200 --> 15:10.120
+ So Piaget was known for this kind of stage theory
+
+15:10.120 --> 15:11.560
+ of child development, right?
+
+15:11.560 --> 15:14.760
+ And you look at it closely and suddenly those stages
+
+15:14.760 --> 15:17.160
+ are so discreet and transitions.
+
+15:17.160 --> 15:19.360
+ But the difference between the four year old and the seven
+
+15:19.360 --> 15:20.840
+ year old is profound.
+
+15:20.840 --> 15:24.280
+ And that's another thing that's always interested me
+
+15:24.280 --> 15:28.200
+ is how we, something happens over the course
+
+15:28.200 --> 15:31.280
+ of several years of experience where at some point we
+
+15:31.280 --> 15:34.920
+ reach the point where something like an insight
+
+15:34.920 --> 15:38.240
+ or a transition or a new stage of development occurs.
+
+15:38.240 --> 15:45.240
+ And these kinds of things can be understood
+
+15:45.240 --> 15:47.600
+ in complex systems research.
+
+15:47.600 --> 15:55.840
+ And so evolutionary biology, developmental biology,
+
+15:55.840 --> 15:57.760
+ cognitive development are all things
+
+15:57.760 --> 16:00.000
+ that have been approached in this kind of way.
+
+16:00.000 --> 16:01.160
+ Yeah.
+
+16:01.160 --> 16:03.920
+ Just like you said, I find both fascinating
+
+16:03.920 --> 16:07.160
+ those early years of human life, but also
+
+16:07.160 --> 16:13.120
+ the early minutes, days of the embryonic development
+
+16:13.120 --> 16:17.440
+ to how from embryos you get the brain.
+
+16:17.440 --> 16:20.840
+ That development, again, from an engineer perspective
+
+16:20.840 --> 16:22.000
+ is fascinating.
+
+16:22.000 --> 16:27.360
+ So the early, when you deploy the brain to the human world
+
+16:27.360 --> 16:29.320
+ and it gets to explore that world and learn,
+
+16:29.320 --> 16:30.440
+ that's fascinating.
+
+16:30.440 --> 16:33.320
+ But just like the assembly of the mechanism
+
+16:33.320 --> 16:36.640
+ that is capable of learning, that's amazing.
+
+16:36.640 --> 16:39.600
+ The stuff they're doing with brain organoids
+
+16:39.600 --> 16:42.600
+ where you can build many brains and study
+
+16:42.600 --> 16:48.240
+ that self assembly of a mechanism from the DNA material,
+
+16:48.240 --> 16:51.720
+ that's like, what the heck?
+
+16:51.720 --> 16:55.240
+ You have literally biological programs
+
+16:55.240 --> 17:00.520
+ that just generate a system, this mushy thing that's
+
+17:00.520 --> 17:05.600
+ able to be robust and learn in a very unpredictable world
+
+17:05.600 --> 17:08.280
+ and learn seemingly arbitrary things.
+
+17:08.280 --> 17:11.960
+ Or a very large number of things
+
+17:11.960 --> 17:14.080
+ that enable survival.
+
+17:14.080 --> 17:15.040
+ Yeah.
+
+17:15.040 --> 17:19.880
+ Ultimately, that is a very important part
+
+17:19.880 --> 17:22.280
+ of the whole process of understanding
+
+17:22.280 --> 17:27.720
+ this sort of emergence of mind from brain kind of thing.
+
+17:27.720 --> 17:29.760
+ And the whole thing seems to be pretty continuous.
+
+17:29.760 --> 17:32.520
+ So let me step back to neural networks
+
+17:32.520 --> 17:35.160
+ for another brief minute.
+
+17:35.160 --> 17:37.880
+ You wrote parallel distributed processing books
+
+17:37.880 --> 17:42.080
+ that explored ideas of neural networks in the 1980s
+
+17:42.080 --> 17:43.160
+ together with a few folks.
+
+17:43.160 --> 17:47.160
+ But the books you wrote with David Romelhardt,
+
+17:47.160 --> 17:50.840
+ who is the first author on the back propagation paper,
+
+17:50.840 --> 17:52.400
+ which you have Hinton.
+
+17:52.400 --> 17:54.400
+ So these are just some figures at the time
+
+17:54.400 --> 17:57.000
+ that we're thinking about these big ideas.
+
+17:57.000 --> 18:00.320
+ What are some memorable moments of discovery
+
+18:00.320 --> 18:04.560
+ and beautiful ideas from those early days?
+
+18:04.560 --> 18:12.000
+ I'm going to start sort of with my own process in the mid
+
+18:12.000 --> 18:18.840
+ 70s and then into the late 70s when I met Jeff Hinton
+
+18:18.840 --> 18:21.640
+ and he came to San Diego.
+
+18:21.640 --> 18:28.960
+ And we were all together in my time in graduate schools.
+
+18:28.960 --> 18:30.280
+ I've already described to you.
+
+18:30.280 --> 18:33.360
+ I had this sort of feeling of, OK,
+
+18:33.360 --> 18:35.640
+ I'm really interested in human cognition.
+
+18:35.640 --> 18:40.160
+ But this disembodied sort of way of thinking about it
+
+18:40.160 --> 18:44.560
+ that I'm getting from the current mode of thought about it
+
+18:44.560 --> 18:47.200
+ isn't working fully for me.
+
+18:47.200 --> 18:53.680
+ And when I got my assistant professorship, I went to UCSD
+
+18:53.680 --> 18:58.560
+ and that was in 1974.
+
+18:58.560 --> 19:00.920
+ Something amazing had just happened.
+
+19:00.920 --> 19:03.600
+ Dave Rommelhardt had written a book together
+
+19:03.600 --> 19:06.240
+ with another man named Don Norman.
+
+19:06.240 --> 19:09.960
+ And the book was called Explorations in Cognition.
+
+19:09.960 --> 19:14.800
+ And it was a series of chapters exploring
+
+19:14.800 --> 19:17.800
+ interesting questions about cognition,
+
+19:17.800 --> 19:22.880
+ but in a completely sort of abstract, nonbiological kind
+
+19:22.880 --> 19:23.400
+ of way.
+
+19:23.400 --> 19:25.440
+ And I'm saying, gee, this is amazing.
+
+19:25.440 --> 19:29.000
+ I'm coming to this community where people can get together
+
+19:29.000 --> 19:35.120
+ and feel like they've collectively exploring ideas.
+
+19:35.120 --> 19:39.880
+ And it was a book that had a lot of, I don't know,
+
+19:39.880 --> 19:41.000
+ lightness to it.
+
+19:41.000 --> 19:47.240
+ And Don Norman, who was the more senior figure
+
+19:47.240 --> 19:51.240
+ to Rommelhardt at that time, who led that project,
+
+19:51.240 --> 19:55.880
+ always created this spirit of playful exploration of ideas.
+
+19:55.880 --> 19:58.320
+ And so I'm like, wow, this is great.
+
+19:58.320 --> 20:07.560
+ But I was also still trying to get from the neurons
+
+20:07.560 --> 20:10.440
+ to the cognition.
+
+20:10.440 --> 20:15.720
+ And I realized at one point, I got this opportunity
+
+20:15.720 --> 20:18.760
+ to go to a conference where I heard a talk by a man named
+
+20:18.760 --> 20:22.560
+ James Anderson, who was an engineer,
+
+20:22.560 --> 20:26.000
+ but by then a professor in a psychology department
+
+20:26.000 --> 20:33.240
+ who had used linear algebra to create neural network models
+
+20:33.240 --> 20:37.520
+ of perception and categorization and memory.
+
+20:37.520 --> 20:41.160
+ And I just blew me out of the water
+
+20:41.160 --> 20:47.920
+ that one could create a model that was simulating neurons,
+
+20:47.920 --> 20:56.720
+ not just kind of engaged in a stepwise algorithmic process
+
+20:56.720 --> 20:58.560
+ that was construed abstractly.
+
+20:58.560 --> 21:03.560
+ But it was simulating remembering and recalling
+
+21:03.560 --> 21:07.960
+ and recognizing the prior occurrence of a stimulus
+
+21:07.960 --> 21:08.960
+ or something like that.
+
+21:08.960 --> 21:13.480
+ So for me, this was a bridge between the mind and the brain.
+
+21:13.480 --> 21:20.480
+ And I remember I was walking cross campus one day in 1977.
+
+21:20.480 --> 21:25.000
+ And I almost felt like St. Paul on the road to Damascus.
+
+21:25.000 --> 21:30.040
+ I said to myself, you know, if I think about the mind,
+
+21:30.040 --> 21:32.760
+ in terms of a neural network, it will help me answer.
+
+21:32.760 --> 21:36.040
+ The question is about the mind that I'm trying to answer.
+
+21:36.040 --> 21:38.760
+ And that really excited me.
+
+21:38.760 --> 21:45.040
+ So I think that a lot of people were becoming excited about that.
+
+21:45.040 --> 21:50.000
+ And one of those people was Jim Anderson, who I had mentioned.
+
+21:50.000 --> 21:52.120
+ Another one was Steve Grossberg, who
+
+21:52.120 --> 21:58.720
+ had been writing about neural networks since the 60s.
+
+21:58.720 --> 22:00.720
+ And Jeff Hinton was yet another.
+
+22:00.720 --> 22:08.760
+ And his PhD dissertation showed up in an applicant pool
+
+22:08.760 --> 22:11.720
+ to a postdoctoral training program
+
+22:11.720 --> 22:16.200
+ that Dave and Don, the two men I mentioned before,
+
+22:16.200 --> 22:19.320
+ Rommelhardt and Norman, were administering.
+
+22:19.320 --> 22:23.200
+ And Rommelhardt got really excited about Hinton's PhD
+
+22:23.200 --> 22:26.160
+ dissertation.
+
+22:26.160 --> 22:31.600
+ And so Hinton was one of the first people who came and joined
+
+22:31.600 --> 22:35.520
+ this group of postdoctoral scholars that
+
+22:35.520 --> 22:39.360
+ was funded by this wonderful grant that they got.
+
+22:39.360 --> 22:44.080
+ Another one who is also well known in neural network circles
+
+22:44.080 --> 22:45.680
+ is Paul Smolensky.
+
+22:45.680 --> 22:47.960
+ He was another one of that group.
+
+22:47.960 --> 22:55.960
+ Anyway, Jeff and Jim Anderson organized a conference
+
+22:55.960 --> 22:59.520
+ at UCSD where we were.
+
+22:59.520 --> 23:04.560
+ And it was called Parallel Models of Associative Memory.
+
+23:04.560 --> 23:06.360
+ And it brought all the people together
+
+23:06.360 --> 23:11.800
+ who had been thinking about these kinds of ideas in 1979 or 1980.
+
+23:11.800 --> 23:18.800
+ And this began to kind of really resonate
+
+23:18.800 --> 23:23.200
+ with some of Rommelhardt's own thinking,
+
+23:23.200 --> 23:27.800
+ some of his reasons for wanting something other than the kinds
+
+23:27.800 --> 23:30.080
+ of computation he'd been doing so far.
+
+23:30.080 --> 23:32.000
+ So let me talk about Rommelhardt now for a minute,
+
+23:32.000 --> 23:33.000
+ OK, with that context.
+
+23:33.000 --> 23:34.600
+ Well, let me also just pause because you
+
+23:34.600 --> 23:37.640
+ said so many interesting things before we go to Rommelhardt.
+
+23:37.640 --> 23:40.960
+ So first of all, for people who are not familiar,
+
+23:40.960 --> 23:43.120
+ neural networks are at the core of the machine learning,
+
+23:43.120 --> 23:45.280
+ deep learning revolution of today.
+
+23:45.280 --> 23:48.560
+ Jeffrey Hinton that we mentioned is one of the figures
+
+23:48.560 --> 23:50.400
+ that were important in the history,
+
+23:50.400 --> 23:53.080
+ like yourself, in the development of these neural networks
+
+23:53.080 --> 23:54.880
+ or artificial neural networks that are then
+
+23:54.880 --> 23:56.960
+ used for the machine learning application.
+
+23:56.960 --> 23:59.320
+ Like I mentioned, the back propagation paper
+
+23:59.320 --> 24:02.840
+ is one of the optimization mechanisms by which
+
+24:02.840 --> 24:05.840
+ these networks can learn.
+
+24:05.840 --> 24:09.520
+ And the word parallel is really interesting.
+
+24:09.520 --> 24:12.960
+ So it's almost like synonymous from a computational
+
+24:12.960 --> 24:15.280
+ perspective with how you thought at the time
+
+24:15.280 --> 24:19.360
+ about neural networks as parallel computation.
+
+24:19.360 --> 24:21.040
+ Would that be fair to say?
+
+24:21.040 --> 24:25.600
+ Well, yeah, the word parallel in this
+
+24:25.600 --> 24:30.160
+ comes from the idea that each neuron is
+
+24:30.160 --> 24:33.520
+ an independent computational unit, right?
+
+24:33.520 --> 24:36.400
+ It gathers data from other neurons.
+
+24:36.400 --> 24:39.320
+ It integrates it in a certain way,
+
+24:39.320 --> 24:40.920
+ and then it produces a result.
+
+24:40.920 --> 24:44.880
+ And it's a very simple little computational unit.
+
+24:44.880 --> 24:50.920
+ But it's autonomous in the sense that it does its thing,
+
+24:50.920 --> 24:53.160
+ right, it's in a biological medium
+
+24:53.160 --> 24:57.320
+ where it's getting nutrients and various chemicals
+
+24:57.320 --> 25:00.320
+ from that medium.
+
+25:00.320 --> 25:05.840
+ But you can think of it as almost like a little computer
+
+25:05.840 --> 25:07.960
+ in and of itself.
+
+25:07.960 --> 25:13.240
+ So the idea is that each, our brains have, oh, look,
+
+25:13.240 --> 25:19.280
+ 100 or hundreds, almost a billion of these little neurons,
+
+25:19.280 --> 25:24.400
+ right, and they're all capable of doing their work
+
+25:24.400 --> 25:25.600
+ at the same time.
+
+25:25.600 --> 25:29.920
+ So it's like, instead of just a single central processor
+
+25:29.920 --> 25:36.720
+ that's engaged in chug one step after another,
+
+25:36.720 --> 25:41.120
+ we have a billion of these little computational units
+
+25:41.120 --> 25:42.560
+ working at the same time.
+
+25:42.560 --> 25:45.880
+ So at the time that's, I don't know, maybe you can comment,
+
+25:45.880 --> 25:50.680
+ it seems to me, even still to me, quite a revolutionary way
+
+25:50.680 --> 25:53.640
+ to think about computation relative
+
+25:53.640 --> 25:56.680
+ to the development of theoretical computer science
+
+25:56.680 --> 25:58.840
+ alongside of that, where it's very much
+
+25:58.840 --> 26:00.480
+ like sequential computer.
+
+26:00.480 --> 26:02.280
+ You're analyzing algorithms that are
+
+26:02.280 --> 26:04.400
+ running on a single computer.
+
+26:04.400 --> 26:08.320
+ You're saying, wait a minute, why don't we
+
+26:08.320 --> 26:11.400
+ take a really dumb, very simple computer
+
+26:11.400 --> 26:14.440
+ and just have a lot of them interconnected together?
+
+26:14.440 --> 26:16.600
+ And they're all operating in their own little world
+
+26:16.600 --> 26:18.600
+ and they're communicating with each other
+
+26:18.600 --> 26:21.000
+ and thinking of computation in that way.
+
+26:21.000 --> 26:24.560
+ And from that kind of computation,
+
+26:24.560 --> 26:28.600
+ trying to understand how things like certain characteristics
+
+26:28.600 --> 26:31.400
+ of the human mind can emerge, that's
+
+26:31.400 --> 26:36.040
+ quite a revolutionary way of thinking, I would say.
+
+26:36.040 --> 26:37.560
+ Well, yes, I agree with you.
+
+26:37.560 --> 26:48.000
+ And there's still this sort of sense of not
+
+26:48.000 --> 26:54.400
+ sort of knowing how we kind of get all the way there, I think.
+
+26:54.400 --> 26:58.720
+ And this very much remains at the core of the questions
+
+26:58.720 --> 27:01.880
+ that everybody's asking about the capabilities of deep learning
+
+27:01.880 --> 27:03.000
+ and all these kinds of things.
+
+27:03.000 --> 27:08.040
+ But if I could just play this out a little bit,
+
+27:08.040 --> 27:13.600
+ a convolutional neural network or a CNN, which many people
+
+27:13.600 --> 27:19.840
+ may have heard of, is a set of, you
+
+27:19.840 --> 27:25.680
+ could think of it biologically as a set of collections
+
+27:25.680 --> 27:28.080
+ of neurons.
+
+27:28.080 --> 27:33.680
+ Each collection has maybe 10,000 neurons in it.
+
+27:33.680 --> 27:35.760
+ But there's many layers, right?
+
+27:35.760 --> 27:39.040
+ Some of these things are hundreds or even 1,000 layers
+
+27:39.040 --> 27:43.680
+ deep, but others are closer to the biological brain
+
+27:43.680 --> 27:45.920
+ and maybe they're like 20 layers deep or something
+
+27:45.920 --> 27:47.040
+ like that.
+
+27:47.040 --> 27:52.960
+ So within each layer, we have thousands of neurons
+
+27:52.960 --> 27:54.440
+ or tens of thousands, maybe.
+
+27:54.440 --> 27:59.480
+ Well, in the brain, we probably have millions in each layer,
+
+27:59.480 --> 28:02.640
+ but we're getting sort of similar in a certain way, right?
+
+28:06.000 --> 28:09.280
+ And then we think, OK, at the bottom level,
+
+28:09.280 --> 28:12.120
+ there's an array of things that are like the photoreceptors.
+
+28:12.120 --> 28:15.520
+ In the eye, they respond to the amount of light
+
+28:15.520 --> 28:20.000
+ of a certain wavelength at a certain location on the pixel
+
+28:20.000 --> 28:21.200
+ array.
+
+28:21.200 --> 28:24.640
+ So that's like the biological eye,
+
+28:24.640 --> 28:27.320
+ and then there's several further stages going up,
+
+28:27.320 --> 28:30.600
+ layers of these neuron like units.
+
+28:30.600 --> 28:36.720
+ And you go from that raw input, array of pixels,
+
+28:36.720 --> 28:40.840
+ to a classification, you've actually
+
+28:40.840 --> 28:44.160
+ built a system that could do the same kind of thing
+
+28:44.160 --> 28:46.760
+ that you and I do when we open our eyes and we look around
+
+28:46.760 --> 28:49.760
+ and we see there's a cup, there's a cell phone,
+
+28:49.760 --> 28:52.200
+ there's a water bottle.
+
+28:52.200 --> 28:54.960
+ And these systems are doing that now, right?
+
+28:54.960 --> 29:00.400
+ So they are, in terms of the parallel idea
+
+29:00.400 --> 29:02.240
+ that we were talking about before,
+
+29:02.240 --> 29:05.560
+ they are doing this massively parallel computation
+
+29:05.560 --> 29:09.880
+ in the sense that each of the neurons in each of those layers
+
+29:09.880 --> 29:16.080
+ is thought of as computing its little bit of something
+
+29:16.080 --> 29:19.680
+ about the input simultaneously with all the other ones
+
+29:19.680 --> 29:21.960
+ in the same layer.
+
+29:21.960 --> 29:24.080
+ We get to the point of abstracting that away
+
+29:24.080 --> 29:27.120
+ and thinking, oh, it's just one whole vector that's
+
+29:27.120 --> 29:30.440
+ being computed, one activation pattern that's
+
+29:30.440 --> 29:32.000
+ computed in a single step.
+
+29:32.000 --> 29:37.280
+ And that abstraction is useful, but it's still
+
+29:37.280 --> 29:41.320
+ that parallel and distributed processing, right?
+
+29:41.320 --> 29:43.800
+ Each one of these guys is just contributing a tiny bit
+
+29:43.800 --> 29:45.080
+ to that whole thing.
+
+29:45.080 --> 29:46.720
+ And that's the excitement that you felt
+
+29:46.720 --> 29:49.800
+ that from these simple things, you
+
+29:49.800 --> 29:53.880
+ can emerge when you add these level of abstractions on it.
+
+29:53.880 --> 29:56.040
+ You can start getting all the beautiful things
+
+29:56.040 --> 29:58.200
+ that we think about as cognition.
+
+29:58.200 --> 30:01.160
+ And so, OK, so you have this conference.
+
+30:01.160 --> 30:02.560
+ I forgot the name already, but it's
+
+30:02.560 --> 30:04.440
+ parallel and something associative of memory
+
+30:04.440 --> 30:08.640
+ and so on, very exciting, technical and exciting title.
+
+30:08.640 --> 30:11.720
+ And you started talking about Dave Romerhardt.
+
+30:11.720 --> 30:15.120
+ So who is this person that was so,
+
+30:15.120 --> 30:17.240
+ you've spoken very highly of him.
+
+30:17.240 --> 30:21.720
+ Can you tell me about him, his ideas, his mind,
+
+30:21.720 --> 30:24.920
+ who he was as a human being, as a scientist?
+
+30:24.920 --> 30:31.720
+ So Dave came from a little tiny town in Western South Dakota.
+
+30:31.720 --> 30:35.840
+ And his mother was the librarian,
+
+30:35.840 --> 30:38.360
+ and his father was the editor of the newspaper.
+
+30:38.360 --> 30:43.360
+ And I know one of his brothers pretty well.
+
+30:43.360 --> 30:48.360
+ They grew up, there were four brothers,
+
+30:48.360 --> 30:54.360
+ and they grew up together, and their father
+
+30:54.360 --> 30:57.360
+ encouraged them to compete with each other a lot.
+
+30:57.360 --> 31:02.360
+ They competed in sports, and they competed in mind games.
+
+31:02.360 --> 31:06.360
+ I don't know, things like Sudoku and chess
+
+31:06.360 --> 31:08.360
+ and various things like that.
+
+31:08.360 --> 31:16.360
+ And Dave was a standout undergraduate.
+
+31:16.360 --> 31:21.360
+ He went at a younger age than most people do to college
+
+31:21.360 --> 31:24.360
+ at the University of South Dakota and majored in mathematics.
+
+31:24.360 --> 31:29.360
+ And I don't know how he got interested in psychology,
+
+31:29.360 --> 31:34.360
+ but he applied to the mathematical psychology program
+
+31:34.360 --> 31:37.360
+ at Stanford and was accepted as a PhD student
+
+31:37.360 --> 31:40.360
+ to study mathematical psychology at Stanford.
+
+31:40.360 --> 31:46.360
+ So mathematical psychology is the use of mathematics
+
+31:46.360 --> 31:50.360
+ to model mental processes.
+
+31:50.360 --> 31:52.360
+ So something that I think these days
+
+31:52.360 --> 31:55.360
+ might be called cognitive modeling, that whole space?
+
+31:55.360 --> 32:02.360
+ Yeah, it's mathematical in the sense that you say
+
+32:02.360 --> 32:05.360
+ if this is true and that is true,
+
+32:05.360 --> 32:08.360
+ then I can derive that this should follow.
+
+32:08.360 --> 32:10.360
+ And so you say, these are my stipulations
+
+32:10.360 --> 32:12.360
+ about the fundamental principles,
+
+32:12.360 --> 32:15.360
+ and this is my prediction about behavior,
+
+32:15.360 --> 32:17.360
+ and it's all done with equations.
+
+32:17.360 --> 32:20.360
+ It's not done with a computer simulation.
+
+32:20.360 --> 32:23.360
+ You solve the equation and that tells you
+
+32:23.360 --> 32:27.360
+ what the probability that the subject will be correct
+
+32:27.360 --> 32:29.360
+ on the seventh trial of the experiment is
+
+32:29.360 --> 32:31.360
+ or something like that.
+
+32:31.360 --> 32:37.360
+ It's a use of mathematics to descriptively characterize
+
+32:37.360 --> 32:40.360
+ aspects of behavior.
+
+32:40.360 --> 32:43.360
+ And Stanford at that time was the place
+
+32:43.360 --> 32:48.360
+ where there were several really, really strong
+
+32:48.360 --> 32:51.360
+ mathematical thinkers who were also connected
+
+32:51.360 --> 32:53.360
+ with three or four others around the country
+
+32:53.360 --> 32:59.360
+ who brought a lot of really exciting ideas onto the table.
+
+32:59.360 --> 33:03.360
+ And it was a very, very prestigious part
+
+33:03.360 --> 33:05.360
+ of the field of psychology at that time.
+
+33:05.360 --> 33:08.360
+ So Rommelhardt comes into this.
+
+33:08.360 --> 33:13.360
+ He was a very strong student within that program.
+
+33:13.360 --> 33:19.360
+ And he got this job at this brand new university
+
+33:19.360 --> 33:24.360
+ in San Diego in 1967 where he's one of the first
+
+33:24.360 --> 33:30.360
+ assistant professors in the Department of Psychology at UCSD.
+
+33:30.360 --> 33:37.360
+ So I got there in 74, seven years later,
+
+33:37.360 --> 33:44.360
+ and Rommelhardt at that time was still doing
+
+33:44.360 --> 33:48.360
+ mathematical modeling.
+
+33:48.360 --> 33:53.360
+ But he had gotten interested in cognition.
+
+33:53.360 --> 33:59.360
+ He had gotten interested in understanding.
+
+33:59.360 --> 34:04.360
+ And understanding, I think, remains.
+
+34:04.360 --> 34:08.360
+ What does it mean to understand anyway?
+
+34:08.360 --> 34:11.360
+ It's an interesting sort of curious,
+
+34:11.360 --> 34:15.360
+ like how would we know if we really understood something?
+
+34:15.360 --> 34:19.360
+ But he was interested in building machines
+
+34:19.360 --> 34:22.360
+ that would hear a couple of sentences
+
+34:22.360 --> 34:24.360
+ right about what was going on.
+
+34:24.360 --> 34:30.360
+ So for example, one of his favorite things at that time was
+
+34:30.360 --> 34:34.360
+ Margie was sitting on the front step when she heard
+
+34:34.360 --> 34:38.360
+ the familiar jingle of the good humor man.
+
+34:38.360 --> 34:42.360
+ She remembered her birthday money and ran into the house.
+
+34:42.360 --> 34:44.360
+ What is Margie doing?
+
+34:44.360 --> 34:47.360
+ Why?
+
+34:47.360 --> 34:50.360
+ Well, there's a couple of ideas you could have,
+
+34:50.360 --> 34:54.360
+ but the most natural one is that the good humor man
+
+34:54.360 --> 34:55.360
+ brings ice cream.
+
+34:55.360 --> 34:57.360
+ She likes ice cream.
+
+34:57.360 --> 35:00.360
+ She knows she needs money to buy ice cream,
+
+35:00.360 --> 35:02.360
+ so she's going to run into the house and get her money
+
+35:02.360 --> 35:04.360
+ so she can buy herself an ice cream.
+
+35:04.360 --> 35:06.360
+ It's a huge amount of inference that has to happen
+
+35:06.360 --> 35:09.360
+ to get those things to link up with each other.
+
+35:09.360 --> 35:13.360
+ And he was interested in how the hell that could happen.
+
+35:13.360 --> 35:21.360
+ And he was trying to build good old fashioned A.I. style models
+
+35:21.360 --> 35:32.360
+ of representation of language and content of things like has money.
+
+35:32.360 --> 35:35.360
+ So like a lot of like formal logic and like knowledge bases,
+
+35:35.360 --> 35:36.360
+ like that kind of stuff.
+
+35:36.360 --> 35:37.360
+ Yeah.
+
+35:37.360 --> 35:40.360
+ So he was integrating that with his thinking about cognition.
+
+35:40.360 --> 35:41.360
+ Yes.
+
+35:41.360 --> 35:45.360
+ With his cognition, how can they mechanistically be applied
+
+35:45.360 --> 35:49.360
+ to build these knowledge, like to actually build something
+
+35:49.360 --> 35:52.360
+ that looks like a web of knowledge,
+
+35:52.360 --> 35:56.360
+ and thereby from there emerges something like understanding.
+
+35:56.360 --> 35:57.360
+ Yeah.
+
+35:57.360 --> 35:58.360
+ What the heck that is.
+
+35:58.360 --> 35:59.360
+ Yeah.
+
+35:59.360 --> 36:00.360
+ He was grappling.
+
+36:00.360 --> 36:03.360
+ This was something that they grappled with at the end of that book
+
+36:03.360 --> 36:06.360
+ that I was describing, Explorations in Cognition.
+
+36:06.360 --> 36:11.360
+ But he was realizing that the paradigm of good old fashioned A.I.
+
+36:11.360 --> 36:14.360
+ wasn't giving him the answers to these questions.
+
+36:14.360 --> 36:15.360
+ Yeah.
+
+36:15.360 --> 36:18.360
+ And by the way, that's called good old fashioned A.I. now.
+
+36:18.360 --> 36:20.360
+ It was called that at the time.
+
+36:20.360 --> 36:21.360
+ Well, it was.
+
+36:21.360 --> 36:23.360
+ It was beginning to be called that.
+
+36:23.360 --> 36:24.360
+ Because it was from the 60s.
+
+36:24.360 --> 36:25.360
+ Yeah.
+
+36:25.360 --> 36:26.360
+ Yeah.
+
+36:26.360 --> 36:29.360
+ By the late 70s, it was kind of old fashioned.
+
+36:29.360 --> 36:31.360
+ It hadn't really panned out, you know.
+
+36:31.360 --> 36:33.360
+ And people were beginning to recognize that.
+
+36:33.360 --> 36:36.360
+ And Rommelhardt was, you know, like, yeah,
+
+36:36.360 --> 36:39.360
+ he was part of the recognition that this wasn't all working.
+
+36:39.360 --> 36:50.360
+ Anyway, so he started thinking in terms of the idea that we needed systems
+
+36:50.360 --> 36:55.360
+ that allowed us to integrate multiple simultaneous constraints
+
+36:55.360 --> 36:59.360
+ in a way that would be mutually influencing each other.
+
+36:59.360 --> 37:07.360
+ So he wrote a paper that just really, first time I read it, I said,
+
+37:07.360 --> 37:11.360
+ oh, well, you know, yeah, but is this important?
+
+37:11.360 --> 37:14.360
+ But after a while, it just got under my skin.
+
+37:14.360 --> 37:18.360
+ And it was called an interactive model of reading.
+
+37:18.360 --> 37:30.360
+ And in this paper, he laid out the idea that every aspect of our interpretation
+
+37:30.360 --> 37:41.360
+ of what's coming off the page when we read at every level of analysis you can think of
+
+37:41.360 --> 37:45.360
+ actually depends on all the other levels of analysis.
+
+37:45.360 --> 37:54.360
+ So what are the actual pixels making up each letter?
+
+37:54.360 --> 38:00.360
+ And what do those pixels signify about which letters they are?
+
+38:00.360 --> 38:05.360
+ And what are those letters tell us about what words are there?
+
+38:05.360 --> 38:12.360
+ And what are those words tell us about what ideas the author is trying to convey
+
+38:12.360 --> 38:24.360
+ and so he had this model where we have these little tiny elements
+
+38:24.360 --> 38:29.360
+ that represent each of the pixels of each of the letters
+
+38:29.360 --> 38:32.360
+ and then other ones that represent the line segments in them
+
+38:32.360 --> 38:36.360
+ and other ones that represent the letters and other ones that represent the words.
+
+38:36.360 --> 38:42.360
+ And at that time, his idea was there's this set of experts.
+
+38:42.360 --> 38:48.360
+ There's an expert about how to construct a line out of pixels
+
+38:48.360 --> 38:53.360
+ and another expert about how which sets of lines go together to make which letters
+
+38:53.360 --> 38:56.360
+ and another one about which letters go together to make bench words
+
+38:56.360 --> 38:59.360
+ and another one about what the meanings of the words are
+
+38:59.360 --> 39:04.360
+ and another one about how the meanings fit together and things like that.
+
+39:04.360 --> 39:12.360
+ All these experts are looking at this data and they're updating hypotheses at other levels.
+
+39:12.360 --> 39:15.360
+ So the word expert can tell the letter expert,
+
+39:15.360 --> 39:20.360
+ oh, I think there should be a T there because I think there should be a word the here
+
+39:20.360 --> 39:23.360
+ and the bottom up sort of feature to letter expert could say,
+
+39:23.360 --> 39:28.360
+ I think there should be a T there too and if they agree, then you see a T, right?
+
+39:28.360 --> 39:32.360
+ And so there's a top down bottom up interactive process
+
+39:32.360 --> 39:34.360
+ but it's going on at all layers simultaneously.
+
+39:34.360 --> 39:38.360
+ So everything can filter all the way down from the top as well as all the way up from the bottom
+
+39:38.360 --> 39:44.360
+ and it's a completely interactive, bidirectional, parallel distributed process.
+
+39:44.360 --> 39:48.360
+ That is somehow because of the abstractions is hierarchical.
+
+39:48.360 --> 39:54.360
+ So there's different layers of responsibilities, different levels of responsibilities.
+
+39:54.360 --> 39:58.360
+ First of all, it's fascinating to think about it in this kind of mechanistic way.
+
+39:58.360 --> 40:04.360
+ So not thinking purely from the structure of a neural network or something like a neural network
+
+40:04.360 --> 40:11.360
+ but thinking about these little guys that work on letters and then the letters come words and words become sentences
+
+40:11.360 --> 40:21.360
+ and that's a very interesting hypothesis that from that kind of hierarchical structure can emerge understanding.
+
+40:21.360 --> 40:28.360
+ But the thing is though, I want to just sort of relate this to earlier part of the conversation.
+
+40:28.360 --> 40:34.360
+ When Ronald Hart was first thinking about it, there were these experts on the side,
+
+40:34.360 --> 40:39.360
+ one for the features and one for the letters and one for how the letters make the words and so on
+
+40:39.360 --> 40:46.360
+ and they would each be working sort of evaluating various propositions about, you know,
+
+40:46.360 --> 40:52.360
+ is this combination of features here going to be one that looks like the letter T and so on?
+
+40:52.360 --> 40:59.360
+ And what he realized kind of after reading Hinton's dissertation
+
+40:59.360 --> 41:06.360
+ and hearing about Jim Anderson's linear algebra based neural network models
+
+41:06.360 --> 41:12.360
+ that I was telling you about before was that he could replace those experts with neuron like processing units
+
+41:12.360 --> 41:16.360
+ which just would have their connection weights that would do this job.
+
+41:16.360 --> 41:22.360
+ So what ended up happening was that Ronald Hart and I got together
+
+41:22.360 --> 41:28.360
+ and we created a model called the Interactive Activation Model of Letter Perception
+
+41:28.360 --> 41:41.360
+ which takes these little pixel level inputs, constructs line segment features, letters and words
+
+41:41.360 --> 41:45.360
+ but now we built it out of a set of neuron like processing units
+
+41:45.360 --> 41:49.360
+ that are just connected to each other with connection weights.
+
+41:49.360 --> 41:55.360
+ So the unit for the word time has a connection to the unit for the letter T in the first position
+
+41:55.360 --> 41:59.360
+ and the letter I in the second position, so on.
+
+41:59.360 --> 42:05.360
+ And because these connections are bidirectional,
+
+42:05.360 --> 42:09.360
+ if you have prior knowledge that it might be the word time that starts to prime
+
+42:09.360 --> 42:14.360
+ the letters and the features and if you don't then it has to start bottom up
+
+42:14.360 --> 42:19.360
+ but the directionality just depends on where the information comes in first
+
+42:19.360 --> 42:23.360
+ and if you have context together with features at the same time
+
+42:23.360 --> 42:27.360
+ they can convergently result in an emergent perception
+
+42:27.360 --> 42:35.360
+ and that was the piece of work that we did together
+
+42:35.360 --> 42:44.360
+ that sort of got us both completely convinced that this neural network way of thinking
+
+42:44.360 --> 42:50.360
+ was going to be able to actually address the questions that we were interested in as cognitive cycles.
+
+42:50.360 --> 42:54.360
+ So the algorithmic side, the optimization side, those are all details.
+
+42:54.360 --> 42:59.360
+ When you first start the idea that you can get far with this kind of way of thinking,
+
+42:59.360 --> 43:01.360
+ that in itself is a profound idea.
+
+43:01.360 --> 43:07.360
+ So do you like the term connectionism to describe this kind of set of ideas?
+
+43:07.360 --> 43:09.360
+ I think it's useful.
+
+43:09.360 --> 43:17.360
+ It highlights the notion that the knowledge that the system exploits
+
+43:17.360 --> 43:21.360
+ is in the connections between the units.
+
+43:21.360 --> 43:27.360
+ There isn't a separate dictionary, there's just the connections between the units.
+
+43:27.360 --> 43:32.360
+ So I already sort of laid that on the table with the connections
+
+43:32.360 --> 43:36.360
+ from the letter units to the unit for the word time.
+
+43:36.360 --> 43:39.360
+ The unit for the word time isn't a unit for the word time
+
+43:39.360 --> 43:45.360
+ for any other reason than it's got the connections to the letters that make up the word time.
+
+43:45.360 --> 43:49.360
+ Those are the units on the input that excite it when it's excited
+
+43:49.360 --> 43:57.360
+ that it in a sense represents in the system that there's support for the hypothesis
+
+43:57.360 --> 44:01.360
+ that the word time is present in the input.
+
+44:01.360 --> 44:08.360
+ But it's not, the word time isn't written anywhere inside the model.
+
+44:08.360 --> 44:11.360
+ It's only written there in the picture we drew of the model
+
+44:11.360 --> 44:14.360
+ to say that's the unit for the word time.
+
+44:14.360 --> 44:20.360
+ And if somebody wants to tell me, well, how do you spell that word?
+
+44:20.360 --> 44:27.360
+ You have to use the connections from that out to then get those letters, for example.
+
+44:27.360 --> 44:31.360
+ That's such a counterintuitive idea.
+
+44:31.360 --> 44:35.360
+ Where humans want to think in this logic way.
+
+44:35.360 --> 44:41.360
+ This idea of connectionism, it's weird.
+
+44:41.360 --> 44:43.360
+ It's weird that this is how it all works.
+
+44:43.360 --> 44:44.360
+ Yeah.
+
+44:44.360 --> 44:46.360
+ But let's go back to that CNN, right?
+
+44:46.360 --> 44:51.360
+ That CNN with all those layers of neuron like processing units that we were talking about before.
+
+44:51.360 --> 44:55.360
+ It's going to come out and say, this is a cat, that's a dog.
+
+44:55.360 --> 44:57.360
+ But it has no idea why it said that.
+
+44:57.360 --> 45:02.360
+ It's just got all these connections between all these layers of neurons.
+
+45:02.360 --> 45:07.360
+ From the very first layer to the, whatever these layers are,
+
+45:07.360 --> 45:13.360
+ they just get numbered after a while because they somehow further in you go,
+
+45:13.360 --> 45:21.360
+ the more abstract the features are, but it's a graded and continuous sort of process of abstraction anyway.
+
+45:21.360 --> 45:28.360
+ And it goes from very local, very specific to much more sort of global,
+
+45:28.360 --> 45:33.360
+ but it's still another sort of pattern of activation over an array of units.
+
+45:33.360 --> 45:37.360
+ And then at the output side, it says it's cat or it's a dog.
+
+45:37.360 --> 45:47.360
+ And when I open my eyes and say, oh, that's Lex or, oh, there's my own dog.
+
+45:47.360 --> 45:52.360
+ And I recognize my dog, which is a member of the same species as many other dogs.
+
+45:52.360 --> 45:57.360
+ But I know this one because of some slightly unique characteristics.
+
+45:57.360 --> 46:02.360
+ I don't know how to describe what it is that makes me know that I'm looking at Lex
+
+46:02.360 --> 46:04.360
+ or at my particular dog.
+
+46:04.360 --> 46:07.360
+ Or even that I'm looking at a particular brand of car.
+
+46:07.360 --> 46:12.360
+ I can say a few words about it, but I wrote you a paragraph about the car.
+
+46:12.360 --> 46:16.360
+ You would have trouble figuring out which car is he talking about.
+
+46:16.360 --> 46:21.360
+ So the idea that we have propositional knowledge of what it is
+
+46:21.360 --> 46:28.360
+ that allows us to recognize that this is an actual instance of this particular natural kind
+
+46:28.360 --> 46:36.360
+ has always been something that it never worked.
+
+46:36.360 --> 46:41.360
+ You couldn't ever write down a set of propositions for visual recognition.
+
+46:41.360 --> 46:46.360
+ And so in that space, it's sort of always seemed very natural
+
+46:46.360 --> 46:56.360
+ that something more implicit, you don't have access to what the details of the computation were in between.
+
+46:56.360 --> 46:58.360
+ You just get the result.
+
+46:58.360 --> 47:01.360
+ So that's the other part of connectionism.
+
+47:01.360 --> 47:04.360
+ You don't read the contents of the connections.
+
+47:04.360 --> 47:09.360
+ The connections only cause outputs to occur based on inputs.
+
+47:09.360 --> 47:16.360
+ For us, that final layer or some particular layer is very important.
+
+47:16.360 --> 47:22.360
+ The one that tells us that it's our dog or it's a cat or a dog.
+
+47:22.360 --> 47:28.360
+ But each layer is probably equally as important in the grand scheme of things.
+
+47:28.360 --> 47:33.360
+ There's no reason why the cat versus dog is more important than the lower level activations.
+
+47:33.360 --> 47:34.360
+ It doesn't really matter.
+
+47:34.360 --> 47:38.360
+ I mean, all of it is just this beautiful stacking on top of each other.
+
+47:38.360 --> 47:40.360
+ And we humans live in this particular layer.
+
+47:40.360 --> 47:49.360
+ For us, it's useful to survive, to use those cat versus dog, predator versus prey, all those kinds of things.
+
+47:49.360 --> 47:52.360
+ It's fascinating that it's all contained.
+
+47:52.360 --> 47:55.360
+ But then you then ask the history of artificial intelligence.
+
+47:55.360 --> 48:05.360
+ You ask, are we able to introspect and convert the very things that allow us to tell the difference to cat and dog into logic, into formal logic.
+
+48:05.360 --> 48:06.360
+ That's been the dream.
+
+48:06.360 --> 48:10.360
+ I would say that's still part of the dream of symbolic AI.
+
+48:10.360 --> 48:19.360
+ And I've recently talked to Doug Lennett, who created Psych.
+
+48:19.360 --> 48:28.360
+ And that's a project that lasted for many decades and still carries a sort of dream in it.
+
+48:28.360 --> 48:30.360
+ We still don't know the answer.
+
+48:30.360 --> 48:34.360
+ It seems like connectionism is really powerful.
+
+48:34.360 --> 48:38.360
+ But it also seems like there's this building of knowledge.
+
+48:38.360 --> 48:41.360
+ And so how do we, how do you square those two?
+
+48:41.360 --> 48:52.360
+ Like, do you think the connections can contain the depth of human knowledge and the depth of what Dave Rommelhardt was thinking about of understanding?
+
+48:52.360 --> 48:55.360
+ Well, that remains the $64 question.
+
+48:55.360 --> 48:57.360
+ And I...
+
+48:57.360 --> 48:59.360
+ With inflation that number is higher.
+
+48:59.360 --> 49:01.360
+ Okay, $64 is the housing dollar.
+
+49:01.360 --> 49:07.360
+ Maybe it's a $64 billion question now.
+
+49:07.360 --> 49:23.360
+ You know, I think that from the emergent side, which, you know, I placed myself on.
+
+49:23.360 --> 49:29.360
+ So I used to sometimes tell people I was a radical, eliminative connectionist.
+
+49:29.360 --> 49:39.360
+ Because I didn't want them to think that I wanted to build like anything into the machine.
+
+49:39.360 --> 49:55.360
+ But I don't like the word eliminative anymore because it makes it seem like it's wrong to think that there is this emergent level of understanding.
+
+49:55.360 --> 49:59.360
+ And I disagree with that.
+
+49:59.360 --> 50:09.360
+ So I think, you know, I would call myself an a radical emergentist connectionist rather than a eliminative connectionist, right?
+
+50:09.360 --> 50:20.360
+ Because I want to acknowledge that these higher level kinds of aspects of our cognition are real.
+
+50:20.360 --> 50:28.360
+ But they don't exist as such.
+
+50:28.360 --> 50:36.360
+ And there was an example that Doug Hofstetter used to use that I thought was helpful in this respect.
+
+50:36.360 --> 50:51.360
+ Just the idea that we could think about sand dunes as entities and talk about like how many there are even.
+
+50:51.360 --> 50:56.360
+ But we also know that a sand dune is a very fluid thing.
+
+50:56.360 --> 51:10.360
+ It's a pile of sand that is capable of moving around under the wind and, you know, reforming itself in somewhat different ways.
+
+51:10.360 --> 51:22.360
+ And if we think about our thoughts as like sand dunes as being things that, you know, emerge from just the way all the lower level elements sort of work together
+
+51:22.360 --> 51:29.360
+ and are constrained by external forces, then we can say, yes, they exist as such.
+
+51:29.360 --> 51:47.360
+ But they also, you know, we shouldn't treat them as completely monolithic entities that we can understand without understanding sort of all of the stuff that allows them to change in the ways that they do.
+
+51:47.360 --> 51:52.360
+ And that's where I think the connectionist feeds into the cognitive.
+
+51:52.360 --> 52:08.360
+ It's like, okay, so if the substrate is parallel distributed connectionist, then it doesn't mean that the contents of thought isn't, you know, like abstract and symbolic.
+
+52:08.360 --> 52:15.360
+ But it's more fluid, maybe, than it's easier to capture with a set of logical expressions.
+
+52:15.360 --> 52:23.360
+ Yeah, that's a heck of a sort of thing to put at the top of a resume, radical emergentist connectionist.
+
+52:23.360 --> 52:34.360
+ So there is, just like you said, a beautiful dance between that, between the machinery of intelligence, like the neural network side of it, and the stuff that emerges.
+
+52:34.360 --> 52:50.360
+ I mean, the stuff that emerges seems to be, I don't know, I don't know what that is, that it seems like maybe all of reality is emergent.
+
+52:50.360 --> 53:10.360
+ But what I think about, this is made most distinctly rich to me when I look at cellular phenomena, look at game of life, that from very, very simple things, very rich, complex things emerge that start looking very quickly like organisms,
+
+53:10.360 --> 53:21.360
+ that you forget how the actual thing operates, they start looking like they're moving around, they're eating each other, some of them are generating offspring, you forget very quickly.
+
+53:21.360 --> 53:32.360
+ And it seems like maybe it's something about the human mind that wants to operate in some layer of the emergent and forget about the mechanism of how that emergent happens.
+
+53:32.360 --> 53:48.360
+ But just like you are in your radicalness, also it seems like unfair to eliminate the magic of that emergent, like eliminate the fact that that emergent is real.
+
+53:48.360 --> 54:02.360
+ Yeah, no, I agree. That's why I got rid of eliminative, because it seemed like that was trying to say that it's all completely like...
+
+54:02.360 --> 54:04.360
+ An illusion of some kind, that's not...
+
+54:04.360 --> 54:26.360
+ Who knows whether there aren't some illusory characteristics there. And I think that philosophically, many people have confronted that possibility over time, but it's still important to accept it as magic.
+
+54:26.360 --> 54:44.360
+ So I think of Fellini and this context, I think of others who have appreciated the role of magic, of actual trickery in creating illusions that move us.
+
+54:44.360 --> 54:58.360
+ And Plato was onto this too, it's like somehow or other these shadows give rise to something much deeper than that.
+
+54:58.360 --> 55:06.360
+ So we won't try to figure out what it is, we'll just accept it as given that that occurs.
+
+55:06.360 --> 55:08.360
+ But he was still onto the magic of it.
+
+55:08.360 --> 55:16.360
+ Yeah, we won't try to really, really deep understand how it works, we'll just enjoy the fact that it's kind of fun.
+
+55:16.360 --> 55:28.360
+ Okay, but you worked closely with Dave over on my heart, he passed away as a human being, what do you remember about him? Do you miss the guy?
+
+55:28.360 --> 55:38.360
+ Absolutely. He passed away 15ish years ago now.
+
+55:38.360 --> 55:59.360
+ And his demise was actually one of the most poignant and relevant tragedies relevant to our conversation.
+
+55:59.360 --> 56:14.360
+ He started to undergo a progressive neurological condition that isn't fully understood.
+
+56:14.360 --> 56:33.360
+ That is to say his particular course isn't fully understood because brain scans weren't done at certain stages and no autopsy was done or anything like that, the wishes of the family.
+
+56:33.360 --> 56:59.360
+ So we don't know as much about the underlying pathology as we might, but I had begun to get interested in this neurological condition that might have been the very one that he was succumbing to as my own efforts to understand another aspect of this mystery that we've been discussing.
+
+56:59.360 --> 57:04.360
+ While he was beginning to get progressively more and more affected.
+
+57:04.360 --> 57:09.360
+ So I'm going to talk about the disorder and not about Rommelhardt for a second, okay?
+
+57:09.360 --> 57:17.360
+ The disorder is something my colleagues and collaborators have chosen to call semantic dementia.
+
+57:17.360 --> 57:44.360
+ So it's a specific form of loss of mind related to meaning, semantic dementia, and it's progressive in the sense that the patient loses the ability to appreciate the meaning of the experiences that they have.
+
+57:44.360 --> 57:56.360
+ Either from touch, from sight, from sound, from language, they, I hear sounds, but I don't know what they mean kind of thing.
+
+57:56.360 --> 58:21.360
+ So as this illness progresses, it starts with the patient being unable to differentiate like similar breeds of dog or remember the lower frequency unfamiliar categories that they used to be able to remember.
+
+58:21.360 --> 58:46.360
+ But as it progresses, it becomes more and more striking and the patient loses the ability to recognize things like pigs and goats and sheep and calls all middle sized animals dogs and all can't recognize rabbits and rodents anymore.
+
+58:46.360 --> 58:53.360
+ They call all the little ones cats and they can't recognize hippopotamuses and cows anymore.
+
+58:53.360 --> 58:55.360
+ They call them all horses, you know.
+
+58:55.360 --> 59:07.360
+ So there was this one patient who went through this progression where at a certain point, any four legged animal, he would call it either a horse or a dog or a cat.
+
+59:07.360 --> 59:10.360
+ And if it was big, he would tend to call it a horse.
+
+59:10.360 --> 59:16.360
+ If it was small, he'd tend to call it a cat, middle sized ones he called dogs.
+
+59:16.360 --> 59:19.360
+ This is just a part of the syndrome though.
+
+59:19.360 --> 59:25.360
+ The patient loses the ability to relate concepts to each other.
+
+59:25.360 --> 59:34.360
+ So my collaborator in this work, Carolyn Patterson, developed a test called the pyramids and palm trees test.
+
+59:34.360 --> 59:40.360
+ So you give the patient a picture of pyramids and they have a choice.
+
+59:40.360 --> 59:42.360
+ Which goes with the pyramids?
+
+59:42.360 --> 59:45.360
+ Palm trees or pine trees?
+
+59:45.360 --> 59:59.360
+ And, you know, she showed that this wasn't just a matter of language because the patient's loss of disability shows up whether you present the material with words or with pictures.
+
+59:59.360 --> 1:00:05.360
+ The pictures, they can't put the pictures together with each other properly anymore.
+
+1:00:05.360 --> 1:00:07.360
+ They can't relate the pictures to the words either.
+
+1:00:07.360 --> 1:00:15.360
+ They can't do word picture matching, but they've lost the conceptual grounding from either modality of input.
+
+1:00:15.360 --> 1:00:19.360
+ And so that's why it's called semantic dementia.
+
+1:00:19.360 --> 1:00:22.360
+ The very semantics is disintegrating.
+
+1:00:22.360 --> 1:00:33.360
+ And we understand this in terms of our idea that distributed representation, a pattern of activation represents the concepts, really similar ones.
+
+1:00:33.360 --> 1:00:38.360
+ As you degrade them, they start being, you lose the differences.
+
+1:00:38.360 --> 1:00:44.360
+ And then, so the difference between the dog and the goat sort of is no longer part of the pattern anymore.
+
+1:00:44.360 --> 1:00:49.360
+ And since dog is really familiar, that's the thing that remains.
+
+1:00:49.360 --> 1:00:52.360
+ And we understand that in the way the models work and learn.
+
+1:00:52.360 --> 1:00:57.360
+ But Rommelhardt underwent this condition.
+
+1:00:57.360 --> 1:01:02.360
+ So on the one hand, it's a fascinating aspect of parallel distributed processing to be.
+
+1:01:02.360 --> 1:01:11.360
+ And it reveals this sort of texture of distributed representation in a very nice way, I've always felt.
+
+1:01:11.360 --> 1:01:18.360
+ But at the same time, it was extremely poignant because this is exactly the condition that Rommelhardt was undergoing.
+
+1:01:18.360 --> 1:01:43.360
+ And there was a period of time when he was this man who had been the most focused, goal directed, competitive, thoughtful person who was willing to work for years to solve a hard problem.
+
+1:01:43.360 --> 1:01:48.360
+ He starts to disappear.
+
+1:01:48.360 --> 1:02:04.360
+ And there was a period of time when it was like hard for any of us to really appreciate that he was sort of, in some sense, not fully there anymore.
+
+1:02:04.360 --> 1:02:14.360
+ Do you know if he was able to introspect the solution of the understanding mind?
+
+1:02:14.360 --> 1:02:19.360
+ I mean, this is one of the big scientists that thinks about this.
+
+1:02:19.360 --> 1:02:24.360
+ Was he able to look at himself and understand the fading mind?
+
+1:02:24.360 --> 1:02:40.360
+ You know, we can contrast Hawking and Rommelhardt in this way, and I like to do that to honor Rommelhardt because I think Rommelhardt is sort of like the Hawking of cognitive science to me in some ways.
+
+1:02:40.360 --> 1:02:46.360
+ Both of them suffered from a degenerative condition.
+
+1:02:46.360 --> 1:03:05.360
+ In Hawking's case, it affected the motor system. In Rommelhardt's case, it's affecting the semantics and not just the pure object semantics, but maybe the self semantics as well.
+
+1:03:05.360 --> 1:03:07.360
+ And we don't understand that.
+
+1:03:07.360 --> 1:03:09.360
+ Concepts broadly.
+
+1:03:09.360 --> 1:03:18.360
+ So I would say he didn't, and this was part of what from the outside was a profound tragedy.
+
+1:03:18.360 --> 1:03:33.360
+ But on the other hand, at a some level, he sort of did because, you know, there was a period of time when he finally was realized that he had really become profoundly impaired.
+
+1:03:33.360 --> 1:03:40.360
+ It's clearly a biological condition, and he wasn't, you know, it wasn't just like he was distracted that day or something like that.
+
+1:03:40.360 --> 1:04:01.360
+ So he retired, you know, from his professorship at Stanford, and he became, he lived with his brother for a couple of years, and then he moved into a facility for people with cognitive impairments.
+
+1:04:01.360 --> 1:04:06.360
+ One that, you know, many elderly people end up in when they have cognitive impairments.
+
+1:04:06.360 --> 1:04:12.360
+ And I would spend time with him during that period.
+
+1:04:12.360 --> 1:04:16.360
+ This was like in the late 90s, around 2000 even.
+
+1:04:16.360 --> 1:04:25.360
+ And, you know, I would, we would go bowling, and he could still bowl.
+
+1:04:25.360 --> 1:04:34.360
+ And after bowling, I took him to lunch, and I said, where would you like to go?
+
+1:04:34.360 --> 1:04:35.360
+ You want to go to Wendy's?
+
+1:04:35.360 --> 1:04:36.360
+ And he said, nah.
+
+1:04:36.360 --> 1:04:38.360
+ And I said, okay, well, where do you want to go?
+
+1:04:38.360 --> 1:04:40.360
+ And he just pointed.
+
+1:04:40.360 --> 1:04:41.360
+ He said, turn here, you know.
+
+1:04:41.360 --> 1:04:47.360
+ And so he still had a certain amount of spatial cognition, and he could get me to the restaurant.
+
+1:04:47.360 --> 1:04:55.360
+ And then when we got to the restaurant, I said, what do you want to order?
+
+1:04:55.360 --> 1:04:59.360
+ And he couldn't come up with any of the words, but he knew where on the menu the thing was that he wanted.
+
+1:04:59.360 --> 1:05:07.360
+ So, you know, and he couldn't say what it was, but he knew that that's what he wanted to eat.
+
+1:05:07.360 --> 1:05:17.360
+ And so, you know, it's like it isn't monolithic at all.
+
+1:05:17.360 --> 1:05:23.360
+ Our cognition is, you know, first of all, graded in certain kinds of ways, but also multipartite.
+
+1:05:23.360 --> 1:05:36.360
+ There's many elements to it, and things, certain sort of partial competencies still exist in the absence of other aspects of these competencies.
+
+1:05:36.360 --> 1:05:49.360
+ So, this is what always fascinated me about what used to be called cognitive neuropsychology, you know, the effects of brain damage on cognition.
+
+1:05:49.360 --> 1:05:53.360
+ But in particular, this gradual disintegration part.
+
+1:05:53.360 --> 1:06:03.360
+ You know, I'm a big believer that the loss of a human being that you value is as powerful as, you know, first falling in love with that human being.
+
+1:06:03.360 --> 1:06:06.360
+ I think it's all a celebration of the human being.
+
+1:06:06.360 --> 1:06:10.360
+ So, the disintegration itself too is a celebration in a way.
+
+1:06:10.360 --> 1:06:12.360
+ Yeah, yeah, yeah.
+
+1:06:12.360 --> 1:06:22.360
+ And, but just to say something more about the scientist and the back propagation idea that you mentioned.
+
+1:06:22.360 --> 1:06:34.360
+ So, in 1982, Hinton had been there as a postdoc and organized that conference.
+
+1:06:34.360 --> 1:06:41.360
+ He'd actually gone away and gotten an assistant professorship, and then there was this opportunity to bring him back.
+
+1:06:41.360 --> 1:06:47.360
+ So, Jeff Hinton was back on a sabbatical in San Diego.
+
+1:06:47.360 --> 1:06:52.360
+ And Rommelhardt and I had decided we wanted to do this.
+
+1:06:52.360 --> 1:07:01.360
+ You know, we thought it was really exciting and are the papers on the interactive activation model that I was telling you about had just been published.
+
+1:07:01.360 --> 1:07:07.360
+ And we both sort of saw huge potential for this work and Jeff was there.
+
+1:07:07.360 --> 1:07:18.360
+ And so, the three of us started a research group, which we called the PDP Research Group, and several other people came.
+
+1:07:18.360 --> 1:07:24.360
+ Francis Crick, who was at the Salk Institute, heard about it from Jeff.
+
+1:07:24.360 --> 1:07:31.360
+ And because Jeff was known among Brits to be brilliant and Francis was well connected with his British friends.
+
+1:07:31.360 --> 1:07:33.360
+ So, Francis Crick came.
+
+1:07:33.360 --> 1:07:35.360
+ It's a heck of a group of people.
+
+1:07:35.360 --> 1:07:40.360
+ And Paul Spolensky was one of the other postdocs.
+
+1:07:40.360 --> 1:07:45.360
+ He was still there as a postdoc and a few other people.
+
+1:07:45.360 --> 1:08:06.360
+ But anyway, Jeff talked to us about learning and how we should think about how, you know, learning occurs in a neural network.
+
+1:08:06.360 --> 1:08:26.360
+ And he said, the problem with the way you guys have been approaching this is that you've been looking for inspiration from biology to tell you what the rules should be for how the synapses should change the strengths of their connections, how the connections should form.
+
+1:08:26.360 --> 1:08:30.360
+ He said, that's the wrong way to go about it.
+
+1:08:30.360 --> 1:08:44.360
+ What you should do is you should think in terms of how you can adjust connection weights to solve a problem.
+
+1:08:44.360 --> 1:08:54.360
+ So, you define your problem and then you figure out how the adjustment of the connection weights will solve the problem.
+
+1:08:54.360 --> 1:09:04.360
+ And Rommelhardt heard that and said to himself, okay, so I'm going to start thinking about it that way.
+
+1:09:04.360 --> 1:09:14.360
+ I'm going to essentially imagine that I have some objective function, some goal of the computation.
+
+1:09:14.360 --> 1:09:27.360
+ I want my machine to correctly classify all of these images and I can score that I can measure how well they're doing on each image and I get some measure of error or loss.
+
+1:09:27.360 --> 1:09:41.360
+ It's typically called in deep learning and I'm going to figure out how to adjust the connection weights so as to minimize my loss or reduce the error.
+
+1:09:41.360 --> 1:09:53.360
+ And that's called gradient descent and engineers were already familiar with the concept of gradient descent.
+
+1:09:53.360 --> 1:10:08.360
+ And in fact, there was an algorithm called the Delta Rule that had been invented by a professor in the engineering, the electrical engineering department at Stanford.
+
+1:10:08.360 --> 1:10:13.360
+ So, Bernie Widrow and a collaborator named Hoff, I don't never met him.
+
+1:10:13.360 --> 1:10:30.360
+ Anyway, so gradient descent in continuous neural networks with multiple neuron like processing units was already understood for a single layer of connection weights.
+
+1:10:30.360 --> 1:10:33.360
+ We have some inputs over a set of neurons.
+
+1:10:33.360 --> 1:10:41.360
+ In the output to produce a certain pattern, we can define the difference between our target and what the neural network is producing.
+
+1:10:41.360 --> 1:10:45.360
+ And we can figure out how to change the connection weights to reduce that error.
+
+1:10:45.360 --> 1:10:59.360
+ So what Meromohard did was to generalize that so as to be able to change the connections from earlier layers of units to the ones at a hidden layer between the input and the output.
+
+1:10:59.360 --> 1:11:08.360
+ And so he first called the algorithm the generalized Delta Rule because it's just an extension of the gradient descent idea.
+
+1:11:08.360 --> 1:11:15.360
+ And interestingly enough, Hinton was thinking that this wasn't going to work very well.
+
+1:11:15.360 --> 1:11:25.360
+ So Hinton had his own alternative algorithm at the time based on the concept of the Bolsa machine that he was pursuing.
+
+1:11:25.360 --> 1:11:31.360
+ The paper on the Bolsa machine came out in, learning in, Bolsa machines came out in 1985.
+
+1:11:31.360 --> 1:11:38.360
+ But it turned out that back prop worked better than the Bolsa machine learning algorithm.
+
+1:11:38.360 --> 1:11:45.360
+ So this generalized Delta algorithm ended up being called back propagation, as you say, back prop.
+
+1:11:45.360 --> 1:11:55.360
+ And probably that name is opaque to me, but what does that mean?
+
+1:11:55.360 --> 1:12:03.360
+ What it meant was that in order to figure out what the changes you needed to make to the connections from the input to the hidden layer,
+
+1:12:03.360 --> 1:12:20.360
+ you had to back propagate the error signals from the output layer through the connections from the hidden layer to the output to get the signals that would be the error signals for the hidden layer.
+
+1:12:20.360 --> 1:12:22.360
+ And that's how Rommelhardt formulated it.
+
+1:12:22.360 --> 1:12:25.360
+ It was like, well, we know what the error signals are at the output layer.
+
+1:12:25.360 --> 1:12:32.360
+ Let's see if we can get a signal at the hidden layer that tells each hidden unit what its error signal is essentially.
+
+1:12:32.360 --> 1:12:43.360
+ So it's back propagating through the connections from the hidden to the output to get the signals to tell the hidden units how to change their weights from the input.
+
+1:12:43.360 --> 1:12:47.360
+ And that's why it's called back prop.
+
+1:12:47.360 --> 1:13:04.360
+ Yeah, but so it came from Hinton having introduced the concept of define your objective function, figure out how to take the derivative so that you can adjust the connection so that they make progress towards your goal.
+
+1:13:04.360 --> 1:13:12.360
+ So stop thinking about biology for a second and let's start to think about optimization and computation a little bit more.
+
+1:13:12.360 --> 1:13:24.360
+ So what about Jeff Hinton, what you've gotten a chance to work with him in that little, the set of people involved there is quite incredible.
+
+1:13:24.360 --> 1:13:32.360
+ The small set of people under the PDP flag, it's just given the amount of impact those ideas have had over the years.
+
+1:13:32.360 --> 1:13:34.360
+ It's kind of incredible to think about.
+
+1:13:34.360 --> 1:13:52.360
+ But, you know, just like you said, like yourself, Jeffrey Hinton is seen as one of the, not just like a seminal figure in AI, but just a brilliant person, just like the horsepower of the mind is pretty high up there for him because he's just a great thinker.
+
+1:13:52.360 --> 1:14:09.360
+ So what kind of ideas have you learned from him? Have you influenced each other on? Have you debated over what stands out to you in the full space of ideas here at the intersection of computation and cognition?
+
+1:14:09.360 --> 1:14:18.360
+ Well, so Jeff has said many things to me that had a profound impact on my thinking.
+
+1:14:18.360 --> 1:14:27.360
+ And he's written several articles which were way ahead of their time.
+
+1:14:27.360 --> 1:14:38.360
+ He had two papers in 1981 just to give one example.
+
+1:14:38.360 --> 1:15:02.360
+ One of which was essentially the idea of Transformers and another of which was a early paper on semantic cognition which inspired him and Rommelhardt and me throughout the 80s.
+
+1:15:02.360 --> 1:15:17.360
+ And, you know, still I think sort of grounds my own thinking about the semantic aspects of cognition.
+
+1:15:17.360 --> 1:15:40.360
+ He also, in a small paper that was never published that he wrote in 1977, you know, before he actually arrived at UCSD or maybe a couple years even before that, I don't know, when he was a PhD student, he described how a neural network could do recursive computation.
+
+1:15:40.360 --> 1:16:04.360
+ And it was a very clever idea that he's continued to explore over time, which was sort of the idea that when you call a subroutine, you need to save the state that you had when you called it so you can get back to where you were when you're finished with the subroutine.
+
+1:16:04.360 --> 1:16:14.360
+ And the idea was that you would save the state of the calling routine by making fast changes to connection weights.
+
+1:16:14.360 --> 1:16:33.360
+ And then when you finished with the subroutine call, those fast changes in the connection weights would allow you to go back to where you had been before and reinstate the previous context so that you could continue on with the top level of the computation.
+
+1:16:33.360 --> 1:16:35.360
+ Anyway, that was part of the idea.
+
+1:16:35.360 --> 1:16:52.360
+ And I always thought, okay, that's really, you know, he just, he had extremely creative ideas that were quite a lot ahead of his time and many of them in the 1970s and early 1980s.
+
+1:16:52.360 --> 1:17:13.360
+ So another thing about Jeff Hinton's way of thinking, which has profoundly influenced my effort to understand human mathematical cognition, is that he doesn't write too many equations.
+
+1:17:13.360 --> 1:17:22.360
+ And people tell stories like, oh, in the Hinton lab meetings, you don't get up at the board and write equations like you do in everybody else's machine learning lab.
+
+1:17:22.360 --> 1:17:24.360
+ What you do is you draw a picture.
+
+1:17:24.360 --> 1:17:48.360
+ And, you know, he explains aspects of the way deep learning works by putting his hands together and showing you the shape of a ravine and using that as a geometrical metaphor for what's happening as this gradient descent process.
+
+1:17:48.360 --> 1:17:54.360
+ You're coming down the wall of a ravine, if you take too big a jump, you're going to jump to the other side.
+
+1:17:54.360 --> 1:17:59.360
+ And so that's why we have to turn down the learning rate, for example.
+
+1:17:59.360 --> 1:18:28.360
+ And it speaks to me of the fundamentally intuitive character of deep insight, together with a commitment to really understanding in a way that's absolutely ultimately explicit and clear.
+
+1:18:28.360 --> 1:18:31.360
+ But also intuitive.
+
+1:18:31.360 --> 1:18:33.360
+ Yeah, there's certain people like that.
+
+1:18:33.360 --> 1:18:40.360
+ He's an example, some kind of weird mix of visual and intuitive and all those kinds of things.
+
+1:18:40.360 --> 1:18:44.360
+ Feynman is another example, different style of thinking, but very unique.
+
+1:18:44.360 --> 1:18:53.360
+ And when you're around those people, for me in the engineering realm, there's a guy named Jim Keller, who's a chip designer engineer.
+
+1:18:53.360 --> 1:18:58.360
+ Every time I talk to him, it doesn't matter what we're talking about.
+
+1:18:58.360 --> 1:19:05.360
+ Just having experienced that unique way of thinking transforms you and makes your work much better.
+
+1:19:05.360 --> 1:19:07.360
+ And that's the magic.
+
+1:19:07.360 --> 1:19:12.360
+ You look at Daniel Kahneman, you look at the great collaborations throughout the history of science.
+
+1:19:12.360 --> 1:19:14.360
+ That's the magic of that.
+
+1:19:14.360 --> 1:19:22.360
+ It's not always the exact ideas that you talk about, but it's the process of generating those ideas, being around that, spending time with that human being.
+
+1:19:22.360 --> 1:19:30.360
+ You can come up with some brilliant work, especially when it's cross disciplinary as it was a little bit in your case with Jeff.
+
+1:19:30.360 --> 1:19:32.360
+ Yeah.
+
+1:19:32.360 --> 1:19:38.360
+ Jeff is a descendant of the Logician Bull.
+
+1:19:38.360 --> 1:19:43.360
+ He comes from a long line of English academics.
+
+1:19:43.360 --> 1:19:57.360
+ And together with the deeply intuitive thinking ability that he has, he also has, it's been clear.
+
+1:19:57.360 --> 1:20:06.360
+ He's described this to me, and I think he's mentioned it from time to time in other interviews that he's had with people.
+
+1:20:06.360 --> 1:20:22.360
+ He's wanted to be able to think of himself as contributing to the understanding of reasoning itself, not just human reasoning.
+
+1:20:22.360 --> 1:20:25.360
+ Bull is about logic.
+
+1:20:25.360 --> 1:20:31.360
+ It's about what can we conclude from what else and how do we formalize that?
+
+1:20:31.360 --> 1:20:48.360
+ And as a computer scientist, logician, philosopher, you know, the goal is to understand how we derive truths from other, from givens and things like this.
+
+1:20:48.360 --> 1:21:12.360
+ And the work that Jeff was doing in the early to mid 80s on something called the Bolton machine was his way of connecting with that Boolean tradition and bringing it into the more continuous probabilistic graded constraint satisfaction realm.
+
+1:21:12.360 --> 1:21:27.360
+ And it was beautiful, a set of ideas linked with theoretical physics as well as with logic.
+
+1:21:27.360 --> 1:21:50.360
+ And it's always been, I mean, I've always been inspired by the Bolton machine too. It's like, well, if the neurons are probabilistic rather than, you know, deterministic in their computations, then, you know, that maybe this somehow is part of the serendipity or, you know,
+
+1:21:50.360 --> 1:22:01.360
+ adventitiousness of the moment of insight, right? It might not have occurred at that particular instant. It might be sort of partially the result of a stochastic process.
+
+1:22:01.360 --> 1:22:08.360
+ And that too is part of the magic of the emergence of some of these things.
+
+1:22:08.360 --> 1:22:23.360
+ You're right with the Boolean lineage and the dream of computer science is somehow, I mean, I certainly think of humans this way, that humans are one particular manifestation of intelligence, that there's something bigger going on.
+
+1:22:23.360 --> 1:22:31.360
+ And you're trying to, you're hoping to figure that out. The mechanisms of intelligence, the mechanisms of cognition are much bigger than just humans.
+
+1:22:31.360 --> 1:23:00.360
+ So I think of, I started using the phrase computational intelligence at some point as to characterize the field that I thought, you know, people like Jeff Hinton and many of the people I know at DeepMind are working in and where I feel like I'm, you know,
+
+1:23:00.360 --> 1:23:10.360
+ I'm a kind of a human oriented computational intelligence researcher in that I'm actually kind of interested in the human solution.
+
+1:23:10.360 --> 1:23:38.360
+ But at the same time, I feel like that's where a huge amount of the excitement of deep learning actually lies is in the idea that, you know, we may be able to even go beyond what we can achieve with our own nervous systems when we build computational intelligence
+
+1:23:38.360 --> 1:23:46.360
+ as that are, you know, not limited in the ways that we are by our own biology.
+
+1:23:46.360 --> 1:23:55.360
+ Perhaps allowing us to scale the very mechanisms of human intelligence just increases power through scale.
+
+1:23:55.360 --> 1:24:11.360
+ Yes. And I think that that, you know, obviously that's the, that's being played out massively at Google Brain, at OpenAI and to some extent at DeepMind as well.
+
+1:24:11.360 --> 1:24:27.360
+ I guess I shouldn't say to some extent, but just the massive scale of the computations that are used to succeed at games like Go or to solve the protein folding problems that they've been solving and so on.
+
+1:24:27.360 --> 1:24:32.360
+ Still not as many synapses and neurons as the human brain.
+
+1:24:32.360 --> 1:24:41.360
+ So we still got, we're still beating them on that, we humans are beating the AIs, but they're catching up pretty quickly.
+
+1:24:41.360 --> 1:24:46.360
+ You write about modeling of mathematical cognition.
+
+1:24:46.360 --> 1:24:49.360
+ So let me first ask about mathematics in general.
+
+1:24:49.360 --> 1:25:00.360
+ There's a paper titled Parallel Distributed Processing Approach to Mathematical Cognition, where in the introduction, there's some beautiful discussion of mathematics.
+
+1:25:00.360 --> 1:25:16.360
+ And you referenced there Tristan Needham, who criticizes a narrow form of view of mathematics by liking the studying of mathematics as symbol manipulation to studying music without ever hearing a note.
+
+1:25:16.360 --> 1:25:20.360
+ So from that perspective, what do you think is mathematics?
+
+1:25:20.360 --> 1:25:23.360
+ What is this world of mathematics like?
+
+1:25:23.360 --> 1:25:47.360
+ Well, I think of mathematics as the set of tools for exploring idealized worlds that often turn out to be extremely relevant to the real world, but need not.
+
+1:25:47.360 --> 1:26:09.360
+ But there are worlds in which objects exist with idealized properties and in which the relationships among them can be characterized with precision.
+
+1:26:09.360 --> 1:26:22.360
+ So as to allow the implications of certain facts to then allow you to derive other facts with certainty.
+
+1:26:22.360 --> 1:26:51.360
+ So if you have two triangles and you know that there is an angle in the first one that has the same measure as an angle in the second one, and you know that the length of the sides adjacent to that angle in each of the two triangles,
+
+1:26:51.360 --> 1:27:03.360
+ the corresponding sides adjacent to that angle are also have the same measure, then you can then conclude that the triangles are congruent.
+
+1:27:03.360 --> 1:27:06.360
+ That is to say, they have all of their properties in common.
+
+1:27:06.360 --> 1:27:12.360
+ And that is something about triangles.
+
+1:27:12.360 --> 1:27:16.360
+ It's not a matter of formulas.
+
+1:27:16.360 --> 1:27:18.360
+ These are idealized objects.
+
+1:27:18.360 --> 1:27:36.360
+ In fact, you know, we built bridges out of triangles and we understand how to measure the height of something we can't climb by extending these ideas about triangles a little further.
+
+1:27:36.360 --> 1:28:00.360
+ And you know, all of the ability to get a tiny speck of matter launched from the planet Earth to intersect with some tiny, tiny little body way out and way beyond Pluto somewhere.
+
+1:28:00.360 --> 1:28:08.360
+ Exactly a predicted time and date is something that depends on these ideas, right?
+
+1:28:08.360 --> 1:28:22.360
+ And it's actually happening in the real physical world that these ideas make contact with it in those kinds of instances.
+
+1:28:22.360 --> 1:28:51.360
+ And so, but you know, there are these idealized objects, these triangles or these distances or these points, whatever they are, that allow for this set of tools to be created that then gives human beings the incredible leverage that they didn't have without these concepts.
+
+1:28:51.360 --> 1:29:06.360
+ And I think this is actually already true when we think about just, you know, the natural numbers.
+
+1:29:06.360 --> 1:29:23.360
+ I always like to include zero, so I'm going to say the non negative integers, but that's that's a place where some people prefer not to include zero, but we like zero here, natural numbers, zero, one, two, three, four, five, six, seven and so on.
+
+1:29:23.360 --> 1:29:43.360
+ And, and, you know, because they give you the ability to be exact about, like, how many sheep you have, like, you know, I sent you out this morning, there were 23 sheep, you came back with only 22.
+
+1:29:43.360 --> 1:29:44.360
+ What happened, right?
+
+1:29:44.360 --> 1:29:47.360
+ The fundamental problem of physics, how many sheep you have.
+
+1:29:47.360 --> 1:29:57.360
+ It's a fundamental problem of life, of human society that you damn well better bring back the same number of sheep as you started with.
+
+1:29:57.360 --> 1:30:10.360
+ And, you know, it allows commerce, it allows contracts, it allows the establishment of records and so on to have systems that allow these things to be notated.
+
+1:30:10.360 --> 1:30:30.360
+ But they, they have an inherent aboutness to them, that's one, at the, one at the same time sort of abstract and idealized and generalizable while at the other, on the other hand, potentially very, very grounded and concrete.
+
+1:30:30.360 --> 1:30:57.360
+ And one of the things that makes for the incredible achievements of the human mind is the fact that humans invented these idealized systems that leverage the power of human thought in such a way as to allow all this kind of thing to happen.
+
+1:30:57.360 --> 1:31:26.360
+ And so that's what mathematics to me is the development of systems for thinking about the properties and relations among sets of idealized objects and, you know, the mathematical notation system that we unfortunately focus way too much on.
+
+1:31:26.360 --> 1:31:36.360
+ Is just our way of expressing propositions about these properties.
+
+1:31:36.360 --> 1:31:37.360
+ Right.
+
+1:31:37.360 --> 1:31:48.360
+ It's just, just like we're talking with Chomsky in language, it's the thing we've invented for the communication of those ideas, they're not necessarily the deep representation of those ideas.
+
+1:31:48.360 --> 1:31:49.360
+ Yeah.
+
+1:31:49.360 --> 1:31:58.360
+ What, what's a, what's a good way to model such powerful mathematical reasoning, would you say?
+
+1:31:58.360 --> 1:32:02.360
+ What are some ideas you have for capturing this in a model?
+
+1:32:02.360 --> 1:32:27.360
+ The insights that human mathematicians have had is a combination of the kind of the intuitive kind of connectionist like knowledge that makes it so that something is just like obviously true.
+
+1:32:27.360 --> 1:32:45.360
+ So that you don't have to think about why it's true, that then makes it possible to then take the next step and ponder and reason and figure out something that you previously didn't have that intuition about.
+
+1:32:45.360 --> 1:33:02.360
+ It then ultimately becomes a part of the intuition that the next generation of mathematical thinkers have to ground their own thinking on so that they can extend the ideas even further.
+
+1:33:02.360 --> 1:33:20.360
+ I came across this quotation from Henri Poincaré while I was walking in the, in the woods with my wife in a state park in Northern California late last summer.
+
+1:33:20.360 --> 1:33:32.360
+ And what it said on the bench was, it is by logic that we prove, but by intuition that we discover.
+
+1:33:32.360 --> 1:33:59.360
+ And so what, for me, the essence of the, of the project is to understand how to bring the intuitive connectionist resources to bear on letting the intuitive discovery arise, you know, from engagement in thinking with this formal system.
+
+1:33:59.360 --> 1:34:22.360
+ So I think of, you know, the ability of somebody like Hinton or Newton or Einstein or Rommelhardt or Poincaré to Archimedes, this is another example, right?
+
+1:34:22.360 --> 1:34:50.360
+ Because suddenly a flash of insight occurs. It's, it's like the constellation of all of these simultaneous constraints that somehow or other causes the mind to settle into a novel state that it never did before and, and give rise to a new idea that, you know, then you could say,
+
+1:34:50.360 --> 1:35:01.360
+ okay, well, now how can I prove this? You know, how do I write down the steps of that theorem that, that allow me to make it rigorous and certain?
+
+1:35:01.360 --> 1:35:30.360
+ And so I feel like the, the kinds of things that we're beginning to see deep learning systems do of their own accord kind of gives me this feeling of, of, I don't know, hope or encouragement that ultimately,
+
+1:35:30.360 --> 1:35:56.360
+ it'll all happen. So in particular, as many people now have become really interested in thinking about, you know, neural networks that have been trained with massive amounts of text can be given a prompt and they can then
+
+1:35:56.360 --> 1:36:20.360
+ sort of generate some really interesting, fanciful creative story from that prompt. And there's, there's kind of like a sense that they've somehow synthesized something like novel out of the, you know, all of the particulars of all
+
+1:36:20.360 --> 1:36:35.360
+ of the billions and billions of experiences that went into the training data that, that gives rise to something like this sort of intuitive sense of what would be a fun and interesting little story to tell or something like that.
+
+1:36:35.360 --> 1:36:54.360
+ And just sort of wells up out of the, out of the letting the thing play out its own imagining of what somebody might say, given this prompt as a, as an input to, to get it to, to start to generate its own thoughts.
+
+1:36:54.360 --> 1:37:02.360
+ And, and to me, that, that sort of represents the potential of capturing this, the intuitive side of this.
+
+1:37:02.360 --> 1:37:18.360
+ And there's other examples. I don't know if you will find them as captivating as, you know, on the deep mind side with Alpha zero. If you study chess, the kind of solutions that has come up in terms of chess, it is, it, there's novel ideas there.
+
+1:37:18.360 --> 1:37:45.360
+ It's very, like there's brilliant moments of insight and the mechanism they use, if you think of search as, as maybe more towards good old fashioned AI and then there's the connectionist network that has the intuition of looking at a board, looking at a set of patterns and saying how good is this set of positions and the next few positions, how good are those.
+
+1:37:45.360 --> 1:37:48.360
+ And that's it. That's just an intuition.
+
+1:37:48.360 --> 1:37:49.360
+ Yeah.
+
+1:37:49.360 --> 1:38:00.360
+ Grandmasters have this and understanding positionally, tactically, how good the situation is, how, how can it be improved without doing this full, like deep search.
+
+1:38:00.360 --> 1:38:15.360
+ And then maybe doing a little bit of what human chess players call calculation, which is the search, taking a particular set of steps down the line to see how they unroll. But there, there is moments of genius in those systems too.
+
+1:38:15.360 --> 1:38:26.360
+ So that's another hopeful illustration that from neural networks can emerge this novel creation of an idea.
+
+1:38:26.360 --> 1:38:46.360
+ Yes. And I think that, you know, I think Demis Sabus is, you know, he's spoken about those things. He, I heard him describe a move that was made in one of the go matches against Lisa Dahl in this very, in a very similar way.
+
+1:38:46.360 --> 1:38:57.360
+ And it caused me to become really excited to kind of collaborate with some of those guys at deep mind.
+
+1:38:57.360 --> 1:39:25.360
+ So I think, though, that what, what I like to really emphasize here is one part of what I like to emphasize about mathematical cognition, at least, is that philosophers and logicians going back three or even a little more than 3000 years ago,
+
+1:39:25.360 --> 1:39:44.360
+ began to develop these formal systems and gradually the whole idea about thinking formally got constructed.
+
+1:39:44.360 --> 1:39:58.360
+ And, you know, it's preceded Euclid, certainly present in the work of Thales and others. And I'm not the world's leading expert in all the details of that history.
+
+1:39:58.360 --> 1:40:27.360
+ But Euclid's elements were the kind of the touchpoint of a coherent document that sort of laid out this idea of an actual formal system within which these objects were characterized and the system of inference that
+
+1:40:27.360 --> 1:40:52.360
+ allowed new truths to be derived from others was sort of like established as a paradigm. And what, what I find interesting is the idea that the ability to become a person who is capable of thinking
+
+1:40:52.360 --> 1:41:13.360
+ in this abstract formal way is, you know, a result of the same kind of immersion in, in experience, thinking in that way that, you know, we now begin to think of our understanding of languages being right.
+
+1:41:13.360 --> 1:41:30.360
+ So we immerse ourselves in, in a particular language, in a particular world of objects and their relationships. And we learn to talk about that. And we develop intuitive understanding of the real world in a similar way.
+
+1:41:30.360 --> 1:41:53.360
+ We can think that what academia has created for us, what, you know, those early philosophers and their academies and Athens and Alexandria and others, other places allowed was the development of these schools of thought,
+
+1:41:53.360 --> 1:42:16.360
+ modes of thought that, that then become deeply ingrained. And, you know, it becomes what it is that makes it so that somebody like Jerry Fodor would think that systematic thought is the essential characteristic of the human mind as
+
+1:42:16.360 --> 1:42:28.360
+ opposed to a derived and an acquired characteristic that results from acculturation in a certain mode that's been invented by humans.
+
+1:42:28.360 --> 1:42:48.360
+ Would you say it's more fundamental than like language? If we start dancing, if we bring Chomsky back into the conversation? First of all, is it unfair to draw a line between mathematical cognition and language linguistic cognition?
+
+1:42:48.360 --> 1:43:07.360
+ I think that's a very interesting question. And I think it's one of the ones that I'm actually very interested in right now. But I think the answer is, in important ways, it is important to draw that line.
+
+1:43:07.360 --> 1:43:17.360
+ But then to come back and look at it again and see some of the subtleties and interesting aspects of the difference.
+
+1:43:17.360 --> 1:43:44.360
+ So, if we think about Chomsky himself, he was born into an academic family. His father was a professor of rabbinical studies at a small rabbinical college in Philadelphia.
+
+1:43:44.360 --> 1:44:09.360
+ And he was deeply inculturated in a culture of thought and reason and brought to the effort to understand natural language this profound engagement with these formal systems.
+
+1:44:09.360 --> 1:44:27.360
+ And I think that there was tremendous power in that and that Chomsky had some amazing insights into the structure of natural language.
+
+1:44:27.360 --> 1:44:43.360
+ But that, and I'm going to use the word but there, the actual intuitive knowledge of these things only goes so far and does not go as far as it does in people like Chomsky himself.
+
+1:44:43.360 --> 1:44:54.360
+ And this was something that was discovered in the PhD dissertation of Lila Gleitman, who was actually trained in the same linguistics department with Chomsky.
+
+1:44:54.360 --> 1:45:21.360
+ But what Lila discovered was that the intuitions that linguists had about even the meaning of a phrase, not just about its grammar, but about what they thought a phrase must mean, were very different from the intuitions of an ordinary person
+
+1:45:21.360 --> 1:45:34.360
+ who wasn't a formally trained thinker. And well, it recently has become much more salient. I happen to have learned about this when I myself was a PhD student at the University of Pennsylvania.
+
+1:45:34.360 --> 1:45:40.360
+ But I never knew how to put it together with all of my other thinking about these things.
+
+1:45:40.360 --> 1:46:08.360
+ So I actually currently have the hypothesis that formally trained linguists and other formally trained academics, whether it be linguistics, philosophy, cognitive science, computer science, machine learning, mathematics,
+
+1:46:08.360 --> 1:46:35.360
+ have a mode of engagement with experience that is intuitively deeply structured to be more organized around the systematicity and ability to be conformant with the principles of a system
+
+1:46:35.360 --> 1:46:42.360
+ than is actually true of the natural human mind without that immersion.
+
+1:46:42.360 --> 1:46:53.360
+ That's fascinating. So the different fields and approaches with which you start to study the mind actually take you away from the natural operation of the mind.
+
+1:46:53.360 --> 1:46:59.360
+ So it makes it very difficult for you to be somebody who introspects.
+
+1:46:59.360 --> 1:47:25.360
+ And this is where things about human belief and so called knowledge that we consider private, not our business to manipulate in others.
+
+1:47:25.360 --> 1:47:37.360
+ We are not entitled to tell somebody else what to believe about certain kinds of things.
+
+1:47:37.360 --> 1:47:51.360
+ What are those beliefs? Well, they are the product of this sort of immersion and enculturation. That is what I believe.
+
+1:47:51.360 --> 1:47:57.360
+ And that's limiting. It's something to be aware of.
+
+1:47:57.360 --> 1:48:03.360
+ Does that limit you from having a good model of cognition?
+
+1:48:03.360 --> 1:48:05.360
+ It can.
+
+1:48:05.360 --> 1:48:22.360
+ So when you look at mathematical linguistics, what is that line then? So is Chomsky unable to sneak up to the full picture of cognition? Are you, when you're focusing on mathematical thinking, are you also unable to do so?
+
+1:48:22.360 --> 1:48:45.360
+ I think you're right. I think that's a great way of characterizing it. And I also think that it's related to the concept of beginner's mind and another concept called the expert blind spot.
+
+1:48:45.360 --> 1:49:03.360
+ So the expert blind spot is much more prosaic seeming than this point that you were just making. But it's something that plagues experts when they try to communicate their understanding to non experts.
+
+1:49:03.360 --> 1:49:23.360
+ And that is that things are self evident to them that they can't begin to even think about how they could explain it to somebody else.
+
+1:49:23.360 --> 1:49:34.360
+ Because it like, well, it's just like so patently obvious that it must be true.
+
+1:49:34.360 --> 1:50:03.360
+ You know, like when Kronecker said, God made the natural numbers, all else is the work of man, he was expressing that intuition that somehow or other, the basic fundamentals of discrete quantities being countable and innumerable and indefinite.
+
+1:50:03.360 --> 1:50:22.360
+ You know, indefinite in number was not something that had to be discovered, but he was wrong. It turns out that many cognitive scientists agreed with him for a time.
+
+1:50:22.360 --> 1:50:43.360
+ There was a long period of time where the natural numbers were considered to be part of the innate endowment of core knowledge or to use the kind of phrases that Spelke and Kerry used to talk about what they believe are the innate primitives of the human mind.
+
+1:50:43.360 --> 1:50:57.360
+ And they no longer believe that. It's actually been more or less accepted by almost everyone that the natural numbers are actually a cultural construction.
+
+1:50:57.360 --> 1:51:05.360
+ And it's so interesting to go back and sort of like study those few people who still exist who, you know, who don't have those systems.
+
+1:51:05.360 --> 1:51:21.360
+ So this is just an example to me and where, you know, a certain mode of thinking about language itself or a certain mode of thinking about geometry and those kinds of relations.
+
+1:51:21.360 --> 1:51:26.360
+ So it becomes so second nature that you don't know what it is that you need to teach.
+
+1:51:26.360 --> 1:51:35.360
+ And in fact, we don't really teach it all that explicitly anyway.
+
+1:51:35.360 --> 1:51:45.360
+ And it's, you know, you take a math class, the professor sort of teaches it to you the way they understand it.
+
+1:51:45.360 --> 1:51:57.360
+ Some of the students in the class sort of like, you know, they get it, they start to get the way of thinking and they can actually do the problems that get put on the homework that the professor thinks are interesting and challenging ones.
+
+1:51:57.360 --> 1:52:05.360
+ But most of the students who don't kind of engage as deeply don't ever get, you know.
+
+1:52:05.360 --> 1:52:17.360
+ And we think, oh, that man must be brilliant. He must have this special insight, but I, you know, he must have some, you know, biological sort of bit that's different, right?
+
+1:52:17.360 --> 1:52:21.360
+ That makes him so that he or she could have that insight.
+
+1:52:21.360 --> 1:52:47.360
+ But I'm, although I don't want to dismiss biological individual differences completely, I find it much more interesting to think about the possibility that, you know, it was that difference in the dinner table conversation at the Chomsky House when he was growing up that made it so that he had that cast of mind.
+
+1:52:47.360 --> 1:53:06.360
+ Yeah, and there's, there's a few topics we talked about that kind of interconnect because I wonder the better I get at certain things, we humans, the deeper we understand something, what are you starting to then miss about the rest of the world?
+
+1:53:06.360 --> 1:53:25.360
+ We talked about David and his degenerative mind. And, you know, when you look in the mirror and wonder how different am I, am I cognitively from the man I was a month ago, from the man I was a year ago?
+
+1:53:25.360 --> 1:53:40.360
+ Like what, you know, if I can, having thought about language of Chomsky for, for 10, 20 years, what am I no longer able to see? What is in my blind spot and how big is that?
+
+1:53:40.360 --> 1:53:55.360
+ And then to somehow be able to leap back out of your deep, like, structure that you've formed for yourself about thinking about the world, leap back and look at the big picture again, or jump out of your current way of thinking.
+
+1:53:55.360 --> 1:54:15.360
+ And to be able to introspect, like, what are the limitations of your mind? Are, how is your mind less powerful than it used to be or more powerful or different, powerful in different ways? So that seems to be a difficult thing to do because we're living, we're looking at the world through the lens of our mind, right?
+
+1:54:15.360 --> 1:54:21.360
+ To step outside and introspect is difficult, but it seems necessary if you want to make progress.
+
+1:54:21.360 --> 1:54:47.360
+ You know, one of the threads of psychological research that's always been very, I don't know, important to me to be aware of is the idea that our explanations of our own behavior aren't necessarily
+
+1:54:47.360 --> 1:55:04.360
+ actually part of the causal process that caused that behavior to occur, or even valid observations of the set of constraints that led to the outcome.
+
+1:55:04.360 --> 1:55:18.360
+ But they are post hoc rationalizations that we can give based on information at our disposal about what might have contributed to the result that we came to when asked.
+
+1:55:18.360 --> 1:55:38.360
+ And so this is an idea that was introduced in a very important paper by Nisbet and Wilson about, you know, the limits on our ability to be aware of the factors that cause us to make the choices that we make.
+
+1:55:38.360 --> 1:56:04.360
+ And, you know, I think it's something that we really ought to be much more cognizant of in general as human beings is that our own insight into exactly why we hold the beliefs that we do and we hold the attitudes and make the choices
+
+1:56:04.360 --> 1:56:15.360
+ and feel the feelings that we do is not something that we totally control or totally observe.
+
+1:56:15.360 --> 1:56:36.360
+ And it's subject to, you know, our culturally transmitted understanding of what it is that is the mode that we give to explain these things when asked to do so as much as it is about anything else.
+
+1:56:36.360 --> 1:56:48.360
+ And so even our ability to introspect and think we have access to our own thoughts is a product of culture and belief, you know, practice.
+
+1:56:48.360 --> 1:56:53.360
+ So let me ask you the big question of advice.
+
+1:56:53.360 --> 1:57:03.360
+ So you've lived an incredible life in terms of the ideas you've put out into the world in terms of the trajectory you've taken through your career through your life.
+
+1:57:03.360 --> 1:57:19.360
+ What advice would you give to young people today in high school and college about how to have a career or how to have a life they can be proud of?
+
+1:57:19.360 --> 1:57:35.360
+ Finding the thing that you are intrinsically motivated to engage with and then celebrating that discovery is what it's all about.
+
+1:57:35.360 --> 1:57:51.360
+ When I was in college, I struggled with that. I had thought I wanted to be a psychiatrist because I think I was interested in human psychology in high school.
+
+1:57:51.360 --> 1:58:03.360
+ And at that time, the only sort of information I had that had anything to do with the psyche was, you know, Freud and Eric Frome and sort of popular psychiatry kinds of things.
+
+1:58:03.360 --> 1:58:08.360
+ And so, well, they were psychiatrists, right? So I had to be a psychiatrist.
+
+1:58:08.360 --> 1:58:21.360
+ And that meant I had to go to medical school and I got to college and I find myself taking, you know, the first semester of a three quarter physics class and it was mechanics.
+
+1:58:21.360 --> 1:58:28.360
+ And this was so far from what it was I was interested in, but it was also too early in the morning in the winter court semester.
+
+1:58:28.360 --> 1:58:50.360
+ So I never made it to the physics class. But I wanted about the rest of my freshman year and most of my sophomore year until I found myself in the midst of this situation where around me there was this big revolution happening.
+
+1:58:50.360 --> 1:59:00.360
+ I was at Columbia University in 1968 and the Vietnam War is going on. Columbia is building a gym in Morningside Heights, which is part of Harlem.
+
+1:59:00.360 --> 1:59:08.360
+ And people are thinking, oh, the big bad rich guys are stealing the parkland that belongs to the people of Harlem.
+
+1:59:08.360 --> 1:59:17.360
+ And, you know, they're part of the military industrial complex, which is enslaving us and sending us all off to war in Vietnam.
+
+1:59:17.360 --> 1:59:30.360
+ And so there was a big revolution that involved a confluence of black activism and, you know, SDS and social justice and the whole university blew up and got shut down.
+
+1:59:30.360 --> 1:59:39.360
+ And I got a chance to sort of think about why people were behaving the way they were in this context.
+
+1:59:39.360 --> 1:59:58.360
+ And, you know, I happen to have taken mathematical statistics, I happen to have been taking psychology that quarter and just psych one and somehow things in that space all ran together in my mind and got me really excited about asking questions about why people,
+
+1:59:58.360 --> 2:00:08.360
+ what made certain people go into the buildings and not others and things like that. And so suddenly I had a path forward and I had just been wandering around aimlessly.
+
+2:00:08.360 --> 2:00:28.360
+ And at the different points in my career, you know, when I think, okay, well, should I take this class or should I just read that book about some idea that I want to understand better, you know,
+
+2:00:28.360 --> 2:00:39.360
+ or should I pursue the thing that excites me and interests me or should I, you know, meet some requirement, you know, that's, I always did the latter.
+
+2:00:39.360 --> 2:00:48.360
+ So I ended up, my professors in psychology were, thought I was great, they wanted me to go to graduate school.
+
+2:00:48.360 --> 2:00:58.360
+ They, they nominated me for Phi Beta Kappa, and I went to the Phi Beta Kappa ceremony and this guy came up and said, oh, are you Magnar Summa?
+
+2:00:58.360 --> 2:01:08.360
+ I wasn't even getting honors based on my grades, they just happened to have thought I was interested enough in ideas to belong to Phi Beta Kappa.
+
+2:01:08.360 --> 2:01:22.360
+ So, I mean, would it be fair to say you kind of stumbled around a little bit through accidents of too early morning of classes in physics and so on until you discovered intrinsic motivation, as you mentioned.
+
+2:01:22.360 --> 2:01:28.360
+ And then that's it, it hooked you and then you celebrate the fact that this happens to human beings.
+
+2:01:28.360 --> 2:01:36.360
+ Yeah, like, and what is it that made what I did intrinsically motivating to me?
+
+2:01:36.360 --> 2:01:40.360
+ Well, that's interesting and I don't know all the answers to it.
+
+2:01:40.360 --> 2:01:53.360
+ And I don't think I want to, I want anybody to think that you should be sort of in any way, I don't know, sanctimonious or anything about it.
+
+2:01:53.360 --> 2:02:00.360
+ You know, it's like, I really enjoyed doing statistical analysis of data.
+
+2:02:00.360 --> 2:02:11.360
+ I really enjoyed running my own experiment, which was what I got a chance to do in the psychology department that chemistry and physics had never.
+
+2:02:11.360 --> 2:02:20.360
+ I never imagined that mere mortals would ever do an experiment in those sciences, except one that was in the textbook that you were told to do in lab class.
+
+2:02:20.360 --> 2:02:33.360
+ But in psychology, we were already like, even when I was taking psych one, it turned out we had our own rat and we got to, after two set experiments, we got to, okay, do something you think of, you know, with your rat.
+
+2:02:33.360 --> 2:02:45.360
+ You know, so it's the opportunity to do it myself and to bring together a certain set of things that engaged me intrinsically.
+
+2:02:45.360 --> 2:02:58.360
+ And I think it has something to do with why certain people turn out to be, you know, profoundly amazing musical geniuses, right?
+
+2:02:58.360 --> 2:03:04.360
+ They get immersed in it at an early enough point and it just sort of gets into the fabric.
+
+2:03:04.360 --> 2:03:20.360
+ So my little brother had intrinsic motivation for music as we witnessed when he discovered how to put records on the phonograph when he was like 13 months old and recognize which one he wanted to play,
+
+2:03:20.360 --> 2:03:31.360
+ not because he could read the labels, but because he could sort of see which ones had which scratches, which were the different, you know, oh, that's rapid espanol and that's, you know.
+
+2:03:31.360 --> 2:03:34.360
+ And he enjoyed that, that connected with him somehow.
+
+2:03:34.360 --> 2:03:47.360
+ Yeah, and there was something that it fed into and you're extremely lucky if you have that and if you can nurture it and can let it grow and let it be an important part of your life.
+
+2:03:47.360 --> 2:03:54.360
+ Yeah, those are the two things is like, be attentive enough to feel it when it comes.
+
+2:03:54.360 --> 2:03:56.360
+ Like this is something special.
+
+2:03:56.360 --> 2:04:07.360
+ I mean, I don't know, for example, I really like tabular data, like Excel sheets, like it brings me a deep joy.
+
+2:04:07.360 --> 2:04:09.360
+ I don't know how useful that is for anything.
+
+2:04:09.360 --> 2:04:12.360
+ Well, that's part of what I've talked to you.
+
+2:04:12.360 --> 2:04:13.360
+ Exactly.
+
+2:04:13.360 --> 2:04:20.360
+ So there's like a million, not a million, but there's a lot of things like that for me and you have to hear that for yourself.
+
+2:04:20.360 --> 2:04:33.360
+ And be like, realize this is really joyful, but then the other part that you're mentioning, which is the nurture is take time and stay with it, stay with it a while and see where that takes you in life.
+
+2:04:33.360 --> 2:04:45.360
+ Yeah, and I think the motivational engagement results in the immersion that then creates the opportunity to obtain the expertise.
+
+2:04:45.360 --> 2:04:49.360
+ So, you know, we could call it the Mozart effect, right?
+
+2:04:49.360 --> 2:04:59.360
+ I mean, when I think about Mozart, I think about, you know, the person who was born as the fourth member of the family's drink quartet, right?
+
+2:04:59.360 --> 2:05:05.360
+ And they handed him the violin when he was six weeks old.
+
+2:05:05.360 --> 2:05:15.360
+ All right, start playing, you know, it's like, and so the level of immersion there was amazingly profound.
+
+2:05:15.360 --> 2:05:28.360
+ But hopefully he also had, you know, something, maybe this is where the more sort of the genetic part comes in.
+
+2:05:28.360 --> 2:05:38.360
+ Sometimes I think, you know, something in him resonated to the music so that the synergy of the combination of that was so powerful.
+
+2:05:38.360 --> 2:05:53.360
+ So that's what I really consider to be the most artifact. It's sort of the synergy of something with experience that then results in the unique flowering of a particular, you know, mind.
+
+2:05:53.360 --> 2:05:59.360
+ So I know my siblings and I are all very different from each other.
+
+2:05:59.360 --> 2:06:02.360
+ We've all gone in our own different directions.
+
+2:06:02.360 --> 2:06:06.360
+ And, you know, I mentioned my younger brother who was very musical.
+
+2:06:06.360 --> 2:06:12.360
+ I had my other younger brother was like this amazing like intuitive engineer.
+
+2:06:12.360 --> 2:06:28.360
+ And my sister, one of my sisters was passionate about, you know, water conservation well before it was, you know, such a huge, important issue that it is today.
+
+2:06:28.360 --> 2:06:50.360
+ So we all sort of somehow find a different thing. And I don't mean to say it isn't tied in with something about us biologically, but it's also when that happens where you can find that then, you know, you can do your thing and you can be excited about it.
+
+2:06:50.360 --> 2:06:58.360
+ So people can be excited about fitting people on bicycles as well as excited about making neural networks achieve insights into human cognition, right?
+
+2:06:58.360 --> 2:07:10.360
+ Yeah, like for me personally, I've always been excited about love and friendship between humans and just like the actual experience of it.
+
+2:07:10.360 --> 2:07:16.360
+ Since I was a child, just observing people around me and also been excited about robots.
+
+2:07:16.360 --> 2:07:22.360
+ And there's something in me that thinks I really would love to explore how those two things combine.
+
+2:07:22.360 --> 2:07:28.360
+ It doesn't make any sense. A lot of it is also timing just to think of your own career and your own life.
+
+2:07:28.360 --> 2:07:35.360
+ You found yourself in certain pieces, places that happened to involve some of the greatest thinkers of our time.
+
+2:07:35.360 --> 2:07:48.360
+ And so it just worked out that like you guys developed those ideas and there may be a lot of other people similar to you and they were brilliant and they never found that right connection in place to where the ideas could flourish.
+
+2:07:48.360 --> 2:07:56.360
+ So it's timing, it's place, it's people and ultimately the whole ride, you know, it's undirected.
+
+2:07:56.360 --> 2:08:13.360
+ Can I ask you about something you mentioned in terms of psychiatry when you were younger? Because I had a similar experience of reading Freud and Carl Jung and just, you know, those kind of popular psychiatry ideas.
+
+2:08:13.360 --> 2:08:26.360
+ And that was a dream for me early on in high school to like, I hope to understand the human mind by, somehow psychiatry felt like the right discipline for that.
+
+2:08:26.360 --> 2:08:36.360
+ Does that make you sad that psychiatry is not the mechanism by which you are able to explore the human mind?
+
+2:08:36.360 --> 2:08:56.360
+ For me, I was a little bit disillusioned because of how much prescription medication and biochemistry is involved in the discipline of psychiatry as opposed to the dream of the Freud like use the mechanisms of language to explore the human mind.
+
+2:08:56.360 --> 2:09:06.360
+ So that was a little disappointing. And that's why I kind of went to computer science and thinking like, maybe you can explore the human mind by trying to build the thing.
+
+2:09:06.360 --> 2:09:25.360
+ Yes, I wasn't exposed to the sort of the biomedical slash pharmacological aspects of psychiatry at that point because I didn't, I dropped out of that whole idea of premed that I never even found out about that until much later.
+
+2:09:25.360 --> 2:09:37.360
+ But you're absolutely right. So I was actually a member of the National Advisory Mental Health Council.
+
+2:09:37.360 --> 2:09:44.360
+ That is to say the board of scientists who advised the director of the National Institute of Mental Health.
+
+2:09:44.360 --> 2:10:06.360
+ And that was around the year 2000. And in fact, at that time, the man who came in as the new director, I had been on this board for a year when he came in said, okay, schizophrenia is a biological illness.
+
+2:10:06.360 --> 2:10:17.360
+ It's a lot like cancer. We've made huge strides in curing cancer. And that's what we're going to do with schizophrenia. We're going to find the medications that are going to cure this disease.
+
+2:10:17.360 --> 2:10:29.360
+ And we're not going to listen to anybody's grandmother anymore. And good old behavioral psychology is not something we're going to support any further.
+
+2:10:29.360 --> 2:10:47.360
+ And he completely alienated me from the Institute and from all of its prior policies, which had been much more holistic, I think, really at some level.
+
+2:10:47.360 --> 2:11:06.360
+ And the other people on the board were like psychiatrists, very biological psychiatrists. It didn't pan out, right? That nothing has changed in our ability to help people with mental illness.
+
+2:11:06.360 --> 2:11:14.360
+ And so 20 years later, that particular path was a dead end, as far as I can tell.
+
+2:11:14.360 --> 2:11:21.360
+ Well, there's some aspect to and started to romanticize the whole philosophical conversation about the human mind.
+
+2:11:21.360 --> 2:11:37.360
+ But to me, psychiatrists for a time held the flag of where the deep thinkers in the same way that physicists are the deep thinkers about the nature of reality, psychiatrists are the deep thinkers about the nature of the human mind.
+
+2:11:37.360 --> 2:11:49.360
+ And I think that flag has been taken from them and carried by people like you. It's more in the cognitive psychology, especially when you have a foot in the computational view of the world.
+
+2:11:49.360 --> 2:12:02.360
+ Because you can both build it. You can intuit about the functioning of the mind by building little models and be able to say mathematical things and then deploying those models, especially in computers, to say, does this actually work?
+
+2:12:02.360 --> 2:12:17.360
+ They do little experiments. And then some combination of neuroscience, where you're starting to actually be able to observe, do certain experience on human beings and observe how the brain is actually functioning.
+
+2:12:17.360 --> 2:12:30.360
+ And there, using intuition, you can start being the philosopher, like Richard Feynman is the philosopher, a cognitive psychologist can become the philosopher, and psychiatrists become much more like doctors.
+
+2:12:30.360 --> 2:12:41.360
+ They're like very medical. They help people with medication, biochemistry and so on. But they are no longer the book writers and the philosophers, which of course I admire.
+
+2:12:41.360 --> 2:12:51.360
+ I admire the Richard Feynman ability to do great low level mathematics and physics and the high level philosophy.
+
+2:12:51.360 --> 2:13:06.360
+ Yeah. I think it was from and young more than Freud that was sort of initially kind of like made me feel like, oh, this is really amazing and interesting and I want to explore it further.
+
+2:13:06.360 --> 2:13:20.360
+ I actually, when I got to college and I lost that thread, I found more of it in sociology and literature than I did in any place else.
+
+2:13:20.360 --> 2:13:27.360
+ So I took quite a lot of both of those disciplines as an undergraduate.
+
+2:13:27.360 --> 2:13:46.360
+ And, you know, I was actually deeply ambivalent about the psychology because I was doing experiments after the initial flurry of interest in why people would occupy buildings during an insurrection and consider, you know,
+
+2:13:46.360 --> 2:13:51.360
+ that be sort of like so over committed to their beliefs.
+
+2:13:51.360 --> 2:13:56.360
+ But I ended up in the psychology laboratory running experiments on pigeons.
+
+2:13:56.360 --> 2:14:13.360
+ And so I had these profound sort of like dissonance between, okay, the kinds of issues that would be explored when I was thinking about what I read about in modern British literature
+
+2:14:13.360 --> 2:14:17.360
+ versus what I could study with my pigeons in the laboratory.
+
+2:14:17.360 --> 2:14:22.360
+ That got resolved when I went to graduate school and I discovered cognitive psychology.
+
+2:14:22.360 --> 2:14:42.360
+ And so for me, that was the path out of this sort of like extremely sort of ambivalent divergence between the interest in the human condition and the desire to do, you know, actual mechanistically oriented thinking about it.
+
+2:14:42.360 --> 2:15:03.360
+ And I think we've come a long way in that regard and that you're absolutely right that nowadays this is something that's accessible to people through the pathway in through computer science or the pathway in through neuroscience.
+
+2:15:03.360 --> 2:15:18.360
+ You know, you can get derailed in neuroscience down to the bottom of the system where you might find the cures of various conditions, but you don't get a chance to think about the higher level stuff.
+
+2:15:18.360 --> 2:15:30.360
+ So it's in the systems and cognitive neuroscience and computational intelligence miasma up there at the top that I think these opportunities are most are richest right now.
+
+2:15:30.360 --> 2:15:38.360
+ And so yes, I am indeed blessed by having had the opportunity to fall into that space.
+
+2:15:38.360 --> 2:15:49.360
+ So you mentioned the human condition, speaking of which you happen to be a human being who's unfortunately not immortal.
+
+2:15:49.360 --> 2:15:54.360
+ That seems to be a fundamental part of the human condition that this right ends.
+
+2:15:54.360 --> 2:16:04.360
+ Do you think about the fact that you're going to die one day? Are you afraid of death?
+
+2:16:04.360 --> 2:16:14.360
+ I would say that I am not as much afraid of death as I am of degeneration.
+
+2:16:14.360 --> 2:16:27.360
+ And I say that in part for reasons of having, you know, seen some tragic degenerative situations unfold.
+
+2:16:27.360 --> 2:16:45.360
+ It's exciting when you can continue to participate and feel like you're near the place where the wave is breaking on the shore.
+
+2:16:45.360 --> 2:16:58.360
+ If you like, you know, and I think about, you know, my own future potential.
+
+2:16:58.360 --> 2:17:13.360
+ If I were to undergo a begin to suffer from dementia, Alzheimer's disease or semantic dementia or some other condition, you know, I would sort of gradually lose the thread of that ability.
+
+2:17:13.360 --> 2:17:32.360
+ And so one can live on for several, for a decade after, you know, sort of having to retire because one no longer has these kinds of abilities to engage.
+
+2:17:32.360 --> 2:17:35.360
+ And I think that's the thing that I fear the most.
+
+2:17:35.360 --> 2:17:46.360
+ The losing of that, like the breaking of the way, the flourishing of the mind where you could have these ideas and they're swimming around, you're able to play with them.
+
+2:17:46.360 --> 2:17:57.360
+ Yeah, and collaborate with other people who, you know, are themselves really helping to push these ideas forward.
+
+2:17:57.360 --> 2:18:00.360
+ What about the edge of the cliff?
+
+2:18:00.360 --> 2:18:05.360
+ The end, I mean, the mystery of it.
+
+2:18:05.360 --> 2:18:27.360
+ The migrated sort of conception of mind and, you know, sort of continuous sort of way of thinking about most things makes it so that, to me, the discreteness of that transition is less apparent than it seems to be to most people.
+
+2:18:27.360 --> 2:18:31.360
+ I see, I see, yeah.
+
+2:18:31.360 --> 2:18:50.360
+ Yeah, I wonder, so I don't know if you know the work of Ernest Becker and so on, I wonder what role mortality and our ability to be cognizant of it and anticipate it and perhaps be afraid of it, what role that plays in our reasoning of the world.
+
+2:18:50.360 --> 2:18:56.360
+ I think that it can be motivating to people to think they have a limited period left.
+
+2:18:56.360 --> 2:19:21.360
+ I think in my own case, you know, it's like seven or eight years ago now that I was sitting around doing experiments on decision making that were satisfying in a certain way because I could really get closure on what, whether the model fit the data perfectly or not.
+
+2:19:21.360 --> 2:19:30.360
+ And I could see how one could test, you know, the predictions in monkeys as well as humans and really see what the neurons were doing.
+
+2:19:30.360 --> 2:19:37.360
+ But I just realized, hey, wait a minute, you know, I may only have about 10 or 15 years left here.
+
+2:19:37.360 --> 2:19:46.360
+ And I don't feel like I'm getting towards the answers to the really interesting questions while I'm doing this particular level of work.
+
+2:19:46.360 --> 2:19:50.360
+ And that's when I said to myself, okay,
+
+2:19:50.360 --> 2:19:55.360
+ let's pick something that's hard, you know.
+
+2:19:55.360 --> 2:19:58.360
+ So that's when I started working on mathematical cognition.
+
+2:19:58.360 --> 2:20:06.360
+ And I think it was more in terms of, well, I got 15 more years, possibly of useful life left.
+
+2:20:06.360 --> 2:20:09.360
+ Let's imagine that it's only 10.
+
+2:20:09.360 --> 2:20:13.360
+ I'm actually getting close to the end of that now, maybe three or four more years.
+
+2:20:13.360 --> 2:20:21.360
+ But I'm beginning to feel like, well, I probably have another five after that. So, okay, I'll give myself another six or eight.
+
+2:20:21.360 --> 2:20:23.360
+ But a deadline is looming.
+
+2:20:23.360 --> 2:20:25.360
+ It's not going to go on forever.
+
+2:20:25.360 --> 2:20:34.360
+ And so, yeah, I got to keep thinking about the questions that I think are the interesting and important ones for sure.
+
+2:20:34.360 --> 2:20:37.360
+ What do you hope your legacy is?
+
+2:20:37.360 --> 2:20:42.360
+ You've done some incredible work in your life as a man, as a scientist.
+
+2:20:42.360 --> 2:20:51.360
+ When the aliens and the human civilization is long gone and the aliens are reading the encyclopedia about the human species.
+
+2:20:51.360 --> 2:20:55.360
+ What do you hope is the paragraph written about you?
+
+2:20:55.360 --> 2:21:22.360
+ I would want it to sort of highlight a couple things that I was, you know, able to see one path that was more exciting to me
+
+2:21:22.360 --> 2:21:28.360
+ than the one that seemed already to be there for a cognitive psychologist, you know.
+
+2:21:28.360 --> 2:21:35.360
+ But not for any super special reason other than that I'd had the right context prior to that,
+
+2:21:35.360 --> 2:21:39.360
+ but that I had gone ahead and followed that lead, you know.
+
+2:21:39.360 --> 2:21:56.360
+ And I forget the exact wording, but I said in this preface that the joy of science is the moment in which, you know,
+
+2:21:56.360 --> 2:22:15.360
+ a partially formed thought in the mind of one person gets crystallized a little better in the discourse and becomes the foundation of some exciting concrete piece of actual scientific progress.
+
+2:22:15.360 --> 2:22:21.360
+ And I feel like that, you know, moment happened when Rommelhardt and I were doing the interactive activation model.
+
+2:22:21.360 --> 2:22:31.360
+ And when Rommelhardt heard Hinton talk about gradient descent and having the objective function to guide the learning process.
+
+2:22:31.360 --> 2:22:42.360
+ And it happened a lot in that period and I sort of seek that kind of thing in my collaborations with my students, right?
+
+2:22:42.360 --> 2:23:00.360
+ So, you know, the idea that this is a person who contributed to science by finding exciting collaborative opportunities to engage with other people through is something that I certainly hope is part of the paragraph.
+
+2:23:00.360 --> 2:23:12.360
+ And like you said, taking a step maybe in directions that are non obvious. So, it's the old Robert Frost road less taken.
+
+2:23:12.360 --> 2:23:22.360
+ So, maybe because you said like this incomplete initial idea, that step you take is a little bit off the beaten path.
+
+2:23:22.360 --> 2:23:35.360
+ If I could just say one more thing here. This was something that really contributed to energizing me in a way that I feel it would be useful to share.
+
+2:23:35.360 --> 2:23:44.360
+ My PhD dissertation project was completely empirical experimental project.
+
+2:23:44.360 --> 2:23:53.360
+ And I wrote a paper based on the two main experiments that were the core of my dissertation and I submitted it to a journal.
+
+2:23:53.360 --> 2:24:11.360
+ And at the end of the paper, I had a little section where I laid out my, the beginnings of my theory about what I thought was going on that would explain the data that I had collected.
+
+2:24:11.360 --> 2:24:16.360
+ And I had submitted the paper to the Journal of Experimental Psychology.
+
+2:24:16.360 --> 2:24:24.360
+ So, I got back a letter from the editor saying, thank you very much. These are great experiments and we'd love to publish them in the journal.
+
+2:24:24.360 --> 2:24:32.360
+ But what we'd like you to do is to leave the theorizing to the theorists and take that part out of the paper.
+
+2:24:32.360 --> 2:24:45.360
+ And so I did, I took that part out of the paper. But, you know, I almost found myself labeled as a non theorist, right, by this.
+
+2:24:45.360 --> 2:24:53.360
+ And I could have like succumbed to that and said, okay, well, I guess my job is to just go on and do experiments, right?
+
+2:24:53.360 --> 2:25:08.360
+ But that's not what I wanted to do. And so when I got to my assistant professorship, although I continued to do experiments because I knew I had to get some papers out,
+
+2:25:08.360 --> 2:25:21.360
+ I also, at the end of my first year, submitted my first article to Psychological Review, which was the theoretical journal where I took that section and elaborated it and wrote it up and submitted it to them.
+
+2:25:21.360 --> 2:25:28.360
+ And they didn't accept that either. But they said, oh, this is interesting. You should keep thinking about it this time.
+
+2:25:28.360 --> 2:25:38.360
+ And then that was what got me going to think, okay, you know, so it's not a superhuman thing to contribute to the development of theory.
+
+2:25:38.360 --> 2:25:44.360
+ You know, you don't have to be, you can do it as a mere mortal.
+
+2:25:44.360 --> 2:25:52.360
+ And the broader, I think, lessons don't succumb to the labels of a particular viewer.
+
+2:25:52.360 --> 2:25:55.360
+ Or anybody labeling you, right?
+
+2:25:55.360 --> 2:26:05.360
+ Exactly. I mean, that, yeah, exactly. And especially as you become successful, your labels get assigned to you for that, you're successful for that thing.
+
+2:26:05.360 --> 2:26:09.360
+ Yeah, I'm a connectionist or a cognitive scientist and not a neuroscientist.
+
+2:26:09.360 --> 2:26:19.360
+ And then you can completely, that's just, that's the stories of the past. You're today a new person that can completely revolutionize in totally new areas.
+
+2:26:19.360 --> 2:26:23.360
+ So don't let those labels hold you back.
+
+2:26:23.360 --> 2:26:27.360
+ Well, let me ask the big question.
+
+2:26:27.360 --> 2:26:36.360
+ When you look into, you said it started with Columbia trying to observe these humans and they're doing weird stuff and you want to know why are they doing this stuff.
+
+2:26:36.360 --> 2:26:44.360
+ So zoom out even bigger at the 100 plus billion people who've ever lived on earth.
+
+2:26:44.360 --> 2:26:51.360
+ Why do you think we're all doing what we're doing? What do you think is the meaning of it all? The big why question?
+
+2:26:51.360 --> 2:26:58.360
+ We seem to be very busy doing a bunch of stuff and we seem to be kind of directed towards somewhere.
+
+2:26:58.360 --> 2:27:02.360
+ But why?
+
+2:27:02.360 --> 2:27:17.360
+ Well, I myself think that we make meaning for ourselves and that we find inspiration in the meaning that other people have made in the past.
+
+2:27:17.360 --> 2:27:43.360
+ And the great religious thinkers of the first millennium BC and few that came in the early part of the second millennium laid down some important foundations for us.
+
+2:27:43.360 --> 2:28:03.360
+ But I do believe that we are an emergent result of a process that happened naturally without guidance and that meaning is what we make of it
+
+2:28:03.360 --> 2:28:29.360
+ and that the creation of efforts to reify meaning in like religious traditions and so on is just a part of the expression of that goal that we have to, you know, not find out what the meaning is but to make it ourselves.
+
+2:28:29.360 --> 2:28:56.360
+ And so to me, it's something that's very personal. It's very individual. It's like meaning will come for you through the particular combination of synergistic elements that are your fabric and your experience and your context
+
+2:28:56.360 --> 2:29:09.360
+ and you know, you should, it's all made in a certain kind of a local context though, right?
+
+2:29:09.360 --> 2:29:35.360
+ And what, here I am at UCSD with this brilliant man, Rommelhart, who's having, you know, these doubts about symbolic artificial intelligence that resonate with my desire to see it grounded in the biology and let's make the most of that, you know.
+
+2:29:35.360 --> 2:29:58.360
+ Yeah. And so, and so from that, like little pocket, there's some kind of peculiar little emergent process that then, which is basically each one of us, each one of us humans is a kind of, you know, you think cells and they come together and it's an emergent process that then tells fancy stories about itself.
+
+2:29:58.360 --> 2:30:19.360
+ And then gets, just like you said, just enjoys the beauty of the stories we tell about ourselves. It's an emergent process that lives for a time, is defined by its local pocket and context in time and space and then tells pretty stories and we write those stories down and then we celebrate how nice the stories are.
+
+2:30:19.360 --> 2:30:33.360
+ And then it continues because we build stories on top of each other and eventually we'll colonize hopefully other planets, other solar systems, other galaxies and we'll tell even better stories.
+
+2:30:33.360 --> 2:30:56.360
+ But it all starts here on Earth. Jay, you're speaking of peculiar emergent processes that lived one heck of a story. You're one of the great scientists of cognitive science, of psychology, of computation.
+
+2:30:56.360 --> 2:31:06.360
+ It's a huge honor you would talk to me today that you spend your very valuable time. I really enjoy talking with you and thank you for all the work you've done. I can't wait to see what you do next.
+
+2:31:06.360 --> 2:31:23.360
+ Well, thank you so much. And I, you know, this has been an amazing opportunity for me to let ideas that I've never fully expressed before come out because you ask such a wide range of, you know, the deeper questions that we've all been thinking about for so long.
+
+2:31:23.360 --> 2:31:24.360
+ So thank you very much for that.
+
+2:31:24.360 --> 2:31:26.360
+ Thank you.
+
+2:31:54.360 --> 2:31:59.360
+ Thank you.
+

@@ -1,0 +1,3839 @@
+WEBVTT
+
+00:00.000 --> 00:05.900
+ The following is a conversation with Vitalik Buterin, co creator of an author of the white
+
+00:05.900 --> 00:11.940
+ paper that launched Ethereum and Ether, which is a cryptocurrency that is currently the
+
+00:11.940 --> 00:16.100
+ second largest digital currency after Bitcoin.
+
+00:16.100 --> 00:20.300
+ Ethereum has a lot of interesting technical ideas that are defining the future of blockchain
+
+00:20.300 --> 00:27.260
+ technology and Vitalik is one of the most brilliant people innovating in the space today.
+
+00:27.260 --> 00:34.840
+ Like Satoshi Nakamoto, the unknown person or group that created Bitcoin, Vitalik is
+
+00:34.840 --> 00:41.480
+ very well known and at a young age is thrust into the limelight as one of the main faces
+
+00:41.480 --> 00:47.760
+ of the technology that may redefine the nature of money and all forms of digital transactions
+
+00:47.760 --> 00:50.280
+ in the 21st century.
+
+00:50.280 --> 00:52.360
+ This is the Artificial Intelligence Podcast.
+
+00:52.360 --> 00:58.480
+ If you enjoy it, subscribe on YouTube, review it with 5 stars on Apple Podcast, support
+
+00:58.480 --> 01:04.960
+ it on Patreon, or simply connect with me on Twitter at Lex Freedman, spelled F R I D M
+
+01:04.960 --> 01:06.680
+ A N.
+
+01:06.680 --> 01:11.240
+ As usual, I'll do one or two minutes of ads now and never any ads in the middle that
+
+01:11.240 --> 01:13.200
+ can break the flow of the conversation.
+
+01:13.200 --> 01:17.760
+ I hope that works for you and doesn't hurt the listening experience.
+
+01:17.760 --> 01:24.200
+ Next summary of the ads, two sponsors, Masterclass and ExpressVPN.
+
+01:24.200 --> 01:29.000
+ Please consider supporting the podcast by signing up to masterclass at masterclass.com
+
+01:29.000 --> 01:39.200
+ slash lex and getting expressvpn at expressvpn.com slash lex pod.
+
+01:39.200 --> 01:41.720
+ This show is sponsored by masterclass.
+
+01:41.720 --> 01:48.440
+ Sign up at masterclass.com slash lex to get a discount and to support this podcast.
+
+01:48.440 --> 01:53.160
+ When I first heard about Masterclass, I honestly thought it was too good to be true.
+
+01:53.160 --> 01:59.680
+ For $180 a year, you get an all access pass to watch courses from experts at the top of
+
+01:59.680 --> 02:01.000
+ their field.
+
+02:01.000 --> 02:06.560
+ To list some of my favorites, Chris Hadfield on Space Exploration, Neil deGrasse Tyson on
+
+02:06.560 --> 02:12.940
+ Scientific Thinking and Communication, Will Wright, the creator of SimCity and Sims on
+
+02:12.940 --> 02:14.440
+ Game Design.
+
+02:14.440 --> 02:16.080
+ I love that game.
+
+02:16.080 --> 02:21.720
+ Jane Goodall on Conservation, Carlos Santana, one of my favorite guitarists on guitar.
+
+02:21.720 --> 02:25.440
+ Gary Kasparov on Chess, obviously I'm Russian.
+
+02:25.440 --> 02:27.000
+ I love Gary.
+
+02:27.000 --> 02:32.880
+ Daniel Negrano on poker, one of my favorite poker players, also Phil Ivy, gives a course
+
+02:32.880 --> 02:35.640
+ as well and many, many more.
+
+02:35.640 --> 02:39.860
+ Chris Hadfield explaining how rockets work and the experience of being launched into
+
+02:39.860 --> 02:43.280
+ space alone is worth the money.
+
+02:43.280 --> 02:48.600
+ By way of advice for me, the key is not to be overwhelmed by the abundance of choice.
+
+02:48.600 --> 02:50.680
+ Pick three courses you want to complete.
+
+02:50.680 --> 02:52.640
+ Watch each all the way through from start to finish.
+
+02:52.640 --> 02:56.760
+ It's not that long, but it's an experience that will stick with you for a long time,
+
+02:56.760 --> 02:58.360
+ I promise.
+
+02:58.360 --> 02:59.840
+ It's easily worth the money.
+
+02:59.840 --> 03:02.480
+ You can watch it on basically any device.
+
+03:02.480 --> 03:08.600
+ Once again, sign up at masterclass.com slash lex to get a discount and to support this
+
+03:08.600 --> 03:10.100
+ podcast.
+
+03:10.100 --> 03:17.880
+ This show is sponsored by ExpressVPN, download it at expressvpn.com slash lexpod to get a
+
+03:17.880 --> 03:20.920
+ discount and to support this podcast.
+
+03:20.920 --> 03:23.840
+ I've been using ExpressVPN for many years.
+
+03:23.840 --> 03:25.960
+ I honestly love it.
+
+03:25.960 --> 03:31.240
+ It's easy to use, press the big power on button and your privacy is protected.
+
+03:31.240 --> 03:35.800
+ And if you like, you can make it look like your location is anywhere else in the world.
+
+03:35.800 --> 03:41.080
+ I might be in Boston now, but I can make it look like I'm in New York, London, Paris or
+
+03:41.080 --> 03:42.920
+ anywhere else.
+
+03:42.920 --> 03:45.560
+ This has a large number of obvious benefits.
+
+03:45.560 --> 03:50.400
+ For example, certainly it allows you to access international versions of streaming websites
+
+03:50.400 --> 03:55.640
+ like the Japanese version of Netflix or the UK version of Hulu.
+
+03:55.640 --> 04:00.720
+ As you probably know, I was born in the Soviet Union, so sadly, given my roots and appreciation
+
+04:00.720 --> 04:06.760
+ of Russian history and culture, my website and the website for this podcast is blocked
+
+04:06.760 --> 04:08.560
+ in Russia.
+
+04:08.560 --> 04:16.120
+ So this is another example of where you can use ExpressVPN to access sites like the podcast
+
+04:16.120 --> 04:19.120
+ that are not accessible in your country.
+
+04:19.120 --> 04:21.920
+ ExpressVPN works on any device you can imagine.
+
+04:21.920 --> 04:28.120
+ I use it on Linux, shout out to Ubuntu, Windows, Android, but it's available everywhere else
+
+04:28.120 --> 04:29.360
+ too.
+
+04:29.360 --> 04:37.200
+ Once again, download it at expressvpn.com slash lexpod to get a discount and to support
+
+04:37.200 --> 04:38.800
+ this podcast.
+
+04:38.800 --> 04:44.080
+ And now here's my conversation with Vitalik Buterin.
+
+04:44.080 --> 04:50.160
+ So before we talk about the fundamental ideas behind Ethereum and cryptocurrency, perhaps
+
+04:50.160 --> 04:58.480
+ it'd be nice to talk about the origin story of Bitcoin and the mystery of Satoshi Nakamoto.
+
+04:58.480 --> 05:04.440
+ You gave a talk that started with asking the question, what did Satoshi Nakamoto actually
+
+05:04.440 --> 05:05.440
+ invent?
+
+05:05.440 --> 05:10.400
+ Maybe you could say, who is Satoshi Nakamoto and what did he invent?
+
+05:10.400 --> 05:11.400
+ Sure.
+
+05:11.400 --> 05:18.880
+ So Satoshi Nakamoto is the name by which we know the person who originally came up with
+
+05:18.880 --> 05:19.880
+ Bitcoin.
+
+05:19.880 --> 05:25.440
+ So the reason why I say the name by which we know is that this is a anonymous fellow
+
+05:25.440 --> 05:33.640
+ who has shown himself to us only over the internet just by first publishing the white
+
+05:33.640 --> 05:39.440
+ paper for Bitcoin, then releasing the original source code for Bitcoin, and then talking
+
+05:39.440 --> 05:46.680
+ to the very early Bitcoin community on Bitcoin forums and interacting with them and helping
+
+05:46.680 --> 05:49.640
+ the project along for a couple of years.
+
+05:49.640 --> 05:55.800
+ And then at some point in late 2010 to early 2011, he disappeared.
+
+05:55.800 --> 06:05.160
+ So Bitcoin is a fairly unique project in how it has this kind of mythical kind of quasi
+
+06:05.160 --> 06:11.080
+ godlike founder who just kind of popped in, did the thing and disappeared and we've somehow
+
+06:11.080 --> 06:13.120
+ just never heard from him again.
+
+06:13.120 --> 06:18.360
+ So in 2008, so the white paper was the first, do you know the white paper was the first
+
+06:18.360 --> 06:22.320
+ time the name would actually appear Satoshi Nakamoto?
+
+06:22.320 --> 06:23.720
+ I believe so.
+
+06:23.720 --> 06:31.560
+ So how is it possible that the creator of such an impactful project remains anonymous?
+
+06:31.560 --> 06:34.280
+ That's a tough question.
+
+06:34.280 --> 06:39.280
+ There's no similarity to it in the history of technology as far as I'm aware.
+
+06:39.280 --> 06:46.760
+ So one possibility is that it's Healthini because Healthini was also active in the Bitcoin
+
+06:46.760 --> 06:57.520
+ community and as Healthini in those two beginning years and Healthini, maybe he is one of the
+
+06:57.520 --> 07:00.760
+ people in the early Cypherpunk community.
+
+07:00.760 --> 07:08.120
+ He was a computer scientist, just computer scientists, cryptographers, people interested
+
+07:08.120 --> 07:14.840
+ in like technology, internet freedom, like those kinds of topics.
+
+07:14.840 --> 07:19.040
+ Was it correct that I read that he seemed to have been involved in either the earliest
+
+07:19.040 --> 07:21.920
+ or the first transaction of Bitcoin?
+
+07:21.920 --> 07:22.920
+ Yes.
+
+07:22.920 --> 07:26.440
+ The first transaction of Bitcoin was between Satoshi and Healthini.
+
+07:26.440 --> 07:28.560
+ Do you think he knew who Satoshi was?
+
+07:28.560 --> 07:31.400
+ If he wasn't Satoshi, you probably know.
+
+07:31.400 --> 07:36.920
+ How is it possible to work so closely with people and nevertheless not know anything
+
+07:36.920 --> 07:39.880
+ about their fundamental identity?
+
+07:39.880 --> 07:43.840
+ Is this like a natural sort of characteristic of the internet?
+
+07:43.840 --> 07:52.120
+ If we were to think about it, because you and I just met now, there's a depth of knowledge
+
+07:52.120 --> 07:55.680
+ that we now have about each other that's like physical.
+
+07:55.680 --> 07:58.200
+ My vision system is able to recognize you.
+
+07:58.200 --> 08:05.920
+ I can also verify your identity of uniqueness, like it's very hard to fake you being you.
+
+08:05.920 --> 08:11.440
+ So the internet has a fundamentally different quality to it, which is just fascinating.
+
+08:11.440 --> 08:19.360
+ Yeah, this is definitely interesting as I definitely just know a lot of people just
+
+08:19.360 --> 08:21.760
+ by their internet handles.
+
+08:21.760 --> 08:27.880
+ To me, when I think of them, I see their internet handles and one of them has a profile picture
+
+08:27.880 --> 08:34.600
+ as this face that's not quite human with a bunch of psychedelic colors in it.
+
+08:34.600 --> 08:37.960
+ When I visualize him, I just visualize that.
+
+08:37.960 --> 08:40.880
+ Not an actual face.
+
+08:40.880 --> 08:48.440
+ You are the creator of the second most popular cryptocurrency, Ethereum.
+
+08:48.440 --> 08:53.000
+ On this topic, if we just stick on Satoshi Nakamoto for a little bit longer, you may
+
+08:53.000 --> 08:58.200
+ be the most qualified person to speak to the psychology of this anonymity that we're talking
+
+08:58.200 --> 09:00.480
+ about.
+
+09:00.480 --> 09:05.400
+ Your identity is known, I've just verified it, but from your perspective, what are the
+
+09:05.400 --> 09:11.320
+ benefits in creating a cryptocurrency and then remaining anonymous?
+
+09:11.320 --> 09:17.160
+ If it can psychoanalyze Satoshi Nakamoto, is there something interesting there?
+
+09:17.160 --> 09:20.360
+ Or is it just a peculiar quirk of him?
+
+09:20.360 --> 09:29.760
+ It definitely helps create this image of a neutral thing that doesn't belong to anyone.
+
+09:29.760 --> 09:37.640
+ You created a project and because you're anonymous and because you also have disappeared or,
+
+09:37.640 --> 09:42.320
+ as unfortunately happened to Helfini, if that is him, he ended up dying of Lou Gehrig's
+
+09:42.320 --> 09:46.520
+ disease and he's in a cryogenic freezer now.
+
+09:46.520 --> 09:55.800
+ If you pop in and you created and you're gone and all that's remaining of that whole
+
+09:55.800 --> 10:03.920
+ process is the thing itself, then no one can go and try to interpret any of your other
+
+10:03.920 --> 10:13.840
+ behavior and try to understand, oh, this person wrote this thing in some essay at age 16 where
+
+10:13.840 --> 10:17.440
+ he expressed particular opinions about democracy.
+
+10:17.440 --> 10:22.720
+ Because of that, this project is a statement that's trying to do this specific thing.
+
+10:22.720 --> 10:30.640
+ That it creates this environment where the thing is what you make of it.
+
+10:30.640 --> 10:36.000
+ It doesn't have the burden of your other ideas, political thought and so on.
+
+10:36.000 --> 10:43.120
+ So now that we're sitting with you, do you feel the burden of being kind of the face
+
+10:43.120 --> 10:44.120
+ of Ethereum?
+
+10:44.120 --> 10:49.840
+ I mean, there's a very large community of developers, but nevertheless, is there like
+
+10:49.840 --> 10:52.160
+ a burden associated with that?
+
+10:52.160 --> 10:53.480
+ There definitely is.
+
+10:53.480 --> 11:00.240
+ This is definitely a big reason why I've been trying to push for the Ethereum ecosystem
+
+11:00.240 --> 11:06.840
+ to become more decentralized in many ways, just encouraging a lot of Ethereum work to
+
+11:06.840 --> 11:11.840
+ happen outside of the Ethereum foundation and of expanding the number of people that
+
+11:11.840 --> 11:17.080
+ are making different kinds of decisions, having multiple software limitations instead of one
+
+11:17.080 --> 11:18.600
+ and all of these things.
+
+11:18.600 --> 11:25.400
+ There's a lot of things that I've tried to do to remove myself as a single point of failure
+
+11:25.400 --> 11:31.840
+ because that is something that a lot of people criticize me for.
+
+11:31.840 --> 11:37.600
+ So if you look at like the most fundamentally successful open source projects, it seems
+
+11:37.600 --> 11:43.440
+ that it's like a sad reality when I think about it is it seems to be that one person
+
+11:43.440 --> 11:51.760
+ is a crucial contributor often if you look at Linus for Linux, for the kernel.
+
+11:51.760 --> 11:56.640
+ That is possible and I'm definitely not planning to disappear.
+
+11:56.640 --> 12:04.320
+ That's an interesting tension that projects like this kind of desire a single entity and
+
+12:04.320 --> 12:08.760
+ yet they're fundamentally distributed.
+
+12:08.760 --> 12:12.920
+ I don't know if there's something interesting to say about that kind of structure and thinking
+
+12:12.920 --> 12:17.600
+ about the future of cryptocurrency, does there need to be a leader?
+
+12:17.600 --> 12:20.760
+ There's different kinds of leaders.
+
+12:20.760 --> 12:22.880
+ There's dictators who control all the money.
+
+12:22.880 --> 12:25.080
+ There's people who control organizations.
+
+12:25.080 --> 12:30.520
+ There's high priests that just have themselves as their Twitter followers.
+
+12:30.520 --> 12:33.120
+ What kind of leader are you, would you say?
+
+12:33.120 --> 12:42.680
+ In these days, actually a bit more in the high priest direction than before.
+
+12:42.680 --> 12:47.880
+ I definitely actually don't do all that much of kind of going around and ordering Ethereum
+
+12:47.880 --> 12:52.680
+ Foundation people to do things because I think those things are important.
+
+12:52.680 --> 12:58.120
+ If there's something that I do think is important, I do just usually kind of say it publicly
+
+12:58.120 --> 13:05.120
+ or just kind of say it to people and quite often projects just kind of start doing it.
+
+13:05.120 --> 13:10.360
+ So let's ask the high philosophical question about money.
+
+13:10.360 --> 13:13.120
+ What at the highest level is money?
+
+13:13.120 --> 13:15.360
+ What is money?
+
+13:15.360 --> 13:21.080
+ It's a kind of game and it's a game where we have points and if you have points, there's
+
+13:21.080 --> 13:24.520
+ this one move where you can reduce your points by a number and increase someone else's points
+
+13:24.520 --> 13:26.520
+ by the same number.
+
+13:26.520 --> 13:29.840
+ So it's a fair game, hopefully.
+
+13:29.840 --> 13:32.400
+ Well, it's one kind of fair game.
+
+13:32.400 --> 13:35.960
+ For example, you can have other kinds of fair games like you're going to have a game where
+
+13:35.960 --> 13:39.600
+ if I give someone a point and you give someone a point instead of that person getting two
+
+13:39.600 --> 13:44.200
+ points that person gets four points and that's also fair.
+
+13:44.200 --> 13:52.720
+ But money is easy to set up and it serves a lot of useful functions and so it kind of
+
+13:52.720 --> 13:57.800
+ just survives in society as a meme for thousands of years.
+
+13:57.800 --> 14:00.600
+ It's useful for the storage of wealth.
+
+14:00.600 --> 14:04.080
+ It's useful for the exchange of value.
+
+14:04.080 --> 14:10.080
+ And it's also useful for denominating future payments, a unit of account.
+
+14:10.080 --> 14:11.400
+ A unit of account.
+
+14:11.400 --> 14:18.640
+ So if you look at the history of money in human civilization, just if you're a student
+
+14:18.640 --> 14:25.960
+ of history, how has its role or just the mechanisms of money changed over time in your view?
+
+14:25.960 --> 14:30.640
+ Even if we just look at the 20th century before and then leading up to cryptocurrencies, that's
+
+14:30.640 --> 14:32.160
+ something you think about?
+
+14:32.160 --> 14:41.520
+ And I think the big thing in the 20th century is we saw a lot more intermediation, I guess.
+
+14:41.520 --> 14:50.800
+ The first part is the move from adding more of different kinds of banking and then we
+
+14:50.800 --> 14:57.640
+ saw the move from dollars being backed by gold to dollars being backed by gold that's
+
+14:57.640 --> 15:05.880
+ only redeemable by certain people to dollars not being backed by anything and if you have
+
+15:05.880 --> 15:13.160
+ a bunch of free floating currencies and then people getting bank accounts and then those
+
+15:13.160 --> 15:17.960
+ things becoming electronic, people getting accounts with payment processors that have
+
+15:17.960 --> 15:20.360
+ bank accounts.
+
+15:20.360 --> 15:22.400
+ So what do you make of that?
+
+15:22.400 --> 15:30.000
+ That's such a fascinating philosophical idea that money might not be backed by anything.
+
+15:30.000 --> 15:35.520
+ Is that fascinating to you that money can exist without being backed by something physical?
+
+15:35.520 --> 15:36.520
+ It definitely is.
+
+15:36.520 --> 15:39.480
+ What do you make of that?
+
+15:39.480 --> 15:40.480
+ How is that possible?
+
+15:40.480 --> 15:41.480
+ Is that stable?
+
+15:41.480 --> 15:45.800
+ If we look at the future of human civilization, is it possible to have money at the large
+
+15:45.800 --> 15:52.480
+ scale at such a hugely productive and rich societies be able to operate successfully
+
+15:52.480 --> 15:55.000
+ without money being backed by anything physical?
+
+15:55.000 --> 16:01.240
+ I feel like the interesting thing about the 21st century especially is that a lot of the
+
+16:01.240 --> 16:04.400
+ important valuable things are not backed by anything.
+
+16:04.400 --> 16:10.640
+ If you look at tech companies, for example, like something like Twitter, you could theoretically
+
+16:10.640 --> 16:16.080
+ imagine that if all of the employees wanted to, they could have come together, they would
+
+16:16.080 --> 16:28.160
+ quit and start working on Twitter 2.0 and then they have value and just build the exact
+
+16:28.160 --> 16:32.720
+ same product or, of course, possibly build a better product and then just continue on
+
+16:32.720 --> 16:40.400
+ from there and the original Twitter would not have people left anymore.
+
+16:40.400 --> 16:45.440
+ There is theoretically code and IP that's owned by the company, but in reality, good
+
+16:45.440 --> 16:51.480
+ programmers could probably rewrite all that stuff in three months.
+
+16:51.480 --> 16:57.280
+ The reason why the thing has value is just network effects and coordination problems.
+
+16:57.280 --> 17:02.880
+ These employees in reality aren't going to switch all at once and also the users aren't
+
+17:02.880 --> 17:08.440
+ all going to switch at once because it's just difficult for them to switch at once.
+
+17:08.440 --> 17:16.360
+ There's these metastable and equilibrium interactions between thousands of millions of people that
+
+17:16.360 --> 17:22.400
+ are actually quite sticky even though if you try to assume that everyone's a perfectly
+
+17:22.400 --> 17:28.200
+ rational and perfectly soliparist, spherical cow, they don't seem to exist at all.
+
+17:28.200 --> 17:29.200
+ That stickiness.
+
+17:29.200 --> 17:36.360
+ Do you have a sense, a grasp of the fundamental dynamics, like the physics of that stickiness?
+
+17:36.360 --> 17:45.040
+ It seems to work, and I think some of the cryptocurrency ideas kind of rely on it working.
+
+17:45.040 --> 17:51.000
+ It's the sort of thing that's definitely been economically modeled a lot.
+
+17:51.000 --> 18:01.040
+ One of the analogy of something similar that you often see in textbooks is what is a government,
+
+18:01.040 --> 18:09.720
+ if 80% of people in a country just tomorrow suddenly had the idea that the laws that are
+
+18:09.720 --> 18:15.520
+ currently the laws in the government are just people and some other thing is the government
+
+18:15.520 --> 18:19.920
+ and they just start acting like it, then that would become the new reality.
+
+18:19.920 --> 18:30.440
+ The question is, well, what happens if between zero and 80% of people start believing that?
+
+18:30.440 --> 18:35.560
+ Another thing you see is that if there is one of these kind of switches happening, this
+
+18:35.560 --> 18:42.880
+ kind of revolution, then if you're the first person to join, then you probably don't have
+
+18:42.880 --> 18:47.760
+ the incentive to do that, but then if you're the 55th percentile person to join, then suddenly
+
+18:47.760 --> 18:51.080
+ becomes quite safe too.
+
+18:51.080 --> 18:58.360
+ This definitely is the sort of thing that you can try to analyze and understand mathematically.
+
+18:58.360 --> 19:08.080
+ One of the results is that the sort of when the switch happens definitely can be chaotic
+
+19:08.080 --> 19:09.080
+ sometimes.
+
+19:09.080 --> 19:14.360
+ Yeah, but still, to me, the idea that the network affects the fact that human beings
+
+19:14.360 --> 19:23.640
+ at a scale like millions, billions can share even the idea of currency, all agree.
+
+19:23.640 --> 19:31.000
+ I know economists can model it, I'm a skeptic on the economic, so my favorite sort of field,
+
+19:31.000 --> 19:36.240
+ maybe recreational, these psychology is trying to understand human behavior and I think sometimes
+
+19:36.240 --> 19:41.200
+ people just kind of pretend that they can have a grasp on human behavior even though
+
+19:41.200 --> 19:45.720
+ it's such a messy space that all the models that psychology or economics, those are different
+
+19:45.720 --> 19:52.640
+ perspectives on human behavior, can have are difficult, is difficult to know how much that's
+
+19:52.640 --> 19:57.160
+ wishful thinking and how much it is actually getting to the core of understanding human
+
+19:57.160 --> 20:05.960
+ behavior, but on that idea, what do you think is the role of money in human motivation?
+
+20:05.960 --> 20:15.680
+ So do you think money from an economics perspective, from a psychology perspective is core to like
+
+20:15.680 --> 20:18.480
+ human desires?
+
+20:18.480 --> 20:22.000
+ Money is definitely very far from the only motivator.
+
+20:22.000 --> 20:30.160
+ It is a big motivator, and that's one of the closest things you have to a universal motivator.
+
+20:30.160 --> 20:36.120
+ Because ultimately, almost any person in the world, if you ask them to do something, they'll
+
+20:36.120 --> 20:43.400
+ be more inclined to do it if you also offer them money.
+
+20:43.400 --> 20:47.880
+ There's definitely many cases where people will do things other than things that maximize
+
+20:47.880 --> 20:53.040
+ how much money they have and that happens all the time, but a lot of those other things
+
+20:53.040 --> 20:58.440
+ are kind of much more specific to and of who that person is and of what their situation
+
+20:58.440 --> 21:02.440
+ is, the relationship between the motive and the action and these other things.
+
+21:02.440 --> 21:06.120
+ What do you think is the interplay of the other motivator from like Nietzsche in respect
+
+21:06.120 --> 21:07.920
+ to his power?
+
+21:07.920 --> 21:09.840
+ Do you think money equals power?
+
+21:09.840 --> 21:11.960
+ Do you think those are conflicting ideas?
+
+21:11.960 --> 21:17.680
+ I mean, that's one of the ideas that decentralized currency, decentralized applications are looking
+
+21:17.680 --> 21:21.880
+ at is who holds the power?
+
+21:21.880 --> 21:28.400
+ Money is definitely a kind of power, and there's definitely people who want money because it
+
+21:28.400 --> 21:37.000
+ gives them power, and then even if money doesn't seem to explicitly be about money, a lot of
+
+21:37.000 --> 21:44.360
+ things that people spend money on are ultimately about social status of some kind.
+
+21:44.360 --> 21:50.480
+ I definitely view those two things as interplaying, and then there's also money as just a way
+
+21:50.480 --> 21:59.320
+ of measuring how successful you are as a scoreboard, so this kind of gets back to the game.
+
+21:59.320 --> 22:08.080
+ If you have $4 billion, then one of the big benefits you get from going up to $6 million
+
+22:08.080 --> 22:12.200
+ is that now instead of being below the guy who has five, you're above the guy who has
+
+22:12.200 --> 22:13.200
+ five.
+
+22:13.200 --> 22:19.440
+ So you think money could be kind of in the game of life, it's also a measure of self
+
+22:19.440 --> 22:20.440
+ worth.
+
+22:20.440 --> 22:21.840
+ It's like how we...
+
+22:21.840 --> 22:25.640
+ It's definitely how a lot of people perceive it.
+
+22:25.640 --> 22:29.120
+ Define ourselves in the hierarchy of society.
+
+22:29.120 --> 22:34.720
+ Not saying it's a healthy thing that people define their self worth as money because it's
+
+22:34.720 --> 22:43.880
+ definitely far from a perfect indicator of how much value you provide to society or anything
+
+22:43.880 --> 22:50.040
+ like this, but I definitely think that as a matter of current practice, so much of people
+
+22:50.040 --> 22:51.440
+ do feel that way.
+
+22:51.440 --> 22:57.200
+ So what does utopia from an economic perspective look like to you?
+
+22:57.200 --> 23:00.280
+ What does the perfect world look like?
+
+23:00.280 --> 23:09.920
+ I guess the economists say utopia would be one where kind of everything is an incentive
+
+23:09.920 --> 23:16.040
+ aligned in the sense that there aren't kind of conflicts between what satisfies your goals
+
+23:16.040 --> 23:22.320
+ and kind of what is good for everyone in the world as a whole.
+
+23:22.320 --> 23:26.800
+ What do you think that would look like?
+
+23:26.800 --> 23:29.880
+ Does that mean there's still poor people and rich people?
+
+23:29.880 --> 23:32.400
+ There's still income inequality?
+
+23:32.400 --> 23:35.400
+ Do you think sort of Marxist ideas are strong?
+
+23:35.400 --> 23:44.840
+ Do you think sort of ideas of objectivism, like where the market rules is strong?
+
+23:44.840 --> 23:50.320
+ Is there different economic philosophies that just seem to be reflective of what utopia
+
+23:50.320 --> 23:51.320
+ would be?
+
+23:51.320 --> 24:01.000
+ So I definitely think that existing economic philosophies do end up systematically deviating
+
+24:01.000 --> 24:04.560
+ from the utopia in a lot of ways.
+
+24:04.560 --> 24:09.840
+ One of the big things I talk about, for example, is public goods, and public goods are especially
+
+24:09.840 --> 24:13.040
+ important on the internet.
+
+24:13.040 --> 24:19.680
+ The idea is with money as this game where I lose a few coins and you gain the same number
+
+24:19.680 --> 24:23.720
+ of coins, is that this usually happens in a trade where I lose some money, you gain
+
+24:23.720 --> 24:29.440
+ some money, you lose a sandwich and I gain a sandwich.
+
+24:29.440 --> 24:35.800
+ This kind of model works really well when the thing that we're using money to incentivize
+
+24:35.800 --> 24:39.840
+ this kind of private goods, things that you provide to one person or the benefit comes
+
+24:39.840 --> 24:43.600
+ to one person.
+
+24:43.600 --> 24:49.120
+ On the internet especially, but also many, many contexts off the internet, there's actions
+
+24:49.120 --> 24:56.400
+ that individuals or groups can take where instead of the benefit going to one person,
+
+24:56.400 --> 25:01.080
+ the benefit just goes to many people at the same time and you can't control who the benefit
+
+25:01.080 --> 25:02.080
+ goes to.
+
+25:02.080 --> 25:08.680
+ For example, this podcast, we publish it and when it's published, you don't have any fine
+
+25:08.680 --> 25:15.400
+ grains control over these 38,000 people can watch it and then these other 29,000 people
+
+25:15.400 --> 25:16.400
+ can't.
+
+25:16.400 --> 25:21.380
+ Once the number goes high enough, then people will just copy it and then when I write articles
+
+25:21.380 --> 25:27.240
+ on a blog, then they're just free for everyone and that stuff's even harder to prevent anyone
+
+25:27.240 --> 25:29.800
+ from copying.
+
+25:29.800 --> 25:36.720
+ Aside from that, things like scientific research, for example, and even taking more pedestrian
+
+25:36.720 --> 25:42.920
+ examples like climate change mitigation would be a big one.
+
+25:42.920 --> 25:48.880
+ There's a lot of things in the world where you have these individual actions with concentrated
+
+25:48.880 --> 25:55.560
+ costs and distributed benefits and money as a point system does not do a good job of encouraging
+
+25:55.560 --> 25:57.800
+ these things.
+
+25:57.800 --> 26:05.280
+ One of the other things even, tangentially connected to crypto but theoretically outside
+
+26:05.280 --> 26:10.680
+ of it that I work on is this mechanism called quadratic funding and the way to think about
+
+26:10.680 --> 26:22.040
+ it is imagine a point system where if one person gives coins to one other person, then
+
+26:22.040 --> 26:23.720
+ it works the same way as money.
+
+26:23.720 --> 26:31.320
+ But if multiple people give coins to one person and they do so anonymously, so it's not in
+
+26:31.320 --> 26:37.360
+ consideration for a specific service to that person themselves, then the number of coins
+
+26:37.360 --> 26:42.560
+ that are received by that person is greater than just the sum of the number of coins that
+
+26:42.560 --> 26:45.440
+ are given by those different people.
+
+26:45.440 --> 26:49.640
+ So the actual formula is you take the square root of the amount that each person gave,
+
+26:49.640 --> 26:53.760
+ then you add all the square roots and then you end up square the sum and then you give
+
+26:53.760 --> 26:54.760
+ that.
+
+26:54.760 --> 27:01.760
+ And the idea here would basically be that if, let's say for example, you would just start
+
+27:01.760 --> 27:06.400
+ going off and kind of planting a lot of trees and there's a bunch of people that are really
+
+27:06.400 --> 27:11.280
+ happy that you're planting trees and then so they go and all kind of throw a coin your
+
+27:11.280 --> 27:18.640
+ way, then there is basically the fact that you get more than the sum, you get this kind
+
+27:18.640 --> 27:26.400
+ of square root of these tiny amounts, that this actually kind of compensates for the
+
+27:26.400 --> 27:28.400
+ tragedy of the commons.
+
+27:28.400 --> 27:31.680
+ There's even this kind of mathematical proof that it sort of optimally compensates for
+
+27:31.680 --> 27:32.680
+ it.
+
+27:32.680 --> 27:34.080
+ What is the tragedy of the commons?
+
+27:34.080 --> 27:42.840
+ This is just this idea that if there is this situation where there's some public good that
+
+27:42.840 --> 27:47.360
+ lots of people benefit from, then no individual person wants to contribute to it because if
+
+27:47.360 --> 27:52.240
+ they contribute, they only get a small part of the benefit from their contribution, but
+
+27:52.240 --> 27:54.840
+ they pay the full cost of their contribution.
+
+27:54.840 --> 27:58.840
+ In which context is this, sorry, what is the term quadratic?
+
+27:58.840 --> 27:59.840
+ Quadratic funding.
+
+27:59.840 --> 28:01.840
+ Quadratic funding.
+
+28:01.840 --> 28:05.600
+ In which context is this mechanism useful?
+
+28:05.600 --> 28:11.480
+ Obviously, you said to combat the tragedy of the commons, but in which context do you
+
+28:11.480 --> 28:13.600
+ see it as useful actually to practice speaking?
+
+28:13.600 --> 28:17.040
+ Yeah, theoretically, public good is in general, right?
+
+28:17.040 --> 28:19.160
+ Like services, what are we talking about?
+
+28:19.160 --> 28:21.600
+ What's the public good?
+
+28:21.600 --> 28:26.680
+ Within the Ethereum ecosystem, for example, we've actually tried using this mechanism.
+
+28:26.680 --> 28:32.040
+ I wrote a couple of articles about this on Vitalik.ca where I go through some of the
+
+28:32.040 --> 28:35.240
+ most recent rounds and it's been really interesting.
+
+28:35.240 --> 28:44.320
+ Some of the top ones that people supported, there were things like just online user interfaces
+
+28:44.320 --> 28:48.600
+ that make it easier for people to interact with Ethereum.
+
+28:48.600 --> 28:59.920
+ There was documentation, there were podcasts, there were software clients, implementations
+
+28:59.920 --> 29:08.160
+ of the Ethereum protocol of privacy tools, just lots of things that are useful to lots
+
+29:08.160 --> 29:09.160
+ of people.
+
+29:09.160 --> 29:16.400
+ When a lot of people are contributing, funding a particular entity, that's really interesting.
+
+29:16.400 --> 29:21.920
+ There's something special about the quadratic, the summing of the square roots and the taken
+
+29:21.920 --> 29:22.920
+ square.
+
+29:22.920 --> 29:27.760
+ Another way to think about it is imagine if N people each give a dollar, then the person
+
+29:27.760 --> 29:31.680
+ gets N squared.
+
+29:31.680 --> 29:37.200
+ Each individual person's contribution gets multiplied by N because you have N people.
+
+29:37.200 --> 29:41.920
+ That perfectly compensates for the N to 1 tragedy of the commons.
+
+29:41.920 --> 29:45.840
+ I just wonder if the squared part is fundamental.
+
+29:45.840 --> 29:47.560
+ It is.
+
+29:47.560 --> 29:54.880
+ I'd recommend you go on Vitalik.ca, I have this article called Quadratic Payments a Primer
+
+29:54.880 --> 30:01.080
+ and I highly recommend it, at least my attempt so far of explaining the intuition behind
+
+30:01.080 --> 30:02.080
+ this.
+
+30:02.080 --> 30:03.080
+ The intuition.
+
+30:03.080 --> 30:11.520
+ If we could, can we go to the very basic, what is the blockchain or perhaps we might
+
+30:11.520 --> 30:18.360
+ even start at the Byzantine generals problem, the Byzantine fault tolerance in general,
+
+30:18.360 --> 30:26.480
+ that Bitcoin was taking steps to providing a solution for it.
+
+30:26.480 --> 30:33.520
+ The Byzantine generals problem, it's this paper that Leslie Lamport published in 1982
+
+30:33.520 --> 30:38.760
+ where he has this thought experiment where if you have two generals that are camped out
+
+30:38.760 --> 30:47.000
+ on opposite sides of a city and they're planning when to attack the city, then the question
+
+30:47.000 --> 30:52.240
+ is how could those generals coordinate with each other and they could send messengers
+
+30:52.240 --> 30:59.520
+ between each other, but those messengers could get sniped by the enemy on the road.
+
+30:59.520 --> 31:06.000
+ Some of those messengers could end up being traitors and if things could end up happening.
+
+31:06.000 --> 31:13.960
+ With just two mess generals, it turns out that there's no solution in a finite number
+
+31:13.960 --> 31:20.240
+ of rounds that guarantees that they will be able to coordinate on the same answer.
+
+31:20.240 --> 31:26.120
+ But then in the case where you have more than two generals that then Leslie analyzes cases,
+
+31:26.120 --> 31:32.760
+ are the messengers just oral messengers, are the messengers signed messengers so I could
+
+31:32.760 --> 31:37.520
+ give you a signed message and you can pass along that signed message and the third party
+
+31:37.520 --> 31:42.360
+ can still verify that I originally made that message.
+
+31:42.360 --> 31:48.240
+ Depending on those different cases, there's different bounds on given how many generals
+
+31:48.240 --> 31:55.040
+ and how many traitors among those generals and under what conditions you actually can
+
+31:55.040 --> 31:59.120
+ agree on to launch an attack.
+
+31:59.120 --> 32:03.960
+ It's actually a big misconception that the business in general's problem was unsolved,
+
+32:03.960 --> 32:05.560
+ so Leslie Lamport solved it.
+
+32:05.560 --> 32:10.120
+ The thing that was unsolved though is that all of these solutions assume that you've
+
+32:10.120 --> 32:14.760
+ already agreed on a fixed list of who the generals are.
+
+32:14.760 --> 32:17.560
+ These generals have to be semi trusted to some extent.
+
+32:17.560 --> 32:21.360
+ They can't just be anonymous people because if they're anonymous, then the enemy could
+
+32:21.360 --> 32:28.480
+ just be 99% of the generals.
+
+32:28.480 --> 32:35.000
+ Among the 1980s and the 1990s, the general use case for distributed system stuff was
+
+32:35.000 --> 32:44.520
+ more enterprisey stuff where you could assume that you know who the nodes are that are running
+
+32:44.520 --> 32:46.480
+ these kind of computer networks.
+
+32:46.480 --> 32:51.200
+ If you want to have some decentralized computer network that pretends to be a single computer
+
+32:51.200 --> 32:58.440
+ and that you can do operations on, then it's made out of these 15 specific computers.
+
+32:58.440 --> 33:03.640
+ We know who and where they are, so we have a good reason to believe that at least 11
+
+33:03.640 --> 33:04.640
+ of them would be fine.
+
+33:04.640 --> 33:11.800
+ It could also be within a single system, almost a network of devices, sensors, so on like
+
+33:11.800 --> 33:19.240
+ in airplanes and I think flight systems in general still use these kinds of ideas.
+
+33:19.240 --> 33:20.240
+ That's the 80s.
+
+33:20.240 --> 33:21.920
+ That's the 80s and 90s.
+
+33:21.920 --> 33:25.880
+ The Cypherpunks had a different use case in mind, which is that they wanted to create
+
+33:25.880 --> 33:31.320
+ a fully decentralized global permissionless currency.
+
+33:31.320 --> 33:35.600
+ The problem here is that they didn't want any authorities and they didn't even want
+
+33:35.600 --> 33:38.760
+ any kind of privileged list of people.
+
+33:38.760 --> 33:45.480
+ Now the question is, well, how do you use these techniques to create consensus when
+
+33:45.480 --> 33:48.160
+ you have no way of measuring identities?
+
+33:48.160 --> 33:54.920
+ You have no way of determining whether or not some 99% of participants aren't actually
+
+33:54.920 --> 33:56.920
+ all the same guy.
+
+33:56.920 --> 34:02.640
+ The clever solution that Satoshi had, this is kind of going back to that presentation
+
+34:02.640 --> 34:06.800
+ I made at DEF CON a few months ago where I said that the thing Satoshi invented was
+
+34:06.800 --> 34:14.800
+ crypto economics, is this really neat idea that you can use economic resources to kind
+
+34:14.800 --> 34:20.840
+ of limit how many identities you can get.
+
+34:20.840 --> 34:25.560
+ If there isn't any existing decentralized digital currency, then the only way to do this is
+
+34:25.560 --> 34:27.160
+ with proof of work.
+
+34:27.160 --> 34:36.400
+ With proof of work, the solution is just you publish a solution to a hard mathematical
+
+34:36.400 --> 34:42.840
+ puzzle that takes some kind of clearly calculable amount of computational power to solve, you
+
+34:42.840 --> 34:44.440
+ get an identity.
+
+34:44.440 --> 34:48.440
+ You solve five of those puzzles, you get five identities.
+
+34:48.440 --> 34:52.240
+ These are the identities that we run the consensus algorithm between.
+
+34:52.240 --> 34:58.800
+ So the proof of work mechanism you just described is the fundamental idea proposed in the white
+
+34:58.800 --> 35:02.280
+ paper that defines Bitcoin.
+
+35:02.280 --> 35:07.240
+ What's the idea of consensus that we wish to reach?
+
+35:07.240 --> 35:10.160
+ Why is consensus important here?
+
+35:10.160 --> 35:12.160
+ What is consensus?
+
+35:12.160 --> 35:21.120
+ So the goal here in just simple technical terms is to basically kind of wire together
+
+35:21.120 --> 35:26.480
+ a set of a large number of computers in such a way that they kind of pretends to the outside
+
+35:26.480 --> 35:31.920
+ world to be a single computer where that single computer keeps working even if a large portion
+
+35:31.920 --> 35:35.920
+ of the kind of constituents, the computers that make it up break in kind of break in
+
+35:35.920 --> 35:36.920
+ arbitrary ways.
+
+35:36.920 --> 35:41.520
+ Like they could shut off, they could try to actively break a system, they could do lots
+
+35:41.520 --> 35:43.200
+ of mean things.
+
+35:43.200 --> 35:50.360
+ So the reason why the cypherpunks wanted to do this is because they wanted to run one
+
+35:50.360 --> 35:54.360
+ particular program on this virtual computer and the one particular program that they
+
+35:54.360 --> 35:56.720
+ wanted to run is just a currency system, right?
+
+35:56.720 --> 36:02.560
+ It's a system that just processes a series of transactions and for every transaction
+
+36:02.560 --> 36:07.840
+ it verifies that the sender has enough coins to pay for the transaction, it verifies that
+
+36:07.840 --> 36:12.520
+ the digital signature is correct and if the check's passed then it subtracts the coins
+
+36:12.520 --> 36:17.000
+ from one account and adds the coins to the other account roughly.
+
+36:17.000 --> 36:22.800
+ So first of all, the proof of work idea is kind of, I mean, at least to me, seems pretty
+
+36:22.800 --> 36:23.800
+ fascinating.
+
+36:23.800 --> 36:24.800
+ It is.
+
+36:24.800 --> 36:28.520
+ I mean, that's a kind of revolutionary idea.
+
+36:28.520 --> 36:34.640
+ Is it obvious to come up with that you can use, you can exchange basically computational
+
+36:34.640 --> 36:40.080
+ resources for identity?
+
+36:40.080 --> 36:41.800
+ It actually has a pretty long history.
+
+36:41.800 --> 36:51.320
+ It was first proposed in a paper by McSinthea Dwork in 1994, I believe.
+
+36:51.320 --> 36:54.840
+ And the original use case was combating email spam.
+
+36:54.840 --> 36:58.240
+ So the idea is that if you send an email you have to send it with a proof of work attached
+
+36:58.240 --> 37:02.760
+ and this makes it reasonably cheap to send emails to your friends but it makes it really
+
+37:02.760 --> 37:05.280
+ expensive to send spam to a million people.
+
+37:05.280 --> 37:06.280
+ Yeah.
+
+37:06.280 --> 37:08.640
+ That's a simple, brilliant idea.
+
+37:08.640 --> 37:14.600
+ So maybe also taking a step back, so what is the role of blockchain in this?
+
+37:14.600 --> 37:15.600
+ What is the blockchain?
+
+37:15.600 --> 37:16.600
+ Sure.
+
+37:16.600 --> 37:23.400
+ So the blockchain, my way of thinking about it is that it is this kind of system where
+
+37:23.400 --> 37:31.080
+ you have this kind of one virtual computer created by a bunch of these nodes in the network.
+
+37:31.080 --> 37:36.280
+ And the reason why the term blockchain is used is because the data structure that these
+
+37:36.280 --> 37:45.320
+ systems use at least so far is one where they have different nodes in the network periodically
+
+37:45.320 --> 37:51.480
+ publish blocks and a block is a kind of list of transactions together with a pointer, like
+
+37:51.480 --> 37:56.640
+ a hash of a previous block that it builds on top of.
+
+37:56.640 --> 38:03.000
+ And so you have a series of blocks that nodes in the network create where each block points
+
+38:03.000 --> 38:05.920
+ to the previous block and so you have this chain of them.
+
+38:05.920 --> 38:10.920
+ Is a fault tolerance mechanism built into the idea of blockchain or is there a lot of
+
+38:10.920 --> 38:16.400
+ possibilities of different ways to make sure there's no funny stuff going on?
+
+38:16.400 --> 38:19.600
+ There are indeed a lot of possibilities.
+
+38:19.600 --> 38:24.080
+ So in a kind of just simple architecture as I just described, the way the fault tolerance
+
+38:24.080 --> 38:25.400
+ happens is like this, right?
+
+38:25.400 --> 38:30.240
+ So you have a bunch of nodes and they're just happily occasionally creating blocks, building
+
+38:30.240 --> 38:33.080
+ on top of each other's blocks.
+
+38:33.080 --> 38:39.360
+ And let's say you have one block, we'll call it block one, and then someone else builds
+
+38:39.360 --> 38:44.080
+ another block, honestly, we'll call it block two, then we have an attacker.
+
+38:44.080 --> 38:47.880
+ And what the attacker tries to do is the attacker tries to revert block two.
+
+38:47.880 --> 38:51.400
+ And the way they revert block two is instead of doing the thing they're supposed to do,
+
+38:51.400 --> 38:55.920
+ which is build a block on top of block two, they're going to build another block on top
+
+38:55.920 --> 38:57.760
+ of block one.
+
+38:57.760 --> 39:01.840
+ So you have block one, which has two children, block two, and then block two prime.
+
+39:01.840 --> 39:08.240
+ Now this might sometimes even happen by random chance if two nodes in the network just happen
+
+39:08.240 --> 39:11.920
+ to create blocks at the same time and they don't hear about each other's things before
+
+39:11.920 --> 39:13.480
+ they create their own.
+
+39:13.480 --> 39:16.160
+ But this also could happen because of an attack.
+
+39:16.160 --> 39:23.600
+ Now if this happens, you have an attack, then in the Bitcoin system, the nodes follow the
+
+39:23.600 --> 39:25.120
+ longest chain.
+
+39:25.120 --> 39:33.920
+ So if this attack had happened when the original chain had more than two blocks on it, so if
+
+39:33.920 --> 39:41.040
+ it was trying to revert more than two blocks, then everyone would just ignore it and everyone
+
+39:41.040 --> 39:43.040
+ would just keep following the regular chain.
+
+39:43.040 --> 39:47.560
+ But here we have block two and we have block two prime, and so the two are kind of even.
+
+39:47.560 --> 39:52.080
+ And then whatever block, the next block is created on top of.
+
+39:52.080 --> 39:58.360
+ So say block three is now created on top of block two prime, then everyone agrees that
+
+39:58.360 --> 40:04.520
+ block three is the new head, and block two prime is just kind of forgotten, and then
+
+40:04.520 --> 40:08.080
+ everyone just kind of peacefully builds on top of block three and the thing continues.
+
+40:08.080 --> 40:12.080
+ So how difficult is it to mess with the system?
+
+40:12.080 --> 40:19.120
+ So if we look at the general problem, what fraction of people who participate in the
+
+40:19.120 --> 40:26.400
+ system have to be bad players in order to mess with it truly?
+
+40:26.400 --> 40:27.400
+ Is there a good number?
+
+40:27.400 --> 40:28.400
+ There is.
+
+40:28.400 --> 40:33.640
+ Well, depending on kind of what your model of the participants is and what kind of attack
+
+40:33.640 --> 40:40.920
+ we're talking about, it's anywhere between 23.2 and 50%.
+
+40:40.920 --> 40:41.920
+ Of what?
+
+40:41.920 --> 40:44.800
+ Of all of the computing power in the network.
+
+40:44.800 --> 40:45.800
+ Sorry.
+
+40:45.800 --> 40:49.840
+ So between 23.2 and 50%.
+
+40:49.840 --> 40:53.920
+ And 50% can be compromised.
+
+40:53.920 --> 41:02.880
+ So like once your portion of the total computing power in the network goes above the 23.2 level,
+
+41:02.880 --> 41:07.600
+ then there's kind of things that you can mean things that you can potentially do.
+
+41:07.600 --> 41:12.000
+ And as your percentage of the network kind of keeps going up, then your abilities as
+
+41:12.000 --> 41:16.120
+ you mean things kind of goes higher, and then if you have above 50%, then you can just break
+
+41:16.120 --> 41:17.120
+ everything.
+
+41:17.120 --> 41:19.880
+ So how hard is it to achieve that level?
+
+41:19.880 --> 41:26.120
+ Like it seems that so far historically speaking, it's been exceptionally difficult.
+
+41:26.120 --> 41:28.720
+ This is a challenging question.
+
+41:28.720 --> 41:34.520
+ So the economic cost of acquiring that level of stuff from scratch is fairly high.
+
+41:34.520 --> 41:38.640
+ I think it's somewhere in the low billions of dollars.
+
+41:38.640 --> 41:41.880
+ And when you say that stuff, you mean computational resources?
+
+41:41.880 --> 41:42.880
+ Yeah.
+
+41:42.880 --> 41:48.720
+ So specifically specialized hardware and of ASICs that people use to solve these puzzles
+
+41:48.720 --> 41:50.720
+ to do the mining business.
+
+41:50.720 --> 41:52.440
+ Small tangent.
+
+41:52.440 --> 41:57.720
+ So obviously I work a lot in deep learning with GPUs and ASICs for that application.
+
+41:57.720 --> 42:03.400
+ And I tangentially kind of hear that so many of these, you know, sometimes NVIDIA GPUs
+
+42:03.400 --> 42:07.240
+ are sold out because of this other application.
+
+42:07.240 --> 42:12.160
+ Like what do, if you can comment, I don't know if you're familiar or interested in the
+
+42:12.160 --> 42:18.240
+ space, what kind of ASICs, what kind of hardware is generally used these days for to do the
+
+42:18.240 --> 42:20.800
+ actual computation for the proof of work?
+
+42:20.800 --> 42:21.800
+ Sure.
+
+42:21.800 --> 42:24.280
+ So in the case, in Bitcoin and Ethereum are a bit different.
+
+42:24.280 --> 42:30.200
+ So in the case of Bitcoin, there is an algorithm called SHA256, it's just a hash function.
+
+42:30.200 --> 42:34.320
+ And so the puzzle is just coming up with a number where the hash of the number is below
+
+42:34.320 --> 42:35.600
+ some threshold.
+
+42:35.600 --> 42:39.960
+ And so because the hashes are designed to be random, you just have to keep on trying
+
+42:39.960 --> 42:42.440
+ different numbers until one works.
+
+42:42.440 --> 42:49.920
+ And the ASICs are just like specialized circuits that contain and circuits for evaluating this
+
+42:49.920 --> 42:53.480
+ hash over and over again, and you have kind of like millions or billions of these hash
+
+42:53.480 --> 42:58.320
+ evaluators and just stacked on top of each other inside of a box, and you just keep on
+
+42:58.320 --> 43:00.200
+ running the box 24x7.
+
+43:00.200 --> 43:03.400
+ In the ASICs, there's literally specialized hardware designed for this.
+
+43:03.400 --> 43:04.400
+ Yes.
+
+43:04.400 --> 43:06.840
+ This is living in an amazing world.
+
+43:06.840 --> 43:12.000
+ Another tangent, I'll come back to the basics, but does quantum computing throw a wrench
+
+43:12.000 --> 43:14.320
+ into any of this?
+
+43:14.320 --> 43:15.440
+ Very good question.
+
+43:15.440 --> 43:22.520
+ So quantum computers have two main families of algorithms that are relevant to cryptography.
+
+43:22.520 --> 43:28.640
+ One is Shor's algorithm, and Shor's algorithm is one that kind of completely breaks the
+
+43:28.640 --> 43:33.200
+ hardness of some specific kinds of mathematical problems.
+
+43:33.200 --> 43:37.480
+ So the one that you've probably heard of is it makes it very easy to factor in numbers.
+
+43:37.480 --> 43:42.360
+ So figure out kind of what prime factors are that you need to multiply together to get
+
+43:42.360 --> 43:46.000
+ some number, even if that number is extremely big.
+
+43:46.000 --> 43:53.360
+ Shor's algorithm can also be used to break elliptic curve cryptography.
+
+43:53.360 --> 43:59.880
+ It breaks a lot of cryptographic nice things that we're used to.
+
+43:59.880 --> 44:07.360
+ But the good news is that for every major use of things that Shor's algorithm breaks,
+
+44:07.360 --> 44:11.200
+ we already know of quantum proof alternatives.
+
+44:11.200 --> 44:14.560
+ We don't use these quantum proof alternatives yet because in many cases, they're five to
+
+44:14.560 --> 44:22.280
+ 10 times more efficient, but the crypto industry in general kind of knows that this is coming
+
+44:22.280 --> 44:28.960
+ eventually and it's ready to take the hit and switch to that stuff when we have to.
+
+44:28.960 --> 44:34.360
+ The second algorithm that is relevant to cryptography is Grover's algorithm.
+
+44:34.360 --> 44:41.680
+ And Grover's algorithm might even be more familiar to AI people that's basically usually
+
+44:41.680 --> 44:44.520
+ described as solving search problems.
+
+44:44.520 --> 44:51.400
+ But the idea here is that if you have a problem over the form, find a number that satisfies
+
+44:51.400 --> 44:58.920
+ some property, then if with a classical computer, you need to try and if n times before you
+
+44:58.920 --> 45:05.080
+ find a number, then with a quantum computer, you only need to do square root of n computations.
+
+45:05.080 --> 45:13.120
+ And Grover's could potentially be used for mining, but there's two possibilities here.
+
+45:13.120 --> 45:18.040
+ One is that Grover's could be used for mining and whoever creates the first working quantum
+
+45:18.040 --> 45:22.800
+ computer that could do Grover's will just mine way faster than everyone else and we'll
+
+45:22.800 --> 45:27.880
+ see another round of what we saw when ASICS came out, which is that kind of the new hardware
+
+45:27.880 --> 45:32.560
+ just kind of dominated the old stuff and then eventually it switched to a new equilibrium.
+
+45:32.560 --> 45:41.600
+ By the way, way faster, not exponentially faster quadratically faster, which is not sort of
+
+45:41.600 --> 45:46.480
+ it's not game changing, I would say it's like ASICS, like you said, it would be exactly.
+
+45:46.480 --> 45:47.480
+ Yeah.
+
+45:47.480 --> 45:50.280
+ So it would not necessarily break proof of work as a thing.
+
+45:50.280 --> 45:51.280
+ That's right.
+
+45:51.280 --> 45:52.280
+ Yeah.
+
+45:52.280 --> 45:56.560
+ Now, the other kind of possible world, right, is that quantum computers have a lot of overhead.
+
+45:56.560 --> 46:00.320
+ There's a lot of complexity involved in maintaining quantum states.
+
+46:00.320 --> 46:06.840
+ And there's also, as we've been realizing recently, making quantum computers actually
+
+46:06.840 --> 46:11.520
+ work requires kind of quantum error correction, which requires kind of a thousand real qubits
+
+46:11.520 --> 46:13.240
+ per logical qubit.
+
+46:13.240 --> 46:17.920
+ And so there's the very real possibility that the overhead of running a quantum computer
+
+46:17.920 --> 46:22.400
+ will be higher than the speed up you get with Grover's, which would be kind of sad,
+
+46:22.400 --> 46:26.680
+ but which would also mean that given proof of work, we'll just keep working fine.
+
+46:26.680 --> 46:32.200
+ So the beautifully put, so proof of work is the core idea of Bitcoin.
+
+46:32.200 --> 46:36.920
+ Is there other core ideas before we kind of take a step towards the origin story and ideas
+
+46:36.920 --> 46:38.160
+ of Ethereum?
+
+46:38.160 --> 46:42.240
+ Is there other stuff that were key to the white paper of Bitcoin?
+
+46:42.240 --> 46:46.040
+ There's proof of work and then there's just the cryptography, just kind of public keys
+
+46:46.040 --> 46:50.120
+ and signatures that are used to verify transactions.
+
+46:50.120 --> 46:51.640
+ Those two are the big things.
+
+46:51.640 --> 46:57.240
+ So then what is the origin story, maybe the human side, but also the technical side of
+
+46:57.240 --> 46:58.240
+ Ethereum?
+
+46:58.240 --> 46:59.480
+ Sure.
+
+46:59.480 --> 47:06.200
+ So I joined the Bitcoin community in 2011, and I started by just writing.
+
+47:06.200 --> 47:09.960
+ I first wrote for this sort of online thing called Bitcoin Weekly.
+
+47:09.960 --> 47:16.760
+ Then I started writing for Bitcoin Magazine, and sorry to interrupt, you have this funny
+
+47:16.760 --> 47:25.120
+ kind of story, true or not, is that you were disillusioned by the downsides of centralized
+
+47:25.120 --> 47:28.640
+ control from your experience with, wow, World of Warcraft.
+
+47:28.640 --> 47:30.840
+ Is this true or you're just being witty?
+
+47:30.840 --> 47:37.040
+ I mean, the event is true, the fact that that's the reason I do decentralization is witty.
+
+47:37.040 --> 47:39.640
+ Maybe just a small tangent.
+
+47:39.640 --> 47:44.040
+ Have you always had a skepticism of centralized control?
+
+47:44.040 --> 47:50.360
+ Is that sort of has that feeling evolved over time, or has that just always been a core
+
+47:50.360 --> 47:55.720
+ feeling that decentralized control is the future of a human society?
+
+47:55.720 --> 47:59.400
+ It's definitely been something that felt very attractive to me ever since I could have
+
+47:59.400 --> 48:01.360
+ learned that such a thing is possible.
+
+48:01.360 --> 48:03.280
+ It's possible, even technically.
+
+48:03.280 --> 48:04.280
+ So great.
+
+48:04.280 --> 48:08.560
+ So you joined the Bitcoin community in 2011, you said you began writing.
+
+48:08.560 --> 48:10.640
+ So what's next?
+
+48:10.640 --> 48:15.840
+ I started writing, moved from high school to university halfway in between that and
+
+48:15.840 --> 48:20.000
+ spent a year in the university.
+
+48:20.000 --> 48:26.760
+ Then at the end of that year, I dropped out to do Bitcoin things full time.
+
+48:26.760 --> 48:31.520
+ This was a combination of continuing to write Bitcoin Magazine, but also increasingly work
+
+48:31.520 --> 48:37.040
+ on software projects, and I traveled around the world for about six months and just going
+
+48:37.040 --> 48:39.000
+ to different Bitcoin communities.
+
+48:39.000 --> 48:46.200
+ I went to first in New Hampshire, then Spain, other European places, Israel, then San Francisco,
+
+48:46.200 --> 48:51.040
+ and along the way I met a lot of other people that are working on different Bitcoin projects.
+
+48:51.040 --> 48:57.080
+ When I was in Israel, there were some very smart teams there that were working on ideas
+
+48:57.080 --> 49:00.840
+ that people were starting to kind of call Bitcoin 2.0.
+
+49:00.840 --> 49:06.160
+ So one of these was Colored Coins, which is basically saying that, hey, let's not just
+
+49:06.160 --> 49:10.080
+ use the blockchain for Bitcoin, but let's also kind of issue other kinds of assets on
+
+49:10.080 --> 49:11.080
+ it.
+
+49:11.080 --> 49:15.760
+ Then there was a protocol called Mastercoin that supported issuing assets, but also supported
+
+49:15.760 --> 49:21.920
+ many other things, like financial contracts, domain name registration, and a lot of different
+
+49:21.920 --> 49:24.160
+ things together.
+
+49:24.160 --> 49:33.800
+ I spent some time working with these teams, and I quickly realized that this Mastercoin
+
+49:33.800 --> 49:37.960
+ protocol could be improved by kind of generalizing it more.
+
+49:37.960 --> 49:41.440
+ The analogy I used is that the Mastercoin protocol was like this Swiss Army knife.
+
+49:41.440 --> 49:48.360
+ You have 25 different transaction types for 25 different applications, but what I realized
+
+49:48.360 --> 49:53.680
+ is that you could replace a bunch of them with things that are more general purpose.
+
+49:53.680 --> 49:59.280
+ One of them was that you could replace three transaction types for three types of financial
+
+49:59.280 --> 50:04.440
+ contracts with a generic transaction type for a financial contract that just lets you
+
+50:04.440 --> 50:09.720
+ specify a mathematical formula for kind of how much money each side gets.
+
+50:09.720 --> 50:11.400
+ By the way, just a small pause.
+
+50:11.400 --> 50:14.520
+ What's, you say financial contract, just the terminology.
+
+50:14.520 --> 50:15.520
+ What is the contract?
+
+50:15.520 --> 50:18.120
+ What's the financial contract?
+
+50:18.120 --> 50:24.840
+ So this is just generally an agreement where kind of either one or two parties kind of
+
+50:24.840 --> 50:32.760
+ put collateral kind of in, and then depending on certain conditions, like this could involve
+
+50:32.760 --> 50:37.480
+ prices of assets, this could involve the actions of the two parties, it could involve
+
+50:37.480 --> 50:44.240
+ other things, they kind of get different amounts of assets out that just depend on
+
+50:44.240 --> 50:45.240
+ things that happened.
+
+50:45.240 --> 50:52.920
+ So a contract is really a financial contract, is it the core interactive element of a financial
+
+50:52.920 --> 50:53.920
+ system?
+
+50:53.920 --> 50:58.600
+ Yeah, there's many different kinds of financial contracts, like there's things like options
+
+50:58.600 --> 51:02.840
+ where you kind of give someone the right to buy a thing that you have for some specific
+
+51:02.840 --> 51:04.520
+ price for some period of time.
+
+51:04.520 --> 51:11.640
+ There's contracts for difference where you basically are kind of making a bet that says
+
+51:11.640 --> 51:15.880
+ like, for every dollar this thing goes up, I'll give you $7 or for every dollar that
+
+51:15.880 --> 51:20.160
+ thing goes down, you give me $7 or something like that.
+
+51:20.160 --> 51:24.080
+ What the main idea that these contracts have to be enforced and trusted them?
+
+51:24.080 --> 51:25.640
+ Yes, exactly.
+
+51:25.640 --> 51:29.880
+ You have to trust that they will work out in a system where nobody can be trusted.
+
+51:29.880 --> 51:30.880
+ Yes.
+
+51:30.880 --> 51:34.400
+ This is such a beautiful, complicated system.
+
+51:34.400 --> 51:42.200
+ Okay, so you were seeking to kind of generalize this basic framework of contracts.
+
+51:42.200 --> 51:44.680
+ So what does that entail?
+
+51:44.680 --> 51:48.960
+ So what technically are the steps to creating Ethereum?
+
+51:48.960 --> 51:53.800
+ Sure, so I guess just to kind of continue a bit with this master coin story.
+
+51:53.800 --> 51:58.320
+ So started by kind of giving ideas for how to generalize the thing.
+
+51:58.320 --> 52:03.760
+ And eventually this turned into a much more kind of fully flushed proposal that just says,
+
+52:03.760 --> 52:08.400
+ hey, how about you scrap all your futures and instead you just put in this programming
+
+52:08.400 --> 52:09.520
+ language.
+
+52:09.520 --> 52:15.640
+ And I gave this idea to them and their response was something like, hey, this is great, but
+
+52:15.640 --> 52:18.760
+ this seems complicated and this seems like something that we're not going to be able
+
+52:18.760 --> 52:21.040
+ to put onto our roadmap for a while.
+
+52:21.040 --> 52:24.720
+ And my response to this was like, wait, do you not realize how revolutionary this is?
+
+52:24.720 --> 52:26.720
+ Well, I'll just go do it myself.
+
+52:26.720 --> 52:27.720
+ And then I...
+
+52:27.720 --> 52:29.920
+ What was the name of the programming language?
+
+52:29.920 --> 52:32.560
+ I just called it ultimate scripting.
+
+52:32.560 --> 52:33.800
+ Great.
+
+52:33.800 --> 52:42.080
+ So then I went through a couple more rounds of iteration and then the idea for Ethereum
+
+52:42.080 --> 52:49.960
+ itself started to form and the idea here is that you just have a blockchain where the
+
+52:49.960 --> 52:55.880
+ core unit of the thing is what we call contracts, it's these, and if accounts that can hold
+
+52:55.880 --> 53:02.720
+ assets and they have their own internal memory, but that are controlled by a piece of code.
+
+53:02.720 --> 53:08.280
+ And so if I send some Ether to a contract, the only thing that can determine where that
+
+53:08.280 --> 53:15.480
+ kind of Ether, the currency inside Ethereum and of course after that is the code of that
+
+53:15.480 --> 53:17.040
+ contract itself.
+
+53:17.040 --> 53:24.720
+ And so basically kind of sending assets to computer programs becomes this kind of paradigm
+
+53:24.720 --> 53:29.320
+ for creating these self executing agreements.
+
+53:29.320 --> 53:30.320
+ Self executing.
+
+53:30.320 --> 53:34.280
+ It's so cool that code is sort of part of this contract.
+
+53:34.280 --> 53:37.600
+ So that's what's meant by smart contracts.
+
+53:37.600 --> 53:40.720
+ So how hard was it to build this kind of thing?
+
+53:40.720 --> 53:41.720
+ Harder than expected.
+
+53:41.720 --> 53:46.680
+ And originally I actually thought that this would be a thing that I would kind of casually
+
+53:46.680 --> 53:52.120
+ work on for a couple of months, publish and then go back to university.
+
+53:52.120 --> 53:57.000
+ Then I released it and a bunch of people, or I released the white paper.
+
+53:57.000 --> 53:58.560
+ The white paper, the ideas there.
+
+53:58.560 --> 54:00.240
+ The idea, the white paper.
+
+54:00.240 --> 54:04.200
+ A whole bunch of people came in offering to how about a huge number of people and have
+
+54:04.200 --> 54:05.200
+ expressed interest.
+
+54:05.200 --> 54:08.960
+ And this was something I was totally not expecting.
+
+54:08.960 --> 54:13.800
+ And then I kind of realized that this would be something that's kind of much bigger than
+
+54:13.800 --> 54:17.840
+ I had ever thought that it would be.
+
+54:17.840 --> 54:24.800
+ And then we started on this kind of much longer developments log of making something that
+
+54:24.800 --> 54:28.360
+ lives up to this kind of much higher level of expectations.
+
+54:28.360 --> 54:33.080
+ What are some of the, is it fundamental like software engineering challenges?
+
+54:33.080 --> 54:34.080
+ It was.
+
+54:34.080 --> 54:35.080
+ Social?
+
+54:35.080 --> 54:36.080
+ Okay, so there's.
+
+54:36.080 --> 54:37.080
+ And social.
+
+54:37.080 --> 54:43.000
+ So what are the biggest interesting challenges that you've learned about human civilization
+
+54:43.000 --> 54:47.480
+ and software engineering through this process?
+
+54:47.480 --> 54:53.760
+ So I guess one of the challenges for me is that like I'm one of the kind of apparently
+
+54:53.760 --> 54:59.160
+ unusual geek schools that have never treated with anything but kindness in school.
+
+54:59.160 --> 55:07.040
+ And so when I got into crypto, I kind of expected everyone would just kind of be the same kind
+
+55:07.040 --> 55:10.280
+ of altruistic and nice in that same way.
+
+55:10.280 --> 55:17.160
+ But the algorithm that I used for finding cofounders for this thing was not very good.
+
+55:17.160 --> 55:20.560
+ It was literally one computer scientist called the greedy algorithm.
+
+55:20.560 --> 55:25.080
+ It's kind of the first 15 people who applied back offering to help kind of are the cofounders.
+
+55:25.080 --> 55:32.880
+ Oh, you mean like literally the people that will form to be the cofounders of the community?
+
+55:32.880 --> 55:33.880
+ The algorithm.
+
+55:33.880 --> 55:36.560
+ I like how you call it the algorithm.
+
+55:36.560 --> 55:45.120
+ And so what happened was that these, especially as the projects got really big, like there
+
+55:45.120 --> 55:49.840
+ started to be a lot of this kind of infighting and there were a lot of, like I wanted the
+
+55:49.840 --> 55:55.800
+ thing to be a nonprofit and some of them wanted to be a for profit and then there started
+
+55:55.800 --> 55:58.880
+ to be people who were just kind of totally unable to work with each other.
+
+55:58.880 --> 56:04.640
+ There were people that were kind of trying to get an advantage for themselves in a lot
+
+56:04.640 --> 56:06.640
+ of different ways.
+
+56:06.640 --> 56:12.160
+ And this just about six months later led to this big governance crisis.
+
+56:12.160 --> 56:15.040
+ And then we kind of reshuffled leadership a bit.
+
+56:15.040 --> 56:20.040
+ And then the project kept on going then nine months later, there was another governance
+
+56:20.040 --> 56:23.440
+ crisis and then there was a third governance crisis.
+
+56:23.440 --> 56:28.480
+ So is there a way to, if you're looking at the human side of things, is there a way to
+
+56:28.480 --> 56:32.240
+ optimize this aspect of the cryptocurrency world?
+
+56:32.240 --> 56:38.400
+ It seems that there is, from my perspective, there's a lot of different characters and personalities
+
+56:38.400 --> 56:39.400
+ and egos.
+
+56:39.400 --> 56:48.320
+ And like you said, I don't know, I also like to think that most of the people in the world
+
+56:48.320 --> 56:59.680
+ are well intentioned, but the way those intentions are realized may perhaps come off as negative.
+
+56:59.680 --> 57:05.400
+ Is there a hopeful message here about creating a governance structure for cryptocurrency where
+
+57:05.400 --> 57:07.560
+ everyone gets along?
+
+57:07.560 --> 57:11.800
+ Here about four rounds of reshuffle, I think we've actually come up with something that
+
+57:11.800 --> 57:15.360
+ seems to be pretty stable and happy.
+
+57:15.360 --> 57:23.480
+ I think, I mean, I definitely do think that most people are well intentioned.
+
+57:23.480 --> 57:28.400
+ I just think that like one of the reasons why I like decentralization is just because
+
+57:28.400 --> 57:33.600
+ there's like this thing about power where power attracts people with egos and so that
+
+57:33.600 --> 57:37.800
+ just allows us a very small percentage of people to just ruin so many things.
+
+57:37.800 --> 57:44.120
+ You think ego has a, you think ego has a use, like is ego always bad?
+
+57:44.120 --> 57:46.120
+ It sometimes does.
+
+57:46.120 --> 57:53.000
+ But then the Ethereum research team, I feel like we've found also kind of a lot of very
+
+57:53.000 --> 57:59.960
+ good people that are just, and if primarily you're just interested in things for the technology
+
+57:59.960 --> 58:06.560
+ and things seem to just generally be going quite well.
+
+58:06.560 --> 58:07.560
+ Yeah.
+
+58:07.560 --> 58:11.200
+ When you're, when the focus and the passions and the tech, so on the, so that's the human
+
+58:11.200 --> 58:15.200
+ side of things, but the technology side, like what have you learned?
+
+58:15.200 --> 58:21.480
+ What have been the biggest challenges of bringing Ethereum to life on the technology side?
+
+58:21.480 --> 58:28.600
+ So I think first of all, just, you know, there's like the first of all software developments,
+
+58:28.600 --> 58:32.920
+ which is that when someone gives you a timetable, switch the unit of time to the next largest
+
+58:32.920 --> 58:38.160
+ unit of time and add one, and like we basically fell victim to that.
+
+58:38.160 --> 58:45.880
+ And so instead of taking like three months, it ended up taking like 20 months to launch
+
+58:45.880 --> 58:46.880
+ the thing.
+
+58:46.880 --> 58:53.840
+ And that was just, I think, underestimating the sheer technical complexity of the thing.
+
+58:53.840 --> 58:58.440
+ There are research challenges, like so for example, one of the things that we've been
+
+58:58.440 --> 59:02.840
+ saying from the start that we would do, one is a switch from a proof of work to a proof
+
+59:02.840 --> 59:09.720
+ of stake, more proof of stake is this alternative consensus mechanism where instead of having
+
+59:09.720 --> 59:13.640
+ to waste a lot of computing power on solving these mathematical puzzles that don't mean
+
+59:13.640 --> 59:18.920
+ anything, you kind of prove that you have access to coins inside of the system.
+
+59:18.920 --> 59:23.600
+ And this, then it gives you some level of participation in the consensus.
+
+59:23.600 --> 59:25.160
+ Can you maybe elaborate on that a little bit?
+
+59:25.160 --> 59:27.560
+ I understand the idea of proof of work.
+
+59:27.560 --> 59:32.040
+ I know that a lot of people say that the idea of proof of stake is really appealing.
+
+59:32.040 --> 59:35.560
+ Can you maybe link Garner to longer explain what it is?
+
+59:35.560 --> 59:36.600
+ Sure.
+
+59:36.600 --> 59:44.760
+ So basically the idea is like, if I kind of lock up a hundred coins, then I turn that
+
+59:44.760 --> 59:47.400
+ into a kind of quote, virtual miner.
+
+59:47.400 --> 59:54.480
+ And the system itself kind of automatically randomly assigns that in a virtual miner is
+
+59:54.480 --> 59:58.280
+ a right to create blocks at particular intervals.
+
+59:58.280 --> 1:00:03.240
+ And then if someone else has 200 coins and they lock and lock those 200 coins, then they
+
+1:00:03.240 --> 1:00:08.400
+ get a kind of twice as big virtual miner they'll be able to create blocks twice as often.
+
+1:00:08.400 --> 1:00:15.080
+ So it tries to kind of do similar things to proof of work, except instead of the thing
+
+1:00:15.080 --> 1:00:21.920
+ and of rate limiting your participation being your ability to crank out solutions to kind
+
+1:00:21.920 --> 1:00:26.080
+ of hash challenges, the thing that real limits your participation is kind of how much coins
+
+1:00:26.080 --> 1:00:28.080
+ you're kind of locking into this mechanism.
+
+1:00:28.080 --> 1:00:29.080
+ Okay.
+
+1:00:29.080 --> 1:00:30.080
+ So interesting.
+
+1:00:30.080 --> 1:00:37.440
+ So that that limited participation doesn't require you to run a lot of compute.
+
+1:00:37.440 --> 1:00:47.520
+ Does that mean that the richer you are so rich people are more like their identities
+
+1:00:47.520 --> 1:00:50.640
+ more right in this stable?
+
+1:00:50.640 --> 1:00:54.840
+ Yeah, verifiable or whatever, whatever the right terminology is.
+
+1:00:54.840 --> 1:00:55.840
+ Right.
+
+1:00:55.840 --> 1:00:57.480
+ And this is definitely a common critique.
+
+1:00:57.480 --> 1:01:02.600
+ I think my usual answer to this is that like proof of work is even more of that kind of
+
+1:01:02.600 --> 1:01:03.600
+ system.
+
+1:01:03.600 --> 1:01:04.600
+ Exactly.
+
+1:01:04.600 --> 1:01:05.600
+ Yeah.
+
+1:01:05.600 --> 1:01:06.600
+ I didn't mean it in that statement as a criticism.
+
+1:01:06.600 --> 1:01:07.600
+ I think you're exactly right.
+
+1:01:07.600 --> 1:01:11.160
+ That's equivalent to proof of work is the same kind of thing.
+
+1:01:11.160 --> 1:01:15.280
+ But in the proof of work, you have to also use physical resources.
+
+1:01:15.280 --> 1:01:16.280
+ Yes.
+
+1:01:16.280 --> 1:01:19.400
+ And burn computers and burn trees and all of that stuff.
+
+1:01:19.400 --> 1:01:25.200
+ Is there a way to mess with the system of the proof of proof of stake?
+
+1:01:25.200 --> 1:01:29.560
+ There is, but you will once again need to have a very large portion of all the coins
+
+1:01:29.560 --> 1:01:31.960
+ that are locked in the system to do anything bad.
+
+1:01:31.960 --> 1:01:32.960
+ Got it.
+
+1:01:32.960 --> 1:01:33.960
+ Yeah.
+
+1:01:33.960 --> 1:01:38.440
+ And just to that, maybe take a small change in one of the criticisms of cryptocurrencies,
+
+1:01:38.440 --> 1:01:43.480
+ the fact that it gets for the proof of work mechanism, you have to use so much energy in
+
+1:01:43.480 --> 1:01:44.480
+ the world.
+
+1:01:44.480 --> 1:01:45.480
+ Yes.
+
+1:01:45.480 --> 1:01:50.000
+ Is one of the motivations of proof of stake is to move away from this?
+
+1:01:50.000 --> 1:01:51.000
+ Definitely.
+
+1:01:51.000 --> 1:01:52.720
+ What's your sense of that?
+
+1:01:52.720 --> 1:01:54.360
+ Maybe I'm just under informed.
+
+1:01:54.360 --> 1:01:58.360
+ Is there like legitimately environmental impact from this?
+
+1:01:58.360 --> 1:01:59.360
+ Yeah.
+
+1:01:59.360 --> 1:02:04.720
+ So the latest thing was that Bitcoin consumed as much energy as the country of Austria or
+
+1:02:04.720 --> 1:02:06.120
+ something like that.
+
+1:02:06.120 --> 1:02:07.120
+ Yeah.
+
+1:02:07.120 --> 1:02:10.840
+ And then Ethereum is like right now, maybe only like half in order of magnitude smaller
+
+1:02:10.840 --> 1:02:11.840
+ than Bitcoin.
+
+1:02:11.840 --> 1:02:14.840
+ I've heard you talk about Ethereum 2.0.
+
+1:02:14.840 --> 1:02:18.560
+ So what's the dream of Ethereum 2.0?
+
+1:02:18.560 --> 1:02:24.440
+ What's the status of proof of stake as a mechanism that Ethereum moves towards?
+
+1:02:24.440 --> 1:02:31.840
+ And also, how do you move to a different mechanism of consensus within a cryptocurrency?
+
+1:02:31.840 --> 1:02:37.440
+ So Ethereum 2.0 is a collection of major upgrades that we've wanted to do to Ethereum
+
+1:02:37.440 --> 1:02:38.760
+ for quite some time.
+
+1:02:38.760 --> 1:02:44.720
+ The two big ones, one is proof of stake and the other is what we call sharding.
+
+1:02:44.720 --> 1:02:48.920
+ Sharding solves another problem with blockchains, which is scalability.
+
+1:02:48.920 --> 1:02:54.520
+ And what sharding does is it basically says instead of every participant in the network
+
+1:02:54.520 --> 1:02:59.120
+ having to personally download and verify every transaction, every participant in the network
+
+1:02:59.120 --> 1:03:04.000
+ only downloads and verifies a small portion of transactions, and then you kind of randomly
+
+1:03:04.000 --> 1:03:07.200
+ distribute who gets how much work.
+
+1:03:07.200 --> 1:03:12.600
+ And because of how the distribution is random, it still has the property that you need a
+
+1:03:12.600 --> 1:03:17.920
+ large portion of the entire network to corrupt what's going on inside of any shard.
+
+1:03:17.920 --> 1:03:22.600
+ But the system is still very redundant and very secure.
+
+1:03:22.600 --> 1:03:23.600
+ That's brilliant.
+
+1:03:23.600 --> 1:03:28.680
+ How hard is that to implement and how hard is proof of stake to implement?
+
+1:03:28.680 --> 1:03:32.120
+ Like on the technical level, software level?
+
+1:03:32.120 --> 1:03:33.920
+ Proof of stake and sharding are both challenging.
+
+1:03:33.920 --> 1:03:37.280
+ I'd say sharding is a bit more challenging.
+
+1:03:37.280 --> 1:03:41.760
+ The reason is that proof of stake is kind of just a change to how the consensus layer
+
+1:03:41.760 --> 1:03:43.080
+ works.
+
+1:03:43.080 --> 1:03:47.320
+ Sharding does both that, but it's also a change to the networking layer.
+
+1:03:47.320 --> 1:03:51.400
+ The reason is that sharding is kind of pointless if at the networking layer you still do what
+
+1:03:51.400 --> 1:03:55.760
+ you do today, which is you kind of gossip everything, which means that if someone publishes
+
+1:03:55.760 --> 1:04:01.120
+ something, every other node in the client hears it from on the networking layer.
+
+1:04:01.120 --> 1:04:04.840
+ And so instead, we have to have subnetworks and the ability to quickly switch between
+
+1:04:04.840 --> 1:04:07.840
+ subnetworks and other subnetworks, talk to each other.
+
+1:04:07.840 --> 1:04:12.680
+ And this is all doable, but it's a more complex architecture, and it's definitely the sort
+
+1:04:12.680 --> 1:04:15.200
+ of thing that has not yet been done in cryptocurrency.
+
+1:04:15.200 --> 1:04:21.920
+ So most of the networking layer in cryptocurrency is you're shouting, you're like broadcasting
+
+1:04:21.920 --> 1:04:25.280
+ messages, and this is more like ad hoc networks.
+
+1:04:25.280 --> 1:04:28.080
+ Yeah, you're shouting within smaller groups.
+
+1:04:28.080 --> 1:04:30.320
+ Smaller groups, but you have like a bunch of subnetwork.
+
+1:04:30.320 --> 1:04:31.320
+ Exactly.
+
+1:04:31.320 --> 1:04:36.680
+ And you have to switch between, oh man, I'd love to see the, so it's a beautiful idea
+
+1:04:36.680 --> 1:04:43.240
+ from a graph theoretic perspective, but just the software that, who's responsible?
+
+1:04:43.240 --> 1:04:48.000
+ Is the Ethereum project, like the people involved, would they be implementing?
+
+1:04:48.000 --> 1:04:54.640
+ What's the actual, this is like legit software engineering.
+
+1:04:54.640 --> 1:04:55.760
+ How does that work?
+
+1:04:55.760 --> 1:04:58.360
+ How do people collaborate, build that kind of project?
+
+1:04:58.360 --> 1:05:03.800
+ Is this like almost like, is there a software engineering lead?
+
+1:05:03.800 --> 1:05:08.520
+ Is there, is it legit, almost like large scale open source project?
+
+1:05:08.520 --> 1:05:09.520
+ There is, yeah.
+
+1:05:09.520 --> 1:05:14.440
+ So we have someone named Danny Ryan on our team, who's just been brilliant and great
+
+1:05:14.440 --> 1:05:15.600
+ all around.
+
+1:05:15.600 --> 1:05:22.360
+ And he is a kind of de facto kind of development coordinator, I guess.
+
+1:05:22.360 --> 1:05:25.040
+ It's like, you have to invent job titles for this stuff.
+
+1:05:25.040 --> 1:05:30.240
+ The reason is that, like we also have this unique kind of organizational structure where
+
+1:05:30.240 --> 1:05:35.280
+ the Ethereum foundation itself does research in house, but then the actual implementation
+
+1:05:35.280 --> 1:05:40.360
+ is done by independent teams that are separate companies and they're located all around the
+
+1:05:40.360 --> 1:05:45.120
+ world and fun places like Australia.
+
+1:05:45.120 --> 1:05:53.160
+ And so you kind of just need a bunch of almost nonstop cat herding to just keep getting these
+
+1:05:53.160 --> 1:05:58.640
+ people to talk to each other and kind of implement this back, make sure that everyone agrees
+
+1:05:58.640 --> 1:06:03.120
+ on what's going on and kind of how to interpret different things.
+
+1:06:03.120 --> 1:06:07.920
+ So how far into the future are we from these two mechanisms in Ethereum 2.0?
+
+1:06:07.920 --> 1:06:13.640
+ What's your sense of the timeline keeping in mind the previous comment you made about
+
+1:06:13.640 --> 1:06:19.560
+ the sort of general curse of software projects?
+
+1:06:19.560 --> 1:06:23.520
+ So Ethereum 2.0 is split into three phases.
+
+1:06:23.520 --> 1:06:28.560
+ So phase zero just creates a proof of stake network and it's actually separate from kind
+
+1:06:28.560 --> 1:06:33.280
+ of proof of the proof of work network at the beginning, just to kind of give it time to
+
+1:06:33.280 --> 1:06:35.160
+ grow and improve itself.
+
+1:06:35.160 --> 1:06:36.160
+ Do people get to choose?
+
+1:06:36.160 --> 1:06:37.160
+ Sorry to interrupt.
+
+1:06:37.160 --> 1:06:38.160
+ Do people get to choose?
+
+1:06:38.160 --> 1:06:39.160
+ I guess.
+
+1:06:39.160 --> 1:06:42.320
+ Yes, they get to choose to move over if they want to.
+
+1:06:42.320 --> 1:06:47.360
+ Then phase one adds sharding, but it only adds sharding of data storage and not sharding
+
+1:06:47.360 --> 1:06:49.160
+ of computation.
+
+1:06:49.160 --> 1:06:57.800
+ And then after that, there is the merger phase, which is where the accounts, smart contracts,
+
+1:06:57.800 --> 1:07:04.040
+ all of the activity on the existing ETH1 system just kind of gets cut and pasted into ETH2
+
+1:07:04.040 --> 1:07:08.880
+ and then the proof of work chain gets forgotten and then all the things that were living there
+
+1:07:08.880 --> 1:07:13.520
+ before just kind of continue living inside of the proof of stake system.
+
+1:07:13.520 --> 1:07:24.720
+ So for timelines, phase zero has been kind of almost fully implemented and now it's just
+
+1:07:24.720 --> 1:07:29.720
+ a matter of a whole bunch of security auditing and testing.
+
+1:07:29.720 --> 1:07:36.400
+ My own experience is that right now it feels like we're at about a phase comparable to
+
+1:07:36.400 --> 1:07:41.360
+ when we were doing the original Ethereum launch when we were maybe about four months away
+
+1:07:41.360 --> 1:07:42.360
+ from launch.
+
+1:07:42.360 --> 1:07:44.680
+ But that's just a hunch.
+
+1:07:44.680 --> 1:07:46.680
+ That's just a hunch.
+
+1:07:46.680 --> 1:07:53.640
+ So how it took over a decade for people to move from Python 2 to Python 3.
+
+1:07:53.640 --> 1:08:00.920
+ How do you see the move from this phase zero for different consensus mechanisms?
+
+1:08:00.920 --> 1:08:07.400
+ Do you see there being a drastic phase shift in people just kind of jumping to this better
+
+1:08:07.400 --> 1:08:08.720
+ mechanism?
+
+1:08:08.720 --> 1:08:14.320
+ So in phase zero, I don't expect too many people to do much because in phase zero and
+
+1:08:14.320 --> 1:08:19.480
+ phase one, the new chain doesn't have too much functionality turned on.
+
+1:08:19.480 --> 1:08:23.300
+ It's there just like if you want to be a proof of stake validator, you can get things started
+
+1:08:23.300 --> 1:08:28.440
+ if you want to store data for other blockchain applications, you can get started.
+
+1:08:28.440 --> 1:08:32.560
+ But existing applications will largely keep living on ETH1.
+
+1:08:32.560 --> 1:08:39.080
+ And then when the merger happens, then the merger is a operation that happens all at
+
+1:08:39.080 --> 1:08:40.080
+ once.
+
+1:08:40.080 --> 1:08:44.840
+ So that's one of the benefits of a consensus system that on the one hand you have to coordinate
+
+1:08:44.840 --> 1:08:49.160
+ the upgrade, but on the other hand, the upgrade can be coordinated.
+
+1:08:49.160 --> 1:08:52.200
+ So what's Casper FFG, by the way?
+
+1:08:52.200 --> 1:08:57.840
+ Casper FFG is the consensus algorithm that we are using for a proof of stake.
+
+1:08:57.840 --> 1:09:02.800
+ Is there something interesting specific about Casper FFG, like some beautiful aspect of
+
+1:09:02.800 --> 1:09:03.800
+ it?
+
+1:09:03.800 --> 1:09:04.800
+ There is.
+
+1:09:04.800 --> 1:09:11.240
+ So Casper FFG combines together kind of two different schools of like it's not sale
+
+1:09:11.240 --> 1:09:12.760
+ growth I'm designed.
+
+1:09:12.760 --> 1:09:17.000
+ So the general two different schools of the design are right.
+
+1:09:17.000 --> 1:09:23.280
+ One is 50% fault tolerant, but dependent on network synchrony.
+
+1:09:23.280 --> 1:09:29.560
+ So 50% fault tolerant, but it tolerate up to 50% of faults, but not more, but it depends
+
+1:09:29.560 --> 1:09:35.320
+ on an assumption that all of the nodes can talk to each other within some of a limited
+
+1:09:35.320 --> 1:09:36.320
+ period of time.
+
+1:09:36.320 --> 1:09:40.640
+ Like if I send a message, you'll receive it within a few seconds.
+
+1:09:40.640 --> 1:09:46.360
+ And the second school is 33% fault tolerant, but safe under a synchrony.
+
+1:09:46.360 --> 1:09:51.920
+ Which means that if we agree on something, then that thing is finalized.
+
+1:09:51.920 --> 1:09:55.960
+ And even if the network goes horribly wonky the second after that thing is finalized,
+
+1:09:55.960 --> 1:09:59.400
+ there's no way to revert that thing.
+
+1:09:59.400 --> 1:10:03.320
+ That's fascinating how you would make that happen.
+
+1:10:03.320 --> 1:10:06.200
+ It's definitely quite clever.
+
+1:10:06.200 --> 1:10:08.880
+ I'd recommend the Casper FFG paper.
+
+1:10:08.880 --> 1:10:13.240
+ If you just search like archive as in like ARX, IV, Casper FFG, it's right there.
+
+1:10:13.240 --> 1:10:14.240
+ That's an archive.
+
+1:10:14.240 --> 1:10:15.240
+ The paper's an archive.
+
+1:10:15.240 --> 1:10:16.240
+ Yeah, yeah.
+
+1:10:16.240 --> 1:10:17.240
+ Who are the authors?
+
+1:10:17.240 --> 1:10:20.040
+ Myself and Virgil Griffith.
+
+1:10:20.040 --> 1:10:21.040
+ That's awesome.
+
+1:10:21.040 --> 1:10:23.640
+ Take a small tangent.
+
+1:10:23.640 --> 1:10:27.280
+ This idea of just putting out white papers and papers and putting them on archive and
+
+1:10:27.280 --> 1:10:32.080
+ just putting them publicly, is that at the core?
+
+1:10:32.080 --> 1:10:34.520
+ Is that a necessary component of the currency?
+
+1:10:34.520 --> 1:10:38.680
+ Is that the tradition started with Satoshi Nakamoto?
+
+1:10:38.680 --> 1:10:40.480
+ What do you make of it?
+
+1:10:40.480 --> 1:10:42.880
+ Like what do you make of the future of that kind of sharing of ideas?
+
+1:10:42.880 --> 1:10:44.320
+ I guess so, yeah.
+
+1:10:44.320 --> 1:10:51.000
+ And it's definitely something that's kind of mandatory for crypto because like crypto
+
+1:10:51.000 --> 1:10:56.640
+ is all about making systems where you don't have to trust the operators to trust that
+
+1:10:56.640 --> 1:10:57.720
+ the thing works.
+
+1:10:57.720 --> 1:11:03.680
+ And so if anything behind how a system works is closed sourced, then that kind of kills
+
+1:11:03.680 --> 1:11:04.680
+ the point.
+
+1:11:04.680 --> 1:11:10.960
+ And so there is the kind of a sense in which the fundamental properties of the category
+
+1:11:10.960 --> 1:11:14.920
+ of the thing we're trying to build just kind of forces openness.
+
+1:11:14.920 --> 1:11:19.120
+ But also openness just has proven to be a really great way to collaborate.
+
+1:11:19.120 --> 1:11:23.600
+ And then there's actually a lot of innovation and academic collaboration that's just kind
+
+1:11:23.600 --> 1:11:27.920
+ of happened ad hoc in the crypto space the last few years.
+
+1:11:27.920 --> 1:11:34.480
+ So like for example, we have this forum called ETH research that's like ETH, R E S E A R
+
+1:11:34.480 --> 1:11:36.840
+ and then dot CH.
+
+1:11:36.840 --> 1:11:43.000
+ And there we publish kind of just ideas in a form that's kind of half formal.
+
+1:11:43.000 --> 1:11:46.200
+ Like it's halfway in between.
+
+1:11:46.200 --> 1:11:50.960
+ It's kind of a text write up and then you can have math in it, but it's often out of
+
+1:11:50.960 --> 1:11:53.080
+ much shorter than a paper.
+
+1:11:53.080 --> 1:11:58.600
+ And it turns out that the great majority of new ideas, like they're just kind of fairly
+
+1:11:58.600 --> 1:12:03.240
+ small nuggets that you can explain in like five to 10 lines and they don't really need
+
+1:12:03.240 --> 1:12:05.000
+ the whole formality of a paper.
+
+1:12:05.000 --> 1:12:06.000
+ Exactly.
+
+1:12:06.000 --> 1:12:08.560
+ They don't require the kind of like 10 pages of a filler.
+
+1:12:08.560 --> 1:12:11.320
+ And so introduction conclusion is not needed.
+
+1:12:11.320 --> 1:12:12.320
+ Yeah.
+
+1:12:12.320 --> 1:12:16.920
+ And so instead you just kind of publish the idea and then the people can go comments on
+
+1:12:16.920 --> 1:12:17.920
+ it.
+
+1:12:17.920 --> 1:12:18.920
+ That's brilliant.
+
+1:12:18.920 --> 1:12:19.920
+ Yeah.
+
+1:12:19.920 --> 1:12:20.920
+ This has been great for us.
+
+1:12:20.920 --> 1:12:21.920
+ I think I interrupted you.
+
+1:12:21.920 --> 1:12:23.920
+ Was there something else on Casper FFG?
+
+1:12:23.920 --> 1:12:29.240
+ No, just Casper FFG is just kind of combines together these two schools.
+
+1:12:29.240 --> 1:12:38.880
+ And so basically it creates this system where if you have more than 50% that are honest
+
+1:12:38.880 --> 1:12:45.360
+ then and you have a network synchrony, then the thing kind of goes as a chain, but then
+
+1:12:45.360 --> 1:12:49.960
+ if network synchrony fails, then kind of the last few blocks in the chain might kind
+
+1:12:49.960 --> 1:12:51.200
+ of get replaced.
+
+1:12:51.200 --> 1:12:59.520
+ But anything that was finalized by this kind of more asynchronous process can't be reverted.
+
+1:12:59.520 --> 1:13:03.880
+ And so you essentially get a kind of best of both worlds between those two models.
+
+1:13:03.880 --> 1:13:04.880
+ Okay.
+
+1:13:04.880 --> 1:13:06.320
+ So I know what I'm doing to them.
+
+1:13:06.320 --> 1:13:09.040
+ I'm going to be reading the Casper FFG paper.
+
+1:13:09.040 --> 1:13:16.240
+ Apologize for the romanticized question, but what do you are some or the most beautiful
+
+1:13:16.240 --> 1:13:19.200
+ idea in the world of Ethereum?
+
+1:13:19.200 --> 1:13:23.040
+ Just something surprising, something beautiful, something powerful.
+
+1:13:23.040 --> 1:13:24.040
+ Yeah.
+
+1:13:24.040 --> 1:13:28.880
+ I mean, I think the fact that money can just emerge out of a database if enough people believe
+
+1:13:28.880 --> 1:13:33.920
+ in it, I think is definitely one of those things that's up there.
+
+1:13:33.920 --> 1:13:39.760
+ I think one of the things that I really love about Ethereum is also this concept of composability.
+
+1:13:39.760 --> 1:13:45.720
+ So this is the idea that if I build an application on top of Ethereum, then you can build an
+
+1:13:45.720 --> 1:13:50.920
+ application that talks to my application and you don't even need my permission, you don't
+
+1:13:50.920 --> 1:13:52.720
+ even need to talk to me.
+
+1:13:52.720 --> 1:13:58.280
+ So one really fun example of this is there was this kind of game on Ethereum called CryptoKitties,
+
+1:13:58.280 --> 1:14:01.080
+ they're just involved in breeding digital cats.
+
+1:14:01.080 --> 1:14:07.400
+ And someone else created a game called CryptoDragons, where the way you play CryptoDragons is you
+
+1:14:07.400 --> 1:14:15.840
+ have a dragon and you have to feed it CryptoKitties and they just created the whole thing just
+
+1:14:15.840 --> 1:14:22.320
+ like as an Ethereum contract that you would send these tokens that are defined by this
+
+1:14:22.320 --> 1:14:24.320
+ other Ethereum contract.
+
+1:14:24.320 --> 1:14:30.040
+ And for the interoperability to happen, the projects don't really need to, the teams don't
+
+1:14:30.040 --> 1:14:35.360
+ really need to talk to each other, you just kind of interface with the existing program.
+
+1:14:35.360 --> 1:14:39.920
+ So it's arbitrarily composable in this kind of way, so you have different groups that
+
+1:14:39.920 --> 1:14:40.920
+ could be working in.
+
+1:14:40.920 --> 1:14:46.000
+ So you could see it scaling to just outside of dragons and kitties, you could build like
+
+1:14:46.000 --> 1:14:50.360
+ entire ecosystems of software in this kind of way.
+
+1:14:50.360 --> 1:14:55.800
+ Yeah, especially in the decentralized finance space that's been popping up the last two
+
+1:14:55.800 --> 1:15:01.000
+ years, there has been a huge amount of really interesting things happen as a result of this.
+
+1:15:01.000 --> 1:15:05.080
+ Is it a particular kind of like financial applications kind of thing?
+
+1:15:05.080 --> 1:15:07.800
+ Yeah, I mean, there's like stable coins.
+
+1:15:07.800 --> 1:15:17.560
+ So this is kind of tokens retain value equal to $1, but they're kind of backed by cryptocurrency.
+
+1:15:17.560 --> 1:15:20.280
+ Then there's decentralized exchanges.
+
+1:15:20.280 --> 1:15:27.560
+ So as far as decentralized exchanges goes, there's this really interesting construction
+
+1:15:27.560 --> 1:15:32.640
+ that has existed for about one and a half years now called Uniswap.
+
+1:15:32.640 --> 1:15:38.960
+ So what Uniswap is, it's a smart contract that holds the balances of two tokens, we'll
+
+1:15:38.960 --> 1:15:44.560
+ call them token A and token B. And it maintains an invariant that the balance of token A multiplied
+
+1:15:44.560 --> 1:15:47.760
+ by the balance of token B has to equal the same value.
+
+1:15:47.760 --> 1:15:52.240
+ And so the way that you trade against the thing is basically like you have this kind
+
+1:15:52.240 --> 1:15:57.840
+ of curve, you know, like X times Y equals K. And before you trade, it's at some points
+
+1:15:57.840 --> 1:15:58.840
+ on the curve.
+
+1:15:58.840 --> 1:16:02.400
+ After you trade, you just like pick any other points on the curve.
+
+1:16:02.400 --> 1:16:05.920
+ And then whatever the delta X is, that's the amount of A tokens you provide, whatever
+
+1:16:05.920 --> 1:16:09.920
+ the delta Y is, that's the amount of B tokens you get or vice versa.
+
+1:16:09.920 --> 1:16:16.720
+ And that's just kind of the slope at the current points on the curve kind of is the price.
+
+1:16:16.720 --> 1:16:20.240
+ And so that just is the whole thing.
+
+1:16:20.240 --> 1:16:29.120
+ And that just allows you to have this exchange for tokens and even if there's very few participants
+
+1:16:29.120 --> 1:16:34.880
+ and the whole thing is just like so simple and it's just very easy to set up, very easy
+
+1:16:34.880 --> 1:16:41.840
+ to participate in and it just provides so much value to people.
+
+1:16:41.840 --> 1:16:49.280
+ And the fundamental, the distributed application infrastructure allows that somehow.
+
+1:16:49.280 --> 1:16:50.280
+ Yes.
+
+1:16:50.280 --> 1:16:52.360
+ So this is a smart contract meeting.
+
+1:16:52.360 --> 1:16:55.680
+ This is all a computer program that's just running on Ethereum.
+
+1:16:55.680 --> 1:16:58.200
+ Smart contracts too are just fascinating.
+
+1:16:58.200 --> 1:16:59.200
+ They are.
+
+1:16:59.200 --> 1:17:00.200
+ Okay.
+
+1:17:00.200 --> 1:17:05.200
+ Do you think cryptocurrency may become the main currency in the world one day?
+
+1:17:05.200 --> 1:17:10.680
+ So where do you think we're headed in terms of the role of currency, the structure type
+
+1:17:10.680 --> 1:17:12.720
+ of currency in the world?
+
+1:17:12.720 --> 1:17:20.080
+ I definitely expect fiat currencies to continue to exist and get in to be strong and I definitely
+
+1:17:20.080 --> 1:17:25.000
+ expect kind of fiat currencies to also digitize in their own way over the next couple of decades.
+
+1:17:25.000 --> 1:17:26.520
+ What's fiat currency by the way?
+
+1:17:26.520 --> 1:17:31.480
+ Oh, just like things like US dollars and like dollars and euros and yen and these other
+
+1:17:31.480 --> 1:17:32.480
+ things.
+
+1:17:32.480 --> 1:17:34.040
+ And they're sort of backed by governments.
+
+1:17:34.040 --> 1:17:35.040
+ Yes.
+
+1:17:35.040 --> 1:17:41.600
+ And I also expect kind of cryptocurrencies to play this kind of important role in just
+
+1:17:41.600 --> 1:17:46.840
+ making sure that people always have an alternative if fiat currencies start breaking.
+
+1:17:46.840 --> 1:17:53.240
+ So like if or if you're in, you know, some kind of very high inflation place like Venezuela,
+
+1:17:53.240 --> 1:18:04.760
+ for example, or if your country just kind of gets cut off from other financial systems
+
+1:18:04.760 --> 1:18:10.240
+ because of like something the banks do, like if any kind of, if there's even like some
+
+1:18:10.240 --> 1:18:15.960
+ major trade disruption or something worse happens, then like cryptocurrencies are the
+
+1:18:15.960 --> 1:18:19.960
+ sort of thing that just because of their kind of global neutrality, they're just kind of
+
+1:18:19.960 --> 1:18:22.280
+ always there and you can keep using them.
+
+1:18:22.280 --> 1:18:27.720
+ It's interesting that you're quite humble about the possibilities of the future of cryptocurrency.
+
+1:18:27.720 --> 1:18:33.720
+ You don't think there's a possible future where it becomes the main set of currency
+
+1:18:33.720 --> 1:18:40.400
+ because it feels like fiat, it feels like the centralized control by governments of
+
+1:18:40.400 --> 1:18:47.280
+ currencies limiting somehow, maybe my naive utopian view of the world.
+
+1:18:47.280 --> 1:18:48.800
+ It's definitely very possible.
+
+1:18:48.800 --> 1:18:59.600
+ I mean, I think like for cryptocurrencies being the main form of value to work well,
+
+1:18:59.600 --> 1:19:05.680
+ like you do need to have some much more price stability than they have today.
+
+1:19:05.680 --> 1:19:09.880
+ And I mean, there are now stable coins and there are kind of cryptocurrency is the try
+
+1:19:09.880 --> 1:19:13.240
+ to be more stable than existing things like Bitcoin and Ether.
+
+1:19:13.240 --> 1:19:18.360
+ But that just is to me the kind of the main challenge.
+
+1:19:18.360 --> 1:19:22.280
+ Do you think, oh, that's, do you think that's a characteristic of just being the early days
+
+1:19:22.280 --> 1:19:27.480
+ is such a young concept that 10 years is nothing in the history of money?
+
+1:19:27.480 --> 1:19:31.120
+ Yeah, and I think it's a combination of two things, right?
+
+1:19:31.120 --> 1:19:37.480
+ One is it's it's still early days, but the other is a kind of more durable any kind
+
+1:19:37.480 --> 1:19:42.440
+ of economic problem, which is that the demand for currency is volatile, right?
+
+1:19:42.440 --> 1:19:48.480
+ Because of like, recessions, boom, changes to technology, lots of things, and if people's
+
+1:19:48.480 --> 1:19:51.760
+ demand for how much currency they want to hold changes.
+
+1:19:51.760 --> 1:19:57.200
+ And if you have a currency that has a fixed supply, then the change in demand has to be
+
+1:19:57.200 --> 1:20:00.560
+ entirely expressed as a change in value of the currency.
+
+1:20:00.560 --> 1:20:04.920
+ And so what that means is that kind of the volatility of demand becomes entirely translated
+
+1:20:04.920 --> 1:20:10.180
+ into volatility and ahead of prices of things that are dominated in that currency.
+
+1:20:10.180 --> 1:20:15.400
+ But if you have a currency where instead the supply can change, and so the supply can go
+
+1:20:15.400 --> 1:20:20.880
+ up when there's more demand, then you have the supply ahead of absorbing more of that
+
+1:20:20.880 --> 1:20:21.880
+ volatility.
+
+1:20:21.880 --> 1:20:24.960
+ And so the price of the currency would absorb loss of the volatility.
+
+1:20:24.960 --> 1:20:29.840
+ On that topic, so Bitcoin does have a limited supply, a specific fixed supply.
+
+1:20:29.840 --> 1:20:30.840
+ Yes.
+
+1:20:30.840 --> 1:20:37.280
+ What's, what's the idea and Ethereum doesn't, but can you clarify?
+
+1:20:37.280 --> 1:20:41.800
+ Just in the comment you just made, is Ethereum qualified to the kind of currency that you're
+
+1:20:41.800 --> 1:20:44.240
+ talking about and being flexible in the supply?
+
+1:20:44.240 --> 1:20:50.200
+ And it's a bit more flexible, but kind of the thing that you would really want is something
+
+1:20:50.200 --> 1:20:58.040
+ that's kind of specifically flexible in response to how valuable the currency is.
+
+1:20:58.040 --> 1:21:01.080
+ And I'd recommend, you know, look at stable coins as well.
+
+1:21:01.080 --> 1:21:04.600
+ So like things like dye, for example, that's like,
+
+1:21:04.600 --> 1:21:06.600
+ How do you spell that?
+
+1:21:06.600 --> 1:21:07.600
+ DAI.
+
+1:21:07.600 --> 1:21:09.480
+ And what's stable coins?
+
+1:21:09.480 --> 1:21:11.080
+ Is it a type of cryptocurrency?
+
+1:21:11.080 --> 1:21:13.040
+ It is a type of cryptocurrency.
+
+1:21:13.040 --> 1:21:18.480
+ It's a type of cryptocurrency that's issued by a smart contract, one of these Ethereum
+
+1:21:18.480 --> 1:21:25.000
+ computer programs, that where the smart contract holds a bunch of ether, and then it issue,
+
+1:21:25.000 --> 1:21:30.640
+ basically, like that people deposit, and then it issues DAI and the reason why people deposit
+
+1:21:30.640 --> 1:21:33.800
+ is because they want to kind of go high leverage on their ether.
+
+1:21:33.800 --> 1:21:37.520
+ And so it kind of pairs these two sets of users, one that wants stability and one that
+
+1:21:37.520 --> 1:21:41.120
+ kind of wants extra risk together with each other.
+
+1:21:41.120 --> 1:21:49.680
+ And it basically creates or gives one set of participants a guarantee that they'll be
+
+1:21:49.680 --> 1:21:55.680
+ paid, that they have this asset that can be later converted back into ether, but specifically
+
+1:21:55.680 --> 1:21:57.040
+ at kind of the one dollar rate.
+
+1:21:57.040 --> 1:22:00.920
+ And it has some kind of stabilizing network effects.
+
+1:22:00.920 --> 1:22:05.800
+ Yeah, it has this, yeah, it has many kinds of stabilizing mechanisms in it.
+
+1:22:05.800 --> 1:22:06.800
+ That's fascinating.
+
+1:22:06.800 --> 1:22:07.800
+ Okay.
+
+1:22:07.800 --> 1:22:09.880
+ This world is awesome technically.
+
+1:22:09.880 --> 1:22:14.240
+ At least from a scientific perspective, it's an awesome world that I often don't see from
+
+1:22:14.240 --> 1:22:15.560
+ an outsider's perspective.
+
+1:22:15.560 --> 1:22:24.680
+ What I often see is kind of maybe hype and a little bit, if I may say so, like Charltonism.
+
+1:22:24.680 --> 1:22:28.520
+ And you don't often see, at least from my outsider's perspective, the beautiful science
+
+1:22:28.520 --> 1:22:31.120
+ of it and the engineering of it.
+
+1:22:31.120 --> 1:22:39.920
+ Maybe, is there a comment you can make of who to follow, how to learn about this world
+
+1:22:39.920 --> 1:22:47.160
+ without being interrupted by the Charlton's and the hype people in this space?
+
+1:22:47.160 --> 1:22:51.920
+ I think you do need to just know the specific kind of just people to follow.
+
+1:22:51.920 --> 1:22:57.000
+ Like there's, you know, there's all the kind of the cryptographers and the researchers
+
+1:22:57.000 --> 1:23:03.240
+ and there's just like, even just the Ethereum research crew, like myself, like Dan Cradd,
+
+1:23:03.240 --> 1:23:06.600
+ Danny Justin and the other people.
+
+1:23:06.600 --> 1:23:14.360
+ And then, and of the academic cryptographers, and like before this today, I was at Stanford
+
+1:23:14.360 --> 1:23:20.280
+ and Stanford has the Center for Blockchain Research and of Dan Bonet, that's really famous
+
+1:23:20.280 --> 1:23:26.760
+ and great cryptographer is running it and there's a lot of other people there.
+
+1:23:26.760 --> 1:23:34.000
+ And there's people working on zero knowledge proofs, for example, and Zuko from Zcash
+
+1:23:34.000 --> 1:23:38.160
+ has one other person that I respect.
+
+1:23:38.160 --> 1:23:44.360
+ So I think if you follow the technical, you crawl along with the Ethereum group and then
+
+1:23:44.360 --> 1:23:49.400
+ look at the academics, Dave Bonet and so on, and then just cautiously expand the network
+
+1:23:49.400 --> 1:23:50.400
+ of people you follow.
+
+1:23:50.400 --> 1:23:51.400
+ Yeah, exactly.
+
+1:23:51.400 --> 1:23:56.880
+ And like if someone seems too self promotional, then just like remove them.
+
+1:23:56.880 --> 1:24:03.480
+ Is there books that are, there's these white papers and we just discussed about about ideas
+
+1:24:03.480 --> 1:24:06.200
+ being condensed into really small parts.
+
+1:24:06.200 --> 1:24:11.280
+ Is there books that are emerging that are kind of good introductory material?
+
+1:24:11.280 --> 1:24:16.080
+ So for historical ones, and there's like Nathaniel Popper's Digital Gold, which is
+
+1:24:16.080 --> 1:24:18.360
+ just about the history of Bitcoin.
+
+1:24:18.360 --> 1:24:21.960
+ There's like one, and then Matthew Lysing announced that there's one about the history
+
+1:24:21.960 --> 1:24:23.680
+ of Ethereum.
+
+1:24:23.680 --> 1:24:28.600
+ For technical ones, and there's Andrew Asensinopoulos's Mastering Ethereum.
+
+1:24:28.600 --> 1:24:29.600
+ Great.
+
+1:24:29.600 --> 1:24:37.760
+ So let me ask you sort of, sorry, to pull back to the idea of governments and decentralized
+
+1:24:37.760 --> 1:24:45.440
+ currency, you know, there's a tension between decentralization of currency and the power
+
+1:24:45.440 --> 1:24:53.240
+ of nations, the power of governments, you, what's your sense about that tension?
+
+1:24:53.240 --> 1:24:56.760
+ Is there some rule for regulation of currency?
+
+1:24:56.760 --> 1:25:03.600
+ Yeah, is there like, is the government the enemy of digital currency, of distributed
+
+1:25:03.600 --> 1:25:08.960
+ currency, or can they be like cautious friends?
+
+1:25:08.960 --> 1:25:16.000
+ I mean, I think like, the one thing that people forget is that it's clearly not entirely
+
+1:25:16.000 --> 1:25:25.640
+ an enemy because I think if there hadn't been so much government regulation on centralized
+
+1:25:25.640 --> 1:25:32.360
+ digital, issuing centralized digital currencies, then we'd be seeing things people like Google
+
+1:25:32.360 --> 1:25:35.440
+ and Facebook and Twitter just kind of issuing them left and right.
+
+1:25:35.440 --> 1:25:39.120
+ And then like, if that was the case, then decentralized currencies would still appeal
+
+1:25:39.120 --> 1:25:42.840
+ to some people, but they definitely would appeal to less people than today.
+
+1:25:42.840 --> 1:25:51.040
+ So even in that sense, I think it's clearly been kind of more of a help, just kind of
+
+1:25:51.040 --> 1:25:56.440
+ set the stage for the end of the existence as a sum of the sector in some ways.
+
+1:25:56.440 --> 1:26:03.320
+ But also, and I think some of both, you know, like there's definitely things that governments
+
+1:26:03.320 --> 1:26:11.560
+ kind of can do in some cases have done to have hurt the spread of growth of blockchains.
+
+1:26:11.560 --> 1:26:17.560
+ There's things that they've done to help and they've in some cases definitely done a good
+
+1:26:17.560 --> 1:26:23.880
+ job of going after fraudulent projects and going after some of the projects that have
+
+1:26:23.880 --> 1:26:28.720
+ some of the craziest and most misleading marketing.
+
+1:26:28.720 --> 1:26:34.240
+ There's also the possibility that governments will end up using blockchains for a lot of
+
+1:26:34.240 --> 1:26:39.320
+ different things, like, you know, governments, you know, they do a lot more than just regulating,
+
+1:26:39.320 --> 1:26:40.320
+ right?
+
+1:26:40.320 --> 1:26:48.400
+ But there's also like, they have the identity records and they have kind of like property
+
+1:26:48.400 --> 1:26:55.440
+ registries, even their own currency is like secured, lots of different kind of things
+
+1:26:55.440 --> 1:27:00.600
+ that they're operating and there's even blockchain applications in a lot of those.
+
+1:27:00.600 --> 1:27:01.600
+ Yeah.
+
+1:27:01.600 --> 1:27:06.600
+ And they can, you know, they can leverage technology to do a lot of good for our societies.
+
+1:27:06.600 --> 1:27:13.000
+ It is a little unfortunate that governments often lag behind in terms of their acceptance
+
+1:27:13.000 --> 1:27:14.000
+ and leverage of technology.
+
+1:27:14.000 --> 1:27:22.120
+ If you look at the autonomous vehicle space, AI in general, they're a few years behind.
+
+1:27:22.120 --> 1:27:25.560
+ It'd be nice to help them catch up.
+
+1:27:25.560 --> 1:27:27.920
+ That's always an ongoing problem.
+
+1:27:27.920 --> 1:27:33.360
+ You met Vladimir Putin to discuss the centralized currency here.
+
+1:27:33.360 --> 1:27:35.840
+ You're born in, where were you born?
+
+1:27:35.840 --> 1:27:36.840
+ Kolomna.
+
+1:27:36.840 --> 1:27:39.800
+ It's a city about 115 kilometers south of Moscow.
+
+1:27:39.800 --> 1:27:40.800
+ In Russia.
+
+1:27:40.800 --> 1:27:41.800
+ Yes.
+
+1:27:41.800 --> 1:27:42.800
+ Yeah.
+
+1:27:42.800 --> 1:27:43.800
+ I grew up in Moscow.
+
+1:27:43.800 --> 1:27:49.080
+ I mean, that's, Vladimir Putin is a central figure in this part of the world.
+
+1:27:49.080 --> 1:27:53.600
+ So what was that like meeting, meeting him?
+
+1:27:53.600 --> 1:27:54.960
+ What was that experience like?
+
+1:27:54.960 --> 1:27:57.200
+ He's taller in photos than in person.
+
+1:27:57.200 --> 1:27:58.200
+ Yeah.
+
+1:27:58.200 --> 1:27:59.200
+ Yeah.
+
+1:27:59.200 --> 1:28:00.200
+ That's right.
+
+1:28:00.200 --> 1:28:04.040
+ He's five, seven, I think, five, eight, maybe.
+
+1:28:04.040 --> 1:28:05.040
+ Yeah.
+
+1:28:05.040 --> 1:28:09.880
+ And that's, unfortunately, we didn't actually kind of have too much of a chance to talk
+
+1:28:09.880 --> 1:28:10.880
+ to him.
+
+1:28:10.880 --> 1:28:15.200
+ Like I managed to see him for about one minute at the end of this meeting and I did get a
+
+1:28:15.200 --> 1:28:20.480
+ chance to see a lot, like some of the other end of government ministers and like he recommended
+
+1:28:20.480 --> 1:28:21.480
+ some.
+
+1:28:21.480 --> 1:28:30.000
+ And some of them are actually interested in trying to use like blockchains to look for
+
+1:28:30.000 --> 1:28:34.080
+ various government use cases, the kind of limit corruption and other things.
+
+1:28:34.080 --> 1:28:39.400
+ And I have like, it's hard to tell from one conversation kind of what things are genuine
+
+1:28:39.400 --> 1:28:43.760
+ and what things are just like, oh, blockchain is cool, let's do blockchain.
+
+1:28:43.760 --> 1:28:50.960
+ But, you know, when I listen to like Barack Obama talk about artificial intelligence,
+
+1:28:50.960 --> 1:28:57.640
+ there's certain things I hear where, okay, so he might not be an expert in AI, but he
+
+1:28:57.640 --> 1:29:04.360
+ like actually studied it carefully enough to think about it, like even if he's just
+
+1:29:04.360 --> 1:29:09.360
+ reading a Wikipedia page, like he really thought about what this technology means.
+
+1:29:09.360 --> 1:29:15.760
+ Did you get a sense that Putin or some of the ministers like thought about blockchain,
+
+1:29:15.760 --> 1:29:19.840
+ like thought about the fundamentals of technology, like understand it intuitively?
+
+1:29:19.840 --> 1:29:23.640
+ Or are they too old school to try to grasp it?
+
+1:29:23.640 --> 1:29:26.920
+ Summer old school, summer more new school.
+
+1:29:26.920 --> 1:29:27.920
+ It depends.
+
+1:29:27.920 --> 1:29:30.200
+ It's definitely like depends on who you talk to.
+
+1:29:30.200 --> 1:29:34.920
+ I mean, that's an open question for me with Putin because Putin has said stuff about AI.
+
+1:29:34.920 --> 1:29:35.920
+ I don't know.
+
+1:29:35.920 --> 1:29:38.160
+ I've only talked to him for about one minute, so.
+
+1:29:38.160 --> 1:29:42.000
+ But sometimes you can pick up sort of insights.
+
+1:29:42.000 --> 1:29:46.000
+ As a quick comment, they're, they're about, maybe you can correct me on this, but they're
+
+1:29:46.000 --> 1:29:49.840
+ about 3,000 cryptocurrencies being actively traded.
+
+1:29:49.840 --> 1:29:50.840
+ Yes.
+
+1:29:50.840 --> 1:29:55.440
+ And Ethereum is one of, you know, a lot of people believe that there will be the main
+
+1:29:55.440 --> 1:29:56.440
+ crypto currency.
+
+1:29:56.440 --> 1:30:00.840
+ I think Bitcoin is currently still the main cryptocurrency, but Ethereum very likely might
+
+1:30:00.840 --> 1:30:04.480
+ become that, the main one.
+
+1:30:04.480 --> 1:30:07.200
+ Is this kind of diversity good in the crypto world?
+
+1:30:07.200 --> 1:30:09.080
+ Do you see it sticking around?
+
+1:30:09.080 --> 1:30:10.720
+ Should there, should there be a winner?
+
+1:30:10.720 --> 1:30:15.880
+ Like should there be some consensus globally around Bitcoin or around Ethereum?
+
+1:30:15.880 --> 1:30:17.640
+ Like what's your, what's your sense?
+
+1:30:17.640 --> 1:30:19.480
+ I definitely think the diversity is good.
+
+1:30:19.480 --> 1:30:24.520
+ And I definitely think also that there's probably too many people trying to make separate
+
+1:30:24.520 --> 1:30:26.880
+ blockchains kind of right now.
+
+1:30:26.880 --> 1:30:30.480
+ The numbers should definitely be greater than one and probably greater than two or even
+
+1:30:30.480 --> 1:30:31.480
+ five.
+
+1:30:31.480 --> 1:30:32.480
+ Not 3,000.
+
+1:30:32.480 --> 1:30:38.360
+ Not 3,000, yeah, and also not even like 40 high quality platforms that try to do the
+
+1:30:38.360 --> 1:30:39.360
+ same thing.
+
+1:30:39.360 --> 1:30:46.520
+ And there's definitely this range from just like one person who just like wrongly thinks
+
+1:30:46.520 --> 1:30:51.680
+ that you can create a cryptocurrency in like 12 hours and doesn't even think about kind
+
+1:30:51.680 --> 1:30:58.280
+ of the community aspects of maintaining it, going to people actually trying, but only
+
+1:30:58.280 --> 1:31:04.920
+ creating a really tiny one to like scammers, to people like making something that's actually
+
+1:31:04.920 --> 1:31:06.520
+ successful.
+
+1:31:06.520 --> 1:31:11.760
+ And then, you know, there's a lot of different categories of blockchain and of project in
+
+1:31:11.760 --> 1:31:14.920
+ terms of what it's trying to do and what applications it's for.
+
+1:31:14.920 --> 1:31:20.000
+ And I think the experimentation is definitely healthy.
+
+1:31:20.000 --> 1:31:25.160
+ If you look at the two worlds, there might be a little bit disjoints, but the distributed
+
+1:31:25.160 --> 1:31:29.880
+ applications, cryptocurrency, and in the world of artificial intelligence, do you see there's
+
+1:31:29.880 --> 1:31:35.920
+ some overlap between these worlds that both worry about centralized control?
+
+1:31:35.920 --> 1:31:40.880
+ Is there some overlap that's interesting that you think about, do you think about AI much?
+
+1:31:40.880 --> 1:31:41.880
+ Yeah.
+
+1:31:41.880 --> 1:31:48.160
+ And I think definitely kind of thought about things like the AI and if control problems
+
+1:31:48.160 --> 1:31:50.600
+ and aligned to problems and all of those things.
+
+1:31:50.600 --> 1:31:53.280
+ Do you worry about the existential threat of AI?
+
+1:31:53.280 --> 1:31:56.360
+ It's definitely one of the things I worry about.
+
+1:31:56.360 --> 1:32:05.240
+ I think there's a lot of kind of common challenges because in both cases, what you're ultimately
+
+1:32:05.240 --> 1:32:12.080
+ trying to do is you're trying to get a simple system to direct a more complex system.
+
+1:32:12.080 --> 1:32:17.800
+ In the case of strong AI, the idea would be that the simple system is people and the
+
+1:32:17.800 --> 1:32:24.880
+ complex system is whatever thing the people end up unleashing on the universe that will
+
+1:32:24.880 --> 1:32:28.800
+ hopefully be a great thing.
+
+1:32:28.800 --> 1:32:35.040
+ In the case of blockchains, the simple thing is the algorithm, which is a piece of static
+
+1:32:35.040 --> 1:32:41.640
+ and fully open source code, and the more complex thing is just all of the different possible
+
+1:32:41.640 --> 1:32:48.480
+ and if human actors and the strategy is that they might end up used to participate in the
+
+1:32:48.480 --> 1:32:49.640
+ network.
+
+1:32:49.640 --> 1:32:51.400
+ Do you think about your own mortality?
+
+1:32:51.400 --> 1:32:55.080
+ What you hope to accomplish in your life in the context?
+
+1:32:55.080 --> 1:32:59.760
+ I definitely think about ending my own mortality.
+
+1:32:59.760 --> 1:33:02.480
+ If I gave you the option to live forever, would you?
+
+1:33:02.480 --> 1:33:05.360
+ It depends a lot on what the fine bridge is.
+
+1:33:05.360 --> 1:33:10.560
+ If it's one of those things where I'm going to be kind of like floating through empty space
+
+1:33:10.560 --> 1:33:13.360
+ for 10 to the 75 years, then no.
+
+1:33:13.360 --> 1:33:27.560
+ If it's forever worth of having a fulfilling life with friends to spend the time with,
+
+1:33:27.560 --> 1:33:34.680
+ with meaningful challenges to explore and interesting things to be working on, then
+
+1:33:34.680 --> 1:33:37.680
+ I think absolutely.
+
+1:33:37.680 --> 1:33:39.080
+ That's beautifully put.
+
+1:33:39.080 --> 1:33:43.720
+ It's forever, but you'd have to check the fine print.
+
+1:33:43.720 --> 1:33:46.200
+ I think there's no better way to end it, Vitalik.
+
+1:33:46.200 --> 1:33:48.320
+ Thank you so much for talking to us.
+
+1:33:48.320 --> 1:33:53.800
+ So exciting to follow your work from a distance and thank you for creating a revolutionary
+
+1:33:53.800 --> 1:33:58.240
+ idea and sticking with it and building it out and doing some incredible engineering work.
+
+1:33:58.240 --> 1:33:59.240
+ Thanks for talking today.
+
+1:33:59.240 --> 1:34:00.960
+ Thank you.
+
+1:34:00.960 --> 1:34:04.680
+ Thanks for listening to this conversation with Vitalik Buterin, and thank you to our
+
+1:34:04.680 --> 1:34:08.720
+ sponsors ExpressVPN and Masterclass.
+
+1:34:08.720 --> 1:34:13.600
+ Please consider supporting the podcast by sending up to masterclass at masterclass.com
+
+1:34:13.600 --> 1:34:21.000
+ slash lex and getting expressvpn at expressvpn.com slash lex pod.
+
+1:34:21.000 --> 1:34:26.640
+ If you enjoy this podcast, subscribe on YouTube, review it with five stars on Apple Podcasts,
+
+1:34:26.640 --> 1:34:31.840
+ support it on Patreon, or simply connect with me on Twitter at lexfriedman.
+
+1:34:31.840 --> 1:34:35.920
+ And now let me leave you with some words from Vitalik Buterin.
+
+1:34:35.920 --> 1:34:41.800
+ The thing that I often ask startups on top of Ethereum is, can you please tell me why
+
+1:34:41.800 --> 1:34:44.800
+ using Ethereum blockchain is better than using Excel?
+
+1:34:44.800 --> 1:34:49.920
+ And if they can come up with a good answer, that's when you know you got something really
+
+1:34:49.920 --> 1:34:51.720
+ interesting.
+
+1:34:51.720 --> 1:35:06.560
+ Thank you for listening and hope to see you next time.
+

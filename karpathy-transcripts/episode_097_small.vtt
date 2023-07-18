@@ -1,0 +1,2642 @@
+WEBVTT
+
+00:00.000 --> 00:05.600
+ The following is a conversation with Sertesh Karman, a professor at MIT, cofounder of the
+
+00:05.600 --> 00:10.880
+ autonomous vehicle company Optimus Ride, and is one of the top roboticists in the world,
+
+00:10.880 --> 00:17.520
+ including robots that drive and robots that fly. To me, personally, he has been a mentor,
+
+00:17.520 --> 00:22.560
+ a colleague, and a friend. He's one of the smartest, most generous people I know,
+
+00:22.560 --> 00:26.720
+ so it was a pleasure and honor to finally sit down with him for this recorded conversation.
+
+00:26.720 --> 00:32.240
+ This is the Artificial Intelligence Podcast. If you enjoy it, subscribe on YouTube,
+
+00:32.240 --> 00:37.680
+ review five stars in Apple Podcasts, support on Patreon, or simply connect with me on Twitter
+
+00:37.680 --> 00:44.240
+ at Lex Friedman, spelled F R I D M A N. As usual, I'll do a few minutes of ads now and never any
+
+00:44.240 --> 00:49.040
+ ads in the middle that can break the flow of the conversation. I hope that works for you. It doesn't
+
+00:49.040 --> 00:54.640
+ hurt the listening experience. This show is presented by Cash App, the number one finance
+
+00:54.640 --> 01:00.640
+ app in the App Store. When you get it, use the code LEX Podcast. Cash App allows you to send money
+
+01:00.640 --> 01:06.640
+ to friends by Bitcoin and invest in the stock market with as little as $1. Since Cash App allows
+
+01:06.640 --> 01:11.840
+ you to send and receive money digitally, let me mention a surprising fact about physical money.
+
+01:12.400 --> 01:20.000
+ It costs 2.4 cents to produce a single penny. In fact, I think it costs $85 million annually to
+
+01:20.000 --> 01:26.720
+ produce them. That's a crazy little fact about physical money. So again, if you get Cash App
+
+01:26.720 --> 01:32.240
+ from the App Store, Google Play and use the code LEX Podcast, you get $10 and Cash App will also
+
+01:32.240 --> 01:37.760
+ donate $10 to first, an organization that is helping to advance robotics and STEM education
+
+01:37.760 --> 01:43.440
+ for young people around the world. And now here's my conversation with SirTash Karaman.
+
+01:44.560 --> 01:48.880
+ Since you have worked extensively on both, what is the more difficult task?
+
+01:48.880 --> 01:55.840
+ Autonomous flying or autonomous driving? That's a good question. I think that autonomous flying,
+
+01:55.840 --> 02:00.320
+ just doing it for consumer drones and so on, the kinds of applications that we're looking at right
+
+02:00.320 --> 02:06.480
+ now is probably easier. And so I think that that's maybe one of the reasons why it took off literally
+
+02:06.480 --> 02:11.760
+ a little earlier than the autonomous cars. But I think if we look ahead, I would think that the
+
+02:11.760 --> 02:17.280
+ real benefits of autonomous flying, unleashing them in transportation logistics and so on,
+
+02:17.280 --> 02:21.520
+ I think it's a lot harder than autonomous driving. So I think my guess is that we've
+
+02:21.520 --> 02:26.800
+ seen a few machines fly here and there, but we really haven't yet seen any kind of
+
+02:28.400 --> 02:33.520
+ machine like at massive scale, large scale being deployed and flown and so on. And I think that's
+
+02:33.520 --> 02:39.280
+ going to be after we resolve some of the large scale deployments of autonomous driving.
+
+02:39.280 --> 02:46.240
+ So what's the hard part? What's your intuition behind why at scale when consumer facing drones
+
+02:46.240 --> 02:53.200
+ are tough? So I think in general, at scale is tough. Like for example, when you think about it,
+
+02:54.320 --> 02:59.200
+ we have actually deployed a lot of robots in the, let's say the past 50 years.
+
+02:59.760 --> 03:03.920
+ We as academics or we business? I think we as humanity.
+
+03:03.920 --> 03:09.760
+ Humanity? A lot of people working on it. So we humans deployed a lot of robots. And I think
+
+03:10.400 --> 03:16.080
+ that when you think about it, robots, they're autonomous. They work. They work on their
+
+03:16.080 --> 03:21.920
+ own, but they are either like in isolated environments or they are in sort of,
+
+03:22.960 --> 03:28.480
+ you know, they may be at scale, but they're really confined to a certain environment that
+
+03:28.480 --> 03:32.640
+ they don't interact so much with humans. And so, you know, they work in, I don't know, factory
+
+03:32.640 --> 03:37.120
+ floors, warehouses, they work on Mars, you know, they are fully autonomous over there.
+
+03:38.080 --> 03:45.200
+ But I think that the real challenge of our time is to take these vehicles and put them into places
+
+03:45.200 --> 03:49.920
+ where humans are present. So now I know that there's a lot of like human robot interaction
+
+03:50.480 --> 03:55.600
+ type of things that need to be done and so on. That's one thing. But even just from the fundamental
+
+03:55.600 --> 04:02.320
+ algorithms and systems and the business cases or maybe the business models, even like architecture,
+
+04:02.320 --> 04:08.080
+ planning, societal issues, legal issues, there's a whole bunch of pack of things that are related to
+
+04:08.080 --> 04:14.400
+ us putting robotic vehicles into human present environments. And these humans, you know, they
+
+04:14.400 --> 04:20.160
+ will not potentially be even trained to interact with them. They may not even be using the services
+
+04:20.160 --> 04:23.520
+ that are provided by these vehicles. They may not even know that they're autonomous,
+
+04:23.520 --> 04:27.440
+ they're just doing their thing, living in environments that are designed for humans,
+
+04:27.440 --> 04:33.600
+ not for robots. And that, I think, is one of the biggest challenges, I think, of our time
+
+04:33.600 --> 04:39.920
+ to put vehicles there. And, you know, to go back to your question, I think doing that at scale,
+
+04:39.920 --> 04:46.480
+ meaning, you know, you go out in a city and you have, you know, like thousands or tens of thousands
+
+04:46.480 --> 04:51.600
+ of autonomous vehicles that are going around. It is so dense to the point where if you see one of
+
+04:51.600 --> 04:57.760
+ them, you look around, you see another one. It is that dense. And that density, we've never done
+
+04:57.760 --> 05:04.160
+ anything like that before. And I would bet that that kind of density will first happen with autonomous
+
+05:04.160 --> 05:09.680
+ cars, because I think, you know, we can bend the environment a little bit. We can especially kind of
+
+05:10.400 --> 05:16.720
+ making them safe is a lot easier when they're like on the ground. When they're in the air,
+
+05:16.720 --> 05:21.440
+ it's a little bit more complicated. But I don't see that there's going to be a big separation.
+
+05:21.440 --> 05:25.600
+ I think that, you know, there will come a time that we're going to quickly see these things unfold.
+
+05:25.600 --> 05:30.640
+ Do you think there will be a time where there's tens of thousands of delivery drones that fill
+
+05:30.640 --> 05:35.200
+ the sky? You know, I think it's possible, to be honest. Delivery drones is one thing, but you
+
+05:35.200 --> 05:41.280
+ know, you can imagine for transportation, like in important use cases, you know, we're in Boston,
+
+05:41.280 --> 05:46.080
+ you want to go from Boston to New York. And you want to do it from the top of this building
+
+05:46.080 --> 05:50.000
+ to the top of another building in Manhattan. And you're going to do it in one and a half hours.
+
+05:50.640 --> 05:55.760
+ And that's a big opportunity, I think. Personal transport. So like you and maybe a friend,
+
+05:55.760 --> 06:00.400
+ like almost like an Uber. Yeah, or almost like a like an Uber. So like four people, six people,
+
+06:00.400 --> 06:04.800
+ eight people. In our work in autonomous vehicles, I see that. So there's kind of like a bit of a
+
+06:04.800 --> 06:09.920
+ need for, you know, one person transport, but also like a few people. So you and I could take
+
+06:09.920 --> 06:16.160
+ that trip together. We could have lunch. I think kind of sounds crazy, maybe even sounds a bit
+
+06:16.160 --> 06:21.120
+ cheesy, but I think that those kinds of things are some of the real opportunities. And I think,
+
+06:21.120 --> 06:26.560
+ you know, it's not like the typical airplane and the airport would disappear very quickly.
+
+06:26.560 --> 06:32.080
+ But I would think that, you know, many people would feel like they would spend an extra hundred
+
+06:32.080 --> 06:37.600
+ dollars on doing that and cutting that four hour travel down to one and a half hours.
+
+06:37.600 --> 06:42.800
+ So how feasible are flying cars? It's been the dream that's like when people imagine the future
+
+06:42.800 --> 06:50.160
+ for 50 plus years, they think flying cars. It's like all technologies is cheesy to think about
+
+06:50.160 --> 06:56.320
+ now because it seems so far away, but overnight it can change. But just technically speaking in
+
+06:56.320 --> 07:01.360
+ your view, how feasible is it to make that happen? I'll get to that question. But just one thing is
+
+07:01.360 --> 07:07.200
+ that I think, you know, sometimes we think about what's going to happen in the next 50 years. It's
+
+07:07.200 --> 07:11.040
+ just really hard to guess, right? Next 50 years, I don't know. I mean, we could get what's going
+
+07:11.040 --> 07:15.840
+ to happen in transportation in the next 50. We could get flying saucers. I could bet on that.
+
+07:15.840 --> 07:19.760
+ I think there's a 50 50 chance that you know, like you can build machines that can ionize the
+
+07:19.760 --> 07:25.040
+ air around them and push it down with magnets and they would fly like a flying saucer. That is possible.
+
+07:26.080 --> 07:29.280
+ And it might happen in the next 50 years. So it's a bit hard to guess,
+
+07:29.280 --> 07:35.520
+ like when you think about 50 years before. But I would think that, you know, there's this kind of
+
+07:36.240 --> 07:42.000
+ notion where there's a certain type of airspace that we call the agile airspace. And there's
+
+07:42.000 --> 07:46.880
+ good amount of opportunities in that airspace. So that would be the space that is kind of
+
+07:46.880 --> 07:52.080
+ a little bit higher than the place where you can throw a stone. Because that's a tough thing
+
+07:52.080 --> 07:55.360
+ when you think about it, you know, it takes a kid and a stone to take an aircraft down.
+
+07:56.000 --> 08:03.280
+ And then what happens? But you know, imagine the airspace that's high enough so that you
+
+08:03.280 --> 08:09.920
+ cannot throw a stone. But it is low enough that you're not interacting with the very large aircraft
+
+08:09.920 --> 08:17.360
+ that are, you know, flying several thousand feet above. And that airspace is underutilized.
+
+08:18.240 --> 08:21.680
+ Or it's actually kind of not utilized at all. Yeah, that's right. So there's, you know, there's
+
+08:21.680 --> 08:26.000
+ like recreational people kind of fly every now and then. But it's very few. Like if you look up in
+
+08:26.000 --> 08:31.520
+ the sky, you may not see any of them at any given time. Every now and then you'll see one airplane
+
+08:31.520 --> 08:35.920
+ kind of utilizing that space and you'll be surprised. And the moment you're outside of an
+
+08:35.920 --> 08:40.560
+ airport a little bit, like it just kind of flies off and then it goes out. And I think utilizing
+
+08:40.560 --> 08:48.960
+ that airspace, the technical challenge is there is, you know, building an autonomy and ensuring
+
+08:48.960 --> 08:56.880
+ that that kind of autonomy is safe. Ultimately, I think it is going to be building in complex
+
+08:56.880 --> 09:02.800
+ software or complicated so that it's maybe a few orders of magnitude more complicated than what
+
+09:02.800 --> 09:09.280
+ we have on aircraft today. And at the same time, ensuring just like we ensure on aircraft, ensuring
+
+09:09.280 --> 09:14.960
+ that it's safe. And so that becomes like building that kind of complicated hardware and software
+
+09:14.960 --> 09:20.400
+ becomes a challenge, especially when, you know, you build that hardware, I mean, you build that
+
+09:20.400 --> 09:28.000
+ software with data. And so, you know, it's, of course, there's some rural based software in
+
+09:28.000 --> 09:32.000
+ there that kind of do a certain set of things. But, but then, you know, there's a lot of training
+
+09:32.000 --> 09:38.080
+ there. Do you think machine learning will be key to these kinds of delivering safe vehicles in the
+
+09:38.080 --> 09:44.640
+ future, especially flight? Not maybe the safe part, but I think the intelligent part. I mean,
+
+09:44.640 --> 09:48.720
+ there are certain things that we do it with machine learning. And it's just there's like right now
+
+09:48.720 --> 09:55.680
+ no other way. And I don't know how else they could be done. And, you know, there's always this
+
+09:55.680 --> 10:02.720
+ conundrum. I mean, we could like, could we like, we could maybe gather billions of programmers,
+
+10:04.000 --> 10:11.440
+ humans who program perception algorithms that detect things in the sky and whatever, or, you
+
+10:11.440 --> 10:16.880
+ know, we, I don't know, we maybe even have robots like learning a simulation environment and transfer.
+
+10:16.880 --> 10:22.800
+ And they might be learning a lot better in a simulation environment than a billion humans
+
+10:22.800 --> 10:26.480
+ put their brains together and try to program humans pretty limited.
+
+10:27.360 --> 10:32.080
+ So what's what's the role of simulations with drones? You've done quite a bit of work there.
+
+10:32.080 --> 10:36.720
+ How promising just the very thing you said just now, how promising is the possibility of
+
+10:37.440 --> 10:45.680
+ training and developing a safe flying robot in simulation and deploying it and having that
+
+10:45.680 --> 10:50.400
+ work pretty well in the real world. I think that, you know, a lot of people when they hear
+
+10:50.400 --> 10:55.600
+ simulation, they will focus on training immediately. But I think one thing that you said, which was
+
+10:55.600 --> 11:00.560
+ interesting, it's developing. I think simulation environments are actually could be key and great
+
+11:00.560 --> 11:07.280
+ for development. And that's not new. Like for example, you know, there's people in the automotive
+
+11:07.280 --> 11:13.520
+ industry have been using dynamic simulation for like decades now. And it's pretty standard
+
+11:13.520 --> 11:17.360
+ that, you know, you would build and you would simulate. If you want to build an embedded
+
+11:17.360 --> 11:22.240
+ controller, you plug that kind of embedded computer into another computer, that other
+
+11:22.240 --> 11:26.320
+ computer would simulate tiny and so on. And I think, you know, fast forward, these things you
+
+11:26.320 --> 11:32.320
+ can create pretty crazy simulation environments. Like for instance, one of the things that has
+
+11:32.320 --> 11:38.080
+ happened recently, and that, you know, we can do now is that we can simulate cameras a lot better
+
+11:38.080 --> 11:42.400
+ than we used to simulate them. We were able to simulate them before. And that's, I think we
+
+11:42.400 --> 11:48.480
+ just hit the elbow on that kind of improvement. I would imagine that with improvements in hardware
+
+11:48.480 --> 11:54.000
+ especially, and with improvements in machine learning, I think that we would get to a point
+
+11:54.000 --> 12:01.520
+ where we can simulate cameras very, very well. Simulate cameras means simulate how a real camera
+
+12:01.520 --> 12:08.160
+ would see the real world. Therefore, you can explore the limitations of that. You can train
+
+12:08.160 --> 12:14.000
+ perception algorithms on that in simulation, all that kind of stuff. Exactly. So, you know,
+
+12:14.800 --> 12:19.200
+ it's, it's, it has been easier to simulate what we would call introspective sensors,
+
+12:19.200 --> 12:24.240
+ like internal sensors. So for example, inertial sensing has been easy to simulate. It has also
+
+12:24.240 --> 12:29.360
+ been easy to simulate dynamics, like, like physics that are governed by ordinary differential
+
+12:29.360 --> 12:34.320
+ equations. I mean, like how a car goes around, maybe how it rolls on the road, how it interacts
+
+12:34.320 --> 12:39.600
+ with, interacts with the road, or even an aircraft flying around, like the dynamic, the physics of
+
+12:39.600 --> 12:45.680
+ that. What has been really hard has been to simulate extroceptive sensors, sensors that kind
+
+12:45.680 --> 12:51.760
+ of like look out from the vehicle. And that's a new thing that's coming, like laser range finders
+
+12:51.760 --> 12:57.440
+ that are a little bit easier. Cameras, radars are a little bit tougher. I think once we nail that
+
+12:57.440 --> 13:03.760
+ down, the next challenge, I think, in simulation will be to simulate human behavior. That's also
+
+13:03.760 --> 13:11.600
+ extremely hard. Even when you imagine like, how a human driven car would act around, even that is
+
+13:11.600 --> 13:17.600
+ hard. But imagine trying to simulate, you know, a model of a human, just doing a bunch of gestures
+
+13:17.600 --> 13:21.840
+ and so on. And, and, you know, it's, it's actually simulated. It's not captured like with motion
+
+13:21.840 --> 13:27.440
+ capture, but it is simulated. That's, that's very hard. In fact, today, I get involved a lot with
+
+13:27.440 --> 13:32.240
+ like sort of this kind of very high end rendering projects. And I have like this test that I've
+
+13:32.240 --> 13:37.440
+ passed it to my friends or my mom, you know, I send like two photos, two kind of pictures, and I say
+
+13:37.440 --> 13:41.440
+ rendered, which one is rendered, which one is real. And it's pretty hard to distinguish,
+
+13:41.440 --> 13:47.600
+ except I realized, except when we put humans in there, it's possible that our brains are trained
+
+13:47.600 --> 13:52.400
+ in a way that we recognize humans extremely well. But we don't so much recognize the built
+
+13:52.400 --> 13:57.440
+ environments, because built environments sort of came after, per se, we evolved into sort of being
+
+13:57.440 --> 14:02.080
+ humans. But, but humans were always there. Same thing happens, for example, you look at like
+
+14:02.080 --> 14:07.680
+ monkeys, and you can't distinguish one from another. But they sort of do. And it's very possible that
+
+14:07.680 --> 14:12.080
+ they look at humans, it's kind of pretty hard to distinguish one from another, but we do. And so
+
+14:12.080 --> 14:17.520
+ our eyes are pretty well trained to look at humans and understand if something is off, we will get
+
+14:17.520 --> 14:22.320
+ it. We may not be able to pinpoint it. So in my typical friend test or mom test, what would happen
+
+14:22.320 --> 14:28.000
+ is that we'd put like a human walking in a in a in anything. And they, they say, you know, this is
+
+14:28.000 --> 14:34.080
+ not right. Something is off in this video. I don't know what. But I can tell you, it's the human,
+
+14:34.080 --> 14:38.640
+ I can take the human and I can show you like inside of a building, or like an apartment,
+
+14:38.640 --> 14:43.200
+ and it will look like if we had time to render it, it will look great. And this should be no
+
+14:43.200 --> 14:48.320
+ surprise, a lot of movies that people are watching, it's all computer generated, you know, even nowadays
+
+14:48.320 --> 14:53.040
+ even you watch a drama movie. And like there's nothing going on action wise, but it turns out
+
+14:53.040 --> 14:59.360
+ it's kind of like cheaper, I guess to render the background. And so they would. But how do we get
+
+14:59.360 --> 15:08.640
+ there? How do we get a human that's would pass the mom slash friend test, a simulation of a human
+
+15:08.640 --> 15:16.160
+ walking? So do you think that's something we can creep up to by just doing kind of a comparison
+
+15:16.160 --> 15:23.360
+ learning, where you have humans annotate what's more realistic and not just by watching? Like,
+
+15:23.360 --> 15:29.040
+ what's the path? Because it seems totally mysterious, how we simulate human behavior.
+
+15:29.680 --> 15:34.640
+ It's hard because a lot of the other things that I mentioned to you, including simulating cameras,
+
+15:34.640 --> 15:42.240
+ right? It is the thing there is that, you know, we know the physics, we know how it works like
+
+15:42.240 --> 15:47.600
+ in the real world. And we can write some rules, and we can do that. Like, for example, simulating
+
+15:47.600 --> 15:52.800
+ cameras, there's this thing called ray tracing. I mean, you literally just kind of imagine it's
+
+15:52.800 --> 15:57.600
+ very similar to it's not exactly the same, but it's very similar to tracing photon by photon,
+
+15:57.600 --> 16:02.080
+ they're going around bouncing on things and come in your eye. But human behavior,
+
+16:03.200 --> 16:09.040
+ developing a dynamic like like like a model of that, that is mathematical so that you can put
+
+16:09.040 --> 16:14.880
+ it into a processor that would go through that that's going to be hard. And so, so what else do
+
+16:14.880 --> 16:20.640
+ you got? You can collect data, right? And you can try to match the data. Or another thing that you
+
+16:20.640 --> 16:24.880
+ can do is that, you know, you can show the front tests, you know, you can say this or that and this
+
+16:24.880 --> 16:29.680
+ or that and that will be labeling. Anything that requires human labeling ultimately, we're limited
+
+16:29.680 --> 16:34.240
+ by the number of humans that, you know, we have available at our disposal, and the things that
+
+16:34.240 --> 16:39.280
+ they can do, you know, they have to do a lot of other things than also labeling this data. So, so
+
+16:39.280 --> 16:45.520
+ that modeling human behavior part is, is I think going we're going to realize it's very tough.
+
+16:45.520 --> 16:51.440
+ And I think that also affects, you know, our development of autonomous vehicles. I see them
+
+16:51.440 --> 16:55.760
+ self driving as well, like you want to use. So you're building self driving, you know,
+
+16:56.960 --> 17:02.080
+ at the first time, like right after urban challenge, I think everybody focused on localization,
+
+17:02.080 --> 17:06.160
+ mapping and localization, you know, slam algorithms came in, Google was just doing that.
+
+17:06.720 --> 17:12.320
+ And so building these HD maps, basically, that's about knowing where you are. And then five years
+
+17:12.320 --> 17:17.360
+ later in 2012, 2013 came the kind of coding code AI revolution, and that started telling us where
+
+17:17.360 --> 17:23.360
+ everybody else is. But we're still missing what everybody else is going to do next. And so you
+
+17:23.360 --> 17:27.200
+ want to know where you are, you want to know what everybody else is, hopefully, you know that what
+
+17:27.200 --> 17:30.960
+ you're going to do next. And then you want to predict what other people are going to do in that
+
+17:30.960 --> 17:39.040
+ last bit has been a real, real challenge. What do you think is the role your own of your, of your
+
+17:39.760 --> 17:48.080
+ the ego vehicle, the robot, you, the you, the robotic you in controlling and having some control
+
+17:48.080 --> 17:52.480
+ of how the future on roles of what's going to happen in the future, that seems to be a little
+
+17:52.480 --> 17:59.680
+ bit ignored in trying to predict the future is how you yourself can affect that future by being
+
+17:59.680 --> 18:07.120
+ either aggressive or less aggressive or signaling in some kind of way. So this kind of game
+
+18:07.120 --> 18:12.800
+ theoretic dance seems to be ignored for the moment. It's yeah, it's totally ignored. I mean,
+
+18:13.360 --> 18:20.080
+ it's quite interesting, actually, like how we how we interact with things versus we interact
+
+18:20.080 --> 18:26.320
+ with humans. Like, so if if you see a vehicle that's completely empty, and it's trying to do
+
+18:26.320 --> 18:31.600
+ something, all of a sudden, it becomes a thing. So interact it with like you interact with this
+
+18:31.600 --> 18:36.960
+ table. And so you can throw your backpack, or you can kick your kick it, put your feet on it,
+
+18:36.960 --> 18:41.600
+ and things like that. But when it's a human, there's all kinds of ways of interacting with a
+
+18:41.600 --> 18:46.320
+ human. So if, you know, like you and I are face to face, we're very civil, you know, we talk and
+
+18:46.320 --> 18:54.160
+ understand each other for the most part, we'll see you just that's the thing is that, like, for
+
+18:54.160 --> 18:58.800
+ example, you and I might interact through YouTube comments. And, you know, the conversation may
+
+18:58.800 --> 19:06.160
+ go a totally different angle. And so I think the people kind of abusing as autonomous vehicles is
+
+19:06.160 --> 19:11.440
+ a real issue in some sense. And so when you're an ego vehicle, you're trying to, you know,
+
+19:11.440 --> 19:15.120
+ coordinate your way, make your way, it's actually kind of harder than being a human.
+
+19:15.840 --> 19:21.040
+ You know, it's like, it's you, you not only need to be as smart as kind of humans are, but you
+
+19:21.040 --> 19:25.600
+ also you're a thing. So they're going to abuse you a little bit. So you need to make sure that
+
+19:26.320 --> 19:33.520
+ you can get around and do something. So I in general believe in that sort of game
+
+19:33.520 --> 19:38.240
+ theoretic aspects, I've actually personally have done, you know, quite a few papers, both on that
+
+19:38.240 --> 19:43.440
+ kind of game theory, and also like this, this kind of understanding people's social value
+
+19:43.440 --> 19:48.560
+ orientation, for example, you know, some people are aggressive, some people not so much. And,
+
+19:48.560 --> 19:53.760
+ and you know, like a robot could understand that by just looking at how people drive.
+
+19:54.400 --> 19:58.160
+ And as they kind of come an approach, you can actually understand, like if someone is going
+
+19:58.160 --> 20:02.960
+ to be aggressive or, or not as a robot, and you can make certain decisions.
+
+20:02.960 --> 20:08.640
+ Well, in terms of predicting what they're going to do, the hard question is you as a robot,
+
+20:08.640 --> 20:13.600
+ should you be aggressive or not? When faced with an aggressive robot, right now it seems
+
+20:13.600 --> 20:20.800
+ like aggressive is a very dangerous thing to do because it's costly from a societal perspective,
+
+20:20.800 --> 20:26.160
+ how you're perceived, people are not very accepting of aggressive robots in modern society.
+
+20:26.880 --> 20:33.680
+ I think that's accurate. So it really is. And so I'm not entirely sure like how to,
+
+20:33.680 --> 20:38.400
+ how to go about, but I know, I know for a fact that how these robots interact with other people
+
+20:38.400 --> 20:43.040
+ in there is going to be, and that interaction is always going to be there. I mean, you could be
+
+20:43.040 --> 20:46.720
+ interacting with other vehicles or other just people kind of like walking around.
+
+20:47.840 --> 20:52.560
+ And like I said, the movement, there's like nobody in the seat. It's like an empty thing,
+
+20:52.560 --> 20:59.280
+ just rolling off the street. It becomes like no different than like any other thing that's not
+
+20:59.280 --> 21:04.720
+ human. And so, so people, and maybe abuse is the wrong word, but you know, people maybe rightfully
+
+21:04.720 --> 21:10.080
+ even they feel like, you know, this is a human present environments designed for humans to be,
+
+21:10.080 --> 21:14.720
+ and they kind of they want to own it. And then, you know, the robots, they would,
+
+21:14.720 --> 21:17.440
+ they would need to understand it and they would need to respond in a certain way.
+
+21:18.320 --> 21:22.560
+ And I think that, you know, this actually opens up like quite a few interesting societal
+
+21:22.560 --> 21:27.840
+ questions for us as we deploy, like we talk robots at large scale. So what would happen
+
+21:27.840 --> 21:32.240
+ when we try to deploy robots at large scale, I think is that we can design systems in a way
+
+21:32.240 --> 21:37.600
+ that they're very efficient, or we can design them that they're very sustainable. But ultimately,
+
+21:37.600 --> 21:42.640
+ the sustainability efficiency tradeoffs, like they're going to be right in there. And we're
+
+21:42.640 --> 21:46.720
+ going to have to make some choices, like we're not going to be able to just kind of put it aside.
+
+21:47.280 --> 21:52.240
+ So for example, we can be very aggressive. And we can reduce transportation delays,
+
+21:52.240 --> 21:57.360
+ increase capacity of transportation. Or, you know, we can we can be a lot nicer and a lot of other
+
+21:57.360 --> 22:03.280
+ people to kind of coding code on the environment and live in a nice place. And then efficiency will
+
+22:03.280 --> 22:09.280
+ drop. So when you think about it, I think sustainability gets attached to energy consumption
+
+22:09.280 --> 22:14.000
+ or environmental impact immediately. And those are those are there. But like livability is
+
+22:14.000 --> 22:19.040
+ another sustainability impact. So you create an environment that people want to live in.
+
+22:19.040 --> 22:23.360
+ And if robots are going around being aggressive, you don't want to live in that environment,
+
+22:23.360 --> 22:27.520
+ maybe. However, you should note that if you're not being aggressive, then, you know, you're
+
+22:27.520 --> 22:33.920
+ probably taking up some some delays in transportation and this and that. So you're always balancing
+
+22:33.920 --> 22:38.800
+ that. And I think this this choice has always been there in transportation. But I think the more
+
+22:38.800 --> 22:45.120
+ autonomy comes in, the more explicit the choice becomes. Yeah, and when it becomes explicit,
+
+22:45.120 --> 22:50.400
+ then we can start to optimize it. And then we'll get to ask the very difficult societal questions
+
+22:50.400 --> 22:54.560
+ of what do we value more efficiency or sustainability? It's kind of interesting.
+
+22:54.560 --> 22:59.680
+ That will happen. I think we're gonna have to like, I think that the the interesting thing
+
+22:59.680 --> 23:06.160
+ about like the whole autonomous vehicles question, I think, is also kind of, I think a lot of times,
+
+23:06.160 --> 23:12.000
+ you know, we have we have focused on technology development, like, hundreds of years, and,
+
+23:12.000 --> 23:15.760
+ you know, the products somehow followed. And then, you know, we got to make these choices
+
+23:15.760 --> 23:19.760
+ and things like that. But this is, this is a good time that, you know, we even think about,
+
+23:19.760 --> 23:25.280
+ you know, autonomous taxi type of deployments, and the systems that would evolve from there.
+
+23:25.280 --> 23:30.160
+ And you realize the business models are different, the impact on architecture is different,
+
+23:30.160 --> 23:37.040
+ urban planning, you get into like regulations. And then you get into like these issues that you
+
+23:37.040 --> 23:41.280
+ didn't think about before, but like sustainability and ethics is like, right in the middle of it.
+
+23:41.840 --> 23:45.680
+ I mean, even testing autonomous vehicles, like think about it, you're testing autonomous vehicles
+
+23:45.680 --> 23:50.560
+ in human present environments. I mean, the risk may be very small, but still, you know, it's,
+
+23:50.560 --> 23:55.440
+ it's, it's, it's, it's a, you know, strictly greater than zero risk that you're putting people into.
+
+23:56.000 --> 24:02.800
+ And so then you have that innovation, you know, risk tradeoff that you're in that somewhere.
+
+24:04.400 --> 24:08.320
+ And we understand that pretty now that it pretty well now is that if we don't test,
+
+24:08.960 --> 24:14.000
+ the, at least the, the development will be slower. I mean, it doesn't mean that we're not
+
+24:14.000 --> 24:17.920
+ going to be able to develop. I think it's going to be pretty hard actually. Maybe we can, we don't,
+
+24:17.920 --> 24:22.320
+ we don't, I don't know, but, but the thing is that those kinds of tradeoffs we already are making.
+
+24:22.880 --> 24:28.560
+ And as these systems become more ubiquitous, I think those tradeoffs will just really hit.
+
+24:30.000 --> 24:34.800
+ So you are one of the founders of Optimus ride and autonomous vehicle company. We'll talk about
+
+24:34.800 --> 24:44.800
+ it. But let me, on that point, ask maybe a good examples, keeping Optimus ride out of this question.
+
+24:46.080 --> 24:55.280
+ Sort of exemplars of different strategies on the spectrum of innovation and safety or caution.
+
+24:55.920 --> 25:03.520
+ So like Waymo, Google self driving car Waymo represents maybe a more cautious approach.
+
+25:03.520 --> 25:09.120
+ And then you have Tesla on the other side, headed by Elon Musk, that represents a more,
+
+25:10.160 --> 25:14.560
+ however, which adjective you want to use aggressive, innovative, I don't know. But
+
+25:16.160 --> 25:20.560
+ what, what do you think about the difference you need to do strategies in your view?
+
+25:21.360 --> 25:28.000
+ What's more likely, what's needed and is more likely to succeed in the short term and in the
+
+25:28.000 --> 25:33.920
+ long term? Definitely some sort of a balance is, is kind of the right way to go. But I, I do think
+
+25:33.920 --> 25:40.080
+ that the thing that is the most important is actually like an informed public. So I don't,
+
+25:40.080 --> 25:46.160
+ I don't mind, you know, I personally, like if I were in some place, I wouldn't mind so much,
+
+25:46.800 --> 25:54.080
+ like taking a certain amount of risk. Some other people might. And so I think the key is for people
+
+25:54.080 --> 26:00.960
+ to be informed. And so that they can, ideally, they can make a choice. In some cases, that kind
+
+26:00.960 --> 26:07.600
+ of choice, making that unanimously is of course very hard. But I don't think it's actually that
+
+26:07.600 --> 26:15.360
+ hard to inform people. So I think in one case, like for example, even the Tesla approach,
+
+26:16.960 --> 26:20.480
+ I don't know, it's hard to judge how informed it is, but it is somewhat informed. I mean,
+
+26:20.480 --> 26:24.320
+ you know, things kind of come out, I think people know what they're taking and things like that
+
+26:24.320 --> 26:30.720
+ and so on. But I think the underlying, I do think that these two companies are a little bit kind
+
+26:30.720 --> 26:36.720
+ of representing like the, of course, they, you know, one of them seems a bit safer, the other one,
+
+26:36.720 --> 26:41.440
+ or, you know, whatever the objective for that is, and the other one seems more aggressive,
+
+26:41.440 --> 26:45.760
+ or whatever the objective for that is. But, but I think, you know, when you turn the tables,
+
+26:45.760 --> 26:49.360
+ there are actually there are two other orthogonal dimensions that these two are focusing on.
+
+26:49.360 --> 26:54.800
+ On the one hand, for Vamo, I can see that, you know, they're, I mean, they, I think they a little
+
+26:54.800 --> 26:58.640
+ bit see it as research as well. So they kind of, they don't, I'm not sure if they're like really
+
+26:58.640 --> 27:06.240
+ interested in like an immediate product. You know, they talk about it. Sometimes there's
+
+27:06.240 --> 27:12.000
+ some pressure to talk about it. So they kind of go for it. But I think, I think that they're thinking
+
+27:12.720 --> 27:16.560
+ maybe in the back of their minds, maybe they don't put it this way. But I think they realize
+
+27:16.560 --> 27:21.440
+ that we're building like a new engine. It's kind of like call it the AI engine or whatever that is.
+
+27:21.440 --> 27:26.480
+ And, and, you know, an autonomous vehicles is a very interesting embodiment of that engine
+
+27:26.480 --> 27:30.880
+ that allows you to understand where the ego vehicle is, the ego thing is, where everything
+
+27:30.880 --> 27:35.520
+ else is, what everything else is going to do, and how do you react? How do you actually, you know,
+
+27:35.520 --> 27:40.240
+ interact with humans the right way? How do you build these systems? And I think they want to
+
+27:40.240 --> 27:45.040
+ know that they want to understand that. And so they keep going and doing that. And so on the
+
+27:45.040 --> 27:48.480
+ other dimension, Tesla is doing something interesting. I mean, I think that they have a good
+
+27:48.480 --> 27:53.920
+ product. People use it. I think that, you know, like, it's not for me. But I can totally see
+
+27:53.920 --> 27:58.480
+ people, people like it. And people, I think they have a good product outside of automation. But I
+
+27:58.480 --> 28:04.400
+ was just referring to the, the automation itself. I mean, you know, like, it kind of drives itself,
+
+28:04.400 --> 28:09.600
+ you still have to be kind of, you still have to pay attention to it, right? But, you know,
+
+28:09.600 --> 28:14.800
+ people seem to use it. So it works for something. And so people, I think people are willing to pay
+
+28:14.800 --> 28:20.080
+ for it. People are willing to buy it. I think it's, it's one of the other reasons why people buy a
+
+28:20.080 --> 28:24.640
+ Tesla car. Maybe one of those reasons is Elon Musk is the CEO. And, you know, he seems like a
+
+28:24.640 --> 28:28.240
+ visionary person. That's what people think. And he seems like a visionary person. And so that adds
+
+28:28.240 --> 28:33.280
+ like 5k to the value of the car. And then maybe another 5k is the autopilot. And, and, you know,
+
+28:33.280 --> 28:41.040
+ it's useful. I mean, it's useful in the sense that like, people are using it. And so I can see
+
+28:41.600 --> 28:45.680
+ Tesla sure, of course, they want to be visionary, they want to kind of put out a certain approach,
+
+28:45.680 --> 28:52.480
+ and they may actually get there. But I think that there's also a primary benefit of doing all these
+
+28:52.480 --> 28:57.360
+ updates and rolling it out, because, you know, people pay for it. And it's, it's, you know,
+
+28:57.360 --> 29:05.040
+ it's basic, you know, demand supply market. And people like it, they're happy to pay another 5k,
+
+29:05.040 --> 29:11.520
+ 10k for that novelty or whatever that is. They, and they use it. It's not like they get it, and
+
+29:11.520 --> 29:16.640
+ they try it a couple of times, it's a novelty, but they use it a lot of the time. And so I think
+
+29:16.640 --> 29:19.840
+ that's what Tesla is doing. It's actually pretty different. Like they are on pretty orthogonal
+
+29:19.840 --> 29:25.040
+ dimensions of what kind of things that they're building. They are using the same AI engine. So
+
+29:25.040 --> 29:32.560
+ it's very possible that, you know, they're both going to be sort of one day kind of using a similar
+
+29:32.560 --> 29:37.520
+ almost like an internal internal combustion engine. It's a very bad metaphor, but similar
+
+29:37.520 --> 29:41.760
+ internal combustion engine, and maybe one of them is building like a car, the other one is building
+
+29:41.760 --> 29:47.040
+ a truck or something. So ultimately, the use case is very different. So you, like I said, are one
+
+29:47.040 --> 29:52.240
+ of the founders of Optimus, right? Let's take a step back. It's one of the success stories in the
+
+29:52.240 --> 29:57.680
+ autonomous vehicle space. It's a great autonomous vehicle company. Let's go from the very beginning.
+
+29:58.240 --> 30:03.840
+ What does it take to start an autonomous vehicle company? How do you go from idea to deploying
+
+30:03.840 --> 30:09.520
+ vehicles like you are in a bunch of places, including New York? I would say that I think
+
+30:09.520 --> 30:15.840
+ that, you know, what happened to us was the following. I think we realized a lot of kind
+
+30:15.840 --> 30:21.520
+ of talk in the autonomous vehicle industry back in like 2014, even when we wanted to kind of get
+
+30:21.520 --> 30:29.520
+ started. And I don't know, like I kind of, I would hear things like fully autonomous vehicles
+
+30:29.520 --> 30:34.960
+ two years from now, three years from now, I kind of never bought it. You know, I was a part of
+
+30:34.960 --> 30:42.640
+ MIT's urban challenge entry. It kind of like it has an interesting history. So I did in college
+
+30:42.640 --> 30:48.560
+ and in high school, sort of a lot of mathematically oriented work. And I think I kind of, you know,
+
+30:48.560 --> 30:54.080
+ at some point, it kind of hit me. I wanted to build something. And so I came to MIT's
+
+30:54.080 --> 30:59.040
+ mechanical engineering program. And I now realize, I think my advisor hired me because I could do
+
+30:59.040 --> 31:03.840
+ like really good math. But I told him that, no, no, no, I want to work on that urban challenge car.
+
+31:03.840 --> 31:07.920
+ You know, I want to build the autonomous car. And I think that was that was kind of like a
+
+31:07.920 --> 31:12.880
+ process where we really learn, I mean, what the challenges are, and what kind of limitations
+
+31:12.880 --> 31:19.040
+ are we up against, you know, like having the limitations of computers or understanding human
+
+31:19.040 --> 31:25.040
+ behavior, there's so many of these things. And I think it just kind of didn't. And so, so we said,
+
+31:25.040 --> 31:30.240
+ hey, you know, like, why don't we take a more like a market based approach? So we focus on a
+
+31:30.240 --> 31:36.400
+ certain kind of market. And we build a system for that. What we're building is not so much of like
+
+31:36.400 --> 31:41.920
+ an autonomous vehicle only, I would say. So we build full autonomy into the vehicles. But you
+
+31:41.920 --> 31:48.960
+ know, the way we kind of see it is that we think that the approach should actually involve humans
+
+31:48.960 --> 31:54.880
+ operating them, not just just not sitting in the vehicle. And I think today, what we have is today,
+
+31:55.520 --> 32:01.280
+ we have one person operate one vehicle, no matter what that vehicle, it could be a forklift, it
+
+32:01.280 --> 32:07.680
+ could be a truck, it could be a car, whatever that is. And we want to go from that to 10 people
+
+32:07.680 --> 32:14.960
+ operate 50 vehicles. How do we do that? You're referring to a world of maybe perhaps teleoperation.
+
+32:14.960 --> 32:19.760
+ So can you can you just say what it means for 10 might be confusing for people listening? What does
+
+32:19.760 --> 32:25.280
+ it mean for 10 people to control 50 vehicles? That's a good point. So I think it's a very
+
+32:26.000 --> 32:30.080
+ deliberately didn't call it teleoperation because people what people think then is that people think
+
+32:31.840 --> 32:37.360
+ away from the vehicle sits a person sees like maybe put some goggles or something VR and
+
+32:37.360 --> 32:42.480
+ drives the car. So that's not at all what we mean. But we mean the kind of intelligence whereby
+
+32:43.280 --> 32:49.600
+ humans are in control, except in certain places, the vehicles can execute on their own. And so
+
+32:49.600 --> 32:55.360
+ imagine like, like a room where people can see what the other vehicles are doing and everything.
+
+32:56.160 --> 33:01.280
+ And, you know, there will be some people who are more like, more like air traffic controllers,
+
+33:01.280 --> 33:07.600
+ call them like AV controllers. And so these AV controllers would actually see kind of like a
+
+33:07.600 --> 33:13.840
+ whole map. And they would understand where vehicles are really confident, and where they kind of,
+
+33:13.840 --> 33:19.440
+ you know, need a little bit more help. And the help shouldn't be for safety. Help should be
+
+33:19.440 --> 33:24.960
+ for efficiency. Vehicles should be safe, no matter what, if you had zero people, they could be very
+
+33:24.960 --> 33:30.080
+ safe, but they'd be going five miles an hour. And so if you want them to go around 25 miles an hour,
+
+33:30.080 --> 33:35.280
+ then you need people to come in. And for example, you know, the vehicle come to an intersection,
+
+33:35.920 --> 33:42.240
+ and the vehicle can say, you know, I can wait, I can inch forward a little bit, show my intent,
+
+33:42.240 --> 33:48.720
+ or I can turn left. And right now it's clear, I can turn, I know that, but before you give me the
+
+33:48.720 --> 33:53.840
+ go, I won't. And so that's one example. This doesn't mean necessarily we're doing that, actually. I
+
+33:53.840 --> 34:00.800
+ think if you go down all that much detail, that every intersection, you're kind of expecting
+
+34:00.800 --> 34:04.640
+ a person to press a button, then I don't think you'll get the efficiency benefits you want.
+
+34:04.640 --> 34:08.880
+ You need to be able to kind of go around and be able to do these things. But I think you need
+
+34:08.880 --> 34:13.440
+ people to be able to set high level behavior to vehicles. That's the other thing with autonomous
+
+34:13.440 --> 34:16.480
+ vehicles. You know, I think a lot of people kind of think about it as follows. I mean,
+
+34:16.480 --> 34:21.680
+ this happens with technology a lot. You know, you think, all right, so I know about cars,
+
+34:21.680 --> 34:27.360
+ and I heard robots. So I think how this is going to work out is that I'm going to buy a car,
+
+34:27.360 --> 34:31.120
+ press a button, and it's going to drive itself. And when is that going to happen?
+
+34:31.120 --> 34:34.640
+ You know, and people kind of tend to think about it that way. But when you think about what really
+
+34:34.640 --> 34:41.200
+ happens is that something comes in in a way that you didn't even expect. If asked, you might have
+
+34:41.200 --> 34:46.960
+ said, I don't think I need that. Or I don't think it should be that and so on. And then that becomes
+
+34:46.960 --> 34:53.280
+ the next big thing, coding code. And so I think that this kind of different ways of humans operating
+
+34:53.280 --> 34:59.600
+ vehicles could be really powerful. I think that sooner than then later, we might open our eyes
+
+34:59.600 --> 35:04.480
+ up to a world in which you go around walking them all. And there's a bunch of security robots
+
+35:04.480 --> 35:08.640
+ that are exactly operated in this way. You go into a factory or a warehouse, there's a whole
+
+35:08.640 --> 35:15.120
+ bunch of robots that are printed exactly in this way. You go to a, you go to the Brooklyn Navy Yard,
+
+35:15.120 --> 35:19.760
+ you see a whole bunch of autonomous vehicles, Optimus Ride. And they're operated maybe in this
+
+35:19.760 --> 35:25.040
+ way. But I think people kind of don't see that. I sincerely think that there's a possibility
+
+35:25.680 --> 35:31.440
+ that we may almost see like a whole mushrooming of this technology in all kinds of places that
+
+35:31.440 --> 35:37.840
+ we didn't expect before. And then maybe the real surprise. And then one day when your car actually
+
+35:37.840 --> 35:42.160
+ drives itself, it may not be all that much of a surprise at all. Because you see it all the time,
+
+35:42.160 --> 35:48.400
+ you interact with them, you take the Optimus Ride, hopefully that's your choice. And then,
+
+35:48.400 --> 35:52.320
+ you know, you hear a bunch of things, you go around, you interact with them. I don't know,
+
+35:52.320 --> 35:56.720
+ like you have a little delivery vehicle that goes around the sidewalks and delivers your things.
+
+35:56.720 --> 36:02.560
+ And then you take it, it says, thank you. And then you get used to that. And one day, your car
+
+36:02.560 --> 36:07.280
+ actually drives itself and the regulation goes by and, you know, you can hit the button asleep.
+
+36:07.280 --> 36:10.000
+ And it wouldn't be a surprise at all. I think that may be the real reality.
+
+36:10.000 --> 36:17.120
+ So there's going to be a bunch of applications that pop up around autonomous vehicles,
+
+36:17.120 --> 36:22.000
+ some of which maybe many of which we don't expect at all. So if we look at Optimus Ride,
+
+36:22.560 --> 36:28.800
+ what do you think, you know, the viral application, the one that like really works for people
+
+36:29.760 --> 36:35.600
+ in mobility, what do you think Optimus Ride will connect with in the near future first?
+
+36:35.600 --> 36:40.720
+ I think that the first places that I like to target honestly is like these places where
+
+36:41.920 --> 36:46.880
+ transportation is required within an environment, like people typically call it geofenced. So you
+
+36:46.880 --> 36:52.080
+ can imagine like roughly two mile by two mile could be bigger, could be smaller type of an
+
+36:52.080 --> 36:55.920
+ environment. And there's a lot of these kinds of environments that are typically transportation
+
+36:55.920 --> 37:00.960
+ deprived. The Brooklyn Navy Yard that you know, we're in today, we're in a few different places,
+
+37:00.960 --> 37:07.040
+ but that was the one that was last publicized. That's a good example. So there's not a lot of
+
+37:07.040 --> 37:12.800
+ transportation there. And you wouldn't expect like, I don't know, I think maybe operating an Uber
+
+37:12.800 --> 37:18.240
+ there ends up being sort of a little too expensive. Or when you compare it with operating Uber
+
+37:18.240 --> 37:24.160
+ Elsevier, that becomes the Elsevier becomes the priority and these places become totally
+
+37:24.160 --> 37:28.880
+ transportation deprived. And then what happens is that, you know, people drive into these places
+
+37:28.880 --> 37:34.240
+ and to go from point A to point B, inside this place, within that day, they use their cars.
+
+37:35.120 --> 37:40.320
+ And so we end up building more parking for them to, for example, take their cars and go to the
+
+37:40.320 --> 37:46.880
+ launch place. And I think that one of the things that can be done is that, you know, you can put in
+
+37:47.600 --> 37:54.160
+ efficient, safe, sustainable transportation systems into these types of places first. And I think
+
+37:54.160 --> 37:59.600
+ that, you know, you could deliver mobility in an affordable way, affordable, accessible,
+
+38:00.400 --> 38:07.920
+ you know, sustainable way. But I think what also enables is that this kind of effort, money,
+
+38:07.920 --> 38:13.920
+ area, land that we spend on parking, you could reclaim some of that. And that is on the order
+
+38:13.920 --> 38:18.160
+ of like, even for a small environment, like two mile by two mile, it doesn't have to be
+
+38:18.160 --> 38:23.520
+ smack in the middle of New York. I mean, anywhere else, you're talking tens of millions of dollars,
+
+38:23.520 --> 38:27.040
+ if you're smack in the middle of New York, you're looking at billions of dollars of savings just
+
+38:27.040 --> 38:31.440
+ by doing that. And that's the economic part of it. And there's a societal part, right? I mean,
+
+38:31.440 --> 38:39.600
+ just look around. I mean, the places that we live are like built for cars. It didn't look like this
+
+38:39.600 --> 38:45.600
+ just like 100 years ago. Like today, no one walks in the middle of the street. It's for cars. We,
+
+38:45.600 --> 38:50.560
+ no one tells you that growing up, but you grow into that reality. And so sometimes they close
+
+38:50.560 --> 38:54.240
+ the road, it happens here, you know, like the celebration, they close the road,
+
+38:54.240 --> 38:57.840
+ still people don't walk in the middle of the road, like just walking and people don't.
+
+38:58.400 --> 39:05.760
+ But I think it has so much impact, the car in the space that we have. And I think we talked
+
+39:05.760 --> 39:10.240
+ about sustainability, livability, I mean, ultimately, these kinds of places that parking
+
+39:10.240 --> 39:14.480
+ spots at the very least could change into something more useful, or maybe just like park
+
+39:14.480 --> 39:19.680
+ areas recreational. And so I think that's the first thing that that we're targeting. And I think
+
+39:19.680 --> 39:24.560
+ that we're getting like a really good response, both from an economic societal point of view,
+
+39:24.560 --> 39:28.800
+ especially places that are a little bit forward looking. And like, for example,
+
+39:28.800 --> 39:34.400
+ Brooklyn Navy Art, they have tenants, there's this thing called like new lab, it's kind of like an
+
+39:34.400 --> 39:38.240
+ innovation center, there's a bunch of startups there. And so, you know, you get those kinds of
+
+39:38.240 --> 39:43.920
+ people and you know, they're really interested in sort of making that environment more livable.
+
+39:43.920 --> 39:49.280
+ And these kinds of solutions that Optimus Ride provides almost kind of comes in and becomes
+
+39:49.280 --> 39:54.240
+ that. And many of these places that are transportation deprived, you know, they have,
+
+39:55.440 --> 40:02.000
+ they actually rent shuttles. And so, you know, you can ask anybody, the shuttle experience is
+
+40:02.000 --> 40:07.120
+ like terrible. People hate shuttles. And I can tell you why, it's because, you know, like,
+
+40:08.240 --> 40:13.120
+ the driver is very expensive in a shuttle business. So what makes sense is to attach
+
+40:13.120 --> 40:17.920
+ 20, 30 seats to a driver. And a lot of people have this misconception, they think that shuttles
+
+40:17.920 --> 40:21.440
+ should be big. Sometimes we get that our Optimus Ride, we tell them, we're going to give you like
+
+40:21.440 --> 40:25.600
+ four seaters, six seaters. And we get asked like, how about like 20 seaters? Like, you know,
+
+40:25.600 --> 40:30.960
+ you don't need 20 seaters. You want to split up those seats so that they can travel faster and
+
+40:30.960 --> 40:36.560
+ the transportation delays would go down. That's what you want. If you make it big, not only you
+
+40:36.560 --> 40:41.440
+ will get delays in transportation, but you won't have an agile vehicle, it will take a long time
+
+40:41.440 --> 40:46.480
+ to speed up, slow down, and so on. It'll you need to climb up to the thing. So it's kind of like
+
+40:46.480 --> 40:51.920
+ really hard to interact with. And scheduling to perhaps when you have more smaller vehicles,
+
+40:51.920 --> 40:57.840
+ it becomes closer to Uber, where you can actually get a personal, I mean, just the logistics of
+
+40:57.840 --> 41:04.080
+ getting the vehicle to you is becomes easier when you have a giant shuttle, there's fewer of them.
+
+41:04.080 --> 41:09.120
+ And it probably goes on a route, a specific route that is supposed to hit. And when you go on a
+
+41:09.120 --> 41:14.720
+ specific route, and all seats travel together, versus, you know, you have a whole bunch of them,
+
+41:14.720 --> 41:19.440
+ you can imagine the route you can still have. But you can imagine you split up the seats.
+
+41:19.440 --> 41:24.640
+ And instead of, you know, them traveling like, I don't know, a mile apart, they could be like,
+
+41:25.200 --> 41:30.160
+ you know, half a mile apart, if you split them into two, that basically would mean that your
+
+41:30.160 --> 41:35.440
+ delays, when you go out, you won't wait for them for a long time. And that's one of the main reasons
+
+41:35.440 --> 41:40.160
+ or you don't have to climb up. The other thing is that I think if you split them up in a nice way,
+
+41:40.160 --> 41:45.840
+ and if you can actually know where people are going to be somehow, you don't even need the app.
+
+41:45.840 --> 41:49.680
+ A lot of people ask us the app, we say, why don't you just walk into the vehicle?
+
+41:50.480 --> 41:54.320
+ How about you just walk into the vehicle, it recognizes who you are, and it gives you a bunch
+
+41:54.320 --> 41:58.960
+ of options of places that you go, and you just kind of go there. I mean, people kind of also
+
+41:58.960 --> 42:03.840
+ internalize the apps. Everybody needs an app. It's like, you don't need an app, you just walk into
+
+42:03.840 --> 42:09.200
+ the thing. But I think, I think one of the things that, you know, we really try to do is to take
+
+42:09.200 --> 42:13.760
+ that shuttle experience that no one likes and tilt it into something that everybody loves.
+
+42:14.400 --> 42:19.040
+ And so I think that's another important thing. I would like to say that carefully, just like
+
+42:19.040 --> 42:23.600
+ the operation, like, we don't do shuttles. You know, we're really kind of thinking of this
+
+42:23.600 --> 42:30.720
+ as a system or a network that we're designing. But ultimately, we go to places that would normally
+
+42:30.720 --> 42:35.600
+ rent a shuttle service that people wouldn't like as much. And we want to tilt it into something
+
+42:35.600 --> 42:42.640
+ that people love. So you mentioned this earlier, but how many Optimus Ride vehicles do you think
+
+42:42.640 --> 42:48.720
+ would be needed for any person in Boston or New York? If they step outside, there will be,
+
+42:50.320 --> 42:55.280
+ this is like a mathematical question, there'll be two Optimus Ride vehicles within line of
+
+42:55.280 --> 43:01.920
+ sight. Is that the right number to, well, at least one. For example, that's the density. So
+
+43:01.920 --> 43:07.440
+ meaning that if you see one vehicle, you look around, you see another one too. Imagine like,
+
+43:08.480 --> 43:12.880
+ you know, Tesla would tell you they collect a lot of data. Do you see that with Tesla? Like,
+
+43:12.880 --> 43:16.320
+ you just walk around and you look around and you see Tesla? Probably not.
+
+43:16.320 --> 43:22.480
+ Very specific areas of California, maybe. Maybe. You're right. Like, there's a couple zip codes
+
+43:22.480 --> 43:26.320
+ that, you know, just, but I think, but I think that's kind of important because, you know, like,
+
+43:26.320 --> 43:30.800
+ maybe the couple zip codes, the one thing that we kind of depend on, I'll get to your question
+
+43:30.800 --> 43:37.200
+ in a second. But now, like, we're taking a lot of tangents today. And so, I think that this is
+
+43:37.200 --> 43:42.960
+ actually important. People call this data density or data velocity. So it's very good to collect
+
+43:42.960 --> 43:48.960
+ data in a way that, you know, you see the same place so many times. Like, you can drive 10,000
+
+43:48.960 --> 43:54.560
+ miles around the country, or you drive 10,000 miles in a confined environment. You'll see the
+
+43:54.560 --> 43:58.880
+ same intersection hundreds of times. And when it comes to predicting what people are going to do
+
+43:58.880 --> 44:03.920
+ in that specific intersection, you become really good at it. Versus if you're drawing, like,
+
+44:03.920 --> 44:07.920
+ 10,000 miles around the country, you've seen that only once. And so, trying to predict what
+
+44:07.920 --> 44:13.600
+ people do becomes hard. And I think that, you know, you said what is needed. It's tens of thousands
+
+44:13.600 --> 44:18.560
+ of vehicles. You know, you really need to be like a specific fraction of vehicle. Like, for example,
+
+44:18.560 --> 44:24.560
+ in good times in Singapore, you can go and you can just grab a cab. And they are like, you know,
+
+44:24.560 --> 44:32.400
+ 10%, 20% of traffic, those taxis. Ultimately, that's why you need to get to so that, you know,
+
+44:32.400 --> 44:38.480
+ you get to a certain place where you really, the benefits really kick off in like orders of magnitude
+
+44:38.480 --> 44:44.080
+ type of a point. But once you get there, you actually get the benefits. And you can certainly
+
+44:44.080 --> 44:50.720
+ carry people. I think that's one of the things people really don't like to wait for themselves.
+
+44:50.720 --> 44:56.000
+ But for example, they can wait a lot more for the goods if they order something. Like, you're
+
+44:56.000 --> 44:59.760
+ sitting at home and you want to wait half an hour, that sounds great. People will say it's great.
+
+44:59.760 --> 45:04.480
+ You want to, you're going to take a cab, you're waiting half an hour, like that's crazy. You don't
+
+45:04.480 --> 45:09.360
+ want to wait that much. But I think, you know, you can, I think, really get to a point where the
+
+45:09.360 --> 45:16.240
+ system at peak times really focuses on kind of transporting humans around. And then it's really,
+
+45:16.240 --> 45:20.000
+ it's a good fraction of the traffic to the point where, you know, you go, you look around,
+
+45:20.000 --> 45:25.040
+ there's something there, and you just kind of basically get in there. And it's already waiting
+
+45:25.040 --> 45:31.680
+ for you or something like that. And then you take it. If you do it at that scale, like today, for
+
+45:31.680 --> 45:38.080
+ instance, Uber, if you talk to a driver, right, I mean, Uber takes a certain cut, it's a small cut,
+
+45:39.200 --> 45:43.760
+ or your drivers would argue that it's a large cut. But you know, it's, it's, it's when you
+
+45:43.760 --> 45:49.840
+ look at the grand scheme of things, most of that money that you pay Uber kind of goes to the
+
+45:49.840 --> 45:53.520
+ driver. And if you talk to the driver, the driver will claim that most of it is their time.
+
+45:54.400 --> 46:01.120
+ You know, they, it's not spent on gas, they think it's not spent on the car per se as much,
+
+46:01.120 --> 46:06.480
+ it's like their time. And if you didn't have a, have a person driving, or if you're in a scenario
+
+46:06.480 --> 46:13.200
+ where, you know, like, 0.1 person is driving the car, a fraction of a person is kind of
+
+46:13.200 --> 46:18.240
+ operating the car, because, you know, your one operates several. If you're in that situation,
+
+46:18.240 --> 46:23.200
+ you realize that the internal combustion engine type of cars are very inefficient, you know,
+
+46:23.200 --> 46:27.600
+ we build them to go on highways, they pass crash tests, they're like really heavy,
+
+46:27.600 --> 46:32.480
+ they really don't need to be like 25 times the weight of its passengers, or, or, you know,
+
+46:32.480 --> 46:38.720
+ like area wise and so on. But if you get through those inefficiencies, and if you really build
+
+46:38.720 --> 46:43.600
+ like urban cars and things like that, I think the economics really starts to check out, like to the
+
+46:43.600 --> 46:48.880
+ point where, I mean, I don't know, you may be able to get into a car and it may be less than a dollar
+
+46:48.880 --> 46:54.960
+ to go from A to B. As long as you don't change your destination, you just pay 99 cents and go that.
+
+46:55.600 --> 46:59.200
+ If you share it, if you take another stop somewhere, it becomes a lot better.
+
+47:00.320 --> 47:04.960
+ You know, these kinds of things, at least for models, at least for mathematics and theory,
+
+47:04.960 --> 47:10.240
+ they start to really check out. So I think it's really exciting what Optimus Riders is doing in
+
+47:10.240 --> 47:15.680
+ terms of, it feels the most reachable, like it'll actually be here and have an impact.
+
+47:15.680 --> 47:16.640
+ Yeah, that is the idea.
+
+47:17.360 --> 47:26.240
+ And if we contrast that, again, we'll go back to our old friends, Waymo and Tesla. So Waymo seems to
+
+47:26.240 --> 47:36.640
+ have sort of technically similar approaches as Optimus Ride, but a different, they're not as
+
+47:36.640 --> 47:44.400
+ interested as having impact today. They have a longer term sort of investment, it's almost more
+
+47:44.400 --> 47:50.800
+ of a research project still, meaning they're trying to solve, as far as I understand it, maybe you
+
+47:50.800 --> 47:59.040
+ can differentiate, but they seem to want to do more unrestricted movement, meaning move from A
+
+47:59.040 --> 48:05.200
+ to B, where A to B is all over the place, versus Optimus Ride is really nicely geofenced and really
+
+48:05.200 --> 48:12.320
+ sort of established mobility in a particular environment before you expand it. And then Tesla
+
+48:12.320 --> 48:20.000
+ is like the complete opposite, which is the entirety of the world actually is going to be
+
+48:20.000 --> 48:28.080
+ automated. Highway driving, urban driving, every kind of driving, you kind of creep up to it by
+
+48:28.080 --> 48:34.720
+ incrementally improving the capabilities of the autopilot system. So when you contrast all of
+
+48:34.720 --> 48:42.240
+ these, and on top of that, let me throw a question that nobody likes, but is a timeline. When do you
+
+48:42.240 --> 48:48.480
+ think each of these approaches, loosely speaking, nobody can predict the future, we'll see mass
+
+48:48.480 --> 48:56.320
+ deployment. So Elon Musk predicts the craziest approach is at the, I've heard figures like at
+
+48:56.320 --> 49:05.760
+ the end of this year, right? So that's probably wildly inaccurate. But how wildly inaccurate is it?
+
+49:06.720 --> 49:12.080
+ I mean, first thing to lay out, like everybody else, it's really hard to guess. I mean, I don't
+
+49:12.080 --> 49:19.120
+ know where Tesla can look at, or Elon Musk can look at and say, hey, you know, it's the end of
+
+49:19.120 --> 49:25.200
+ this year. I mean, I don't know what you can look at. Even the data that you would, I mean,
+
+49:25.200 --> 49:32.720
+ if you look at the data, even kind of trying to extrapolate the end state without knowing what
+
+49:32.720 --> 49:36.880
+ exactly is going to go, especially for like a machine learning approach, I mean, it's just
+
+49:36.880 --> 49:42.480
+ kind of very hard to predict. But I do think the following does happen. I think a lot of people,
+
+49:43.280 --> 49:48.400
+ you know, what they do is that there's something that I called a couple times time dilation in
+
+49:48.400 --> 49:54.160
+ technology prediction happens. Let me try to describe a little bit. There's a lot of things
+
+49:54.160 --> 49:59.200
+ that are so far ahead. People think they're close. And there's a lot of things that are actually
+
+49:59.200 --> 50:05.120
+ close. People think it's far ahead. People try to kind of look at a whole landscape of technology
+
+50:05.120 --> 50:11.120
+ development. Admittedly, it's chaos. Anything can happen in any order at any time. And there's a whole
+
+50:11.120 --> 50:17.200
+ bunch of things in there. People take it, clamp it, and put it into the next three years. And so
+
+50:18.160 --> 50:21.840
+ then what happens is that there's some things that maybe can happen by the end of the year or
+
+50:21.840 --> 50:27.760
+ next year and so on. And they push that into like a few years ahead, because it's just hard to explain.
+
+50:27.760 --> 50:32.080
+ And there are things that are like, we're looking at 20 years more, maybe, you know,
+
+50:33.520 --> 50:38.240
+ hopefully my lifetime type of things. And because, you know, we don't know, I mean, we don't know
+
+50:39.040 --> 50:43.440
+ how hard it is even, like, that's a problem. We don't know, like, if some of these problems are
+
+50:43.440 --> 50:49.360
+ actually AI complete, like, we have no idea what's going on. And, you know, we take all of that,
+
+50:49.360 --> 50:55.760
+ and then we clump it, and then we say, three years from now. And then some of us are more
+
+50:55.760 --> 50:59.920
+ optimistic. So they're shooting at the end of the year. And some of us are more realistic,
+
+50:59.920 --> 51:06.000
+ they say, like, five years. But, you know, we all, I think, it's just hard to know. And I think
+
+51:07.280 --> 51:12.880
+ trying to predict, like, products ahead two, three years, it's hard to know in the following
+
+51:12.880 --> 51:17.520
+ sense, you know, like, we typically say, okay, this is a technology company, but sometimes
+
+51:17.520 --> 51:21.280
+ sometimes really, you're trying to build something where the technology does, like, there's a technology
+
+51:21.280 --> 51:27.680
+ gap, you know, like, and Tesla had that with electric vehicles, you know, like, when they
+
+51:27.680 --> 51:32.560
+ first started, they would look at a chart, much like a Moore's law type of chart, and they would
+
+51:32.560 --> 51:37.040
+ just kind of extrapolate that out, and they'd say, we want to be here. What's the technology to get
+
+51:37.040 --> 51:41.600
+ that? We don't know. It goes like this, so it's probably just going to, you know, keep going.
+
+51:41.600 --> 51:49.200
+ Yeah. With AI that goes into the cars, we don't even have that. Like, we can't, I mean, what can
+
+51:49.200 --> 51:55.600
+ you quantify? Like, what kind of chart are you looking at, you know? But so I think when there's
+
+51:55.600 --> 52:00.480
+ that technology gap, it's just kind of really hard to predict. So now, I realize I talked like five
+
+52:00.480 --> 52:05.760
+ minutes and avoid your question. I didn't tell you anything about that. It was very skillfully done.
+
+52:05.760 --> 52:09.680
+ That was very well done. And I don't think you, I think you've actually argued that it's not a
+
+52:09.680 --> 52:14.160
+ use, even any answer you provide now is not that useful. It's going to be very hard. There's one
+
+52:14.160 --> 52:18.720
+ thing that I really believe in, and, you know, this is not my idea, and it's been, you know,
+
+52:18.720 --> 52:26.400
+ discussed several times, but this, this kind of like something like a startup, or a kind of
+
+52:26.400 --> 52:32.880
+ an innovative company, including definitely Maymo Tesla, maybe even some of the other big companies
+
+52:32.880 --> 52:38.880
+ that are kind of trying things. This kind of like iterated learning is very important. The fact that
+
+52:38.880 --> 52:44.640
+ we're over there and we're trying things and so on, I think that's, that's important. We try to
+
+52:44.640 --> 52:50.000
+ understand. And, and I think that, you know, the coding code Silicon Valley has done that with
+
+52:50.000 --> 52:55.040
+ business models pretty well. And now, I think we're trying to get to do it where there's a
+
+52:55.040 --> 53:00.000
+ literal technology gap. I mean, before, like, you know, you're trying to build, I'm not trying to,
+
+53:00.000 --> 53:04.960
+ you know, I think these companies are building great technology to, for example, enable internet
+
+53:04.960 --> 53:11.040
+ search to do it so quickly. And that kind of didn't, didn't, wasn't there so much. But at least,
+
+53:11.040 --> 53:14.960
+ like it was a kind of a technology that you could predict to some degree and so on. And now we're
+
+53:14.960 --> 53:19.200
+ just kind of trying to build, you know, things that it's kind of hard to quantify. What kind of
+
+53:19.200 --> 53:26.640
+ a metric are we looking at? So, psychologically, as a sort of as a leader of graduate students and
+
+53:27.200 --> 53:34.400
+ at Optimus Ride, a bunch of brilliant engineers, just curiosity. Psychologically, do you think
+
+53:34.400 --> 53:41.760
+ it's good to think that, you know, whatever technology gap we're talking about can be closed
+
+53:41.760 --> 53:46.800
+ by the end of the year? Or do you, you know, because we don't know. So the way,
+
+53:48.080 --> 53:55.040
+ do you want to say that everything is going to improve exponentially to yourself and to others
+
+53:55.040 --> 54:02.880
+ around you as a leader? Or do you want to be more sort of maybe not cynical, but I don't want to use
+
+54:02.880 --> 54:09.840
+ realistic because it's hard to predict. But yeah, maybe more cynical, pessimistic about the ability
+
+54:09.840 --> 54:15.120
+ to close that gap. Yeah, I think that, you know, going back, I think that iterated learning is like
+
+54:15.120 --> 54:19.760
+ key. That, you know, you're out there, you're running experiments to learn. And that doesn't
+
+54:19.760 --> 54:23.520
+ mean sort of like, you know, like, like your Optimus Ride, you're kind of doing something, but
+
+54:24.080 --> 54:29.360
+ like in an environment. But like what Tesla is doing, I think is also kind of like this, this
+
+54:29.360 --> 54:34.080
+ kind of notion. And you know, people can go around and say like, you know, this year, next year,
+
+54:34.080 --> 54:38.800
+ the other year, and so on. But I think that the nice thing about it is that they're out there,
+
+54:38.800 --> 54:44.160
+ they're pushing this technology in. I think what they should do more of, I think that kind of
+
+54:44.160 --> 54:48.400
+ inform people about what kind of technology that they're providing, you know, the good and the bad
+
+54:48.400 --> 54:53.120
+ and then, you know, not just sort of, you know, it works very well. But I think, you know, I'm
+
+54:53.120 --> 54:57.200
+ not saying they're not doing bad and informing. I think they're kind of trying, they, you know,
+
+54:57.200 --> 55:02.560
+ they put up certain things, or at the very least, YouTube videos comes out on how the summon function
+
+55:02.560 --> 55:07.440
+ works every now and then. And you know, people get informed. And so that kind of cycle continues. But
+
+55:08.480 --> 55:13.200
+ you know, I admire it. I think they're kind of go out there and they do great things. They do
+
+55:13.200 --> 55:18.960
+ their own kind of experiment. I think we do our own. And I think we're closing some similar
+
+55:18.960 --> 55:24.000
+ technology gaps, but some also some are orthogonal as well. You know, I think like we talked about,
+
+55:24.000 --> 55:28.400
+ you know, people being remote, like it's something, or in the kind of environments that we're in,
+
+55:28.400 --> 55:33.840
+ or think about a Tesla car, maybe maybe you can enable it one day, like there's, you know, low
+
+55:33.840 --> 55:38.720
+ traffic, like you're kind of the stop on go motion, you just hit the button, and you can really,
+
+55:38.720 --> 55:42.720
+ or maybe there's another, you know, lane that you can pass into you go in that, I think they can
+
+55:42.720 --> 55:49.040
+ enable these kinds of products, I believe it. And so I think that that part, that is really
+
+55:49.040 --> 55:55.440
+ important. And that is really key. And beyond that, I think, you know, when is it exactly going to
+
+55:55.440 --> 56:04.800
+ happen? And so on. I mean, it's like I said, it's very hard to predict. And I would, I would imagine
+
+56:04.800 --> 56:09.200
+ that it would be good to do some sort of like a like a one or two year plan, when it's a little bit
+
+56:09.200 --> 56:17.120
+ more predictable, that you know, the technology gaps you close and, and the kind of sort of product
+
+56:17.120 --> 56:22.240
+ that would ensue. So I know that from Optimus Ride, or you know, other companies that I get
+
+56:22.240 --> 56:27.600
+ involved in, I mean, at some point, you find yourself in a situation where you're trying to
+
+56:27.600 --> 56:33.120
+ build a product, and, and people are investing in that, in that, you know, building effort.
+
+56:34.720 --> 56:39.680
+ And those investors that they do want to know, as they compare the investments they want to make,
+
+56:39.680 --> 56:43.200
+ they do want to know what happens in the next one or two years. And I think that's good to
+
+56:43.200 --> 56:47.920
+ communicate that. But I think beyond that, it becomes, it becomes a vision that we want to get
+
+56:47.920 --> 56:52.960
+ to someday and saying five years, 10 years, I don't think it means anything. But iterated
+
+56:52.960 --> 56:59.280
+ learning is key, though, to do and learn. I think that is key. You know, I got to sort of throw back
+
+56:59.280 --> 57:06.000
+ right at you criticism in terms of, you know, like Tesla or somebody communicating, you know,
+
+57:06.000 --> 57:11.120
+ how someone works and so on. I got the chance to visit Optimus Ride, and you guys are doing some
+
+57:11.120 --> 57:17.040
+ awesome stuff. And yet the internet doesn't know about it. So you should also communicate more
+
+57:17.040 --> 57:21.520
+ showing off, you know, showing off some of the awesome stuff, the stuff that works and stuff
+
+57:21.520 --> 57:26.480
+ that doesn't work. I mean, it's just the stuff I saw with the tracking of different objects and
+
+57:26.480 --> 57:31.360
+ pedestrians. So I'm incredible stuff going on there. Just maybe it's just the neuro to me,
+
+57:31.360 --> 57:34.560
+ but I think the world would love to see that kind of stuff.
+
+57:34.560 --> 57:40.720
+ Yeah, that's that's well taken. I think, you know, I should say that it's not like, you know, we were
+
+57:40.720 --> 57:46.800
+ unable to, I think we made a decision at some point. That decision did involve me quite a bit
+
+57:46.800 --> 57:54.160
+ on kind of sort of doing this in kind of coding code stealth mode for a bit. But I think that,
+
+57:54.160 --> 57:59.840
+ you know, we'll open it up quite a lot more. And I think that we are also at Optimus Ride kind of
+
+57:59.840 --> 58:06.720
+ hitting a new era. You know, we're big now, we're doing a lot of interesting things. And
+
+58:07.360 --> 58:12.720
+ I think, you know, some of the deployments that we kind of announced were some of the first bits
+
+58:12.720 --> 58:18.320
+ of information that we kind of put out into the world will also put out our technology. A lot of
+
+58:18.320 --> 58:23.360
+ the things that we've been developing is really amazing. And then, you know, we're going to start
+
+58:23.360 --> 58:28.400
+ putting that out. We're especially interested in sort of like being able to work with the best people.
+
+58:28.400 --> 58:33.200
+ And I think, and I think it's good to not just kind of show them when they come to our office
+
+58:33.200 --> 58:37.280
+ for an interview, but just put it out there in terms of like, you know, get people excited about
+
+58:37.280 --> 58:44.000
+ what we're doing. So on the autonomous vehicle space, let me ask one last question. So Elon
+
+58:44.000 --> 58:50.240
+ Musk famously said that lighters are crutch. So I've talked to a bunch of people about it,
+
+58:50.240 --> 58:59.600
+ gotta ask you. You use that crutch quite a bit in the DARPA days. So, you know, and his idea in
+
+58:59.600 --> 59:04.480
+ general, sort of, you know, more provocative and fun, I think, than a technical discussion. But
+
+59:05.040 --> 59:12.240
+ the idea is that camera based, primarily camera based systems is going to be what defines the
+
+59:12.240 --> 59:17.760
+ future of autonomous vehicles. So what do you think of this idea? Ladders are crutch versus
+
+59:17.760 --> 59:25.040
+ primarily camera based systems? First things first, I think, you know, I'm a big believer in just
+
+59:25.040 --> 59:30.640
+ camera based autonomous vehicle systems. Like, I think that, you know, you can put in a lot of
+
+59:30.640 --> 59:36.560
+ autonomy and then you can do great things. And it's very possible that at the time scales,
+
+59:36.560 --> 59:43.520
+ like I said, we can't predict 20 years from now, like you may be able to do things that we're doing
+
+59:43.520 --> 59:48.560
+ today only with LiDAR and then you may be able to do them just with cameras. And I think that,
+
+59:49.520 --> 59:55.440
+ you know, you can just, I think that I will put my name on it too, like, you know, that will be a
+
+59:55.440 --> 1:00:03.600
+ time when you can only use cameras and you'll be fine. At that time, though, it's very possible that,
+
+1:00:03.600 --> 1:00:10.240
+ you know, you find the LiDAR system as another robustifier, or it's so affordable that it's
+
+1:00:10.240 --> 1:00:18.400
+ stupid not to, you know, just kind of put it there. And I think, and I think we may be looking at a
+
+1:00:18.400 --> 1:00:25.280
+ future like that. Do you think we're over relying on LiDAR right now? Because we understand the better
+
+1:00:25.280 --> 1:00:29.600
+ it's more reliable in many ways, in terms from a safety perspective. It's easier to build with.
+
+1:00:29.600 --> 1:00:36.080
+ That's the other thing. I think, to be very frank with you, I mean, you know, we've seen a lot of
+
+1:00:36.080 --> 1:00:41.440
+ sort of autonomous vehicles companies come and go. And the approach has been, you know, you slap a
+
+1:00:41.440 --> 1:00:47.040
+ LiDAR on a car. And it's kind of easy to build with when you have a LiDAR, you know, you just kind
+
+1:00:47.040 --> 1:00:53.520
+ of code it up and you hit the button and you do a demo. So I think there's, admittedly, there's a
+
+1:00:53.520 --> 1:00:58.640
+ lot of people that you focus on the LiDAR because it's easier to build with. That doesn't mean that,
+
+1:00:58.640 --> 1:01:03.520
+ you know, without the camera, just cameras, you can, you cannot do what they're doing, but it's
+
+1:01:03.520 --> 1:01:07.760
+ just kind of a lot harder. And so you need to have certain kind of expertise to exploit that.
+
+1:01:08.480 --> 1:01:13.760
+ What we believe in, and you know, you've maybe seen some of it, is that we believe in computer
+
+1:01:13.760 --> 1:01:19.920
+ vision. We certainly work on computer vision and Optimus Ride by a lot, like, and we've been doing
+
+1:01:19.920 --> 1:01:25.840
+ that from day one. And we also believe in sensor fusion. So, you know, we do, we have a relatively
+
+1:01:25.840 --> 1:01:31.520
+ minimal use of LiDARs, but we do use them. And I think, you know, in the future, I really believe
+
+1:01:31.520 --> 1:01:37.760
+ that the following sequence of events may happen. First things first, number one, there may be a
+
+1:01:37.760 --> 1:01:42.800
+ future in which, you know, there's like cars with LiDARs and everything and the cameras. But, you
+
+1:01:42.800 --> 1:01:47.920
+ know, this, in this 50 year ahead future, they can just drive with cameras as well, especially in
+
+1:01:47.920 --> 1:01:52.720
+ some isolated environments and cameras, they go and they do the thing. In the same future, it's
+
+1:01:52.720 --> 1:01:58.160
+ very possible that, you know, the LiDARs are so cheap, and frankly, make the software maybe
+
+1:01:58.160 --> 1:02:03.760
+ a little less compute intensive at the very least, or maybe less complicated so that they can be
+
+1:02:03.760 --> 1:02:10.080
+ certified or, or ensure their safety and things like that, that it's kind of stupid not to put
+
+1:02:10.080 --> 1:02:16.080
+ the LiDAR. Like, imagine this, you either put pay money for the LiDAR, or you pay money for the
+
+1:02:16.080 --> 1:02:21.520
+ compute. And if you don't put the LiDAR, it's a more expensive system, because you have to put
+
+1:02:21.520 --> 1:02:26.640
+ in a lot of compute. Like, this is another possibility. I do think that a lot of the
+
+1:02:26.640 --> 1:02:30.960
+ sort of initial deployments of self driving vehicles, I think they will involve LiDARs.
+
+1:02:31.760 --> 1:02:38.560
+ And especially either low range or short, either short range or low resolution LiDARs are actually
+
+1:02:38.560 --> 1:02:44.480
+ not that hard to build in solid state. They're still scanning, but like MAMS type of scanning
+
+1:02:44.480 --> 1:02:48.240
+ LiDARs and things like that, they're like, they're actually not that hard. I think they will,
+
+1:02:48.240 --> 1:02:52.240
+ maybe kind of playing with the spectrum and the phase arrays that they're a little bit harder,
+
+1:02:52.240 --> 1:02:58.960
+ but, but I think, like, you know, putting a MAMS mirror in that kind of scans the environment.
+
+1:02:59.520 --> 1:03:03.920
+ It's not hard. The only thing is that, you know, you just like with a lot of the things that we
+
+1:03:03.920 --> 1:03:08.800
+ do nowadays in developing technology, you hit fundamental limits of the universe. The speed
+
+1:03:08.800 --> 1:03:13.360
+ of light becomes a problem in when you're trying to scan the environment. So you don't get either
+
+1:03:13.360 --> 1:03:18.880
+ good resolution or you don't get range. But, but, you know, it's still, it's something that you
+
+1:03:18.880 --> 1:03:27.200
+ can put in that affordably. So let me jump back to drones. You've, you have a role in the Lockheed
+
+1:03:27.200 --> 1:03:34.560
+ Martin Alpha Pilot Innovation Challenge where teams compete in drone racing. It's super cool,
+
+1:03:34.560 --> 1:03:41.760
+ super intense, interesting application of AI. So can you tell me about the very basics of the
+
+1:03:41.760 --> 1:03:47.920
+ challenge and where you fit in, what your thoughts are on this problem? And it's a set of echoes of
+
+1:03:47.920 --> 1:03:53.280
+ the early DARPA challenge in the through the desert that we're seeing now, now with drone racing.
+
+1:03:54.240 --> 1:03:59.120
+ Yeah. I mean, one interesting thing about it is that, you know, people, the drone racing
+
+1:03:59.120 --> 1:04:04.400
+ exists as an eSport. And so it's much like you're playing a game, but there's a real drone going
+
+1:04:04.400 --> 1:04:11.120
+ in an environment. A human being is controlling it with goggles on. So there's no, it is a robot,
+
+1:04:11.120 --> 1:04:16.800
+ but there's no AI. There's no AI. Yeah. Human being is controlling it. And so that's already there.
+
+1:04:16.800 --> 1:04:22.160
+ And, and I've been interested in this problem for quite a while, actually, from a roboticist's
+
+1:04:22.160 --> 1:04:26.480
+ point of view. And that's what's happening in Alpha Pilot. Which, which problem of aggressive flight?
+
+1:04:26.480 --> 1:04:32.080
+ Of aggressive flight. Fully autonomous aggressive flight. The problem that I'm interested in,
+
+1:04:32.080 --> 1:04:35.920
+ you asked about Alpha Pilot, and I'll get there in a second. But the problem that I'm interested in,
+
+1:04:35.920 --> 1:04:42.800
+ I'd love to build autonomous vehicles like drones that can go far faster than any human
+
+1:04:42.800 --> 1:04:49.040
+ possibly can. I think we should recognize that we as humans have, you know, limitations in,
+
+1:04:49.040 --> 1:04:54.880
+ in how fast we can process information. And those are some biological limitations. Like we think
+
+1:04:54.880 --> 1:04:59.920
+ about this AI this way too. I mean, this has been discussed a lot. And this is not sort of my idea,
+
+1:04:59.920 --> 1:05:04.240
+ per se, but a lot of people kind of think about human level AI. And they think that, you know,
+
+1:05:04.240 --> 1:05:08.800
+ AI is not human level. One day it'll be human level and humans and AI's, they kind of interact.
+
+1:05:08.800 --> 1:05:14.480
+ Versus, I think that the situation really is that humans are at a certain place, and AI keeps improving,
+
+1:05:14.480 --> 1:05:18.880
+ and at some point just crosses off. And then, you know, it gets smarter and smarter and smarter.
+
+1:05:19.600 --> 1:05:26.640
+ And so, drone racing, the same issue. Humans play this game. And, you know, you have to like react
+
+1:05:26.640 --> 1:05:31.920
+ in milliseconds. And there's really, you know, you see something with your eyes. And then that
+
+1:05:31.920 --> 1:05:36.880
+ information just flows through your brain into your hands so that you can command it. And there's
+
+1:05:36.880 --> 1:05:40.160
+ some also delays on, you know, getting information back and forth. But suppose those delays that
+
+1:05:40.160 --> 1:05:48.000
+ don't exist, you just, just a delay between your eye and your fingers. It is a delay that a robot
+
+1:05:48.000 --> 1:05:55.120
+ doesn't have to have. So we end up building in my research group, like systems that, you know,
+
+1:05:55.120 --> 1:06:01.520
+ see things at a kilohertz, like a human eye would barely hit 100 hertz. So imagine things that see
+
+1:06:01.520 --> 1:06:07.840
+ stuff in slow motion, like 10x slow motion. It will be very useful. Like we talked a lot about
+
+1:06:07.840 --> 1:06:14.560
+ autonomous cars. So, you know, we don't get to see it, but 100 lives are lost every day,
+
+1:06:15.120 --> 1:06:20.240
+ just in the United States on traffic accidents. And many of them are like known cases, you know,
+
+1:06:20.240 --> 1:06:26.240
+ like the, you're coming through like a ramp, going into a highway, you hit somebody and you're
+
+1:06:26.240 --> 1:06:31.760
+ off. Or, you know, like you kind of get confused, you try to like swerve into the next lane, you go
+
+1:06:31.760 --> 1:06:37.840
+ off the road and you crash, whatever. And I think if you had enough compute in a car, and a very
+
+1:06:37.840 --> 1:06:43.920
+ fast camera, right at the time of an accident, you could use all compute you have, like you could
+
+1:06:43.920 --> 1:06:50.160
+ shut down the infotainment system, and use that kind of computing resources instead of rendering,
+
+1:06:50.160 --> 1:06:56.160
+ you use it for the kind of artificial intelligence that goes in there, the autonomy. And you know,
+
+1:06:56.160 --> 1:07:01.120
+ and you can, you can either take control of the car and bring it to a full stop. But even if you
+
+1:07:01.120 --> 1:07:06.080
+ can't do that, you can deliver what the human is trying to do. Human is trying to change the lane,
+
+1:07:06.080 --> 1:07:11.040
+ but goes off the road, not being able to do that with motor skills and the eyes. And you know,
+
+1:07:11.040 --> 1:07:15.520
+ you can get in there. And I was, there's so many other things that you can enable with what I would
+
+1:07:15.520 --> 1:07:21.920
+ call high throughput computing, you know, data is coming in extremely fast. And in real time,
+
+1:07:21.920 --> 1:07:29.760
+ you have to process it. And the current CPUs, however fast you clock it, are typically not
+
+1:07:29.760 --> 1:07:34.880
+ enough. You need to build those computers from the ground up so that they can ingest all that data.
+
+1:07:34.880 --> 1:07:36.320
+ That I'm really interested in.
+
+1:07:36.320 --> 1:07:41.920
+ Just on that point, just really quick, is the currently what's the bottom like you mentioned,
+
+1:07:41.920 --> 1:07:47.440
+ the delays in humans? Is it the hardware? So you work a lot with NVIDIA hardware?
+
+1:07:47.440 --> 1:07:52.720
+ Is it the hardware or is it the software? I think it's both. I think it's both. In fact,
+
+1:07:52.720 --> 1:07:56.240
+ they need to be co developed, I think, in the future. I mean, that's a little bit what NVIDIA
+
+1:07:56.240 --> 1:08:01.040
+ does. Sort of like they almost like build the hardware, and then they build neural networks,
+
+1:08:01.040 --> 1:08:04.640
+ and then they build the hardware back and the neural networks back and it goes back and forth.
+
+1:08:04.640 --> 1:08:10.400
+ But it's that co design. And I think that, you know, like, we try to weigh back, we try to build
+
+1:08:10.400 --> 1:08:15.920
+ a fast drone that could use a camera image to like track what's moving in order to find where it is
+
+1:08:15.920 --> 1:08:20.880
+ in the world. This typical sort of, you know, visual inertial state estimation problems that we
+
+1:08:20.880 --> 1:08:25.440
+ would solve. And, you know, we just kind of realized that we're at the limit sometimes of,
+
+1:08:25.440 --> 1:08:29.760
+ you know, doing simple tasks, we're at the limit of the camera frame rate. Because, you know,
+
+1:08:29.760 --> 1:08:35.600
+ if you really want to track things, you want the camera image to be 90% kind of like or some
+
+1:08:35.600 --> 1:08:41.520
+ somewhat the same from one frame to the next. And why are we at the limit of the camera frame
+
+1:08:41.520 --> 1:08:48.480
+ rate? It's because camera captures data. It puts into some serial connection. It could be USB,
+
+1:08:48.480 --> 1:08:53.200
+ or like there's something called camera serial interface that we use a lot. It puts into some
+
+1:08:53.200 --> 1:08:59.120
+ serial connection. And copper wires can only transmit so much data. And you hit the channel
+
+1:08:59.120 --> 1:09:06.080
+ limit on copper wires. And, you know, you hit yet another kind of universal limit that you can
+
+1:09:06.080 --> 1:09:11.120
+ transfer the data. So you have to be much more intelligent on how you capture those pixels.
+
+1:09:11.120 --> 1:09:16.880
+ You can take compute and put it right next to the pixels. People are building those.
+
+1:09:16.880 --> 1:09:22.640
+ How hard is it to do? How hard is it to get past the bottleneck of the copper wire?
+
+1:09:23.520 --> 1:09:27.920
+ Yeah, you need to do a lot of parallel processing, as you can imagine. The same thing happens in the
+
+1:09:27.920 --> 1:09:32.880
+ GPUs, you know, like the data is transferred in parallel somehow. It gets into some parallel
+
+1:09:32.880 --> 1:09:38.000
+ processing. I think that, you know, like now we're really kind of diverted off into so many
+
+1:09:38.000 --> 1:09:42.960
+ different dimensions. Great. So it's aggressive flight. How do we make drones see many more
+
+1:09:42.960 --> 1:09:47.920
+ frames a second in order to enable aggressive flight? That's a super interesting problem.
+
+1:09:47.920 --> 1:09:54.000
+ That's an interesting problem. But think about it. You have CPUs. You clock them at, you know,
+
+1:09:54.000 --> 1:10:00.880
+ several gigahertz. We don't clock them faster largely because we run into some heating issues
+
+1:10:00.880 --> 1:10:06.880
+ and things like that. But another thing is that three gigahertz clock. Light travels kind of like
+
+1:10:06.880 --> 1:10:13.680
+ on the order of a few inches or an inch. That's the size of a chip. And so you pass a clock cycle.
+
+1:10:14.320 --> 1:10:20.400
+ And as the clock signal is going around in the chip, you pass another one. And so trying to
+
+1:10:20.400 --> 1:10:25.120
+ coordinate that, the design of the complexity of the chip becomes so hard. I mean, we have hit
+
+1:10:25.680 --> 1:10:29.600
+ the fundamental limits of the universe in so many things that we're designing. I don't know
+
+1:10:29.600 --> 1:10:34.000
+ if people realize that. It's great. But like we can't make transistors smaller because like
+
+1:10:34.000 --> 1:10:39.200
+ quantum effects, electrons start to tunnel around. We can't clock it faster. One of the reasons why
+
+1:10:39.200 --> 1:10:46.080
+ is because like information doesn't travel faster in the universe. And we're limited by that. Same
+
+1:10:46.080 --> 1:10:53.280
+ thing with the laser scanner. But so then it becomes clear that, you know, the way you organize the
+
+1:10:53.280 --> 1:11:00.080
+ chip into a CPU or even a GPU, you now need to look at how to redesign that if you're going to stick
+
+1:11:00.080 --> 1:11:05.200
+ with silicon. You could go do other things too. I mean, there's that too. But you really almost
+
+1:11:05.200 --> 1:11:09.040
+ need to take those transistors, put them in a different way so that the information travels on
+
+1:11:09.040 --> 1:11:15.920
+ those transistors in a different way in a much more way that is specific to the high speed
+
+1:11:15.920 --> 1:11:21.280
+ cameras coming in. And so that's one of the things that we talk about quite a bit. So drone racing
+
+1:11:21.280 --> 1:11:28.000
+ kind of really makes that embodies that embodies that. And that's why it's exciting. It's exciting
+
+1:11:28.000 --> 1:11:34.000
+ for people, you know, students like it, it embodies all those problems. But going back, we're building
+
+1:11:34.000 --> 1:11:40.400
+ code and code and other engine. And that engine, I hope one day will be just like how impactful
+
+1:11:40.400 --> 1:11:48.080
+ seat belts were in driving. I hope so. Or it could enable, you know, next generation autonomous air
+
+1:11:48.080 --> 1:11:52.880
+ taxis and things like that. I mean, it sounds crazy, but one day we may need to perchland these
+
+1:11:52.880 --> 1:11:58.240
+ things. If you really want to go from Boston to New York in more than a half hours, you may want
+
+1:11:58.240 --> 1:12:03.040
+ to fix big aircraft. Most of these companies that are kind of doing code flying cars, they're
+
+1:12:03.040 --> 1:12:07.520
+ focusing on that. But then how do you land it on top of a building, you may need to pull off like
+
+1:12:07.520 --> 1:12:13.840
+ kind of fast maneuvers for a robot like perch landing, just going to go into into a building.
+
+1:12:13.840 --> 1:12:20.800
+ If you want to do that, like you need these kinds of systems. And so drone racing, you know, it's
+
+1:12:20.800 --> 1:12:27.920
+ being able to go very faster than any human can comprehend. Take an aircraft. Forget the quad
+
+1:12:27.920 --> 1:12:32.160
+ copter, you take a fixed wing. While you're at it, you might as well put some like rocket engines
+
+1:12:32.160 --> 1:12:36.320
+ in the back and just light it. You go through the gate and a human looks at it and just said,
+
+1:12:36.960 --> 1:12:42.000
+ what just happened? And they would say it's impossible for me to do that. And that's closing
+
+1:12:42.000 --> 1:12:47.760
+ the same technology gap that would, you know, one day steer cars out of accidents.
+
+1:12:47.760 --> 1:12:55.760
+ So, but then let's get back to the practical, which is sort of just getting the thing to work
+
+1:12:55.760 --> 1:13:01.120
+ in a race environment, which is kind of what the, it's another kind of exciting thing,
+
+1:13:01.120 --> 1:13:05.840
+ which the DARPA challenge to the desert did, you know, theoretically, we had autonomous vehicles,
+
+1:13:05.840 --> 1:13:12.160
+ but making them successfully finish a race, first of all, which nobody finished the first year.
+
+1:13:12.160 --> 1:13:17.920
+ And then the second year, just to get, you know, to finish and go at a reasonable time is really
+
+1:13:17.920 --> 1:13:23.120
+ difficult engineering, practically speaking challenge. So that, let me ask about the,
+
+1:13:23.120 --> 1:13:29.360
+ the, the alpha pilot challenge is a, I guess a big prize potentially associated with it.
+
+1:13:29.360 --> 1:13:35.040
+ But let me ask reminiscent of the DARPA days, predictions, you think anybody will finish?
+
+1:13:35.040 --> 1:13:42.960
+ Well, not, not soon. I think that depends on how you set up the race course. And so if the race
+
+1:13:42.960 --> 1:13:48.800
+ course is a slow on course, I think people will kind of do it. But can you set up some course,
+
+1:13:49.360 --> 1:13:54.880
+ like literally some core, you get to design it is the algorithm developer. Can you set up some
+
+1:13:54.880 --> 1:14:01.760
+ course so that you can beat the best human? When is that going to happen? Like that's not very easy,
+
+1:14:01.760 --> 1:14:06.640
+ even just setting up some course. If you let the human that you're competing with set up the course,
+
+1:14:06.640 --> 1:14:13.520
+ it becomes a lot easier, a lot harder. So how many in the space of all possible courses
+
+1:14:15.120 --> 1:14:20.720
+ are would humans win and would machines win? Great question. Let's get to that. I want to
+
+1:14:20.720 --> 1:14:25.680
+ answer your other question, which is like the DARPA challenge days, right? What was really hard? I
+
+1:14:25.680 --> 1:14:31.200
+ think, I think we understand, we understood what we wanted to build, but still building things that
+
+1:14:31.200 --> 1:14:37.200
+ experimentation that iterated learning that takes up a lot of time actually. And so in my group,
+
+1:14:37.200 --> 1:14:42.960
+ for example, in order for us to be able to develop fast, we build like VR environments,
+
+1:14:42.960 --> 1:14:48.080
+ we'll take an aircraft, we'll put it in a motion capture room, big, huge motion capture room,
+
+1:14:48.640 --> 1:14:53.440
+ and we'll fly it in real time, we'll render other images and beam it back to the drone.
+
+1:14:54.240 --> 1:14:59.200
+ That sounds kind of notionally simple, but it's actually hard because now you're trying to fit
+
+1:14:59.200 --> 1:15:05.120
+ all that data through the air into the drone. And so you need to do a few crazy things to make that
+
+1:15:05.120 --> 1:15:10.720
+ happen. But once you do that, then at least you can try things. If you crash into something,
+
+1:15:10.720 --> 1:15:15.440
+ you didn't actually crash. So it's like the whole drone is in VR, we can do augmented reality and
+
+1:15:15.440 --> 1:15:21.120
+ so on. And so I think at some point, testing becomes very important. One of the nice things
+
+1:15:21.120 --> 1:15:27.200
+ about AlphaPilot is that they built the drone, and they build a lot of drones. And it's okay to
+
+1:15:27.200 --> 1:15:34.400
+ crash. In fact, I think maybe the viewers may kind of like to see things that crash.
+
+1:15:34.400 --> 1:15:38.640
+ That potentially could be the most exciting part. It could be the exciting part. And I think,
+
+1:15:38.640 --> 1:15:44.960
+ as an engineer, it's a very different situation to be in. Like in academia, a lot of my colleagues
+
+1:15:44.960 --> 1:15:49.440
+ who are actually in this race, and they're really great researchers, but I've seen them
+
+1:15:49.440 --> 1:15:55.200
+ trying to do similar things whereby they built this drone and somebody with like a face mask and
+
+1:15:55.200 --> 1:16:01.120
+ a glows are going right behind the drone, trying to hold it if it falls down. Imagine you don't
+
+1:16:01.120 --> 1:16:05.920
+ have to do that. I think that's one of the nice things about AlphaPilot Challenge where we have
+
+1:16:05.920 --> 1:16:11.680
+ these drones and we're going to design the courses in a way that we'll keep pushing people up until
+
+1:16:11.680 --> 1:16:19.840
+ the crashes start to happen. And I don't think you want to tell people crashing is okay. We
+
+1:16:19.840 --> 1:16:24.800
+ want to be careful here because we don't want people to crash a lot. But certainly, we want them
+
+1:16:24.800 --> 1:16:31.360
+ to push it so that everybody crashes once or twice. And they're really pushing it to their limits.
+
+1:16:32.000 --> 1:16:36.080
+ That's where iterated learning comes in. Every crash is a lesson.
+
+1:16:36.080 --> 1:16:37.360
+ It's a lesson, exactly.
+
+1:16:37.360 --> 1:16:44.800
+ So in terms of the space of possible courses, how do you think about it in the war of human
+
+1:16:44.800 --> 1:16:50.320
+ versus machines? Where do machines win? We look at that quite a bit. I think that you will see
+
+1:16:50.320 --> 1:16:57.680
+ quickly that you can design a course. And in certain courses, like in the middle somewhere,
+
+1:16:58.720 --> 1:17:06.240
+ if you kind of run through the course once, the machine gets beaten pretty much consistently
+
+1:17:06.240 --> 1:17:12.160
+ by slightly. But if you go through the course like 10 times, humans get beaten very slightly
+
+1:17:12.160 --> 1:17:17.040
+ but consistently. So humans at some point, you get confused, you get tired and things like that
+
+1:17:17.040 --> 1:17:23.280
+ versus this machine is just executing the same line of code tirelessly, just going back to the
+
+1:17:23.280 --> 1:17:29.120
+ beginning and doing the same thing exactly. I think that kind of thing happens. And as I
+
+1:17:29.120 --> 1:17:38.000
+ realized as humans, there's the classical things that everybody has realized. If you put in some
+
+1:17:38.000 --> 1:17:42.480
+ sort of strategic thinking that's a little bit harder for machines that I think sort of comprehend,
+
+1:17:42.480 --> 1:17:51.520
+ precision is easy to do. So that's what they excel in. And also sort of repeatability is
+
+1:17:51.520 --> 1:17:57.600
+ easy to do. That's what they excel in. You can build machines that excel in strategy as well
+
+1:17:57.600 --> 1:18:02.880
+ and beat humans that way too, but that's a lot harder to build. I have a million more questions,
+
+1:18:02.880 --> 1:18:08.400
+ but in the interest of time, last question. What is the most beautiful idea you've come
+
+1:18:08.400 --> 1:18:14.080
+ across in robotics? Whether it's simple equation, experiment, a demo, simulation, piece of software,
+
+1:18:14.800 --> 1:18:23.440
+ what just gives you pause? That's an interesting question. I have done a lot of work myself
+
+1:18:23.440 --> 1:18:30.240
+ in decision making. So I've been interested in that area. So robotics, you have somehow the
+
+1:18:30.240 --> 1:18:35.440
+ field has split into like, there's people who would work on like perception, how robots perceive
+
+1:18:35.440 --> 1:18:39.920
+ the environment, then how do you actually make decisions? And there's people also like how
+
+1:18:39.920 --> 1:18:45.920
+ to interact with robots. There's a whole bunch of different fields. And I have admittedly worked
+
+1:18:45.920 --> 1:18:54.640
+ a lot on the more control and decision making than the others. And I think that the one equation
+
+1:18:54.640 --> 1:19:02.320
+ that has always kind of baffled me is Bellman's equation. And so it's this person who have realized
+
+1:19:02.320 --> 1:19:09.760
+ like way back, you know, more than half a century ago on like, how do you actually sit down?
+
+1:19:10.480 --> 1:19:14.720
+ And if you have several variables that you're kind of jointly trying to determine,
+
+1:19:15.360 --> 1:19:21.200
+ how do you determine that? And there's one beautiful equation that, you know, like today
+
+1:19:21.200 --> 1:19:28.160
+ people do reinforcement, we still use it. And it's baffling to me because it both kind of
+
+1:19:28.160 --> 1:19:33.120
+ tells you the simplicity, because it's a single equation that anyone can write down, you can teach
+
+1:19:33.120 --> 1:19:39.120
+ it in the first course on decision making. At the same time, it tells you how computationally,
+
+1:19:39.120 --> 1:19:44.160
+ how hard the problem is. I feel like my, like a lot of the things that I've done at MIT for research
+
+1:19:44.160 --> 1:19:49.120
+ has been kind of just this fight against computational efficiency things, like how can we get it
+
+1:19:49.120 --> 1:19:54.960
+ faster to the point where we now got to like, let's just redesign this chip, like maybe that's the way.
+
+1:19:54.960 --> 1:20:03.680
+ But I think it talks about how computationally hard certain problems can be by nowadays what people
+
+1:20:03.680 --> 1:20:11.440
+ call curse of dimensionality. And so as the number of variables kind of grow, the number of decisions
+
+1:20:11.440 --> 1:20:18.640
+ you can make grows rapidly. Like if you have, you know, 100 variables, each one of them take 10
+
+1:20:18.640 --> 1:20:23.440
+ values, all possible assignments is more than the number of atoms in the universe. It's just
+
+1:20:23.440 --> 1:20:29.360
+ crazy. And that kind of thinking is just embodied in that one equation that I really like.
+
+1:20:29.360 --> 1:20:36.240
+ And the beautiful balance between it being theoretically optimal, and somehow practically
+
+1:20:36.240 --> 1:20:43.760
+ speaking, given the curse of dimensionality, nevertheless, in practice works among, you know,
+
+1:20:43.760 --> 1:20:47.920
+ despite all those challenges, which is quite incredible, which is quite incredible. So,
+
+1:20:47.920 --> 1:20:51.920
+ you know, I would say that it's kind of like quite baffling actually, you know,
+
+1:20:51.920 --> 1:20:58.640
+ in a lot of fields that we think about how little we know, you know, like, and so I think here too,
+
+1:20:58.640 --> 1:21:04.160
+ you know, we know that in the worst case, things are pretty hard. But, you know, in practice,
+
+1:21:04.160 --> 1:21:09.920
+ generally things work. So it's just kind of it's kind of baffling and decision making how little
+
+1:21:09.920 --> 1:21:15.040
+ we know, just like how little we know about the beginning of time, how little we know about,
+
+1:21:15.040 --> 1:21:21.360
+ how little we know about, you know, our own future. Like, if you actually go into like from
+
+1:21:21.360 --> 1:21:25.360
+ Bauman's equation all the way down, I mean, there's also how little we know about like
+
+1:21:25.360 --> 1:21:29.440
+ mathematics. I mean, we don't even know if the axioms are consistent. It's just crazy.
+
+1:21:29.440 --> 1:21:35.600
+ Yeah. I think a good lesson there, just like as you said, we tend to focus on the worst case
+
+1:21:35.600 --> 1:21:40.080
+ or the boundaries of everything we're studying. And then the average case seems to somehow
+
+1:21:40.080 --> 1:21:46.000
+ work out. If you think about life in general, we mess it up a bunch, you know, we freak out about
+
+1:21:46.000 --> 1:21:50.800
+ a bunch of the traumatic stuff, but in the end, it seems to work out okay. Yeah, it seems like a
+
+1:21:50.800 --> 1:21:57.440
+ good metaphor. Sir Tash, thank you so much for being a friend, a colleague, a mentor. I really
+
+1:21:57.440 --> 1:22:02.400
+ appreciate it. It's an honor to talk to you. Likewise. Thank you, Lex. Thanks for listening to
+
+1:22:02.400 --> 1:22:07.120
+ this conversation with Sir Tash Karaman. And thank you to our presenting sponsor, Cash App.
+
+1:22:07.120 --> 1:22:12.160
+ Please consider supporting the podcast by downloading Cash App and using code Lex podcast.
+
+1:22:12.720 --> 1:22:17.680
+ If you enjoy this podcast, subscribe on YouTube, review it with five stars on Apple podcast,
+
+1:22:17.680 --> 1:22:22.160
+ support it on Patreon, or simply connect with me on Twitter at Lex Freedman.
+
+1:22:22.960 --> 1:22:29.760
+ And now let me leave you with some words from Hal 9000 from the movie 2001, A Space Odyssey.
+
+1:22:30.960 --> 1:22:36.800
+ I'm putting myself to the fullest possible use, which is all I think that any conscious entity
+
+1:22:36.800 --> 1:22:42.400
+ can ever hope to do. Thank you for listening and hope to see you next time.
+

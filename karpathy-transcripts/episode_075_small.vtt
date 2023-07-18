@@ -1,0 +1,4346 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+ The following is a conversation with Marcus Hutter, Senior Research Scientist at Google DeepMind.
+
+00:06.000 --> 00:11.000
+ Throughout his career of research, including with Jörgen Schmitthuber and Shane Legg,
+
+00:11.000 --> 00:17.000
+ he has proposed a lot of interesting ideas in and around the field of artificial general intelligence,
+
+00:17.000 --> 00:22.000
+ including the development of IEXI, spelled AIXI model,
+
+00:22.000 --> 00:27.000
+ which is a mathematical approach to AGI that incorporates ideas of
+
+00:27.000 --> 00:33.000
+ Kamogorov complexity, Solomanov induction, and reinforcement learning.
+
+00:33.000 --> 00:41.000
+ In 2006, Marcus launched the 50,000 Euro Hutter Prize for Lossless Compression of Human Knowledge.
+
+00:41.000 --> 00:48.000
+ The idea behind this prize is that the ability to compress well is closely related to intelligence.
+
+00:48.000 --> 00:51.000
+ This, to me, is a profound idea.
+
+00:51.000 --> 00:58.000
+ Specifically, if you can compress the first 100 megabytes or 1 gigabyte of Wikipedia better than your predecessors,
+
+00:58.000 --> 01:02.000
+ your compressor likely has to also be smarter.
+
+01:02.000 --> 01:09.000
+ The intention of this prize is to encourage the development of intelligent compressors as a path to AGI.
+
+01:09.000 --> 01:13.000
+ In conjunction with his podcast release just a few days ago,
+
+01:13.000 --> 01:19.000
+ Marcus announced a 10x increase in several aspects of this prize, including the money,
+
+01:19.000 --> 01:22.000
+ to 500,000 Euros.
+
+01:22.000 --> 01:29.000
+ The better your compressor works, relative to the previous winners, the higher fraction of that prize money is awarded to you.
+
+01:29.000 --> 01:34.000
+ You can learn more about it if you Google simply Hutter Prize.
+
+01:34.000 --> 01:38.000
+ I'm a big fan of benchmarks for developing AI systems,
+
+01:38.000 --> 01:43.000
+ and the Hutter Prize may indeed be one that will spark some good ideas for approaches
+
+01:43.000 --> 01:47.000
+ that will make progress on the path of developing AGI systems.
+
+01:47.000 --> 01:50.000
+ This is the Artificial Intelligence Podcast.
+
+01:50.000 --> 01:54.000
+ If you enjoy it, subscribe on YouTube, give it 5 stars on Apple Podcasts,
+
+01:54.000 --> 02:02.000
+ support it on Patreon, or simply connect with me on Twitter at Lex Freedman, spelled F R I D M A N.
+
+02:02.000 --> 02:09.000
+ As usual, I'll do one or two minutes of ads now and never any ads in the middle that can break the flow of the conversation.
+
+02:09.000 --> 02:13.000
+ I hope that works for you and doesn't hurt the listening experience.
+
+02:13.000 --> 02:17.000
+ This show is presented by Cash App, the number one finance app in the App Store.
+
+02:17.000 --> 02:21.000
+ When you get it, use code LEX Podcast.
+
+02:21.000 --> 02:27.000
+ Cash App lets you send money to friends, buy Bitcoin, and invest in the stock market with as little as $1.
+
+02:27.000 --> 02:34.000
+ Brokerage services are provided by Cash App Investing, a subsidiary of Square, and member SIPC.
+
+02:34.000 --> 02:42.000
+ Since Cash App allows you to send and receive money digitally, peer to peer, and security in all digital transactions is very important.
+
+02:42.000 --> 02:48.000
+ Let me mention the PCI Data Security Standard that Cash App is compliant with.
+
+02:48.000 --> 02:52.000
+ I'm a big fan of standards for safety and security.
+
+02:52.000 --> 03:02.000
+ PCI DSS is a good example of that, where a bunch of competitors got together and agreed that there needs to be a global standard around the security of transactions.
+
+03:02.000 --> 03:08.000
+ Now, we just need to do the same for autonomous vehicles and AI systems in general.
+
+03:08.000 --> 03:16.000
+ So again, if you get Cash App from the App Store or Google Play and use the code LEX Podcast, you'll get $10.
+
+03:16.000 --> 03:27.000
+ And Cash App will also donate $10 to FIRST, one of my favorite organizations that is helping to advance robotics and STEM education for young people around the world.
+
+03:27.000 --> 03:32.000
+ And now, here's my conversation with Marcus Hutter.
+
+03:32.000 --> 03:37.000
+ Do you think of the universe as a computer or maybe an information processing system?
+
+03:37.000 --> 03:39.000
+ Let's go with a big question first.
+
+03:39.000 --> 03:41.000
+ Okay, with a big question first.
+
+03:41.000 --> 03:45.000
+ I think it's a very interesting hypothesis or idea.
+
+03:45.000 --> 03:48.000
+ And I have a background in physics.
+
+03:48.000 --> 03:54.000
+ So I know a little bit about physical theories, the standard model of particle physics and general relativity theory.
+
+03:54.000 --> 03:58.000
+ And they are amazing and describe virtually everything in the universe.
+
+03:58.000 --> 04:00.000
+ And they're all, in a sense, computable theories.
+
+04:00.000 --> 04:02.000
+ I mean, they're very hard to compute.
+
+04:02.000 --> 04:07.000
+ And it's very elegant, simple theories which describe virtually everything in the universe.
+
+04:07.000 --> 04:15.000
+ So there's a strong indication that somehow the universe is computable.
+
+04:15.000 --> 04:17.000
+ But it's a plausible hypothesis.
+
+04:17.000 --> 04:22.000
+ So what do you think, just like you said, general relativity, quantum field theory,
+
+04:22.000 --> 04:28.000
+ what do you think that the laws of physics are so nice and beautiful and simple and compressible?
+
+04:28.000 --> 04:34.000
+ Do you think our universe was designed is naturally this way?
+
+04:34.000 --> 04:39.000
+ Are we just focusing on the parts that are especially compressible?
+
+04:39.000 --> 04:43.000
+ Are human minds just enjoy something about that simplicity?
+
+04:43.000 --> 04:46.000
+ And in fact, there's other things that are not so compressible.
+
+04:46.000 --> 04:53.000
+ No, I strongly believe and I'm pretty convinced that the universe is inherently beautiful, elegant and simple
+
+04:53.000 --> 04:55.000
+ and described by these equations.
+
+04:55.000 --> 04:57.000
+ And we're not just picking that.
+
+04:57.000 --> 05:04.000
+ I mean, if there were some phenomena which cannot be neatly described, scientists would try that.
+
+05:04.000 --> 05:09.000
+ And there's biology which is more messy, but we understand that it's an emergent phenomena.
+
+05:09.000 --> 05:14.000
+ And it's complex systems, but they still follow the same rules of quantum and electrodynamics.
+
+05:14.000 --> 05:16.000
+ All of chemistry follows that and we know that.
+
+05:16.000 --> 05:20.000
+ I mean, we cannot compute everything because we have limited computational resources.
+
+05:20.000 --> 05:24.000
+ No, I think it's not a bias of the humans, but it's objectively simple.
+
+05:24.000 --> 05:28.000
+ I mean, of course, you never know, maybe there's some corners very far out in the universe
+
+05:28.000 --> 05:36.000
+ or super, super tiny below the nucleus of atoms or parallel universes
+
+05:36.000 --> 05:40.000
+ which are not nice and simple, but there's no evidence for that.
+
+05:40.000 --> 05:45.000
+ And we should apply Occam's razor and choose the simple streak consistent with it.
+
+05:45.000 --> 05:48.000
+ But although it's a little bit self referential.
+
+05:48.000 --> 05:49.000
+ So maybe a quick pause.
+
+05:49.000 --> 05:51.000
+ What is Occam's razor?
+
+05:51.000 --> 05:57.000
+ So Occam's razor says that you should not multiply entities beyond necessity,
+
+05:57.000 --> 06:02.000
+ which sort of if you translate it to proper English means and, you know,
+
+06:02.000 --> 06:06.000
+ in the scientific context means that if you have two theories or hypothesis or models
+
+06:06.000 --> 06:11.000
+ which equally well describe the phenomenon you're studying or the data,
+
+06:11.000 --> 06:13.000
+ you should choose the more simple one.
+
+06:13.000 --> 06:15.000
+ So that's just the principle?
+
+06:15.000 --> 06:16.000
+ Yes.
+
+06:16.000 --> 06:20.000
+ Sort of that's not like a provable law perhaps.
+
+06:20.000 --> 06:23.000
+ We'll kind of discuss it and think about it.
+
+06:23.000 --> 06:30.000
+ But what's the intuition of why the simpler answer is the one that is likely
+
+06:30.000 --> 06:34.000
+ to be more correct descriptor of whatever we're talking about?
+
+06:34.000 --> 06:40.000
+ I believe that Occam's razor is probably the most important principle in science.
+
+06:40.000 --> 06:44.000
+ I mean, of course, we need logical deduction and we do experimental design.
+
+06:44.000 --> 06:51.000
+ But science is about finding understanding the world, finding models of the world.
+
+06:51.000 --> 06:54.000
+ And we can come up with crazy complex models which, you know,
+
+06:54.000 --> 06:56.000
+ explain everything but predict nothing.
+
+06:56.000 --> 07:02.000
+ But the simple model seem to have predictive power and it's a valid question.
+
+07:02.000 --> 07:03.000
+ Why?
+
+07:03.000 --> 07:07.000
+ And the two answers to that you can just accept it.
+
+07:07.000 --> 07:12.000
+ That is the principle of science and we use this principle and it seems to be successful.
+
+07:12.000 --> 07:15.000
+ We don't know why, but it just happens to be.
+
+07:15.000 --> 07:21.000
+ Or you can try, you know, find another principle which explains Occam's razor.
+
+07:21.000 --> 07:27.000
+ And if we start with assumption that the world is governed by simple rules,
+
+07:27.000 --> 07:31.000
+ then there's a bias to our simplicity.
+
+07:31.000 --> 07:37.000
+ And applying Occam's razor is the mechanism to finding these rules.
+
+07:37.000 --> 07:40.000
+ And actually in a more quantitative sense and we come back to that later
+
+07:40.000 --> 07:44.000
+ in terms of some of the deduction, you can rigorously prove that you assume
+
+07:44.000 --> 07:49.000
+ that the world is simple, then Occam's razor is the best you can do in a certain sense.
+
+07:49.000 --> 07:56.000
+ So I apologize for the romanticized question, but why do you think outside of its effectiveness,
+
+07:56.000 --> 08:00.000
+ why do we, do you think we find simplicity so appealing as human beings?
+
+08:00.000 --> 08:08.000
+ Why does it just, why does E equals MC squared seem so beautiful to us humans?
+
+08:08.000 --> 08:15.000
+ I guess mostly, in general, many things can be explained by an evolutionary argument.
+
+08:15.000 --> 08:19.000
+ And, you know, there's some artifacts in humans which, you know, are just artifacts
+
+08:19.000 --> 08:21.000
+ and not an evolutionary necessary.
+
+08:21.000 --> 08:31.000
+ But with this beauty and simplicity, it's, I believe, at least the core is about,
+
+08:31.000 --> 08:36.000
+ like science, finding regularities in the world, understanding the world,
+
+08:36.000 --> 08:38.000
+ which is necessary for survival, right?
+
+08:38.000 --> 08:44.000
+ You know, if I look at a bush, right, and I just see noise and there is a tiger, right,
+
+08:44.000 --> 08:45.000
+ and eats me, then I'm dead.
+
+08:45.000 --> 08:52.000
+ But if I try to find a pattern and we know that humans are prone to find more patterns
+
+08:52.000 --> 08:57.000
+ in data than they are, you know, like, you know, Mars face and all these things,
+
+08:57.000 --> 09:02.000
+ but this bias towards finding patterns, even if they are not, but I mean,
+
+09:02.000 --> 09:06.000
+ it's best, of course, if they are, yeah, helps us for survival.
+
+09:06.000 --> 09:07.000
+ Yeah, that's fascinating.
+
+09:07.000 --> 09:11.000
+ I haven't thought really about the, I thought I just loved science,
+
+09:11.000 --> 09:16.000
+ but they're indeed from in terms of just for survival purposes.
+
+09:16.000 --> 09:24.000
+ There is an evolutionary argument for why we find the work of Einstein so beautiful.
+
+09:24.000 --> 09:26.000
+ Maybe a quick small tangent.
+
+09:26.000 --> 09:30.000
+ Could you describe what Solomonov induction is?
+
+09:30.000 --> 09:37.000
+ Yeah, so that's a theory which I claim and Resolominoff sort of claimed a long time ago
+
+09:37.000 --> 09:42.000
+ that this solves the big philosophical problem of induction.
+
+09:42.000 --> 09:45.000
+ And I believe the claim is essentially true.
+
+09:45.000 --> 09:47.000
+ And what he does is the following.
+
+09:47.000 --> 09:56.000
+ So, okay, for the picky listener induction can be interpreted narrowly and wildly narrow
+
+09:56.000 --> 10:03.000
+ means inferring models from data and widely means also then using these models
+
+10:03.000 --> 10:06.000
+ for doing predictions or predictions also part of the induction.
+
+10:06.000 --> 10:12.000
+ So I'm a little sloppy sort of with the terminology and maybe that comes from Resolominoff,
+
+10:12.000 --> 10:15.000
+ you know, being sloppy, maybe I shouldn't say that.
+
+10:15.000 --> 10:17.000
+ He can't complain anymore.
+
+10:17.000 --> 10:22.000
+ So let me explain a little bit this theory in simple terms.
+
+10:22.000 --> 10:25.000
+ So assume you have a data sequence, make it very simple.
+
+10:25.000 --> 10:28.000
+ The simplest one say one, one, one, one, one and you see if one hundred ones.
+
+10:28.000 --> 10:30.000
+ What do you think comes next?
+
+10:30.000 --> 10:32.000
+ The natural answer I'm going to speed up a little bit.
+
+10:32.000 --> 10:35.000
+ The natural answer is of course, you know, one.
+
+10:35.000 --> 10:36.000
+ Okay.
+
+10:36.000 --> 10:37.000
+ And the question is why?
+
+10:37.000 --> 10:38.000
+ Okay.
+
+10:38.000 --> 10:40.000
+ Well, we see a pattern there.
+
+10:40.000 --> 10:41.000
+ Yeah.
+
+10:41.000 --> 10:42.000
+ Okay.
+
+10:42.000 --> 10:43.000
+ There's a one and we repeat it.
+
+10:43.000 --> 10:45.000
+ And why should it suddenly after a hundred ones be different?
+
+10:45.000 --> 10:50.000
+ So what we're looking for is simple explanations or models for the data we have.
+
+10:50.000 --> 10:58.000
+ And now the question is a model has to be presented in a certain language in which language to be used in science.
+
+10:58.000 --> 11:03.000
+ We want formal languages and we can use mathematics or we can use programs on a computer.
+
+11:03.000 --> 11:08.000
+ So abstractly on a Turing machine, for instance, or it can be a general purpose computer.
+
+11:08.000 --> 11:14.000
+ So and there are of course lots of models of you can say maybe it's a hundred ones and then a hundred zeros and a hundred ones.
+
+11:14.000 --> 11:15.000
+ That's a model, right?
+
+11:15.000 --> 11:17.000
+ But they're simpler models.
+
+11:17.000 --> 11:19.000
+ There's a model print one loop.
+
+11:19.000 --> 11:21.000
+ That also explains the data.
+
+11:21.000 --> 11:32.000
+ And if you push that to the extreme, you are looking for the shortest program, which if you run this program reproduces the data you have, it will not stop.
+
+11:32.000 --> 11:34.000
+ It will continue naturally.
+
+11:34.000 --> 11:36.000
+ And this you take for your prediction.
+
+11:36.000 --> 11:39.000
+ And on the sequence of ones, it's very plausible, right?
+
+11:39.000 --> 11:41.000
+ That print one loop is the shortest program.
+
+11:41.000 --> 11:45.000
+ We can give some more complex examples like one, two, three, four, five.
+
+11:45.000 --> 11:46.000
+ What comes next?
+
+11:46.000 --> 11:48.000
+ The short program is again, you know, counter.
+
+11:48.000 --> 11:53.000
+ And so that is roughly speaking how Solomotiv induction works.
+
+11:53.000 --> 11:57.000
+ The extra twist is that it can also deal with noisy data.
+
+11:57.000 --> 12:06.000
+ So if you have, for instance, a coin flip, say a biased coin, which comes up head with 60 percent probability, then it will predict.
+
+12:06.000 --> 12:08.000
+ It will learn and figure this out.
+
+12:08.000 --> 12:13.000
+ And after a while, it predicts all the next coin flip will be head with probability 60 percent.
+
+12:13.000 --> 12:15.000
+ So it's the stochastic version of that.
+
+12:15.000 --> 12:18.000
+ The goal is the dream is always the search for the short program.
+
+12:18.000 --> 12:19.000
+ Yes.
+
+12:19.000 --> 12:20.000
+ Yeah.
+
+12:20.000 --> 12:23.000
+ Well, in Solomotiv induction, precisely what you do is so you combine.
+
+12:23.000 --> 12:29.000
+ So looking for the shortest program is like applying opus razor, like looking for the simplest theory.
+
+12:29.000 --> 12:36.000
+ There's also Epicoros principle, which says if you have multiple hypothesis, which equally well describe your data, don't discard any of them.
+
+12:36.000 --> 12:37.000
+ Keep all of them around.
+
+12:37.000 --> 12:38.000
+ You never know.
+
+12:38.000 --> 12:45.000
+ And you can put that together and say, okay, I have a bias towards simplicity, but I don't rule out the larger models.
+
+12:45.000 --> 12:52.000
+ And technically what we do is we weigh the shorter models higher and the longer models lower.
+
+12:52.000 --> 12:54.000
+ And you use a Bayesian techniques.
+
+12:54.000 --> 13:02.000
+ You have a prior and which is precisely two to the minus the complexity of the program.
+
+13:02.000 --> 13:07.000
+ And you weigh all this hypothesis and takes this mixture and then you get also this stochasticity in.
+
+13:07.000 --> 13:08.000
+ Yeah.
+
+13:08.000 --> 13:13.000
+ Like many of your ideas, that's just a beautiful idea of weighing based on the simplicity of the program.
+
+13:13.000 --> 13:14.000
+ I love that.
+
+13:14.000 --> 13:24.000
+ That seems to me maybe a very human centric concept seems to be a very appealing way of discovering good programs in this world.
+
+13:24.000 --> 13:28.000
+ You've used the term compression quite a bit.
+
+13:28.000 --> 13:30.000
+ I think it's a beautiful idea.
+
+13:30.000 --> 13:43.000
+ Sort of, we just talked about simplicity and maybe science or just all of our intellectual pursuits is basically the attempt to compress the complexity all around us into something simple.
+
+13:43.000 --> 13:48.000
+ So what does this word mean to you?
+
+13:48.000 --> 13:49.000
+ Compression.
+
+13:49.000 --> 13:52.000
+ I essentially have already explained it.
+
+13:52.000 --> 14:00.000
+ So it compression means for me finding short programs for the data or the phenomenon at hand.
+
+14:00.000 --> 14:09.000
+ You could interpret it more widely as finding simple theories which can be mathematical theories or maybe even informal like just in words.
+
+14:09.000 --> 14:15.000
+ Compression means finding short descriptions explanations programs for the data.
+
+14:15.000 --> 14:22.000
+ Do you see science as a kind of our human attempt at compression?
+
+14:22.000 --> 14:30.000
+ So we're speaking more generally because when you say programs, the kind of zooming in on a particular sort of almost like a computer science, artificial intelligence focus.
+
+14:30.000 --> 14:34.000
+ But do you see all of human endeavor as a kind of compression?
+
+14:34.000 --> 14:40.000
+ Well, at least all of science I see as an endeavor of compression, not all of humanity, maybe.
+
+14:40.000 --> 14:45.000
+ And well, there are also some other aspects of science like experimental design, right?
+
+14:45.000 --> 14:53.000
+ I mean, we create experiments specifically to get extra knowledge and this is, that isn't part of the decision making process.
+
+14:53.000 --> 14:59.000
+ But once we have the data to understand the data is essentially compression.
+
+14:59.000 --> 15:06.000
+ So I don't see any difference between compression, understanding and prediction.
+
+15:06.000 --> 15:14.000
+ So we're jumping around topics a little bit, but returning back to simplicity, a fascinating concept of comagorov complexity.
+
+15:14.000 --> 15:26.000
+ So in your sense, do most objects in our mathematical universe have high comagorov complexity and maybe what is, first of all, what is comagorov complexity?
+
+15:26.000 --> 15:31.000
+ Okay, comagorov complexity is a notion of simplicity or complexity.
+
+15:31.000 --> 15:36.000
+ And it takes the compression view to the extreme.
+
+15:36.000 --> 15:45.000
+ So I explained before that if you have some data sequence, just think about a file on a computer and best sort of, you know, just a string of bits.
+
+15:45.000 --> 15:53.000
+ And if you, and we have data compressors, like we compress big files into zip files with certain compressors.
+
+15:53.000 --> 16:02.000
+ And you can also produce self extracting archives, that means as an executable, if you run it, it reproduces your original file without needing an extra decompressor.
+
+16:02.000 --> 16:06.000
+ It's just a decompressor plus the archive together in one.
+
+16:06.000 --> 16:11.000
+ And now they're better and worse compressors and you can ask what is the ultimate compressor.
+
+16:11.000 --> 16:22.000
+ So what is the shortest possible self extracting archive you could produce for certain data set here, which reproduces the data set and the length of this is called the comagorov complexity.
+
+16:22.000 --> 16:27.000
+ And arguably, that is the information content in the data set.
+
+16:27.000 --> 16:31.000
+ I mean, if the data set is very redundant or very boring, you can compress it very well.
+
+16:31.000 --> 16:34.000
+ So the information content should be low.
+
+16:34.000 --> 16:36.000
+ And, you know, it is low according to this definition.
+
+16:36.000 --> 16:40.000
+ So the length of the shortest program that summarizes the data.
+
+16:40.000 --> 16:41.000
+ Yes.
+
+16:41.000 --> 16:55.000
+ And what's your sense of our universe when we think about the different objects in our universe that we try concepts or whatever at every level.
+
+16:55.000 --> 16:58.000
+ Do they have higher or low comagorov complexity?
+
+16:58.000 --> 17:00.000
+ So what's the hope?
+
+17:00.000 --> 17:05.000
+ Do we have a lot of hope in being able to summarize much of our world?
+
+17:05.000 --> 17:08.000
+ That's a tricky and difficult question.
+
+17:08.000 --> 17:16.000
+ So as I said before, I believe that the whole universe based on the evidence we have is very simple.
+
+17:16.000 --> 17:18.000
+ So it has a very short description.
+
+17:18.000 --> 17:24.000
+ So to linger on that, the whole universe, what does that mean?
+
+17:24.000 --> 17:28.000
+ Do you mean at the very basic fundamental level in order to create the universe?
+
+17:28.000 --> 17:29.000
+ Yes.
+
+17:29.000 --> 17:30.000
+ Yeah.
+
+17:30.000 --> 17:37.000
+ So you need a very short program and you run it to get the thing going to get the thing going and then it will reproduce our universe.
+
+17:37.000 --> 17:39.000
+ There's a problem with noise.
+
+17:39.000 --> 17:42.000
+ We can come back to that later, possibly.
+
+17:42.000 --> 17:46.000
+ Is noise a problem or is it a bug or a feature?
+
+17:46.000 --> 17:52.000
+ I would say it makes our life as a scientist really, really much harder.
+
+17:52.000 --> 17:56.000
+ I mean, think about it without noise, we wouldn't need all of the statistics.
+
+17:56.000 --> 17:59.000
+ But that maybe we wouldn't feel like there's a free will.
+
+17:59.000 --> 18:01.000
+ Maybe we need that for the...
+
+18:01.000 --> 18:05.000
+ This is an illusion that noise can give you free will.
+
+18:05.000 --> 18:06.000
+ At least in that way, it's a feature.
+
+18:06.000 --> 18:12.000
+ But also, if you don't have noise, you have chaotic phenomena which are effectively like noise.
+
+18:12.000 --> 18:15.000
+ So we can't get away with statistics even then.
+
+18:15.000 --> 18:21.000
+ I mean, think about rolling a dice and forget about quantum mechanics and you know exactly how you throw it.
+
+18:21.000 --> 18:31.000
+ But I mean, it's still so hard to compute the trajectory that effectively it is best to model it as coming out with a number, with probability 1 over 6.
+
+18:31.000 --> 18:36.000
+ But from this sort of philosophical...
+
+18:36.000 --> 18:47.000
+ Complexly perspective, if we didn't have noise, then arguably you could describe the whole universe as standard model plus generativity.
+
+18:47.000 --> 18:52.000
+ I mean, we don't have a theory of everything yet, but sort of assuming we are close to it or have it.
+
+18:52.000 --> 18:55.000
+ Plus the initial conditions which may hopefully be simple.
+
+18:55.000 --> 18:58.000
+ And then you just run it and then you would reproduce the universe.
+
+18:58.000 --> 19:06.000
+ But that's spoiled by noise or by chaotic systems or by initial conditions which may be complex.
+
+19:06.000 --> 19:13.000
+ So now, if we don't take the whole universe with just a subset, you know, just take planet Earth.
+
+19:13.000 --> 19:17.000
+ Planet Earth cannot be compressed into a couple of equations.
+
+19:17.000 --> 19:19.000
+ This is a hugely complex system.
+
+19:19.000 --> 19:20.000
+ So interesting.
+
+19:20.000 --> 19:26.000
+ So when you look at the window, like the whole thing might be simple, but when you just take a small window, then...
+
+19:26.000 --> 19:31.000
+ It may become complex and that may be counterintuitive, but there's a very nice analogy.
+
+19:31.000 --> 19:34.000
+ The book, the library of all books.
+
+19:34.000 --> 19:38.000
+ So imagine you have a normal library with interesting books and you go there, great.
+
+19:38.000 --> 19:41.000
+ Lots of information and huge, quite complex.
+
+19:41.000 --> 19:47.000
+ So now I create a library which contains all possible books, say, of 500 pages.
+
+19:47.000 --> 19:50.000
+ So the first book just has AAAA over all the pages.
+
+19:50.000 --> 19:52.000
+ The next book AAAA and ends with B.
+
+19:52.000 --> 19:53.000
+ And so on.
+
+19:53.000 --> 19:55.000
+ I create this library of all books.
+
+19:55.000 --> 19:57.000
+ It's a short program which creates this library.
+
+19:57.000 --> 20:01.000
+ So this library which has all books has zero information content.
+
+20:01.000 --> 20:05.000
+ And you take a subset of this library and suddenly you have a lot of information in there.
+
+20:05.000 --> 20:06.000
+ So that's fascinating.
+
+20:06.000 --> 20:15.000
+ I think one of the most beautiful object, mathematical objects that at least today seems to be understudied or under talked about is cellular automata.
+
+20:15.000 --> 20:19.000
+ What lessons do you draw from sort of the game of life for cellular automata?
+
+20:19.000 --> 20:26.000
+ Where you start with the simple rules just like you're describing with the universe and somehow complexity emerges.
+
+20:26.000 --> 20:37.000
+ Do you feel like you have an intuitive grasp on the behavior, the fascinating behavior of such systems where some, like you said, some chaotic behavior could happen.
+
+20:37.000 --> 20:39.000
+ Some complexity could emerge.
+
+20:39.000 --> 20:43.000
+ Some, it could die out in some very rigid structures.
+
+20:43.000 --> 20:51.000
+ Do you have a sense about cellular automata that somehow transfers maybe to the bigger questions of our universe?
+
+20:51.000 --> 20:56.000
+ The cellular automata and especially the converse game of life is really great because this rule is so simple.
+
+20:56.000 --> 21:00.000
+ You can explain it to every child and even by hand you can simulate a little bit.
+
+21:00.000 --> 21:07.000
+ And you see this beautiful patterns emerge and people have proven that it's even touring complete.
+
+21:07.000 --> 21:13.000
+ You can not just use a computer to simulate game of life, but you can also use game of life to simulate any computer.
+
+21:13.000 --> 21:16.000
+ That is truly amazing.
+
+21:16.000 --> 21:25.000
+ And it's the prime example probably to demonstrate that very simple rules can lead to very rich phenomena.
+
+21:25.000 --> 21:30.000
+ And people, you know, sometimes, you know, how can, how is chemistry and biology so rich?
+
+21:30.000 --> 21:32.000
+ I mean, this can't be based on simple rules.
+
+21:32.000 --> 21:39.000
+ But no, we know quantum electrodynamics describes all of chemistry and we come later back to that.
+
+21:39.000 --> 21:45.000
+ I claim intelligence can be explained or described in one single equation, this very rich phenomenon.
+
+21:45.000 --> 21:53.000
+ You asked also about whether, you know, I understand this phenomenon and it's probably not.
+
+21:53.000 --> 21:58.000
+ And this is saying you never understand really things, you just get used to them.
+
+21:58.000 --> 22:03.000
+ And I think I'm pretty used to sell it out to Marty.
+
+22:03.000 --> 22:07.000
+ So you believe that you understand now why this phenomenon happens.
+
+22:07.000 --> 22:09.000
+ But I give you a different example.
+
+22:09.000 --> 22:16.000
+ I didn't play too much with this converse game of life, but a little bit more with fractals and with the Mandelbrot set.
+
+22:16.000 --> 22:20.000
+ And it's beautiful, you know, patterns just look Mandelbrot set.
+
+22:20.000 --> 22:29.000
+ And, well, when the computers were really slow and I just had a black and white monitor and programmed my own programs in Assembler too.
+
+22:29.000 --> 22:31.000
+ Assembler, wow.
+
+22:31.000 --> 22:33.000
+ Wow, you're legit.
+
+22:33.000 --> 22:37.000
+ To get these fractals on the screen and it was mesmerized and much later.
+
+22:37.000 --> 22:45.000
+ So I returned to this, you know, every couple of years and then I tried to understand what is going on and you can understand a little bit.
+
+22:45.000 --> 22:53.000
+ I tried to derive the locations, you know, there are these circles and the apple shape.
+
+22:53.000 --> 22:59.000
+ And then you have smaller Mandelbrot sets recursively in this set.
+
+22:59.000 --> 23:08.000
+ And there's a way to mathematically by solving high order polynomials to figure out where these centers are and what size they are approximately.
+
+23:08.000 --> 23:18.000
+ And by sort of mathematically approaching this problem, you slowly get a feeling of why things are like they are.
+
+23:18.000 --> 23:25.000
+ And that sort of isn't, you know, first step to understanding why this rich phenomenon.
+
+23:25.000 --> 23:27.000
+ Do you think it's possible? What's your intuition?
+
+23:27.000 --> 23:36.000
+ Do you think it's possible to reverse engineer and find the short program that generated these fractals by looking at the fractals?
+
+23:36.000 --> 23:38.000
+ Well, in principle, yes.
+
+23:38.000 --> 23:47.000
+ So, I mean, in principle, what you can do is you take, you know, any data set, you know, you take these fractals or you take whatever your data set, whatever you have.
+
+23:47.000 --> 23:50.000
+ It's a picture of Converse Game of Life.
+
+23:50.000 --> 23:58.000
+ And you run through all programs, you take a program of size one, two, three, four and all these programs around them all in parallel in so called dovetailing fashion.
+
+23:58.000 --> 24:05.000
+ Give them computational resources first one 50%, second one half resources and so on and let them run.
+
+24:05.000 --> 24:09.000
+ Wait until they hold, give an output, compare it to your data.
+
+24:09.000 --> 24:14.000
+ And if some of these programs produce the correct data, then you stop and then you have already some program.
+
+24:14.000 --> 24:16.000
+ It may be a long program because it's faster.
+
+24:16.000 --> 24:22.000
+ And then you continue and you get shorter and shorter programs until you eventually find the shortest program.
+
+24:22.000 --> 24:30.000
+ The interesting thing you can never know whether it's the shortest program because there could be an even shorter program which is just even slower.
+
+24:30.000 --> 24:36.000
+ And you just have to wait here, but asymptotically, and actually after a finite time you have the shortest program.
+
+24:36.000 --> 24:50.000
+ So this is a theoretical but completely impractical way of finding the underlying structure in every data set and then it was a lot more of induction does and come a lot of complexity.
+
+24:50.000 --> 24:53.000
+ In practice, of course, we have to approach the problem more intelligently.
+
+24:53.000 --> 25:03.000
+ And then if you take resource limitations into account, there's, for instance, the field of pseudo random numbers.
+
+25:03.000 --> 25:05.000
+ And these are random numbers.
+
+25:05.000 --> 25:15.000
+ So these are deterministic sequences, but no algorithm which is fast, fast means runs in polynomial time can detect that it's actually deterministic.
+
+25:15.000 --> 25:20.000
+ So we can produce interesting, I mean, random numbers, maybe not that interesting, but just an example.
+
+25:20.000 --> 25:31.000
+ We can produce complex looking data and we can then prove that no fast algorithm can detect the underlying pattern.
+
+25:31.000 --> 25:42.000
+ Which is unfortunately, that's a big challenge for our search for simple programs in the space of artificial intelligence, perhaps.
+
+25:42.000 --> 25:48.000
+ Yes, it definitely is wanted vision intelligence and it's quite surprising that it's, I can't say easy.
+
+25:48.000 --> 25:57.000
+ I mean, physicists worked really hard to find these theories, but apparently it was possible for human minds to find these simple rules in the universe.
+
+25:57.000 --> 25:59.000
+ It could have been different, right?
+
+25:59.000 --> 26:00.000
+ It could have been different.
+
+26:00.000 --> 26:04.000
+ It's awe inspiring.
+
+26:04.000 --> 26:08.000
+ So let me ask another absurdly big question.
+
+26:08.000 --> 26:13.000
+ What is intelligence in your view?
+
+26:13.000 --> 26:17.000
+ So I have, of course, a definition.
+
+26:17.000 --> 26:21.000
+ I wasn't sure what you're going to say, because you could have just as easy said, I have no clue.
+
+26:21.000 --> 26:27.000
+ Which many people would say, but I'm not modest in this question.
+
+26:27.000 --> 26:43.000
+ So the informal version, which I worked out together with Shane Lake, who co founded the mind is that intelligence measures and agents ability to perform well in a wide range of environments.
+
+26:43.000 --> 26:47.000
+ So that doesn't sound very impressive.
+
+26:47.000 --> 26:53.000
+ But these words have been very carefully chosen and there is a mathematical theory behind that.
+
+26:53.000 --> 26:55.000
+ And we come back to that later.
+
+26:55.000 --> 27:03.000
+ And if you look at this definition by itself, it seems like, yeah, okay, but it seems a lot of things are missing.
+
+27:03.000 --> 27:18.000
+ But if you think it through, then you realize that most and I claim all of the other traits, at least of rational intelligence, which we usually associate with intelligence, are emergent phenomena from this definition.
+
+27:18.000 --> 27:22.000
+ Like, you know, creativity, memorization, planning, knowledge.
+
+27:22.000 --> 27:27.000
+ You all need that in order to perform well in a wide range of environments.
+
+27:27.000 --> 27:30.000
+ So you don't have to explicitly mention that in a definition.
+
+27:30.000 --> 27:31.000
+ Interesting.
+
+27:31.000 --> 27:42.000
+ So yeah, so the consciousness, abstract reasoning, all these kinds of things are just emergent phenomena that help you in towards, can you say the definition again?
+
+27:42.000 --> 27:44.000
+ So multiple environments.
+
+27:44.000 --> 27:46.000
+ Did you mention the word goals?
+
+27:46.000 --> 27:51.000
+ No, but we have an alternative definition instead of performing well, you can just replace it by goals.
+
+27:51.000 --> 27:56.000
+ So intelligence measures and agents ability to achieve goals in a wide range of environments.
+
+27:56.000 --> 27:57.000
+ That's more or less equal.
+
+27:57.000 --> 28:03.000
+ Interesting, because in there there's an injection of the word goals, so we want to specify there should be a goal.
+
+28:03.000 --> 28:06.000
+ Yeah, but perform well is sort of what does it mean?
+
+28:06.000 --> 28:07.000
+ It's the same problem.
+
+28:07.000 --> 28:08.000
+ Yeah.
+
+28:08.000 --> 28:13.000
+ There's a little bit gray area, but it's much closer to something that could be formalized.
+
+28:13.000 --> 28:18.000
+ In your view, are humans, where do humans fit into that definition?
+
+28:18.000 --> 28:31.000
+ Are they general intelligence systems that are able to perform in like, how good are they at fulfilling that definition at performing well in multiple environments?
+
+28:31.000 --> 28:33.000
+ Yeah, that's a big question.
+
+28:33.000 --> 28:37.000
+ I mean, the humans are performing best among all species.
+
+28:37.000 --> 28:40.000
+ Species we know, we know of.
+
+28:40.000 --> 28:41.000
+ Depends.
+
+28:41.000 --> 28:44.000
+ You could say that trees and plants are doing a better job.
+
+28:44.000 --> 28:46.000
+ They'll probably outlast us.
+
+28:46.000 --> 28:49.000
+ Yeah, but they're in a much more narrow environment, right?
+
+28:49.000 --> 28:54.000
+ I mean, you just have a little bit of air pollution and these trees die, and we can adapt, right?
+
+28:54.000 --> 28:59.000
+ We build houses, we build filters, we do geoengineering.
+
+28:59.000 --> 29:01.000
+ So the multiple environment part.
+
+29:01.000 --> 29:02.000
+ Yeah, that is very important.
+
+29:02.000 --> 29:03.000
+ Yeah.
+
+29:03.000 --> 29:08.000
+ So they distinguish narrow intelligence from wide intelligence, also in the AI research.
+
+29:08.000 --> 29:16.000
+ So let me ask the alentoring question, can machines think, can machines be intelligent?
+
+29:16.000 --> 29:24.000
+ So in your view, I have to kind of ask, the answer is probably yes, but I want to kind of hear with your thoughts on it.
+
+29:24.000 --> 29:30.000
+ Can machines be made to fulfill this definition of intelligence, to achieve intelligence?
+
+29:30.000 --> 29:36.000
+ Well, we are sort of getting there and, you know, on a small scale, we are already there.
+
+29:36.000 --> 29:39.000
+ The wide range of environments are missing.
+
+29:39.000 --> 29:44.000
+ But we have self driving cars, we have programs to play go and chess, we have speech recognition.
+
+29:44.000 --> 29:49.000
+ So it's pretty amazing, but you can, you know, these are narrow environments.
+
+29:49.000 --> 29:54.000
+ But if you look at AlphaZero, that was also developed by DeepMind.
+
+29:54.000 --> 29:57.000
+ I mean, got famous with AlphaGo and then came AlphaZero a year later.
+
+29:57.000 --> 29:59.000
+ That was truly amazing.
+
+29:59.000 --> 30:08.000
+ So I'm reinforcement learning algorithm, which is able just by self play to play chess and then also go.
+
+30:08.000 --> 30:11.000
+ And I mean, yes, they're both games, but they're quite different games.
+
+30:11.000 --> 30:15.000
+ And, you know, this, you didn't don't feed them the rules of the game.
+
+30:15.000 --> 30:22.000
+ And the most remarkable thing, which is still a mystery to me that usually for any decent chess program, I don't know much about Go,
+
+30:22.000 --> 30:29.000
+ you need opening books and end game tables and so on too. And nothing in there, nothing was put in there.
+
+30:29.000 --> 30:38.000
+ Especially with AlphaZero, the self play mechanism starting from scratch, being able to learn actually new strategies.
+
+30:38.000 --> 30:46.000
+ Yeah, it really discovered, you know, all these famous openings within four hours by itself.
+
+30:46.000 --> 30:50.000
+ What I was really happy about, I'm a terrible chess player, but I like Queen Gambi.
+
+30:50.000 --> 30:54.000
+ And AlphaZero figured out that this is the best opening.
+
+30:54.000 --> 30:59.000
+ Finally, somebody proved you correct.
+
+30:59.000 --> 31:04.000
+ So yes, to answer your question, yes, I believe that general intelligence is possible.
+
+31:04.000 --> 31:08.000
+ And it also depends how you define it.
+
+31:08.000 --> 31:17.000
+ Do you say AGI with general intelligence, artificial intelligence only refers to if you achieve human level or a sub human level,
+
+31:17.000 --> 31:25.000
+ but quite broad, is it also general intelligence or we have to distinguish or it's only super human intelligence, general artificial intelligence?
+
+31:25.000 --> 31:32.000
+ Is there a test in your mind like the Turing test for natural language or some other test that would impress the heck out of you
+
+31:32.000 --> 31:40.000
+ that would kind of cross the line of your sense of intelligence within the framework that you said?
+
+31:40.000 --> 31:46.000
+ Well, the Turing test has been criticized a lot, but I think it's not as bad as some people think.
+
+31:46.000 --> 31:52.000
+ Some people think it's too strong, so it tests not just for a system to be intelligent,
+
+31:52.000 --> 31:56.000
+ but it also has to fake human deception.
+
+31:56.000 --> 31:59.000
+ Disception, which is much harder.
+
+31:59.000 --> 32:07.000
+ And on the other hand, they say it's too weak because it just maybe fakes emotions or intelligent behavior.
+
+32:07.000 --> 32:12.000
+ It's not real, but I don't think that's the problem or big problem.
+
+32:12.000 --> 32:20.000
+ So if you would pass the Turing test, so a conversation or a terminal with a bot for an hour,
+
+32:20.000 --> 32:26.000
+ or maybe a day or so, and you can fool a human into not knowing whether this is a human or not,
+
+32:26.000 --> 32:30.000
+ so that's the Turing test, I would be truly impressed.
+
+32:30.000 --> 32:34.000
+ And we have these annual competitions, the Lubna Prize.
+
+32:34.000 --> 32:38.000
+ And I mean, it started with Eliza, that was the first conversational program.
+
+32:38.000 --> 32:44.000
+ And what is it called in Japanese, Mitsuko or so, that's the winner of the last couple of years.
+
+32:44.000 --> 32:46.000
+ It's quite impressive.
+
+32:46.000 --> 32:47.000
+ Yeah, it's quite impressive.
+
+32:47.000 --> 32:50.000
+ And then Google has developed Mina, right?
+
+32:50.000 --> 32:57.000
+ Just recently, that's an open domain conversational bot, just a couple of weeks ago, I think.
+
+32:57.000 --> 33:01.000
+ Yeah, I kind of like the metric that sort of the Alexa Prize has proposed.
+
+33:01.000 --> 33:07.000
+ I mean, maybe it's obvious to you, it wasn't to me of setting sort of a length of a conversation.
+
+33:07.000 --> 33:13.000
+ You want the bot to be sufficiently interesting that you'd want to keep talking to it for like 20 minutes.
+
+33:13.000 --> 33:19.000
+ And that's a surprisingly effective and aggregate metric.
+
+33:19.000 --> 33:27.000
+ Because nobody has the patience to be able to talk to a bot that's not interesting
+
+33:27.000 --> 33:32.000
+ and intelligent and witty and is able to go into different tangents, jump domains,
+
+33:32.000 --> 33:36.000
+ be able to say something interesting to maintain your attention.
+
+33:36.000 --> 33:39.000
+ Maybe many humans will also fail this test.
+
+33:39.000 --> 33:45.000
+ Unfortunately, we set, just like with autonomous vehicles with chatbots,
+
+33:45.000 --> 33:48.000
+ we also set a bar that's way too hard to reach.
+
+33:48.000 --> 33:51.000
+ I said the Turing test is not as bad as some people believe.
+
+33:51.000 --> 33:57.000
+ But what is really not useful about the Turing test, it gives us no guidance
+
+33:57.000 --> 34:00.000
+ how to develop these systems in the first place.
+
+34:00.000 --> 34:05.000
+ Of course, we can develop them by trial and error and do whatever and then run the test
+
+34:05.000 --> 34:07.000
+ and see whether it works or not.
+
+34:07.000 --> 34:16.000
+ But a mathematical definition of intelligence gives us an objective
+
+34:16.000 --> 34:21.000
+ which we can then analyze by theoretical tools or computational
+
+34:21.000 --> 34:25.000
+ and maybe even prove how close we are.
+
+34:25.000 --> 34:29.000
+ And we will come back to that later with the ICSE model.
+
+34:29.000 --> 34:31.000
+ I mentioned the compression, right?
+
+34:31.000 --> 34:36.000
+ So in language processing, they have achieved amazing results.
+
+34:36.000 --> 34:40.000
+ And one way to test this, of course, you take the system, you train it
+
+34:40.000 --> 34:43.000
+ and then you see how well it performs on the task.
+
+34:43.000 --> 34:49.000
+ But a lot of performance measurement is done by so called perplexity,
+
+34:49.000 --> 34:53.000
+ which is essentially the same as complexity or compression length.
+
+34:53.000 --> 34:57.000
+ So the NLP community develops new systems and then they measure the compression length
+
+34:57.000 --> 35:02.000
+ and then they have ranking and leaks because there's a strong correlation
+
+35:02.000 --> 35:07.000
+ between compressing well and then the system performing well at the task at hand.
+
+35:07.000 --> 35:14.000
+ It's not perfect, but it's good enough for them as an intermediate aim.
+
+35:14.000 --> 35:19.000
+ So you mean measure, so this is kind of almost returning to the common growth complexity.
+
+35:19.000 --> 35:24.000
+ So you're saying good compression usually means good intelligence.
+
+35:24.000 --> 35:26.000
+ Yes.
+
+35:26.000 --> 35:33.000
+ So you mentioned you're one of the only people who dared boldly
+
+35:33.000 --> 35:38.000
+ to try to formalize the idea of artificial general intelligence,
+
+35:38.000 --> 35:42.000
+ to have a mathematical framework for intelligence,
+
+35:42.000 --> 35:49.000
+ just like as we mentioned, termed IXE, A I X I.
+
+35:49.000 --> 35:54.000
+ So let me ask the basic question, what is IXE?
+
+35:54.000 --> 35:58.000
+ Okay, so let me first say what it stands for.
+
+35:58.000 --> 36:01.000
+ What it stands for, actually, that's probably the more basic question.
+
+36:01.000 --> 36:04.000
+ The first question is usually how it's pronounced,
+
+36:04.000 --> 36:07.000
+ but finally I put it on the website, how it's pronounced.
+
+36:07.000 --> 36:10.000
+ You figured it out.
+
+36:10.000 --> 36:13.000
+ The name comes from AI, artificial intelligence,
+
+36:13.000 --> 36:16.000
+ and the X I is the Greek letter XI,
+
+36:16.000 --> 36:22.000
+ which are used for Solomonov's distribution for quite stupid reasons,
+
+36:22.000 --> 36:27.000
+ which I'm not willing to repeat here in front of camera.
+
+36:27.000 --> 36:31.000
+ So it just happened to be more or less arbitrary, I chose the XI.
+
+36:31.000 --> 36:35.000
+ But it also has nice other interpretations.
+
+36:35.000 --> 36:38.000
+ So there are actions and perceptions in this model,
+
+36:38.000 --> 36:42.000
+ where an agent has actions and perceptions, and over time.
+
+36:42.000 --> 36:45.000
+ So this is A index I, X index I.
+
+36:45.000 --> 36:49.000
+ So there's an action at time I, and then followed by a perception at time I.
+
+36:49.000 --> 36:52.000
+ We'll go with that. I'll edit out the first part.
+
+36:52.000 --> 36:53.000
+ I'm just kidding.
+
+36:53.000 --> 36:55.000
+ I have some more interpretations.
+
+36:55.000 --> 36:59.000
+ So at some point, maybe five years ago or 10 years ago,
+
+36:59.000 --> 37:04.000
+ I discovered in Barcelona, it was on a big church.
+
+37:04.000 --> 37:08.000
+ There was a stone engraved, some text,
+
+37:08.000 --> 37:12.000
+ and the word IXE appeared there a couple of times.
+
+37:12.000 --> 37:17.000
+ I was very surprised and happy about that.
+
+37:17.000 --> 37:20.000
+ And I looked it up, so it is Catalan language,
+
+37:20.000 --> 37:22.000
+ and it means with some interpretation,
+
+37:22.000 --> 37:25.000
+ that's it, that's the right thing to do.
+
+37:25.000 --> 37:32.000
+ So it's almost like destined, somehow came to you in a dream.
+
+37:32.000 --> 37:35.000
+ And similar, there's a Chinese word, IXE, also written like IXE,
+
+37:35.000 --> 37:37.000
+ if you transcribe it to Pingen.
+
+37:37.000 --> 37:41.000
+ And the final one is that is AI, crossed with induction,
+
+37:41.000 --> 37:44.000
+ because that is, and it's going more to the content now.
+
+37:44.000 --> 37:47.000
+ So good old fashioned AI is more about planning
+
+37:47.000 --> 37:49.000
+ and known deterministic world,
+
+37:49.000 --> 37:51.000
+ and induction is more about, often, you know,
+
+37:51.000 --> 37:53.000
+ IID data and inferring models,
+
+37:53.000 --> 37:57.000
+ and essentially what this IXE model does is combine these two.
+
+37:57.000 --> 37:59.000
+ And I actually also recently, I think,
+
+37:59.000 --> 38:02.000
+ heard that in Japanese, AI means love.
+
+38:02.000 --> 38:06.000
+ So if you can combine XI somehow with that,
+
+38:06.000 --> 38:10.000
+ I think we can, there might be some interesting ideas there.
+
+38:10.000 --> 38:13.000
+ So IXE, let's then take the next step.
+
+38:13.000 --> 38:20.000
+ So maybe talk at the big level of what is this mathematical framework.
+
+38:20.000 --> 38:23.000
+ Yeah, so it consists essentially of two parts.
+
+38:23.000 --> 38:27.000
+ One is the learning and induction and prediction part,
+
+38:27.000 --> 38:29.000
+ and the other one is the planning part.
+
+38:29.000 --> 38:33.000
+ So let's come first to the learning induction prediction part,
+
+38:33.000 --> 38:36.000
+ which essentially I explained already before.
+
+38:36.000 --> 38:41.000
+ So what we need for any agent to act well
+
+38:41.000 --> 38:44.000
+ is that it can somehow predict what happens.
+
+38:44.000 --> 38:47.000
+ I mean, if you have no idea what your actions do,
+
+38:47.000 --> 38:49.000
+ how can you decide which actions are good or not?
+
+38:49.000 --> 38:53.000
+ So you need to have some model of what your actions effect.
+
+38:53.000 --> 38:56.000
+ So what you do is you have some experience.
+
+38:56.000 --> 38:59.000
+ You build models like scientists, you know, of your experience.
+
+38:59.000 --> 39:01.000
+ Then you hope these models are roughly correct,
+
+39:01.000 --> 39:04.000
+ and then you use these models for prediction.
+
+39:04.000 --> 39:06.000
+ And a model is, sorry, to interrupt,
+
+39:06.000 --> 39:08.000
+ and a model is based on your perception of the world,
+
+39:08.000 --> 39:10.000
+ how your actions will affect that world.
+
+39:10.000 --> 39:14.000
+ That's not the important part.
+
+39:14.000 --> 39:16.000
+ It is technically important,
+
+39:16.000 --> 39:18.000
+ but at this stage we can just think about predicting,
+
+39:18.000 --> 39:20.000
+ say, stock market data,
+
+39:20.000 --> 39:22.000
+ whether data or IQ sequences,
+
+39:22.000 --> 39:24.000
+ one, two, three, four, five, what comes next, yeah?
+
+39:24.000 --> 39:28.000
+ So of course our actions affect what we're doing,
+
+39:28.000 --> 39:30.000
+ but I'll come back to that in a second.
+
+39:30.000 --> 39:32.000
+ And I'll keep just interrupting.
+
+39:32.000 --> 39:36.000
+ So just to draw a line between prediction and planning,
+
+39:36.000 --> 39:40.000
+ what do you mean by prediction in this way?
+
+39:40.000 --> 39:43.000
+ It's trying to predict the environment
+
+39:43.000 --> 39:46.000
+ without your long term action in the environment.
+
+39:46.000 --> 39:48.000
+ What is prediction?
+
+39:48.000 --> 39:50.000
+ Okay, if you want to put the actions in now,
+
+39:50.000 --> 39:53.000
+ okay, then let's put it in now, yeah?
+
+39:53.000 --> 39:55.000
+ We don't have to put them now.
+
+39:55.000 --> 39:57.000
+ Scratch a dumb question.
+
+39:57.000 --> 40:00.000
+ Okay, so the simplest form of prediction is
+
+40:00.000 --> 40:04.000
+ that you just have data which you passively observe,
+
+40:04.000 --> 40:08.000
+ and you want to predict what happens without interfering.
+
+40:08.000 --> 40:12.000
+ As I said, weather forecasting, stock market, IQ sequences,
+
+40:12.000 --> 40:16.000
+ or just anything, okay?
+
+40:16.000 --> 40:19.000
+ And Solominov's theory of induction based on compression,
+
+40:19.000 --> 40:21.000
+ so you look for the shortest program
+
+40:21.000 --> 40:23.000
+ which describes your data sequence,
+
+40:23.000 --> 40:25.000
+ and then you take this program, run it,
+
+40:25.000 --> 40:27.000
+ which reproduces your data sequence by definition,
+
+40:27.000 --> 40:29.000
+ and then you let it continue running,
+
+40:29.000 --> 40:31.000
+ and then it will produce some predictions,
+
+40:31.000 --> 40:37.000
+ and you can rigorously prove that for any prediction task,
+
+40:37.000 --> 40:40.000
+ this is essentially the best possible predictor.
+
+40:40.000 --> 40:43.000
+ Of course, if there's a prediction task,
+
+40:43.000 --> 40:46.000
+ or a task which is unpredictable, like, you know,
+
+40:46.000 --> 40:48.000
+ you have fair coin flips, yeah?
+
+40:48.000 --> 40:50.000
+ I cannot predict the next fair coin flip.
+
+40:50.000 --> 40:52.000
+ What Solominov does is says, okay, next head is probably 50%.
+
+40:52.000 --> 40:54.000
+ It's the best you can do.
+
+40:54.000 --> 40:56.000
+ So if something is unpredictable, Solominov will also not
+
+40:56.000 --> 40:59.000
+ magically predict it, but if there is some pattern
+
+40:59.000 --> 41:01.000
+ of probability, then Solominov induction
+
+41:01.000 --> 41:04.000
+ will figure that out eventually,
+
+41:04.000 --> 41:06.000
+ and not just eventually, but rather quickly,
+
+41:06.000 --> 41:10.000
+ and you can have proof convergence rates,
+
+41:10.000 --> 41:12.000
+ whatever your data is.
+
+41:12.000 --> 41:15.000
+ So there's pure magic in a sense.
+
+41:15.000 --> 41:16.000
+ What's the catch?
+
+41:16.000 --> 41:17.000
+ Well, the catch is that it's not computable,
+
+41:17.000 --> 41:19.000
+ and we come back to that later.
+
+41:19.000 --> 41:20.000
+ You cannot just implement it,
+
+41:20.000 --> 41:22.000
+ even with Google resources here,
+
+41:22.000 --> 41:24.000
+ and run it and, you know, predict the stock market
+
+41:24.000 --> 41:25.000
+ and become rich.
+
+41:25.000 --> 41:26.000
+ I mean, if...
+
+41:26.000 --> 41:29.000
+ You know, try it at the time.
+
+41:29.000 --> 41:31.000
+ So the basic task is you're in the environment,
+
+41:31.000 --> 41:33.000
+ and you're interacting with the environment
+
+41:33.000 --> 41:35.000
+ to try to learn a model of that environment,
+
+41:35.000 --> 41:38.000
+ and the model is in the space of all these programs,
+
+41:38.000 --> 41:41.000
+ and your goal is to get a bunch of programs that are simple.
+
+41:41.000 --> 41:44.000
+ And so let's go to the actions now.
+
+41:44.000 --> 41:45.000
+ But actually, good that you asked.
+
+41:45.000 --> 41:46.000
+ Usually, I skipped this part,
+
+41:46.000 --> 41:48.000
+ although there is also a minor contribution,
+
+41:48.000 --> 41:49.000
+ which I did, so the action part,
+
+41:49.000 --> 41:51.000
+ but I usually sort of just jump to the decision part.
+
+41:51.000 --> 41:53.000
+ So let me explain to the action part now.
+
+41:53.000 --> 41:55.000
+ Thanks for asking.
+
+41:55.000 --> 41:58.000
+ So you have to modify it a little bit
+
+41:58.000 --> 42:01.000
+ by now not just predicting a sequence
+
+42:01.000 --> 42:03.000
+ which just comes to you,
+
+42:03.000 --> 42:06.000
+ but you have an observation, then you act somehow,
+
+42:06.000 --> 42:09.000
+ and then you want to predict the next observation
+
+42:09.000 --> 42:12.000
+ based on the past observation and your action.
+
+42:12.000 --> 42:14.000
+ Then you take the next action.
+
+42:14.000 --> 42:17.000
+ You don't care about predicting it because you're doing it.
+
+42:17.000 --> 42:19.000
+ And then you get the next observation,
+
+42:19.000 --> 42:20.000
+ and you want...
+
+42:20.000 --> 42:22.000
+ Well, before you get it, you want to predict it again
+
+42:22.000 --> 42:24.000
+ based on your past action and observation sequence.
+
+42:24.000 --> 42:28.000
+ You just condition extra on your actions.
+
+42:28.000 --> 42:30.000
+ There's an interesting alternative
+
+42:30.000 --> 42:33.000
+ that you also try to predict your own actions.
+
+42:35.000 --> 42:36.000
+ If you want...
+
+42:36.000 --> 42:38.000
+ In the past or the future?
+
+42:38.000 --> 42:39.000
+ Your future actions.
+
+42:39.000 --> 42:41.000
+ That's interesting.
+
+42:41.000 --> 42:43.000
+ Wait, let me wrap.
+
+42:43.000 --> 42:45.000
+ I think my brain just broke.
+
+42:45.000 --> 42:47.000
+ We should maybe discuss that later
+
+42:47.000 --> 42:48.000
+ after I've explained the ICSE model.
+
+42:48.000 --> 42:50.000
+ That's an interesting variation.
+
+42:50.000 --> 42:52.000
+ But that is a really interesting variation.
+
+42:52.000 --> 42:54.000
+ And a quick comment.
+
+42:54.000 --> 42:56.000
+ I don't know if you want to insert that in here,
+
+42:56.000 --> 42:58.000
+ but you're looking at the...
+
+42:58.000 --> 43:00.000
+ In terms of observations,
+
+43:00.000 --> 43:02.000
+ you're looking at the entire big history,
+
+43:02.000 --> 43:04.000
+ the long history of the observations.
+
+43:04.000 --> 43:06.000
+ That's very important, the whole history
+
+43:06.000 --> 43:08.000
+ from birth sort of of the agent.
+
+43:08.000 --> 43:11.000
+ And we can come back to that also while this is important here.
+
+43:11.000 --> 43:14.000
+ Often, you know, in RL, you have MDPs,
+
+43:14.000 --> 43:16.000
+ macro decision processes, which are much more limiting.
+
+43:16.000 --> 43:20.000
+ Okay, so now we can predict conditioned on actions.
+
+43:20.000 --> 43:22.000
+ So even if the influence environment.
+
+43:22.000 --> 43:24.000
+ But prediction is not all we want to do, right?
+
+43:24.000 --> 43:26.000
+ We also want to act really in the world.
+
+43:26.000 --> 43:29.000
+ And the question is how to choose the actions.
+
+43:29.000 --> 43:32.000
+ And we don't want to greedily choose the actions.
+
+43:32.000 --> 43:36.000
+ You know, just, you know, what is best in the next time step.
+
+43:36.000 --> 43:38.000
+ And we first, I should say, you know,
+
+43:38.000 --> 43:40.000
+ what is, you know, how do we measure performance?
+
+43:40.000 --> 43:43.000
+ So we measure performance by giving the agent reward.
+
+43:43.000 --> 43:45.000
+ That's the so called reinforcement learning framework.
+
+43:45.000 --> 43:48.000
+ So every time step, you can give it a positive reward
+
+43:48.000 --> 43:50.000
+ or negative reward or maybe no reward.
+
+43:50.000 --> 43:52.000
+ It could be a very scarce, right?
+
+43:52.000 --> 43:54.000
+ Like if you play chess just at the end of the game,
+
+43:54.000 --> 43:57.000
+ you give plus one for winning or minus one for losing.
+
+43:57.000 --> 43:59.000
+ So in the IXE framework, that's completely sufficient.
+
+43:59.000 --> 44:01.000
+ So occasionally you give a reward signal
+
+44:01.000 --> 44:04.000
+ and you ask the agent to maximize reward,
+
+44:04.000 --> 44:06.000
+ but not greedily sort of, you know, the next one,
+
+44:06.000 --> 44:08.000
+ next one because that's very bad in the long run
+
+44:08.000 --> 44:10.000
+ if you're greedy.
+
+44:10.000 --> 44:12.000
+ So, but over the lifetime of the agent.
+
+44:12.000 --> 44:14.000
+ So let's assume the agent lives for M timestamps.
+
+44:14.000 --> 44:17.000
+ That will say dies in sort of 100 years sharp.
+
+44:17.000 --> 44:19.000
+ That's just, you know, the simplest model to explain.
+
+44:19.000 --> 44:23.000
+ So it looks at the future reward sum and ask,
+
+44:23.000 --> 44:25.000
+ what is my action sequence?
+
+44:25.000 --> 44:27.000
+ Well, actually more precisely my policy,
+
+44:27.000 --> 44:31.000
+ which leads in expectation because I don't know the world
+
+44:31.000 --> 44:34.000
+ to the maximum reward sum.
+
+44:34.000 --> 44:36.000
+ Let me give you an analogy.
+
+44:36.000 --> 44:40.000
+ In chess, for instance, we know how to play optimally in theory.
+
+44:40.000 --> 44:42.000
+ It's just a mini max strategy.
+
+44:42.000 --> 44:45.000
+ I play the move which seems best to me under the assumption
+
+44:45.000 --> 44:48.000
+ that the opponent plays the move which is best for him.
+
+44:48.000 --> 44:51.000
+ So best, so worst for me under the assumption that he,
+
+44:51.000 --> 44:54.000
+ I play again the best move.
+
+44:54.000 --> 44:57.000
+ And then you have this expecting max tree to the end of the game.
+
+44:57.000 --> 45:00.000
+ And then you back propagate and then you get the best possible move.
+
+45:00.000 --> 45:02.000
+ So that is the optimal strategy,
+
+45:02.000 --> 45:05.000
+ which for Norman already figured out a long time ago
+
+45:05.000 --> 45:08.000
+ for playing adversarial games.
+
+45:08.000 --> 45:11.000
+ Luckily, or maybe unluckily for the theory,
+
+45:11.000 --> 45:14.000
+ it becomes harder that world is not always adversarial.
+
+45:14.000 --> 45:18.000
+ So it can be, if the other humans even cooperative,
+
+45:18.000 --> 45:22.000
+ or nature is usually, I mean the dead nature is stochastic.
+
+45:22.000 --> 45:26.000
+ Things just happen randomly or don't care about you.
+
+45:26.000 --> 45:29.000
+ So what you have to take into account is the noise
+
+45:29.000 --> 45:31.000
+ and not necessarily adversariality.
+
+45:31.000 --> 45:34.000
+ So you replace the minimum on the opponent's side
+
+45:34.000 --> 45:37.000
+ by an expectation, which is general enough to include
+
+45:37.000 --> 45:40.000
+ also adversarial cases.
+
+45:40.000 --> 45:42.000
+ So now instead of a mini max strategy,
+
+45:42.000 --> 45:44.000
+ expect a max strategy.
+
+45:44.000 --> 45:45.000
+ So far, so good.
+
+45:45.000 --> 45:46.000
+ So that is well known.
+
+45:46.000 --> 45:48.000
+ It's called sequential decision theory.
+
+45:48.000 --> 45:51.000
+ But the question is on which probability distribution
+
+45:51.000 --> 45:53.000
+ do you base that?
+
+45:53.000 --> 45:55.000
+ If I have the true probability distribution,
+
+45:55.000 --> 45:57.000
+ like say I play beggining, right?
+
+45:57.000 --> 46:00.000
+ There's dice and there's certain randomness involved.
+
+46:00.000 --> 46:03.000
+ I can calculate probabilities and feed it in the expected max
+
+46:03.000 --> 46:06.000
+ or the sequential decision tree come up with the optimal decision
+
+46:06.000 --> 46:08.000
+ if I have enough compute.
+
+46:08.000 --> 46:10.000
+ But for the real world, we don't know that.
+
+46:10.000 --> 46:14.000
+ What is the probability driver in front of me breaks?
+
+46:14.000 --> 46:15.000
+ I don't know.
+
+46:15.000 --> 46:17.000
+ So it depends on all kinds of things
+
+46:17.000 --> 46:19.000
+ and especially new situations.
+
+46:19.000 --> 46:20.000
+ I don't know.
+
+46:20.000 --> 46:23.000
+ So this is this unknown thing about prediction
+
+46:23.000 --> 46:25.000
+ and there's where Solomanov comes in.
+
+46:25.000 --> 46:27.000
+ So what you do is in sequential decision tree,
+
+46:27.000 --> 46:29.000
+ you just replace the true distribution,
+
+46:29.000 --> 46:33.000
+ which we don't know by this universal distribution.
+
+46:33.000 --> 46:35.000
+ I didn't explicitly talk about it,
+
+46:35.000 --> 46:37.000
+ but this is used for universal prediction
+
+46:37.000 --> 46:40.000
+ and you plug it into the sequential decision tree mechanism.
+
+46:40.000 --> 46:42.000
+ And then you get the best of both worlds.
+
+46:42.000 --> 46:45.000
+ You have a long term planning agent,
+
+46:45.000 --> 46:48.000
+ but it doesn't need to know anything about the world
+
+46:48.000 --> 46:51.000
+ because the Solomanov induction part learns.
+
+46:51.000 --> 46:56.000
+ Can you explicitly try to describe the universal distribution
+
+46:56.000 --> 47:00.000
+ and how Solomanov induction plays a role here?
+
+47:00.000 --> 47:01.000
+ I'm trying to understand.
+
+47:01.000 --> 47:04.000
+ So what he does it, so in the simplest case,
+
+47:04.000 --> 47:07.000
+ he said take the shortest program describing your data, run it,
+
+47:07.000 --> 47:09.000
+ have a prediction which would be deterministic.
+
+47:09.000 --> 47:10.000
+ Yes.
+
+47:10.000 --> 47:11.000
+ Okay.
+
+47:11.000 --> 47:13.000
+ But you should not just take the shortest program,
+
+47:13.000 --> 47:15.000
+ but also consider the longer ones,
+
+47:15.000 --> 47:18.000
+ but give it lower a priori probability.
+
+47:18.000 --> 47:20.000
+ So in the Bayesian framework,
+
+47:20.000 --> 47:25.000
+ you say a priori, any distribution,
+
+47:25.000 --> 47:29.000
+ which is a model or a stochastic program,
+
+47:29.000 --> 47:31.000
+ has a certain a priori probability,
+
+47:31.000 --> 47:34.000
+ which is two to the minus and y to the minus length,
+
+47:34.000 --> 47:36.000
+ I could explain, length of this program.
+
+47:36.000 --> 47:40.000
+ So longer programs are punished, a priori.
+
+47:40.000 --> 47:44.000
+ And then you multiply it with the so called likelihood function,
+
+47:44.000 --> 47:47.000
+ which is, as the name suggests,
+
+47:47.000 --> 47:51.000
+ is how likely is this model given the data at hand.
+
+47:51.000 --> 47:53.000
+ So if you have a very wrong model,
+
+47:53.000 --> 47:55.000
+ it's very unlikely that this model is true.
+
+47:55.000 --> 47:57.000
+ And so it is very small number.
+
+47:57.000 --> 48:00.000
+ So even if the model is simple, it gets penalized by that.
+
+48:00.000 --> 48:02.000
+ And what you do is then you take just the sum,
+
+48:02.000 --> 48:04.000
+ but this is the average over it.
+
+48:04.000 --> 48:07.000
+ And this gives you a probability distribution.
+
+48:07.000 --> 48:09.000
+ So it's a universal distribution,
+
+48:09.000 --> 48:10.000
+ also a moment of distribution.
+
+48:10.000 --> 48:13.000
+ So it's weighed by the simplicity of the program
+
+48:13.000 --> 48:14.000
+ and the likelihood.
+
+48:14.000 --> 48:15.000
+ Yes.
+
+48:15.000 --> 48:17.000
+ It's kind of a nice idea.
+
+48:17.000 --> 48:18.000
+ Yeah.
+
+48:18.000 --> 48:19.000
+ So okay.
+
+48:19.000 --> 48:21.000
+ And then you said there's,
+
+48:21.000 --> 48:24.000
+ you're playing N or M or forgot the letter,
+
+48:24.000 --> 48:26.000
+ steps into the future.
+
+48:26.000 --> 48:28.000
+ So how difficult is that problem?
+
+48:28.000 --> 48:29.000
+ What's involved there?
+
+48:29.000 --> 48:30.000
+ Okay.
+
+48:30.000 --> 48:31.000
+ It's a basic optimization problem.
+
+48:31.000 --> 48:32.000
+ What are we talking about?
+
+48:32.000 --> 48:33.000
+ Yeah.
+
+48:33.000 --> 48:35.000
+ So you have a planning problem up to horizon M
+
+48:35.000 --> 48:38.000
+ and that's exponential time in the horizon M,
+
+48:38.000 --> 48:41.000
+ which is, I mean, it's computable, but intractable.
+
+48:41.000 --> 48:43.000
+ I mean, even for chess, it's already intractable
+
+48:43.000 --> 48:44.000
+ to do that exactly.
+
+48:44.000 --> 48:45.000
+ And, you know, for though,
+
+48:45.000 --> 48:48.000
+ but it could be also discounted kind of framework.
+
+48:48.000 --> 48:49.000
+ Yeah.
+
+48:49.000 --> 48:52.000
+ So, so having a hard horizon, you know,
+
+48:52.000 --> 48:54.000
+ at 100 years, it's just for simplicity
+
+48:54.000 --> 48:58.000
+ of discussing the model and also sometimes the master simple.
+
+48:58.000 --> 49:00.000
+ Um, but there are lots of variations.
+
+49:00.000 --> 49:02.000
+ Actually quite interesting parameter.
+
+49:02.000 --> 49:07.000
+ It's, it's, there's nothing really problematic about it,
+
+49:07.000 --> 49:08.000
+ but it's very interesting.
+
+49:08.000 --> 49:10.000
+ So for instance, you think, no, let's, let's tend,
+
+49:10.000 --> 49:12.000
+ let's let the parameter M tend to infinity.
+
+49:12.000 --> 49:13.000
+ Right.
+
+49:13.000 --> 49:15.000
+ You want an agent which lives forever.
+
+49:15.000 --> 49:16.000
+ Right.
+
+49:16.000 --> 49:17.000
+ If you do it now, you have two problems.
+
+49:17.000 --> 49:20.000
+ First, the mathematics breaks down because you have an infinite
+
+49:20.000 --> 49:24.000
+ reward sum, which may give infinity and getting reward 0.1
+
+49:24.000 --> 49:27.000
+ in the time step is infinity and giving reward one every time
+
+49:27.000 --> 49:28.000
+ is infinity.
+
+49:28.000 --> 49:29.000
+ So equally good.
+
+49:29.000 --> 49:31.000
+ Not really what we want.
+
+49:31.000 --> 49:35.000
+ Other problem is that, um, if you have an infinite life,
+
+49:35.000 --> 49:38.000
+ you can be lazy for as long as you want for 10 years
+
+49:38.000 --> 49:41.000
+ and then catch up with the same expected reward.
+
+49:41.000 --> 49:44.000
+ And, you know, think about yourself or, you know,
+
+49:44.000 --> 49:46.000
+ or maybe, you know, some friends or so.
+
+49:46.000 --> 49:50.000
+ Um, if they knew they lived forever, you know,
+
+49:50.000 --> 49:51.000
+ why work hard now?
+
+49:51.000 --> 49:53.000
+ You know, just enjoy your life, you know,
+
+49:53.000 --> 49:54.000
+ and then catch up later.
+
+49:54.000 --> 49:56.000
+ So that's another problem with the infinite horizon.
+
+49:56.000 --> 49:59.000
+ And you mentioned, yes, we can go to discounting.
+
+49:59.000 --> 50:02.000
+ But then the standard discounting is so called geometric discounting.
+
+50:02.000 --> 50:06.000
+ So a dollar today is about worth as much as, you know,
+
+50:06.000 --> 50:08.000
+ $1.05 tomorrow.
+
+50:08.000 --> 50:10.000
+ So if you do the so called geometric discounting,
+
+50:10.000 --> 50:12.000
+ you have introduced an effective horizon.
+
+50:12.000 --> 50:16.000
+ So, um, the agent is now motivated to look ahead a certain amount
+
+50:16.000 --> 50:18.000
+ of time effectively.
+
+50:18.000 --> 50:20.000
+ It's like a moving horizon.
+
+50:20.000 --> 50:25.000
+ And for any fixed effective horizon, there is a problem.
+
+50:25.000 --> 50:28.000
+ To solve, which requires larger horizons.
+
+50:28.000 --> 50:30.000
+ So if I look ahead, you know, five time steps,
+
+50:30.000 --> 50:32.000
+ I'm a terrible chess player, right?
+
+50:32.000 --> 50:34.000
+ I need to look ahead longer.
+
+50:34.000 --> 50:36.000
+ If I play go, I probably have to look ahead even longer.
+
+50:36.000 --> 50:40.000
+ So for every problem, um, no, for every horizon,
+
+50:40.000 --> 50:43.000
+ there is a problem which this horizon cannot solve.
+
+50:43.000 --> 50:46.000
+ But I introduced the so called near harmonic horizon,
+
+50:46.000 --> 50:49.000
+ which goes down with one over T rather than exponentially T,
+
+50:49.000 --> 50:53.000
+ which produces an agent which effectively looks into the future,
+
+50:53.000 --> 50:55.000
+ proportional to each age.
+
+50:55.000 --> 50:57.000
+ So if it's five years old, it plans for five years.
+
+50:57.000 --> 50:59.000
+ If it's a hundred years old, it then plans for a hundred years.
+
+50:59.000 --> 51:00.000
+ Interesting.
+
+51:00.000 --> 51:02.000
+ And it's a little bit similar to humans too, right?
+
+51:02.000 --> 51:04.000
+ I mean, children don't plan ahead very long,
+
+51:04.000 --> 51:07.000
+ but when we get adults, we play ahead more longer.
+
+51:07.000 --> 51:10.000
+ Maybe when we get very old, I mean, we know that we don't live forever.
+
+51:10.000 --> 51:13.000
+ You know, maybe then our horizon shrinks again.
+
+51:13.000 --> 51:16.000
+ So that's really interesting.
+
+51:16.000 --> 51:19.000
+ So adjusting the horizon, what is there some mathematical benefit
+
+51:19.000 --> 51:25.000
+ of that of, or is it just a nice, um, I mean, intuitively, empirically,
+
+51:25.000 --> 51:28.000
+ it will probably be a good idea to sort of push the horizon back,
+
+51:28.000 --> 51:33.000
+ to extend the horizon as you experience more of the world.
+
+51:33.000 --> 51:37.000
+ But is there some mathematical conclusions here that are beneficial?
+
+51:37.000 --> 51:39.000
+ Mr. Lomonov with the actual sort of prediction part,
+
+51:39.000 --> 51:44.000
+ we have extremely strong finite time, um, but no finite data results.
+
+51:44.000 --> 51:47.000
+ So you have so and so much data, then you lose so and so much.
+
+51:47.000 --> 51:49.000
+ So the data is really great.
+
+51:49.000 --> 51:51.000
+ With the ISE model, with the planning part,
+
+51:51.000 --> 51:56.000
+ many results are only asymptotic, um, which, well, this is...
+
+51:56.000 --> 51:58.000
+ What is asymptotic?
+
+51:58.000 --> 52:01.000
+ Asymptotic means you can prove, for instance, that in the long run,
+
+52:01.000 --> 52:04.000
+ if the agent, you know, acts long enough, then, you know,
+
+52:04.000 --> 52:06.000
+ it performs optimal or some nice thing happens.
+
+52:06.000 --> 52:09.000
+ So, but you don't know how fast it converges, yeah?
+
+52:09.000 --> 52:12.000
+ So it may converge fast, but we're just not able to prove it
+
+52:12.000 --> 52:14.000
+ because of a difficult problem.
+
+52:14.000 --> 52:19.000
+ Maybe there's a bug in the model so that it's really that slow.
+
+52:19.000 --> 52:20.000
+ Yeah.
+
+52:20.000 --> 52:23.000
+ So that is what asymptotic means, sort of, eventually,
+
+52:23.000 --> 52:25.000
+ but we don't know how fast.
+
+52:25.000 --> 52:29.000
+ And if I give the agent a fixed horizon M, yeah,
+
+52:29.000 --> 52:32.000
+ then I cannot prove asymptotic results, right?
+
+52:32.000 --> 52:35.000
+ So, I mean, sort of, if it dies in 100 years,
+
+52:35.000 --> 52:37.000
+ then in 100 years it's over.
+
+52:37.000 --> 52:38.000
+ I cannot say eventually.
+
+52:38.000 --> 52:40.000
+ So this is the advantage of the discounting
+
+52:40.000 --> 52:43.000
+ that I can prove asymptotic results.
+
+52:43.000 --> 52:47.000
+ So, just to clarify, so I, okay, I made,
+
+52:47.000 --> 52:49.000
+ I've built up a model.
+
+52:49.000 --> 52:55.000
+ Well, now in the moment, I have this way of looking several steps ahead.
+
+52:55.000 --> 52:58.000
+ How do I pick what action I will take?
+
+52:58.000 --> 53:01.000
+ It's like with a playing chess, right?
+
+53:01.000 --> 53:02.000
+ You do this mini max.
+
+53:02.000 --> 53:06.000
+ In this case here, do you expect the max based on the solomotor distribution?
+
+53:06.000 --> 53:12.000
+ You propagate back and then while an action falls out,
+
+53:12.000 --> 53:15.000
+ the action which maximizes the future expected reward
+
+53:15.000 --> 53:18.000
+ under solomotor distribution and then you just take this action.
+
+53:18.000 --> 53:19.000
+ And then repeat.
+
+53:19.000 --> 53:22.000
+ And then you get a new observation and you feed it in this action,
+
+53:22.000 --> 53:23.000
+ observation, then you repeat.
+
+53:23.000 --> 53:24.000
+ And the reward, so on.
+
+53:24.000 --> 53:25.000
+ Yeah.
+
+53:25.000 --> 53:26.000
+ So you're enrolled too, yeah.
+
+53:26.000 --> 53:29.000
+ And then maybe you can even predict your own action.
+
+53:29.000 --> 53:30.000
+ I love the idea.
+
+53:30.000 --> 53:34.000
+ But, okay, this big framework, what is it?
+
+53:34.000 --> 53:38.000
+ I mean, it's kind of a beautiful mathematical framework
+
+53:38.000 --> 53:41.000
+ to think about artificial general intelligence.
+
+53:41.000 --> 53:49.000
+ What can you, what does it help you into it about how to build such systems?
+
+53:49.000 --> 53:56.000
+ Or maybe from another perspective, what does it help us in understanding AGI?
+
+53:56.000 --> 54:02.000
+ So when I started in the field, I was always interested in two things.
+
+54:02.000 --> 54:04.000
+ One was, you know, AGI.
+
+54:04.000 --> 54:06.000
+ The name didn't exist then.
+
+54:06.000 --> 54:11.000
+ What called general AI or strong AI and the physics here of everything.
+
+54:11.000 --> 54:14.000
+ So I switched back and forth between computer science and physics quite often.
+
+54:14.000 --> 54:16.000
+ You said the theory of everything.
+
+54:16.000 --> 54:17.000
+ The theory of everything.
+
+54:17.000 --> 54:23.000
+ There's basically the biggest problems before all of humanity.
+
+54:23.000 --> 54:28.000
+ Yeah, I can explain if you wanted some later time,
+
+54:28.000 --> 54:30.000
+ why I'm interested in these two questions.
+
+54:30.000 --> 54:33.000
+ Can I ask you, and a small tangent?
+
+54:33.000 --> 54:38.000
+ If it was one to be solved, which one would you,
+
+54:38.000 --> 54:43.000
+ if you were, if an apple fell in your head and there was a brilliant insight
+
+54:43.000 --> 54:49.000
+ and you could arrive at the solution to one, would it be AGI or the theory of everything?
+
+54:49.000 --> 54:52.000
+ Definitely AGI, because once the AGI problem is solved,
+
+54:52.000 --> 54:56.000
+ I can ask the AGI to solve the other problem for me.
+
+54:56.000 --> 54:58.000
+ Yeah, brilliantly put.
+
+54:58.000 --> 55:01.000
+ Okay, so as you were saying about it.
+
+55:01.000 --> 55:05.000
+ Okay, so, and the reason why it didn't settle,
+
+55:05.000 --> 55:08.000
+ I mean, this thought about, you know, once you have solved AGI,
+
+55:08.000 --> 55:11.000
+ it solves all kinds of other, not just the theory of every problem,
+
+55:11.000 --> 55:16.000
+ but all kinds of more useful problems to humanity is very appealing to many people.
+
+55:16.000 --> 55:18.000
+ And, you know, I had this thought also,
+
+55:18.000 --> 55:25.000
+ but I was quite disappointed with the state of the art of the field of AI.
+
+55:25.000 --> 55:28.000
+ There was some theory, you know, about logical reasoning,
+
+55:28.000 --> 55:30.000
+ but I was never convinced that this will fly.
+
+55:30.000 --> 55:34.000
+ And then there was this more, more heuristic approaches with neural networks
+
+55:34.000 --> 55:37.000
+ and I didn't like these heuristics.
+
+55:37.000 --> 55:41.000
+ So, and also I didn't have any good idea myself.
+
+55:41.000 --> 55:45.000
+ So that's the reason why I toggled back and forth quite some while
+
+55:45.000 --> 55:48.000
+ and even worked for four and a half years in a company developing software
+
+55:48.000 --> 55:50.000
+ or something completely unrelated.
+
+55:50.000 --> 55:53.000
+ But then I had this idea about the IXI model.
+
+55:53.000 --> 55:58.000
+ And so what it gives you, it gives you a gold standard.
+
+55:58.000 --> 56:02.000
+ So I have proven that this is the most intelligent agents
+
+56:02.000 --> 56:07.000
+ which anybody could build in quotation mark
+
+56:07.000 --> 56:11.000
+ because it's just mathematical and you need infinite compute.
+
+56:11.000 --> 56:13.000
+ But this is the limit.
+
+56:13.000 --> 56:15.000
+ And this is completely specified.
+
+56:15.000 --> 56:17.000
+ It's not just a framework.
+
+56:17.000 --> 56:22.000
+ You know, every year, tens of frameworks are developed with just skeletons
+
+56:22.000 --> 56:24.000
+ and then pieces are missing.
+
+56:24.000 --> 56:27.000
+ And usually these missing pieces, you know, turn out to be really, really difficult.
+
+56:27.000 --> 56:31.000
+ And so this is completely and uniquely defined.
+
+56:31.000 --> 56:33.000
+ And we can analyze that mathematically.
+
+56:33.000 --> 56:37.000
+ And we've also developed some approximations.
+
+56:37.000 --> 56:40.000
+ I can talk about that a little bit later.
+
+56:40.000 --> 56:44.000
+ That would be sort of the top down approach, like say for Neumann's minimax theory,
+
+56:44.000 --> 56:47.000
+ that's the theoretical optimal play of games.
+
+56:47.000 --> 56:51.000
+ And now we need to approximate it, put heuristics in, prune the tree, blah, blah, blah, and so on.
+
+56:51.000 --> 56:55.000
+ So we can do that also with the IXI model, but for generally I.
+
+56:55.000 --> 57:01.000
+ It can also inspire those and most of most researchers go bottom up, right?
+
+57:01.000 --> 57:04.000
+ They have the systems that try to make it more general, more intelligent.
+
+57:04.000 --> 57:07.000
+ It can inspire in which direction to go.
+
+57:07.000 --> 57:09.000
+ What do you mean by that?
+
+57:09.000 --> 57:11.000
+ So if you have some choice to make, right?
+
+57:11.000 --> 57:15.000
+ So how should they evaluate my system if I can't do cross validation?
+
+57:15.000 --> 57:21.000
+ How should they do my learning if my standard regularization doesn't work well?
+
+57:21.000 --> 57:25.000
+ So the answer is always this, we have a system which does everything that's IXI.
+
+57:25.000 --> 57:30.000
+ It's just completely in the ivory tower, completely useless from a practical point of view.
+
+57:30.000 --> 57:35.000
+ But you can look at it and see, ah, yeah, maybe I can take some aspects.
+
+57:35.000 --> 57:40.000
+ And instead of Kolmogorov complexity, they just take some compressors which has been developed so far.
+
+57:40.000 --> 57:45.000
+ And for the planning, well, we have UCT, which has also been used in Go.
+
+57:45.000 --> 57:54.000
+ And at least it's inspired me a lot to have this formal definition.
+
+57:54.000 --> 57:59.000
+ And if you look at other fields, you know, like I always come back to physics because I have a physics background.
+
+57:59.000 --> 58:03.000
+ Think about the phenomenon of energy that was long time a mysterious concept.
+
+58:03.000 --> 58:08.000
+ And at some point it was completely formalized and that really helped a lot.
+
+58:08.000 --> 58:13.000
+ And you can point out a lot of these things which were first mysterious and vague.
+
+58:13.000 --> 58:15.000
+ And then they have been rigorously formalized.
+
+58:15.000 --> 58:20.000
+ Speed and acceleration has been confused, right, until it was formally defined.
+
+58:20.000 --> 58:21.000
+ There was a time like this.
+
+58:21.000 --> 58:27.000
+ And people, you know, often, you know, who don't have any background, you know, still confuse it.
+
+58:27.000 --> 58:33.000
+ So, and this IXI model or the intelligence definitions, which is sort of the dual to it,
+
+58:33.000 --> 58:39.000
+ we come back to that later, formalizes the notion of intelligence uniquely and rigorously.
+
+58:39.000 --> 58:43.000
+ So, in a sense, it serves as kind of the light at the end of the tunnel.
+
+58:43.000 --> 58:45.000
+ Yes, yeah.
+
+58:45.000 --> 58:48.000
+ So, I mean, there's a million questions I could ask her.
+
+58:48.000 --> 58:52.000
+ So, maybe kind of, okay, let's feel around in the dark a little bit.
+
+58:52.000 --> 58:57.000
+ So, there's been here a deep mind, but in general, been a lot of breakthrough ideas,
+
+58:57.000 --> 58:59.000
+ just like we've been saying around reinforcement learning.
+
+58:59.000 --> 59:04.000
+ So, how do you see the progress in reinforcement learning is different?
+
+59:04.000 --> 59:09.000
+ Like, which subset of IXI does it occupy the current?
+
+59:09.000 --> 59:16.000
+ Like you said, maybe the Markov assumption is made quite often in reinforcement learning.
+
+59:16.000 --> 59:21.000
+ There's other assumptions made in order to make the system work.
+
+59:21.000 --> 59:26.000
+ What do you see as the difference connection between reinforcement learning and IXI?
+
+59:26.000 --> 59:33.000
+ So, the major difference is that essentially all other approaches,
+
+59:33.000 --> 59:35.000
+ they make stronger assumptions.
+
+59:35.000 --> 59:41.000
+ So, in reinforcement learning, the Markov assumption is that the next state or next observation
+
+59:41.000 --> 59:45.000
+ only depends on the previous observation and not the whole history,
+
+59:45.000 --> 59:49.000
+ which makes, of course, the mathematics much easier rather than dealing with histories.
+
+59:49.000 --> 59:54.000
+ Of course, they profit from it also because then you have algorithms that run on current computers
+
+59:54.000 --> 59:56.000
+ and do something practically useful.
+
+59:56.000 --> 1:00:01.000
+ But for generally I, all the assumptions which are made by other approaches,
+
+1:00:01.000 --> 1:00:04.000
+ we know already now they are limiting.
+
+1:00:04.000 --> 1:00:11.000
+ So, for instance, usually you need a Godisi assumption in the MDP framework in order to learn.
+
+1:00:11.000 --> 1:00:15.000
+ A Godisi essentially means that you can recover from your mistakes
+
+1:00:15.000 --> 1:00:17.000
+ and that there are no traps in the environment.
+
+1:00:17.000 --> 1:00:22.000
+ And if you make this assumption, then essentially you can go back to a previous state,
+
+1:00:22.000 --> 1:00:29.000
+ go there a couple of times and then learn what statistics and what the state is like.
+
+1:00:29.000 --> 1:00:33.000
+ And then in the long run perform well in this state.
+
+1:00:33.000 --> 1:00:35.000
+ But there are no fundamental problems.
+
+1:00:35.000 --> 1:00:38.000
+ But in real life, we know there can be one single action.
+
+1:00:38.000 --> 1:00:45.000
+ One second of being inattentive while driving a car fast can ruin the rest of my life.
+
+1:00:45.000 --> 1:00:48.000
+ I can become quadruplegic or whatever.
+
+1:00:48.000 --> 1:00:50.000
+ So, there's no recovery anymore.
+
+1:00:50.000 --> 1:00:52.000
+ So, the real world is not ergodic, I always say.
+
+1:00:52.000 --> 1:00:56.000
+ There are traps and there are situations where you're not recovered from.
+
+1:00:56.000 --> 1:01:02.000
+ And very little theory has been developed for this case.
+
+1:01:02.000 --> 1:01:05.000
+ What about...
+
+1:01:05.000 --> 1:01:10.000
+ What do you see in the context of Aixi as the role of exploration?
+
+1:01:10.000 --> 1:01:13.000
+ Sort of...
+
+1:01:13.000 --> 1:01:19.000
+ You mentioned in the real world, you can get into trouble when we make the wrong decisions and really pay for it.
+
+1:01:19.000 --> 1:01:25.000
+ But exploration seems to be fundamentally important for learning about this world, for gaining new knowledge.
+
+1:01:25.000 --> 1:01:29.000
+ So, is exploration baked in?
+
+1:01:29.000 --> 1:01:36.000
+ Another way to ask it, what are the parameters of this Aixi that can be controlled?
+
+1:01:36.000 --> 1:01:40.000
+ Yeah, I say the good thing is that there are no parameters to control.
+
+1:01:40.000 --> 1:01:44.000
+ Some other people try knobs to control and you can do that.
+
+1:01:44.000 --> 1:01:48.000
+ I mean, you can modify Aixi so that you have some knobs to play with if you want to.
+
+1:01:48.000 --> 1:01:53.000
+ But the exploration is directly baked in.
+
+1:01:53.000 --> 1:01:58.000
+ And that comes from the Bayesian learning and the long term planning.
+
+1:01:58.000 --> 1:02:04.000
+ So, these together already imply exploration.
+
+1:02:04.000 --> 1:02:13.000
+ You can nicely and explicitly prove that for simple problems like so called bandit problems,
+
+1:02:13.000 --> 1:02:20.000
+ where you say to give a real world example, say you have two medical treatments, A and B,
+
+1:02:20.000 --> 1:02:23.000
+ you don't know the effectiveness, you try A a little bit, B a little bit,
+
+1:02:23.000 --> 1:02:26.000
+ but you don't want to harm too many patients.
+
+1:02:26.000 --> 1:02:32.000
+ So, you have to sort of trade off exploring and at some point you want to explore.
+
+1:02:32.000 --> 1:02:38.000
+ And you can do the mathematics and figure out the optimal strategy.
+
+1:02:38.000 --> 1:02:41.000
+ They're so called Bayesian agents, they're also non Bayesian agents.
+
+1:02:41.000 --> 1:02:47.000
+ But it shows that this Bayesian framework by taking a prior or a possible worlds,
+
+1:02:47.000 --> 1:02:51.000
+ doing the Bayesian mixture, then the base optimal decision with long term planning,
+
+1:02:51.000 --> 1:02:58.000
+ that is important, automatically implies exploration also to the proper extent.
+
+1:02:58.000 --> 1:03:00.000
+ Not too much exploration and not too little.
+
+1:03:00.000 --> 1:03:02.000
+ It is very simple settings.
+
+1:03:02.000 --> 1:03:06.000
+ In the Aixi model, I was also able to prove that it is a self optimizing theorem
+
+1:03:06.000 --> 1:03:10.000
+ or asymptotic optimality theorem, although only asymptotic, not finite time bounds.
+
+1:03:10.000 --> 1:03:13.000
+ So, it seems like the long term planning is a really important,
+
+1:03:13.000 --> 1:03:16.000
+ but the long term part of the planning is really important.
+
+1:03:16.000 --> 1:03:19.000
+ So, maybe a quick tangent.
+
+1:03:19.000 --> 1:03:25.000
+ How important do you think is removing the Markov assumption and looking at the full history?
+
+1:03:25.000 --> 1:03:31.000
+ Intuitively, of course, it's important, but is it fundamentally transformative
+
+1:03:31.000 --> 1:03:33.000
+ to the entirety of the problem?
+
+1:03:33.000 --> 1:03:35.000
+ What's your sense of it?
+
+1:03:35.000 --> 1:03:40.000
+ Because we make that assumption quite often, just throwing away the past.
+
+1:03:40.000 --> 1:03:43.000
+ I think it's absolutely crucial.
+
+1:03:43.000 --> 1:03:47.000
+ The question is whether there's a way to deal with it
+
+1:03:47.000 --> 1:03:52.000
+ in a more heuristic and still sufficiently well way.
+
+1:03:52.000 --> 1:03:56.000
+ So, I have to come up with an example and fly,
+
+1:03:56.000 --> 1:04:01.000
+ but you have some key event in your life a long time ago,
+
+1:04:01.000 --> 1:04:05.000
+ in some city or something, you realize it's a really dangerous street or whatever, right?
+
+1:04:05.000 --> 1:04:10.000
+ And you want to remember that forever, right, in case you come back there.
+
+1:04:10.000 --> 1:04:12.000
+ Kind of a selective kind of memory.
+
+1:04:12.000 --> 1:04:15.000
+ You remember all the important events in the past,
+
+1:04:15.000 --> 1:04:17.000
+ but somehow selecting the importance is...
+
+1:04:17.000 --> 1:04:19.000
+ They're very hard, yeah.
+
+1:04:19.000 --> 1:04:22.000
+ And I'm not concerned about just storing the whole history.
+
+1:04:22.000 --> 1:04:28.000
+ You can calculate human life, say, 30 or 100 years doesn't matter, right?
+
+1:04:28.000 --> 1:04:33.000
+ How much data comes in through the vision system and the auditory system.
+
+1:04:33.000 --> 1:04:37.000
+ You compress it a little bit, in this case, lossily, and store it.
+
+1:04:37.000 --> 1:04:40.000
+ We are soon in the means of just storing it.
+
+1:04:40.000 --> 1:04:45.000
+ But you still need to the selection for the planning part
+
+1:04:45.000 --> 1:04:47.000
+ and the compression for the understanding part.
+
+1:04:47.000 --> 1:04:50.000
+ The raw storage I'm really not concerned about.
+
+1:04:50.000 --> 1:04:54.000
+ And I think we should just store, if you develop an agent,
+
+1:04:54.000 --> 1:04:59.000
+ preferably just store all the interaction history.
+
+1:04:59.000 --> 1:05:03.000
+ And then you build, of course, models on top of it and you compress it
+
+1:05:03.000 --> 1:05:08.000
+ and you are selective, but occasionally you go back to the old data
+
+1:05:08.000 --> 1:05:12.000
+ and reanalyze it based on your new experience you have.
+
+1:05:12.000 --> 1:05:15.000
+ Sometimes you are in school, you learn all these things
+
+1:05:15.000 --> 1:05:18.000
+ you think is totally useless and much later you realize,
+
+1:05:18.000 --> 1:05:22.000
+ oh, they were not as useless as you thought.
+
+1:05:22.000 --> 1:05:24.000
+ I'm looking at you linear algebra.
+
+1:05:24.000 --> 1:05:25.000
+ Right.
+
+1:05:25.000 --> 1:05:30.000
+ So maybe let me ask about objective functions, because that rewards...
+
+1:05:30.000 --> 1:05:33.000
+ It seems to be an important part.
+
+1:05:33.000 --> 1:05:37.000
+ The rewards are kind of given to the system.
+
+1:05:37.000 --> 1:05:45.000
+ For a lot of people, the specification of the objective function
+
+1:05:45.000 --> 1:05:48.000
+ is a key part of intelligence.
+
+1:05:48.000 --> 1:05:52.000
+ The agent itself figuring out what is important.
+
+1:05:52.000 --> 1:05:54.000
+ What do you think about that?
+
+1:05:54.000 --> 1:06:00.000
+ Is it possible within IACC framework to yourself discover
+
+1:06:00.000 --> 1:06:05.000
+ their reward based on which you should operate?
+
+1:06:05.000 --> 1:06:08.000
+ Okay, that will be a long answer.
+
+1:06:08.000 --> 1:06:14.000
+ And that is a very interesting question and I'm asked a lot about this question.
+
+1:06:14.000 --> 1:06:16.000
+ Where do the rewards come from?
+
+1:06:16.000 --> 1:06:19.000
+ And that depends.
+
+1:06:19.000 --> 1:06:22.000
+ And I'll give you now a couple of answers.
+
+1:06:22.000 --> 1:06:27.000
+ So if we want to build agents, now let's start simple.
+
+1:06:27.000 --> 1:06:31.000
+ So let's assume we want to build an agent based on the IACC model
+
+1:06:31.000 --> 1:06:34.000
+ which performs a particular task.
+
+1:06:34.000 --> 1:06:39.000
+ Let's start with something super simple, like playing chess or go or something.
+
+1:06:39.000 --> 1:06:44.000
+ Then the reward is winning the game is plus one, losing the game is minus one.
+
+1:06:44.000 --> 1:06:45.000
+ Done.
+
+1:06:45.000 --> 1:06:49.000
+ You apply this agent, if you have enough compute, you let itself play
+
+1:06:49.000 --> 1:06:53.000
+ and it will learn the rules of the game, will play perfect chess.
+
+1:06:53.000 --> 1:06:55.000
+ After some while, problem solved.
+
+1:06:55.000 --> 1:07:03.000
+ So if you have more complicated problems, then you may believe
+
+1:07:03.000 --> 1:07:05.000
+ that you have the right reward, but it's not.
+
+1:07:05.000 --> 1:07:11.000
+ So a nice cute example is elevator control that is also in Rich Sutton's book,
+
+1:07:11.000 --> 1:07:13.000
+ which is a great book, by the way.
+
+1:07:13.000 --> 1:07:18.000
+ So you control the elevator and you think, well, maybe the reward should be
+
+1:07:18.000 --> 1:07:20.000
+ coupled to how long people wait in front of the elevator.
+
+1:07:20.000 --> 1:07:22.000
+ You know, long wait is bad.
+
+1:07:22.000 --> 1:07:24.000
+ You program it and you do it.
+
+1:07:24.000 --> 1:07:29.000
+ And what happens is the elevator eagerly picks up all the people but never drops them off.
+
+1:07:29.000 --> 1:07:34.000
+ So then you realize that maybe the time in the elevator also counts.
+
+1:07:34.000 --> 1:07:36.000
+ So you minimize the sum.
+
+1:07:36.000 --> 1:07:40.000
+ And the elevator does that, but never picks up the people in the 10th floor
+
+1:07:40.000 --> 1:07:43.000
+ and the top floor because in expectation, it's not worth it.
+
+1:07:43.000 --> 1:07:45.000
+ Just let them stay.
+
+1:07:45.000 --> 1:07:51.000
+ So even in apparently simple problems, you can make mistakes.
+
+1:07:51.000 --> 1:07:58.000
+ And that's what in more serious context, say, AGI safety researchers consider.
+
+1:07:58.000 --> 1:08:01.000
+ So now let's go back to general agents.
+
+1:08:01.000 --> 1:08:05.000
+ So assume we want to build an agent which is generally useful to humans.
+
+1:08:05.000 --> 1:08:10.000
+ Yes, we have a household robot here and it should do all kinds of tasks.
+
+1:08:10.000 --> 1:08:15.000
+ So in this case, the human should give the reward on the fly.
+
+1:08:15.000 --> 1:08:18.000
+ I mean, maybe it's pre trained in the factory and that there's some sort of internal reward
+
+1:08:18.000 --> 1:08:20.000
+ for, you know, the battery level or whatever.
+
+1:08:20.000 --> 1:08:23.000
+ Yeah, but so it, you know, it does the dishes.
+
+1:08:23.000 --> 1:08:28.000
+ Badly, you know, you punish the robot, you does it good, you reward the robot and then train it to a new task.
+
+1:08:28.000 --> 1:08:29.000
+ Like a child, right?
+
+1:08:29.000 --> 1:08:35.000
+ So you need the human in the loop if you want a system which is useful to the human.
+
+1:08:35.000 --> 1:08:41.000
+ And as long as this agent stays sub human level, that should work reasonably well.
+
+1:08:41.000 --> 1:08:46.000
+ Apart from, you know, these examples, it becomes critical if they become, you know, on a human level,
+
+1:08:46.000 --> 1:08:49.000
+ it's children, small children, you have reasonably well under control.
+
+1:08:49.000 --> 1:08:51.000
+ They become older.
+
+1:08:51.000 --> 1:08:54.000
+ The reward technique doesn't work so well anymore.
+
+1:08:54.000 --> 1:09:01.000
+ So then finally, so this would be agents which are just, you could say slaves to the humans.
+
+1:09:01.000 --> 1:09:02.000
+ Yeah.
+
+1:09:02.000 --> 1:09:08.000
+ So if you are more ambitious and just say we want to build a new spacious of intelligent beings,
+
+1:09:08.000 --> 1:09:12.000
+ we put them on a new planet and we want them to develop this planet or whatever.
+
+1:09:12.000 --> 1:09:15.000
+ So we don't give them any reward.
+
+1:09:15.000 --> 1:09:17.000
+ So what could we do?
+
+1:09:17.000 --> 1:09:22.000
+ And you could try to, you know, come up with some reward functions like, you know,
+
+1:09:22.000 --> 1:09:28.000
+ it should maintain itself, the robot, it should maybe multiply, build more robots, right?
+
+1:09:28.000 --> 1:09:34.000
+ And, you know, maybe all kinds of things that you find useful, but that's pretty hard, right?
+
+1:09:34.000 --> 1:09:36.000
+ You know, what does self maintenance mean?
+
+1:09:36.000 --> 1:09:38.000
+ You know, what does it mean to build a copy?
+
+1:09:38.000 --> 1:09:40.000
+ Should it be exact copy or an approximate copy?
+
+1:09:40.000 --> 1:09:42.000
+ And so that's really hard.
+
+1:09:42.000 --> 1:09:48.000
+ But Laurent or so, also at DeepMind, developed a beautiful model.
+
+1:09:48.000 --> 1:09:54.000
+ So it just took the ICSE model and coupled the rewards to information gain.
+
+1:09:54.000 --> 1:10:00.000
+ So he said the reward is proportional to how much the agent had learned about the world.
+
+1:10:00.000 --> 1:10:05.000
+ And you can rigorously formally uniquely define that in terms of our catalog versions.
+
+1:10:05.000 --> 1:10:06.000
+ Okay.
+
+1:10:06.000 --> 1:10:09.000
+ So if you put that in, you get a completely autonomous agent.
+
+1:10:09.000 --> 1:10:15.000
+ And actually, interestingly, for this agent, we can prove much stronger result than for the general agent, which is also nice.
+
+1:10:15.000 --> 1:10:20.000
+ And if you let this agent lose, it will be in a sense the optimal scientist.
+
+1:10:20.000 --> 1:10:24.000
+ This is absolutely curious to learn as much as possible about the world.
+
+1:10:24.000 --> 1:10:27.000
+ And of course, it will also have a lot of instrumental goals, right?
+
+1:10:27.000 --> 1:10:30.000
+ In order to learn, it needs to at least survive, right?
+
+1:10:30.000 --> 1:10:32.000
+ That agent is not good for anything.
+
+1:10:32.000 --> 1:10:34.000
+ So it needs to have self preservation.
+
+1:10:34.000 --> 1:10:38.000
+ And if it builds small helpers acquiring more information, it will do that.
+
+1:10:38.000 --> 1:10:39.000
+ Yeah.
+
+1:10:39.000 --> 1:10:44.000
+ If exploration, space exploration or whatever is necessary, right?
+
+1:10:44.000 --> 1:10:46.000
+ To gathering information and develop it.
+
+1:10:46.000 --> 1:10:51.000
+ So it has a lot of instrumental goals following on this information gain.
+
+1:10:51.000 --> 1:10:53.000
+ And this agent is completely autonomous of us.
+
+1:10:53.000 --> 1:10:55.000
+ No rewards necessary anymore.
+
+1:10:55.000 --> 1:10:56.000
+ Yeah.
+
+1:10:56.000 --> 1:11:05.000
+ Of course, it could find a way to gain the concept of information and get stuck in that library that you mentioned beforehand.
+
+1:11:05.000 --> 1:11:08.000
+ With a very large number of books.
+
+1:11:08.000 --> 1:11:10.000
+ The first agent had this problem.
+
+1:11:10.000 --> 1:11:15.000
+ It would get stuck in front of an old TV screen, which has just had wide noise.
+
+1:11:15.000 --> 1:11:16.000
+ Yeah, wide noise.
+
+1:11:16.000 --> 1:11:20.000
+ But the second version can deal with at least stochasticity.
+
+1:11:20.000 --> 1:11:22.000
+ Well, yeah.
+
+1:11:22.000 --> 1:11:23.000
+ What about curiosity?
+
+1:11:23.000 --> 1:11:27.000
+ This kind of word, curiosity, creativity.
+
+1:11:27.000 --> 1:11:32.000
+ Is that kind of the reward function being of getting new information?
+
+1:11:32.000 --> 1:11:42.000
+ Is that similar to idea of kind of injecting exploration for its own sake inside the reward function?
+
+1:11:42.000 --> 1:11:43.000
+ Do you find this at all appealing?
+
+1:11:43.000 --> 1:11:44.000
+ Interesting.
+
+1:11:44.000 --> 1:11:46.000
+ I think that's a nice definition.
+
+1:11:46.000 --> 1:11:48.000
+ Curiosity is a reward.
+
+1:11:48.000 --> 1:11:49.000
+ Sorry.
+
+1:11:49.000 --> 1:11:54.000
+ Curiosity is exploration for its own sake.
+
+1:11:54.000 --> 1:11:55.000
+ Yeah.
+
+1:11:55.000 --> 1:11:57.000
+ I would accept that.
+
+1:11:57.000 --> 1:12:08.000
+ But most curiosity, well, in humans and especially in children, yeah, is not just for its own sake, but for actually learning about the environment and for behaving better.
+
+1:12:08.000 --> 1:12:14.000
+ So I think most curiosity is tied in the end to what's performing better.
+
+1:12:14.000 --> 1:12:15.000
+ Well, okay.
+
+1:12:15.000 --> 1:12:26.000
+ So if intelligence systems need to have this reward function, let me, you're an intelligence system currently passing the torrent test quite effectively.
+
+1:12:26.000 --> 1:12:33.000
+ What's the reward function of our human intelligence existence?
+
+1:12:33.000 --> 1:12:37.000
+ What's the reward function that Marcus Hutter is operating under?
+
+1:12:37.000 --> 1:12:38.000
+ Okay.
+
+1:12:38.000 --> 1:12:44.000
+ To the first question, the biological reward function is to survive and to spread.
+
+1:12:44.000 --> 1:12:50.000
+ And very few humans sort of are able to overcome this biological reward function.
+
+1:12:50.000 --> 1:12:58.000
+ But we live in a very nice world where we have lots of spare time and can still survive and spread.
+
+1:12:58.000 --> 1:13:03.000
+ So we can develop arbitrary other interests, which is quite interesting.
+
+1:13:03.000 --> 1:13:04.000
+ On top of that.
+
+1:13:04.000 --> 1:13:05.000
+ On top of that.
+
+1:13:05.000 --> 1:13:06.000
+ Yeah.
+
+1:13:06.000 --> 1:13:15.000
+ But the survival and spreading sort of is, I would say, the goal or the reward function of humans that the core one.
+
+1:13:15.000 --> 1:13:19.000
+ I like how you avoided answering the second question, which a good intelligence system would.
+
+1:13:19.000 --> 1:13:24.000
+ Your own meaning of life and a reward function.
+
+1:13:24.000 --> 1:13:31.000
+ My own meaning of life and reward function is to find an AGI to build it.
+
+1:13:31.000 --> 1:13:32.000
+ Beautifully put.
+
+1:13:32.000 --> 1:13:33.000
+ Okay.
+
+1:13:33.000 --> 1:13:34.000
+ Let's dissect the eggs even further.
+
+1:13:34.000 --> 1:13:42.000
+ So one of the assumptions is kind of infinity keeps creeping up everywhere.
+
+1:13:42.000 --> 1:13:57.000
+ Which, what are your thoughts on kind of bounded rationality and sort of the nature of our existence and intelligence systems is that we're operating always under constraints, under, you know, limited time, limited resources.
+
+1:13:57.000 --> 1:14:06.000
+ How does that, how do you think about that within the IXE framework within trying to create an AGI system that operates under these constraints?
+
+1:14:06.000 --> 1:14:19.000
+ Yeah, that is one of the criticisms about IXE that it ignores computation and completely and some people believe that intelligence is inherently tied to what's bounded resources.
+
+1:14:19.000 --> 1:14:21.000
+ What do you think on this one point?
+
+1:14:21.000 --> 1:14:27.000
+ Do you think it's the, do you think the bound of resources are fundamental to intelligence?
+
+1:14:27.000 --> 1:14:35.000
+ I would say that an intelligence notion which ignores computational limits is extremely useful.
+
+1:14:35.000 --> 1:14:43.000
+ A good intelligence notion which includes these resources would be even more useful, but we don't have that yet.
+
+1:14:43.000 --> 1:14:48.000
+ And so look at other fields outside of computer science.
+
+1:14:48.000 --> 1:14:52.000
+ Computational aspects never play a fundamental role.
+
+1:14:52.000 --> 1:15:00.000
+ You develop biological models for cells, something in physics, these theories, I mean, become more and more crazy and harder and harder to compute.
+
+1:15:00.000 --> 1:15:05.000
+ Well, in the end, of course, we need to do something with this model, but there's more nuisance than a feature.
+
+1:15:05.000 --> 1:15:18.000
+ And I'm sometimes wondering if artificial intelligence would not sit in a computer science department, but in a philosophy department, then this computational focus would be probably significantly less.
+
+1:15:18.000 --> 1:15:22.000
+ I mean, think about the induction problem is more in the philosophy department.
+
+1:15:22.000 --> 1:15:26.000
+ There's virtually no paper who cares about, you know, how long it takes to compute the answer.
+
+1:15:26.000 --> 1:15:28.000
+ That is completely secondary.
+
+1:15:28.000 --> 1:15:39.000
+ Of course, once we have figured out the first problem, so intelligence without computational resources, then the next and very good question is,
+
+1:15:39.000 --> 1:15:49.000
+ could we improve it by including computational resources, but nobody was able to do that so far in an even halfway satisfactory manner?
+
+1:15:49.000 --> 1:15:50.000
+ I like that.
+
+1:15:50.000 --> 1:15:55.000
+ That's in the long run, the right department to belong to is philosophy.
+
+1:15:55.000 --> 1:16:07.000
+ That's actually quite a deep idea of or even to at least to think about big picture philosophical questions, big picture questions, even in the computer science department.
+
+1:16:07.000 --> 1:16:14.000
+ But you've mentioned approximation, sort of, there's a lot of infinity, a lot of huge resources needed.
+
+1:16:14.000 --> 1:16:19.000
+ Are there approximations to IHC that within the IHC framework that are useful?
+
+1:16:19.000 --> 1:16:22.000
+ Yeah, we have to develop a couple of approximations.
+
+1:16:22.000 --> 1:16:36.000
+ And what we do there is that the Solomov induction part, which was, you know, find the shortest program describing your data, which just replaces by standard data compressors.
+
+1:16:36.000 --> 1:16:41.000
+ And the better compressors get, the better this part will become.
+
+1:16:41.000 --> 1:16:48.000
+ We focus on a particular compressor called Context Rewaiting, which is pretty amazing, not so well known.
+
+1:16:48.000 --> 1:16:52.000
+ It has beautiful theoretical properties, also works reasonably well in practice.
+
+1:16:52.000 --> 1:16:57.000
+ So we use that for the approximation of the induction and the learning and the prediction part.
+
+1:16:57.000 --> 1:17:07.000
+ And for the planning part, we essentially just took the ideas from a computer go from 2006.
+
+1:17:07.000 --> 1:17:19.000
+ It was Java CPSPARI, also now at DeepMind, who developed the so called UCT algorithm, upper confidence bound for trees algorithm on top of the Monte Carlo tree search.
+
+1:17:19.000 --> 1:17:23.000
+ So we approximate this planning part by sampling.
+
+1:17:23.000 --> 1:17:29.000
+ And it's successful on some small toy problems.
+
+1:17:29.000 --> 1:17:33.000
+ We don't want to lose the generality, right?
+
+1:17:33.000 --> 1:17:35.000
+ And that's sort of the handicap, right?
+
+1:17:35.000 --> 1:17:39.000
+ If you want to be general, you have to give up something.
+
+1:17:39.000 --> 1:17:49.000
+ So but this single agent was able to play, you know, small games like Coon poker and tic tac toe and, and even Pacman.
+
+1:17:49.000 --> 1:17:59.000
+ And the same architecture, no change, the agent doesn't know the rules of the game, really nothing at all by self or by player with these environments.
+
+1:17:59.000 --> 1:18:09.000
+ So you're going to Schmidt, who proposed something called the ghetto machines, which is a self improving program that rewrites its own code.
+
+1:18:09.000 --> 1:18:18.000
+ What sort of mathematically or philosophically, what's the relationship in your eyes if you're familiar with it between AXI and the ghetto machines?
+
+1:18:18.000 --> 1:18:22.000
+ Yeah, familiar with it. He developed it while I was in his lab.
+
+1:18:22.000 --> 1:18:28.000
+ Yeah, so the girl machine to explain briefly, you give it a task.
+
+1:18:28.000 --> 1:18:32.000
+ It could be a simple task as, you know, finding prime factors in numbers, right?
+
+1:18:32.000 --> 1:18:35.000
+ You can formally write it down. There's a very slow algorithm to do that.
+
+1:18:35.000 --> 1:18:37.000
+ Just all try all the factors. Yeah.
+
+1:18:37.000 --> 1:18:39.000
+ Or play chess, right?
+
+1:18:39.000 --> 1:18:42.000
+ Optimally, you write the algorithm to minimax to the end of the game.
+
+1:18:42.000 --> 1:18:46.000
+ So you write down what the girl machine should do.
+
+1:18:46.000 --> 1:18:54.000
+ Then it will take part of it resources to run this program and other part of the sources to improve this program.
+
+1:18:54.000 --> 1:19:01.000
+ And when it finds an approved version, which provably computes the same answer.
+
+1:19:01.000 --> 1:19:09.000
+ So that's the key part. Yeah, it needs to prove by itself that this change of program still satisfies the original specification.
+
+1:19:09.000 --> 1:19:16.000
+ And if it does so, then it replaces the original program by the improved program. And by definition, it does the same job, but just faster.
+
+1:19:16.000 --> 1:19:19.000
+ Okay. And then, you know, it proves over it and over it.
+
+1:19:19.000 --> 1:19:31.000
+ And it's it's it's developed in a way that all parts of this girl machine can self improve, but it stays provably consistent with the original specification.
+
+1:19:31.000 --> 1:19:36.000
+ So from this perspective, it has nothing to do with AXI.
+
+1:19:36.000 --> 1:19:42.000
+ But if you would now put AXI as the starting axioms in, it would run AXI.
+
+1:19:42.000 --> 1:19:45.000
+ But, you know, that takes forever.
+
+1:19:45.000 --> 1:19:55.000
+ But then if it finds a provable speed up of AXI, it would replace it by this and this and this and maybe eventually it comes up with a model which is still the AXI model.
+
+1:19:55.000 --> 1:20:08.000
+ I mean, just for the knowledgeable reader, AXI is incomputable. And I can prove that therefore there cannot be a computable exact algorithm.
+
+1:20:08.000 --> 1:20:10.000
+ Computers then needs to be some approximations.
+
+1:20:10.000 --> 1:20:12.000
+ And this is not dealt with the girdle machine.
+
+1:20:12.000 --> 1:20:13.000
+ So you have to do something about it.
+
+1:20:13.000 --> 1:20:19.000
+ But there's the AXI TL model, which is finally computable, which we could put in which part of AXI is non computable.
+
+1:20:19.000 --> 1:20:21.000
+ The Solomon of induction part.
+
+1:20:21.000 --> 1:20:27.000
+ But there's ways of getting computable approximations of the AXI model.
+
+1:20:27.000 --> 1:20:29.000
+ So then it's at least computable.
+
+1:20:29.000 --> 1:20:33.000
+ It is still way beyond any resources anybody will ever have.
+
+1:20:33.000 --> 1:20:37.000
+ But then the girdle machine could sort of improve it further and further in an exact way.
+
+1:20:37.000 --> 1:20:51.000
+ So this is theoretically possible that the girdle machine process could improve. Isn't AXI already optimal?
+
+1:20:51.000 --> 1:21:03.000
+ It is optimal in terms of the reward collected over its interaction cycles, but it takes infinite time to produce one action.
+
+1:21:03.000 --> 1:21:07.000
+ And the world continues whether you want it or not.
+
+1:21:07.000 --> 1:21:17.000
+ So the model is assuming had an oracle which solved this problem and then in the next 100 milliseconds or the reaction time you need gives the answer, then AXI is optimal.
+
+1:21:17.000 --> 1:21:26.000
+ It's optimal in sense of data, also from learning efficiency and data efficiency, but not in terms of computation time.
+
+1:21:26.000 --> 1:21:31.000
+ And then the girdle machine in theory, but probably not provably could make it go faster.
+
+1:21:31.000 --> 1:21:37.000
+ Those two components are super interesting.
+
+1:21:37.000 --> 1:21:44.000
+ The perfect intelligence combined with self improvement.
+
+1:21:44.000 --> 1:21:50.000
+ Sort of provable self improvement in sense you're always getting the correct answer and you're improving.
+
+1:21:50.000 --> 1:21:52.000
+ Beautiful ideas.
+
+1:21:52.000 --> 1:22:03.000
+ I also mentioned that different kinds of things in the chase of solving this reward sort of optimizing for the goal.
+
+1:22:03.000 --> 1:22:05.000
+ Interesting human things could emerge.
+
+1:22:05.000 --> 1:22:10.000
+ So is there a place for consciousness within AXI?
+
+1:22:10.000 --> 1:22:21.000
+ Where does maybe you can comment because I suppose we humans are just another instantiation by AXI agents and we seem to have consciousness.
+
+1:22:21.000 --> 1:22:23.000
+ You say humans are an instantiation of an AXI agent.
+
+1:22:23.000 --> 1:22:24.000
+ Yes.
+
+1:22:24.000 --> 1:22:29.000
+ That would be amazing, but I think that's not true even for the smartest and most rational humans.
+
+1:22:29.000 --> 1:22:33.000
+ I think maybe we are very crude approximations.
+
+1:22:33.000 --> 1:22:34.000
+ Interesting.
+
+1:22:34.000 --> 1:22:41.000
+ I mean, I tend to believe, again, I'm Russian, so I tend to believe our flaws are part of the optimal.
+
+1:22:41.000 --> 1:22:50.000
+ So we tend to laugh off and criticize our flaws and I tend to think that that's actually close to an optimal behavior.
+
+1:22:50.000 --> 1:22:58.000
+ Well, some flaws, if you think more carefully about it, are actually not flaws, but I think there are still enough flaws.
+
+1:22:58.000 --> 1:22:59.000
+ I don't know.
+
+1:22:59.000 --> 1:23:00.000
+ It's unclear.
+
+1:23:00.000 --> 1:23:14.000
+ As a student of history, I think all the suffering that we've endured as a civilization, it's possible that that's the optimal amount of suffering we need to endure to minimize long term suffering.
+
+1:23:14.000 --> 1:23:16.000
+ That's your Russian background.
+
+1:23:16.000 --> 1:23:21.000
+ That's the Russian, whether humans are or not instantiations of an AXI agent.
+
+1:23:21.000 --> 1:23:29.000
+ Do you think there's consciousness is something that could emerge in a computational form or framework like AXI?
+
+1:23:29.000 --> 1:23:31.000
+ Let me also ask you a question.
+
+1:23:31.000 --> 1:23:33.000
+ Do you think I'm conscious?
+
+1:23:33.000 --> 1:23:38.000
+ That's a good question.
+
+1:23:38.000 --> 1:23:44.000
+ That tie is confusing me, but I think so.
+
+1:23:44.000 --> 1:23:47.000
+ You think that makes me unconscious because it strangles me?
+
+1:23:47.000 --> 1:23:53.000
+ If an agent were to solve the imitation game posed by Turing, I think that would be dressed similarly to you.
+
+1:23:53.000 --> 1:24:04.000
+ Because there's a kind of flamboyant, interesting, complex behavior pattern that sells that you're human and you're conscious.
+
+1:24:04.000 --> 1:24:06.000
+ But why do you ask?
+
+1:24:06.000 --> 1:24:08.000
+ Was it a yes or was it a no?
+
+1:24:08.000 --> 1:24:12.000
+ Yes, I think you're conscious, yes.
+
+1:24:12.000 --> 1:24:18.000
+ And you explain somehow why, but you infer that from my behavior.
+
+1:24:18.000 --> 1:24:20.000
+ You can never be sure about that.
+
+1:24:20.000 --> 1:24:31.000
+ And I think the same thing will happen with any intelligent agent we develop if it behaves in a way sufficiently close to humans.
+
+1:24:31.000 --> 1:24:36.000
+ Or maybe if not humans, maybe a dog is also sometimes a little bit self conscious.
+
+1:24:36.000 --> 1:24:44.000
+ So if it behaves in a way where we attribute typically consciousness, we would attribute consciousness to these intelligent systems.
+
+1:24:44.000 --> 1:24:50.000
+ And AXI probably in particular, that of course doesn't answer the question whether it's really conscious.
+
+1:24:50.000 --> 1:24:53.000
+ And that's the big heart problem of consciousness.
+
+1:24:53.000 --> 1:24:55.000
+ Maybe I'm a zombie.
+
+1:24:55.000 --> 1:24:59.000
+ I mean, not the movie zombie, but the philosophical zombie.
+
+1:24:59.000 --> 1:25:11.000
+ Is to you the display of consciousness close enough to consciousness from a perspective of AGI that the distinction of the heart problem of consciousness is not an interesting one.
+
+1:25:11.000 --> 1:25:17.000
+ I think we don't have to worry about the consciousness problem, especially the heart problem for developing AGI.
+
+1:25:17.000 --> 1:25:26.000
+ I think, you know, we progress at some point we have solved all the technical problems and this system will behave intelligent and then super intelligent.
+
+1:25:26.000 --> 1:25:30.000
+ And this consciousness will emerge.
+
+1:25:30.000 --> 1:25:35.000
+ I mean, definitely it will display behavior, which we will interpret as conscious.
+
+1:25:35.000 --> 1:25:38.000
+ And then it's a philosophical question.
+
+1:25:38.000 --> 1:25:40.000
+ Did this consciousness really emerge?
+
+1:25:40.000 --> 1:25:43.000
+ Or is it a zombie which just, you know, fakes everything?
+
+1:25:43.000 --> 1:25:45.000
+ We still don't have to figure that out.
+
+1:25:45.000 --> 1:25:53.000
+ Although it may be interesting, at least from a philosophical point of view, it's very interesting, but it may also be sort of practically interesting.
+
+1:25:53.000 --> 1:25:59.000
+ You know, there's some people saying, you know, if it's just faking consciousness and feelings, you know, then we don't need to be concerned about, you know, rights.
+
+1:25:59.000 --> 1:26:06.000
+ But if it's real conscious and has feelings, then we need to be concerned.
+
+1:26:06.000 --> 1:26:16.000
+ I can't wait till the day where AI systems exhibit consciousness because it'll truly be some of the hardest ethical questions of what we do with that.
+
+1:26:16.000 --> 1:26:21.000
+ It is rather easy to build systems which people ascribe consciousness.
+
+1:26:21.000 --> 1:26:23.000
+ And I give you an analogy.
+
+1:26:23.000 --> 1:26:27.000
+ I mean, remember, maybe it was before you were born, the Tamagotchi.
+
+1:26:27.000 --> 1:26:31.000
+ How dare you, sir.
+
+1:26:31.000 --> 1:26:33.000
+ You're young, right?
+
+1:26:33.000 --> 1:26:36.000
+ Yes, that's good. Thank you. Thank you very much.
+
+1:26:36.000 --> 1:26:41.000
+ But I was also in the Soviet Union. We didn't have any of those fun things.
+
+1:26:41.000 --> 1:26:45.000
+ But you have heard about this Tamagotchi, which was, you know, really, really primitive.
+
+1:26:45.000 --> 1:26:49.000
+ Actually, for the time it was, you know, you could raise, you know, this.
+
+1:26:49.000 --> 1:26:53.000
+ And kids got so attached to it and, you know, didn't want to let it die.
+
+1:26:53.000 --> 1:26:57.000
+ And probably if we would have asked, you know, the children,
+
+1:26:57.000 --> 1:26:59.000
+ do you think this Tamagotchi is conscious?
+
+1:26:59.000 --> 1:27:01.000
+ They would have said yes.
+
+1:27:01.000 --> 1:27:10.000
+ I think that's kind of a beautiful thing, actually, because that consciousness, ascribing consciousness seems to create a deeper connection,
+
+1:27:10.000 --> 1:27:15.000
+ which is a powerful thing. But we have to be careful on the ethics side of that.
+
+1:27:15.000 --> 1:27:23.000
+ Well, let me ask about the AGI community broadly. You kind of represent some of the most serious work on AGI,
+
+1:27:23.000 --> 1:27:29.000
+ at least earlier in DeepMind, represents serious work on AGI these days.
+
+1:27:29.000 --> 1:27:38.000
+ But why in your sense is the AGI community so small or has been so small until maybe DeepMind came along?
+
+1:27:38.000 --> 1:27:48.000
+ Like why aren't more people seriously working on human level and superhuman level intelligence from a formal perspective?
+
+1:27:48.000 --> 1:27:53.000
+ Okay, from a formal perspective, that's sort of, you know, an extra point.
+
+1:27:53.000 --> 1:27:56.000
+ So I think there are a couple of reasons. I mean, AGI came in waves, right?
+
+1:27:56.000 --> 1:28:01.000
+ You know, AGI winters and AGI summers, and then there were big promises which were not fulfilled.
+
+1:28:01.000 --> 1:28:11.000
+ And people got disappointed. And that narrow AI, solving particular problems,
+
+1:28:11.000 --> 1:28:19.000
+ which seemed to require intelligence, was always to some extent successful and there were improvements, small steps.
+
+1:28:19.000 --> 1:28:26.000
+ And if you build something which is, you know, useful for society or industrial useful, then there's a lot of funding.
+
+1:28:26.000 --> 1:28:36.000
+ So I guess it was in parts the money, which drives people to develop specific systems, solving specific tasks.
+
+1:28:36.000 --> 1:28:43.000
+ But you would think that, you know, at least in university, you should be able to do ivory tower research.
+
+1:28:43.000 --> 1:28:52.000
+ And that was probably better a long time ago, but even nowadays, there's quite some pressure of doing applied research or translational research.
+
+1:28:52.000 --> 1:28:56.000
+ And, you know, it's harder to get grants as a theorist.
+
+1:28:56.000 --> 1:29:03.000
+ So that also drives people away. It's maybe also harder, attacking the general intelligence problem.
+
+1:29:03.000 --> 1:29:13.000
+ So I think enough people, I mean, maybe a small number, we're still interested in formalizing intelligence and thinking of general intelligence.
+
+1:29:13.000 --> 1:29:19.000
+ But, you know, not much came up, right? Or not much great stuff came up.
+
+1:29:19.000 --> 1:29:25.000
+ So what do you think? We talked about the formal big light at the end of the tunnel.
+
+1:29:25.000 --> 1:29:30.000
+ But from the engineering perspective, what do you think it takes to build an AGI system?
+
+1:29:30.000 --> 1:29:37.000
+ Is it in, I don't know if that's a stupid question or a distinct question from everything we've been talking about IACC.
+
+1:29:37.000 --> 1:29:43.000
+ But what do you see as the steps that are necessary to take to start to try to build something?
+
+1:29:43.000 --> 1:29:46.000
+ So you want a blueprint now and then you go off and do it?
+
+1:29:46.000 --> 1:29:49.000
+ The whole point of this conversation, trying to squeeze that in there.
+
+1:29:49.000 --> 1:29:56.000
+ Now, is there, I mean, what's your intuition? Is it in the robotics space or something that has a body and tries to explore the world?
+
+1:29:56.000 --> 1:30:06.000
+ Is it in the reinforcement learning space, like the effort to Alpha 0 and Alpha Star, they're kind of exploring how you can solve it through in the simulation in the gaming world?
+
+1:30:06.000 --> 1:30:16.000
+ Is there stuff in sort of all the transformer work in natural language processing, maybe attacking the open domain dialogue?
+
+1:30:16.000 --> 1:30:19.000
+ Where do you see the promising pathways?
+
+1:30:19.000 --> 1:30:24.000
+ Let me pick the embodiment, maybe.
+
+1:30:24.000 --> 1:30:32.000
+ So embodiment is important, yes and no.
+
+1:30:32.000 --> 1:30:44.000
+ I don't believe that we need a physical robot walking or rolling around, interacting with the real world in order to achieve AGI.
+
+1:30:44.000 --> 1:30:51.000
+ And I think it's more of a distraction, probably, than helpful.
+
+1:30:51.000 --> 1:30:54.000
+ It's sort of confusing the body with the mind.
+
+1:30:54.000 --> 1:31:01.000
+ For industrial applications or near term applications, of course, we need robots for all kinds of things.
+
+1:31:01.000 --> 1:31:08.000
+ But for solving the big problem, at least at this stage, I think it's not necessary.
+
+1:31:08.000 --> 1:31:15.000
+ But the answer is also yes, that I think the most promising approach is that you have an agent.
+
+1:31:15.000 --> 1:31:25.000
+ And that can be a virtual agent in a computer interacting with an environment, possibly a 3D simulated environment like in many computer games.
+
+1:31:25.000 --> 1:31:29.000
+ And you train and learn the agent.
+
+1:31:29.000 --> 1:31:38.000
+ Even if you don't intend to later put it sort of, you know, this algorithm in a robot brain and leave it forever in the virtual reality,
+
+1:31:38.000 --> 1:31:54.000
+ getting experience in a, although it's just simulated 3D world, is possibly, and as I say, possibly important to understand things on a similar level as humans do.
+
+1:31:54.000 --> 1:32:00.000
+ Especially if the agent or primarily if the agent wants, needs to interact with the humans, right?
+
+1:32:00.000 --> 1:32:12.000
+ You know, if you talk about objects on top of each other in space and flying in cars and so on, and the agent has no experience with even virtual 3D worlds, it's probably hard to grasp.
+
+1:32:12.000 --> 1:32:21.000
+ So if we develop an abstract agent, say we take the mathematical path and we just want to build an agent which can prove theorems and becomes a better and better mathematician,
+
+1:32:21.000 --> 1:32:30.000
+ then this agent needs to be able to reason in very abstract spaces and then maybe sort of putting it into 3D environment, simulated world is even harmful.
+
+1:32:30.000 --> 1:32:36.000
+ It should sort of, you put it in, I don't know, an environment which it creates itself or so.
+
+1:32:36.000 --> 1:32:42.000
+ It seems like you have an interesting, rich complex trajectory through life in terms of your journey of ideas.
+
+1:32:42.000 --> 1:32:52.000
+ So it's interesting to ask what books, technical fiction, philosophical books, ideas, people had a transformative effect.
+
+1:32:52.000 --> 1:32:59.000
+ Books are most interesting because maybe people could also read those books and see if they could be inspired as well.
+
+1:32:59.000 --> 1:33:03.000
+ Yeah, luckily I asked books and not singular book.
+
+1:33:03.000 --> 1:33:10.000
+ It's very hard and I tried to pin down one book and I can't do that at the end.
+
+1:33:10.000 --> 1:33:22.000
+ So the most, the books which were most transformative for me or which I can most highly recommend to people interested in AI.
+
+1:33:22.000 --> 1:33:23.000
+ Both perhaps.
+
+1:33:23.000 --> 1:33:25.000
+ Yeah, yeah, both.
+
+1:33:25.000 --> 1:33:31.000
+ I would always start with Russell and Norbic, Artificial Intelligence and Modern Approach.
+
+1:33:31.000 --> 1:33:33.000
+ That's the AI Bible.
+
+1:33:33.000 --> 1:33:35.000
+ It's an amazing book.
+
+1:33:35.000 --> 1:33:44.000
+ It's very broad and covers all approaches to AI and even if you focus on one approach, I think that is the minimum you should know about the other approaches out there.
+
+1:33:44.000 --> 1:33:46.000
+ So that should be your first book.
+
+1:33:46.000 --> 1:33:48.000
+ Fourth edition should be coming out soon.
+
+1:33:48.000 --> 1:33:50.000
+ Oh, okay, interesting.
+
+1:33:50.000 --> 1:33:53.000
+ There's a deep learning chapter now so there must be.
+
+1:33:53.000 --> 1:33:55.000
+ Written by Ian Goodfellow.
+
+1:33:55.000 --> 1:33:56.000
+ Okay.
+
+1:33:56.000 --> 1:34:02.000
+ And then the next book I would recommend, The Reinforcement Learning Book by Sutton and Bartow.
+
+1:34:02.000 --> 1:34:05.000
+ There's a beautiful book.
+
+1:34:05.000 --> 1:34:13.000
+ If there's any problem with the book, it makes RL feel and look much easier than it actually is.
+
+1:34:13.000 --> 1:34:15.000
+ It's very gentle book.
+
+1:34:15.000 --> 1:34:17.000
+ It's very nice to read the exercises.
+
+1:34:17.000 --> 1:34:23.000
+ You can very quickly, you know, get some RL systems to run, you know, and very toy problems, but it's a lot of fun.
+
+1:34:23.000 --> 1:34:33.000
+ And in a couple of days, you feel, you know, you know what RL is about, but it's much harder than the book.
+
+1:34:33.000 --> 1:34:34.000
+ Come on now.
+
+1:34:34.000 --> 1:34:35.000
+ It's an awesome book.
+
+1:34:35.000 --> 1:34:36.000
+ Yeah, no, it is.
+
+1:34:36.000 --> 1:34:37.000
+ Yeah.
+
+1:34:37.000 --> 1:34:41.000
+ And maybe, I mean, there's so many books out there.
+
+1:34:41.000 --> 1:34:50.000
+ If you like the information theoretic approach, then there's Kolmogorov Complexity by Leon Vitani, but probably, you know, some short article is enough.
+
+1:34:50.000 --> 1:34:54.000
+ You don't need to read the whole book, but it's a great book.
+
+1:34:54.000 --> 1:35:01.000
+ And if you have to mention one all time favorite book, it's a different flavor.
+
+1:35:01.000 --> 1:35:09.000
+ That's a book which is used in the international baccalaureate for high school students in several countries.
+
+1:35:09.000 --> 1:35:16.000
+ That's from Nikolas Altjen, Theory of Knowledge, second edition, or first, not the third place.
+
+1:35:16.000 --> 1:35:19.000
+ The third one, they put, they took out all the fun.
+
+1:35:19.000 --> 1:35:20.000
+ Okay.
+
+1:35:20.000 --> 1:35:36.000
+ So this asks all the interesting, or to me, interesting philosophical questions about how we acquire knowledge from all perspectives, you know, from math, from art, from physics, and ask how can we know anything?
+
+1:35:36.000 --> 1:35:38.000
+ And the book is called Theory of Knowledge.
+
+1:35:38.000 --> 1:35:43.000
+ From which it's almost like a philosophical exploration of how we get knowledge from anything.
+
+1:35:43.000 --> 1:35:44.000
+ Yes, yeah.
+
+1:35:44.000 --> 1:35:46.000
+ I mean, can religion tell us, you know, about something about the world?
+
+1:35:46.000 --> 1:35:48.000
+ Can science tell us something about the world?
+
+1:35:48.000 --> 1:35:52.000
+ Can mathematics, or is it just playing with symbols?
+
+1:35:52.000 --> 1:35:54.000
+ And you know, it's open ended questions.
+
+1:35:54.000 --> 1:36:02.000
+ And I mean, it's for high school students, so they have then resources from Hitchhiker's Guide to the Galaxy, and from Star Wars, and the Chicken Cross the Road, yeah.
+
+1:36:02.000 --> 1:36:07.000
+ And it's fun to read, but it's also quite deep.
+
+1:36:07.000 --> 1:36:21.000
+ If you could live one day of your life over again, because it made you truly happy, or maybe like we said with the books, it was truly transformative. What day, what moment would you choose that something popped into your mind?
+
+1:36:21.000 --> 1:36:25.000
+ Does it need to be a day in the past, or can it be a day in the future?
+
+1:36:25.000 --> 1:36:30.000
+ Well, space time is an emergent phenomena, so it's all the same anyway.
+
+1:36:30.000 --> 1:36:31.000
+ Okay.
+
+1:36:31.000 --> 1:36:33.000
+ Okay, from the past.
+
+1:36:33.000 --> 1:36:36.000
+ You're really going to say from the future, I love it.
+
+1:36:36.000 --> 1:36:38.000
+ No, I will tell you from the future.
+
+1:36:38.000 --> 1:36:39.000
+ Okay, from the past.
+
+1:36:39.000 --> 1:36:53.000
+ So from the past, I would say, when I discovered my AXI model, I mean, it was not in one day, but it was one moment where I realized Conmogorff complexity and didn't even know that it existed.
+
+1:36:53.000 --> 1:37:00.000
+ But I discovered sort of this compression idea myself, but immediately I knew I can't be the first one, but I had this idea.
+
+1:37:00.000 --> 1:37:06.000
+ And then I knew about sequential decisionary, and I knew if I put it together, this is the right thing.
+
+1:37:06.000 --> 1:37:12.000
+ And yeah, still when I think back about this moment, I'm super excited about it.
+
+1:37:12.000 --> 1:37:16.000
+ Was there any more details in context at that moment?
+
+1:37:16.000 --> 1:37:18.000
+ Did an apple fall in your head?
+
+1:37:18.000 --> 1:37:25.000
+ If you look at Ian Goodfellow talking about Gans, there was beer involved.
+
+1:37:25.000 --> 1:37:31.000
+ Is there some more context of what sparked your thought or was it just?
+
+1:37:31.000 --> 1:37:33.000
+ No, it was much more mundane.
+
+1:37:33.000 --> 1:37:34.000
+ So I worked in this company.
+
+1:37:34.000 --> 1:37:38.000
+ So in this sense, the four and a half years was not completely wasted.
+
+1:37:38.000 --> 1:37:43.000
+ So and I worked on an image interpolation problem.
+
+1:37:43.000 --> 1:37:49.000
+ And I developed a quite neat new interpolation techniques and they got patented.
+
+1:37:49.000 --> 1:37:55.000
+ And then, you know, which happens quite often, I got sort of overboard and thought about, you know, yeah, that's pretty good.
+
+1:37:55.000 --> 1:37:56.000
+ But it's not the best.
+
+1:37:56.000 --> 1:37:59.000
+ So what is the best possible way of doing interpolation?
+
+1:37:59.000 --> 1:38:06.000
+ And then I thought, yeah, you want a simplest picture, which is if you coarser in it, recovers your original picture.
+
+1:38:06.000 --> 1:38:11.000
+ And then I thought about the simplicity concept more in quantitative terms.
+
+1:38:11.000 --> 1:38:14.000
+ And yeah, then everything developed.
+
+1:38:14.000 --> 1:38:23.000
+ And somehow the full beautiful mix of also being a physicist and thinking about the big picture of it, then led you to probably big with I.
+
+1:38:23.000 --> 1:38:24.000
+ Yeah.
+
+1:38:24.000 --> 1:38:28.000
+ So as a physicist, I was probably trained not to always think in computational terms.
+
+1:38:28.000 --> 1:38:33.000
+ You know, just ignore that and think about the fundamental properties which you want to have.
+
+1:38:33.000 --> 1:38:36.000
+ So what about if you could really one day in the future?
+
+1:38:36.000 --> 1:38:39.000
+ What would that be?
+
+1:38:39.000 --> 1:38:43.000
+ When I solve the AGI problem.
+
+1:38:43.000 --> 1:38:44.000
+ In practice.
+
+1:38:44.000 --> 1:38:45.000
+ In practice.
+
+1:38:45.000 --> 1:38:48.000
+ So in theory, I have solved it with the AGI model, but in practice.
+
+1:38:48.000 --> 1:38:50.000
+ And then I asked the first question.
+
+1:38:50.000 --> 1:38:53.000
+ What would be the first question?
+
+1:38:53.000 --> 1:38:55.000
+ What's the meaning of life?
+
+1:38:55.000 --> 1:38:58.000
+ I don't think there's a better way to end it.
+
+1:38:58.000 --> 1:38:59.000
+ Thank you so much for talking today.
+
+1:38:59.000 --> 1:39:01.000
+ It's a huge honor to finally meet you.
+
+1:39:01.000 --> 1:39:02.000
+ Yeah.
+
+1:39:02.000 --> 1:39:03.000
+ Thank you too.
+
+1:39:03.000 --> 1:39:04.000
+ It was a pleasure of mine, too.
+
+1:39:04.000 --> 1:39:07.000
+ Thanks for listening to this conversation with Marcus Hutter.
+
+1:39:07.000 --> 1:39:10.000
+ And thank you to our presenting sponsor, Cash App.
+
+1:39:10.000 --> 1:39:11.000
+ Download it.
+
+1:39:11.000 --> 1:39:12.000
+ Use code LEX Podcast.
+
+1:39:12.000 --> 1:39:22.000
+ You'll get $10 and $10 will go to FIRST, an organization that inspires and educates young minds to become science and technology innovators of tomorrow.
+
+1:39:22.000 --> 1:39:25.000
+ If you enjoy this podcast, subscribe on YouTube.
+
+1:39:25.000 --> 1:39:27.000
+ Give it five stars on Apple Podcast.
+
+1:39:27.000 --> 1:39:33.000
+ Support on Patreon or simply connect with me on Twitter at Lex Friedman.
+
+1:39:33.000 --> 1:39:38.000
+ And now let me leave you with some words of wisdom from Albert Einstein.
+
+1:39:38.000 --> 1:39:43.000
+ The measure of intelligence is the ability to change.
+
+1:39:43.000 --> 1:40:09.000
+ Thank you for listening and hope to see you next time.
+

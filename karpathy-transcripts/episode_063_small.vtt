@@ -1,0 +1,2429 @@
+WEBVTT
+
+00:00.000 --> 00:05.360
+ The following is a conversation with Steven Kotkin, a professor of history at Princeton University
+
+00:05.360 --> 00:10.960
+ and one of the great historians of our time, specializing in Russian and Soviet history.
+
+00:10.960 --> 00:15.520
+ He has written many books on Stalin in the Soviet Union, including the first two of
+
+00:15.520 --> 00:19.760
+ the three volume work on Stalin, and he is currently working on volume three.
+
+00:20.800 --> 00:24.320
+ He may have noticed that I've been speaking with not just computer scientists,
+
+00:24.320 --> 00:28.880
+ but physicists, engineers, historians, neuroscientists, and soon much more.
+
+00:28.880 --> 00:34.400
+ To me, artificial intelligence is much bigger than deep learning, bigger than computing.
+
+00:34.400 --> 00:40.160
+ It is our civilization's journey into understanding the human mind and creating echoes of it in the
+
+00:40.160 --> 00:48.880
+ machine. To me, that journey must include a deep historical and psychological understanding of power.
+
+00:49.760 --> 00:53.520
+ Technology puts some of the greatest power in the history of our civilization
+
+00:53.520 --> 00:58.400
+ into the hands of engineers and computer scientists. This power must not be abused,
+
+00:59.120 --> 01:03.920
+ and the best way to understand how such abuse can be avoided is to not be blind
+
+01:03.920 --> 01:11.920
+ to the lessons of history. As Steven Kotkin brilliantly articulates, Stalin was arguably one of
+
+01:11.920 --> 01:18.320
+ the most powerful humans in history. I've read many books on Joseph Stalin, Vladimir Putin,
+
+01:18.320 --> 01:24.000
+ and the wars of the 20th century. I hope you understand the value of such knowledge to all of
+
+01:24.000 --> 01:29.920
+ us, especially to engineers and scientists who build the tools of power in the 21st century.
+
+01:30.880 --> 01:35.840
+ This is the Artificial Intelligence Podcast. If you enjoy it, subscribe on YouTube,
+
+01:35.840 --> 01:40.400
+ give us five stars in Apple Podcasts, follow us on Spotify, support on Patreon,
+
+01:40.400 --> 01:45.520
+ or simply connect with me on Twitter. Alex Friedman spelled F R I D M A N.
+
+01:45.520 --> 01:51.200
+ I recently started doing ads at the end of the introduction. I'll do one or two minutes after
+
+01:51.200 --> 01:56.320
+ introducing the episode and never any ads in the middle that can break the flow of the conversation.
+
+01:56.320 --> 01:59.840
+ I hope that works for you and doesn't hurt the listening experience.
+
+02:01.280 --> 02:06.720
+ This show is presented by Cash App, the number one finance app in the App Store. I personally use
+
+02:06.720 --> 02:11.600
+ Cash App to send money to friends, but you can also use it to buy, sell, and deposit Bitcoin
+
+02:11.600 --> 02:17.120
+ just seconds. Cash App also has an investing feature. You can buy fractions of a stock,
+
+02:17.120 --> 02:22.720
+ say $1 worth, no matter what the stock price is. Broker services are provided by Cash App
+
+02:22.720 --> 02:29.360
+ Investing, a subsidiary of Square, and member SIPC. I'm excited to be working with Cash App
+
+02:29.360 --> 02:34.320
+ to support one of my favorite organizations called FIRST, best known for their FIRST Robotics and
+
+02:34.320 --> 02:40.320
+ Lego competitions. They educate and inspire hundreds of thousands of students in over 110
+
+02:40.320 --> 02:45.600
+ countries and have a perfect rating on Charity Navigator, which means the donated money is used
+
+02:45.600 --> 02:51.520
+ to maximum effectiveness. When you get Cash App from the App Store at Google Play and use code
+
+02:51.520 --> 02:57.920
+ LEX Podcast, you'll get $10, and Cash App will also donate $10 to FIRST, which again is an
+
+02:57.920 --> 03:04.000
+ organization that I've personally seen inspire girls and boys to dream of engineering a better
+
+03:04.000 --> 03:12.800
+ world. And now, here's my conversation with Steven Kotkin. Do all human beings crave power?
+
+03:14.000 --> 03:21.120
+ No. Human beings crave security. They crave love. They crave adventure.
+
+03:22.640 --> 03:29.680
+ They crave power, but not equally. Some human beings nevertheless do crave power.
+
+03:29.680 --> 03:36.480
+ For sure. Word is that deeply in the psychology of people? Is it something you're born with? Is
+
+03:36.480 --> 03:44.880
+ it something you develop? Some people crave a position of leadership or of standing out,
+
+03:44.880 --> 03:53.200
+ of being recognized. And that could be starting out in the school years, on the schoolyard.
+
+03:53.200 --> 03:56.720
+ It could be within their own family, not just in their peer group.
+
+03:56.720 --> 04:03.440
+ Those kind of people we often see craving leadership positions from a young age
+
+04:04.160 --> 04:08.880
+ often end up in positions of power, but they can be varied positions of power.
+
+04:09.520 --> 04:14.080
+ You can have power in an institution where your power is purposefully limited.
+
+04:15.200 --> 04:22.240
+ For example, there's a board or a consultative body or a separation of powers. Not everyone craves
+
+04:22.240 --> 04:29.920
+ power whereby they're the sole power or their unconstrained power. That's a little bit less
+
+04:29.920 --> 04:37.520
+ usual. We may think that everybody does, but not everybody does. Those people who do crave
+
+04:37.520 --> 04:45.920
+ that kind of power, unconstrained the ability to decide as much as life or death of other people,
+
+04:45.920 --> 04:53.440
+ most people are not everyday people. They're not the people you encounter in your daily life,
+
+04:53.440 --> 04:59.600
+ for the most part. Those are extraordinary people. Most of them don't have the opportunity
+
+04:59.600 --> 05:05.280
+ to live that dream. Very few of them, in fact, end up with the opportunity to live that dream.
+
+05:05.280 --> 05:10.400
+ So percentage wise, in your sense, if we think of George Washington, for example,
+
+05:10.400 --> 05:18.480
+ most would most people given the choice of absolute power over a country versus maybe
+
+05:19.280 --> 05:25.280
+ the capped power that the United States presidential role, at least at the founding
+
+05:25.280 --> 05:28.640
+ of the country, represented, what do you think most people would choose?
+
+05:29.600 --> 05:34.480
+ Well, Washington was in a position to exercise far greater power than he did.
+
+05:34.480 --> 05:45.360
+ And in fact, he didn't take that option. He was more interested in seeing institutionalization,
+
+05:46.640 --> 05:52.320
+ of seeing the country develop strong institutions rather than an individual leader like himself
+
+05:52.320 --> 05:59.200
+ have excess power. So that's very important. So like I said, not everyone craves unconstrained
+
+05:59.200 --> 06:04.240
+ power even if they're very ambitious. And of course, Washington was very ambitious. He was a
+
+06:04.240 --> 06:11.840
+ successful general before he was a president. So that clearly comes from the influences on your
+
+06:11.840 --> 06:18.960
+ life, where you grow up, how you grow up, how you raised, what kind of values are imparted to you
+
+06:18.960 --> 06:26.240
+ along the way. You can understand power as the ability to share, or you can understand
+
+06:26.240 --> 06:31.920
+ or the ability to advance something for the collective in a collective process,
+
+06:31.920 --> 06:36.400
+ not an individual process. So power comes in many different varieties.
+
+06:37.680 --> 06:44.480
+ And ambition doesn't always equate to despotic power. Despotic power is something
+
+06:45.360 --> 06:53.600
+ different from ordinary institutional power that we see. The president of MIT does not have
+
+06:53.600 --> 07:01.760
+ unconstrained power. The president of MIT rightly must consult with other members of the administration,
+
+07:01.760 --> 07:07.280
+ with the faculty members, to a certain extent with the student body, and certainly with the
+
+07:07.280 --> 07:16.080
+ trustees of MIT. Those constraints make the institution strong and enduring and make the
+
+07:16.080 --> 07:22.000
+ decisions better than they would be if he had unconstrained power. But you can't say that the
+
+07:22.000 --> 07:29.440
+ president is not ambitious. Of course, the president is ambitious. We worry about unconstrained power.
+
+07:29.440 --> 07:35.920
+ We worry about executive authority that's not limited. That's the definition of authoritarianism
+
+07:35.920 --> 07:44.240
+ or tyranny. Unlimited or barely limited executive authority. Executive authority is necessary to
+
+07:44.240 --> 07:50.160
+ carry out many functions. We all understand that. That's why MIT has an executive, has a president.
+
+07:50.160 --> 08:00.640
+ But unlimited or largely unconstrained executive power is detrimental to even the person who
+
+08:00.640 --> 08:07.520
+ exercises that power. So what do you think? It's an interesting notion. We kind of take it for granted
+
+08:07.520 --> 08:14.560
+ that constraints on executive power is a good thing. But why is that necessarily true? So what
+
+08:14.560 --> 08:24.240
+ is it about absolute power that does something bad to the human mind? The popular saying of absolute
+
+08:24.240 --> 08:31.920
+ power corrupts absolutely. Is that the case? That the power in itself is the thing that
+
+08:32.800 --> 08:37.680
+ corrupts the mind in some kind of way where it leads to a bad leadership over time?
+
+08:38.640 --> 08:43.840
+ People make more mistakes when they're not challenged, when they don't have to explain
+
+08:43.840 --> 08:51.200
+ things and get others to vote and go along with it, when they can make a decision without anybody
+
+08:51.200 --> 08:57.840
+ being able to block their decision or to have input necessarily on their decision. You're more
+
+08:57.840 --> 09:05.440
+ prone to mistakes. You're more prone to extremism. There's a temptation there. For example, we have
+
+09:05.440 --> 09:14.720
+ separation of powers in the United States. The Congress has authority that the president doesn't
+
+09:14.720 --> 09:20.800
+ have, as for example, in budgeting the so called power of the purse. This can be very frustrating.
+
+09:21.440 --> 09:26.480
+ People want to see things happen, and they complain that there's a do nothing Congress or
+
+09:26.480 --> 09:34.560
+ that the situation is stalemated. But actually that's potentially a good thing. In fact, that's
+
+09:34.560 --> 09:41.120
+ how our system was designed. Our system was designed to prevent things happening in government.
+
+09:42.320 --> 09:47.600
+ There's frustration with that, but ultimately that's the strength of the institutions we have.
+
+09:48.560 --> 09:54.880
+ When you see unconstrained executive authority, there can be a lot of dynamism, a lot of things
+
+09:54.880 --> 10:00.800
+ can get done quickly, but those things can be like, for example, what happened in China under Mao
+
+10:00.800 --> 10:06.240
+ Mao, or what happened in the Soviet Union under Stalin, or what happened in Haiti under
+
+10:06.960 --> 10:13.280
+ Papa Doc and then Baby Doc, or fill in the blank. What happens sometimes in corporations where a
+
+10:13.280 --> 10:20.720
+ corporate leader is not constrained by the shareholders, by the board, or by anything,
+
+10:21.440 --> 10:25.680
+ and they can seem to be a genius for a while, but eventually it catches up to them.
+
+10:25.680 --> 10:32.560
+ And so the idea of constraints on executive power is absolutely fundamental to the American
+
+10:32.560 --> 10:40.400
+ system, American way of thinking, and not only America, obviously large other parts of the world
+
+10:41.040 --> 10:46.400
+ that have a similar system, not an identical system, but a similar system of checks and balances
+
+10:46.400 --> 10:54.160
+ on executive power. And so the case that I study, the only checks and balances on executive power
+
+10:54.160 --> 11:02.960
+ are circumstantial. So for example, distances in the country, it's hard to do something over 5,000
+
+11:02.960 --> 11:09.360
+ miles, or the amount of time in a day, it's hard for a leader to get to every single thing the
+
+11:09.360 --> 11:15.120
+ leader wants to get to because there are only 24 hours in a day. Those are circumstantial constraints
+
+11:15.120 --> 11:21.840
+ on executive power. They're not institutional constraints on executive power. One of the constraints
+
+11:21.840 --> 11:27.600
+ on executive power that the United States has versus Russia, maybe something you've
+
+11:27.600 --> 11:31.840
+ implied and actually spoke directly to is there's something in the Russian people and the Soviet
+
+11:31.840 --> 11:39.680
+ people that are attracted to authoritarian power, psychologically speaking, or at least the kind
+
+11:39.680 --> 11:48.000
+ of leaders that sought authoritarian power throughout its history. And that desire for that
+
+11:48.000 --> 11:53.840
+ kind of human is a lack of a constraint. In America, it seems as people we desire
+
+11:55.360 --> 12:00.080
+ somebody not like Stalin, somebody more like George Washington. So that's another constraint,
+
+12:00.720 --> 12:05.600
+ the belief of the people, what they admire in a leader, what they seek in a leader.
+
+12:06.480 --> 12:14.560
+ So maybe you can speak to, well, first of all, can you speak briefly to that psychology of
+
+12:14.560 --> 12:21.280
+ is there a difference between the Russian people and the American people in terms of just what we
+
+12:21.280 --> 12:28.960
+ find attractive in a leader? Not as great a difference as it might seem. There are, unfortunately,
+
+12:28.960 --> 12:35.920
+ many Americans who would be happy with an authoritarian leader in the country. It's
+
+12:35.920 --> 12:42.560
+ by no means a majority. It's not even a plurality. But nonetheless, it's a real sentiment in the
+
+12:42.560 --> 12:49.120
+ population. Sometimes because they feel frustrated, because things are not getting done. Sometimes
+
+12:49.120 --> 12:55.040
+ because they're against something that's happening in the political realm, and they feel it has to
+
+12:55.040 --> 13:01.040
+ be corrected and corrected quickly. It's a kind of impulse. People can regret the impulse later
+
+13:01.040 --> 13:08.560
+ on that the impulse is motivated by reaction to their environment. In the Russian case, we have
+
+13:08.560 --> 13:15.200
+ also people who crave, sometimes known as a strong hand and iron hand and authoritarian leader,
+
+13:15.840 --> 13:22.240
+ because they want things to be done and be done more quickly that align with their desires.
+
+13:23.200 --> 13:29.280
+ But I'm not sure it's a majority in the country today. Certainly in Stalin's time,
+
+13:30.080 --> 13:36.080
+ this was a widespread sentiment, and people had few alternatives that they understood or could
+
+13:36.080 --> 13:43.360
+ appeal to. Nowadays, in the globalized world, the citizens of Russia can see how other systems have
+
+13:43.360 --> 13:49.200
+ constraints on executive power, and the life isn't so bad there. In fact, the life might even be
+
+13:49.200 --> 13:58.880
+ better. So the impatience, the impulsive quality, the frustration does sometimes, and people reinforce
+
+13:58.880 --> 14:06.240
+ their craving for the unconstrained executive to, quote, get things done or shake things up or
+
+14:07.120 --> 14:13.440
+ yes, that's true. But in the Russian case, I'm not sure it's cultural today. I think it might be more
+
+14:14.320 --> 14:22.320
+ having to do with the failures, the functional failures of the kind of political system that
+
+14:22.320 --> 14:31.280
+ they tried to institute after the Soviet collapse. And so it may be frustration with the version of
+
+14:31.280 --> 14:36.800
+ constraints on executive power they got and how it didn't work the way it was imagined,
+
+14:37.760 --> 14:47.040
+ which has led to a sense in which non constrained executive power could fix things. But I'm not
+
+14:47.040 --> 14:52.400
+ sure that that's a majority sentiment in the Russian case, although it's hard to measure because
+
+14:52.400 --> 15:01.120
+ under authoritarian regimes, a public opinion is shaped by the environment in which people live,
+
+15:01.120 --> 15:08.320
+ which is very constrained in terms of public opinion. But on that point, why, at least from a
+
+15:08.320 --> 15:13.200
+ distance, does there seem to nevertheless be support for the current Russian president,
+
+15:13.200 --> 15:21.680
+ Vladimir Putin? Is that have to do with the fact that measuring, getting good metrics and
+
+15:21.680 --> 15:27.440
+ statistics on support is difficult in authoritarian governments? Or is there still something appealing
+
+15:28.000 --> 15:33.840
+ to that kind of power to the people? I think we have to give credit to President Putin for
+
+15:33.840 --> 15:42.480
+ understanding the psychology of the Russians who to whom he appeals. Many of them were the
+
+15:42.480 --> 15:49.440
+ losers in the transition from communism. They were the ones whose pensions were destroyed by
+
+15:49.440 --> 15:55.680
+ inflation or whose salaries didn't go up or whose regions were abandoned. They were not
+
+15:55.680 --> 16:01.280
+ the winners for the most part. And so I think there's an understanding on his part of their
+
+16:01.280 --> 16:06.960
+ psychology. Putin has grown in the position. He was not a public politician when he first started
+
+16:06.960 --> 16:13.120
+ out. He was quite poor in public settings. He didn't have the kind of political instincts
+
+16:13.120 --> 16:18.960
+ that he has now. He didn't have the appeal to traditional values and the Orthodox Church and
+
+16:18.960 --> 16:28.560
+ some of the other dimensions of his rule today. So yes, we have to give some credit to Putin himself
+
+16:28.560 --> 16:35.120
+ for this, in addition to the frustrations and the mass of the people. But let's think about it
+
+16:35.120 --> 16:41.280
+ this way, in addition, without taking away the fact that he's become a better retail politician
+
+16:41.280 --> 16:47.920
+ over time and that sentiment has shifted because of the disappointments with the transition with
+
+16:47.920 --> 17:00.240
+ the population. When I ask my kids, am I a good dad? My kids don't have any other dad to measure me
+
+17:00.240 --> 17:08.800
+ against. I'm the only dad they know and I'm the only dad they can choose or not choose. If they
+
+17:08.800 --> 17:17.920
+ don't choose me, they still get me as dad. So with Putin today, he's the only dad that the Russian
+
+17:17.920 --> 17:24.000
+ people have. Now, if my kids were introduced to alternative fathers, they might be better than
+
+17:24.000 --> 17:32.800
+ me. They might be more loving, more giving, funnier, richer, whatever it might be, they might be more
+
+17:32.800 --> 17:38.960
+ appealing. There are some blood ties there, for sure, that I have with my kids, but they would at
+
+17:38.960 --> 17:47.200
+ least be able to choose alternatives and then I would have to win their favor in that constellation
+
+17:47.200 --> 17:53.120
+ of alternatives. If President Putin were up against real alternatives, if the population
+
+17:53.120 --> 18:00.160
+ had real choice and that choice could express itself and have resources and have media and
+
+18:00.160 --> 18:07.680
+ everything else the way he does, maybe he would be very popular and maybe his popularity would not
+
+18:07.680 --> 18:15.600
+ be as great as it currently is. So the absence of alternatives is another factor that reinforces
+
+18:15.600 --> 18:22.320
+ his authority and his popularity. Having said that, there are many authoritarian leaders
+
+18:23.040 --> 18:30.720
+ who deny any alternatives to the population and are not very popular. So denial of alternatives
+
+18:30.720 --> 18:36.800
+ doesn't guarantee you the popularity. You still have to figure out the mass psychology and be able
+
+18:36.800 --> 18:47.200
+ to appeal to it. In the Russian case, the winners from the transition live primarily in the big
+
+18:47.200 --> 18:59.040
+ cities and are self employed or entrepreneurial. Even if they're not self employed, they're able
+
+18:59.040 --> 19:07.040
+ to change careers. They have tremendous skills and talent and education and knowledge, as well as
+
+19:07.760 --> 19:14.480
+ these entrepreneurial or dynamic personalities. Putin also appealed to them. He did that with
+
+19:14.480 --> 19:23.360
+ Medvedev and it was a very clever ruse. He himself appealed to the losers from the transition,
+
+19:23.360 --> 19:32.480
+ the small towns, the rural, the people who were not well off, and he had them for the most part.
+
+19:32.480 --> 19:37.040
+ Not all. We don't want to generalize to say that he had every one of them because those people have
+
+19:37.040 --> 19:43.360
+ views of their own, sometimes in contradiction with the president of Russia. And then he appealed
+
+19:43.360 --> 19:49.840
+ to the opposite people, the successful urban base through the so called reformer Medvedev,
+
+19:49.840 --> 19:56.720
+ the new generation, the technically literate prime minister who for a time was president.
+
+19:56.720 --> 20:03.600
+ And so that worked very successfully for Putin. He was able to bridge a big divide in the society
+
+20:03.600 --> 20:10.480
+ and gain a greater mass support than he would otherwise have had by himself. That ruse only
+
+20:10.480 --> 20:19.280
+ worked through the time that Medvedev was temporarily president for a few years because of
+
+20:19.280 --> 20:26.080
+ the constitution Putin couldn't do three consecutive terms and stepped aside in what they call
+
+20:26.080 --> 20:35.920
+ castling in chess. When this was over, Putin had difficulty with his popularity. There were mass
+
+20:35.920 --> 20:43.120
+ protests in the urban areas. Precisely that group of the population that he had been able to win in
+
+20:43.120 --> 20:52.640
+ part because of the Medvedev castling and now had had their delusions exposed and were disillusioned.
+
+20:53.840 --> 20:58.160
+ And there were these mass protests in the urban areas, not just in the capital, by the way,
+
+20:58.800 --> 21:04.160
+ and Putin had to, as it were, come up with a new way to fix his popularity, which happened to be
+
+21:04.160 --> 21:13.920
+ the annexation of Crimea, from which he got a very significant bump. However, the trend is back
+
+21:13.920 --> 21:20.240
+ in the other direction. It's diminishing again, although it's still high relative to other leaders
+
+21:20.240 --> 21:28.720
+ around the world. So I wouldn't say that he's unpopular with mass in Russia. There is some
+
+21:28.720 --> 21:34.320
+ popularity there. There is some success. But I would say it's tough for us to gauge because of
+
+21:34.320 --> 21:40.320
+ the lack of alternatives. And Putin is unpopular inside the state administration.
+
+21:42.080 --> 21:47.920
+ At every level, the bureaucracy of leadership. Because those people are well informed and they
+
+21:47.920 --> 21:53.920
+ understand that the country is declining, that the human capital is declining, the infrastructure
+
+21:53.920 --> 21:59.680
+ is declining, the economy is not really growing. It's not really diversifying. Russia is not
+
+21:59.680 --> 22:05.280
+ investing in its future. The state officials understand all of that. And then they see that
+
+22:05.280 --> 22:13.040
+ the Putin clique is stealing everything in sight. So between the failure to invest in a future
+
+22:14.000 --> 22:19.680
+ and the corruption of a narrow group around the president, there's disillusionment in the state
+
+22:19.680 --> 22:26.160
+ apparatus because they see this more clearly or more closely than the mass of the population.
+
+22:27.280 --> 22:37.840
+ They can't necessarily yet oppose this in public because there are people, they have families,
+
+22:37.840 --> 22:43.520
+ they have careers, they have children who want to go to school or want a job. And so there are
+
+22:43.520 --> 22:50.720
+ constraints on their ability to oppose the regime based upon what we might call cowardice or other
+
+22:50.720 --> 22:57.840
+ people might call realism. I don't know how courageous people can be when their family,
+
+22:57.840 --> 23:05.200
+ children, career are on the line. So it's very interesting dynamic to see the disillusionment
+
+23:05.200 --> 23:11.280
+ inside the government with the president, which is not yet fully public for the most part,
+
+23:11.280 --> 23:16.640
+ but could become public. And once again, if there's an alternative, if an alternative appears,
+
+23:16.640 --> 23:21.040
+ things could shift quickly. And that alternative could come from inside the regime.
+
+23:21.920 --> 23:28.960
+ From inside the regime. But the leadership, the party, the people that are now, as you're saying,
+
+23:28.960 --> 23:35.360
+ opposed to Putin, nevertheless, maybe you can correct me, but it feels like there's
+
+23:35.360 --> 23:42.080
+ just structurally is deeply corrupt. So each of each of the people we're talking about are
+
+23:43.840 --> 23:50.000
+ don't feel like a George Washington. Once again, the circumstances don't permit them
+
+23:50.000 --> 23:56.480
+ to act that way necessarily, right? George Washington did great things, but in certain
+
+23:56.480 --> 24:03.440
+ circumstances, a lot of the state officials in Russia, for certain, are corrupt. There's no
+
+24:03.440 --> 24:12.160
+ question. Many of them, however, are patriotic. And many of them feel badly about where the
+
+24:12.160 --> 24:17.760
+ country has been going. They would prefer that the country was less corrupt. They would prefer
+
+24:17.760 --> 24:24.800
+ that there were greater investment in all sorts of areas of Russia. They might even,
+
+24:24.800 --> 24:31.120
+ themselves, steal less if they could be guaranteed that everybody else would steal less.
+
+24:31.120 --> 24:39.280
+ There's a deep and abiding patriotism inside Russia, as well as inside the Russian regime.
+
+24:40.400 --> 24:46.080
+ So they understand that Putin, in many ways, rescued the Russian state from the chaos of the
+
+24:46.080 --> 24:54.880
+ 1990s. They understand that Russia was in very bad shape as an incoherent failing state almost
+
+24:54.880 --> 25:03.120
+ when Putin took over, and that he did some important things for Russia's stability and
+
+25:03.120 --> 25:12.720
+ consolidation. There's also some appreciation that Putin stood up to the West and stood up to
+
+25:12.720 --> 25:19.440
+ more powerful countries and regained a sense of pride and maneuverability for Russia and the
+
+25:19.440 --> 25:26.160
+ international system. People appreciate that, and it's real. It's not imagined that Putin accomplished
+
+25:26.160 --> 25:33.840
+ that. The problem is the methods that he accomplished it with. He used the kind of methods,
+
+25:33.840 --> 25:40.000
+ that is to say, taking other people's property, putting other people in jail for political reasons.
+
+25:40.560 --> 25:45.280
+ He used the kind of methods that are not conducive to long term growth and stability.
+
+25:45.280 --> 25:51.840
+ So he fixed the problem, but he fixed the problem and then created even bigger long term problems
+
+25:51.840 --> 26:00.320
+ potentially. Moreover, all authoritarian regimes that use those methods are tempted to keep using
+
+26:00.320 --> 26:06.400
+ them and using them and using them until they're the only ones who are the beneficiaries. The group
+
+26:06.400 --> 26:14.000
+ narrows and narrows. The elite gets smaller and narrower. The interest groups get excluded from
+
+26:14.000 --> 26:22.320
+ power and their ability to continue enjoying the fruits of the system, and the resentment grows.
+
+26:22.320 --> 26:29.040
+ And so that's the situation we have. And Russia is a place that is stuck. It was, to a certain
+
+26:29.040 --> 26:36.800
+ extent, rescued. It was rescued with methods that were not conducive to long term success and
+
+26:36.800 --> 26:43.440
+ stability. The rescue we're referring to is the economic growth when Putin first took office.
+
+26:43.440 --> 26:48.080
+ They had 10 years. They had a full decade of an average of 7% growth a year,
+
+26:48.960 --> 26:55.680
+ which was phenomenal and is not attributable predominantly to oil prices. During President
+
+26:55.680 --> 27:03.920
+ Putin's first term as president, the average price of oil was $35 a barrel. During his second term
+
+27:03.920 --> 27:12.320
+ as president, the average price was $70 a barrel. So during those two terms, when Russia was growing
+
+27:12.320 --> 27:20.720
+ at about 7% a year, oil prices were averaging somewhere around $50 a barrel, which is fine,
+
+27:21.280 --> 27:30.000
+ but is not the reason because later on, when oil prices were over $100 a barrel, Russia stagnated.
+
+27:30.640 --> 27:34.160
+ So the initial growth, do you think Putin deserves some credit for that?
+
+27:34.160 --> 27:41.200
+ Yes, he does because he introduced some important liberalizing measures. He lowered taxes.
+
+27:41.200 --> 27:49.200
+ He allowed land to be bought and sold. He deregulated many areas of the economy.
+
+27:50.080 --> 27:57.600
+ And so there was a kind of entrepreneurial burst that was partly attributable, partly
+
+27:57.600 --> 28:03.920
+ attributable to government policy during his first term. But also he was consolidating political
+
+28:03.920 --> 28:12.480
+ power. And as I said, the methods he used overall for the long term, we're not able to continue
+
+28:12.480 --> 28:18.960
+ sustain that success. In addition, we have to remember that China played a really big role
+
+28:20.080 --> 28:24.880
+ in the success of Russia in the first two terms of Putin's presidency,
+
+28:24.880 --> 28:34.080
+ because China's phenomenal growth created insatiable demand for just about everything
+
+28:34.080 --> 28:40.560
+ that the Soviet Union used to produce. So fertilizers, cement, fill in the blank,
+
+28:41.520 --> 28:49.360
+ chemicals, metals. China had insatiable demand for everything the Soviet Union once produced.
+
+28:49.360 --> 29:00.640
+ And so China's raising of global demand overall brought Soviet era industry back from the dead.
+
+29:01.920 --> 29:07.840
+ And so there was something that happened. Soviet era industry fell off a cliff in the 1990s.
+
+29:08.720 --> 29:14.720
+ There was a decline in manufacturing and industrial production greater than in the Great Depression
+
+29:14.720 --> 29:22.720
+ in the US. But a lot of that came back online in the 2000s. And that had to do with China's
+
+29:22.720 --> 29:28.960
+ phenomenal growth. The trade between China and Russia was not always direct. So this was an
+
+29:28.960 --> 29:36.880
+ indirect effect. But raising global prices for the commodities and the products, the kind of
+
+29:36.880 --> 29:45.040
+ lower and lower value products in manufacturing, not high end stuff, but lower end stuff like steel
+
+29:45.040 --> 29:53.520
+ or iron or cement or fertilizer, where the value added is not spectacular, but nonetheless,
+
+29:53.520 --> 30:00.400
+ which had been destroyed by the 1990s and after the Soviet collapse. This was brought back to life.
+
+30:00.400 --> 30:05.680
+ Now you can do that once. You can bring Soviet era industry back to life once.
+
+30:05.680 --> 30:11.440
+ And that happened during Putin's first two terms in addition to the liberalizing policies,
+
+30:12.320 --> 30:19.840
+ which spurred entrepreneurialism in some small and medium business. The crash of the ruble in 1998,
+
+30:20.400 --> 30:26.000
+ which made Russian products much cheaper abroad and made imports much more expensive,
+
+30:26.960 --> 30:34.480
+ also facilitated the resuscitation, the revival of domestic manufacturing. So all of this came
+
+30:34.480 --> 30:44.720
+ together for that spectacular 10 year, 7% on average economic growth. And moreover, people's
+
+30:44.720 --> 30:53.520
+ wages after inflation, their disposable income grew more even than GDP grew. So disposable
+
+30:53.520 --> 31:00.080
+ income after inflation, that is a real income, was growing greater than 7%. In some cases,
+
+31:00.080 --> 31:06.240
+ 10% a year. So there was a boom and the Russian people felt it and it happened during Putin's
+
+31:06.240 --> 31:14.640
+ first two terms and people were grateful, rightly so for that. And those who don't want to give Putin
+
+31:14.640 --> 31:23.360
+ credit, give oil prices all the credit. But I don't think that oil prices can explain this.
+
+31:23.360 --> 31:28.000
+ Having said that, that doesn't mean that this was sustainable over the long term.
+
+31:28.000 --> 31:36.480
+ Right. So you've briefly mentioned sort of implying the possibility Stalin held power for,
+
+31:36.480 --> 31:43.760
+ let's say, 30 years. You've briefly mentioned that as a question, will Putin be able to beat
+
+31:43.760 --> 31:50.720
+ that record, to beat that? So can you talk about your sense of, is it possible that Putin holds
+
+31:50.720 --> 32:00.240
+ power for that kind of duration? Let's hope not. Let's hope not for Russia's sake. The primary
+
+32:00.240 --> 32:08.000
+ victims of President Putin's power are Russians. They're not Ukrainians, although to a certain
+
+32:08.000 --> 32:14.960
+ extent Ukraine has suffered because of Putin's actions. And they're not Americans. They're Russians.
+
+32:14.960 --> 32:21.600
+ Moreover, Russia has lost a great deal of human talent. Millions and millions of people have left
+
+32:21.600 --> 32:29.840
+ Russia since 1991 overall, somewhere between five and 10 million people have left the country
+
+32:30.880 --> 32:37.200
+ and are beyond the borders of the former Soviet Union. So they left the Soviet space entirely.
+
+32:37.760 --> 32:42.560
+ Moreover, the people who left are not the poor people. They're not the uneducated.
+
+32:42.560 --> 32:48.640
+ They're not the losers. The people who've left are the more dynamic parts of the population,
+
+32:48.640 --> 32:55.360
+ the better educated, the more entrepreneurial. So that human capital loss that Russia has suffered
+
+32:55.360 --> 33:02.960
+ is phenomenal. And in fact, right here where we're sitting at MIT, we have examples of people who
+
+33:02.960 --> 33:08.800
+ are qualified, good enough for MIT, and have left Russia to come to MIT.
+
+33:08.800 --> 33:14.240
+ You're looking at one of them. And the other aspect, just to quickly comment,
+
+33:14.240 --> 33:19.200
+ is those same people like me. I'm not welcome back.
+
+33:19.200 --> 33:25.200
+ No, you're not under the current regime. It was a big loss for Russia if you're patriotic,
+
+33:25.200 --> 33:31.600
+ but not from the point of view of the Putin regime. That has to do also factors into popularity.
+
+33:31.600 --> 33:38.320
+ If the people who don't like you leave, they're not there to complain, to protest, to vote against
+
+33:38.320 --> 33:46.480
+ you. And so your opposition declines when you let them leave. However, it's very costly in human
+
+33:46.480 --> 33:53.840
+ capital terms. Hemorrhaging that much human capital is damaging, it's self damaging. And we've seen
+
+33:53.840 --> 33:59.840
+ it accelerate. It was already high, but we've seen it accelerate in the last
+
+33:59.840 --> 34:09.520
+ in the last seven to eight years of President Putin's rule. And those people are not going
+
+34:09.520 --> 34:14.480
+ back of their own volition, but even if they wanted to go back, as you just said, they'd be
+
+34:14.480 --> 34:21.520
+ unwelcome. That's a big cost to pay for this regime. And so whatever benefits this regime might or
+
+34:21.520 --> 34:28.880
+ might not have given to the country, the disadvantages, the downside, the costs are also
+
+34:28.880 --> 34:35.280
+ really high. So we don't want Putin lasting in power as long as Stalin. It would be better
+
+34:35.840 --> 34:41.600
+ if Russia were able to choose among options, to choose a new leader among options.
+
+34:42.640 --> 34:49.040
+ Many people speculate that President Putin will name a successor the way Yeltsin named Putin as
+
+34:49.040 --> 34:56.000
+ his successor, Boris, President Boris Yeltsin. And then Putin will leave the stage and allow
+
+34:56.000 --> 35:03.760
+ the successor to take over. That might seem like a good solution. But once again, we don't need a
+
+35:03.760 --> 35:09.680
+ system where you hang on for as long as possible than to nominate who's going to take over. We
+
+35:09.680 --> 35:17.760
+ need a system that has the kind of corrective mechanisms that democracies and markets have,
+
+35:17.760 --> 35:24.320
+ along with rule of law. A corrective mechanism is really important because all leaders make mistakes.
+
+35:24.320 --> 35:32.400
+ But when you can't correct for the mistakes, then the mistakes get compounded. Putin could
+
+35:32.400 --> 35:39.440
+ well he seems to be healthy. He could well last as many years as Stalin. It's hard to predict because
+
+35:39.440 --> 35:47.280
+ events intercede sometimes and create circumstances that are unforeseen and leaders get overthrown
+
+35:47.280 --> 35:54.880
+ or have a heart attack or whatever. There's a palace insurrection where ambitious leaders on
+
+35:54.880 --> 36:02.560
+ the inside, for both personal power and patriotic reasons, try to push aside an aging leader.
+
+36:03.200 --> 36:09.520
+ There are many scenarios in which Putin could not last that long. But unfortunately, right now,
+
+36:10.480 --> 36:16.400
+ you could also imagine potentially him lasting that long, which as I said, is not an outcome
+
+36:16.400 --> 36:21.840
+ if you're patriotic about Russia. It's not an outcome you would wish out to the country.
+
+36:21.840 --> 36:30.240
+ I guess a very difficult question. But what practically do you feel is a way out of the Putin
+
+36:30.240 --> 36:39.920
+ regime? Is the way out of the corruption that's deeply underlies the state? If you look from a
+
+36:39.920 --> 36:51.360
+ history perspective, is a revolution required? Is violence required? Is from violence within
+
+36:51.360 --> 37:04.560
+ or external to the country? Is a powerful, inspiring leader enough to step in and bring
+
+37:04.560 --> 37:11.280
+ democracy and the free world to Russia? Russia is not a failed country. It's a
+
+37:11.280 --> 37:19.040
+ middle income country with tremendous potential and has proven many times in the past that when
+
+37:19.040 --> 37:27.840
+ it gets in a bad way, it can reverse its trajectory. Moreover, violence is rarely ever a solution.
+
+37:27.840 --> 37:35.040
+ Violence rarely, it may break an existing trend, but it's rare that violence produces a nonviolent
+
+37:35.040 --> 37:42.400
+ sustainable positive outcome. It happens, but it doesn't happen frequently. Societal upheaval
+
+37:44.320 --> 37:52.320
+ is not a way always to institutionalize a better path forward because you need institutions. People
+
+37:52.320 --> 37:58.560
+ can protest as they did throughout the Middle East and the protests didn't necessarily lead
+
+37:58.560 --> 38:07.360
+ to better systems because the step from protest to new, strong, consolidated institutions is a
+
+38:07.360 --> 38:14.240
+ colossal leap, not a small step. What we need and what we see from history and situations like this
+
+38:14.240 --> 38:22.560
+ is a group within the power structures, which is a patriotic, that sees things going down,
+
+38:22.560 --> 38:30.640
+ that is to say, that sees things not developing relative to neighbors, relative to richer countries,
+
+38:30.640 --> 38:37.600
+ relative to more successful countries. They want to change the trajectory of Russia.
+
+38:37.600 --> 38:47.920
+ And if they can, in a coalition fashion, unseat the current regime for a new power sharing arrangement,
+
+38:48.720 --> 38:53.680
+ which once again can be frustrating because you can't do changes immediately,
+
+38:53.680 --> 38:59.840
+ you can't do things overnight, but that's the point. Constraints on your ability to change
+
+38:59.840 --> 39:05.440
+ everything immediately and to force change overnight is what leads to long term success.
+
+39:05.440 --> 39:16.320
+ That's the sustainability of change. So Russia needs stronger institutions. It needs court system
+
+39:17.600 --> 39:24.400
+ as well as democratic institutions. It needs functioning open dynamic markets rather than
+
+39:24.400 --> 39:33.120
+ monopolies. It needs meritocracy and banks to award loans on the basis of business plans,
+
+39:33.120 --> 39:38.720
+ not on the basis of political criteria or corrupt bribery or whatever it might be.
+
+39:39.760 --> 39:47.600
+ So Russia needs those kind of functioning institutions that take time, are sometimes slow,
+
+39:48.320 --> 39:55.920
+ don't lead to revolutionary transformation, but lead to potentially long term sustainable growth
+
+39:55.920 --> 40:02.320
+ without upheaval, without violence, without getting into a situation where all of a sudden
+
+40:02.320 --> 40:09.600
+ you need a miracle again. Every time Russia seems to need a miracle, and that's the problem,
+
+40:10.480 --> 40:17.040
+ the solution would be not needing a miracle. Now, having said that, the potential is there.
+
+40:17.760 --> 40:25.120
+ The civilization that we call Russia is amazingly impressive. It has delivered world class culture,
+
+40:25.120 --> 40:32.960
+ world class science. It's a great power. It's not a great power with a strong base right now,
+
+40:32.960 --> 40:38.400
+ but nonetheless, it is a great power as it acts in the world. So I wouldn't underestimate Russia's
+
+40:38.400 --> 40:44.560
+ abilities here, and I wouldn't write off Russia. I don't see it under the current regime, a renewal
+
+40:44.560 --> 40:52.080
+ of the country. But if we can have from within the regime an evolution rather than a revolution
+
+40:52.080 --> 41:00.880
+ in a positive direction, and maybe get a George Washington figure who is strong enough to push
+
+41:00.880 --> 41:08.880
+ through institutionalization rather than personalism. So if I could ask about one particular individual,
+
+41:10.080 --> 41:14.560
+ it'd be just interesting to get your comment, but also as a representative of potential leaders.
+
+41:14.560 --> 41:20.560
+ I just on this podcast talked to Gary Kasparov, who I'm not sure if you're familiar with his
+
+41:20.560 --> 41:28.400
+ ongoings. So besides being a world class chess player, he's also a very outspoken activist,
+
+41:28.400 --> 41:36.640
+ sort of seeing Putin, truly seeing Putin as an enemy of the free world of democracy, of
+
+41:37.840 --> 41:44.400
+ balanced government in Russia. What do you think of people like him specifically, or just people
+
+41:44.400 --> 41:53.600
+ like him trying as leaders to step in to run for president to symbolize a new chapter in Russia's
+
+41:53.600 --> 42:01.680
+ future? So we don't need individuals. Some individuals are very impressive, and they have
+
+42:01.680 --> 42:09.200
+ courage, and they protest, and they criticize, and they organize. We need institutions. We need a
+
+42:09.200 --> 42:16.000
+ duma or a parliament that functions. We need a court system that functions. That is to say where
+
+42:16.000 --> 42:25.520
+ there are a separation of powers, impartial professional civil service, impartial professional
+
+42:26.320 --> 42:32.720
+ judiciary. Those are the things Russia needs. It's rare that you get that from an individual,
+
+42:32.720 --> 42:39.440
+ no matter how impressive. We had Andrei Sakharov, who was an extraordinary individual,
+
+42:40.560 --> 42:47.920
+ who developed the hydrogen bomb under Soviet regime, was a world class physicist,
+
+42:48.960 --> 42:56.400
+ was then upset about how his scientific knowledge and scientific achievements were being put to use
+
+42:56.400 --> 43:04.560
+ and rebelled to try to put limits, constraints, civilizing humane limits
+
+43:04.560 --> 43:11.760
+ and constraints on some of the implications of his extraordinary science. But Sakharov,
+
+43:11.760 --> 43:18.080
+ even if he had become the leader of the country, which he did not become, he was more of a moral
+
+43:18.080 --> 43:23.280
+ or spiritual leader, it still wouldn't have given you a judiciary. It still wouldn't have
+
+43:23.280 --> 43:28.160
+ given you a civil service. It still wouldn't have given you a duma or functioning parliament.
+
+43:28.880 --> 43:34.240
+ You need a leader in coalition with other leaders. You need a bunch of leaders,
+
+43:35.760 --> 43:41.120
+ a whole group, and they have to be divided a little bit so that not one of them can destroy
+
+43:41.120 --> 43:50.000
+ all the others. And they have to be interested in creating institutions, not solely or predominantly
+
+43:50.000 --> 43:57.360
+ in their personal power. And so I have no objection to outstanding individuals and to the work that
+
+43:57.360 --> 44:04.000
+ they do. But I think in institutional terms, and they need to think that way too in order to be
+
+44:04.000 --> 44:10.640
+ successful. So if we go back to the echoes of that after the Russian Revolution with Stalin,
+
+44:10.640 --> 44:17.040
+ with Lenin and Stalin, maybe you can correct me, but there was a group of people there
+
+44:17.040 --> 44:28.480
+ in that same kind of way, looking to establish institutions that were built in a beautifully
+
+44:28.480 --> 44:37.440
+ built around an ideology that they believed is good for the world. So sort of echoing that idea
+
+44:37.440 --> 44:44.160
+ of what we're talking about, what Russia needs now, can you, first of all, you've described a
+
+44:44.160 --> 44:51.520
+ fascinating thought which is Stalin is having amassed arguably more power than any man in history.
+
+44:52.560 --> 44:58.080
+ It's an interesting thing to think about. But can you tell about his journey to getting that power
+
+44:58.080 --> 45:05.520
+ after the Russian Revolution? How does that perhaps echo to our current discussion about
+
+45:05.520 --> 45:13.360
+ institutions and so on? And just in general, the story I think is fascinating of how one man is
+
+45:13.360 --> 45:21.120
+ able to get more power than any other man in history. It is a great story, not necessarily
+
+45:21.120 --> 45:26.640
+ from a moral point of view. But if you're interested in power, for sure, it's an incredible story.
+
+45:28.160 --> 45:32.480
+ So we have to remember that Stalin is also a product of circumstances,
+
+45:33.360 --> 45:40.480
+ not solely his own individual drive, which is very strong. But for example, World War One
+
+45:40.480 --> 45:49.280
+ breaks the Tsarist regime, the Tsarist order, imperial Russian state. Stalin has no participation
+
+45:49.280 --> 45:57.040
+ whatsoever in World War One. He spends World War One in exile in Siberia. Until the downfall
+
+45:57.760 --> 46:08.240
+ of the Tsarist autocracy in February 1917, Stalin is in Eastern Siberian exile. He's only able to
+
+46:08.240 --> 46:16.560
+ leave Eastern Siberia when that regime falls. He never fights in the war. He's called up briefly
+
+46:16.560 --> 46:23.360
+ towards the end of the war and is disqualified on physical grounds because of physical deformities
+
+46:23.360 --> 46:30.640
+ from being drafted. The war continues after the Tsarist regime has been toppled
+
+46:30.640 --> 46:39.280
+ in the capital and there's been a revolution. The war continues and that war is very radicalizing.
+
+46:40.480 --> 46:47.360
+ The peasants begin to seize the land after the Tsar falls, essentially destroying much of the
+
+46:47.360 --> 46:52.080
+ gentry class. Stalin has nothing to do with that. The peasants have their own revolution,
+
+46:52.080 --> 47:00.320
+ seizing the land, not in law, but in fact, de facto, not de jure land ownership. So there are
+
+47:00.320 --> 47:09.360
+ these really large processes underway that Stalin is alive during, but not a driver of.
+
+47:10.720 --> 47:17.440
+ The most improbable thing happens, which is a very small group of people around the figure of
+
+47:17.440 --> 47:26.560
+ Vladimir Lenin announces that it has seized power. Now, by this time in October 1917,
+
+47:27.680 --> 47:32.080
+ the government that has replaced the Tsar, the so called provisional government,
+
+47:32.080 --> 47:38.320
+ has failed. And so there's not so much power to seize from the provisional government.
+
+47:38.320 --> 47:48.400
+ What Lenin does is he does a coup on the left. That is to say, Soviets or councils as we would
+
+47:48.400 --> 47:54.400
+ call them in English, which represent people's power or the masses participating in politics,
+
+47:54.400 --> 48:00.800
+ a kind of radical grassroots democracy, are extremely popular all over the country and
+
+48:00.800 --> 48:09.680
+ not dominated by any one group, but predominantly socialist or predominantly leftist. Russia has
+
+48:09.680 --> 48:16.560
+ an election during the war, a free and fair election for the most part, despite the war
+
+48:17.360 --> 48:25.440
+ at the end of 1917 in December 1917. And three quarters plus of the country votes socialist
+
+48:25.440 --> 48:32.160
+ in some form or another. So the battle was over the definition of socialism and who had the right
+
+48:32.800 --> 48:38.480
+ to participate in defining socialism, not only what it would be, but who had the right to decide.
+
+48:39.200 --> 48:45.680
+ So there's a coup by Lenin's group known as the Bolsheviks against all the other socialists.
+
+48:47.120 --> 48:52.800
+ And so Lenin declares a seizure of power whereby the old government has failed,
+
+48:52.800 --> 49:00.080
+ people's power, the councils, known as the Soviets, are going to take their place. And Lenin seizes
+
+49:00.080 --> 49:06.560
+ power in the name of the Soviets. So it's a coup against the left, against the rest of the left,
+
+49:07.120 --> 49:11.440
+ not against the provisional government that has replaced the czar, which has already failed.
+
+49:12.320 --> 49:21.520
+ And so Stalin is able to come to power along with Lenin in this crazy seizure of power on the
+
+49:21.520 --> 49:28.000
+ left against the rest of the left in October 1917, which we know is the October Revolution.
+
+49:28.000 --> 49:36.000
+ And I call the October coup as many other historians call. The October Revolution happened
+
+49:36.000 --> 49:42.000
+ after the seizure of power. What's interesting about this episode is that the leftists who seize
+
+49:42.000 --> 49:47.440
+ power in the name of the Soviets, in the name of the masses, in the name of people's power,
+
+49:47.440 --> 49:54.880
+ they retain their hold. Many times in history, there's a seizure of power by the left,
+
+49:54.880 --> 50:01.600
+ and they fail. They collapse. They're cleaned out by an army or what we call forces of order
+
+50:02.320 --> 50:10.240
+ by counterrevolutionary forces. Lenin's revolution, Lenin's coup, is successful. It is able to hold
+
+50:10.240 --> 50:18.080
+ power and not just seize power. They win a civil war and they're entrenched in the heart of the
+
+50:18.080 --> 50:27.520
+ country already by 1921. Stalin is part of that group. Lenin needs somebody to run this new regime
+
+50:27.520 --> 50:33.520
+ in the kind of nitty gritty way. Lenin is the leader, the undisputed leader in the Bolshevik
+
+50:33.520 --> 50:42.160
+ Party, which changes their name to communists in 1918. He makes Stalin the general secretary
+
+50:42.720 --> 50:49.040
+ of the Communist Party. He creates a new position, which hadn't existed before,
+
+50:49.680 --> 50:56.880
+ a kind of day to day political manager, a right hand man. Not because Lenin is looking to replace
+
+50:56.880 --> 51:03.040
+ himself. He's looking to institutionalize a helpmate, a right hand man. He does this in
+
+51:03.040 --> 51:11.600
+ the spring of 1922. Stalin is named to this position, which Lenin has created expressly for
+
+51:11.600 --> 51:18.880
+ Stalin. So there's been a coup on the left, whereby the Bolsheviks, who become communists,
+
+51:18.880 --> 51:24.320
+ have seized power against the rest of the socialists and anarchists and the entire left.
+
+51:25.280 --> 51:30.160
+ And then there's an institutionalization of a position known as general secretary of the
+
+51:30.160 --> 51:36.640
+ Communist Party, right hand man of Lenin. Less than six weeks after Lenin has created
+
+51:36.640 --> 51:47.280
+ this position and installed Stalin, Lenin has a stroke, a major stroke, and never really returns
+
+51:47.280 --> 51:55.920
+ as a full actor to power before he dies of a fourth stroke in January 1924. So a position is
+
+51:55.920 --> 52:03.840
+ created for Stalin to run things on Lenin's behalf, and then Lenin has a stroke. And so Stalin now
+
+52:03.840 --> 52:10.960
+ has this new position, general secretary, but he's the right hand of a person who's no longer
+
+52:10.960 --> 52:17.840
+ exercising day to day control over affairs. Stalin then uses this new position to create
+
+52:17.840 --> 52:24.480
+ a personal dictatorship inside the Bolshevik dictatorship, which is the remarkable story
+
+52:24.480 --> 52:31.840
+ I tried to tell. So is there anything nefarious about any of what you just described? So it seems
+
+52:31.840 --> 52:39.360
+ conveniently that the position is created just for Stalin. There was a few other brilliant people,
+
+52:39.360 --> 52:44.240
+ arguably more brilliant than Stalin in the vicinity of Lenin. Why was Stalin chosen?
+
+52:45.520 --> 52:54.080
+ Why did Lenin all of a sudden fall ill? It's perhaps a conspiratorial question, but is there
+
+52:54.080 --> 53:01.200
+ anything nefarious about any of this historical trajectory to power that Stalin took in creating
+
+53:01.200 --> 53:08.480
+ the personal dictatorship? So history is full of contingency and surprise. After something happens,
+
+53:09.520 --> 53:15.120
+ we all think it's inevitable. It had to happen that way. Everything was leading up to it.
+
+53:15.120 --> 53:25.440
+ So Hitler seizes power in Germany in 1933, and the Nazi regime gets institutionalized by several
+
+53:25.440 --> 53:31.760
+ of his moves after being named chancellor. And so all German history becomes a story
+
+53:31.760 --> 53:39.280
+ of the Nazi rise to power, Hitler's rise to power. Every trend, tendency is bent into that
+
+53:39.280 --> 53:46.560
+ outcome. Things which don't seem related to that outcome all of a sudden get bent in that direction.
+
+53:46.560 --> 53:52.560
+ And other trends that were going on are no longer examined because they didn't lead to that outcome.
+
+53:53.200 --> 53:59.600
+ But Hitler's becoming chancellor of Germany in 1933 was not inevitable. It was contingent.
+
+54:00.240 --> 54:05.760
+ He was offered the position by the traditional conservatives. He's part of the radical right
+
+54:05.760 --> 54:12.640
+ and the traditional right named him chancellor. The Nazi party never outright won an election
+
+54:13.280 --> 54:19.280
+ that was free and fair before Hitler came to power. And in fact, its votes on the eve of
+
+54:19.280 --> 54:25.600
+ Hitler becoming chancellor declined relative to the previous election. So there's contingency in
+
+54:25.600 --> 54:36.320
+ history. And so Lenin's illness, his stroke, the neurological and blood problems that he had
+
+54:37.120 --> 54:44.480
+ were not a structure in history. In other words, if Lenin had been a healthier figure, Stalin might
+
+54:44.480 --> 54:50.720
+ never have become the Stalin that we know. That's not to say that all history is accidental,
+
+54:50.720 --> 54:56.960
+ just that we need to relate the structural, the larger structural factors to the contingent factors.
+
+54:57.600 --> 55:03.920
+ Why did Lenin pick Stalin? Well, Stalin was a very effective organizer and the position was
+
+55:03.920 --> 55:09.760
+ an organizational position. Stalin could get things done. He would carry out assignments,
+
+55:09.760 --> 55:14.880
+ no matter how difficult. He wouldn't complain that it was hard work or too much work.
+
+55:14.880 --> 55:23.360
+ He wouldn't go off womanizing and drinking and ignore his responsibilities. Lenin chose Stalin,
+
+55:23.360 --> 55:28.320
+ among other options, because he thought Stalin was the better option. Once again,
+
+55:28.320 --> 55:32.640
+ he wasn't choosing his successor because he didn't know he was going to have this stroke.
+
+55:33.600 --> 55:39.280
+ Lenin had some serious illnesses, but he had never had a major stroke before.
+
+55:39.280 --> 55:46.800
+ So, the choice was made based upon Stalin's organizational skills and promise
+
+55:49.120 --> 55:55.520
+ against the others who were in the regime. Now, they can seem more brilliant than Stalin,
+
+55:55.520 --> 55:58.880
+ but he was more effective and I'm not sure they were very brilliant.
+
+55:59.600 --> 56:04.400
+ Well, he was exceptionally competent actually at the tasks for running a government of the
+
+56:04.400 --> 56:10.640
+ executive branch of a dictator. Yes, he turned out to be very adept at being a dictator.
+
+56:11.520 --> 56:18.480
+ And so, if he had been chosen by Lenin and had not been very good, he would have been pushed
+
+56:18.480 --> 56:26.480
+ aside by others. You can get a position by accident. You can be named because you're
+
+56:26.480 --> 56:33.440
+ someone's friend or someone's relative, but to hold that position, to hold that position
+
+56:33.440 --> 56:39.200
+ in difficult circumstances, and then to build effectively a superpower on all that bloodshed.
+
+56:40.400 --> 56:47.040
+ You have to be skilled in some way. It can't be just the accident that brings you to power,
+
+56:47.760 --> 56:54.400
+ because if accident brings you to power, it won't last. Just like we discovered with Putin,
+
+56:54.400 --> 57:01.120
+ he had some qualities that we didn't foresee at the beginning, and he's been able to hold power,
+
+57:01.120 --> 57:08.080
+ not just be named. Now, Putin and Stalin are very different people. These are very different regimes.
+
+57:08.080 --> 57:13.200
+ I wouldn't put them in the same sentence. My point is not that one resembles the other.
+
+57:14.320 --> 57:21.680
+ My point is that when people come to power for contingent reasons, they don't stay in power
+
+57:21.680 --> 57:27.840
+ unless they're able to manage it. And Stalin was able to build a personal dictatorship inside
+
+57:27.840 --> 57:35.040
+ that dictatorship. He was cunning, he was ruthless, and he was a workaholic. He was very diligent.
+
+57:35.040 --> 57:40.640
+ He had a phenomenal memory, and so he could remember people's names and faces and events,
+
+57:41.280 --> 57:48.480
+ and this was very advantageous for him as he built the machine that became the Soviet state
+
+57:48.480 --> 57:54.160
+ and bureaucracy. One of the things, maybe you can correct me if I'm wrong, but you've made me
+
+57:54.160 --> 58:02.480
+ realize this wasn't some kind of manipulative personality trying to gain more power solely,
+
+58:02.480 --> 58:11.040
+ like kind of an evil picture of a person, but he truly believed in communism. As far as I can
+
+58:11.040 --> 58:14.720
+ understand, again, you can correct me if I'm wrong, but he wanted to build a better world
+
+58:14.720 --> 58:25.360
+ by having infusioned communism into the country and perhaps into the whole world.
+
+58:26.000 --> 58:34.240
+ So maybe my question is, what role does communism as an idea, as an ideology,
+
+58:34.240 --> 58:39.920
+ play in all of this, in his rise to power, in the people of the time, in the Russian people,
+
+58:39.920 --> 58:46.160
+ actually just the whole 20th century? You're right. Stalin was a true believer,
+
+58:46.160 --> 58:50.880
+ and this is very important. He was also hungry for power and for personal power,
+
+58:51.440 --> 58:58.560
+ but just as you said, not for power's sake, not only for power. He was interested in
+
+58:58.560 --> 59:05.840
+ enacting communism in reality and also in building a powerful state. He was a status,
+
+59:05.840 --> 59:12.880
+ a traditional Russian status in the imperial sense, and this won him a lot of followers.
+
+59:13.760 --> 59:19.760
+ The fact that they knew he was a hardcore true believing communist won him a lot of followers
+
+59:19.760 --> 59:27.040
+ among the communists, and the fact that he was a hardcore defender of Russian state interests
+
+59:27.040 --> 59:33.280
+ now in the Soviet guys also won him a lot of followers. Sometimes those groups overlapped
+
+59:33.280 --> 59:39.280
+ the communists and the Russian patriots, and sometimes they were completely different groups,
+
+59:39.280 --> 59:47.680
+ but both of them shared an admiration for Stalin's dedication to those goals and his abilities
+
+59:47.680 --> 59:54.800
+ to enact them. And so it's very important to understand that however thirsty he was for power,
+
+59:54.800 --> 1:00:04.560
+ and he was very thirsty for power, that he was also driven by ideals. Now, I don't necessarily
+
+1:00:04.560 --> 1:00:13.680
+ think that everyone around Stalin shared those ideals. We have to be careful not to make everybody
+
+1:00:13.680 --> 1:00:19.360
+ into a communist true believer, not to make everybody into a great status Russian patriot,
+
+1:00:19.360 --> 1:00:29.200
+ but they were widespread and powerful attractions for a lot of people. And so Stalin's ability
+
+1:00:29.760 --> 1:00:36.240
+ to communicate to people those that he was dedicated to those pursuits and his ability
+
+1:00:36.240 --> 1:00:43.440
+ to drive towards them were part of his appeal. However, he also resorted to manipulation. He
+
+1:00:43.440 --> 1:00:51.760
+ also resorted to violence. He lied. He spoke out of all sides of his mouth. He slandered other people.
+
+1:00:51.760 --> 1:01:00.960
+ He sabotaged potential rivals. He used every underhanded method and then some in order to
+
+1:01:00.960 --> 1:01:07.120
+ build his personal dictatorship. Now, he justified this, as you said, by appeals to communism
+
+1:01:07.120 --> 1:01:15.360
+ and to Soviet power to himself and to others. And so he justified it in his own mind and to others,
+
+1:01:15.920 --> 1:01:25.920
+ but certainly any means were acceptable to him to achieve these ends. And he identified his
+
+1:01:25.920 --> 1:01:32.960
+ personal power with communism and with Russian glory in the world. So he felt that he was the only
+
+1:01:32.960 --> 1:01:40.400
+ one who could be trusted, who could be relied upon to build these things. Now, we put ourselves back
+
+1:01:40.400 --> 1:01:48.480
+ in that time period. The Great Depression was a very difficult time for the capitalist system.
+
+1:01:48.480 --> 1:01:57.680
+ There was mass unemployment, a lot of hardship, fascism, Nazism, Japan, Imperial Japan.
+
+1:01:57.680 --> 1:02:03.600
+ There were a lot of associations that were negative with the kind of capitalist system
+
+1:02:03.600 --> 1:02:14.640
+ that was not 100%, not a monolith, but had a lot of authoritarian incarnations. There was imperialism,
+
+1:02:14.640 --> 1:02:21.200
+ colonies that even the democratic rule of law capital estates had non democratic,
+
+1:02:21.200 --> 1:02:28.560
+ non rule of law colonies under their rule. So the image and reality of capitalism during
+
+1:02:28.560 --> 1:02:35.040
+ that time period between World War One and World War Two was very different from how it would become
+
+1:02:35.040 --> 1:02:42.400
+ later. And so in that time period, in that interwar conjuncture after World War One before World
+
+1:02:42.400 --> 1:02:52.160
+ War Two, communism held some appeal inside the Soviet Union for sure, but even outside the Soviet
+
+1:02:52.160 --> 1:02:57.760
+ Union because the image and reality of capitalism disappointed many people. Now in the end,
+
+1:02:57.760 --> 1:03:05.120
+ communism was significantly worse. Many more victims and the system, of course, would eventually
+
+1:03:05.120 --> 1:03:10.240
+ implode. But nonetheless, there were real problems that communism tried to address.
+
+1:03:10.240 --> 1:03:16.480
+ Yes, it didn't solve those problems. It was not a solution, but it didn't come out of nowhere.
+
+1:03:17.040 --> 1:03:25.440
+ It came out of the context of that interwar period. And so Stalin's rule, some people saw it as
+
+1:03:25.440 --> 1:03:33.280
+ potentially a better option than imperialism, fascism and Great Depression. Having said that,
+
+1:03:33.280 --> 1:03:39.280
+ they were wrong. It turned out that Stalin wasn't a better alternative to markets and
+
+1:03:39.280 --> 1:03:47.040
+ private property and rule of law and democracy. However, that didn't become clearer to people
+
+1:03:47.040 --> 1:03:54.640
+ until after World War Two, after Nazism had been defeated, Imperial Japan had been defeated,
+
+1:03:54.640 --> 1:04:00.160
+ the fascist Italy had been defeated, and decolonization had happened around the world.
+
+1:04:00.160 --> 1:04:06.720
+ And there was a middle class economic boom in the period from the late 40s through the 70s
+
+1:04:06.720 --> 1:04:13.680
+ that created a kind of mass middle class in many societies. So capitalism rose from the ashes,
+
+1:04:13.680 --> 1:04:23.440
+ as it were. And this changed the game for Stalin and communism. Communism is about
+
+1:04:23.440 --> 1:04:30.320
+ an alternative to capitalism. And if that alternative is not superior, there's no reason
+
+1:04:30.320 --> 1:04:38.400
+ for communism to exist. But if capitalism is in foul odor, if people have a bad opinion,
+
+1:04:39.520 --> 1:04:45.040
+ strong critique of capitalism, there can be appeal to alternatives. And that's kind of what happened
+
+1:04:45.040 --> 1:04:52.240
+ with Stalin's rule. But after World War Two, the context changed a lot. Capitalism was very
+
+1:04:52.240 --> 1:04:58.640
+ different, much more successful, nonviolent compared to what it was in the interwar period.
+
+1:04:58.640 --> 1:05:06.880
+ And the Soviet Union had a tough time competing against that new context. Now, today, we see
+
+1:05:06.880 --> 1:05:15.120
+ similarly that the image and reality of capitalism is on the question again, which leads some people
+
+1:05:15.120 --> 1:05:22.240
+ to find an answer in socialism as an alternative. So you just kind of painted a beautiful picture
+
+1:05:22.240 --> 1:05:29.200
+ of comparison. This is the way we think about ideologies is what's working better. Do you
+
+1:05:29.200 --> 1:05:35.440
+ separate in your mind the ideals of communism to the Stalinist implementation of communism?
+
+1:05:36.080 --> 1:05:43.520
+ And again, capitalism and American implementation of capitalism. And as we look at now the 21st
+
+1:05:43.520 --> 1:05:53.920
+ century, where yes, this idea of socialism being a potential political system that we would or
+
+1:05:53.920 --> 1:06:00.000
+ economic system would operate under in the United States, rising up again as an idea. So how do we
+
+1:06:00.000 --> 1:06:06.480
+ think about that? Again, in the 21st century, about these ideas, fundamental deep ideas of
+
+1:06:06.480 --> 1:06:13.840
+ communism capitalism. Yeah. So in the Marxist schema, there was something called feudalism, which
+
+1:06:13.840 --> 1:06:20.320
+ was supposedly destroyed by the bourgeoisie who created capitalism. And then the working class
+
+1:06:20.320 --> 1:06:26.880
+ was supposed to destroy capitalism and create socialism. But socialism wasn't the end stage,
+
+1:06:26.880 --> 1:06:32.800
+ the end stage was going to be communism. So that's why the Communist Party in the Soviet Union
+
+1:06:32.800 --> 1:06:40.560
+ first built socialism, transcending capitalism. The next stage was socialism and the end game,
+
+1:06:40.560 --> 1:06:46.480
+ the final stage was communism. So their version of socialism was derived from Marx.
+
+1:06:47.360 --> 1:06:56.160
+ And Marx argued that the problem was capitalism had been very beneficial for a while.
+
+1:06:56.160 --> 1:07:03.040
+ It had produced greater wealth and greater opportunity than feudalism had. But then it had
+
+1:07:03.040 --> 1:07:08.880
+ come to serve only the narrow interests of the so called bourgeoisie or the capitalists themselves.
+
+1:07:09.760 --> 1:07:17.280
+ And so for humanity's sake, the universal class, the working class needed to overthrow capitalism
+
+1:07:17.840 --> 1:07:24.640
+ in order for greater productivity, greater wealth to be produced for all of humanity to flourish
+
+1:07:24.640 --> 1:07:31.920
+ and on a higher level. So you couldn't have socialism unless you destroyed capitalism.
+
+1:07:31.920 --> 1:07:39.920
+ So that meant no markets, no private property, no so called parliaments or bourgeois parliaments,
+
+1:07:39.920 --> 1:07:48.320
+ as they were called. So you got socialism in Marx's schema by transcending by eliminating capitalism.
+
+1:07:48.320 --> 1:07:58.240
+ Now, Marx also called for freedom. He said that this elimination of markets and private
+
+1:07:58.240 --> 1:08:03.600
+ property and bourgeois parliaments would produce greater freedom in addition to greater abundance.
+
+1:08:04.800 --> 1:08:14.480
+ However, everywhere this was tried, it produced tyranny and mass violence, death and shortages.
+
+1:08:14.480 --> 1:08:20.880
+ Everywhere it was tried. There's no exception in historical terms. And so it's very interesting.
+
+1:08:21.920 --> 1:08:27.920
+ Marx insisted that capitalism had to be eliminated. You couldn't have markets.
+
+1:08:28.480 --> 1:08:36.000
+ Markets were chaos. You needed planning. You couldn't have hiring of wage labor. That was
+
+1:08:36.000 --> 1:08:40.800
+ wage slavery. You couldn't have private property because that was a form of theft.
+
+1:08:40.800 --> 1:08:47.520
+ So in the Marxist scheme, somehow you were going to eliminate capitalism
+
+1:08:48.560 --> 1:08:53.600
+ and get to freedom. It turned out you didn't get to freedom. So then people said, well,
+
+1:08:53.600 --> 1:08:59.520
+ you can't blame Marx because he said we needed freedom. He was pro freedom.
+
+1:09:00.400 --> 1:09:06.320
+ So it's kind of like dropping a nuclear bomb. You say you're going to drop a nuclear bomb,
+
+1:09:06.320 --> 1:09:15.680
+ but you want to minimize civilian casualties. So the dropping of the nuclear bomb is the
+
+1:09:15.680 --> 1:09:22.640
+ elimination of markets, private property and parliaments. But you're going to bring freedom
+
+1:09:22.640 --> 1:09:27.440
+ or you're going to minimize civilian casualties. So you drop the nuclear bomb,
+
+1:09:27.440 --> 1:09:37.120
+ you eliminate the capitalism and you get famine, deportation, no constraints on executive power,
+
+1:09:37.120 --> 1:09:43.760
+ and not abundance, but shortages. And people say, well, that's not what Marx said. That's not what
+
+1:09:43.760 --> 1:09:49.920
+ I said. I said I wanted to minimize civilian casualties. The nuclear bomb goes off and there's
+
+1:09:49.920 --> 1:09:57.360
+ mass civilian casualties. And you keep saying, but I said drop the bomb, but minimize civilian
+
+1:09:57.360 --> 1:10:03.360
+ casualties. So that's where we are. That's history, not philosophy. I'm speaking about
+
+1:10:03.360 --> 1:10:10.480
+ historical examples, all the cases that we have. Marx was not a theorist of inequality.
+
+1:10:11.440 --> 1:10:22.320
+ Marx was a theorist of alienation, of dehumanization, of fundamental constraints or what he called
+
+1:10:22.320 --> 1:10:28.000
+ fetters on productivity and on wealth, which he all attributed to capitalism.
+
+1:10:29.280 --> 1:10:35.040
+ Marx wasn't bothered by inequality. He was bothered by something deeper, something worse.
+
+1:10:36.720 --> 1:10:44.320
+ Those socialists who figured this out, who understood that if you drop the nuclear bomb,
+
+1:10:44.320 --> 1:10:50.400
+ there was no way to minimize civilian casualties. Those socialists who came to understand
+
+1:10:50.400 --> 1:10:56.400
+ that if you eliminated capitalism, markets, private property, and parliaments, if you
+
+1:10:56.400 --> 1:11:04.160
+ eliminated that, you wouldn't get freedom. Those Marxists, those socialists became what we would
+
+1:11:04.160 --> 1:11:10.960
+ call social democrats or people who would use the state to regulate the market,
+
+1:11:10.960 --> 1:11:18.720
+ not to eliminate the market. They would use the state to redistribute income, not to destroy
+
+1:11:18.720 --> 1:11:25.680
+ private property and markets. And so this in the Marxist schema was apostasy,
+
+1:11:26.480 --> 1:11:32.400
+ because they were accepting markets and private property. They were accepting alienation and wage
+
+1:11:32.400 --> 1:11:38.800
+ slavery. They were accepting capitalism in principle, but they wanted to fix it. They wanted
+
+1:11:38.800 --> 1:11:45.680
+ to ameliorate. They wanted to regulate. And so they became what was denounced as revisionists,
+
+1:11:45.680 --> 1:11:53.200
+ not true Marxists, not real revolutionaries, but parliamentary road, parliamentarians.
+
+1:11:54.240 --> 1:12:01.200
+ We know this as normal politics, normal social democratic politics from the European case or
+
+1:12:01.200 --> 1:12:08.800
+ from the American case, but they are not asking to eliminate capitalism, blaming capitalism,
+
+1:12:08.800 --> 1:12:16.560
+ blaming markets and private property. So this rift among the socialists, the ones who are for
+
+1:12:16.560 --> 1:12:25.680
+ elimination of capitalism, transcending capitalism, otherwise you could never, ever get to abundance
+
+1:12:25.680 --> 1:12:32.080
+ and freedom in the Marxist schema versus those who accept capitalism, but want to regulate and
+
+1:12:32.080 --> 1:12:39.920
+ redistribute. That rift on the left has been with us almost from the beginning. It's a kind of civil
+
+1:12:39.920 --> 1:12:47.200
+ war on the left between the Leninists and the social democrats or the revisionists, as they're
+
+1:12:47.200 --> 1:12:54.400
+ known pejoratively by the Leninists. We have the same confusion today in the world today,
+
+1:12:54.400 --> 1:13:04.640
+ where people also cite Marx saying capitalism is a dead end, and we need to drop that nuclear bomb
+
+1:13:04.640 --> 1:13:12.960
+ and get freedom, get no civilian casualties, versus those who say, yes, there are inequities,
+
+1:13:13.600 --> 1:13:20.560
+ there's a lack of equality of opportunity. There are many other issues that we need to deal with,
+
+1:13:20.560 --> 1:13:26.400
+ and we can fix those issues, we can regulate, we can redistribute. I'm not advocating this as a
+
+1:13:26.400 --> 1:13:32.000
+ political position. I'm not taking a political position myself. I'm just saying that there's a
+
+1:13:32.000 --> 1:13:38.800
+ confusion on the left between those who accept capitalism and want to regulate it versus those
+
+1:13:38.800 --> 1:13:43.680
+ who think capitalism is inherently evil, and if we eliminate it, we'll get to a better world,
+
+1:13:44.240 --> 1:13:49.600
+ when in fact history shows that if you eliminate capitalism, you get to a worse world.
+
+1:13:49.600 --> 1:13:53.360
+ The problems might be real, but the solutions are worse.
+
+1:13:54.320 --> 1:13:59.520
+ From history's lessons, now we have deep, painful lessons, but there's not that many of them.
+
+1:14:00.960 --> 1:14:07.920
+ Our history is relatively short as a human species. Do we have a good answer on the left
+
+1:14:07.920 --> 1:14:14.320
+ of Leninists, Marxists, versus social democrat, versus capitalism, versus any
+
+1:14:14.320 --> 1:14:23.280
+ anarchy? Do we have sufficient samples from history to make better decisions about the
+
+1:14:23.280 --> 1:14:28.240
+ future of our politics and economics? For sure. We have the American Revolution,
+
+1:14:29.040 --> 1:14:35.680
+ which was a revolution not about class, not about workers, not about a so called universal
+
+1:14:35.680 --> 1:14:40.080
+ class of the working class, elimination of capitalism markets in the bourgeoisie,
+
+1:14:40.080 --> 1:14:48.320
+ but was about the category citizen. It was about universal humanity, where everyone in
+
+1:14:48.320 --> 1:14:54.560
+ theory could be part of it as a citizen. The revolution fell short of its own ideals,
+
+1:14:55.200 --> 1:15:01.760
+ not everyone was a citizen. For example, if you didn't own property, you were a male,
+
+1:15:01.760 --> 1:15:06.960
+ but didn't own property, you didn't have full rights of a citizen. If you were a female,
+
+1:15:06.960 --> 1:15:14.400
+ whether you own property or not, you weren't a full citizen. If you were imported from Africa
+
+1:15:14.400 --> 1:15:23.360
+ against your will, you were a slave and not a citizen. And so not everyone was afforded the
+
+1:15:23.360 --> 1:15:30.560
+ rights in actuality that were declared in principle. However, over time, the category
+
+1:15:30.560 --> 1:15:36.960
+ citizen could expand and slaves could be emancipated and they could get the right to vote.
+
+1:15:36.960 --> 1:15:43.600
+ They could become citizens. Non property owning males could get the right to vote and become full
+
+1:15:43.600 --> 1:15:51.200
+ citizens. Females could get the right to vote and become full citizens. In fact, eventually my
+
+1:15:51.200 --> 1:15:57.760
+ mother was able to get a credit card in her own name in the 1970s without my father having to
+
+1:15:57.760 --> 1:16:05.760
+ cosine the paperwork. It took a long time, but nonetheless, the category citizen can expand
+
+1:16:05.760 --> 1:16:14.320
+ and it can become a universal category. So we have that, the citizen universal humanity model
+
+1:16:14.320 --> 1:16:22.000
+ of the American revolution, which was deeply flawed at the time it was introduced, but fixable
+
+1:16:22.000 --> 1:16:28.400
+ over time. We also had that separation of powers and constraint on executive power that we began
+
+1:16:28.400 --> 1:16:34.720
+ this conversation with. That was also institutionalized in the American revolution because they were
+
+1:16:34.720 --> 1:16:43.200
+ afraid of tyranny. They were afraid of unconstrained executive power. So they built a system that would
+
+1:16:43.200 --> 1:16:49.200
+ contain that, constrain it institutionally, not circumstantially. So that's a great gift.
+
+1:16:49.200 --> 1:16:57.520
+ Within that universal category of citizen, which has, over time, come closer to fulfilling its
+
+1:16:57.520 --> 1:17:03.920
+ original promise, and within those institutional constraints, that separation of powers,
+
+1:17:03.920 --> 1:17:10.160
+ constraint on executive power, within that we've developed what we might call normal politics,
+
+1:17:10.160 --> 1:17:18.960
+ left, right politics. People can be in favor of redistribution and government action, and people
+
+1:17:18.960 --> 1:17:27.360
+ can be in favor of small government, hands off government, no redistribution or less redistribution.
+
+1:17:27.840 --> 1:17:33.920
+ That's the normal left, right political spectrum where you respect the institutions and separation
+
+1:17:33.920 --> 1:17:41.200
+ of powers, and you respect the universal category of citizenship and equality before the law and
+
+1:17:41.200 --> 1:17:49.920
+ everything else. I don't see any problems with that whatsoever. I see that as a great gift,
+
+1:17:50.400 --> 1:17:55.600
+ not just to this country, but around the world and other places besides the United States
+
+1:17:55.600 --> 1:18:03.840
+ have developed this. The problems arise at the extremes, the far left and the far right,
+
+1:18:04.560 --> 1:18:11.120
+ that don't recognize the legitimacy either of capitalism or of democratic rule of law
+
+1:18:11.120 --> 1:18:17.360
+ institutions, and they want to eliminate constraints on executive power. They want to control the
+
+1:18:17.360 --> 1:18:24.080
+ public sphere or diminish the independence of the media. They want to take away markets or
+
+1:18:24.080 --> 1:18:29.440
+ private property, and redistribution becomes something bigger than just redistribution. It
+
+1:18:29.440 --> 1:18:38.160
+ becomes actually that original Marxist idea of transcending capitalism. I'm not bothered by the
+
+1:18:38.160 --> 1:18:44.800
+ left or the right. I think they're normal, and we should have that debate. We're a gigantic,
+
+1:18:44.800 --> 1:18:52.400
+ diverse country of many different political points of view. I'm troubled only by the extremes
+
+1:18:52.400 --> 1:18:59.280
+ that are against the system, cross system, that want to get rid of it, and supposedly that will be
+
+1:18:59.840 --> 1:19:05.440
+ the right path to the future. History tells us that the far left and the far right are wrong
+
+1:19:05.440 --> 1:19:12.640
+ about that. But once again, this doesn't mean that you have to be a social democrat. You could be a
+
+1:19:12.640 --> 1:19:20.000
+ libertarian. You could be a conservative. You could be a centrist. You could be conservative on some
+
+1:19:20.000 --> 1:19:25.520
+ issues and liberal on other issues. All of that comes under what I would presume to be normal
+
+1:19:25.520 --> 1:19:32.640
+ politics. And I see that as the important corrective mechanism, normal politics and market economies,
+
+1:19:33.440 --> 1:19:41.040
+ non monopolistic, open, free, and dynamic market economies. I don't like concentrations of power
+
+1:19:41.040 --> 1:19:47.600
+ politically, and I don't like concentrations of power economically. I like competition in the
+
+1:19:47.600 --> 1:19:56.000
+ political realm. I like competition in the economic realm. This is not perfect. It constantly
+
+1:19:57.200 --> 1:20:05.200
+ needs to be protected and reinvented. There are flaws that are fundamental and need to be adjusted
+
+1:20:05.200 --> 1:20:11.920
+ and addressed and everything else, especially equality of opportunity. Equality of outcome
+
+1:20:11.920 --> 1:20:20.240
+ is unreachable and is a mistake because it produces perverse and unintended consequences,
+
+1:20:20.240 --> 1:20:26.480
+ equality of outcome attempts, attempts to make people equal on the outcome side,
+
+1:20:27.200 --> 1:20:33.440
+ but attempts to make them more equal on the front end, on the opportunity side. That's really,
+
+1:20:33.440 --> 1:20:40.320
+ really important for a healthy society. That's where we've fallen down. Our schools are not
+
+1:20:40.320 --> 1:20:48.320
+ providing equality of opportunity for the majority of people in all of our school systems.
+
+1:20:48.960 --> 1:20:57.360
+ And so I see problems there. I see a need to invest in ourselves, invest in infrastructure,
+
+1:20:57.360 --> 1:21:04.160
+ invest in human capital, create greater equality of opportunity, but also to make sure that we
+
+1:21:04.160 --> 1:21:10.000
+ have good governance because governance is the variable that enables you to do all these other
+
+1:21:10.000 --> 1:21:16.160
+ things. I've watched quite a bit returning back to Putin. I've watched quite a few interviews
+
+1:21:16.960 --> 1:21:23.120
+ with Putin and conversations, especially because I speak Russian fluently. I can
+
+1:21:23.120 --> 1:21:37.920
+ understand often the translations lose a lot. I find the man putting morality aside very deep
+
+1:21:37.920 --> 1:21:48.240
+ and interesting. And I found almost no interview with him to get at that depth. I was very hopeful
+
+1:21:48.240 --> 1:21:56.400
+ for the Oliver Stone documentary with him and to me, because I deeply respect Oliver Stone
+
+1:21:56.400 --> 1:22:01.120
+ as a filmmaker in general, but it was a complete failure in my eyes, that interview.
+
+1:22:05.680 --> 1:22:13.200
+ I suppose you could toss it up to a language barrier, but a complete lack of diving deep
+
+1:22:13.200 --> 1:22:19.680
+ into the person as what I saw. My question is a strange one, but if you were to sit down with
+
+1:22:19.680 --> 1:22:28.320
+ Putin and have a conversation, or perhaps if you were to sit down with Stalin and have a
+
+1:22:28.320 --> 1:22:35.520
+ conversation, what kind of questions would you ask? This wouldn't be televised unless you wanted
+
+1:22:35.520 --> 1:22:41.520
+ to be. So this is only you. So you're allowed to ask about some of the questions that are
+
+1:22:41.520 --> 1:22:50.000
+ sort of not socially acceptable, meaning putting morality aside, getting it to depth of the human
+
+1:22:50.000 --> 1:22:55.520
+ character. What would you ask? So once again, they're very different personalities and very
+
+1:22:55.520 --> 1:23:01.360
+ different time periods and very different regimes. So what I would talk to Stalin about and Putin
+
+1:23:01.360 --> 1:23:12.640
+ about are not in the same category necessarily. So let's take Putin. So I would ask him where he
+
+1:23:12.640 --> 1:23:20.400
+ thinks this is going, where he thinks Russia is going to be in 25 years or 50 years. What's the
+
+1:23:20.400 --> 1:23:27.040
+ long term vision? What does he anticipate the current trends are going to produce? Is he under
+
+1:23:27.040 --> 1:23:35.600
+ the illusion that Russia is on the upswing, that things are actually going pretty well,
+
+1:23:36.480 --> 1:23:43.600
+ that in 25 years Russia is going to still be a great power with a tremendous dynamic economy and
+
+1:23:43.600 --> 1:23:49.760
+ a lot of high tech and a lot of human capital and wonderful infrastructure and a very high
+
+1:23:49.760 --> 1:23:56.800
+ standard of living and a secure, secure borders and sense of security at home. Does he think the
+
+1:23:56.800 --> 1:24:07.120
+ current path is leading in that direction? And if not, if he understands that the current trajectory
+
+1:24:07.120 --> 1:24:15.680
+ does not provide for those kinds of circumstances, does it bother him? Does he worry about that?
+
+1:24:15.680 --> 1:24:19.840
+ Does he care about the future 25 or 50 years from now?
+
+1:24:19.840 --> 1:24:28.480
+ So either he thinks he's on that trajectory already or he doesn't care about that long term
+
+1:24:28.480 --> 1:24:34.720
+ trajectory. So that's the mystery for me with him. He's clever. He has tremendous sources of
+
+1:24:34.720 --> 1:24:42.720
+ information. He has great experience now as a world leader having served for effectively longer
+
+1:24:42.720 --> 1:24:51.760
+ than Leonid Brezhnev's long 18 year reign. And so Putin has accumulated a great deal of experience
+
+1:24:51.760 --> 1:24:57.360
+ at the highest level compared to where he started. And so I'm interested to understand
+
+1:24:58.080 --> 1:25:06.800
+ how he sees this long term evolution or non evolution of Russia and whether he believes
+
+1:25:06.800 --> 1:25:12.400
+ he's got them on the right trajectory or whether if he doesn't believe that he cares.
+
+1:25:12.400 --> 1:25:17.280
+ I have no idea because I've never spoken to him about this, but I would love to hear the answer.
+
+1:25:18.080 --> 1:25:23.040
+ Sometimes you have to ask questions not directly like that, but you have to come a little bit
+
+1:25:23.040 --> 1:25:30.000
+ sideways. You can elicit answers from people by making them feel comfortable in coming sideways
+
+1:25:30.000 --> 1:25:36.960
+ with them. On just a quick question. So that's talking about Russia and Putin's role in Russia.
+
+1:25:36.960 --> 1:25:42.800
+ Do you think it's interesting to ask, and you could say the same for Stalin,
+
+1:25:43.440 --> 1:25:50.320
+ the more personal question of how do you feel yourself about this whole thing,
+
+1:25:50.320 --> 1:25:56.800
+ about your life, about your legacy, looking at the person that's one of the most
+
+1:25:58.400 --> 1:26:03.840
+ powerful and important people in the history of civilization, both Putin and Stalin, you could
+
+1:26:03.840 --> 1:26:11.440
+ argue? Yeah. Once you experience power at that level, it becomes something that's almost necessary
+
+1:26:11.440 --> 1:26:19.680
+ for you as a human being. It's a drug. It's an aphrodisiac. It's a feeling. You know, you go to the
+
+1:26:20.320 --> 1:26:28.000
+ gym to exercise and the endorphins, the chemicals get released. And even if you're tired or you're
+
+1:26:28.000 --> 1:26:37.440
+ sore, you get this massive chemical change, which has very dynamic effects on how you feel and the
+
+1:26:37.440 --> 1:26:42.800
+ kind of level of energy you have for the rest of the day. And if you do that for a long time,
+
+1:26:42.800 --> 1:26:48.560
+ and then you don't do it for a while, you're like a drug addict, not getting your fix.
+
+1:26:49.520 --> 1:26:55.680
+ You miss it. Your body misses that release of endorphins to a certain extent. That's how power
+
+1:26:55.680 --> 1:27:02.240
+ works for people like Putin. That's how power works for people who run universities or are
+
+1:27:02.240 --> 1:27:10.560
+ secretaries of state or run corporations fill in the blank. In whatever ways power is exercised,
+
+1:27:11.200 --> 1:27:17.680
+ it becomes almost a drug for people. It becomes something that's difficult for them to give up.
+
+1:27:17.680 --> 1:27:24.400
+ It becomes a part of who they are. It becomes necessary for their sense of self and well being.
+
+1:27:24.400 --> 1:27:31.120
+ The greatest people, the people I admire the most are the ones that can step away from power,
+
+1:27:31.680 --> 1:27:40.240
+ can give it up, can give up the drug, can be satisfied, can be stronger even by walking away
+
+1:27:40.240 --> 1:27:46.720
+ from continued power when they had the option to continue. So with a person like Putin,
+
+1:27:47.360 --> 1:27:51.840
+ once again, I don't know him personally, so I have no basis to judge this.
+
+1:27:51.840 --> 1:27:59.680
+ This is a general statement observable with many people and in historical terms. With a
+
+1:27:59.680 --> 1:28:06.080
+ person like Putin who's exercised this much power for this long, it's something that becomes a part
+
+1:28:06.080 --> 1:28:12.800
+ of who you are and you have a hard time imagining yourself without it. You begin to conflate your
+
+1:28:12.800 --> 1:28:18.720
+ personal power with the well being of the nation. You begin to think that the more power you have,
+
+1:28:18.720 --> 1:28:28.080
+ the better off the country is this conflation. You begin to be able to not imagine. You can no
+
+1:28:28.080 --> 1:28:33.520
+ longer imagine what it would be like just to be an ordinary citizen or an ordinary person running
+
+1:28:33.520 --> 1:28:42.880
+ a company even, something much smaller than a country. So I anticipate that, without knowing
+
+1:28:42.880 --> 1:28:49.840
+ for sure, that he would be in that category of person. But you'd want to explore that with
+
+1:28:49.840 --> 1:28:57.680
+ questions with him about, so what's his day look like from beginning to end? Just take me through
+
+1:28:57.680 --> 1:29:03.200
+ a typical day of yours. What do you do in a day? How does it start? What are the ups? What are the
+
+1:29:03.200 --> 1:29:08.000
+ downs? What are the parts of the day you look forward to the most? What are the parts of the
+
+1:29:08.000 --> 1:29:14.800
+ day you don't look forward to that much? What do you consider a good day? What do you consider a bad
+
+1:29:14.800 --> 1:29:22.480
+ day? How do you know that what you're doing is having the effects that you intend? How do you
+
+1:29:22.480 --> 1:29:28.160
+ follow up? How do you gather the information, the reaction? How do you get people to tell you to
+
+1:29:28.160 --> 1:29:34.560
+ your face things that they know are uncomfortable or that you might not want to hear? Those kind
+
+1:29:34.560 --> 1:29:40.000
+ of questions. And through that window, through that kind of question, you get a window into a man
+
+1:29:40.000 --> 1:29:47.920
+ with power. So let me ask about Stalin because you've done more research. Is it another amazing
+
+1:29:47.920 --> 1:29:57.600
+ interview you've had? The introduction was that you know more about Stalin than Stalin himself.
+
+1:29:57.600 --> 1:30:03.280
+ You've done incredible amount of research on Stalin. So if you could talk to him, get sort of direct
+
+1:30:03.280 --> 1:30:10.480
+ research. What questions did you ask of Stalin? I have so many questions. I don't even know where
+
+1:30:10.480 --> 1:30:17.360
+ I would begin. The thing about studying a person like Stalin, who's an immense creature, right?
+
+1:30:18.000 --> 1:30:24.640
+ He's exercising the power of life and death over hundreds of millions of people. He's making decisions
+
+1:30:24.640 --> 1:30:34.160
+ about novels and films and turbines and submarines and packs with Hitler or deals with Churchill and
+
+1:30:34.160 --> 1:30:42.560
+ Roosevelt and occupation of Mongolia or occupation of North Korea. He's making phenomenally
+
+1:30:43.360 --> 1:30:52.320
+ consequential decisions over all spheres of life, all areas of endeavor and over much of the globe,
+
+1:30:52.320 --> 1:31:02.720
+ much of the land mass of the earth. And so what's that like? Does he sometimes reflect on the amount
+
+1:31:02.720 --> 1:31:10.160
+ of power and responsibility he has that he can exercise? Does he sometimes think about what it
+
+1:31:10.160 --> 1:31:16.960
+ means that a single person has that kind of power? And does it have an effect on his relations with
+
+1:31:16.960 --> 1:31:23.760
+ others, his sense of self, the kinds of things he values in life? Does he sometimes think it's
+
+1:31:23.760 --> 1:31:29.920
+ a mistake that he's accumulated this much power? Does he sometimes wish he had a simpler life?
+
+1:31:30.640 --> 1:31:41.120
+ Or is he once again so drunk, so enamored, so caught up with chemically and spiritually
+
+1:31:41.120 --> 1:31:47.200
+ with exercising this kind of power that he couldn't live without it? And then what were you thinking,
+
+1:31:47.200 --> 1:31:53.840
+ I would ask him, in certain decisions that he made? What were you thinking on certain dates and
+
+1:31:53.840 --> 1:31:58.160
+ certain circumstances where you made a decision and could have made a different decision?
+
+1:31:58.880 --> 1:32:05.840
+ Can you recall your thought processes? Can you bring the decision back? Was it seat of the pants?
+
+1:32:05.840 --> 1:32:11.600
+ Was it something you'd been planning? Did you just improvise or did you have a strategy?
+
+1:32:12.480 --> 1:32:18.800
+ What were you guided by? Whose examples did you look to when you picked up these books that you
+
+1:32:18.800 --> 1:32:23.520
+ read and you read the books and you made pencil marks in them? Is it because you absorbed the
+
+1:32:23.520 --> 1:32:28.960
+ lesson there? Or did it really not become a permanent lesson and it was just something that
+
+1:32:28.960 --> 1:32:36.880
+ you checked and it was like a reflex? So I have many specific questions about many specific events
+
+1:32:36.880 --> 1:32:45.680
+ and people and circumstances that I have tried to figure out with the surviving source materials
+
+1:32:45.680 --> 1:32:53.040
+ that we have in abundance, but I would still like to delve into his mindset and reconstruct his mind.
+
+1:32:53.040 --> 1:32:59.040
+ The closer you get to Stalin in some ways, the more elusive he can become.
+
+1:33:00.640 --> 1:33:05.280
+ And especially around World War II, you've already illuminated a lot of interesting
+
+1:33:05.280 --> 1:33:11.040
+ aspects about Stalin's role in the war, but it would be interesting to ask even more questions
+
+1:33:11.040 --> 1:33:16.320
+ about how seat of the pants or deliberate some of the decisions have been. If I could ask just
+
+1:33:16.320 --> 1:33:24.320
+ one quick question, one last quick question, and you're constrained in time in answering it,
+
+1:33:25.040 --> 1:33:30.000
+ do you think there will always be evil in the world? Do you think there will always be war?
+
+1:33:31.520 --> 1:33:38.960
+ Unfortunately, yes. There are conflicting interests, conflicting goals that people have.
+
+1:33:38.960 --> 1:33:46.080
+ Most of the time, those conflicts can be resolved peacefully. That's why we build strong institutions
+
+1:33:46.080 --> 1:33:55.920
+ to resolve different interests and conflicts peacefully. But the fact, the enduring fact
+
+1:33:55.920 --> 1:34:05.680
+ of conflicting interests and conflicting desires, that can never be changed. So the job that we have
+
+1:34:05.680 --> 1:34:17.920
+ for humanity's sake is to make those conflicting interests, those conflicting desires, to put
+
+1:34:17.920 --> 1:34:25.760
+ them in a context where they can be resolved peacefully and not in a zero sum fashion. So we
+
+1:34:25.760 --> 1:34:34.320
+ can't get there on the global scale. So there's always going to be the kind of conflict that
+
+1:34:34.320 --> 1:34:43.840
+ sometimes gets violent. What we don't want is a conflict among the strongest powers. Great power
+
+1:34:43.840 --> 1:34:53.120
+ conflict is unbelievably bad. There are no words to describe it. At least 55 million people died
+
+1:34:53.120 --> 1:35:00.880
+ in World War II. If we have a World War III, a war between the United States and China or whatever
+
+1:35:00.880 --> 1:35:11.440
+ it might be, who knows what the number could be? 155 million, 255 million, 555 million.
+
+1:35:11.440 --> 1:35:18.400
+ I don't even want to think about it. And so it's horrible when wars break out in the humanitarian
+
+1:35:18.400 --> 1:35:25.200
+ catastrophes. For example, Yemen and Syria and several other places I could name today.
+
+1:35:25.200 --> 1:35:31.120
+ It's just horrible what you see there. And the scale is colossal for those places,
+
+1:35:31.760 --> 1:35:39.520
+ but it's not planetary scale. And so avoiding planetary scale destruction is really important
+
+1:35:39.520 --> 1:35:50.400
+ for us. And so having those different interests be somehow managed in a way that no one sees
+
+1:35:50.400 --> 1:35:57.280
+ advantage in a violent resolution. And a part of that is remembering history. So they should read
+
+1:35:57.280 --> 1:36:01.760
+ your books. Stephen, thank you so much. It was a huge honor talking to you today. I really enjoyed
+
+1:36:01.760 --> 1:36:06.960
+ it. Thank you for the opportunity. My pleasure. Thanks for listening to this conversation with
+
+1:36:06.960 --> 1:36:12.560
+ Stephen Kotkin. And thank you to our presenting sponsor, Cash App. Download it and use code
+
+1:36:12.560 --> 1:36:18.800
+ Lex Podcast. You'll get $10 and $10 will go to first. A STEM education nonprofit that
+
+1:36:18.800 --> 1:36:24.000
+ inspires hundreds of thousands of young minds to become future leaders and innovators. If you
+
+1:36:24.000 --> 1:36:28.960
+ enjoy this podcast, subscribe on YouTube, give it five stars on Apple Podcasts, support it on
+
+1:36:28.960 --> 1:36:35.280
+ Patreon or connect with me on Twitter. And now let me leave you with words from Joseph Stalin,
+
+1:36:35.840 --> 1:36:40.320
+ spoken shortly before the death of Lenin and at the beginning of Stalin's rise to power.
+
+1:36:40.320 --> 1:37:01.360
+ First in Russian. I consider it completely unimportant who in the party will vote or how.
+
+1:37:01.360 --> 1:37:08.000
+ But what is extraordinarily important is who will count the votes and how.
+
+1:37:08.000 --> 1:37:12.640
+ Thank you for listening and hope to see you next time.
+

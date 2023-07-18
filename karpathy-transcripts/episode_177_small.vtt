@@ -1,0 +1,3863 @@
+WEBVTT
+
+00:00.000 --> 00:04.000
+ The following is a conversation with Risto McAlinen, a computer scientist at
+
+00:04.000 --> 00:08.960
+ the University of Texas at Austin, and Associate Vice President of Evolutionary
+
+00:08.960 --> 00:10.960
+ Artificial Intelligence at Cognizant.
+
+00:11.480 --> 00:16.400
+ He specializes in evolutionary computation, but also many other topics in
+
+00:16.400 --> 00:19.720
+ artificial intelligence, cognitive science, and neuroscience.
+
+00:19.920 --> 00:24.240
+ Quick mention of our sponsors, Jordan Harbin's show, Grammarly,
+
+00:24.480 --> 00:26.240
+ Bell Campo, and Indeed.
+
+00:26.240 --> 00:29.680
+ Check them out in the description to support this podcast.
+
+00:30.480 --> 00:34.560
+ As a side note, let me say that nature inspired algorithms from end
+
+00:34.560 --> 00:38.760
+ colony optimization to genetic algorithms to cellular automata to neural
+
+00:38.760 --> 00:43.000
+ networks have always captivated my imagination, not only for their
+
+00:43.000 --> 00:47.040
+ surprising power in the face of long odds, but because they always opened
+
+00:47.040 --> 00:49.960
+ up doors to new ways of thinking about computation.
+
+00:50.640 --> 00:55.080
+ It does seem that in the long arc of computing history, running toward
+
+00:55.080 --> 00:59.640
+ biology, not running away from it is what leads to long term progress.
+
+01:00.400 --> 01:03.000
+ This is the Lex Friedman podcast.
+
+01:03.200 --> 01:06.600
+ And here is my conversation with Risto McAlinen.
+
+01:07.720 --> 01:12.880
+ If we ran the Earth experiment, this fun little experiment we're on over
+
+01:12.880 --> 01:17.240
+ and over and over and over a million times and watch the evolution of life as
+
+01:17.240 --> 01:22.080
+ it pans out, how much variation in the outcomes of that evolution do you
+
+01:22.080 --> 01:22.880
+ think we would see?
+
+01:22.880 --> 01:26.960
+ Now, we should say that you are a computer scientist.
+
+01:27.080 --> 01:31.480
+ That's actually not such a bad question for computer scientists, because we
+
+01:31.480 --> 01:35.360
+ are building simulations of these things and we are simulating evolution.
+
+01:35.880 --> 01:38.800
+ And that's a difficult question to answer in biology, but we can build
+
+01:38.800 --> 01:43.200
+ a computational model and run it million times and actually answer that question.
+
+01:43.200 --> 01:45.840
+ How much variation do we see when we simulate it?
+
+01:46.600 --> 01:50.320
+ And, you know, that's a little bit beyond what we can do today.
+
+01:50.320 --> 01:55.240
+ But I think that we will see some regularities and it took evolution also
+
+01:55.240 --> 02:00.000
+ a really long time to get started and then things accelerated really fast
+
+02:00.400 --> 02:01.200
+ towards the end.
+
+02:01.840 --> 02:05.160
+ But there are things that need to be discovered and they probably will be
+
+02:05.200 --> 02:13.720
+ over and over again, like manipulation of objects, opposable thumbs, and also
+
+02:13.880 --> 02:15.240
+ some way to communicate.
+
+02:15.680 --> 02:18.960
+ Maybe you're only like, well, you have speech, might be some other kind of
+
+02:18.960 --> 02:23.160
+ sounds, and decision making, but also vision.
+
+02:23.720 --> 02:25.480
+ Eye has evolved many times.
+
+02:25.760 --> 02:27.480
+ Various vision systems have evolved.
+
+02:27.800 --> 02:32.440
+ So we would see those kinds of solutions, I believe, emerge over and over again.
+
+02:32.560 --> 02:35.400
+ They may look a little different, but they get the job done.
+
+02:35.960 --> 02:38.600
+ The really interesting question is, would we have primates?
+
+02:38.640 --> 02:42.200
+ Would we have humans or something that resembles humans?
+
+02:42.880 --> 02:46.160
+ And would that be an apex of evolution after a while?
+
+02:46.680 --> 02:48.080
+ We don't know where we're going from here.
+
+02:48.080 --> 02:53.560
+ But we certainly see a lot of tool use and building, constructing our environment.
+
+02:53.560 --> 02:55.440
+ So I think that we will get that.
+
+02:55.800 --> 03:00.880
+ We get some evolution producing some agents that can do that, manipulate
+
+03:00.880 --> 03:01.880
+ the environment and build.
+
+03:02.000 --> 03:03.600
+ What do you think is special about humans?
+
+03:03.600 --> 03:08.400
+ Like if you are running the simulation and you observe humans emerge, like
+
+03:08.400 --> 03:11.000
+ these like tool makers, they start a fire and all those stuff start running
+
+03:11.000 --> 03:13.400
+ around, building buildings and then running for president and all those
+
+03:13.400 --> 03:14.160
+ kinds of things.
+
+03:14.160 --> 03:17.280
+ Uh, what would be, how would you detect that?
+
+03:17.840 --> 03:21.640
+ Cause you're like really busy as the creator of this evolutionary system.
+
+03:21.960 --> 03:26.880
+ So you don't have much time to observe, like detect if any cool stuff came up.
+
+03:26.920 --> 03:27.440
+ Right.
+
+03:27.680 --> 03:29.400
+ How would you detect humans?
+
+03:30.000 --> 03:32.000
+ Well, you are running the simulation.
+
+03:32.000 --> 03:38.360
+ So, uh, you also put in visualization and measurement techniques there.
+
+03:38.360 --> 03:44.360
+ So if you are looking for certain things like communication, uh, you'll have
+
+03:44.360 --> 03:48.160
+ detectors to find out whether that's happening, even if it's a lot simulation.
+
+03:48.760 --> 03:52.000
+ Uh, and I think that that's, that's what, uh, what we would do.
+
+03:52.040 --> 03:57.120
+ Uh, we know roughly what we want, intelligent agents that communicate,
+
+03:57.120 --> 04:02.720
+ cooperate, manipulate, um, and we would build detections and visualizations
+
+04:02.720 --> 04:03.720
+ of those processes.
+
+04:04.240 --> 04:04.520
+ Yeah.
+
+04:04.520 --> 04:09.320
+ It, and there's a lot of, we'd have to run it many times and we have plenty
+
+04:09.320 --> 04:14.240
+ of time to figure out how we detect the interesting things, but also, I think
+
+04:14.240 --> 04:18.720
+ we do have to run it many times because we don't quite know what shape
+
+04:18.720 --> 04:22.280
+ those will take and our detectors may not be perfect for them.
+
+04:22.520 --> 04:23.120
+ Uh, the beginning.
+
+04:23.160 --> 04:27.760
+ Well, that seems really difficult to build the detector of intelligent or
+
+04:27.760 --> 04:34.040
+ intelligent convert communication, sort of, uh, if we take a lot of
+
+04:34.040 --> 04:38.800
+ if we take an alien perspective, observing earth, are you sure that they
+
+04:38.800 --> 04:41.200
+ would be able to detect humans as the special thing?
+
+04:41.280 --> 04:43.400
+ Wouldn't they be already curious about other things?
+
+04:43.720 --> 04:49.520
+ There's way more insects by body mass, I think, than humans by far, uh, and
+
+04:49.520 --> 04:54.280
+ colonies, obviously dolphins is the most intelligent, uh, creature on earth.
+
+04:54.400 --> 04:55.160
+ We all know this.
+
+04:55.160 --> 04:57.560
+ So it could be the dolphins that they detect.
+
+04:58.320 --> 05:00.520
+ It could be the rockets that we seem to be launching.
+
+05:00.800 --> 05:02.760
+ That could be the intelligent creature they detect.
+
+05:02.760 --> 05:07.320
+ Uh, it could be some other, uh, trees, trees have been here a long time.
+
+05:07.320 --> 05:12.040
+ I just learned that sharks have been here 400 million years and that's
+
+05:12.040 --> 05:13.920
+ longer than trees have been here.
+
+05:14.280 --> 05:16.600
+ So maybe it's the sharks that go by age.
+
+05:16.640 --> 05:18.120
+ Like there's a persistent thing.
+
+05:18.280 --> 05:21.680
+ Like if you survive long enough, especially through the mass extinctions,
+
+05:21.680 --> 05:24.600
+ that could be the thing your detector is detecting.
+
+05:24.760 --> 05:28.960
+ Humans have been here for a short time and we're just creating a lot of
+
+05:28.960 --> 05:31.280
+ pollution, but so is the other creatures.
+
+05:31.280 --> 05:35.120
+ So I don't know, do you think you'd be able to detect humans?
+
+05:35.120 --> 05:38.480
+ Like how would you go about detecting in the computational sense?
+
+05:38.480 --> 05:42.560
+ Maybe we can leave humans behind in the computational sense, detect interesting.
+
+05:43.200 --> 05:47.760
+ Things, uh, do you basically have to have a strict objective
+
+05:47.760 --> 05:52.120
+ function by which you measure the performance of a system or can you find
+
+05:52.120 --> 05:54.360
+ curiosities and interesting things?
+
+05:54.800 --> 05:55.160
+ Yeah.
+
+05:55.160 --> 06:00.960
+ Well, I think that the first, um, measurement would be to detect how
+
+06:00.960 --> 06:03.400
+ how much of an effect you can have in your environment.
+
+06:03.400 --> 06:08.080
+ So if you look at, look around, we have cities and that is constructed
+
+06:08.080 --> 06:10.400
+ environments and that's where a lot of people live.
+
+06:10.400 --> 06:11.240
+ Most people live.
+
+06:11.720 --> 06:16.880
+ So that would be a good sign of intelligence that you, uh, don't just
+
+06:16.880 --> 06:19.200
+ live in an environment, but you construct it to your liking.
+
+06:19.400 --> 06:19.680
+ Yeah.
+
+06:19.800 --> 06:21.440
+ And that's something pretty unique.
+
+06:21.560 --> 06:24.480
+ I mean, there are certainly birds built nest and all, but they don't
+
+06:24.480 --> 06:25.240
+ build quite cities.
+
+06:25.240 --> 06:28.280
+ Termites build, uh, mounds and hives and things like that.
+
+06:28.280 --> 06:31.880
+ Uh, but the complexity of the human, uh, construction cities, I think
+
+06:31.880 --> 06:34.440
+ would stand out even to an external observer.
+
+06:34.440 --> 06:36.160
+ Of course, that's what a human would say.
+
+06:37.680 --> 06:38.000
+ Yeah.
+
+06:38.000 --> 06:41.640
+ And you know, you can certainly say that sharks are really smart because
+
+06:41.640 --> 06:44.440
+ they've been around so long and they haven't destroyed their environment,
+
+06:44.600 --> 06:47.360
+ which humans are about to do, which is not a very smart thing.
+
+06:47.960 --> 06:49.400
+ Uh, but we'll get over it.
+
+06:49.400 --> 06:54.800
+ I'm, I believe, uh, and, and we can get over it by doing some construction
+
+06:54.800 --> 06:57.560
+ that actually has been nine, uh, and maybe even enhances.
+
+06:57.560 --> 07:01.440
+ Uh, the, um, resilience of, of nature.
+
+07:01.800 --> 07:05.840
+ So you mentioned the, the simulation that we run over and over my start.
+
+07:06.120 --> 07:07.640
+ Slow, it's a slow start.
+
+07:08.200 --> 07:12.360
+ So do you think, uh, how unlikely, first of all, I don't know if you
+
+07:12.360 --> 07:17.760
+ think about this kind of stuff, but how unlikely is step number zero, which
+
+07:17.760 --> 07:21.680
+ is the springing up like the origin of life on earth.
+
+07:21.680 --> 07:28.920
+ And second, how unlikely is the, um, anything interesting happening beyond
+
+07:28.920 --> 07:34.680
+ that sort of like the start that, that, that creates all the rich complexity
+
+07:34.680 --> 07:35.800
+ that we see on earth today.
+
+07:35.840 --> 07:36.200
+ Yeah.
+
+07:36.480 --> 07:41.200
+ There are people who are working on exactly that problem, uh, from primordial
+
+07:41.200 --> 07:44.520
+ soup, how do you actually get self replicating molecules?
+
+07:45.040 --> 07:50.200
+ And they are very close, uh, with a little bit of help, you can make that happen.
+
+07:50.200 --> 07:55.680
+ Um, so we, of course, we know what we want so they can set up the conditions
+
+07:55.680 --> 08:00.280
+ and try out conditions that are conducive to that, uh, for evolution to
+
+08:00.280 --> 08:05.200
+ discover that took a long time for us to recreate it, probably won't take that
+
+08:05.200 --> 08:05.720
+ long.
+
+08:06.120 --> 08:11.040
+ Uh, and the next steps from there, um, I think also with some
+
+08:11.040 --> 08:13.040
+ hand holding, I think we can make that happen.
+
+08:13.600 --> 08:15.960
+ Um, but it was evolution.
+
+08:15.960 --> 08:20.120
+ What was really fascinating was eventually the, uh, the, uh, the
+
+08:20.120 --> 08:25.120
+ runaway evolution of the brain that created humans and create, well, also
+
+08:25.600 --> 08:29.080
+ other higher animals, that that was something that happened really fast.
+
+08:29.240 --> 08:31.680
+ Uh, and that's a big question.
+
+08:32.280 --> 08:33.600
+ Is that something replicable?
+
+08:33.600 --> 08:35.680
+ It says something that can happen.
+
+08:35.680 --> 08:37.960
+ And if it happens, does it go in the same direction?
+
+08:38.480 --> 08:40.640
+ Um, that is a big question to ask.
+
+08:40.640 --> 08:46.960
+ Even in computational terms, I think that it's relatively possible to, uh, come
+
+08:46.960 --> 08:50.200
+ up, create an experiment where we look at the primordial soup and the first
+
+08:50.200 --> 08:54.200
+ couple of steps of multicellular organisms, even, uh, but to get something
+
+08:54.200 --> 08:59.200
+ as complex as the brain, um, we don't quite know the conditions for that.
+
+08:59.320 --> 09:02.400
+ Uh, and how do you even get started on whether we can get this kind of
+
+09:02.400 --> 09:03.760
+ runaway evolution happening?
+
+09:05.760 --> 09:11.160
+ From a detective perspective, if we're observing this evolution, what
+
+09:11.160 --> 09:12.240
+ do you think is the brain?
+
+09:12.280 --> 09:15.200
+ What do you think is the, let's say, what is intelligence?
+
+09:15.200 --> 09:19.280
+ So in terms of the thing that makes humans special, we seem to be able to reason.
+
+09:20.400 --> 09:25.440
+ We seem to be able to communicate, but the core of that is this something in
+
+09:25.440 --> 09:28.680
+ the broad, broad category we might call intelligence.
+
+09:28.920 --> 09:35.280
+ So as, uh, if you put your computer scientist hat on, uh, is there favorite
+
+09:35.280 --> 09:39.040
+ ways you'd like to think about that question of what is intelligence?
+
+09:39.040 --> 09:46.720
+ Well, my goal is to create agents that are, that are intelligent, not to define.
+
+09:46.720 --> 09:50.200
+ What, and that, that is a bait of defining it.
+
+09:50.200 --> 09:58.400
+ And that means that it's some kind of an, um, object or, or a program, um, that
+
+09:58.400 --> 10:05.320
+ has limited sensory and, uh, effective capabilities interacting with the world.
+
+10:05.320 --> 10:08.560
+ And then also a mechanism for making decisions.
+
+10:09.040 --> 10:12.960
+ So with limited abilities like that, can it survive?
+
+10:13.960 --> 10:17.720
+ Um, survival is the simplest goal, but it could, you could also give it other goals.
+
+10:17.720 --> 10:18.640
+ Can it multiply?
+
+10:18.640 --> 10:20.720
+ Can it solve problems that you give it?
+
+10:21.240 --> 10:24.400
+ And that is quite a bit less than human intelligence.
+
+10:24.400 --> 10:27.800
+ There are animals would be intelligent, of course, with that definition.
+
+10:28.240 --> 10:31.840
+ And you might have, uh, even, even some other forms of, of life, even.
+
+10:31.840 --> 10:38.320
+ So what, uh, so intelligence in that sense is, is a survival, um, skill, uh, given
+
+10:38.320 --> 10:42.560
+ resources that you have and using, using your resources so that you will stay around.
+
+10:44.560 --> 10:49.040
+ So do you think death mortality is fundamental to an agent?
+
+10:49.560 --> 10:51.600
+ So like there's, uh, I don't know if you're familiar.
+
+10:51.600 --> 10:57.280
+ There's a philosopher named Ernest Becker who wrote the denial of death and, uh, his
+
+10:57.280 --> 11:01.640
+ whole idea, and there's folks, psychologists, cognitive scientists that work on
+
+11:01.640 --> 11:07.000
+ terror management theory, and they think that one of the special things about humans is
+
+11:07.000 --> 11:10.760
+ that we're able to sort of foresee our death, right?
+
+11:10.760 --> 11:15.400
+ We can, we can realize not just as animals do sort of constantly fear in an
+
+11:15.400 --> 11:18.840
+ instinctual sense, respond to all the dangers that are out there, but like
+
+11:18.840 --> 11:21.080
+ understand that this ride ends eventually.
+
+11:21.600 --> 11:25.040
+ And that in itself is the most important thing that we're going to do.
+
+11:25.040 --> 11:30.600
+ And that in itself is the most, is the, is the force behind all of the creative
+
+11:30.600 --> 11:31.840
+ efforts of human nature.
+
+11:31.880 --> 11:32.120
+ Yeah.
+
+11:32.160 --> 11:33.400
+ That's, that's the philosophy.
+
+11:33.520 --> 11:34.400
+ I think that makes sense.
+
+11:34.480 --> 11:35.120
+ A lot of sense.
+
+11:35.120 --> 11:39.440
+ I mean, animals probably don't think of death the same way, but humans know that
+
+11:39.440 --> 11:41.600
+ your time is limited and you want to make it count.
+
+11:42.320 --> 11:46.320
+ Um, and you can make it count in many different ways, but I think that has a
+
+11:46.320 --> 11:50.840
+ lot to do with creativity and the need for humans to do something beyond just
+
+11:50.840 --> 11:51.440
+ surviving.
+
+11:51.440 --> 11:55.640
+ Uh, and now going from that simple definition to something that's the next
+
+11:55.640 --> 11:59.960
+ level, I think that that could be at the second decision, a second level of
+
+11:59.960 --> 12:04.280
+ definition that, um, intelligence means something that you do something that
+
+12:04.280 --> 12:05.040
+ stays behind you.
+
+12:05.040 --> 12:08.200
+ That's more than, uh, your, uh, existence.
+
+12:08.240 --> 12:12.600
+ Um, something you create something that, um, is useful for others is useful in
+
+12:12.600 --> 12:14.600
+ the future, not just for yourself.
+
+12:14.960 --> 12:19.080
+ And I think that that's a nice definition of intelligence in a next level.
+
+12:19.080 --> 12:23.120
+ Uh, and it's also nice because it doesn't require that they are humans or
+
+12:23.120 --> 12:27.480
+ biological, they could be artificial agents that I tell you this, they could,
+
+12:27.480 --> 12:28.840
+ they could achieve those kinds of goals.
+
+12:28.880 --> 12:34.560
+ So particular agent, the, uh, the ripple effects of, of their existence on
+
+12:34.560 --> 12:37.240
+ the entirety of the system is significant.
+
+12:37.240 --> 12:41.680
+ So like they leave a trace where there's like, uh, yeah, like ripple effects.
+
+12:41.680 --> 12:45.560
+ It's the, but see, then you go back to the, the butterfly with the flap of a
+
+12:45.560 --> 12:50.840
+ wing and then you can trace a lot of, uh, like nuclear wars and all the conflicts
+
+12:50.840 --> 12:54.840
+ of human history, somehow connected to that one butterfly that created all the,
+
+12:54.840 --> 12:55.560
+ the chaos.
+
+12:55.560 --> 13:01.640
+ So maybe that's not, maybe that's a very poetic way to think, uh, that's
+
+13:01.640 --> 13:08.280
+ something we humans in a human centric way want to hope we have this impact.
+
+13:08.320 --> 13:11.440
+ Like that is the, the, the secondary effect of our intelligence.
+
+13:11.440 --> 13:14.840
+ We've had the long lasting impact on the world, but maybe the entire
+
+13:14.840 --> 13:22.120
+ the entirety of physics in the universe has a very long lasting effect.
+
+13:22.680 --> 13:23.040
+ Sure.
+
+13:23.040 --> 13:28.160
+ But, um, you can also think of it, what if, um, like the wonderful life,
+
+13:28.160 --> 13:29.400
+ what if you're not here?
+
+13:29.960 --> 13:31.320
+ Well, somebody else do this.
+
+13:31.360 --> 13:35.200
+ Uh, is it, is it something that you actually contributed because you had
+
+13:35.200 --> 13:37.440
+ something unique to compute that contribute?
+
+13:37.440 --> 13:39.200
+ That's a pretty high bar though.
+
+13:39.440 --> 13:40.200
+ Uniqueness.
+
+13:40.200 --> 13:40.680
+ Yeah.
+
+13:40.680 --> 13:45.640
+ So, you know, you have to be Mozart or something to, to actually reach that
+
+13:45.640 --> 13:49.480
+ level that nobody would have developed that, but other people might have
+
+13:49.480 --> 13:52.840
+ solved this equation, um, if you didn't do it.
+
+13:53.280 --> 13:56.000
+ Um, but, but also within limited scope.
+
+13:56.000 --> 14:01.120
+ I mean, during your lifetime or next year, um, you could contribute
+
+14:01.120 --> 14:04.280
+ something that unique that other people did not see.
+
+14:04.280 --> 14:10.160
+ And, um, and then that could change the way things move forward for a while.
+
+14:10.800 --> 14:15.120
+ Uh, so I don't think we have to be more charged to be called intelligence,
+
+14:15.120 --> 14:17.880
+ but we have this local effect that is changing.
+
+14:17.880 --> 14:19.920
+ If you weren't there, that would not have happened.
+
+14:19.920 --> 14:20.920
+ And it's a positive effect.
+
+14:20.920 --> 14:22.760
+ Of course, you want it to be a positive effect.
+
+14:23.000 --> 14:28.160
+ Do you think it's possible to engineer in to, uh, computational agents,
+
+14:28.200 --> 14:29.400
+ a fear of mortality?
+
+14:29.400 --> 14:34.080
+ Like, uh, does that make any sense?
+
+14:34.080 --> 14:37.560
+ So there's a very trivial thing where it's like, you could just code
+
+14:37.560 --> 14:44.280
+ in a parameter, which is how long the life ends, but more of a fear of mortality.
+
+14:44.520 --> 14:50.520
+ Like awareness of the way that things end and somehow encoding a complex
+
+14:50.520 --> 14:56.000
+ representation of that fear, which is like, maybe as it gets closer, you
+
+14:56.000 --> 14:57.200
+ become more terrified.
+
+14:57.200 --> 15:01.120
+ I mean, there seems to be something really profound about this fear that's
+
+15:01.120 --> 15:05.440
+ not currently encodable in a trivial way into our programs.
+
+15:06.480 --> 15:10.880
+ Well, I think you're, you're referring to the emotion of fear, something
+
+15:10.920 --> 15:15.040
+ because we are cognitively, we know that we have limited lifespan and most
+
+15:15.040 --> 15:17.960
+ of us cope with it by just, Hey, that's what the world is like.
+
+15:17.960 --> 15:22.920
+ And I make the most of it, but sometimes you can have a, like a, uh, a fear
+
+15:22.920 --> 15:27.360
+ that's not healthy, uh, that, that paralyzes you, that you can't do anything.
+
+15:27.600 --> 15:31.920
+ Uh, and, and, uh, somewhere in between, they're not caring at all.
+
+15:31.920 --> 15:36.120
+ And, and, and getting paralyzed because of fear is a normal response, which
+
+15:36.120 --> 15:39.680
+ is a little bit more than just logic and, and it's a emotion.
+
+15:40.120 --> 15:42.360
+ So now the question is what good are emotions?
+
+15:42.360 --> 15:46.120
+ I mean, they are quite, uh, complex and there are multiple dimensions of
+
+15:46.120 --> 15:51.120
+ emotions and they probably do serve as a survival function.
+
+15:51.120 --> 15:56.040
+ Uh, heightened focus, for instance, uh, and fear of death might be a really
+
+15:56.040 --> 16:01.040
+ good emotion when you are in danger, that you recognize it, even, even if it's
+
+16:01.040 --> 16:05.600
+ not logically necessarily easy to derive and you don't have time for that
+
+16:05.600 --> 16:09.600
+ logical deduction, uh, deduction, you may be able to recognize the situation
+
+16:09.600 --> 16:13.920
+ is dangerous and this fear kicks in and you all of a sudden perceive the
+
+16:13.920 --> 16:15.960
+ facts that are important for that.
+
+16:16.200 --> 16:18.400
+ And I think that's generally is the role of emotions.
+
+16:18.400 --> 16:22.320
+ It's, it's, it allows you to focus what's relevant, uh, for your situation.
+
+16:22.320 --> 16:26.400
+ And maybe if fear of death plays the same kind of role, uh, but if it consumes
+
+16:26.400 --> 16:29.920
+ you and it's something that you think in normal life, when you don't have to,
+
+16:29.920 --> 16:32.240
+ then it's not healthy and then it's not productive.
+
+16:32.480 --> 16:38.160
+ Yeah, but it's fascinating to think how to, uh, incorporate emotion into a
+
+16:38.160 --> 16:39.360
+ computational agent.
+
+16:39.760 --> 16:45.600
+ It almost seems like a silly statement to make, but, um, it perhaps seems silly
+
+16:45.600 --> 16:49.840
+ because we have such a poor understanding of the mechanism of, uh, emotion,
+
+16:49.840 --> 16:57.040
+ of fear, of, uh, I think at the core of it is another word that we'd known
+
+16:57.040 --> 17:00.480
+ nothing about, but say a lot, which is consciousness.
+
+17:00.480 --> 17:07.840
+ Um, do you ever in your work or like maybe on a coffee break, think about what the
+
+17:07.840 --> 17:11.360
+ heck is this thing, consciousness, and is it at all useful in our thinking
+
+17:11.360 --> 17:12.560
+ about AI systems?
+
+17:12.880 --> 17:13.360
+ Yes.
+
+17:13.360 --> 17:15.600
+ It is an important question.
+
+17:15.600 --> 17:22.080
+ Um, you can build representations and functions, I think, into these agents that
+
+17:22.080 --> 17:26.000
+ act like emotions and consciousness, perhaps.
+
+17:26.000 --> 17:30.400
+ So I mentioned, uh, emotions being something that allow you to focus and
+
+17:30.400 --> 17:32.800
+ pay attention, filter out what's important.
+
+17:32.800 --> 17:37.040
+ Yeah, you can have that kind of a filter mechanism, uh, and you can, it puts you
+
+17:37.040 --> 17:37.920
+ in a different state.
+
+17:37.920 --> 17:39.600
+ Your computation is in a different state.
+
+17:39.600 --> 17:41.760
+ Certain things don't really get through it.
+
+17:41.760 --> 17:43.520
+ And others are heightened.
+
+17:43.520 --> 17:46.080
+ Uh, now you label that box emotion.
+
+17:46.080 --> 17:49.440
+ I don't know if that means it's an emotion, but it acts very much like we
+
+17:49.440 --> 17:51.200
+ understand what emotions are.
+
+17:51.200 --> 17:56.720
+ Uh, and we actually did some work like that, um, modeling hyenas, uh, who were
+
+17:56.720 --> 18:01.120
+ trying to steal a kill from lions, uh, which happens in Africa.
+
+18:01.120 --> 18:05.680
+ I mean, hyenas are quite intelligent, but not really intelligent.
+
+18:05.680 --> 18:11.760
+ Uh, and, um, they, they have this behavior that's more complex than anything else they
+
+18:11.760 --> 18:12.240
+ do.
+
+18:12.240 --> 18:15.440
+ They can band together if there's about 30 of them or so.
+
+18:15.440 --> 18:19.680
+ Uh, they can, uh, coordinate their effort so that they push the lions away from a
+
+18:19.680 --> 18:23.920
+ kill, even though the lions are so strong that they could just kill a lion, kill a
+
+18:23.920 --> 18:26.160
+ hyena by, by striking with a paw.
+
+18:26.160 --> 18:29.920
+ Uh, but when they work together and precisely time this attack, the lions
+
+18:29.920 --> 18:31.360
+ will leave and they get the kill.
+
+18:31.360 --> 18:35.440
+ Uh, and probably, uh, you know, I think, uh, you know, I think, you know,
+
+18:35.440 --> 18:41.040
+ probably there are some states like emotions that the hyenas go through.
+
+18:41.040 --> 18:43.840
+ The first day, uh, they call for reinforcements.
+
+18:43.840 --> 18:45.840
+ They really want that kill, but there's not enough of them.
+
+18:45.840 --> 18:50.320
+ So they vocalize and there's more people, more people, more hyenas that come around.
+
+18:50.320 --> 18:52.480
+ Uh, and then they have two emotions.
+
+18:52.480 --> 18:54.080
+ They're very afraid of the lion.
+
+18:54.080 --> 18:59.280
+ Uh, so they want to stay away, but they also have a strong affiliation, uh, between each
+
+18:59.280 --> 18:59.840
+ other.
+
+18:59.840 --> 19:04.240
+ And then this is the balance of the two emotions and, and also, yes, they also want
+
+19:04.240 --> 19:06.960
+ kill, so it's both repelled and attractive.
+
+19:06.960 --> 19:11.360
+ And then, but then this affiliation eventually is so strong that when they move,
+
+19:11.360 --> 19:15.360
+ they move together, they act as a unit and they, they can, uh, perform that function.
+
+19:15.360 --> 19:20.720
+ So there's an interesting behavior that seems to depend on these emotions
+
+19:20.720 --> 19:24.160
+ strongly and makes it possible, um, in the actions.
+
+19:24.160 --> 19:30.320
+ And I think a critical aspect of that, the way you're describing is emotion.
+
+19:30.320 --> 19:35.840
+ There's a mechanism of social communication of a social interaction.
+
+19:35.840 --> 19:41.840
+ Maybe that, maybe humans won't even be that intelligent or most things we think of as
+
+19:41.840 --> 19:46.880
+ intelligent wouldn't be that intelligent without the social component of interaction.
+
+19:46.880 --> 19:53.760
+ Maybe much of our intelligence is essentially an outgrowth of social interaction and maybe
+
+19:53.760 --> 19:58.800
+ for the creation of intelligent agents, we have to be creating fundamentally social systems.
+
+19:58.800 --> 20:01.040
+ Yes, I strongly believe that's true.
+
+20:01.040 --> 20:05.360
+ And, uh, yes, the, uh, communication is multifaceted.
+
+20:05.360 --> 20:10.240
+ I mean, they, they vocalize and call for friends, but they also rub against each other
+
+20:10.240 --> 20:14.160
+ and they push and they do all kinds of gestures and so on.
+
+20:14.160 --> 20:15.600
+ So they know and act alone.
+
+20:15.600 --> 20:20.000
+ And I don't think people act alone, uh, very much either, at least normal most of the time.
+
+20:20.560 --> 20:26.720
+ Uh, and social systems are so strong for humans, um, that I think we build everything
+
+20:26.720 --> 20:30.720
+ on top of these kind of structures. And, um, one interesting theory around that,
+
+20:30.720 --> 20:34.560
+ Beacon's theory, for instance, for language, but language origins is that, uh, where did
+
+20:34.560 --> 20:40.720
+ language come from? Uh, and, um, and it's a plausible theory that, uh, first came social
+
+20:40.720 --> 20:44.320
+ systems that, uh, you have different roles in a society.
+
+20:44.320 --> 20:49.520
+ Um, and then those roles are exchangeable that, you know, I scratch your back, you scratch my
+
+20:49.520 --> 20:54.000
+ back, we can exchange roles. And once you have the brain structures that allow you to
+
+20:54.000 --> 20:58.960
+ understand actions in terms of roles that can be changed, that's the basis for language,
+
+20:58.960 --> 21:04.640
+ for grammar. And now you can start using symbols to refer to, uh, objects in the world, uh,
+
+21:04.640 --> 21:06.640
+ and you have this flexible structure.
+
+21:06.640 --> 21:12.320
+ So there's a social structure that's fundamental, fundamental for language to develop.
+
+21:12.320 --> 21:16.160
+ Now, again, then you have language, you can, you can refer to things that are not here
+
+21:16.160 --> 21:21.440
+ right now. Uh, and that allows you to then build all the, all the good stuff about, uh,
+
+21:21.440 --> 21:24.480
+ planning, for instance, and building things and so on.
+
+21:24.480 --> 21:30.400
+ So yeah, I think that very strongly, um, humans are social and that gives us ability, um,
+
+21:31.680 --> 21:36.080
+ to structure the world, but also as a society, we can do so much more because we don't,
+
+21:36.080 --> 21:40.240
+ one person does not have to do everything. You can have different roles and together
+
+21:40.240 --> 21:44.640
+ achieve a lot more. Uh, and that's also something we see in computational simulations today.
+
+21:44.640 --> 21:49.040
+ I mean, we have multi agent systems that can perform tasks. This fascinating, uh,
+
+21:49.040 --> 21:53.360
+ demonstration, Marco Dorego, I think it was, um, these robots, little robots that had to
+
+21:53.360 --> 21:57.520
+ navigate through an environment and there were, there were things that are dangerous,
+
+21:57.520 --> 22:03.440
+ like maybe a, a big chasm or some kind of groove, a hole, and they could not get across it.
+
+22:03.440 --> 22:09.120
+ But if they grab each other with their gripper, they formed a robot that was much longer under
+
+22:09.120 --> 22:15.680
+ the team and this way they could get across that. So this is a great example of how together
+
+22:15.680 --> 22:20.000
+ we can achieve things we couldn't otherwise. Like the hyenas, you know, alone, they couldn't, but
+
+22:20.000 --> 22:23.920
+ as a team, they could. Uh, and I think humans do that all the time. We're really good at that.
+
+22:24.720 --> 22:29.920
+ Yeah. And the way you described the, the system of hyenas, it almost sounds algorithmic. Like
+
+22:29.920 --> 22:35.120
+ the, the problem with humans is they're so complex. It's hard to think of them as algorithms,
+
+22:35.120 --> 22:42.480
+ but with hyenas, there's a, it's simple enough to where it feels like, um, at least hopeful
+
+22:42.480 --> 22:50.160
+ that it's possible to create computational systems that mimic that. Yeah. That's exactly why,
+
+22:50.800 --> 22:55.440
+ why we looked at that. As opposed to humans. Um, like I said, they are intelligent, but they are
+
+22:55.440 --> 23:01.040
+ not quite as intelligent, intelligent as say baboons, which would learn a lot and would be
+
+23:01.040 --> 23:06.400
+ much more flexible. The hyenas are relatively rigid in what they can do. And therefore you could
+
+23:06.400 --> 23:11.760
+ look at this behavior like this is a breakthrough in evolution about to happen. Yes. That they've
+
+23:11.760 --> 23:17.840
+ discovered something about social structures, communication, about cooperation. And, and
+
+23:17.840 --> 23:22.560
+ it might then spill over to other things too. Yeah. In thousands of years in the future.
+
+23:22.560 --> 23:27.680
+ Yeah. I think the problem with baboons and humans is probably too much is going on inside the head
+
+23:27.680 --> 23:31.360
+ where we won't be able to measure it if we're observing the system with hyenas. That's probably
+
+23:32.320 --> 23:38.560
+ easier to observe the actual decision making and the various motivations that are involved.
+
+23:38.560 --> 23:45.360
+ Yeah. They are visible and we can even, um, quantify possibly their emotional state because
+
+23:46.640 --> 23:51.360
+ they leave droppings behind and there are chemicals there that can be associated with, uh,
+
+23:51.360 --> 23:57.600
+ with neurotransmitters and we can separate what emotions they might have, uh, experienced in
+
+23:57.600 --> 24:05.440
+ the last 24 hours. Yeah. What to use the most beautiful speaking of hyenas, uh, what to use
+
+24:05.440 --> 24:11.040
+ the most beautiful, uh, nature inspired algorithm in your work that you've come across something
+
+24:11.040 --> 24:18.160
+ maybe earlier on in your work or maybe today. I think it's evolution. A computation is the most
+
+24:18.160 --> 24:24.960
+ amazing method. So what fascinates me most is that, uh, with computers is that you can,
+
+24:25.760 --> 24:31.120
+ you can get more out than you put in. I mean, you can write a piece of code and your machine
+
+24:31.120 --> 24:36.160
+ does what you told it. I mean, this happened to me in my freshman year. It did something very
+
+24:36.160 --> 24:40.800
+ simple and I was just amazed. I was blown away that it would, it would get the number and it would
+
+24:40.800 --> 24:46.320
+ compute the result and I didn't have to do it myself. Very simple. Uh, but if you push that a
+
+24:46.320 --> 24:52.240
+ little further, you can have machines that learn and they might learn patterns, uh, and already
+
+24:52.240 --> 24:59.120
+ say deep learning neural networks, they can learn to recognize objects, sounds, um, patterns that
+
+24:59.120 --> 25:04.160
+ humans have trouble with. And sometimes they do it better than humans. And that's so fascinating.
+
+25:04.160 --> 25:08.080
+ And now if you take that one more step, you get something like evolution algorithms
+
+25:08.080 --> 25:13.360
+ that discover things, they create things, they come up with solutions that you did not think of.
+
+25:13.360 --> 25:19.680
+ And that just blows me away. It's so great that we can build systems, algorithms that can be in
+
+25:19.680 --> 25:24.720
+ some sense smarter than we are, that they can discover solutions that we might miss. Um,
+
+25:24.720 --> 25:28.800
+ a lot of times it is because we have, as humans, we have certain biases. We expect the solutions
+
+25:28.800 --> 25:33.920
+ to be certain way and you don't put those biases into the algorithm. So they are more free to explore
+
+25:33.920 --> 25:40.240
+ and evolution is just absolutely fantastic explorer. And that's what, what really is fascinating.
+
+25:40.240 --> 25:45.120
+ Yeah. I think, uh, I give me fun of a bit because I currently don't have any kids,
+
+25:45.760 --> 25:52.480
+ but you mentioned programs. I mean, um, do you have kids? Yeah. So maybe you could speak to this,
+
+25:52.480 --> 25:59.360
+ but there's a magic to the creation of creative process. Like I, uh, with spot, the Boston dynamic
+
+25:59.360 --> 26:04.800
+ spot, but really any robot that ever worked on, it just feels like the similar kind of joy I imagine
+
+26:04.800 --> 26:10.080
+ I would have as a father, not the same, perhaps level, but like the same kind of wonderment,
+
+26:10.080 --> 26:18.080
+ like there's exactly this, which is like, you know, what you had to do initially to get this
+
+26:18.080 --> 26:24.400
+ thing going. Let's speak on the computer science side, like what the program looks like. But
+
+26:24.400 --> 26:32.720
+ something about it, uh, doing more than what the program was written on paper is like, that somehow
+
+26:32.720 --> 26:39.120
+ connects to the magic of this entire universe. Like that's, that's like, I feel like I found God
+
+26:39.120 --> 26:45.600
+ every time I like, it's like, uh, because you're, you've really created something that's living.
+
+26:45.600 --> 26:48.640
+ Yeah. Even if it's a simple program. It has the life of its own, has the intelligence of its own.
+
+26:48.640 --> 26:53.600
+ It's beyond what you actually thought. Yeah. And that is, I think it's exactly spot on. That's
+
+26:53.600 --> 27:00.000
+ exactly what it's about. Uh, you created something and has a, uh, ability to, uh, live its life and
+
+27:00.000 --> 27:04.320
+ do good things. And, um, you just gave it a starting point. So in that sense, I think it's,
+
+27:04.320 --> 27:10.320
+ that may be part of the joy actually. Uh, but you mentioned creativity in this context,
+
+27:10.320 --> 27:16.400
+ uh, especially in the context of evolutionary computation. So, you know, we don't often think
+
+27:16.400 --> 27:23.280
+ of algorithms as creative. So how do you think about creativity? Yeah. Algorithms absolutely
+
+27:23.280 --> 27:28.400
+ can be creative. Um, they can, uh, come up with solutions that you don't think about. I mean,
+
+27:28.400 --> 27:32.880
+ creativity can be defined and a couple of requirements have to, has to be new. It has
+
+27:32.880 --> 27:37.680
+ to be useful and it has to be surprising. Uh, and those certainly are true with, uh,
+
+27:37.680 --> 27:44.560
+ say evolution, computation, discovering solutions. Um, so maybe an example, for instance, we did,
+
+27:45.360 --> 27:52.000
+ uh, this collaboration with MIT media lab, Caleb harvest lab, uh, where they had a hydroponic,
+
+27:53.200 --> 27:56.880
+ food computer, they called it environment that was completely computer controlled,
+
+27:56.880 --> 28:04.400
+ nutrients, water, light, uh, temperature, everything is controlled. Now, um, what do you do if you
+
+28:04.400 --> 28:09.280
+ can control everything? Farmers know a lot about how to do, how to make plants grow in their own
+
+28:09.280 --> 28:14.160
+ patch of land, but if you can control everything, it's too much. And it turns out that we don't
+
+28:14.160 --> 28:20.160
+ actually know very much about it. So, uh, we built a system, evolution optimization system, um,
+
+28:20.160 --> 28:27.360
+ together with a surrogate model of how plants grow, uh, and let this system explore recipes
+
+28:27.360 --> 28:34.480
+ on its own. Uh, and initially we were focusing on light, uh, how strong what the wavelengths,
+
+28:34.480 --> 28:40.160
+ how long the light was on. Um, and we put some boundaries, which we thought were reasonable,
+
+28:40.160 --> 28:45.520
+ for instance, that there was, um, at least six hours of darkness like night, because that's
+
+28:45.520 --> 28:51.840
+ what we have in the world. Uh, and very quickly, um, the system evolution, um, pushed all the
+
+28:51.840 --> 28:58.240
+ recipes to that limit. Uh, we were trying to grow basil, um, and, uh, we had initially had some
+
+28:58.240 --> 29:04.160
+ 200, 300 recipes exploration as well as known recipes, but, but now we are going beyond that
+
+29:04.160 --> 29:08.640
+ and everything was like pushed that, that limit. So we look at it and say, well, you know, we can
+
+29:08.640 --> 29:13.680
+ easily just change it. Let's have it your way. And it turns out, uh, the system discovered that
+
+29:13.680 --> 29:20.320
+ basil does not need to sleep. Uh, 24 hours lights on and it will thrive and it will be bigger, it
+
+29:20.320 --> 29:26.160
+ will be tastier. And this was a big surprise. Um, not just to us, but also the biologist in the team,
+
+29:26.560 --> 29:32.240
+ uh, that, uh, anticipated that this is some constraints that, that are in the world.
+
+29:32.240 --> 29:37.200
+ For a reason, it turns out that evolution did not have the same bias and therefore it discovered
+
+29:37.200 --> 29:42.240
+ something that was creative. It was surprising. It was useful and it was new. That's fascinating to
+
+29:42.240 --> 29:48.240
+ think about like the things we think that are fundamental to living systems on earth today,
+
+29:48.240 --> 29:53.120
+ whether they're actually fundamental or they somehow shape, uh, fit the constraints of the
+
+29:53.120 --> 29:57.840
+ system and all we'll have to do is just remove the constraints. Do you ever think about, um,
+
+29:59.520 --> 30:02.800
+ I don't know how much you know about brain computer interfaces in your link.
+
+30:03.600 --> 30:11.200
+ The, the idea there is, you know, our brains are very limited. And if we just allow, we plug in,
+
+30:12.160 --> 30:17.120
+ we provide a mechanism for a computer to speak with the brain. So you're there by expanding the
+
+30:17.120 --> 30:23.600
+ computational power of the brain, the possibilities there sort of from a very high level philosophical
+
+30:24.320 --> 30:32.400
+ perspective is limitless. But I wonder how limitless it is. Are the constraints we have
+
+30:32.400 --> 30:37.760
+ like features that are fundamental to our intelligence? Or is this just like this weird
+
+30:37.760 --> 30:44.960
+ constraint in terms of our brain size and skull and, uh, lifespan and, uh, senses is just the
+
+30:44.960 --> 30:51.440
+ weird little like a quirk of evolution. And if we just open that up, like add much more senses,
+
+30:51.440 --> 30:57.680
+ add much more computational power, the, uh, intelligence will be, will expand exponentially.
+
+30:57.680 --> 31:04.560
+ Do you have a, do you have a sense about constraints, the relationship of evolution
+
+31:04.560 --> 31:11.200
+ and computation to the constraints of the environment? Um, well, at first I'd like to
+
+31:11.200 --> 31:17.120
+ comment on, on that, like changing the inputs, uh, to human brain, uh, and flexibility of,
+
+31:17.120 --> 31:22.240
+ of the brain. I think there's a lot of that. Uh, there are experiments that are done in animals
+
+31:22.240 --> 31:29.040
+ like Mikanga sir, um, but MIT is switching the, um, auditory and, and visual, uh, information
+
+31:29.040 --> 31:34.240
+ and going, going to the wrong part of the cortex and the animal, uh, was still able to hear and,
+
+31:34.240 --> 31:41.040
+ and perceive the visual environment. And there are, um, kids that are, are born with severe disorders
+
+31:41.040 --> 31:46.000
+ and sometimes they have to remove half of the brain, like one half, and they still grow up.
+
+31:46.000 --> 31:50.240
+ They have the functions migrate to the other parts. There's a lot of flexibility like that.
+
+31:50.240 --> 31:56.080
+ So I think it's quite possible to, um, hook up the brain with different kinds of sensors,
+
+31:56.080 --> 32:01.200
+ for instance. Uh, and, uh, something that we don't even quite understand or have today
+
+32:01.200 --> 32:05.680
+ a different kind of wavelengths or, or whatever they are. Um, and then the brain can learn to
+
+32:05.680 --> 32:11.520
+ make sense of it. Um, and that, I think is, um, this good hope that these prosthetic devices,
+
+32:11.520 --> 32:16.720
+ for instance, work, not because we make them so good and so easy to use, but the brain adapts to
+
+32:16.720 --> 32:22.480
+ them and can learn to take advantage of them. Um, and so in that sense, if there's a trouble,
+
+32:22.480 --> 32:27.840
+ a problem, I think that brain can be used to correct it. Now going beyond what we have today,
+
+32:27.840 --> 32:33.840
+ can you get smarter? That's really much harder to do. Uh, giving the brain more, more input
+
+32:33.840 --> 32:40.320
+ probably might overwhelm it. It would have to learn to filter it and focus. Um, and in order
+
+32:40.320 --> 32:47.520
+ to use the information effectively, uh, and augmenting intelligence with some kind of external
+
+32:47.520 --> 32:54.560
+ devices like that might be difficult. Uh, I think, but replacing what's lost, I think is quite possible.
+
+32:54.560 --> 33:01.360
+ Right. So our intuition allows us to sort of imagine that we can replace what's been lost,
+
+33:01.360 --> 33:06.000
+ but expansion beyond what we have, I mean, we're already one of the most, if not the most
+
+33:06.000 --> 33:13.520
+ intelligent things on this earth, right? So it's hard to imagine. Um, if the brain can hold up
+
+33:13.520 --> 33:19.280
+ with an order of magnitude greater set of information thrown at it, if it can do, if it
+
+33:19.280 --> 33:24.320
+ can reason through that, part of me, this is the Russian thing I think is, uh, I tend to think that
+
+33:24.320 --> 33:34.000
+ the limitations is where the, the superpower is that, you know, immortality and, uh, huge increase
+
+33:34.000 --> 33:41.120
+ in bandwidth of, um, information by connected computers with the brain is not going to produce
+
+33:41.120 --> 33:46.000
+ greater intelligence. It might produce lesser intelligence. So I don't know. There's something
+
+33:46.000 --> 33:56.000
+ about the scarcity being, uh, essential to, uh, um, fitness or performance, but that could be just
+
+33:56.000 --> 34:02.160
+ cause we're so, uh, limited. No, exactly. You make do with what you have, but you can, uh, you don't
+
+34:02.160 --> 34:07.920
+ have to pipe it directly to the brain. I mean, we already have devices like phones where we can
+
+34:07.920 --> 34:13.120
+ look up information at any point. Yeah. And that can make us more productive. You don't have to argue
+
+34:13.120 --> 34:16.960
+ about, I don't know what happened in that baseball game or whatever it is, because you can look it
+
+34:16.960 --> 34:22.880
+ up right away. And I think in that sense, uh, we can learn to utilize tools and that's what we,
+
+34:22.880 --> 34:28.480
+ we, we have been doing for a long, long time. Um, so, and we are already, the brain is already
+
+34:28.480 --> 34:34.400
+ drinking from the water, uh, fire hose, like vision. There's way more information in the vision
+
+34:34.400 --> 34:40.400
+ that we actually present. So brain is already good at identifying what matters. Yeah. Um, and
+
+34:40.400 --> 34:44.880
+ that we can switch that from vision to some other wavelength or some other kind of modality,
+
+34:44.880 --> 34:50.080
+ but I think that the same processing principles probably still apply. Uh, but, but also indeed
+
+34:50.080 --> 34:55.920
+ this, uh, ability to, uh, have information more accessible and more relevant, I think
+
+34:55.920 --> 35:01.360
+ can enhance what we do. I mean, kids today at school, they learn about DNA. I mean,
+
+35:01.360 --> 35:06.320
+ things that were discovered just a couple of years ago, uh, and it's already common knowledge
+
+35:06.320 --> 35:13.040
+ and we are building on it and we don't see a problem where, um, where there's too much
+
+35:13.040 --> 35:17.840
+ information that we can absorb and learn. Maybe people become a little bit more narrow in what
+
+35:17.840 --> 35:23.600
+ they know. They are in one field. Uh, but this information that we have accumulated,
+
+35:23.600 --> 35:28.160
+ it is passed on and people are picking up on it and they are building on it. So it's not like
+
+35:28.160 --> 35:33.520
+ we have reached the point of saturation. Um, we have still this process that allows us to be
+
+35:33.520 --> 35:38.480
+ selective and decide what's interesting. Um, I think still works even, even with the more
+
+35:38.480 --> 35:44.480
+ information we have today. Yeah. It's, it's fascinating to think about like Wikipedia becoming
+
+35:44.480 --> 35:50.560
+ a sensor. Like, uh, so the fire hose of information from Wikipedia says like you integrated directly
+
+35:50.560 --> 35:55.360
+ into the brain to where you're thinking, like you're observing the world with all of Wikipedia
+
+35:55.360 --> 36:01.280
+ directly piping into your brain. So like, uh, when I see a light, I immediately have like the
+
+36:01.280 --> 36:08.640
+ history of who invented electricity, like integrated very quickly into, so just the way
+
+36:08.640 --> 36:12.720
+ you think about the world might be very interesting if you can integrate that kind of information.
+
+36:13.520 --> 36:20.160
+ What are your thoughts if I could ask, uh, on, uh, early steps on that on the neural link side,
+
+36:20.160 --> 36:24.240
+ I don't know if you got a chance to see, but, uh, there was a monkey playing pong
+
+36:25.760 --> 36:30.560
+ through the brain computer interface and, uh, the dream there is sort of,
+
+36:30.560 --> 36:36.240
+ you're already replacing the thumbs, essentially, that you would use to play video game. The dream
+
+36:36.240 --> 36:43.280
+ is to be able to increase further the, um, the interface by which you interact with the computer.
+
+36:43.280 --> 36:47.840
+ Are you impressed by this? Are you worried about this? What are your thoughts as a human?
+
+36:47.840 --> 36:51.760
+ I think it's wonderful. I think it's great that we could, we could do something like that. I mean,
+
+36:51.760 --> 36:59.120
+ you can, there are devices that read your EEG, for instance, and you, and humans can learn, um,
+
+36:59.120 --> 37:04.240
+ to control things using, using just their thoughts in that sense. And I don't think it's
+
+37:04.240 --> 37:08.960
+ that different. I mean, those signals would go to limbs, they would go to thumbs. Uh, now,
+
+37:08.960 --> 37:15.040
+ the same signals go through a sensor to, to some computing system. Um, it still probably has to be
+
+37:15.040 --> 37:20.720
+ built on human terms, uh, not to overwhelm them, but, but utilize what's there and sense the right
+
+37:20.720 --> 37:26.880
+ kind of, um, patterns, uh, that are easy to generate. But oh, that, I think it's really
+
+37:26.880 --> 37:30.480
+ quite possible and, and, and wonderful and could be very much more efficient.
+
+37:32.080 --> 37:37.360
+ Is there, so you mentioned surprising being a characteristic of, uh, creativity. Is there
+
+37:37.360 --> 37:42.000
+ something you already mentioned a few examples, but is there something that jumps out at you as,
+
+37:42.000 --> 37:49.280
+ was particularly surprising from the various evolutionary computation systems you've worked on,
+
+37:49.280 --> 37:55.920
+ the solutions that were, uh, come up along the way, not necessarily the final solutions, but
+
+37:55.920 --> 38:00.240
+ maybe things that would even discarded. Is there something that just jumps the mind?
+
+38:00.240 --> 38:06.800
+ It, it happens all the time. I mean, evolution is so creative, uh, so good at discovering,
+
+38:07.600 --> 38:12.560
+ uh, solutions you don't anticipate. A lot of times they are taking advantage of something
+
+38:12.560 --> 38:17.360
+ that you didn't think was there, like a bug in the software. A lot of, there's a great paper,
+
+38:17.360 --> 38:22.800
+ uh, the community put it together about, uh, surprising anecdotes about evolutionary computation.
+
+38:22.800 --> 38:28.000
+ A lot of them are indeed in some software environment, there was a loophole or a bug
+
+38:28.000 --> 38:32.480
+ and the system, uh, utilizes that. By the way, for people who want to read it, it's kind of fun to
+
+38:32.480 --> 38:36.720
+ read. It's, uh, it's called the surprising creativity of digital evolution, a collection
+
+38:36.720 --> 38:41.600
+ of anecdotes from the evolutionary computation and artificial life research communities. And
+
+38:41.600 --> 38:46.080
+ there's just a bunch of stories from all the seminal figures in this community. Uh, you have a
+
+38:46.080 --> 38:51.600
+ story in there, uh, that released to you at least on the tic, tac, toe memory bomb. So can you, can
+
+38:51.600 --> 38:58.160
+ you, uh, I guess, uh, describe that situation if you think that's, yeah, that was, that's a
+
+38:58.160 --> 39:04.160
+ quite a bit smaller scale than our, um, basically doesn't need to sleep surprise, but, but it was
+
+39:04.160 --> 39:09.280
+ actually done by students in my class, um, in a neural net evolution computation class. Uh,
+
+39:09.280 --> 39:16.160
+ there was an assignment, uh, it was perhaps a final project where people built game playing,
+
+39:16.160 --> 39:23.440
+ uh, AI was an AI class. Uh, and this one, and it was for tic, tac, toe or five in a row in a large
+
+39:23.440 --> 39:31.200
+ board. Uh, and, uh, this one team evolved a neural network to make these moves. Uh, and, um, they
+
+39:31.200 --> 39:36.320
+ set it up evolution. They didn't really know what would come out. Um, but it turned out that they
+
+39:36.320 --> 39:40.400
+ did really well. Evolution actually won the tournament and most of the time when it won,
+
+39:40.400 --> 39:45.840
+ it won because the other teams crashed. And then when we look at it, like what was going on was
+
+39:45.840 --> 39:50.960
+ that evolution discovered that if it makes a move that's really, really far away, like millions of
+
+39:50.960 --> 39:58.400
+ squares, uh, away. Uh, the other teams, the other get programs has expanded memory in order to take
+
+39:58.400 --> 40:02.640
+ that into account until they run out of memory and crash. And then you've been a tournament
+
+40:03.200 --> 40:10.240
+ by crossing all your opponents. I think that's quite a profound example, uh, which is probably
+
+40:10.240 --> 40:18.160
+ applies to most games from, uh, even a game theoretic perspective that sometimes to win,
+
+40:18.160 --> 40:25.200
+ you don't have to be better within the rules of the game. You have to come up with ways to break
+
+40:25.200 --> 40:32.720
+ your opponents, uh, brain, uh, if it's a human, like not through violence, but through some hack
+
+40:32.720 --> 40:41.120
+ where the brain just is not, um, you're basically, uh, how would you put it? You're, you're, the,
+
+40:41.120 --> 40:44.880
+ you're going outside the constraints of where the brain is able to, to function.
+
+40:44.880 --> 40:49.920
+ Expectations of your opponent. I mean, this was even Kasparov pointed that out that when
+
+40:49.920 --> 40:55.280
+ Deep Blue was playing against Kasparov, that it was not playing the same way as Kasparov expected.
+
+40:55.280 --> 41:01.840
+ And this has to do with, you know, being, not having the same biases. Uh, and that's,
+
+41:01.840 --> 41:05.680
+ that's really one of the strengths of, of the AI approach. Yeah.
+
+41:06.240 --> 41:12.720
+ Can you at a high level say what are the basic mechanisms of evolutionary computation algorithms
+
+41:12.720 --> 41:18.400
+ that use something that could be called an evolutionary approach? Like how does it work?
+
+41:19.040 --> 41:24.160
+ Uh, what are the connections to the, it's, what are the echoes of the connection to his biological
+
+41:24.720 --> 41:28.320
+ a lot of these algorithms really do take motivation from biology, but they are
+
+41:28.320 --> 41:34.080
+ caricatures. You try to essentialize it and take the elements that you believe matter. So in
+
+41:34.080 --> 41:39.760
+ evolutionary computation, it is the creation of variation and then the selection upon that.
+
+41:40.560 --> 41:44.160
+ So the creation of variation, you have to have some mechanism that allow you to create new
+
+41:44.160 --> 41:48.240
+ individuals that are very different from what you already have. That's the creativity part.
+
+41:48.880 --> 41:52.960
+ And then you have to have some way of measuring how well they are doing and using the,
+
+41:53.680 --> 41:58.080
+ that measure to select who goes to the next generation and, and you continue.
+
+41:58.080 --> 42:03.200
+ So first you also, you have to have some kind of digital representation of an individual that
+
+42:03.200 --> 42:09.200
+ can be then modified. So I guess humans in biological systems have DNA and all those kinds
+
+42:09.200 --> 42:13.360
+ of things. And so you have to have similar kind of encodings in a computer program.
+
+42:13.360 --> 42:18.320
+ Yes. And that is a big question. How do you encode these individuals? So there's a genotype,
+
+42:18.320 --> 42:23.360
+ which is that encoding, and then a decoding mechanism gives you the phenotype, which is the
+
+42:23.360 --> 42:31.200
+ actual individual that then performs the task and in an environment can be evaluated how good it is.
+
+42:31.200 --> 42:36.960
+ So even that mapping is a big question. Then how do you do it? But typically the representations are
+
+42:36.960 --> 42:40.480
+ either they are strings of numbers or they are some kind of trees. Those are
+
+42:40.480 --> 42:44.240
+ something that we know very well in computer science. And we try to do that. But they,
+
+42:44.240 --> 42:51.760
+ and you know, DNA in some sense, it's also a sequence and a string. So it's not that far from
+
+42:51.760 --> 42:57.120
+ it. But DNA also has many other aspects that we don't take into account necessarily like there's
+
+42:57.120 --> 43:04.960
+ folding and interactions that are other than just the sequence itself. And lots of that is not
+
+43:04.960 --> 43:11.360
+ yet captured. And we don't know whether they are really crucial. Evolution, biological evolution
+
+43:11.360 --> 43:17.680
+ has produced wonderful things. But if you look at them, it's not necessarily the case that every
+
+43:17.680 --> 43:23.520
+ piece is irreplaceable and essential. There's a lot of baggage, because you have to construct it,
+
+43:23.520 --> 43:29.280
+ and it has to go through various stages. And we still have appendix, and we have tailbones and
+
+43:29.280 --> 43:33.840
+ things like that, that are not really that useful. If you try to explain them now, it would make no
+
+43:33.840 --> 43:38.720
+ sense. Very hard. But if you think of us as productive evolution, you can see where they
+
+43:38.720 --> 43:43.520
+ came from. They were useful at one point, perhaps, and no longer are, but they're still there. So
+
+43:43.520 --> 43:52.720
+ that process is complex, and your representation should support it. And that is quite difficult
+
+43:54.400 --> 44:02.320
+ if we are limited with strings or trees. And then we are pretty much limited what can be
+
+44:02.320 --> 44:07.600
+ constructed. And one thing that we are still missing in evolution computation in particular is
+
+44:07.600 --> 44:14.560
+ what we saw in biology, major transitions. So that you go from, for instance, single cell to
+
+44:14.560 --> 44:19.600
+ multi cell organisms, and eventually societies, there are transitions of level of selection and
+
+44:19.600 --> 44:25.920
+ level of what a unit is. And that's something we haven't captured in evolution computation yet.
+
+44:25.920 --> 44:31.680
+ Does that require a dramatic expansion of the representation? Is that what that is?
+
+44:31.680 --> 44:36.720
+ Most likely it does, but we don't even understand it in biology very well,
+
+44:36.720 --> 44:40.960
+ where it's coming from. So it would be really good to look at major transitions in biology,
+
+44:40.960 --> 44:47.600
+ try to characterize them a little bit more in detail, what the processes are. So like a unit,
+
+44:47.600 --> 44:52.480
+ a cell, is no longer evaluated alone, it's evaluated as part of a community,
+
+44:53.440 --> 44:59.200
+ organism, even though it could reproduce, now it can't alone, it has to have its environment.
+
+44:59.200 --> 45:03.280
+ So there's a push to another level, at least the selection.
+
+45:03.280 --> 45:07.120
+ And how do you make that jump to the next level as part of the algorithm?
+
+45:07.120 --> 45:13.200
+ Yeah. So we haven't really seen that in computation yet. And there are certainly
+
+45:13.200 --> 45:18.720
+ attempts to have open ended evolution, things that could add more complexity and start
+
+45:19.280 --> 45:26.080
+ selecting at a higher level. But it is still not quite the same as going from single to multi
+
+45:26.080 --> 45:32.720
+ to society, for instance, in biology. So there essentially would be, as opposed to having one
+
+45:32.720 --> 45:39.760
+ agent, those agent all of a sudden spontaneously decide to then be together. And then your entire
+
+45:39.760 --> 45:46.800
+ system would then be treating them as one agent, some kind of weird merger. But also,
+
+45:47.840 --> 45:53.120
+ I think you mentioned selection. So basically there's an agent and they don't get to live on
+
+45:53.120 --> 45:56.640
+ if they don't do well. So there's some kind of measure of what doing well is and isn't.
+
+45:56.640 --> 46:04.160
+ And does mutation come into play at all in the process and what the world does it serve?
+
+46:04.160 --> 46:07.840
+ Yeah. So, and again, back to what the computational mechanisms of evolution
+
+46:07.840 --> 46:15.040
+ computation are. So the way to create variation, you can take multiple individuals too, usually,
+
+46:15.040 --> 46:21.360
+ but you could do more. And you exchange the parts of the representation. You do some kind of
+
+46:21.360 --> 46:29.600
+ recombination. Could be crossover, for instance. In biology, you do have DNA strings that are
+
+46:29.600 --> 46:36.400
+ cut and put together again. We could do something like that. And it seems to be that in biology,
+
+46:36.400 --> 46:45.120
+ crossover is really the workhorse in biological evolution. In computation, we tend to rely more
+
+46:45.120 --> 46:51.840
+ on mutation. And that is making random changes into parts of the chromosome. You try to be
+
+46:52.400 --> 46:57.120
+ intelligent and target certain areas of it and make the mutations also
+
+46:59.600 --> 47:04.400
+ follow some principle. Like you collect statistics of performance and correlations
+
+47:04.400 --> 47:08.880
+ and try to make mutations you believe are going to be helpful. That's where evolution
+
+47:08.880 --> 47:13.200
+ computation has moved in the last 20 years. I mean, evolution computation has been around
+
+47:13.200 --> 47:20.080
+ for 50 years, but a lot of the recent success comes from mutation, comes from using statistics.
+
+47:20.080 --> 47:24.640
+ It's like the rest of machine learning based on statistics. We use similar tools to guide
+
+47:24.640 --> 47:30.480
+ evolutionary computation. And in that sense, it has diverged a bit from biological evolution.
+
+47:30.480 --> 47:37.200
+ And that's one of the things I think we could look at again, having a weaker selection,
+
+47:37.200 --> 47:42.800
+ more crossover, large populations, more time, and maybe a different kind of creativity would
+
+47:42.800 --> 47:48.320
+ come out of it. We are very impatient in evolution computation today. We want answers right now,
+
+47:48.320 --> 47:55.120
+ right quickly. And if somebody doesn't perform, kill it. And biological evolution doesn't work
+
+47:55.120 --> 48:00.960
+ quite that way. And it's more patient. Yes, much more patient. So I guess we need to add
+
+48:02.240 --> 48:07.920
+ some kind of mating, some kind of dating mechanisms, like marriage may be in there. So
+
+48:07.920 --> 48:15.840
+ to enter our algorithms to improve the combination as opposed to all mutation during all of the work.
+
+48:15.840 --> 48:20.800
+ Yeah. And many ways of being successful. Usually in evolution computation, we have one goal,
+
+48:21.520 --> 48:28.080
+ play this game really well and compare to others. But in biology, there are many ways of being
+
+48:28.080 --> 48:35.520
+ successful. You can build niches, you can be stronger, faster, larger, or smarter, or eat this
+
+48:35.520 --> 48:41.760
+ or eat that. So there are many ways to solve the same problem of survival. And that then
+
+48:41.760 --> 48:49.520
+ breeds creativity. And it allows more exploration. And eventually you get solutions that are
+
+48:49.520 --> 48:54.800
+ perhaps more creative, rather than trying to go from initial population directly or more
+
+48:54.800 --> 49:00.160
+ or less directly to your maximum fitness, which you measure as just one metric.
+
+49:00.160 --> 49:10.480
+ So in a broad sense, before we talk about newer evolution, do you see evolutionary computation
+
+49:11.040 --> 49:15.680
+ as more effective than deep learning in certain contexts, machine learning, broadly speaking,
+
+49:16.480 --> 49:21.040
+ maybe even supervised machine learning? I don't know if you want to draw any kind of lines and
+
+49:21.040 --> 49:26.320
+ distinctions and borders where they rub up against each other kind of thing, or one is more effective
+
+49:26.320 --> 49:30.720
+ than the other in the current state of things? Yes, of course, they are very different and they
+
+49:30.720 --> 49:36.720
+ address different kinds of problems. And the deep learning has been really successful in
+
+49:36.720 --> 49:42.880
+ domains where we have a lot of data. And that means not just data about situations, but also
+
+49:42.880 --> 49:48.720
+ what the right answers were. So labeled examples, or they might be predictions, maybe weather prediction
+
+49:48.720 --> 49:53.920
+ where the data itself becomes labeled, what happened, what the weather was today, and what
+
+49:53.920 --> 50:00.320
+ it will be tomorrow. So they are very effective deep learning methods on that kind of tasks.
+
+50:01.280 --> 50:05.600
+ But there are other kinds of tasks where we don't really know what the right answer is.
+
+50:06.320 --> 50:13.600
+ Game playing, for instance, but many robotics tasks and actions in the world, decision making,
+
+50:15.440 --> 50:21.280
+ and actual practical applications like treatments and healthcare or investment in stock market.
+
+50:21.280 --> 50:26.480
+ Many tasks are like that. We don't know and we'll never know what the optimal answers were.
+
+50:26.480 --> 50:30.080
+ And there you need different kinds of approach. Reinforcement learning is one of those.
+
+50:30.640 --> 50:35.760
+ Reinforcement learning comes from biology as well. Agents learn during their lifetime. They
+
+50:35.760 --> 50:41.040
+ buries and sometimes they get sick and then they don't and get stronger. And then that's how you
+
+50:41.040 --> 50:47.600
+ learn. And evolution is also a mechanism like that by the different timescale because you have
+
+50:47.600 --> 50:53.120
+ a population. Not an individual during his lifetime, but an entire population as a whole can discover
+
+50:54.160 --> 51:00.880
+ what works. And there you can afford individuals that don't work out. Everybody dies and you have
+
+51:00.880 --> 51:06.960
+ a next generation and it will be better than the previous one. So that's the big difference between
+
+51:06.960 --> 51:14.400
+ these methods. They apply to different kinds of problems. And in particular, there's often a
+
+51:14.400 --> 51:17.680
+ comparison that's kind of interesting and important between reinforcement learning and
+
+51:17.680 --> 51:24.560
+ evolution and computation. And initially, reinforcement learning was about individual
+
+51:24.560 --> 51:29.040
+ learning during the lifetime. And evolution is more engineering. You don't care about the
+
+51:29.040 --> 51:33.760
+ lifetime. You don't care about all the individuals that are tested. You only care about the final
+
+51:33.760 --> 51:40.160
+ result. The last one, the best candidate that evolution produced. In that sense, they also
+
+51:40.160 --> 51:46.480
+ apply to different kinds of problems. And now that boundary is starting to blur a bit. You can use
+
+51:46.480 --> 51:51.840
+ evolution as an online method and reinforcement learning to create engineering solutions. But
+
+51:51.840 --> 51:59.600
+ that's still roughly the distinction. And from the point of view of what algorithm you want to use,
+
+52:00.160 --> 52:04.800
+ if you have something where there is a cost for every trial, reinforcement learning might be your
+
+52:04.800 --> 52:11.120
+ choice. Now, if you have a domain where you can use a surrogate, perhaps, so you don't have much of
+
+52:11.120 --> 52:18.960
+ a cost for trial, and you want to have surprises, you want to explore more broadly, then this
+
+52:18.960 --> 52:25.840
+ population based method is perhaps a better choice because you can try things out that you
+
+52:25.840 --> 52:31.600
+ wouldn't afford when you're doing reinforcement learning. There's very few things as entertaining,
+
+52:31.600 --> 52:36.080
+ as watching either evolution computation or reinforcement learning teaching a simulated
+
+52:36.080 --> 52:44.880
+ robot to walk. Maybe there's a higher level question they could be asked here. But do you
+
+52:44.880 --> 52:51.680
+ find this whole space of applications in the robotics interesting for evolution computation?
+
+52:51.680 --> 52:57.680
+ Yeah, very much. And indeed, that's the fascinating videos of that. And that's actually one of the
+
+52:57.680 --> 53:02.400
+ examples where you can contrast the difference between reinforcement learning and reinforcement
+
+53:02.400 --> 53:07.920
+ learning evolution. So if you have a reinforcement learning agent, it tries to be conservative
+
+53:07.920 --> 53:13.680
+ because it wants to walk as long as possible and be stable. But if you have evolution computation,
+
+53:13.680 --> 53:19.680
+ it can afford these agents that go haywire, they fall flat on their face and they could
+
+53:20.240 --> 53:25.200
+ take a step and then they jump and then again fall flat. And eventually what comes out of that
+
+53:25.200 --> 53:30.720
+ is something like a falling that's controlled. And you take another step and another step and you
+
+53:30.720 --> 53:36.720
+ no longer fall, instead you run, you go fast. So that's a way of discovering something that's
+
+53:36.720 --> 53:42.800
+ hard to discover step by step incrementally. Because you can afford these evolutionists
+
+53:42.800 --> 53:46.560
+ dead ends, although they are not entirely dead ends in the sense that they can serve
+
+53:46.560 --> 53:50.800
+ as stepping stones. When you take two of those, put them together, you get something that works
+
+53:50.800 --> 53:55.840
+ even better. And that is a great example of this kind of discovery.
+
+53:55.840 --> 54:00.480
+ Yeah, learning to walk is fascinating. I talk quite a bit to Rastajar because of MIT.
+
+54:01.280 --> 54:08.880
+ There's a community of folks who just roboticists who love the elegance and beauty of movement.
+
+54:08.880 --> 54:19.840
+ Right. And walking bipedal robotics is beautiful, but also exceptionally dangerous in the sense
+
+54:19.840 --> 54:24.240
+ that you're constantly falling, essentially, if you want to do an elegant movement.
+
+54:25.280 --> 54:37.840
+ And the discovery of that is such a good example that the discovery of a good solution sometimes
+
+54:37.840 --> 54:42.960
+ requires a leap of faith and patience and all those kinds of things. I wonder what other spaces
+
+54:42.960 --> 54:48.960
+ where you had to discover those kinds of things in. Yeah. Another interesting direction is
+
+54:50.640 --> 55:00.000
+ learning for virtual creatures, learning to walk. We did a study in simulation, obviously, that
+
+55:01.280 --> 55:06.160
+ you create those creatures, not just their controller, but also their body. So you have
+
+55:06.160 --> 55:13.280
+ cylinders, you have muscles, you have joints and sensors, and you're creating creatures that look
+
+55:13.280 --> 55:18.400
+ quite different. Some of them have multiple legs, some of them have no legs at all. And then the
+
+55:18.400 --> 55:25.280
+ goal was to get them to move, to walk, to run. And what was interesting is that when you evolve
+
+55:25.280 --> 55:30.880
+ the controller together with the body, you get movements that look natural because they're
+
+55:30.880 --> 55:36.400
+ optimized for that physical setup. And these creatures, you start believing them that they're
+
+55:36.400 --> 55:40.560
+ alive because they walk in a way that you would expect somebody with that kind of a set up to
+
+55:40.560 --> 55:46.800
+ walk. Yeah, there's something subjective also about that, right? I've been thinking a lot about
+
+55:46.800 --> 55:56.560
+ that, especially in the human robot interaction context. I mentioned Spot, the Boston Dynamics
+
+55:56.560 --> 56:03.280
+ robot. There is something about human robot communication. Let's put it in another context.
+
+56:03.280 --> 56:13.200
+ Something about human and dog context, like a living dog, where there's a dance of communication.
+
+56:13.200 --> 56:17.360
+ First of all, the eyes, you both look at the same thing and the dogs communicate with their eyes as
+
+56:17.360 --> 56:25.520
+ well. If you and a dog want to deal with a particular object, you will look at the person,
+
+56:25.520 --> 56:29.360
+ the dog will look at you and then look at the object and look back at you, all those kinds
+
+56:29.360 --> 56:36.400
+ of things. But there's also just the elegance of movement. There's the tail and all those kinds
+
+56:36.400 --> 56:43.280
+ of mechanisms of communication. It all seems natural and often joyful. And for robots to
+
+56:43.280 --> 56:49.440
+ communicate that, it's really difficult how to figure that out because it almost seems impossible
+
+56:49.440 --> 56:55.360
+ to hard code in. You can hard code it for a demo purpose, something like that. But it's
+
+56:55.360 --> 57:00.560
+ essentially choreographed. Like if you watch some of the Boston Dynamics videos where they're
+
+57:00.560 --> 57:08.800
+ dancing, all of that is choreographed by human beings. But to learn how to, with your movement,
+
+57:09.440 --> 57:15.600
+ demonstrate a naturalness and elegance, that's fascinating. Of course, in the physical space,
+
+57:15.600 --> 57:21.440
+ that's very difficult to do to learn the kind of scale that you're referring to. But the hope is
+
+57:21.440 --> 57:25.680
+ that you could do that in simulation and then transfer it into the physical space. If you're
+
+57:25.680 --> 57:31.600
+ able to model the robots efficiently, naturally. Yeah. And sometimes I think that that requires
+
+57:31.600 --> 57:39.520
+ a theory of mind on the side of the robot, that they understand what you're doing because they
+
+57:39.520 --> 57:45.120
+ themselves are doing something similar. And that's a big question, too. We talked about
+
+57:45.120 --> 57:51.280
+ intelligence in general, and the social aspect of intelligence. And I think that's what is required,
+
+57:51.280 --> 57:55.200
+ that we humans understand other humans because we assume that they are similar to us.
+
+57:56.240 --> 58:03.200
+ We have one simulation we did a while ago, Ken Stanley did that. Two robots that were competing,
+
+58:03.840 --> 58:09.440
+ simulation, like I said, they were foraging for food to gain energy. And then when they were really
+
+58:09.440 --> 58:15.920
+ strong, they would bounce into the other robot and win if they were stronger. And we watched evolution
+
+58:15.920 --> 58:20.720
+ discover more and more complex behaviors. They first went to the nearest food, and then they
+
+58:20.720 --> 58:27.600
+ started to plot a trajectory so they get more, get more. But then they started to pay attention
+
+58:27.600 --> 58:33.520
+ what the other robot was doing. And in the end, there was a behavior where one of the robots,
+
+58:33.520 --> 58:42.000
+ the most sophisticated one, sensed where the food pieces were and identified that the other robot
+
+58:42.000 --> 58:49.680
+ was close to two of a very far distance. And there was one more food nearby. So it faked,
+
+58:50.800 --> 58:55.760
+ that's now I'm using anthropomorphizing terms, but it made a move towards those other pieces
+
+58:55.760 --> 59:01.200
+ in order for the other robot to actually go and get them. Because it knew that the last
+
+59:01.200 --> 59:06.080
+ remaining piece of food was close. And the other robot would have to travel a long way, lose its
+
+59:06.080 --> 59:12.480
+ energy, and then lose the whole competition. So there was like an emergence of something
+
+59:12.480 --> 59:18.240
+ like a theory of mind, knowing what the other robot would do, guided towards bad behavior
+
+59:18.240 --> 59:22.800
+ in order to win. So we can get things like that happen in simulation as well.
+
+59:22.800 --> 59:28.640
+ But that's a complete natural emergence of a theory of mind. But I feel like if you add a little bit
+
+59:28.640 --> 59:37.200
+ of a place for a theory of mind to emerge easier, then you can go really far. I mean,
+
+59:37.200 --> 59:44.800
+ some of these things with evolution, you add a little bit of design in there, it'll really help.
+
+59:45.360 --> 59:53.280
+ And I tend to think that a very simple theory of mind will go a really long way for cooperation
+
+59:53.280 --> 59:58.480
+ between agents and certainly for human robot interaction. Like it doesn't have to be super
+
+59:58.480 --> 1:00:06.240
+ complicated. I've gotten a chance in autonomous vehicle space to watch vehicles interact with
+
+1:00:06.240 --> 1:00:11.200
+ pedestrians or pedestrians interacting with vehicles in general. I mean, you would think
+
+1:00:11.200 --> 1:00:16.240
+ that there's a very complicated theory of mind thing going on. But I have a sense it's not well
+
+1:00:16.240 --> 1:00:22.880
+ understood yet, but I have a sense it's pretty dumb. Like it's pretty simple. There's a social
+
+1:00:22.880 --> 1:00:30.800
+ contract there between humans, a human driver and a human crossing the road where the human
+
+1:00:30.800 --> 1:00:35.120
+ crossing the road trusts that the human in the car is not going to murder them. And there's something
+
+1:00:35.120 --> 1:00:44.320
+ about, again, back to that mortality thing. There's some dance of ethics and morality that's
+
+1:00:44.320 --> 1:00:50.880
+ built in that you're mapping your own morality onto the person in the car. And even if they're
+
+1:00:50.880 --> 1:00:56.880
+ driving at a speed where you think if they don't stop, they're going to kill you, you trust that
+
+1:00:56.880 --> 1:01:01.200
+ if you step in front of them, they're going to hit the brakes. And there's that weird dance that we
+
+1:01:01.200 --> 1:01:07.840
+ do that I think is a pretty simple model. But of course, it's very difficult to introspect what it
+
+1:01:07.840 --> 1:01:13.760
+ is. And autonomous robots in the human robot interaction context have to have to build that
+
+1:01:13.760 --> 1:01:18.720
+ current robots are much less than what you're describing. They're currently just afraid of
+
+1:01:18.720 --> 1:01:24.800
+ everything. They're not the kind that fall and discover how to run. They're more like,
+
+1:01:24.800 --> 1:01:30.480
+ please don't touch anything, don't hurt anything, stay as far away from humans as possible, treat
+
+1:01:31.360 --> 1:01:38.640
+ humans as ballistic objects that you can't, that you do with a large spatial envelope,
+
+1:01:38.640 --> 1:01:44.000
+ make sure you do not collide with. That's how like I mentioned Elon Musk thinks about
+
+1:01:44.000 --> 1:01:49.280
+ autonomous vehicles. I tend to think autonomous vehicles need to have a beautiful dance between
+
+1:01:49.280 --> 1:01:55.600
+ human and machine where it's not just the collision avoidance problem, but a weird dance.
+
+1:01:55.600 --> 1:02:01.360
+ Yeah, I think that these systems need to be able to predict what will happen, what the other agent
+
+1:02:01.360 --> 1:02:07.440
+ is going to do, and then have a structure of what the goals are and whether those predictions
+
+1:02:07.440 --> 1:02:12.800
+ actually meet the goals. And you can go probably pretty far with that relatively simple setup
+
+1:02:12.800 --> 1:02:17.280
+ already, but to call it a theory of mind, I don't think you need to. I mean, it doesn't matter
+
+1:02:17.280 --> 1:02:22.240
+ whether pedestrian has a mind, it's an object and we can predict what we will do and then we can
+
+1:02:22.240 --> 1:02:26.640
+ predict what the states will be in the future and whether they are desirable states. Stay away from
+
+1:02:26.640 --> 1:02:31.200
+ those that are undesirable and go towards those that are desirable. So it's a relatively simple
+
+1:02:31.760 --> 1:02:40.000
+ functional approach to that. Where do we really need the theory of mind? Maybe when you start
+
+1:02:40.000 --> 1:02:45.280
+ interacting and you're trying to get the other agent to do something and jointly so that you
+
+1:02:45.280 --> 1:02:50.320
+ can jointly, collaboratively achieve something, then it becomes more complex.
+
+1:02:50.320 --> 1:02:53.920
+ Well, I mean, even with the pedestrians, you have to have a sense of where their attention,
+
+1:02:54.720 --> 1:03:00.640
+ actual attention in terms of their gaze is, but also like, there's this vision science people
+
+1:03:00.640 --> 1:03:03.760
+ talk about this all the time. Just because I'm looking at it doesn't mean I'm paying attention
+
+1:03:03.760 --> 1:03:08.960
+ to it. So figuring out what is the person looking at, what is the sensor information they've taken
+
+1:03:08.960 --> 1:03:16.640
+ in and the theory of mind piece comes in is what are they actually attending to cognitively and
+
+1:03:16.640 --> 1:03:21.920
+ also what are they thinking about? Like what is the computation they're performing? And you have
+
+1:03:21.920 --> 1:03:29.520
+ probably maybe a few options for the pedestrian crossing. It doesn't have to be, it's like a
+
+1:03:29.520 --> 1:03:34.000
+ variable with a few discrete states, but you have to have a good estimation of which of the states
+
+1:03:34.000 --> 1:03:39.440
+ that brain is in for the pedestrian case. And the same is for attending with a robot. If you're
+
+1:03:39.440 --> 1:03:46.480
+ collaborating to pick up an object, you have to figure out is the human like, there's a few
+
+1:03:46.480 --> 1:03:51.280
+ discrete states that the human could be in. You have to, you have to predict that by observing
+
+1:03:51.280 --> 1:03:57.760
+ the human. And that seems like a machine learning problem to figure out what's how the human is,
+
+1:03:57.760 --> 1:04:03.840
+ what's the human up to. It's not as simple as sort of planning, just because they move their arm,
+
+1:04:03.840 --> 1:04:08.560
+ means the arm will continue moving in this direction. You have to really have a model of
+
+1:04:08.560 --> 1:04:12.400
+ what they're thinking about and what's the motivation behind the movement of the arm.
+
+1:04:12.400 --> 1:04:17.600
+ Here we are talking about relatively simple physical actions, but you can take that to
+
+1:04:17.600 --> 1:04:24.000
+ higher levels also, like to predict what the people are going to do. You need to know what
+
+1:04:24.000 --> 1:04:28.800
+ their goals are, whether they're trying to, are they exercising, are they just trying to get
+
+1:04:28.800 --> 1:04:33.840
+ somewhere. But even higher level, I mean, you are predicting what people will do in their career,
+
+1:04:33.840 --> 1:04:39.360
+ what their life themes are, do they want to be famous, rich or do good. And that takes a lot
+
+1:04:39.360 --> 1:04:44.480
+ more information, but it allows you to then predict their actions, what choices they might make.
+
+1:04:45.600 --> 1:04:51.200
+ So how does evolution and computation apply to the world of neural networks? Because I've seen
+
+1:04:51.200 --> 1:04:56.480
+ quite a bit of work from you and others in the world of neural evolution. So maybe first,
+
+1:04:56.480 --> 1:05:00.880
+ can you say what is this field? Yeah, neural evolution is a combination of
+
+1:05:02.080 --> 1:05:08.480
+ neural networks and evolution computation in many different forms. But the early versions were
+
+1:05:08.480 --> 1:05:14.880
+ simply using evolution as a way to construct a neural network, instead of, say,
+
+1:05:15.520 --> 1:05:22.320
+ stochastic gradient descent or backpropagation. Because evolution can evolve these parameters,
+
+1:05:22.320 --> 1:05:26.480
+ weight values in a neural network, just like any other string of numbers, you can do that.
+
+1:05:27.200 --> 1:05:32.320
+ And that's useful because some cases you don't have those targets that you need to
+
+1:05:33.200 --> 1:05:38.560
+ backpropagate from. And it might be an agent that's running a maze or a robot playing a game
+
+1:05:38.560 --> 1:05:42.960
+ or something. Again, you don't know what the right answer says, you don't have backprop,
+
+1:05:42.960 --> 1:05:48.240
+ but this way you can still evolve a neural net. And neural networks are really good at these tasks
+
+1:05:48.240 --> 1:05:54.480
+ because they recognize patterns and they generalize, interpolate between known situations.
+
+1:05:54.480 --> 1:05:59.600
+ So you want to have a neural network in such a task, even if you don't have the superwise targets.
+
+1:05:59.600 --> 1:06:04.400
+ So that's the reason and that's the solution. And also more recently, now when we have all
+
+1:06:04.400 --> 1:06:09.680
+ this deep learning literature, it turns out that we can use evolution to optimize many
+
+1:06:09.680 --> 1:06:15.920
+ aspects of those designs. The deep learning architectures have become so complex that
+
+1:06:15.920 --> 1:06:20.720
+ there's little hope for as little humans to understand their complexity and what actually
+
+1:06:20.720 --> 1:06:26.720
+ makes a good design. And now we can use evolution to give that design for you. And it might mean
+
+1:06:28.080 --> 1:06:33.840
+ optimizing hyperparameters, like the depths of layers and so on, or the topology of the network,
+
+1:06:34.480 --> 1:06:39.040
+ how many layers, how they're connected, but also other aspects like what activation functions you
+
+1:06:39.040 --> 1:06:43.760
+ use, where in the network during the learning process, or what loss function you use, you
+
+1:06:43.760 --> 1:06:49.920
+ could generate that. Even data augmentation, all the different aspects of the design
+
+1:06:49.920 --> 1:06:56.000
+ of deep learning experiments could be optimized that way. So that's an interaction between two
+
+1:06:56.000 --> 1:07:01.520
+ mechanisms. But there's also, when we get more into cognitive science and the topics that we've
+
+1:07:01.520 --> 1:07:06.560
+ been talking about, you could have learning mechanisms at two level timescales. So you do
+
+1:07:06.560 --> 1:07:12.800
+ have an evolution that gives you baby neural networks that then learn during their lifetime.
+
+1:07:12.800 --> 1:07:17.680
+ And you have this interaction of two timescales. And I think that can potentially be really
+
+1:07:17.680 --> 1:07:24.000
+ powerful. Now, in biology, we are not born with all our faculties. We have to learn,
+
+1:07:24.000 --> 1:07:29.280
+ we have a developmental period. In humans, it's really long. And most animals have something.
+
+1:07:29.280 --> 1:07:35.840
+ And probably the reason is that evolution or DNA is not detailed enough or plentiful enough to
+
+1:07:35.840 --> 1:07:43.520
+ describe them. We can't describe how to set the brain up. But we can, evolution can decide on a
+
+1:07:43.520 --> 1:07:50.320
+ starting point and then have a learning algorithm that will construct the final product. And this
+
+1:07:50.320 --> 1:07:58.400
+ interaction of intelligent, well, evolution that has produced a good starting point for the
+
+1:07:58.400 --> 1:08:03.520
+ specific purpose of learning from it, with the interaction with the environment, that can be
+
+1:08:03.520 --> 1:08:08.400
+ a really powerful mechanism for constructing brains and constructing behaviors. I like how
+
+1:08:08.400 --> 1:08:16.800
+ you walk back from intelligence. So optimize starting point, maybe. Yeah. Okay. So there's
+
+1:08:16.800 --> 1:08:22.080
+ a lot of fascinating things to ask here. And this is basically this dance between neural networks and
+
+1:08:22.080 --> 1:08:26.560
+ evolution and computation could go into the category of automated machine learnings to where
+
+1:08:26.560 --> 1:08:34.480
+ you're optimizing whether it's hyperparameters of the topology or hyperparameters taken broadly. But
+
+1:08:34.480 --> 1:08:39.440
+ the topology thing is really interesting. I mean, that's not really done that effectively.
+
+1:08:40.160 --> 1:08:44.240
+ Or throughout the history of machine learning has not been done. Usually there's a fixed
+
+1:08:44.240 --> 1:08:48.320
+ architecture. Maybe there's a few components you're playing with. But to grow in your old
+
+1:08:48.320 --> 1:08:54.160
+ network, essentially, the way you grow in that organism is really fascinating space. How hard
+
+1:08:54.160 --> 1:09:01.520
+ is it, do you think, to grow in your old network? And maybe what kind of neural networks are more
+
+1:09:01.520 --> 1:09:06.080
+ amenable to this kind of idea than others? I've seen quite a bit of work on recurrent
+
+1:09:06.080 --> 1:09:11.840
+ neural networks. Is there some architectures that are friendlier than others? And is this
+
+1:09:11.840 --> 1:09:17.760
+ just a fun, small scale set of experiments? Or do you have hope that we can be able to grow
+
+1:09:17.760 --> 1:09:26.080
+ powerful neural networks? I think we can. And most of the work up to now is taking architectures
+
+1:09:26.080 --> 1:09:31.440
+ that already exist that humans have designed and try to optimize them further. And you can
+
+1:09:31.440 --> 1:09:36.640
+ totally do that. A few years ago, we did an experiment. We took a winner of the image
+
+1:09:36.640 --> 1:09:43.520
+ captioning competition and the architecture and just broken into pieces and took the pieces.
+
+1:09:43.520 --> 1:09:49.120
+ And that was our search base. See if you can do better. And we indeed could. 15% better performance
+
+1:09:49.120 --> 1:09:57.920
+ by just searching around the network design that humans had come up with. But that's starting from
+
+1:09:57.920 --> 1:10:04.080
+ a point that humans have produced. But we could do something more generally. It doesn't have to be
+
+1:10:04.080 --> 1:10:09.600
+ that kind of network. The hard part is just a couple of challenges. One of them is to define
+
+1:10:09.600 --> 1:10:16.480
+ the search space. What are your elements? And how you put them together? And the space is just
+
+1:10:16.480 --> 1:10:22.320
+ really, really big. So you have to somehow constrain it and have some hunch of what will work
+
+1:10:23.120 --> 1:10:28.400
+ because otherwise everything is possible. And another challenge is that in order to evaluate
+
+1:10:28.400 --> 1:10:35.040
+ how good your design is, you have to train it. I mean, you have to actually try it out. And
+
+1:10:35.040 --> 1:10:40.800
+ that's currently very expensive. Deep learning networks may take days to train. Well, imagine
+
+1:10:40.800 --> 1:10:45.680
+ you're having a population of 100 and have to run it for 100 generations. It's not yet quite
+
+1:10:45.680 --> 1:10:51.920
+ feasible computationally. It will be. But also there's a large carbon footprint and all that.
+
+1:10:51.920 --> 1:10:57.440
+ I mean, we are using a lot of computation for doing it. So intelligent methods. And intelligent,
+
+1:10:57.440 --> 1:11:03.440
+ I mean, we have to do some science in order to figure out what the right representations are
+
+1:11:03.440 --> 1:11:09.280
+ and right operators are. And how do we evaluate them without having to fully train them? And
+
+1:11:09.840 --> 1:11:12.880
+ that is where the current research is and we're making progress on all those fronts.
+
+1:11:14.400 --> 1:11:21.200
+ So, yes, there are certain architectures that are more amenable to that approach. But also,
+
+1:11:21.200 --> 1:11:26.160
+ I think we can create our own architecture and all representations that are even better at them.
+
+1:11:26.160 --> 1:11:31.440
+ And do you think it's possible to do like a tiny baby network that grows into something
+
+1:11:31.440 --> 1:11:36.080
+ that can do state of the art on like even the simple data set like MNIST. And just like it
+
+1:11:37.120 --> 1:11:42.400
+ just grows into a gigantic monster. That's the world's greatest handwriting recognition system.
+
+1:11:42.400 --> 1:11:46.480
+ Yeah, there are approaches like that as the material and cochlear for instance, I worked on
+
+1:11:47.040 --> 1:11:51.040
+ evolving a smaller network and then systematically expanding it to a larger one.
+
+1:11:51.840 --> 1:11:57.120
+ Your elements are already there and scaling it up will just give you more power. So again,
+
+1:11:57.120 --> 1:12:00.400
+ evolution gives you that starting point. And then there's a mechanism
+
+1:12:00.400 --> 1:12:04.080
+ that gives you the final result and a very powerful approach.
+
+1:12:05.840 --> 1:12:14.000
+ But you could also simulate the actual growth process. And like I said before,
+
+1:12:14.000 --> 1:12:19.120
+ evolving a starting point and then evolving or training the network. There's not that much
+
+1:12:19.120 --> 1:12:24.640
+ work that's been done on that yet. We need some kind of a simulation environment. So,
+
+1:12:24.640 --> 1:12:32.960
+ the interactions at will the supervised environment doesn't really, it's not as easily usable here.
+
+1:12:32.960 --> 1:12:35.440
+ Sorry, the interaction between neural networks?
+
+1:12:35.440 --> 1:12:38.160
+ Yeah, the neural networks that you're creating, interacting the world
+
+1:12:38.960 --> 1:12:44.320
+ and learning from these sequences of interactions, perhaps communication with others.
+
+1:12:46.800 --> 1:12:47.600
+ That's awesome.
+
+1:12:47.600 --> 1:12:52.720
+ We would like to get there, but just the task of simulating something is at that level is very
+
+1:12:52.720 --> 1:12:57.600
+ hard. It's very difficult. I love the idea. I mean, one of the powerful things about
+
+1:12:57.600 --> 1:13:03.360
+ evolution on earth is the predators and prey emerged. And like, there's just like,
+
+1:13:03.360 --> 1:13:07.760
+ there's bigger fish and smaller fish. And it's fascinating to think that you could have neural
+
+1:13:07.760 --> 1:13:12.080
+ networks competing against each other and one neural network being able to destroy another one.
+
+1:13:12.080 --> 1:13:16.720
+ There's like wars of neural networks competing to solve the MNIST problem. I don't know.
+
+1:13:16.720 --> 1:13:21.440
+ Yeah, yeah. Oh, totally. Yeah, yeah. And we actually simulated also that
+
+1:13:21.440 --> 1:13:26.800
+ pair of the prey. And it was interesting what happened there with Padminaradik Pallan did this
+
+1:13:26.800 --> 1:13:37.360
+ and K. Holkamp as a zoologist. So, we had again, we had simulated hyenas and simulated zebras.
+
+1:13:37.360 --> 1:13:38.160
+ Nice.
+
+1:13:38.160 --> 1:13:45.280
+ And initially, the hyenas just tried to hunt them. And when they actually stumbled upon the zebra,
+
+1:13:45.280 --> 1:13:53.200
+ they ate it and were happy. And then the zebras learned to escape. And the hyenas learned to
+
+1:13:53.200 --> 1:13:57.840
+ team up and actually two of them approached in different directions. And now the zebras,
+
+1:13:57.840 --> 1:14:03.840
+ then next step, they generated a behavior where they split in different directions,
+
+1:14:03.840 --> 1:14:09.680
+ just like actually gazelles do when they are being hunted. They confused the predator by
+
+1:14:09.680 --> 1:14:15.600
+ going in different directions. That emerged. And then more hyenas joined and kind of circled them.
+
+1:14:16.480 --> 1:14:22.160
+ And then when they circled them, they could actually herd the zebras together and eat multiple
+
+1:14:22.800 --> 1:14:29.680
+ zebras. So, there was like an arms race of predators and prey. And they gradually developed
+
+1:14:29.680 --> 1:14:34.960
+ more complex behaviors, some of which we actually do see in nature. And this kind of
+
+1:14:34.960 --> 1:14:40.000
+ coevolution, that's competitive coevolution. It's a fascinating topic because there's a
+
+1:14:41.120 --> 1:14:46.320
+ promise or possibility that you will discover something new that you don't already know.
+
+1:14:46.320 --> 1:14:52.400
+ You didn't build it in. It came from this arms race. It's hard to keep the arms race going.
+
+1:14:52.400 --> 1:14:58.160
+ It's hard to have rich enough simulation that supports all of these complex behaviors.
+
+1:14:58.160 --> 1:15:02.640
+ But at least for several steps, we've already seen it in the spread of the prey scenario, yeah.
+
+1:15:02.640 --> 1:15:06.960
+ First of all, it's fascinating to think about this context in terms of
+
+1:15:07.840 --> 1:15:14.160
+ evolving architectures. So, I've studied Tesla autopilot for a long time. It's one particular
+
+1:15:14.960 --> 1:15:20.080
+ implementation of an AI system that's operating in the real world. I find it fascinating because
+
+1:15:20.080 --> 1:15:25.360
+ of the scale at which it's used out in the real world. And I'm not sure if you're familiar with
+
+1:15:25.360 --> 1:15:30.080
+ that system much, but you know, Andre Capati leads that team on the machine learning side.
+
+1:15:30.080 --> 1:15:36.800
+ And there's a multi task network, multi headed network where there's a core,
+
+1:15:36.800 --> 1:15:41.040
+ but it's trained on particular tasks and there's a bunch of different heads that are trained on that.
+
+1:15:41.680 --> 1:15:47.760
+ Is there some lessons from evolutionary computation or neuro evolution that could be
+
+1:15:47.760 --> 1:15:52.400
+ applied to this kind of multi headed beast that's operating in the real world?
+
+1:15:52.400 --> 1:15:59.040
+ Yes, it's a very good problem for neuro evolution. And the reason is that when you have multiple tasks
+
+1:15:59.040 --> 1:16:08.320
+ they support each other. So, let's say you're learning to classify X ray images to different
+
+1:16:08.320 --> 1:16:14.880
+ pathologies. So, you have one task is to classify this disease and another one this disease and
+
+1:16:14.880 --> 1:16:20.960
+ another this one. And when you're learning from one disease, that forces certain kinds of internal
+
+1:16:20.960 --> 1:16:26.880
+ representations and embeddings and they can serve as a helpful starting point for the other tasks.
+
+1:16:26.880 --> 1:16:33.280
+ So, you are combining the wisdom of multiple tasks into these representations. And it turns out that
+
+1:16:33.280 --> 1:16:37.920
+ you can do better in each of these tasks when you are learning simultaneously other tasks
+
+1:16:37.920 --> 1:16:41.680
+ than you would by one task alone. Which is a fascinating idea in itself, yeah.
+
+1:16:41.680 --> 1:16:45.920
+ Yes. And people do that all the time. I mean, you use knowledge of domains that you know
+
+1:16:45.920 --> 1:16:51.120
+ in new domains and certainly no network can do that. When your evolution comes in is that
+
+1:16:51.120 --> 1:16:57.680
+ what's the best way to combine these tasks? Now, there's architectural design that allow you to
+
+1:16:57.680 --> 1:17:04.000
+ decide where and how the embeddings, the internal representations are combined and how much you
+
+1:17:04.000 --> 1:17:10.240
+ combine them. And there's quite a bit of research on that and my team, Elliot Mayersons, worked on
+
+1:17:10.240 --> 1:17:16.320
+ that. In particular, what is a good internal representation that supports multiple tasks?
+
+1:17:16.320 --> 1:17:22.640
+ And we're getting to understand how that's constructed and what's in it so that it is in
+
+1:17:22.640 --> 1:17:31.040
+ a space that supports multiple different heads, like you said. And that I think is fundamentally
+
+1:17:31.040 --> 1:17:37.280
+ how biological intelligence works as well. You don't build a representation just for one task.
+
+1:17:37.280 --> 1:17:41.920
+ You try to build something that's general, not only so that you can do better in one task
+
+1:17:41.920 --> 1:17:47.360
+ or multiple tasks, but also a future task and future challenges. So you learn to learn the
+
+1:17:47.360 --> 1:17:54.000
+ structure of the world and that helps you in all kinds of future challenges.
+
+1:17:54.000 --> 1:17:58.320
+ And so you're trying to design a representation that will support an arbitrary set of tasks
+
+1:17:58.320 --> 1:18:04.160
+ in a particular sort of class of problem. Yeah. And also it turns out, and that's again,
+
+1:18:04.160 --> 1:18:09.520
+ the surprise that Elliot found was that those tasks don't have to be very related.
+
+1:18:09.520 --> 1:18:15.920
+ You can learn to do better vision by learning language or better language by learning about
+
+1:18:15.920 --> 1:18:25.440
+ DNA structure. Somehow the world... Yeah, it rhymes. The world rhymes even if it's very
+
+1:18:26.960 --> 1:18:32.800
+ disparate fields. On that small topic, let me ask you, because you've also on the competition
+
+1:18:32.800 --> 1:18:42.880
+ in your science side, you worked on both language and vision. What's the connection
+
+1:18:42.880 --> 1:18:47.280
+ between the two? What's more... Maybe there's a bunch of ways to ask this, but what's more
+
+1:18:47.280 --> 1:18:52.240
+ difficult to build from an engineering perspective and evolutionary perspective,
+
+1:18:52.240 --> 1:18:59.120
+ the human language system or the human vision system or the equivalent of in the AI space,
+
+1:18:59.120 --> 1:19:05.360
+ language and vision, or is it the best, is the multitask idea that you're speaking to that
+
+1:19:05.360 --> 1:19:11.520
+ they need to be deeply integrated? Yeah, absolutely. Learning both at the same time,
+
+1:19:11.520 --> 1:19:16.480
+ I think, is a fascinating direction in the future. So we have data sets where there's
+
+1:19:16.480 --> 1:19:21.440
+ visual component as well as verbal descriptions, for instance, and that way you can learn
+
+1:19:21.440 --> 1:19:25.760
+ a deeper representation, a more useful representation for both. But it's still an
+
+1:19:25.760 --> 1:19:32.640
+ interesting question of which one is easier. I mean, recognizing objects or even understanding
+
+1:19:32.640 --> 1:19:38.320
+ sentences, that's relatively possible, but where it becomes... Where the challenges are is to
+
+1:19:38.320 --> 1:19:44.320
+ understand the world, like the visual world, the 3D, what are the objects doing and predicting what
+
+1:19:44.320 --> 1:19:49.120
+ will happen, the relationships. That's what makes vision difficult. And language, obviously,
+
+1:19:49.120 --> 1:19:56.480
+ it's what is being said, what the meaning is. And the meaning doesn't stop at who did what to whom.
+
+1:19:57.200 --> 1:20:03.200
+ There are goals and plans and themes and you eventually have to understand the entire human
+
+1:20:03.200 --> 1:20:08.640
+ society and history in order to understand the sentence very much fully. There are plenty of
+
+1:20:08.640 --> 1:20:13.840
+ examples of those kind of short sentences when you bring in all the world knowledge to understand it.
+
+1:20:13.840 --> 1:20:19.840
+ And that's the big challenge. Now, we are far from that, but even just bringing in the visual world
+
+1:20:20.480 --> 1:20:26.720
+ together with the sentence will give you already a lot deeper understanding of what's happening.
+
+1:20:26.720 --> 1:20:32.800
+ And I think that that's where we're going very soon. I mean, we've had ImageNet for a long time,
+
+1:20:32.800 --> 1:20:39.120
+ and now we have all these text collections, but having both together and then learning
+
+1:20:39.120 --> 1:20:44.720
+ a semantic understanding of what is happening, I think that will be the next step in the next
+
+1:20:44.720 --> 1:20:49.040
+ few years. Yeah, you're starting to see that with all the work with Transformers was the
+
+1:20:49.040 --> 1:20:57.440
+ community, the AI community started to dip their toe into this idea of having language models that
+
+1:20:57.440 --> 1:21:04.320
+ are now doing stuff with images, with vision, and then connecting the two. I mean, right now,
+
+1:21:04.320 --> 1:21:09.360
+ it's like these little explorations, we're literally dipping the toe in, but maybe at some
+
+1:21:09.360 --> 1:21:14.560
+ point we'll just dive into the pool and it'll just be all seen as the same thing. I do still
+
+1:21:14.560 --> 1:21:22.320
+ wonder what's more fundamental, whether vision is, whether we don't think about vision correctly.
+
+1:21:23.120 --> 1:21:26.240
+ Maybe the fact, because we're humans and we see things as beautiful and so on,
+
+1:21:26.240 --> 1:21:36.160
+ and because we have cameras that take pixels as a 2D image that we don't sufficiently think about
+
+1:21:36.160 --> 1:21:43.680
+ vision as language, maybe Chomsky is right all along, that vision is fundamental to,
+
+1:21:43.680 --> 1:21:49.360
+ sorry, that language is fundamental to everything, to even cognition, to even consciousness. The
+
+1:21:49.360 --> 1:21:56.400
+ base layer is all language, not necessarily like English, but some weird abstract representation,
+
+1:21:57.040 --> 1:22:02.480
+ the linguistic representation. Yeah. Well, earlier we talked about the social structures,
+
+1:22:02.480 --> 1:22:06.960
+ and that may be what's underlying the language. That's the more fundamental part, and then
+
+1:22:06.960 --> 1:22:11.040
+ language has been added on top of that. Language emerges from the social interaction.
+
+1:22:11.040 --> 1:22:17.040
+ Yeah, that's a very good guess. We are visual animals, though. A lot of the brain is dedicated
+
+1:22:17.040 --> 1:22:24.160
+ to vision. Also, when we think about various abstract concepts, we usually reduce that
+
+1:22:24.160 --> 1:22:32.480
+ division and images. We go to a whiteboard, you draw pictures of very abstract concepts.
+
+1:22:33.200 --> 1:22:37.760
+ We tend to resort to that quite a bit, and that's a fundamental representation. It's probably
+
+1:22:38.720 --> 1:22:44.960
+ possible that it predated language, even animals. A lot of them don't talk, but they certainly do
+
+1:22:44.960 --> 1:22:54.400
+ have vision. Language is interesting development from mastication, from eating. You develop an
+
+1:22:54.400 --> 1:23:00.240
+ organ that actually can produce sound to manipulate them. Maybe that was an accident. Maybe that was
+
+1:23:00.240 --> 1:23:07.360
+ something that was available and then allowed us to do the communication, or maybe it was gestures.
+
+1:23:07.360 --> 1:23:12.880
+ Sign language could have been an original proto language. We don't quite know, but the language
+
+1:23:12.880 --> 1:23:18.560
+ is more fundamental than the medium in which it's communicated. I think that it comes from those
+
+1:23:18.560 --> 1:23:27.040
+ representations. Now, in the current world, they are so strongly integrated. It's really hard to
+
+1:23:27.040 --> 1:23:33.040
+ say which one is fundamental. You look at the brain structures and even visual cortex, which
+
+1:23:33.040 --> 1:23:37.920
+ is supposed to be very much just vision. Well, if you are thinking of semantic concepts,
+
+1:23:37.920 --> 1:23:43.360
+ if you're thinking of language, visual cortex lights up. It's still useful even for language
+
+1:23:43.360 --> 1:23:48.400
+ computations. There are common structures underlying them. Utilize what you need.
+
+1:23:49.680 --> 1:23:53.760
+ When you are understanding a scene, you're understanding relationships. Well, that's not
+
+1:23:53.760 --> 1:23:58.000
+ so far from understanding relationships between words and concepts. I think that that's how they
+
+1:23:58.000 --> 1:24:03.440
+ are integrated. Yeah. There's dreams. Once we close our eyes, there's still a world in there
+
+1:24:03.440 --> 1:24:08.880
+ somehow operating and somehow possibly the visual system somehow integrated into all of it.
+
+1:24:09.840 --> 1:24:19.120
+ I tend to enjoy thinking about aliens and thinking about the sad thing to me about extraterrestrial
+
+1:24:19.120 --> 1:24:27.840
+ intelligent life, that if a visitor is here on earth, or if we came on Mars or maybe in
+
+1:24:27.840 --> 1:24:33.920
+ another solar system, another galaxy one day, that us humans would not be able to detect it
+
+1:24:34.720 --> 1:24:39.360
+ or communicate with it or appreciate, like it'd be right in front of our nose and we were too
+
+1:24:41.040 --> 1:24:50.320
+ self obsessed to see it. Not self obsessed, but our tools, our frameworks of thinking would
+
+1:24:51.280 --> 1:24:56.640
+ not detect it as a good movie arrival and so on. Where Stephen Wolfram and his son,
+
+1:24:56.640 --> 1:25:00.800
+ I think, were part of developing this alien language of how aliens would communicate with
+
+1:25:00.800 --> 1:25:06.720
+ humans. Do you ever think about that kind of stuff where if humans and aliens would be able
+
+1:25:06.720 --> 1:25:12.400
+ to communicate with each other, like if we met each other at some, okay, we could do SETI,
+
+1:25:12.400 --> 1:25:17.280
+ which is communicating from across a very big distance, but also just us, you know,
+
+1:25:19.360 --> 1:25:24.240
+ if you did a podcast with an alien, do you think we would be able to find a common language
+
+1:25:24.240 --> 1:25:30.720
+ and a common methodology of communication? I think from a computational perspective,
+
+1:25:30.720 --> 1:25:34.320
+ the way to ask that is you have very fundamentally different creatures,
+
+1:25:34.320 --> 1:25:37.120
+ agents that are created. Would they be able to find a common language?
+
+1:25:37.120 --> 1:25:44.720
+ Yes, I do think about that. I mean, I think a lot of people who are in computing and AI in
+
+1:25:44.720 --> 1:25:50.160
+ particular, they got into it because they were fascinated with science fiction and all of these
+
+1:25:50.160 --> 1:25:56.480
+ options. I mean, Star Trek generated all kinds of devices that we have now. They envision it first
+
+1:25:56.480 --> 1:26:06.720
+ and it's a great motivator to think about things like that. And again, being a computational
+
+1:26:06.720 --> 1:26:14.400
+ scientist and trying to build intelligent agents, what I would like to do is have a simulation
+
+1:26:14.400 --> 1:26:20.560
+ where the agents actually evolve communication, not just communication. People have done that
+
+1:26:20.560 --> 1:26:25.920
+ many times that they communicate, they signal and so on, but actually develop a language.
+
+1:26:25.920 --> 1:26:29.600
+ And language means grammar. It means all these social structures and on top of that,
+
+1:26:29.600 --> 1:26:37.040
+ grammatical structures. And we do it under various conditions and actually try to identify
+
+1:26:37.040 --> 1:26:42.960
+ what conditions are necessary for it to come out. And then we can start asking that kind of
+
+1:26:42.960 --> 1:26:48.240
+ questions. Are those languages that emerge in those different simulated environments,
+
+1:26:48.800 --> 1:26:54.560
+ are they understandable to us? Can we somehow make a translation? We can make it a concrete
+
+1:26:54.560 --> 1:27:01.680
+ question. So machine translation of evolved languages. And so languages that evolve come up
+
+1:27:01.680 --> 1:27:06.400
+ with, can we translate, like I have a Google translate for the evolved languages?
+
+1:27:06.400 --> 1:27:14.640
+ Yes. And if we do that enough, we have perhaps an idea what an alien language might be like,
+
+1:27:14.640 --> 1:27:19.200
+ the space of where those languages can be. Because we can set up their environment differently.
+
+1:27:19.760 --> 1:27:25.280
+ They doesn't need to be gravity. You can have all kinds of societies can be different. They may
+
+1:27:25.280 --> 1:27:32.160
+ have no predators. Everybody's a predator, all kinds of situations. And then see what the space
+
+1:27:32.160 --> 1:27:36.720
+ possibly is where those languages are and what the difficulties are. They'll be really good
+
+1:27:36.720 --> 1:27:43.680
+ actually to do that before the aliens come here. Yes, it's good practice. On the similar connection,
+
+1:27:44.720 --> 1:27:51.440
+ you know, you can think of AI systems as aliens. Is there a ways to evolve a communication scheme
+
+1:27:51.440 --> 1:27:58.800
+ for there's a field you can call like explainable AI for AI systems to be able to communicate?
+
+1:27:58.800 --> 1:28:03.680
+ So you evolve a bunch of agents, but for some of them to be able to talk to you.
+
+1:28:04.640 --> 1:28:11.040
+ Also, so to evolve a way for agents to be able to communicate about their world to us humans.
+
+1:28:11.040 --> 1:28:13.920
+ Do you think that there's possible mechanisms for doing that?
+
+1:28:14.640 --> 1:28:20.800
+ We can certainly try. And if we, if it's an evolution competition system, for instance,
+
+1:28:20.800 --> 1:28:25.440
+ you reward those solutions that are actually functional, that that communication makes sense,
+
+1:28:25.440 --> 1:28:32.960
+ it allows us to together again achieve common goals. I think it's possible. But even from that
+
+1:28:33.600 --> 1:28:39.680
+ paper that you mentioned, the anecdotes, it's quite likely also that the the agents learn to
+
+1:28:40.800 --> 1:28:46.400
+ you know, lie and fake and do all kinds of things like that. Yes. I mean, we see that in
+
+1:28:46.400 --> 1:28:52.960
+ even very low level, like bacterial evolution, they are, they are cheaters. And who's to say
+
+1:28:52.960 --> 1:28:59.040
+ that what they say is actually what they think. But that's one thing that there would have to
+
+1:28:59.040 --> 1:29:03.520
+ be some common goal so that we can evaluate whether that communication is at least useful.
+
+1:29:05.440 --> 1:29:10.480
+ You know, they may be saying things just to make us feel good or get us to do what we want,
+
+1:29:10.480 --> 1:29:15.520
+ whatever, not turn them off or something. But so we would have to understand their internal
+
+1:29:15.520 --> 1:29:19.040
+ representations much better to really make sure that that translation is critical.
+
+1:29:19.040 --> 1:29:25.120
+ But it can be useful. And I think it's possible to do that. There are examples where
+
+1:29:25.680 --> 1:29:32.640
+ visualizations are automatically created so that we can look into the system
+
+1:29:33.520 --> 1:29:38.560
+ and the language is not that far from it. I mean, it is a way of communicating and logging
+
+1:29:38.560 --> 1:29:45.040
+ what you're doing in some interpretable way. I think a fascinating topic, yeah, to do that.
+
+1:29:45.040 --> 1:29:52.880
+ Yeah, you're making me realize that it's a good scientific question whether lying is an effective
+
+1:29:53.680 --> 1:29:57.840
+ mechanism for integrating yourself and succeeding in a social network in a social,
+
+1:29:58.560 --> 1:30:06.320
+ in a world that is social. I tend to believe that honesty and love are evolutionary advantages
+
+1:30:06.320 --> 1:30:13.680
+ in a, in an environment where there's a network of intelligent agents. But it's also very possible
+
+1:30:13.680 --> 1:30:21.600
+ that dishonesty and manipulation and even, you know, violence, all those kinds of things might
+
+1:30:21.600 --> 1:30:27.600
+ be more beneficial. That's the old open question about good versus evil. But I tend to, there's,
+
+1:30:27.600 --> 1:30:33.840
+ I mean, I don't know if it's a hopeful, maybe I'm delusional, but it feels like karma is a thing,
+
+1:30:34.960 --> 1:30:42.400
+ which is like long term, the agents, they're just kind to others sometimes for no reason
+
+1:30:42.400 --> 1:30:49.120
+ will do better in a society that's not highly constrained on resources. So like people start
+
+1:30:49.120 --> 1:30:54.800
+ getting weird and evil towards each other and bad when the resources are very low relative to the
+
+1:30:54.800 --> 1:31:01.840
+ needs of the populace, especially at the basic level like survival shelter, food, all those
+
+1:31:01.840 --> 1:31:09.280
+ kinds of things. But I tend to believe that once you have those things established, then
+
+1:31:09.280 --> 1:31:16.480
+ well, not to believe it. I guess I hope that AI systems would be honest. But it's fun. It's scary
+
+1:31:16.480 --> 1:31:22.880
+ to think about the touring tests, you know, AI systems that will eventually pass the touring
+
+1:31:22.880 --> 1:31:29.440
+ test will be ones that are exceptionally good at lying. That's a terrifying concept. I mean,
+
+1:31:29.440 --> 1:31:34.160
+ I don't know. First of all, sort of from a, from somebody who studied language and obviously
+
+1:31:34.160 --> 1:31:40.960
+ are not just the world expert in AI, but somebody who dreams about the future of the field. Do you
+
+1:31:40.960 --> 1:31:46.960
+ hope, do you think there'll be human level or super human level intelligences in the future
+
+1:31:46.960 --> 1:31:56.080
+ that we eventually build? Well, definitely hope that we can, we can get there. One, I think,
+
+1:31:56.080 --> 1:32:02.800
+ important perspective is that we are building AI to help us, that it is a, it is tool like
+
+1:32:02.800 --> 1:32:16.400
+ cars or language or communication. AI will help us be more productive. And that is always a condition.
+
+1:32:16.400 --> 1:32:22.160
+ It's not something that we build and let run and it becomes an entity of its own that doesn't care
+
+1:32:22.160 --> 1:32:28.320
+ about us. Now, of course, really find the future, maybe that might be possible, but not in the
+
+1:32:28.320 --> 1:32:35.040
+ foreseeable future when we are building it. And therefore, we are always in a position of limiting
+
+1:32:35.040 --> 1:32:46.080
+ what it can or cannot do. And the, the, your point about lying is very interesting. Even, even in
+
+1:32:46.080 --> 1:32:52.000
+ this high enough societies, for instance, when a number of these high enough span together and
+
+1:32:52.000 --> 1:32:56.880
+ they, they steal the, they take a risk and steal the kill, they're always high enough that hang
+
+1:32:56.880 --> 1:33:03.520
+ in us that hang back and don't participate in that risky behavior, but they walk in later and,
+
+1:33:03.520 --> 1:33:09.840
+ and join the party at, after the, after the kill. And there are even some that may be ineffective
+
+1:33:09.840 --> 1:33:16.320
+ and cause others to have harm. So, and like I said, even bacteria cheat. And we see it in
+
+1:33:16.320 --> 1:33:21.520
+ biology that there's always some element on opportunity. If you have a society, I think
+
+1:33:21.520 --> 1:33:26.160
+ that this is because if you have a society in order for society to be effective, you have
+
+1:33:26.160 --> 1:33:31.920
+ to have this cooperation and you have to have trust. And, and if you have enough of agents
+
+1:33:31.920 --> 1:33:38.080
+ who are able to trust each other, you can achieve a lot more. But if you have trust, you also have
+
+1:33:38.080 --> 1:33:44.000
+ opportunity for cheaters and liars. And I don't think that's ever going to go away. There will be
+
+1:33:44.000 --> 1:33:47.680
+ hopefully a minority so that they don't get in the way. And we studied in these high enough
+
+1:33:47.680 --> 1:33:52.720
+ simulations, like what the proportion needs to be before it is no longer functional. And you
+
+1:33:52.720 --> 1:33:59.440
+ can point out that you can tolerate a few cheaters and a few liars and the society can still function.
+
+1:33:59.440 --> 1:34:05.040
+ And that's probably going to happen when, when we build these systems that autonomously learn
+
+1:34:06.160 --> 1:34:11.520
+ that the really successful ones are honest because that's the best way of getting things done.
+
+1:34:12.960 --> 1:34:18.000
+ But there probably are also intelligent agents that find that they can achieve their goals by,
+
+1:34:18.000 --> 1:34:24.800
+ by bending the rules or cheating. So there could be a huge benefit to, as opposed to having fixed
+
+1:34:24.800 --> 1:34:32.080
+ AI systems, say we build an AGI system and deploying millions of them, that are exactly the same.
+
+1:34:33.360 --> 1:34:39.040
+ There might be a huge benefit to introducing sort of from like an evolution competition
+
+1:34:39.040 --> 1:34:46.480
+ perspective, a lot of variation, sort of like diversity in all its forms is beneficial,
+
+1:34:46.480 --> 1:34:51.920
+ even if some people are assholes or some robots are assholes. So like it's beneficial to have that
+
+1:34:51.920 --> 1:35:00.640
+ because I, because you can't always and prior I know what's good, what's bad, but there's that's
+
+1:35:00.640 --> 1:35:06.080
+ a fascinating diversity is the bread and butter. I mean, if you're running evolution, you see
+
+1:35:06.080 --> 1:35:11.360
+ diversity is the one fundamental thing you have to have. And absolutely. Also, it's not always
+
+1:35:11.360 --> 1:35:15.760
+ good diversity. It may be something that can be destructive. We had in these high enough
+
+1:35:15.760 --> 1:35:20.400
+ simulations, we have high enough that just are suicidal, basically, they just run and get killed.
+
+1:35:20.400 --> 1:35:25.920
+ But they form the basis of those who actually are really fast, but stop before they get killed
+
+1:35:25.920 --> 1:35:31.040
+ and eventually turn into this mob. So there might be something useful there if it's recombined with
+
+1:35:31.040 --> 1:35:36.160
+ something else. So I think that as long as we can tolerate some of that, it may turn into something
+
+1:35:36.160 --> 1:35:40.960
+ better. You may change the rules because it's so much more efficient to do something that was
+
+1:35:40.960 --> 1:35:47.360
+ actually against the rules before. And we've seen society change over time quite a bit along those
+
+1:35:47.360 --> 1:35:52.720
+ lines that there were rules in society that we don't believe are fair anymore, even though they
+
+1:35:52.720 --> 1:35:59.680
+ were, you know, considered proper behavior before. So things are changing. And I think that in that
+
+1:35:59.680 --> 1:36:04.960
+ sense, I think it's a good idea to be able to tolerate some of that, some of that cheating,
+
+1:36:04.960 --> 1:36:09.440
+ because eventually we might turn into something better. So yeah, I think this is a message to the
+
+1:36:09.440 --> 1:36:14.880
+ trolls and the assholes of the internet that you two have a beautiful purpose in this human
+
+1:36:14.880 --> 1:36:21.200
+ ecosystem. So Lee, I appreciate you very much. Modern quantities. So there's a whole field
+
+1:36:21.200 --> 1:36:26.560
+ of artificial life. I don't know if you're connected to this field if you pay attention.
+
+1:36:26.560 --> 1:36:32.320
+ Do you think about this kind of thing? Is there an impressive demonstration to you of
+
+1:36:32.320 --> 1:36:36.640
+ artificial life? Do you think of the agency you work with in the evolutionary computation
+
+1:36:36.640 --> 1:36:44.560
+ perspective as life? And where do you think this is headed? Like, is there interesting
+
+1:36:44.560 --> 1:36:51.520
+ systems that will be creating more and more that make us redefine, maybe rethink about the nature
+
+1:36:51.520 --> 1:36:58.720
+ of life? Different levels of definition and goals there. I mean, at some level, artificial life
+
+1:36:59.600 --> 1:37:04.880
+ can be considered multi agent systems that build a society that again, achieves a goal.
+
+1:37:04.880 --> 1:37:10.240
+ And it might be robots that go into a building and clean it up or after earthquake or something.
+
+1:37:10.240 --> 1:37:16.000
+ You can think of that as an artificial life problem in some sense. Or you can really think of it
+
+1:37:16.000 --> 1:37:22.960
+ artificial life as a simulation of life and a tool to understand what life is and how life
+
+1:37:22.960 --> 1:37:28.480
+ evolved on earth. And like I said, in artificial life conference, there are branches of that
+
+1:37:28.480 --> 1:37:34.880
+ conference sessions of people who really worry about molecular designs and the start of life.
+
+1:37:34.880 --> 1:37:39.600
+ Like I said, primordial soup where eventually you get something self replicating.
+
+1:37:39.600 --> 1:37:44.400
+ And they're really trying to build that. So it's a whole range of topics.
+
+1:37:46.400 --> 1:37:54.000
+ And I think that artificial life is a great tool to understand life. And there are questions like
+
+1:37:54.000 --> 1:38:03.280
+ sustainability, species, we're losing species. How bad is it? Is it natural? Is there a tipping
+
+1:38:03.280 --> 1:38:09.680
+ point? And where are we going? I mean, like the high enough evolution, we may have understood that
+
+1:38:09.680 --> 1:38:14.480
+ there's a pivotal point in their evolution. They discovered cooperation and coordination.
+
+1:38:15.920 --> 1:38:20.960
+ You know, artificial life simulations can identify that and maybe encourage things like that.
+
+1:38:20.960 --> 1:38:28.880
+ And also, societies can be seen as a form of life itself. I mean, we're not talking about
+
+1:38:28.880 --> 1:38:34.080
+ biological evolution. We have evolution of societies. Maybe some of the same phenomena
+
+1:38:34.080 --> 1:38:40.800
+ emerge in that domain. And having artificial life simulations and understanding could help us
+
+1:38:40.800 --> 1:38:51.280
+ build better societies. Yeah. And thinking from a main perspective of from Richard Dawkins, that
+
+1:38:51.280 --> 1:38:57.520
+ maybe the organisms, ideas of the organisms, not the humans in these societies, that from
+
+1:38:58.320 --> 1:39:03.360
+ it's almost like reframing what is exactly evolving. Maybe the interesting, the humans
+
+1:39:03.360 --> 1:39:07.600
+ aren't the interesting thing as the contents of our minds is the interesting thing. And that's
+
+1:39:07.600 --> 1:39:12.160
+ what's multiplying. And that's actually multiplying and evolving in a much faster time scale.
+
+1:39:12.960 --> 1:39:19.360
+ And that maybe has more power on the trajectory of life on earth than this biological evolution.
+
+1:39:19.360 --> 1:39:23.200
+ Yes. Is the evolution of these ideas? Yes. And it's fascinating, I guess,
+
+1:39:23.200 --> 1:39:29.440
+ it before that we can keep up somehow biologically. Yeah. We all have evolved to a point where we can
+
+1:39:29.440 --> 1:39:36.960
+ keep up with this meme evolution, literature, you know, internet. We understand DNA and we
+
+1:39:36.960 --> 1:39:41.760
+ understand fundamental particles. We didn't start that way a thousand years ago. And we haven't
+
+1:39:41.760 --> 1:39:48.320
+ evolved biologically very much, but somehow our minds are able to extend. And therefore AI can
+
+1:39:48.320 --> 1:39:54.320
+ be seen also as one such step that we created. And it's our tool. And it's part of that meme
+
+1:39:54.320 --> 1:39:59.520
+ evolution that we created, even if our biological evolution does not progress as fast.
+
+1:39:59.520 --> 1:40:06.240
+ And us humans might only be able to understand so much, we're keeping up so far. Or we think
+
+1:40:06.240 --> 1:40:10.080
+ we're keeping up so far, but we might need AI systems to understand. Maybe like
+
+1:40:11.360 --> 1:40:16.000
+ the physics of the universe is operating like a strength theory, maybe it's operating on
+
+1:40:16.000 --> 1:40:21.440
+ much higher dimensions. Maybe we're totally because of our cognitive limitations are not
+
+1:40:21.440 --> 1:40:28.800
+ able to truly internalize the way this world works. And so we're running up against the limitation
+
+1:40:28.800 --> 1:40:34.960
+ of our own minds and we have to create these next level organisms like AI systems that would be able
+
+1:40:34.960 --> 1:40:40.880
+ to understand much deeper, like really understand what it means to live in a multi dimensional
+
+1:40:40.880 --> 1:40:45.040
+ world that's outside of the four dimensions of three of space and one of time.
+
+1:40:45.040 --> 1:40:48.960
+ Yeah, translation. And generally, we can deal with the world, even if you don't understand
+
+1:40:48.960 --> 1:40:53.840
+ all the details, we can use computers, even though we don't, most of us don't know all the
+
+1:40:53.840 --> 1:40:57.920
+ structures underneath or drive a car. I mean, there are many components, especially new cars
+
+1:40:57.920 --> 1:41:02.480
+ that you don't quite fully know, but you have the interface, you have an abstraction of it
+
+1:41:02.480 --> 1:41:08.000
+ that allows you to operate it and utilize it. And I think that that's, that's perfectly adequate
+
+1:41:08.000 --> 1:41:11.760
+ and we can build on it and AI can be a play a similar role.
+
+1:41:13.440 --> 1:41:20.000
+ I have to ask about beautiful artificial life systems or evolution, computation systems,
+
+1:41:20.800 --> 1:41:26.400
+ cellular automata to me, like, I remember it was as a game changer for me early on in life.
+
+1:41:26.400 --> 1:41:35.200
+ When I saw Conway's game of life, who recently passed away, unfortunately, it's beautiful
+
+1:41:36.480 --> 1:41:43.680
+ how much complexity can emerge from such simple rules. I just don't, somehow that simplicity
+
+1:41:44.320 --> 1:41:49.920
+ is such a powerful illustration and also humbling because it feels like I personally,
+
+1:41:49.920 --> 1:41:57.680
+ from my perspective, understand almost nothing about this world because my intuition fails
+
+1:41:57.680 --> 1:42:02.480
+ completely how complexity can emerge from such simplicity. My intuition fails, I think,
+
+1:42:02.480 --> 1:42:10.400
+ is the biggest problem I have. Do you find systems like that beautiful? Do you think about
+
+1:42:10.400 --> 1:42:16.400
+ cellular automata? Because cellular automata don't really have, in many other artificial
+
+1:42:16.400 --> 1:42:20.880
+ life systems, don't necessarily have an objective? Maybe, maybe that's a wrong way to say it.
+
+1:42:21.840 --> 1:42:30.080
+ It's almost like it's just evolving and creating. And there's not even a good definition of what
+
+1:42:30.080 --> 1:42:35.600
+ it means to create something complex and interesting and surprising, all those words that you said.
+
+1:42:37.840 --> 1:42:40.960
+ Is there some of those systems that you find beautiful?
+
+1:42:40.960 --> 1:42:48.560
+ Yeah, yeah. And similarly, evolution does not have a goal. It is responding to a current situation
+
+1:42:49.360 --> 1:42:55.040
+ and survival then creates more complexity. And therefore, we have something that we perceive
+
+1:42:55.040 --> 1:43:02.560
+ as progress. But that's not what evolution is inherently said to do. And yeah, that's really
+
+1:43:02.560 --> 1:43:13.280
+ fascinating how a simple set of rules or simple mappings from such simple mappings, complexity
+
+1:43:13.280 --> 1:43:19.840
+ can emerge. So it's a question of emergence and self organization. And the game of life is one of
+
+1:43:19.840 --> 1:43:26.400
+ the simplest ones and very visual. And therefore, it drives home the point that it's possible,
+
+1:43:26.400 --> 1:43:35.760
+ that nonlinear interactions and this kind of complexity can emerge from them. And biology
+
+1:43:35.760 --> 1:43:41.200
+ and evolution is along the same lines. We have simple representations. DNA, if you really think
+
+1:43:41.200 --> 1:43:46.720
+ of it, it's not that complex. It's a long sequence of them. There's lots of them, but it's a very
+
+1:43:46.720 --> 1:43:51.840
+ simple representation. And similarly, evolution computation, whatever string or tree representation
+
+1:43:51.840 --> 1:43:59.440
+ we have and the operations, the amount of code that's required to manipulate those is really,
+
+1:43:59.440 --> 1:44:05.600
+ really little. And of course, game of life, even less. So how complexity emerges from such simple
+
+1:44:05.600 --> 1:44:12.000
+ principles, that's absolutely fascinating. The challenge is to be able to control it and guide
+
+1:44:12.000 --> 1:44:18.560
+ it and direct it so that it becomes useful. And like game of life is fascinating to look at and
+
+1:44:18.560 --> 1:44:23.360
+ evolution, all the forms that come out is fascinating. But can we actually make it useful
+
+1:44:23.360 --> 1:44:28.320
+ for us? And efficient, because if you actually think about each of the cells in the game of
+
+1:44:28.320 --> 1:44:33.280
+ life as a living organism, there's a lot of death that has to happen to create anything
+
+1:44:33.280 --> 1:44:38.720
+ interesting. And so I guess the questions for us humans that are mortal and then life ends quickly,
+
+1:44:38.720 --> 1:44:46.240
+ we want to kind of hurry up and make sure we make sure we take evolution, the trajectory that is a
+
+1:44:46.240 --> 1:44:50.800
+ little bit more efficient than the alternatives. And that touches upon something we talked about
+
+1:44:50.800 --> 1:44:56.960
+ earlier, that evolution computation is very impatient. We have a goal, we want it right away
+
+1:44:56.960 --> 1:45:03.920
+ versus biology has a lot of time and deep time and weak pressure and large populations.
+
+1:45:04.560 --> 1:45:12.320
+ One great example of this is the novelty search. So evolution computation, where you don't actually
+
+1:45:12.320 --> 1:45:18.880
+ specify a fitness goal, something that is your actual thing that you want, but you just reward
+
+1:45:18.880 --> 1:45:24.960
+ solutions that are different from what you've seen before. Nothing else. And you know what,
+
+1:45:24.960 --> 1:45:28.160
+ you actually discover things that are interesting and useful that way.
+
+1:45:29.040 --> 1:45:33.840
+ Gensutami and Joel Lehmann did this one study where they actually tried to evolve walking
+
+1:45:33.840 --> 1:45:38.160
+ behavior on robots. And that's actually, we talked about earlier, where your robot actually
+
+1:45:38.160 --> 1:45:43.040
+ failed in all kinds of ways and eventually discovered something that was very efficient walk.
+
+1:45:43.760 --> 1:45:49.760
+ And it was because they rewarded things that were different that you were able to discover
+
+1:45:49.760 --> 1:45:55.200
+ something. And I think that this is crucial, because in order to be really different from what
+
+1:45:55.200 --> 1:45:59.840
+ you already have, you have to utilize what is there in the domain to create something really
+
+1:45:59.840 --> 1:46:07.280
+ different. So you have encoded the fundamentals of your world, and then you make changes to those
+
+1:46:07.280 --> 1:46:12.560
+ fundamentals you get further away. So that's probably what's happening in these systems of
+
+1:46:12.560 --> 1:46:19.440
+ emergence, that the fundamentals are there. And when you follow those fundamentals, you get into
+
+1:46:19.440 --> 1:46:24.560
+ points, and some of those are actually interesting and useful. Now, even in that robotic walker
+
+1:46:24.560 --> 1:46:30.640
+ simulation, there was a large set of garbage. But among them, there were some of these, you know,
+
+1:46:30.640 --> 1:46:35.680
+ gems. And then those are the ones that somehow you have to outside recognize and make useful.
+
+1:46:35.680 --> 1:46:40.080
+ But these kind of productive systems, if you code them the right kind of principles,
+
+1:46:40.720 --> 1:46:46.480
+ I think that they that encode the structure of the domain, then you will get to these solutions
+
+1:46:46.480 --> 1:46:52.800
+ and you discover it. It feels like that might also be a good way to live life. So let me ask,
+
+1:46:53.920 --> 1:47:00.160
+ do you have advice for young people today about how to live life or how to succeed in their career,
+
+1:47:00.160 --> 1:47:08.640
+ or forget career, just succeed in life from an evolutionary computation perspective?
+
+1:47:08.640 --> 1:47:18.720
+ Yes. Yes, definitely. Explore, diversity, exploration. And individuals take classes in
+
+1:47:19.280 --> 1:47:26.480
+ music, history, philosophy, you know, math, engineering, see connections between them,
+
+1:47:26.480 --> 1:47:32.720
+ travel, you know, learn a language. I mean, all this diversity is fascinating. And we have it
+
+1:47:32.720 --> 1:47:38.640
+ at our fingertips today. It's possible. You have to make a bit of an effort because it's not easy.
+
+1:47:39.520 --> 1:47:44.960
+ But the rewards are wonderful. Yeah, there's something interesting about an objective function
+
+1:47:44.960 --> 1:47:54.000
+ of new experiences. So try to figure out, I mean, what is the maximally new experience I could have
+
+1:47:54.000 --> 1:48:00.880
+ today? So that novelty, optimizing for novelty for some period of time, might be a very interesting
+
+1:48:00.880 --> 1:48:08.720
+ way to sort of maximally expand the sets of experiences you had and then ground from that
+
+1:48:08.720 --> 1:48:15.040
+ perspective, like what you will be the most fulfilling trajectory through life. Of course,
+
+1:48:15.040 --> 1:48:22.000
+ the flip side of that is where I come from. Again, maybe Russian, I don't know. But the choice has
+
+1:48:22.000 --> 1:48:32.560
+ a choice is a has a detrimental effect, I think, from, at least from my mind, where scarcity
+
+1:48:32.560 --> 1:48:41.760
+ is an has an empowering effect. So if I sort of, if I have very little of something and only one
+
+1:48:41.760 --> 1:48:49.120
+ of that something, I will appreciate it deeply. Until I came to Texas recently, and I've been
+
+1:48:49.120 --> 1:48:53.760
+ picking out on delicious, incredible meat, I've been fasting a lot. So I need to do that again.
+
+1:48:53.760 --> 1:49:02.560
+ But when you fast for a few days, that the first taste of a food is incredible. So the downside
+
+1:49:02.560 --> 1:49:13.360
+ of exploration is that somehow, maybe you can correct me, but somehow you don't get to experience
+
+1:49:13.360 --> 1:49:20.080
+ deeply any one of the particular moments. But that could be a psychology thing. That could be
+
+1:49:20.080 --> 1:49:26.960
+ just a very human peculiar flaw. Yeah, I didn't mean that you superficially explore. I mean, you
+
+1:49:26.960 --> 1:49:33.120
+ can explore deeply. Yeah. So you don't have to explore 100 things, but maybe a few topics where
+
+1:49:33.120 --> 1:49:41.840
+ you can take a deep enough time dive that you gain an understanding yourself have to decide
+
+1:49:41.840 --> 1:49:49.600
+ at some point that this is deep enough. And I obtained what I can from this topic. And now
+
+1:49:49.600 --> 1:49:57.120
+ it's time to move on. And that might take years. People sometimes switch careers, and they may
+
+1:49:57.120 --> 1:50:02.720
+ stay on some career for decade and switch to another one. You can do it. You're not pretty
+
+1:50:02.720 --> 1:50:09.520
+ determined to stay where you are. But, you know, in order to achieve something, you know, 10,000
+
+1:50:09.520 --> 1:50:14.720
+ hours makes you need 10,000 hours to become an expert on something. So you don't have to become
+
+1:50:14.720 --> 1:50:19.120
+ an expert, but they even develop an understanding and gain the experience that you can use later.
+
+1:50:19.120 --> 1:50:23.120
+ You probably have to spend, like I said, it's not easy. You got to spend some effort on it.
+
+1:50:24.240 --> 1:50:29.120
+ Now, also at some point, then, when you have this diversity and you have these experiences,
+
+1:50:29.120 --> 1:50:34.720
+ exploration, you may want to, you may find something that you can't stay away from.
+
+1:50:34.720 --> 1:50:41.200
+ Like, for us, it was computers. It was AI. It was, you know, that you, I just have to do it,
+
+1:50:41.200 --> 1:50:46.400
+ you know. And I, you know, and then it will take decades, maybe, and you are pursuing it,
+
+1:50:46.400 --> 1:50:51.120
+ because you figure it out that this is really exciting, and you can bring in your experiences.
+
+1:50:51.120 --> 1:50:54.800
+ And there's nothing wrong with that either. But you asked, what's the advice for young people?
+
+1:50:55.680 --> 1:51:01.360
+ That's the exploration part. And then beyond that, after that exploration, you actually can focus
+
+1:51:01.360 --> 1:51:07.120
+ and build a career. And, you know, even there, you can switch multiple times. But I think the
+
+1:51:07.120 --> 1:51:13.600
+ diversity exploration is fundamental to having a successful career, as is concentration and
+
+1:51:13.600 --> 1:51:19.120
+ spending the effort where it matters. But you are in better position to make the choice when you
+
+1:51:19.120 --> 1:51:26.640
+ have done your homework. Exploration precedes commitment, but both are beautiful. So again,
+
+1:51:26.640 --> 1:51:32.320
+ from an evolutionary computation perspective, we'll look at all the agents that had to die
+
+1:51:32.320 --> 1:51:39.120
+ in order to come up with different solutions in simulation. What do you think, from that individual
+
+1:51:39.120 --> 1:51:44.160
+ agent's perspective, is the meaning of it all? So for us humans, you're just one agent who's going
+
+1:51:44.160 --> 1:51:53.600
+ to be dead, unfortunately, one day too soon. What do you think is the why, of why that agent came
+
+1:51:53.600 --> 1:52:02.000
+ to be and eventually will be no more? Is there meaning to it all? Yeah. In evolution, there is
+
+1:52:02.000 --> 1:52:09.760
+ meaning. Everything is a potential direction. Everything is a potential stepping stone. Not
+
+1:52:09.760 --> 1:52:17.680
+ all of them are going to work out. Some of them are foundations for further improvement. And even
+
+1:52:17.680 --> 1:52:24.240
+ those that are perhaps going to die out, where potential lineages, potential solutions,
+
+1:52:25.360 --> 1:52:29.840
+ in biology, we see a lot of species die off naturally, like the dinosaurs. I mean,
+
+1:52:29.840 --> 1:52:34.400
+ they have a really good solution for a while, but then it didn't turn out to be not such a
+
+1:52:35.200 --> 1:52:40.480
+ good solution in the long term. When there's an environmental change, you have to have diversity,
+
+1:52:40.480 --> 1:52:45.520
+ some other solutions become better. It doesn't mean that there was an attempt. It didn't quite
+
+1:52:45.520 --> 1:52:51.680
+ work out or last, but there are still dinosaurs among us, at least their relatives. And they may
+
+1:52:51.680 --> 1:52:57.440
+ one day again be useful. Who knows? So from an individual's perspective, you've got to think
+
+1:52:57.440 --> 1:53:06.400
+ of a bigger picture that it is a huge engine that is innovative. And these elements are all part of
+
+1:53:06.400 --> 1:53:14.800
+ it, potential innovations on their own and also as raw material, perhaps, or stepping stones for
+
+1:53:14.800 --> 1:53:19.680
+ other things that could come after. But it still feels from an individual perspective that I matter
+
+1:53:19.680 --> 1:53:27.200
+ a lot. But even if I'm just a little cog in the giant machine, well, is that just a silly human
+
+1:53:27.200 --> 1:53:33.920
+ notion in an individualistic society? And they should let go of that? Do you find beauty in
+
+1:53:33.920 --> 1:53:41.120
+ being part of the giant machine? Yeah, I think it's meaningful. I think it adds purpose to your
+
+1:53:41.120 --> 1:53:49.760
+ life that you are part of something bigger. That said, do you ponder your individual agent's
+
+1:53:49.760 --> 1:53:59.040
+ mortality? Do you think about death? Do you fear death? Well, certainly more now than when I was a
+
+1:54:00.080 --> 1:54:06.560
+ youngster and did skydiving and perk lighting and all these things. You've become wiser.
+
+1:54:06.560 --> 1:54:17.520
+ There is a reason for this life arc that younger folks are more fearless in many ways. It's part
+
+1:54:17.520 --> 1:54:25.200
+ of the exploration. They are the individuals who think, I wonder what's over those mountains or
+
+1:54:25.200 --> 1:54:30.880
+ what if I go really far in that ocean? What would I find? I mean, older folks don't necessarily
+
+1:54:30.880 --> 1:54:38.160
+ think that way, but younger do. And it's kind of counterintuitive. But logically, it's like,
+
+1:54:38.960 --> 1:54:42.960
+ you have limited amount of time. What can you do with it that matters? So you try to,
+
+1:54:43.840 --> 1:54:49.280
+ you have done your exploration, you committed to certain direction, and you become an expert,
+
+1:54:49.280 --> 1:54:55.520
+ perhaps, in it. What can I do that matters with the limited resources that I have?
+
+1:54:55.520 --> 1:55:01.680
+ That's how I think a lot of people, myself included, start thinking later on in their career.
+
+1:55:02.400 --> 1:55:07.840
+ And like you said, leave a bit of a trace and a bit of an impact even though after the agent is
+
+1:55:07.840 --> 1:55:14.080
+ gone. Yeah, that's the goal. Well, this was a fascinating conversation. I don't think there's
+
+1:55:14.080 --> 1:55:20.240
+ a better way to end it. Thank you so much. So first of all, I'm very inspired of how vibrant the
+
+1:55:20.240 --> 1:55:27.200
+ community at UT Austin in Austin is. It's really exciting for me to see it. And this whole field
+
+1:55:27.760 --> 1:55:32.880
+ seems like profound philosophically, but also the path forward for the artificial intelligence
+
+1:55:32.880 --> 1:55:37.680
+ community. So thank you so much for explaining so many cool things to me today, and for wasting
+
+1:55:37.680 --> 1:55:43.120
+ all of your valuable time with me. Oh, it was a pleasure. Thanks. I appreciate it. Thanks for
+
+1:55:43.120 --> 1:55:48.640
+ listening to this conversation with Rhisto McAlignan. And thank you to the Jordan Harbinger show,
+
+1:55:48.640 --> 1:55:54.720
+ Grammarly, Bell Campo, and Indeed. Check them out in the description to support this podcast.
+
+1:55:55.520 --> 1:56:03.120
+ And now let me leave you some words from Carl Sagan. Extinction is the rule. Survival is the
+
+1:56:03.120 --> 1:56:19.600
+ exception. Thank you for listening. I hope to see you next time.
+

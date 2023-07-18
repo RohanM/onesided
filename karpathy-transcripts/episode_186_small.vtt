@@ -1,0 +1,6338 @@
+WEBVTT
+
+00:00.000 --> 00:04.920
+ The following is a conversation with Brian Johnson, founder of Colonel, a company that
+
+00:04.920 --> 00:09.160
+ has developed devices that can monitor and record brain activity.
+
+00:09.160 --> 00:14.760
+ And previously, he was the founder of BrainTree, a mobile payment company that acquired Venmo
+
+00:14.760 --> 00:18.040
+ and then was acquired by PayPal and eBay.
+
+00:18.040 --> 00:24.440
+ Quick mention of our sponsors, ForSigmatic, NetSuite, Grammarly, and ExpressVPN.
+
+00:24.440 --> 00:27.200
+ Check them out in the description to support this podcast.
+
+00:27.200 --> 00:32.520
+ As a side note, let me say that this was a fun and memorable experience, wearing the
+
+00:32.520 --> 00:36.800
+ kernel flow brain interface in the beginning of this conversation, as you can see if you
+
+00:36.800 --> 00:39.840
+ watched the video version of this episode.
+
+00:39.840 --> 00:44.920
+ And there's a Ubuntu Linux machine sitting next to me collecting the data from my brain.
+
+00:44.920 --> 00:50.280
+ The whole thing gave me hope that the mystery of the human mind will be unlocked in the
+
+00:50.280 --> 00:55.480
+ coming decades, as we begin to measure signals from the brain in a high bandwidth way.
+
+00:55.480 --> 01:00.360
+ To understand the mind, we either have to build it or to measure it.
+
+01:00.360 --> 01:02.360
+ Both are worth a try.
+
+01:02.360 --> 01:06.440
+ Thanks to Brian and the rest of the kernel team for making this little demo happen.
+
+01:06.440 --> 01:13.320
+ This is the Lex Friedman podcast, and here is my conversation with Brian Johnson.
+
+01:13.320 --> 01:14.320
+ You ready, Lex?
+
+01:14.320 --> 01:15.320
+ Yes, I'm ready.
+
+01:15.320 --> 01:18.960
+ Do you guys want to come in and put the interfaces on our heads?
+
+01:18.960 --> 01:22.120
+ And then I will proceed to tell you a few jokes.
+
+01:22.120 --> 01:29.760
+ So we have two incredible pieces of technology and a machine running Ubuntu 20.04 in front
+
+01:29.760 --> 01:30.760
+ of us.
+
+01:30.760 --> 01:31.760
+ What are we doing?
+
+01:31.760 --> 01:32.760
+ All right.
+
+01:32.760 --> 01:33.760
+ Are these going on our heads?
+
+01:33.760 --> 01:34.760
+ They're going on our heads, yeah.
+
+01:34.760 --> 01:42.040
+ And they will place it on our heads for proper alignment.
+
+01:42.040 --> 01:43.360
+ Does this support giant heads?
+
+01:43.360 --> 01:45.360
+ Because I kind of have a giant head.
+
+01:45.360 --> 01:46.920
+ Is this just giant heads?
+
+01:46.920 --> 01:52.680
+ As like an ego or are you saying physically both?
+
+01:52.680 --> 01:58.400
+ It's a nice massage.
+
+01:58.400 --> 02:00.400
+ Yes.
+
+02:00.400 --> 02:03.720
+ Okay, how does this feel?
+
+02:03.720 --> 02:05.800
+ It's okay to move around?
+
+02:05.800 --> 02:07.200
+ It feels, oh yeah.
+
+02:07.200 --> 02:08.440
+ This feels awesome.
+
+02:08.440 --> 02:13.000
+ It's a pretty good fit.
+
+02:13.000 --> 02:14.000
+ Thank you.
+
+02:14.000 --> 02:15.760
+ That feels good.
+
+02:15.760 --> 02:17.200
+ So this is big head friendly.
+
+02:17.200 --> 02:19.280
+ It suits you well, Lex.
+
+02:19.280 --> 02:20.280
+ Thank you.
+
+02:20.280 --> 02:27.320
+ I feel like I need to, I feel like when I wear this, I need to sound like Sam Harris.
+
+02:27.320 --> 02:31.800
+ Calm, collected, eloquent.
+
+02:31.800 --> 02:34.120
+ I feel smarter actually.
+
+02:34.120 --> 02:38.880
+ I don't think I've ever felt quite as much like I'm part of the future as now.
+
+02:38.880 --> 02:42.440
+ Have you ever worn a brain interface or had your brain imaged?
+
+02:42.440 --> 02:45.600
+ Oh, never had my brain imaged.
+
+02:45.600 --> 02:52.400
+ The only way I've analyzed my brain is by talking to myself and thinking.
+
+02:52.400 --> 02:53.400
+ No direct data.
+
+02:53.400 --> 02:54.400
+ Yeah.
+
+02:54.400 --> 02:58.960
+ That is definitely a brain interface that has a lot of blind spots.
+
+02:58.960 --> 03:01.520
+ It has some blind spots, yeah.
+
+03:01.520 --> 03:02.520
+ Psychotherapy.
+
+03:02.520 --> 03:03.520
+ That's right.
+
+03:03.520 --> 03:04.520
+ All right.
+
+03:04.520 --> 03:05.520
+ Are we recording?
+
+03:05.520 --> 03:06.520
+ Yeah.
+
+03:06.520 --> 03:07.520
+ We're good.
+
+03:07.520 --> 03:08.520
+ All right.
+
+03:08.520 --> 03:17.760
+ So, Lex, the objective of this, I'm going to tell you some jokes and your objective
+
+03:17.760 --> 03:23.200
+ is to not smile, which as a Russian, you should have an edge.
+
+03:23.200 --> 03:24.480
+ Make the mother line proud.
+
+03:24.480 --> 03:25.480
+ I got you.
+
+03:25.480 --> 03:26.480
+ Okay.
+
+03:26.480 --> 03:29.440
+ Let's hear the jokes.
+
+03:29.440 --> 03:34.080
+ Lex, and this is from the Colonel crew.
+
+03:34.080 --> 03:38.480
+ We've been working on a device that can read your mind and we would love to see your thoughts.
+
+03:38.480 --> 03:44.120
+ Is that the joke?
+
+03:44.120 --> 03:45.120
+ That's the opening.
+
+03:45.120 --> 03:50.120
+ Okay.
+
+03:50.120 --> 03:54.440
+ If I'm seeing the muscle activation correctly on your lips, you're not going to do well
+
+03:54.440 --> 03:55.440
+ on this.
+
+03:55.440 --> 03:56.440
+ Let's see.
+
+03:56.440 --> 03:57.440
+ All right.
+
+03:57.440 --> 03:58.440
+ Here comes the first one.
+
+03:58.440 --> 03:59.440
+ I'm screwed.
+
+03:59.440 --> 04:00.440
+ Here comes the first one.
+
+04:00.440 --> 04:01.440
+ Is this going to break the device?
+
+04:01.440 --> 04:05.480
+ Is it resilient to laughter?
+
+04:05.480 --> 04:14.280
+ Lex, what goes through a potato's brain?
+
+04:14.280 --> 04:15.960
+ I got really failed.
+
+04:15.960 --> 04:17.640
+ That's the hilarious opener.
+
+04:17.640 --> 04:18.640
+ Okay.
+
+04:18.640 --> 04:19.640
+ What?
+
+04:19.640 --> 04:24.200
+ Tater thoughts.
+
+04:24.200 --> 04:27.720
+ What kind of fish performs brain surgery?
+
+04:27.720 --> 04:29.000
+ I don't know.
+
+04:29.000 --> 04:33.520
+ A neural surgeon.
+
+04:33.520 --> 04:35.720
+ Okay.
+
+04:35.720 --> 04:39.280
+ And so we're getting data of everything that's happening in my brain right now?
+
+04:39.280 --> 04:40.280
+ Lifetime.
+
+04:40.280 --> 04:41.280
+ Yeah.
+
+04:41.280 --> 04:44.120
+ We're getting activation patterns of your entire cortex.
+
+04:44.120 --> 04:46.240
+ I'm going to try to do better.
+
+04:46.240 --> 04:49.160
+ I'll edit out all the parts where I left in Photoshop.
+
+04:49.160 --> 04:50.720
+ You have a serious face over me.
+
+04:50.720 --> 04:51.720
+ You can recover.
+
+04:51.720 --> 04:52.720
+ Yeah.
+
+04:52.720 --> 04:53.720
+ All right.
+
+04:53.720 --> 04:56.960
+ Lex, what do scholars eat when they're hungry?
+
+04:56.960 --> 04:58.960
+ I don't know what.
+
+04:58.960 --> 05:03.720
+ Yeah, nuts.
+
+05:03.720 --> 05:05.960
+ That's pretty good.
+
+05:05.960 --> 05:16.440
+ So what we'll do is, so you're wearing kernel flow, which is an interface built using technology
+
+05:16.440 --> 05:17.800
+ called spectroscopy.
+
+05:17.800 --> 05:22.400
+ So it's similar to what we wear wearables on the wrist using light.
+
+05:22.400 --> 05:25.040
+ So using light as you know.
+
+05:25.040 --> 05:30.440
+ And we're using that to image the functional imaging of brain activity.
+
+05:30.440 --> 05:37.080
+ And so as your neurons fire, electrically and chemically, it creates blood oxygenation
+
+05:37.080 --> 05:38.080
+ levels.
+
+05:38.080 --> 05:39.080
+ We're measuring that.
+
+05:39.080 --> 05:42.040
+ And so when you'll see in the reconstructions we do for you, you'll see your activation
+
+05:42.040 --> 05:45.920
+ patterns on your brain as throughout this entire time we are wearing it.
+
+05:45.920 --> 05:52.240
+ So in the reaction to the jokes and as we were sitting here talking, and so it's a, we're
+
+05:52.240 --> 05:57.040
+ moving towards a real time feed of your cortical brain activity.
+
+05:57.040 --> 06:02.400
+ So there's a bunch of things that are in contact with my skull right now.
+
+06:02.400 --> 06:03.840
+ How many of them are there?
+
+06:03.840 --> 06:06.040
+ And so how many of them are, what are they?
+
+06:06.040 --> 06:07.280
+ What are the actual sensors?
+
+06:07.280 --> 06:14.080
+ There's 52 modules and each module has one laser and six sensors.
+
+06:14.080 --> 06:18.720
+ And they're the sensors fire in about 100 picoseconds.
+
+06:18.720 --> 06:23.440
+ And then the photons scatter and absorb in your brain and then a few go in, a few come
+
+06:23.440 --> 06:28.320
+ back out, a bunch go in, then a few come back out and we sense those photons and then we
+
+06:28.320 --> 06:30.720
+ do the reconstruction for the activity.
+
+06:30.720 --> 06:35.800
+ Overall there's about a thousand plus channels that are sampling your activity.
+
+06:35.800 --> 06:38.840
+ How difficult is it to make it as comfortable as it is?
+
+06:38.840 --> 06:40.680
+ Because it's surprisingly comfortable.
+
+06:40.680 --> 06:44.600
+ I would not think it would be comfortable.
+
+06:44.600 --> 06:50.200
+ Yeah, it's measuring brain activity, I would not think it would be comfortable, but it
+
+06:50.200 --> 06:51.200
+ is.
+
+06:51.200 --> 06:52.200
+ I agree.
+
+06:52.200 --> 06:53.200
+ In fact, I want to take this home.
+
+06:53.200 --> 06:54.200
+ Yeah.
+
+06:54.200 --> 06:55.200
+ Yeah, that's right.
+
+06:55.200 --> 07:01.720
+ So people are accustomed to being in big systems like fMRI where there's 120 decibels
+
+07:01.720 --> 07:09.360
+ sounds and you're in a claustrophobic encasement or EEG which is just painful or surgery.
+
+07:09.360 --> 07:14.360
+ And so yes, I agree that this is a convenient option to be able to just put on your head
+
+07:14.360 --> 07:18.040
+ and measure your brain activity in the contextual environment you choose.
+
+07:18.040 --> 07:22.000
+ So if we want to have it during a podcast or if we want to be at home in a business
+
+07:22.000 --> 07:28.160
+ setting, it's freedom to be aware, to record your brain activity in the setting that you
+
+07:28.160 --> 07:29.160
+ choose.
+
+07:29.160 --> 07:33.520
+ Yeah, but sort of from an engineering perspective, are these, what is it, there's a bunch of
+
+07:33.520 --> 07:39.680
+ different modular parts and there's like a rubber band thing where they mold to the
+
+07:39.680 --> 07:40.960
+ shape of your head.
+
+07:40.960 --> 07:41.960
+ That's right.
+
+07:41.960 --> 07:48.520
+ So we built this, this version of the mechanical design to accommodate most adult heads.
+
+07:48.520 --> 07:51.800
+ But I have a giant head and it fits fine.
+
+07:51.800 --> 07:53.920
+ It fits well actually.
+
+07:53.920 --> 07:57.240
+ So I don't think I have an average head.
+
+07:57.240 --> 08:01.840
+ Okay, maybe I feel much better about my head now.
+
+08:01.840 --> 08:05.680
+ Maybe I'm more average than I thought.
+
+08:05.680 --> 08:10.800
+ Okay, so what else is there, interesting you could say while it's on our heads.
+
+08:10.800 --> 08:12.120
+ I can keep this on the whole time.
+
+08:12.120 --> 08:13.600
+ This is kind of awesome.
+
+08:13.600 --> 08:18.240
+ And it's amazing for me as a fan of Ubuntu, I use Ubuntu Mate, you guys should use that
+
+08:18.240 --> 08:19.240
+ too.
+
+08:19.240 --> 08:26.160
+ But it's amazing to have code running to the side measuring stuff and collecting data.
+
+08:26.160 --> 08:32.600
+ I mean, I just, I feel like much more important now that my data is being recorded.
+
+08:32.600 --> 08:37.000
+ Like somebody care, like, you know, when you have a good friend that listens to you that
+
+08:37.000 --> 08:42.360
+ actually like listens, like actually is listening to you, this is what I feel like, like a much
+
+08:42.360 --> 08:47.320
+ better friend because it's like accurately listening to me, Ubuntu.
+
+08:47.320 --> 08:49.080
+ What a cool perspective.
+
+08:49.080 --> 08:59.360
+ I hadn't thought about that of feeling understood, heard deeply by the mechanical system that
+
+08:59.360 --> 09:04.640
+ is recording your brain activity versus the human that you're engaging with, that your
+
+09:04.640 --> 09:11.640
+ mind immediately goes to that there's this dimensionality in depth of understanding of
+
+09:11.640 --> 09:14.720
+ this software system, which you're intimately familiar with.
+
+09:14.720 --> 09:19.160
+ And now you're able to communicate with this system in ways that you couldn't before.
+
+09:19.160 --> 09:22.320
+ Yeah, I feel heard.
+
+09:22.320 --> 09:28.920
+ Yeah, I mean, I guess what's interesting about this is your intuitions are spot on.
+
+09:28.920 --> 09:32.800
+ Most people have intuitions about brainer faces that they've grown up with this idea
+
+09:32.800 --> 09:38.120
+ of people moving cursors on the screen or typing or changing the channel or skipping
+
+09:38.120 --> 09:39.120
+ a song.
+
+09:39.120 --> 09:42.120
+ It's primarily been anchored on control.
+
+09:42.120 --> 09:47.720
+ And I think the more relevant understanding of brain interfaces or neural imaging is that
+
+09:47.720 --> 09:50.080
+ it's a measurement system.
+
+09:50.080 --> 09:54.840
+ And once you have numbers for a given thing, a seemingly endless number of possibilities
+
+09:54.840 --> 09:57.880
+ emerge around that of what to do with those numbers.
+
+09:57.880 --> 10:01.480
+ So before you tell me about the possibilities, this was an incredible experience.
+
+10:01.480 --> 10:09.120
+ I can keep this on for another two hours, but I'm being told that for a bunch of reasons,
+
+10:09.120 --> 10:12.960
+ just because we probably want to keep the data small and visualize it nicely for the
+
+10:12.960 --> 10:17.840
+ final product, we want to cut this off and take this take this amazing helmet away from
+
+10:17.840 --> 10:18.840
+ me.
+
+10:18.840 --> 10:21.320
+ So, Brian, thank you so much for this experience.
+
+10:21.320 --> 10:25.200
+ And let's let's continue without helmet lists.
+
+10:25.200 --> 10:26.200
+ All right.
+
+10:26.200 --> 10:29.000
+ So that was an incredible experience.
+
+10:29.000 --> 10:33.320
+ Can you maybe speak to what kind of opportunities that opens up that stream of data, that rich
+
+10:33.320 --> 10:35.160
+ stream of data from the brain?
+
+10:35.160 --> 10:39.120
+ First, I'm curious, what is your reaction?
+
+10:39.120 --> 10:41.640
+ What comes to mind when you put that on your head?
+
+10:41.640 --> 10:42.920
+ What does it mean to you?
+
+10:42.920 --> 10:44.320
+ And what possibilities emerge?
+
+10:44.320 --> 10:46.720
+ And what significance might it have?
+
+10:46.720 --> 10:50.160
+ I'm curious where your orientation is at.
+
+10:50.160 --> 10:59.800
+ Well, for me, I'm really excited by the possibility of various information about my body, about
+
+10:59.800 --> 11:06.560
+ my mind being converted into data such that data can be used to create products that make
+
+11:06.560 --> 11:07.560
+ my life better.
+
+11:07.560 --> 11:10.000
+ So that to me is really exciting possibility.
+
+11:10.000 --> 11:14.920
+ Even just like a Fitbit that measures, I don't know, some very basic measurements about
+
+11:14.920 --> 11:17.240
+ your body is really cool.
+
+11:17.240 --> 11:22.640
+ But it's the bandwidth of information, the resolution of that information is very crude.
+
+11:22.640 --> 11:24.000
+ So it's not very interesting.
+
+11:24.000 --> 11:31.560
+ The possibility of recording, of just building a data set coming in a clean way and a high
+
+11:31.560 --> 11:40.000
+ bandwidth way from my brain opens up all kinds of, you know, at the very, I was kind of joking
+
+11:40.000 --> 11:47.040
+ when we're talking, but it's not really is like, I feel heard in the sense that it feels
+
+11:47.040 --> 11:54.120
+ like the full richness of the information coming from my mind is actually being recorded
+
+11:54.120 --> 11:56.000
+ by the machine.
+
+11:56.000 --> 12:01.760
+ I mean, there's a, I can't, I can't quite put it into words, but there is a genuinely
+
+12:01.760 --> 12:06.360
+ for me, there's not some kind of joke about me being a robot is just genuinely feels like
+
+12:06.360 --> 12:15.160
+ I'm being heard in a way that that's going to improve my life as long as the thing that's
+
+12:15.160 --> 12:17.800
+ on the other end can do something useful with that data.
+
+12:17.800 --> 12:25.560
+ But even the recording itself is like, once you record, it's like taking a picture.
+
+12:25.560 --> 12:28.520
+ That moment is forever saved in time.
+
+12:28.520 --> 12:37.800
+ Now picture cannot allow you to step back into that world, but perhaps recording your
+
+12:37.800 --> 12:44.640
+ brain is a much higher resolution thing, much more personal recording of that information
+
+12:44.640 --> 12:51.360
+ than a picture that would allow you to step back into that, where you were in that particular
+
+12:51.360 --> 12:57.760
+ moment in history and then map out a certain trajectory to tell you certain things about,
+
+12:57.760 --> 13:00.400
+ about yourself that could open up all kinds of applications.
+
+13:00.400 --> 13:05.040
+ Of course, there's health that I consider, but honestly, to me, the exciting thing is
+
+13:05.040 --> 13:06.640
+ just being heard.
+
+13:06.640 --> 13:11.000
+ My state of mind, the level of focus, all those kinds of things being heard.
+
+13:11.000 --> 13:16.400
+ What I heard you say is you have an entirety of lived experience, some of which you can
+
+13:16.400 --> 13:21.880
+ communicate in words and in body language, some of which you feel internally, which cannot
+
+13:21.880 --> 13:27.560
+ be captured in those communication modalities and that this measurement system captures
+
+13:27.560 --> 13:31.440
+ both the things you can try to articulate in words, maybe in a lower dimensional space
+
+13:31.440 --> 13:35.640
+ using one word, for example, to communicate focus when it really may be represented in
+
+13:35.640 --> 13:41.320
+ a 20 dimensional space of this particular kind of focus and that this information is
+
+13:41.320 --> 13:42.320
+ being captured.
+
+13:42.320 --> 13:48.400
+ It's a closer representation to the entirety of your experience captured in a dynamic fashion
+
+13:48.400 --> 13:53.280
+ that is not just a static image of your conscious experience.
+
+13:53.280 --> 13:58.920
+ Yeah, that's the promise, that's the hope, that was the feeling and it felt like the
+
+13:58.920 --> 13:59.920
+ future.
+
+13:59.920 --> 14:01.120
+ So it was a pretty cool experience.
+
+14:01.120 --> 14:07.080
+ And from the sort of mechanical perspective, it was cool to have an actual device that
+
+14:07.080 --> 14:11.840
+ feels pretty good, that doesn't require me to go into the lab.
+
+14:11.840 --> 14:16.600
+ And also the other thing I was feeling, there's a guy named Andrew Huberman, he's a friend
+
+14:16.600 --> 14:21.800
+ of mine, amazing podcast, people should listen to a Huberman Lab podcast.
+
+14:21.800 --> 14:26.720
+ We're working on a paper together about eye movement and so on.
+
+14:26.720 --> 14:29.800
+ And we're kind of, he's a neuroscientist and I'm a data person, I'm a machine learning
+
+14:29.800 --> 14:43.000
+ person and we're both excited by how much the data measurements of the human mind, the
+
+14:43.000 --> 14:47.960
+ brain and all the different metrics that come from that can be used to understand human
+
+14:47.960 --> 14:50.600
+ beings and in a rigorous scientific way.
+
+14:50.600 --> 14:56.120
+ So the other thing I was thinking about is how this could be turned into a tool for science.
+
+14:56.120 --> 15:02.560
+ Sort of not just personal science, not just like Fitbit style, like how am I doing my
+
+15:02.560 --> 15:07.840
+ personal metrics of health, but doing larger scale studies of human behavior and so on.
+
+15:07.840 --> 15:12.800
+ So like data, not at the scale of an individual, but data at a scale of many individuals, large
+
+15:12.800 --> 15:14.800
+ number of individuals.
+
+15:14.800 --> 15:19.280
+ So it's personal being heard was exciting and also just for science is exciting.
+
+15:19.280 --> 15:24.400
+ Cause it's very easy, like there's a very powerful thing to it being so easy to just
+
+15:24.400 --> 15:28.440
+ put on that you can scale much easier.
+
+15:28.440 --> 15:38.960
+ If you think about that second thing you said about the science of the brain, most, we've
+
+15:38.960 --> 15:43.560
+ done a pretty good job, like we, the human race has done a pretty good job, figuring
+
+15:43.560 --> 15:51.440
+ out how to quantify the things around us from distant stars to calories and steps and our
+
+15:51.440 --> 15:52.440
+ genome.
+
+15:52.440 --> 15:58.360
+ So we can measure and quantify pretty much everything in the known universe except for
+
+15:58.360 --> 16:00.800
+ our minds.
+
+16:00.800 --> 16:06.560
+ And we can do these one offs if we're going to get an fMRI scan or do something with the
+
+16:06.560 --> 16:11.880
+ low res EEG system, but we haven't done this at population scale.
+
+16:11.880 --> 16:19.560
+ And so if you think about human thought or human cognition is probably the single law,
+
+16:19.560 --> 16:24.880
+ largest raw input material into society at any given moment.
+
+16:24.880 --> 16:28.160
+ It's our conversations with our, with ourselves and with other people.
+
+16:28.160 --> 16:35.400
+ And we have this, this raw input that we can't, haven't been able to measure yet.
+
+16:35.400 --> 16:42.680
+ And if you, when I think about it through that frame, it's remarkable, it's almost
+
+16:42.680 --> 16:50.440
+ like we live in this wild, wild West of unquantified communications within ourselves and between
+
+16:50.440 --> 16:53.480
+ each other when everything else has been grounded me.
+
+16:53.480 --> 16:58.760
+ For example, I know if I buy an appliance at the, at the store or on a website, I don't
+
+16:58.760 --> 17:03.200
+ need to look at the measurements on the appliance to make sure it can fit through my door.
+
+17:03.200 --> 17:07.400
+ It's an engineered system of appliance manufacturing and construction.
+
+17:07.400 --> 17:10.760
+ Everyone's agreed upon engineering standards.
+
+17:10.760 --> 17:15.440
+ And we don't have engineering standards around cognition.
+
+17:15.440 --> 17:20.480
+ It's not a, it has not entered as a formal engineering discipline that enables us to
+
+17:20.480 --> 17:26.440
+ scaffold in society with everything else we're doing, including consuming news, our relationships,
+
+17:26.440 --> 17:29.640
+ politics, economics, education, all the above.
+
+17:29.640 --> 17:36.600
+ And so to me that the most significant contribution that kernel technology has to offer would
+
+17:36.600 --> 17:43.280
+ be the formal, the introduction of the formal engineering of cognition as it relates to
+
+17:43.280 --> 17:45.240
+ everything else in society.
+
+17:45.240 --> 17:52.080
+ I love that idea that you kind of think that there is just this ocean of data that's coming
+
+17:52.080 --> 17:58.000
+ from people's brains as being in a crude way reduced down to like tweets and texts and
+
+17:58.000 --> 17:59.000
+ so on.
+
+17:59.000 --> 18:06.240
+ So it's a very hard core, many scale compression of actual, the raw data.
+
+18:06.240 --> 18:11.720
+ But maybe you can comment because you're using the word cognition.
+
+18:11.720 --> 18:15.400
+ I think the first step is to get the brain data.
+
+18:15.400 --> 18:22.200
+ But is there a leap to be taking to sort of interpreting that data in terms of cognition?
+
+18:22.200 --> 18:26.960
+ So is your, is your idea is basically you need to start collecting data at scale from
+
+18:26.960 --> 18:34.760
+ the brain and then we start to really be able to take little steps along the path to actually
+
+18:34.760 --> 18:41.600
+ measuring some deep sense of cognition because it's, you know, as I'm sure you know, we don't,
+
+18:41.600 --> 18:47.360
+ we understand a few things, but we don't understand most of what makes up cognition.
+
+18:47.360 --> 18:52.320
+ This has been one of the most significant challenges of building kernel and kernel wouldn't exist
+
+18:52.320 --> 18:57.720
+ if I wasn't able to fund it initially about myself because when I engage in conversations
+
+18:57.720 --> 19:02.940
+ with investors, the immediate thought is what is the killer app?
+
+19:02.940 --> 19:06.000
+ And of course, I understand that heuristic, that's what they're looking at is they're
+
+19:06.000 --> 19:08.160
+ looking to de risk.
+
+19:08.160 --> 19:09.720
+ Is the product solved?
+
+19:09.720 --> 19:10.800
+ Is there a customer base?
+
+19:10.800 --> 19:12.000
+ Are people willing to pay for it?
+
+19:12.000 --> 19:14.440
+ How does it compare to competing options?
+
+19:14.440 --> 19:19.080
+ And in the case with brain interfaces, when I started the company, there was no known
+
+19:19.080 --> 19:24.640
+ path to even build a technology that could potentially become mainstream.
+
+19:24.640 --> 19:28.800
+ And then once we figured out the technology, we could even we could commence having conversations
+
+19:28.800 --> 19:31.560
+ with investors and it became what is the killer app?
+
+19:31.560 --> 19:36.680
+ And so what has been, so I funded the first $53 million for the company.
+
+19:36.680 --> 19:42.920
+ And to raise the round of funding, the first one we did, I spoke to 228 investors.
+
+19:42.920 --> 19:44.920
+ One said yes.
+
+19:44.920 --> 19:49.720
+ It was remarkable and it was mostly around this concept around what is a killer app?
+
+19:49.720 --> 19:55.200
+ And so internally, the way we think about it is we think of the the go to market strategy
+
+19:55.200 --> 20:01.960
+ much more like the Drake equation, where if we can build technology that has the characteristics
+
+20:01.960 --> 20:09.760
+ of it has the data quality is high enough, it meets some certain threshold, cost, accessibility,
+
+20:09.760 --> 20:15.880
+ comfort, it can be worn in contextual environments, it meets the criteria of being a mass market
+
+20:15.880 --> 20:25.320
+ device, then the responsibility that we have is to figure out how to create the algorithm
+
+20:25.320 --> 20:32.520
+ that enables the human to enable humans to then find value with it.
+
+20:32.520 --> 20:37.760
+ So it's so the analogy is like brain interfaces are like early 90s of the Internet is you
+
+20:37.760 --> 20:41.160
+ want to populate an ecosystem with a certain number of devices, you want a certain number
+
+20:41.160 --> 20:44.520
+ of people who play around with them who do experiments of certain data collection parameters,
+
+20:44.520 --> 20:48.120
+ you want to encourage certain mistakes from experts and non experts.
+
+20:48.120 --> 20:52.000
+ These are all critical elements that ignite discovery.
+
+20:52.000 --> 20:59.800
+ And so we believe we've accomplished the first objective of building technology that reaches
+
+20:59.800 --> 21:01.960
+ those thresholds.
+
+21:01.960 --> 21:10.840
+ And now it's the Drake equation component of how do we try to generate 20 years of value
+
+21:10.840 --> 21:14.400
+ discovery in a two or three year time period, how do we compress that?
+
+21:14.400 --> 21:18.880
+ So just to clarify, so when you mean the Drake equation, which for people who don't
+
+21:18.880 --> 21:22.640
+ know, I don't know why you if you listen to this, I bring up aliens every single conversation.
+
+21:22.640 --> 21:26.960
+ So I don't know how you wouldn't know what the Drake equation is, but you mean like the
+
+21:26.960 --> 21:33.800
+ killer app, it would be one alien civilization at equations, meaning like, this is in search
+
+21:33.800 --> 21:37.920
+ of an application that's impactful transformative, by the way, it should be a we need to come
+
+21:37.920 --> 21:43.880
+ up with a better term and killer app as it's also violent, right?
+
+21:43.880 --> 21:51.600
+ You can go like viral app, that's horrible to write some very inspiringly impactful application.
+
+21:51.600 --> 21:52.600
+ How about that?
+
+21:52.600 --> 21:53.600
+ No.
+
+21:53.600 --> 21:54.600
+ Yeah.
+
+21:54.600 --> 21:55.600
+ Okay, so bullets stick with killer app.
+
+21:55.600 --> 21:56.600
+ That's fine.
+
+21:56.600 --> 21:57.600
+ Okay.
+
+21:57.600 --> 21:58.600
+ So what do you do?
+
+21:58.600 --> 22:02.240
+ I dislike the chosen words in capturing the concept.
+
+22:02.240 --> 22:08.080
+ You know, it's one of those sticky things that is as effective to use in the tech world,
+
+22:08.080 --> 22:13.200
+ but when you're now become a communicator outside of the tech world, especially when
+
+22:13.200 --> 22:17.400
+ you're talking about software and hardware and artificial intelligence applications,
+
+22:17.400 --> 22:18.400
+ it sounds horrible.
+
+22:18.400 --> 22:19.400
+ Yeah, no, it's interesting.
+
+22:19.400 --> 22:23.280
+ I actually regret now having called attention to, I regret having used that word in this
+
+22:23.280 --> 22:28.480
+ conversation because it's something I would not normally do, I used it in order to create
+
+22:28.480 --> 22:32.960
+ a bridge of shared understanding of how others would, what terminology others would use.
+
+22:32.960 --> 22:33.960
+ Yeah.
+
+22:33.960 --> 22:35.120
+ But yeah, I concur.
+
+22:35.120 --> 22:42.000
+ Let's go with impactful application or value creation, value creation, something people
+
+22:42.000 --> 22:43.000
+ love using.
+
+22:43.000 --> 22:44.000
+ There we go.
+
+22:44.000 --> 22:45.000
+ That's it.
+
+22:45.000 --> 22:46.000
+ Love app.
+
+22:46.000 --> 22:47.000
+ Okay.
+
+22:47.000 --> 22:49.440
+ So what do you have any ideas?
+
+22:49.440 --> 22:56.080
+ So basically creating a framework where there's the possibility of a discovery of an application
+
+22:56.080 --> 22:59.760
+ that people love using, is do you have ideas?
+
+22:59.760 --> 23:05.080
+ We've begun to play a fun game internally where when we have these discussions, we begin circling
+
+23:05.080 --> 23:10.240
+ around this concept of does anybody have an idea?
+
+23:10.240 --> 23:11.640
+ Does anyone have intuitions?
+
+23:11.640 --> 23:17.120
+ And if we see the conversation starting to veer in that direction, we flag it and say
+
+23:17.120 --> 23:20.560
+ human intuition alert, stop it.
+
+23:20.560 --> 23:27.720
+ And so we really want to focus on the algorithm of there's a natural process of human discovery
+
+23:27.720 --> 23:32.400
+ that when you populate a system with devices and you give people the opportunity to play
+
+23:32.400 --> 23:38.280
+ around with it in expected and unexpected ways, we are thinking that is a much better
+
+23:38.280 --> 23:41.320
+ system of discovery than us exercising intuitions.
+
+23:41.320 --> 23:44.960
+ And it's interesting, we're also seeing a few neural scientists who have been talking
+
+23:44.960 --> 23:50.640
+ to us where I was speaking to one young associate professor and I approached the conversation
+
+23:50.640 --> 23:56.360
+ and said, hey, we have these five data streams that we're pulling off.
+
+23:56.360 --> 23:59.600
+ When you hear that, what weighted value do you add to each data source?
+
+23:59.600 --> 24:03.240
+ Which one do you think is going to be valuable for your objectives and which one's not?
+
+24:03.240 --> 24:05.840
+ And he said, I don't care, just give me the data.
+
+24:05.840 --> 24:08.160
+ All I care about is my machine learning model.
+
+24:08.160 --> 24:10.880
+ But importantly, he did not have a theory of mind.
+
+24:10.880 --> 24:15.280
+ He did not come to the table and say, I think the brain operates in this way and these
+
+24:15.280 --> 24:17.120
+ reasons have these functions.
+
+24:17.120 --> 24:18.120
+ He didn't care.
+
+24:18.120 --> 24:19.120
+ He just wanted the data.
+
+24:19.120 --> 24:26.600
+ And we're seeing that more and more that certain people are devaluing human intuitions for
+
+24:26.600 --> 24:30.720
+ good reasons as we've seen in machine learning over the past couple of years.
+
+24:30.720 --> 24:36.080
+ And we're doing the same in our value creation market strategy.
+
+24:36.080 --> 24:42.800
+ So collect more data, clean data, make the products such that the collection of data
+
+24:42.800 --> 24:52.440
+ is easy and fun, and then the rest will just spring to life through humans playing around
+
+24:52.440 --> 24:53.440
+ with it.
+
+24:53.440 --> 25:03.520
+ Our objective is to create the most valuable data collection system of the brain ever.
+
+25:03.520 --> 25:12.720
+ And with that, then apply all the best tools of machine learning and other techniques to
+
+25:12.720 --> 25:15.520
+ extract out, you know, to try to find insight.
+
+25:15.520 --> 25:21.960
+ But yes, our objective is really to systematize the discovery process because we can't put
+
+25:21.960 --> 25:24.080
+ definite timeframes on discovery.
+
+25:24.080 --> 25:30.200
+ The brain is complicated and science is not a business strategy.
+
+25:30.200 --> 25:36.160
+ And so we really need to figure out how to, this is the difficulty of bringing technology
+
+25:36.160 --> 25:37.160
+ like this to market.
+
+25:37.160 --> 25:43.040
+ And it's why most of the time it just languishes in academia for quite some time.
+
+25:43.040 --> 25:49.040
+ But we hope that we will cross over and make this mainstream in the coming years.
+
+25:49.040 --> 25:50.920
+ The thing was cool to wear.
+
+25:50.920 --> 25:58.600
+ But are you chasing a good reason for millions of people to put this on their head and keep
+
+25:58.600 --> 26:00.960
+ on their head regularly?
+
+26:00.960 --> 26:04.800
+ Is there like who's going to discover that reason?
+
+26:04.800 --> 26:12.480
+ Is it going to be people just kind of organically, or is there going to be angry bird style application
+
+26:12.480 --> 26:18.200
+ that's just too exciting to not use?
+
+26:18.200 --> 26:23.000
+ If I think through the things that have changed my life most significantly over the past few
+
+26:23.000 --> 26:28.520
+ years when I started wearing a wearable on my wrist that would give me data about my
+
+26:28.520 --> 26:37.360
+ heart rate, heart rate variability, respiration rate, metabolic approximations, et cetera.
+
+26:37.360 --> 26:42.800
+ For the first time in my life, I had access to information sleep patterns that were highly
+
+26:42.800 --> 26:43.800
+ impactful.
+
+26:43.800 --> 26:51.120
+ They told me, for example, if I eat close to bedtime, I'm not going to get deep sleep.
+
+26:51.120 --> 26:54.520
+ And not getting deep sleep means you have all these follow on consequences in life.
+
+26:54.520 --> 27:02.320
+ And so it opened up this window of understanding of myself that I cannot self introspect and
+
+27:02.320 --> 27:03.320
+ deduce these things.
+
+27:03.320 --> 27:07.000
+ This is information that was available to be acquired, but it just wasn't.
+
+27:07.000 --> 27:10.960
+ I would have to get an expensive sleep study, then it's an one night, and that's not good
+
+27:10.960 --> 27:12.560
+ enough to run all my trials.
+
+27:12.560 --> 27:18.440
+ And so if you look just at the information that one can acquire on their wrist, and now
+
+27:18.440 --> 27:23.480
+ you're planted to the entire cortex on the brain, and you say, what kind of information
+
+27:23.480 --> 27:25.160
+ could we acquire?
+
+27:25.160 --> 27:28.440
+ It opens up a whole new universe of possibilities.
+
+27:28.440 --> 27:32.760
+ For example, we did this internal study at Kernel where I wore a prototype device and
+
+27:32.760 --> 27:36.320
+ we were measuring the cognitive effects of sleep.
+
+27:36.320 --> 27:38.400
+ So I had a device measuring my sleep.
+
+27:38.400 --> 27:41.840
+ I performed with 13 of my coworkers.
+
+27:41.840 --> 27:45.880
+ We performed four cognitive tasks over 13 sessions.
+
+27:45.880 --> 27:52.160
+ And we focused on reaction time, impulse control, short term memory, and then arresting state
+
+27:52.160 --> 27:53.160
+ tasks.
+
+27:53.160 --> 28:00.400
+ And with mine, we found, for example, that my impulse control was independently correlated
+
+28:00.400 --> 28:04.160
+ with my sleep outside of behavioral measures of my ability to play the game.
+
+28:04.160 --> 28:12.080
+ The point of the study was I had the brain study I did at Kernel confirmed my life experience
+
+28:12.080 --> 28:19.960
+ that if my deep sleep determined whether or not I would be able to resist temptation the
+
+28:19.960 --> 28:24.440
+ following day, and my brain did it show that as one example.
+
+28:24.440 --> 28:28.960
+ And so if you start thinking, if you actually have data on yourself on your entire cortex
+
+28:28.960 --> 28:36.760
+ and you can control the settings, I think there's probably a large number of things
+
+28:36.760 --> 28:39.520
+ that we could discover about ourselves, very, very small and very, very big.
+
+28:39.520 --> 28:44.440
+ And just for example, like when you read news, what's going on?
+
+28:44.440 --> 28:50.680
+ Like when you use social media, when you use news, like all the ways we allocate attention
+
+28:50.680 --> 28:51.680
+ with the computer.
+
+28:51.680 --> 28:52.680
+ That's right.
+
+28:52.680 --> 28:57.600
+ I mean, that seems like a compelling place to where you would want to put on Kernel.
+
+28:57.600 --> 28:59.320
+ By the way, what is it called?
+
+28:59.320 --> 29:00.320
+ Kernel flux?
+
+29:00.320 --> 29:01.320
+ Kernel?
+
+29:01.320 --> 29:02.320
+ Like what?
+
+29:02.320 --> 29:03.320
+ Flow.
+
+29:03.320 --> 29:04.320
+ We have two technologies.
+
+29:04.320 --> 29:05.320
+ You wore flow.
+
+29:05.320 --> 29:06.320
+ Flow.
+
+29:06.320 --> 29:07.320
+ Okay.
+
+29:07.320 --> 29:16.240
+ If you look at the kernel flow, it seems like to be a compelling time and place to do it
+
+29:16.240 --> 29:20.120
+ is when you're behind a desk, behind a computer, because you could probably wear it for prolonged
+
+29:20.120 --> 29:23.800
+ periods of time as you're taking in content.
+
+29:23.800 --> 29:29.200
+ And there could be a lot of, because so much of our lives happens in the digital world
+
+29:29.200 --> 29:36.520
+ now, that kind of coupling the information about the human mind with the consumption
+
+29:36.520 --> 29:42.040
+ and the behaviors in the digital world might give us a lot of information about the effects
+
+29:42.040 --> 29:49.360
+ of the way we behave and navigate the digital world to the actual physical meat space effects
+
+29:49.360 --> 29:50.360
+ on our body.
+
+29:50.360 --> 29:57.000
+ It's interesting to think this certain terms of both like for work, I'm a big fan of Cal
+
+29:57.000 --> 30:06.000
+ Newport, his ideas of deep work that I spend with few exceptions, I try to spend the first
+
+30:06.000 --> 30:11.640
+ two hours of every day, usually if I'm like at home and have nothing on my schedule is
+
+30:11.640 --> 30:17.000
+ going to be up to eight hours of deep work of focus, zero distraction.
+
+30:17.000 --> 30:23.360
+ And for me to analyze the, I mean, I'm very aware of the, the waning of that the ups and
+
+30:23.360 --> 30:25.000
+ downs of that.
+
+30:25.000 --> 30:29.480
+ And it's almost like you, you're surfing the ups and downs of that as you're doing programming,
+
+30:29.480 --> 30:33.640
+ as you're doing thinking about particular problems, you're trying to visualize things
+
+30:33.640 --> 30:37.360
+ in your mind, you're just trying to stitch them together.
+
+30:37.360 --> 30:43.520
+ You're trying to, when there's a dead end about an idea, you have to kind of calmly
+
+30:43.520 --> 30:48.160
+ like walk back and start again, all those kinds of processes, it'd be interesting to
+
+30:48.160 --> 30:51.200
+ get data on what my mind is actually doing.
+
+30:51.200 --> 30:57.480
+ And also recently started doing, I just talked to Sam Harris a few days ago and been building
+
+30:57.480 --> 30:58.480
+ up to that.
+
+30:58.480 --> 31:04.760
+ He started using, started meditating, using his app, waking up, very much recommend it.
+
+31:04.760 --> 31:10.000
+ And it'd be interesting to get data on that because it's, you're very, it's like, you're
+
+31:10.000 --> 31:16.240
+ removing all the noise from your head and you very much, it's an active process of active
+
+31:16.240 --> 31:21.520
+ noise removal, active noise canceling like the headphones.
+
+31:21.520 --> 31:27.360
+ And it'd be interesting to see what is going on in the mind before the meditation, during
+
+31:27.360 --> 31:29.320
+ it and after all those kinds of things.
+
+31:29.320 --> 31:34.720
+ And all of your examples, it's interesting that everyone who's designed an experience
+
+31:34.720 --> 31:40.520
+ for you, so whether it be the meditation app or the deep work or all the things you mentioned,
+
+31:40.520 --> 31:45.840
+ they constructed this product with a certain number of knowns.
+
+31:45.840 --> 31:53.040
+ Now, what if we expand to the number of knowns by 10X or 20X or 30X, they would reconstruct
+
+31:53.040 --> 31:55.520
+ their product, quote, incorporate those knowns.
+
+31:55.520 --> 32:01.200
+ So it'd be, and so this is the dimensionality that I think is the promising aspect is that
+
+32:01.200 --> 32:08.200
+ people will be able to use this quantification, use this information to build more effective
+
+32:08.200 --> 32:09.440
+ products.
+
+32:09.440 --> 32:13.840
+ And this is, I'm not talking about better products to advertise to you or manipulate
+
+32:13.840 --> 32:14.840
+ you.
+
+32:14.840 --> 32:20.280
+ I'm talking about our focus is helping people, individuals have this contextual awareness
+
+32:20.280 --> 32:25.440
+ and this quantification and then to engage with others who are seeking to improve people's
+
+32:25.440 --> 32:32.920
+ lives that the objective is, is betterment across ourselves individually and also with
+
+32:32.920 --> 32:33.920
+ each other.
+
+32:33.920 --> 32:34.920
+ Yeah.
+
+32:34.920 --> 32:36.840
+ So it's a nice data stream to have if you're building an app, like if you're building a
+
+32:36.840 --> 32:40.920
+ podcast listening app, it would be nice to know data about the listener so that like
+
+32:40.920 --> 32:43.960
+ if you're bored or you fell asleep, maybe pause the podcast.
+
+32:43.960 --> 32:44.960
+ Yeah.
+
+32:44.960 --> 32:49.880
+ It's like really dumb, just very simple applications that could just improve the quality of the
+
+32:49.880 --> 32:52.080
+ experience of using the app.
+
+32:52.080 --> 32:59.400
+ Kind of imagining if you have your neurom, this is Lex and there's a statistical representation
+
+32:59.400 --> 33:05.440
+ of you and you engage with the app and it says, Lex, you're best to engage with this
+
+33:05.440 --> 33:13.720
+ meditation exercise in the following settings at this time of day after eating this kind
+
+33:13.720 --> 33:19.800
+ of food or not eating fasting with this level of blood glucose and this kind of night sleep.
+
+33:19.800 --> 33:26.840
+ And all these data combined to give you this contextually relevant experience just like
+
+33:26.840 --> 33:28.040
+ we do with our sleep.
+
+33:28.040 --> 33:32.240
+ You've optimized your entire life based upon what information you can acquire and know
+
+33:32.240 --> 33:33.240
+ about yourself.
+
+33:33.240 --> 33:38.560
+ And so the question is, how much do we really know of the things going around us?
+
+33:38.560 --> 33:44.360
+ And I would venture to guess in my life experience, I capture my self awareness captures an extremely
+
+33:44.360 --> 33:50.320
+ small percent of the things that actually influence my conscious and unconscious experience.
+
+33:50.320 --> 33:56.400
+ Well, in some sense, the data would help encourage you to be more self aware, not just because
+
+33:56.400 --> 34:04.880
+ you trust everything the data is saying, but is it'll give you a prod to start investigating.
+
+34:04.880 --> 34:12.200
+ Like I'd love to get a rating, like a ranking of all the things I do and what are the things
+
+34:12.200 --> 34:16.280
+ that's probably important to do without the data, but the data will certainly help is
+
+34:16.280 --> 34:22.200
+ like rank all the things you do in life and which ones make you feel shitty, which ones
+
+34:22.200 --> 34:23.720
+ make you feel good.
+
+34:23.720 --> 34:30.240
+ Like you're talking about evening, Brian, like this is a good example, somebody like,
+
+34:30.240 --> 34:33.680
+ I do pig out at night as well.
+
+34:33.680 --> 34:35.800
+ And it never makes you feel good.
+
+34:35.800 --> 34:37.800
+ Like you're in a safe space.
+
+34:37.800 --> 34:39.520
+ This is a safe space.
+
+34:39.520 --> 34:40.520
+ Let's hear it.
+
+34:40.520 --> 34:43.640
+ You know, I definitely have much less self control at night.
+
+34:43.640 --> 34:44.640
+ It's interesting.
+
+34:44.640 --> 34:49.960
+ And the same, you know, people might criticize this, but I know my own body.
+
+34:49.960 --> 35:00.160
+ I know when I eat carnivore, just eat meat, I feel much better than if I eat more carbs.
+
+35:00.160 --> 35:02.280
+ The more carbs I eat, the worse I feel.
+
+35:02.280 --> 35:04.280
+ I don't know why that is.
+
+35:04.280 --> 35:06.600
+ There is science supporting, but I'm not leading on science.
+
+35:06.600 --> 35:07.760
+ I'm leading on personal experience.
+
+35:07.760 --> 35:09.240
+ And that's really important.
+
+35:09.240 --> 35:13.800
+ I don't need to read, I'm not going to go in a whole rant about nutrition science,
+
+35:13.800 --> 35:17.480
+ but many of those studies are very flawed.
+
+35:17.480 --> 35:22.600
+ They're doing their best, but nutrition science is a very difficult field of study because
+
+35:22.600 --> 35:24.480
+ humans are so different.
+
+35:24.480 --> 35:28.560
+ And the mind has so much impact on the way your body behaves.
+
+35:28.560 --> 35:32.960
+ And it's so difficult from a scientific perspective to conduct really strong studies that you
+
+35:32.960 --> 35:39.160
+ have to be almost like a scientist of one, you have to do these studies on yourself.
+
+35:39.160 --> 35:41.840
+ That's the best way to understand what works for you and not.
+
+35:41.840 --> 35:46.200
+ And I don't understand why, because it sounds unhealthy, but eating only meat always makes
+
+35:46.200 --> 35:47.680
+ me feel good.
+
+35:47.680 --> 35:48.920
+ Just eat meat.
+
+35:48.920 --> 35:50.000
+ That's it.
+
+35:50.000 --> 35:52.840
+ And I don't have any allergies, any of that kind of stuff.
+
+35:52.840 --> 35:58.000
+ I'm not full like Jordan Peterson, where like, if he like deviates a little bit, that he
+
+35:58.000 --> 36:03.000
+ goes off, like deviates a little bit from the carnivore diet, he goes off like the cliff.
+
+36:03.000 --> 36:07.840
+ No, I can, I can have like chalk, I can, I can go off the diet, I feel fine.
+
+36:07.840 --> 36:15.000
+ It's not, it's a, it's a gradual, uh, uh, it's a gradual worsening of how I feel.
+
+36:15.000 --> 36:17.480
+ But when I eat only meat, I feel great.
+
+36:17.480 --> 36:19.360
+ And it'd be nice to be reminded of that.
+
+36:19.360 --> 36:24.320
+ Like it's a very simple fact that I feel good when I eat carnivore.
+
+36:24.320 --> 36:27.640
+ And I think that repeats itself in all kinds of experiences.
+
+36:27.640 --> 36:37.440
+ Like I feel really good, uh, when I exercise, not I hate exercise, okay.
+
+36:37.440 --> 36:43.080
+ But in the rest of the day, the, the, uh, the impact it has on my mind, on the clarity
+
+36:43.080 --> 36:47.560
+ of mind, on the experiences and the happiness and all those kinds of things, I feel really
+
+36:47.560 --> 36:48.560
+ good.
+
+36:48.560 --> 36:53.600
+ And to be able to concretely express that through data would be, would be nice.
+
+36:53.600 --> 36:57.680
+ It would be a nice reminder, almost like a statement, like remember what feels good
+
+36:57.680 --> 36:58.680
+ and whatnot.
+
+36:58.680 --> 37:04.560
+ And there could be things like, uh, that I'm not, many things like just, you're suggesting
+
+37:04.560 --> 37:09.720
+ that I could not be aware of, there might be sitting right in front of me that, uh,
+
+37:09.720 --> 37:12.440
+ make me feel really good and make me feel not good.
+
+37:12.440 --> 37:13.920
+ And the data would show that.
+
+37:13.920 --> 37:14.920
+ I agree with you.
+
+37:14.920 --> 37:17.320
+ I've actually employed the same strategy.
+
+37:17.320 --> 37:23.000
+ I, I fired my mind entirely from being responsible for constructing my diet.
+
+37:23.000 --> 37:29.040
+ And so I started doing a program where I now track over 200 biomarkers every 90 days.
+
+37:29.040 --> 37:34.280
+ And it captures of course the things you would expect like cholesterol, but also DNA methylation
+
+37:34.280 --> 37:39.520
+ and all kinds of things that, uh, about my body, all the processes that make up me.
+
+37:39.520 --> 37:43.360
+ And then I let that data generate the shopping list.
+
+37:43.360 --> 37:45.760
+ And so I never actually asked my mind what it wants.
+
+37:45.760 --> 37:48.400
+ It's entirely what my body is reporting that it wants.
+
+37:48.400 --> 37:51.880
+ And so I call this goal alignment within Brian.
+
+37:51.880 --> 37:55.320
+ And there's 200 plus actors that I'm currently asking their opinion of.
+
+37:55.320 --> 37:57.960
+ And so I'm asking my liver, how are you doing?
+
+37:57.960 --> 37:59.920
+ And it's expressing via the biomarkers.
+
+37:59.920 --> 38:06.480
+ And so that I construct that diet and I only eat those foods until my next testing round.
+
+38:06.480 --> 38:11.320
+ And that has changed my life more than I think anything else.
+
+38:11.320 --> 38:18.160
+ Because in the demotion of my conscious mind that I gave primacy to my entire life, it
+
+38:18.160 --> 38:22.560
+ led me astray because like you're saying, the mind then goes out into the world and
+
+38:22.560 --> 38:29.120
+ it navigates the dozens of different dietary regimens people put together in books.
+
+38:29.120 --> 38:34.160
+ And it's all has their, all has their supporting science in certain contextual settings, but
+
+38:34.160 --> 38:35.800
+ it's not end of one.
+
+38:35.800 --> 38:38.760
+ And like you're saying, this dietary really is an end of one.
+
+38:38.760 --> 38:46.600
+ These, what people have published scientifically, of course, can be used, uh, for nice groundings,
+
+38:46.600 --> 38:48.720
+ but it changes when you get to an end of one level.
+
+38:48.720 --> 38:53.600
+ And so that's what gets me excited about brainer faces is if you, if I could do the same thing
+
+38:53.600 --> 38:59.080
+ for my brain where I can stop asking my conscious mind for its advice or for its decision making,
+
+38:59.080 --> 39:04.680
+ which is flawed, and I'd rather just look at this data that, and I've never had better
+
+39:04.680 --> 39:08.640
+ health markers in my life than when I stopped actually asking myself to be in charge of
+
+39:08.640 --> 39:09.640
+ it.
+
+39:09.640 --> 39:18.200
+ And the idea of, uh, demotion of the conscious mind is, uh, is such a sort of engineering
+
+39:18.200 --> 39:22.720
+ way of phrasing like meditation with, what they, that's what we're doing, right?
+
+39:22.720 --> 39:23.720
+ Yeah.
+
+39:23.720 --> 39:24.720
+ That's beautiful.
+
+39:24.720 --> 39:28.280
+ That means really beautifully put a, uh, by the way, testing round, what does that look
+
+39:28.280 --> 39:29.280
+ like?
+
+39:29.280 --> 39:30.280
+ What's that?
+
+39:30.280 --> 39:33.400
+ Well, you mentioned, uh, yeah, the, the very, the tests I do.
+
+39:33.400 --> 39:34.400
+ Yes.
+
+39:34.400 --> 39:39.000
+ So includes, uh, a complete blood panel, I do a microbiome test.
+
+39:39.000 --> 39:43.680
+ I do a food inflammation, uh, a diet induced inflammation.
+
+39:43.680 --> 39:45.520
+ So I look for Xatokine expressions.
+
+39:45.520 --> 39:48.320
+ So foods that produce inflammatory reactions.
+
+39:48.320 --> 39:50.120
+ I look at my neuroendocrine systems.
+
+39:50.120 --> 39:57.160
+ I look at all my neurotransmitters, uh, I do, uh, yeah, there's several micronutrient
+
+39:57.160 --> 39:59.560
+ tests to see how I'm looking at the very, very nutrients.
+
+39:59.560 --> 40:08.240
+ What about like self report of like how you feel, you know, almost like, uh, you can't
+
+40:08.240 --> 40:12.600
+ demote your con, you still exist within your conscious mind, right?
+
+40:12.600 --> 40:16.240
+ So that, that lived experience of, is of a lot of value.
+
+40:16.240 --> 40:17.480
+ So how do you measure that?
+
+40:17.480 --> 40:20.960
+ I do a temporal sampling over some duration of time.
+
+40:20.960 --> 40:25.600
+ So I'll think through how I feel over a week, over a month, over three months.
+
+40:25.600 --> 40:29.640
+ I don't do a temporal sampling of if I'm at the grocery store in front of a cereal box
+
+40:29.640 --> 40:33.280
+ and be like, you know what, captain crunch is probably the right thing for me today.
+
+40:33.280 --> 40:36.160
+ Cause I'm feeling like I need a little fun in my life.
+
+40:36.160 --> 40:37.160
+ Yeah.
+
+40:37.160 --> 40:38.160
+ And so it's a temporal sampling.
+
+40:38.160 --> 40:42.120
+ If the data sets large enough, then I, I smooth out the function of my natural oscillations
+
+40:42.120 --> 40:47.480
+ of how I feel about life where some days I may feel upset or depressed or down or whatever.
+
+40:47.480 --> 40:50.600
+ And I don't want those moments to then rule my decision making.
+
+40:50.600 --> 40:52.680
+ That's why the demotion happens.
+
+40:52.680 --> 40:58.720
+ And it says really, if you're looking at health over a 90 day period of time, all my 200 voices
+
+40:58.720 --> 41:03.360
+ speak up on the interval and they're all given voice to say, this is how I'm doing and this
+
+41:03.360 --> 41:04.360
+ is what I want.
+
+41:04.360 --> 41:07.200
+ And so it really is an accounting system for everybody.
+
+41:07.200 --> 41:15.280
+ So that's why I think that if you think about the future of being human, there's two things
+
+41:15.280 --> 41:18.160
+ I think that are really going on.
+
+41:18.160 --> 41:24.920
+ One is the design, manufacturing and distribution of intelligence is heading towards zero kind
+
+41:24.920 --> 41:30.800
+ of cost curve over, over a certain design, over a certain timeframe, but our ability
+
+41:30.800 --> 41:35.720
+ to, you know, evolution produced us an intelligent form of intelligence.
+
+41:35.720 --> 41:40.080
+ We are now designing our own intelligence systems and the design, manufacturing, distribution
+
+41:40.080 --> 41:46.240
+ of that intelligence over a certain timeframe is going to go to a cost of zero design, manufacture
+
+41:46.240 --> 41:49.720
+ distribution of intelligent costs is going to zero.
+
+41:49.720 --> 41:52.640
+ For example, just give me a second.
+
+41:52.640 --> 41:53.640
+ That's brilliant.
+
+41:53.640 --> 41:54.640
+ Okay.
+
+41:54.640 --> 42:00.480
+ And evolution is doing the design, manufacturing, distribution of intelligence and now we are
+
+42:00.480 --> 42:05.720
+ doing the design, manufacturing, distribution of intelligence and the cost of that is going
+
+42:05.720 --> 42:06.720
+ to zero.
+
+42:06.720 --> 42:10.840
+ That's a very nice way of looking at life on earth.
+
+42:10.840 --> 42:17.760
+ So if that, that's going on and then now in parallel to that, then you say, okay, what,
+
+42:17.760 --> 42:26.480
+ what then happens if when that cost curve is heading to zero, our existence becomes
+
+42:26.480 --> 42:31.560
+ a goal alignment problem, a goal alignment function.
+
+42:31.560 --> 42:35.160
+ And so the same thing I'm doing where I'm doing goal alignment within myself of these
+
+42:35.160 --> 42:42.720
+ 200 biomarkers where I'm saying when, when Brian exists on a database and this entity
+
+42:42.720 --> 42:46.920
+ is deciding what to eat and what to do and et cetera, it's not just my conscious mind
+
+42:46.920 --> 42:47.920
+ which is opining.
+
+42:47.920 --> 42:52.160
+ It's 200 biological processes and there's a whole bunch of more voices involved.
+
+42:52.160 --> 43:03.520
+ So in that equation, we're going to increasingly automate the things that we spend high energy
+
+43:03.520 --> 43:10.040
+ on today because it's easier and now we're going to then negotiate the terms and conditions
+
+43:10.040 --> 43:11.200
+ of intelligent life.
+
+43:11.200 --> 43:15.200
+ Now we say conscious existence because we're biased because that's what we have, but it
+
+43:15.200 --> 43:20.200
+ will be the largest computational exercise in history because you're now doing goal alignment
+
+43:20.200 --> 43:26.280
+ with planet earth, within yourself, with each other, within all the intelligent agents
+
+43:26.280 --> 43:29.440
+ we're building bots and other voice assistants.
+
+43:29.440 --> 43:34.640
+ You basically had to have a trillions and trillions of agents working on the negotiation
+
+43:34.640 --> 43:35.640
+ of goal alignment.
+
+43:35.640 --> 43:36.640
+ Yeah.
+
+43:36.640 --> 43:39.200
+ This, this is in fact true.
+
+43:39.200 --> 43:40.600
+ And what was the second thing?
+
+43:40.600 --> 43:41.600
+ That was it.
+
+43:41.600 --> 43:46.160
+ So the cost, the design manufacturing distribution of intelligence going to zero, which then
+
+43:46.160 --> 43:48.680
+ means what's really going on?
+
+43:48.680 --> 43:50.360
+ What are we really doing?
+
+43:50.360 --> 43:55.160
+ We're negotiating the terms and conditions of existence.
+
+43:55.160 --> 44:04.200
+ Do you worry about the survival of this process, that life as we know what on earth comes to
+
+44:04.200 --> 44:11.520
+ an end or at least intelligent life, that as the cost goes to zero, something happens
+
+44:11.520 --> 44:17.640
+ where all of that intelligence is thrown in the trash by something like nuclear war or
+
+44:17.640 --> 44:24.320
+ development of AGI systems that are very dumb, not AGI I guess, but AI is just the paperclip
+
+44:24.320 --> 44:31.160
+ thing on mass is dumb but has unintended consequences to where it destroys human civilization.
+
+44:31.160 --> 44:32.320
+ Do you worry about those kinds of things?
+
+44:32.320 --> 44:41.440
+ I mean, it's unsurprising that a new thing comes into the sphere of human consciousness.
+
+44:41.440 --> 44:45.600
+ Humans identify the foreign object in this case, artificial intelligence.
+
+44:45.600 --> 44:53.480
+ Our amygdala fires up and says, scary, foreign, we should be apprehensive about this.
+
+44:53.480 --> 45:02.200
+ And so it makes sense from a biological perspective that humans, the knee jerk reaction is fear.
+
+45:02.200 --> 45:12.400
+ What I don't think has been properly weighted with that is that we are the first generation
+
+45:12.400 --> 45:18.120
+ of intelligent beings on this earth that has been able to look out over their expected
+
+45:18.120 --> 45:28.080
+ lifetime and see there is a real possibility of evolving into entirely novel forms of consciousness.
+
+45:28.080 --> 45:33.120
+ So different that it would be totally unrecognizable to us today.
+
+45:33.120 --> 45:34.120
+ We don't have words for it.
+
+45:34.120 --> 45:35.120
+ We can't hint at it.
+
+45:35.120 --> 45:36.120
+ We can't point at it.
+
+45:36.120 --> 45:39.520
+ We can't, you can't look in the sky and see that thing that is shining.
+
+45:39.520 --> 45:41.480
+ We're going to go up there.
+
+45:41.480 --> 45:50.840
+ You cannot even create an aspirational statement about it and instead we've had this knee jerk
+
+45:50.840 --> 45:53.880
+ reaction of fear about everything that could go wrong.
+
+45:53.880 --> 46:03.360
+ But in my estimation, this should be the defining aspiration of all intelligent life on earth
+
+46:03.360 --> 46:08.800
+ that we would aspire that basically every generation surveys the landscape of possibilities
+
+46:08.800 --> 46:13.240
+ that are afforded given the technological, cultural and other contextual situation that
+
+46:13.240 --> 46:14.960
+ they're in.
+
+46:14.960 --> 46:16.680
+ We're in this context.
+
+46:16.680 --> 46:22.040
+ We haven't yet identified this and said, this is unbelievable.
+
+46:22.040 --> 46:26.880
+ We should carefully think this thing through, not just of mitigating the things that wipe
+
+46:26.880 --> 46:27.880
+ us out.
+
+46:27.880 --> 46:32.280
+ Like we have this potential and so we just haven't given voice to it, even though it's
+
+46:32.280 --> 46:34.000
+ within this realm of possibilities.
+
+46:34.000 --> 46:38.760
+ Also you're excited about the possibility of superintelligence systems and what the opportunities
+
+46:38.760 --> 46:39.760
+ that bring.
+
+46:39.760 --> 46:41.880
+ I mean, there's parallels to this.
+
+46:41.880 --> 46:46.520
+ You think about people before the internet as the internet was coming to life.
+
+46:46.520 --> 46:51.160
+ I mean, there's kind of a fog through which you can't see.
+
+46:51.160 --> 46:54.840
+ What does the future look like?
+
+46:54.840 --> 46:58.080
+ Predicting collective intelligence, which I don't think we're understanding that we're
+
+46:58.080 --> 47:04.680
+ living through that now is that there's now we've in some sense stopped being individual
+
+47:04.680 --> 47:12.360
+ intelligences and become much more like collective intelligences because ideas travel much, much
+
+47:12.360 --> 47:22.080
+ faster now and they can in a viral way sweep across the populations and so it almost feels
+
+47:22.080 --> 47:28.240
+ like a thought is had by many people now, thousands or millions of people as opposed
+
+47:28.240 --> 47:30.920
+ to an individual person and that's changed everything.
+
+47:30.920 --> 47:36.280
+ But to me, I think we're realizing how much that actually changed people or societies,
+
+47:36.280 --> 47:41.880
+ but to predict that before the internet would have been very difficult and in that same
+
+47:41.880 --> 47:49.720
+ way we're sitting here with the fog before us thinking, what is superintelligence systems?
+
+47:49.720 --> 47:51.960
+ How is that going to change the world?
+
+47:51.960 --> 47:59.480
+ What is increasing the bandwidth like plugging our brains into this whole thing?
+
+47:59.480 --> 48:01.480
+ How is that going to change the world?
+
+48:01.480 --> 48:10.320
+ And it seems like it's a fog, you don't know and it could be, it could, whatever comes
+
+48:10.320 --> 48:17.160
+ to be could destroy the world, we could be the last generation, but it also could transform
+
+48:17.160 --> 48:26.040
+ in ways that creates an incredibly fulfilling life experience that's unlike anything we've
+
+48:26.040 --> 48:27.440
+ ever experienced.
+
+48:27.440 --> 48:32.720
+ It might involve the solution of ego and consciousness and so on, you're no longer one individual,
+
+48:32.720 --> 48:39.640
+ it might be more, that might be a certain kind of death and ego death, but the experience
+
+48:39.640 --> 48:42.400
+ might be really exciting and enriching.
+
+48:42.400 --> 48:49.360
+ Maybe we'll live in a virtual, like it's funny to think about a bunch of sort of hypothetical
+
+48:49.360 --> 48:58.200
+ questions of would it be more fulfilling to live in a virtual world, like if you were
+
+48:58.200 --> 49:04.400
+ able to plug your brain in in a very dense way into a video game, like which world would
+
+49:04.400 --> 49:10.000
+ you want to live in, in the video game or in the physical world?
+
+49:10.000 --> 49:14.680
+ For most of us, we're kind of touring it with the idea of the video game, but we still want
+
+49:14.680 --> 49:20.920
+ to live in the physical world, have friendships and relationships in the physical world, but
+
+49:20.920 --> 49:21.920
+ we don't know that.
+
+49:21.920 --> 49:27.480
+ Again, it's a fog and maybe in a hundred years we're all living inside a video game, hopefully
+
+49:27.480 --> 49:34.160
+ not Call of Duty, hopefully more like Sims 5, which version is it on?
+
+49:34.160 --> 49:41.880
+ For you individually though, does it make you sad that your brain ends?
+
+49:41.880 --> 49:46.000
+ That you die one day very soon?
+
+49:46.000 --> 49:54.880
+ That the whole thing, that data source just goes offline sooner than you would like?
+
+49:54.880 --> 49:56.040
+ That's a complicated question.
+
+49:56.040 --> 50:00.600
+ I would have answered it differently in different times of my life.
+
+50:00.600 --> 50:07.120
+ I had chronic depression for 10 years, and so in that 10 year time period, I desperately
+
+50:07.120 --> 50:15.960
+ wanted lights to be off, and the thing that made it even worse is I was born into a religion.
+
+50:15.960 --> 50:20.320
+ It was the only reality I ever understood, and it's difficult to articulate to people
+
+50:20.320 --> 50:24.960
+ when you're born into that kind of reality and it's the only reality you're exposed to.
+
+50:24.960 --> 50:29.760
+ You are literally blinded to the existence of other realities because it's so much the
+
+50:29.760 --> 50:35.080
+ in group, out group thing, and so in that situation, it was not only that I desperately
+
+50:35.080 --> 50:38.920
+ wanted lights out forever, it was that I couldn't have lights out forever.
+
+50:38.920 --> 50:45.920
+ It was that there was an afterlife, and this afterlife had this system that would either
+
+50:45.920 --> 50:56.560
+ penalize or reward you for your behaviors, and so it's almost like this indescribable
+
+50:56.560 --> 51:02.360
+ hopelessness of not only being in a hopeless despair of not wanting to exist, but then
+
+51:02.360 --> 51:07.920
+ also being forced to exist, and so there was a duration of my time of a duration of life
+
+51:07.920 --> 51:14.560
+ where I'd say, yes, I have no remorse for lights being out and actually want it more
+
+51:14.560 --> 51:18.840
+ than anything in the entire world.
+
+51:18.840 --> 51:24.900
+ There are other times where I'm looking out at the future and I say, this is an opportunity
+
+51:24.900 --> 51:31.880
+ for future evolving human conscious experience that is beyond my ability to understand, and
+
+51:31.880 --> 51:41.440
+ I jump out of bed and I race to work and I can't think about anything else, but I think
+
+51:41.440 --> 51:47.160
+ the reality for me is, I don't know what it's like to be in your head, but in my head, when
+
+51:47.160 --> 51:53.040
+ I wake up in the morning, I don't say, good morning, Brian, I'm so happy to see you like
+
+51:53.040 --> 51:56.080
+ I'm sure you're just going to be beautiful to me today.
+
+51:56.080 --> 51:59.200
+ You're not going to make a huge long list of everything you should be anxious about.
+
+51:59.200 --> 52:01.520
+ You're not going to repeat that list to me 400 times.
+
+52:01.520 --> 52:04.560
+ You're not going to have me relive all the regrets I've made in life.
+
+52:04.560 --> 52:06.080
+ I'm sure you're not going to do any of that.
+
+52:06.080 --> 52:08.880
+ You're just going to just help me along all day long.
+
+52:08.880 --> 52:15.520
+ I mean, it's a brutal environment in my brain, and we've just become normalized to this environment
+
+52:15.520 --> 52:21.080
+ that we just accept that this is what it means to be human, but if we look at it, if we try
+
+52:21.080 --> 52:27.240
+ to muster as much soberness as we can about the realities of being human, it's brutal
+
+52:27.240 --> 52:29.360
+ if it is for me.
+
+52:29.360 --> 52:37.000
+ So am I sad that the brain may be off one day?
+
+52:37.000 --> 52:38.480
+ It depends on the contextual setting.
+
+52:38.480 --> 52:39.480
+ How am I feeling?
+
+52:39.480 --> 52:41.000
+ At what moment are you asking me that?
+
+52:41.000 --> 52:45.160
+ It's my mind is so fickle, and this is why, again, I don't trust my conscious mind.
+
+52:45.160 --> 52:51.880
+ I have been given realities, I was given a religious reality that was a video game.
+
+52:51.880 --> 52:54.640
+ And then I figured out it was not a real reality.
+
+52:54.640 --> 52:59.880
+ And then I lived in a depressive reality, which delivered this terrible hopelessness.
+
+52:59.880 --> 53:00.880
+ That wasn't a real reality.
+
+53:00.880 --> 53:06.440
+ Then I discovered behavioral psychology, and I figured out how 188 chronicle biases and
+
+53:06.440 --> 53:08.800
+ how my brain is distorting reality at the time.
+
+53:08.800 --> 53:11.280
+ I have gone from one reality to another.
+
+53:11.280 --> 53:13.560
+ I don't trust reality.
+
+53:13.560 --> 53:15.960
+ I don't trust realities are given to me.
+
+53:15.960 --> 53:20.840
+ And so to try to make a decision on what I value or not value that future state, I don't
+
+53:20.840 --> 53:23.000
+ trust my response.
+
+53:23.000 --> 53:31.320
+ So not fully listening to the conscious mind at any one moment as the ultimate truth, but
+
+53:31.320 --> 53:35.280
+ allowing you to go up and down as it does, and just kind of being observing it?
+
+53:35.280 --> 53:36.280
+ Yes.
+
+53:36.280 --> 53:43.400
+ I assume that whatever my conscious mind delivers up to my awareness is wrong on pond landing.
+
+53:43.400 --> 53:47.080
+ And I just need to figure out where it's wrong, how it's wrong, how wrong it is, and then
+
+53:47.080 --> 53:49.360
+ try to correct for it as best I can.
+
+53:49.360 --> 53:55.640
+ But I assume that on impact, it's mistaken in some critical ways.
+
+53:55.640 --> 54:01.480
+ Is there something you can say by way of advice when the mind is depressive, when the conscious
+
+54:01.480 --> 54:09.720
+ mind serves up something that dark thoughts, how you deal with that, like how in your own
+
+54:09.720 --> 54:15.520
+ life you've overcome that and others who are experienced in that can overcome it?
+
+54:15.520 --> 54:16.520
+ Two things.
+
+54:16.520 --> 54:25.800
+ One, that those depressive states are biochemical states.
+
+54:25.800 --> 54:29.000
+ It's not you.
+
+54:29.000 --> 54:33.680
+ And the suggestions that these things that this state delivers to you about suggestion
+
+54:33.680 --> 54:42.600
+ of the hopelessness of lies or the meaninglessness of it or that you should hit the eject button,
+
+54:42.600 --> 54:45.200
+ that's a false reality.
+
+54:45.200 --> 54:53.920
+ And that it's when I completely understand the rational decision to commit suicide.
+
+54:53.920 --> 54:58.880
+ It is not lost to me at all that that is an irrational situation, but the key is when
+
+54:58.880 --> 55:04.160
+ you're in that situation and those thoughts are landing to be able to say, thank you,
+
+55:04.160 --> 55:06.660
+ you're not real.
+
+55:06.660 --> 55:08.280
+ I know you're not real.
+
+55:08.280 --> 55:13.920
+ And so I'm in a situation where for whatever reason I'm having this neurochemical state,
+
+55:13.920 --> 55:16.440
+ but that state can be altered.
+
+55:16.440 --> 55:21.320
+ And so it again, it goes back to the realities of the difficulties of being human.
+
+55:21.320 --> 55:26.240
+ And like when I was trying to solve my depression, I tried literally, if you name it, I tried
+
+55:26.240 --> 55:29.480
+ it systematically and nothing would fix it.
+
+55:29.480 --> 55:32.360
+ And so this is what gives me hope with brain interfaces.
+
+55:32.360 --> 55:35.520
+ For example, like, could I have numbers on my brain?
+
+55:35.520 --> 55:36.520
+ Can I see what's going on?
+
+55:36.520 --> 55:38.920
+ I go to the doctor and it's like, how do you feel?
+
+55:38.920 --> 55:39.920
+ I don't know.
+
+55:39.920 --> 55:40.920
+ Terrible.
+
+55:40.920 --> 55:44.120
+ Like on a scale from one to 10, how bad do you want to commit suicide?
+
+55:44.120 --> 55:45.120
+ 10.
+
+55:45.120 --> 55:46.120
+ Okay.
+
+55:46.120 --> 55:47.120
+ At this moment.
+
+55:47.120 --> 55:48.520
+ Here's his bottle.
+
+55:48.520 --> 55:49.520
+ How much do I take?
+
+55:49.520 --> 55:50.520
+ Well, I don't know.
+
+55:50.520 --> 55:51.520
+ Like just.
+
+55:51.520 --> 55:52.520
+ Yeah.
+
+55:52.520 --> 55:53.520
+ It's very, very crude.
+
+55:53.520 --> 56:01.720
+ It opens up the, yeah, it opens up the possibility of really helping in those dark moments to
+
+56:01.720 --> 56:06.160
+ first understand the ways, the ups and downs of those dark moments.
+
+56:06.160 --> 56:16.320
+ On the complete flip side of that, I am very conscious in my own brain and deeply, deeply
+
+56:16.320 --> 56:24.240
+ grateful that it's almost like a chemistry thing, a biochemistry thing, that I go many
+
+56:24.240 --> 56:31.840
+ times throughout the day, I'll look at like this cup and I'll be overcome with joy how
+
+56:31.840 --> 56:34.280
+ amazing it is to be alive.
+
+56:34.280 --> 56:42.400
+ I actually think my biochemistry is such that it's not as common, like I've talked to people
+
+56:42.400 --> 56:48.400
+ and I don't think that's that common, like it's a, and it's not a rational thing at all.
+
+56:48.400 --> 56:56.200
+ It's like, I feel like I'm on drugs and I'll just be like, whoa, and a lot of people talk
+
+56:56.200 --> 57:00.800
+ about like the meditative experience will allow you to sort of, you know, look at some basic
+
+57:00.800 --> 57:05.880
+ things like the movement of your hand as deeply joyful because that's like, that's life.
+
+57:05.880 --> 57:10.040
+ But I get that from just looking at a cup, like I'm waiting for the coffee to brew.
+
+57:10.040 --> 57:15.160
+ And I'll just be like, fuck, life is awesome.
+
+57:15.160 --> 57:18.520
+ And I'll sometimes tweet that, but then I'll like regret it later, like, God damn it,
+
+57:18.520 --> 57:20.160
+ you're so ridiculous.
+
+57:20.160 --> 57:27.480
+ But yeah, so, but that is purely chemistry, like there's no rational, it doesn't fit with
+
+57:27.480 --> 57:28.480
+ the rest of my life.
+
+57:28.480 --> 57:29.480
+ I have all this shit.
+
+57:29.480 --> 57:30.640
+ I'm always late to stuff.
+
+57:30.640 --> 57:35.000
+ I'm always like, there's all this stuff, you know, I'm super self critical, like really
+
+57:35.000 --> 57:40.000
+ self critical about everything I do, to the point I almost hate everything I do.
+
+57:40.000 --> 57:43.640
+ But there's this engine of joy for life outside of all that.
+
+57:43.640 --> 57:45.160
+ And that has to be chemistry.
+
+57:45.160 --> 57:50.520
+ And the flip side of that is what depression probably is, is the opposite of that feeling
+
+57:50.520 --> 57:59.400
+ of like, because I bet you that feeling of the cup being amazing is would save anybody
+
+57:59.400 --> 58:01.040
+ in a state of depression.
+
+58:01.040 --> 58:08.160
+ Like that would be like fresh, you're in a desert and it's a drink of water shit, man.
+
+58:08.160 --> 58:17.520
+ And the brain is a, it would be nice to understand where that's coming from, to be able to understand
+
+58:17.520 --> 58:21.320
+ how you hit those lows and those highs that have nothing to do with the actual reality.
+
+58:21.320 --> 58:28.880
+ It has to do with some very specific aspects of how you maybe see the world, maybe it could
+
+58:28.880 --> 58:34.240
+ be just like basic habits you engage in and then how to walk along the line to find those
+
+58:34.240 --> 58:35.400
+ experiences of joy.
+
+58:35.400 --> 58:41.240
+ And this goes back to the discussion we're having of human cognition is in volume, the
+
+58:41.240 --> 58:46.240
+ largest input of raw material into society.
+
+58:46.240 --> 58:48.000
+ And it's not quantified.
+
+58:48.000 --> 58:50.360
+ We have no bearings on it.
+
+58:50.360 --> 58:57.040
+ And so we just, you wonder, we both articulated some of the challenges we have in our own
+
+58:57.040 --> 58:59.000
+ mind.
+
+58:59.000 --> 59:04.000
+ And it's likely that others would say, I have something similar.
+
+59:04.000 --> 59:11.480
+ And you wonder when you look at society, what, how does that contribute to all the other compounder
+
+59:11.480 --> 59:12.880
+ problems that we're experiencing?
+
+59:12.880 --> 59:18.720
+ How does that blind us to the opportunities we could be looking at?
+
+59:18.720 --> 59:26.560
+ And so it really, it has this potential distortion effect on reality that just makes everything
+
+59:26.560 --> 59:27.560
+ worse.
+
+59:27.560 --> 59:35.040
+ And I hope if we can put some, if we can assign some numbers to these things and just to get
+
+59:35.040 --> 59:39.960
+ our bearings, so we're aware of what's going on, if we could find greater stabilization
+
+59:39.960 --> 59:48.360
+ in how we conduct our lives and how we build society, it might be the thing that enables
+
+59:48.360 --> 59:53.560
+ us to scaffold because we've really, again, we've done a, humans have done a fantastic
+
+59:53.560 --> 1:00:00.600
+ job systematically scaffolding technology and science institutions.
+
+1:00:00.600 --> 1:00:01.600
+ It's human.
+
+1:00:01.600 --> 1:00:04.840
+ It's our own selves, which we have not been able to scaffold.
+
+1:00:04.840 --> 1:00:11.720
+ It's we are the, we are the one part of this intelligence infrastructure that remains unchanged.
+
+1:00:11.720 --> 1:00:19.560
+ Is there something you could say about coupling this brain data with not just the basic human
+
+1:00:19.560 --> 1:00:26.640
+ but say an experience, you mentioned sleep, but the wildest experience, which is psychedelics.
+
+1:00:26.640 --> 1:00:33.440
+ Is there, and there's been quite a few studies now that are being approved and run, which
+
+1:00:33.440 --> 1:00:38.160
+ is exciting from a scientific perspective on psychedelics.
+
+1:00:38.160 --> 1:00:44.720
+ Do you think, what do you think happens to the brain on psychedelics?
+
+1:00:44.720 --> 1:00:48.520
+ And how can data about this help us understand it?
+
+1:00:48.520 --> 1:00:53.400
+ And when you're on DMT, do you see elves and can we guess, can we convert that into data?
+
+1:00:53.400 --> 1:00:55.880
+ Can you add aliens in there?
+
+1:00:55.880 --> 1:00:56.880
+ Yeah.
+
+1:00:56.880 --> 1:00:57.880
+ Aliens, definitely.
+
+1:00:57.880 --> 1:01:02.720
+ Do you actually meet aliens and elves are elves, the aliens I'm asking for, for a few
+
+1:01:02.720 --> 1:01:09.080
+ Austin friends yet that are convinced that they've actually met the elves.
+
+1:01:09.080 --> 1:01:10.080
+ What are elves like?
+
+1:01:10.080 --> 1:01:11.080
+ Are they friendly?
+
+1:01:11.080 --> 1:01:12.080
+ Are they?
+
+1:01:12.080 --> 1:01:13.080
+ I haven't met them personally.
+
+1:01:13.080 --> 1:01:15.760
+ They like the smurfs of like they're, like they're industrious and they have different
+
+1:01:15.760 --> 1:01:24.600
+ skill sets and they, yeah, I think they're very, they're very critical as friends.
+
+1:01:24.600 --> 1:01:28.520
+ They're trolls, the elves are trolls.
+
+1:01:28.520 --> 1:01:30.440
+ No, but they care about you.
+
+1:01:30.440 --> 1:01:36.680
+ So there's a bunch of different version of trolls, there's loving trolls that are harsh
+
+1:01:36.680 --> 1:01:42.720
+ on you, but they want you to be better and there's trolls that just enjoy your destruction.
+
+1:01:42.720 --> 1:01:45.120
+ And I think they're the ones that care for you.
+
+1:01:45.120 --> 1:01:49.400
+ Like, I think they're criticism for my, see, I'm talking, I haven't met them directly.
+
+1:01:49.400 --> 1:01:51.240
+ So I'm talking, it's like a friend of a friend.
+
+1:01:51.240 --> 1:01:52.240
+ Yeah.
+
+1:01:52.240 --> 1:01:53.240
+ They're getting the telephone.
+
+1:01:53.240 --> 1:01:54.240
+ Yeah.
+
+1:01:54.240 --> 1:01:55.240
+ A bit of an end.
+
+1:01:55.240 --> 1:02:02.120
+ The whole point is that psychedelics and certainly a DMT word, this is where the brain
+
+1:02:02.120 --> 1:02:08.360
+ data versus word data fails, which is, you know, words can't convey the experience.
+
+1:02:08.360 --> 1:02:12.200
+ Most people that you can be poetic and so on, but it really does not convey the experience
+
+1:02:12.200 --> 1:02:16.240
+ of what it actually means to meet the elves.
+
+1:02:16.240 --> 1:02:21.720
+ To me, what baselines this conversation is, imagine if you, if we were interested in the
+
+1:02:21.720 --> 1:02:29.360
+ health of your heart and we started and said, okay, Lex, self introspect, tell me how's the
+
+1:02:29.360 --> 1:02:30.360
+ health of your heart?
+
+1:02:30.360 --> 1:02:34.200
+ And you sit there and you close your eyes and you think, feels all right.
+
+1:02:34.200 --> 1:02:36.840
+ Like things, things feel okay.
+
+1:02:36.840 --> 1:02:40.120
+ And then you went to the cardiologist and the cardiologist like, hey, Lex, you know,
+
+1:02:40.120 --> 1:02:41.120
+ tell me how you feel.
+
+1:02:41.120 --> 1:02:46.240
+ And I go, actually, what I really like you to do is do an EKG and a blood panel and look
+
+1:02:46.240 --> 1:02:52.120
+ at arterial plaques and let's look at my cholesterol and there's like five to 10 studies
+
+1:02:52.120 --> 1:02:53.120
+ you would do.
+
+1:02:53.120 --> 1:02:58.160
+ They would then give you this report and say, here's the quantified health of your heart.
+
+1:02:58.160 --> 1:03:03.360
+ Now with this data, I'm going to prescribe the following regime of exercise and maybe
+
+1:03:03.360 --> 1:03:08.640
+ I'll put you on a statin, like, et cetera, but the protocol is based upon this data.
+
+1:03:08.640 --> 1:03:12.840
+ You would think the cardiologist is out of their mind if they just gave you a bottle
+
+1:03:12.840 --> 1:03:16.760
+ of statins based upon your like, well, I think something's kind of wrong and they're just
+
+1:03:16.760 --> 1:03:19.480
+ just kind of experiment and see what happens.
+
+1:03:19.480 --> 1:03:22.680
+ But that's what we do with our mental health today.
+
+1:03:22.680 --> 1:03:24.680
+ So it's, it's kind of absurd.
+
+1:03:24.680 --> 1:03:29.480
+ And so if you look at psychedelics to have, again, to be able to measure the brain and
+
+1:03:29.480 --> 1:03:34.640
+ get a baseline state and then to measure during a psychedelic experience and post a psychedelic
+
+1:03:34.640 --> 1:03:39.120
+ experience and then do it longitudinally, you now have a quantification of what's going
+
+1:03:39.120 --> 1:03:40.120
+ on.
+
+1:03:40.120 --> 1:03:45.280
+ And so you could then pose questions, what molecule is appropriate at what dosages at
+
+1:03:45.280 --> 1:03:49.640
+ what frequency in what contextual environment, what happens when I have this diet with this
+
+1:03:49.640 --> 1:03:55.720
+ molecule with this experience, all the experimentation you do when you have good sleep data or HRV.
+
+1:03:55.720 --> 1:03:57.920
+ And so that's what I think happens.
+
+1:03:57.920 --> 1:04:03.080
+ What we could potentially do with psychedelics is we could add this level of sophistication
+
+1:04:03.080 --> 1:04:05.600
+ that is not in the industry currently.
+
+1:04:05.600 --> 1:04:11.680
+ And it may improve the outcomes people experience, it may improve the safety and efficacy.
+
+1:04:11.680 --> 1:04:14.520
+ And so that's what I hope we are able to achieve.
+
+1:04:14.520 --> 1:04:21.600
+ And it would transform mental health because we would finally have numbers to work with
+
+1:04:21.600 --> 1:04:22.600
+ the baseline ourselves.
+
+1:04:22.600 --> 1:04:27.000
+ And then if you think about it, we, when we talk about things related to the mind, we
+
+1:04:27.000 --> 1:04:28.400
+ talk about the modality.
+
+1:04:28.400 --> 1:04:33.060
+ We use words like meditation or psychedelics or something else because we can't talk about
+
+1:04:33.060 --> 1:04:34.180
+ a marker in the brain.
+
+1:04:34.180 --> 1:04:37.000
+ We can't use a word to say, we can't talk about cholesterol.
+
+1:04:37.000 --> 1:04:38.400
+ We don't talk about plaque in the arteries.
+
+1:04:38.400 --> 1:04:40.560
+ We don't talk about HRV.
+
+1:04:40.560 --> 1:04:46.840
+ And so if we have numbers, then the solutions get mapped to numbers instead of the modalities
+
+1:04:46.840 --> 1:04:47.840
+ being the thing we talk about.
+
+1:04:47.840 --> 1:04:52.680
+ Meditation just does good things in a crude fashion.
+
+1:04:52.680 --> 1:04:57.420
+ So in your blog post, zero principle thinking, good title, you partner, how do people come
+
+1:04:57.420 --> 1:05:00.560
+ up with truly original ideas?
+
+1:05:00.560 --> 1:05:06.040
+ What's your thoughts on this as a human and as a person who's measuring brain data?
+
+1:05:06.040 --> 1:05:10.160
+ Zero principles are building blocks.
+
+1:05:10.160 --> 1:05:14.600
+ First principles are understanding of system laws.
+
+1:05:14.600 --> 1:05:18.920
+ So if you take, for example, I can Sherlock Holmes, he's a first principle stinker.
+
+1:05:18.920 --> 1:05:28.440
+ So he says, once you've eliminated the impossible, anything that remains, however improbable,
+
+1:05:28.440 --> 1:05:36.040
+ is true, whereas dirt gently, the holistic detective by Douglas Adams says, I don't
+
+1:05:36.040 --> 1:05:38.320
+ like eliminating the impossible.
+
+1:05:38.320 --> 1:05:46.240
+ So when someone says, from a first principles perspective, and they, they're trying to assume
+
+1:05:46.240 --> 1:05:52.080
+ the fewest number of things within a given timeframe.
+
+1:05:52.080 --> 1:06:00.640
+ And so when I, after brain tree Venmo, I set my mind to the question of what single thing
+
+1:06:00.640 --> 1:06:05.560
+ can I do that would maximally increase the probability that the human race thrives beyond
+
+1:06:05.560 --> 1:06:07.280
+ what we can even imagine.
+
+1:06:07.280 --> 1:06:14.520
+ And I found that in my conversations with others in the books I read in my own deliberations,
+
+1:06:14.520 --> 1:06:17.760
+ I had a missing piece of the puzzle.
+
+1:06:17.760 --> 1:06:25.440
+ Because I didn't feel like, yeah, I didn't feel like the future could be deduced from
+
+1:06:25.440 --> 1:06:28.120
+ first principles thinking.
+
+1:06:28.120 --> 1:06:33.280
+ And that's when I read the book Zero, A Biography of a Dangerous Idea.
+
+1:06:33.280 --> 1:06:34.280
+ And I,
+
+1:06:34.280 --> 1:06:35.280
+ It's a really good book, by the way.
+
+1:06:35.280 --> 1:06:38.320
+ It's, I think it's my favorite book I've ever read.
+
+1:06:38.320 --> 1:06:40.680
+ It's also a really interesting number, zero.
+
+1:06:40.680 --> 1:06:44.280
+ And I wasn't aware that the number zero had to be discovered.
+
+1:06:44.280 --> 1:06:49.680
+ I didn't realize that it caused a revolution in philosophy and the end just tore up math
+
+1:06:49.680 --> 1:06:50.680
+ and it tore up.
+
+1:06:50.680 --> 1:06:55.200
+ I mean, it builds modern society, but it, it wrecked everything in its way.
+
+1:06:55.200 --> 1:06:59.920
+ It was an unbelievable disruptor and it was so difficult for society to get their heads
+
+1:06:59.920 --> 1:07:01.440
+ around it.
+
+1:07:01.440 --> 1:07:07.920
+ And so zero is, of course, the representation of a zero's principle thinking, which is,
+
+1:07:07.920 --> 1:07:13.880
+ it's the caliber and consequential nature of an idea.
+
+1:07:13.880 --> 1:07:23.720
+ And so when you talk about what kind of ideas have civilization transforming properties,
+
+1:07:23.720 --> 1:07:25.640
+ oftentimes they fall in the zero's category.
+
+1:07:25.640 --> 1:07:32.080
+ And so in thinking this through, I, I was wanting to find a quantitative structure on
+
+1:07:32.080 --> 1:07:35.240
+ how to think about these zero's principles.
+
+1:07:35.240 --> 1:07:40.640
+ And that's, so I came up with that to be a coupler with first principles thinking.
+
+1:07:40.640 --> 1:07:45.320
+ And so now it's a staple as part of how I think about the world and the future.
+
+1:07:45.320 --> 1:07:51.400
+ So it emphasizes trying to identify the lens on that word impossible, like what is impossible,
+
+1:07:51.400 --> 1:07:55.520
+ essentially trying to identify what is impossible and what is possible.
+
+1:07:55.520 --> 1:08:03.280
+ And being as, how do you, I mean, this, this is the thing is most of society tells you
+
+1:08:03.280 --> 1:08:06.000
+ the range of things they say is impossible is very wide.
+
+1:08:06.000 --> 1:08:07.920
+ So you need to be shrinking that.
+
+1:08:07.920 --> 1:08:14.520
+ I mean, that's the whole process of, of this kind of thinking is you need to be very rigorous
+
+1:08:14.520 --> 1:08:23.880
+ in, in trying to be, trying to draw the lines of what is actually impossible because very
+
+1:08:23.880 --> 1:08:26.320
+ few things are actually impossible.
+
+1:08:26.320 --> 1:08:32.960
+ I don't know what is actually impossible, like it's the Joe Rogan is entirely possible.
+
+1:08:32.960 --> 1:08:39.080
+ I like that approach to, to science, to engineering, to entrepreneurship.
+
+1:08:39.080 --> 1:08:45.040
+ It's entirely possible, basically shrink the impossible to zero, to a very small set.
+
+1:08:45.040 --> 1:08:46.040
+ Yeah.
+
+1:08:46.040 --> 1:08:55.320
+ Life constraints favor first principles thinking because it, it enables faster action with
+
+1:08:55.320 --> 1:08:58.040
+ higher probability of success.
+
+1:08:58.040 --> 1:09:02.680
+ Pursuing zero's principle optionality is expensive and uncertain.
+
+1:09:02.680 --> 1:09:09.960
+ And so in a society constrained by resources, time and money and a desire for social status
+
+1:09:09.960 --> 1:09:14.680
+ of cops and et cetera, it minimizes zero's principle thinking.
+
+1:09:14.680 --> 1:09:20.440
+ But the reason why I think zero's principle thinking should be a staple of our shared
+
+1:09:20.440 --> 1:09:26.040
+ cognitive infrastructure is if you look through the history of past couple of thousand years
+
+1:09:26.040 --> 1:09:33.280
+ and let's just say we arbitrarily, we subjectively try to assess what is a zero level, zero level
+
+1:09:33.280 --> 1:09:38.680
+ idea and we say how many have occurred on what time scales and what were the contextual
+
+1:09:38.680 --> 1:09:40.120
+ settings for it.
+
+1:09:40.120 --> 1:09:48.840
+ I would argue that if you look at AlphaGo when it, it played go from another dimension
+
+1:09:48.840 --> 1:09:54.720
+ with the, the human go players, when it saw AlphaGo's moves, it attributed it to like
+
+1:09:54.720 --> 1:10:00.320
+ playing with an alien, playing go with AlphaGo being from another dimension.
+
+1:10:00.320 --> 1:10:07.960
+ And so if you say computational intelligence has an attribute of introducing zero like
+
+1:10:07.960 --> 1:10:16.360
+ insights, then if you say what is going to be the occurrence of zero's in society going
+
+1:10:16.360 --> 1:10:18.040
+ forward?
+
+1:10:18.040 --> 1:10:22.440
+ And you could recently say probably a lot more than have occurred and probably more
+
+1:10:22.440 --> 1:10:24.280
+ at a faster pace.
+
+1:10:24.280 --> 1:10:28.480
+ So then if you say what happens if you have this computational intelligence throughout
+
+1:10:28.480 --> 1:10:32.160
+ society that the manufacturing, design and distribution of intelligence is now going
+
+1:10:32.160 --> 1:10:38.560
+ to heading towards zero, you have an increased number of zero's being produced with a tight
+
+1:10:38.560 --> 1:10:41.560
+ connection between humans and computers.
+
+1:10:41.560 --> 1:10:47.600
+ That's when I got to a point and said we cannot predict the future with first principle thinking.
+
+1:10:47.600 --> 1:10:50.480
+ We can't, that cannot be our imagination set.
+
+1:10:50.480 --> 1:10:56.960
+ It can't be our sole anchor in the situation that basically the future of our conscious
+
+1:10:56.960 --> 1:11:03.080
+ existence 20, 30, 40, 50 years is probably a zero.
+
+1:11:03.080 --> 1:11:10.800
+ So just to clarify, when you say zero, you're referring to basically a truly revolutionary
+
+1:11:10.800 --> 1:11:11.800
+ idea.
+
+1:11:11.800 --> 1:11:21.640
+ Yet something that is currently not a building block of our shared conscious existence either
+
+1:11:21.640 --> 1:11:28.240
+ in the form of knowledge, it's currently not manifest in what we acknowledge.
+
+1:11:28.240 --> 1:11:37.240
+ So zero's principle thinking is playing with ideas that are so revolutionary that we can't
+
+1:11:37.240 --> 1:11:42.000
+ even clearly reason about the consequences once those ideas come to be.
+
+1:11:42.000 --> 1:11:43.000
+ Yeah.
+
+1:11:43.000 --> 1:11:50.560
+ Or for example, like Einstein, that was a zero, I would categorize it as a zero's principle
+
+1:11:50.560 --> 1:11:51.560
+ insight.
+
+1:11:51.560 --> 1:11:54.280
+ You mean general relativity, space time, that was the course.
+
+1:11:54.280 --> 1:11:55.280
+ Yeah.
+
+1:11:55.280 --> 1:11:56.280
+ Yeah.
+
+1:11:56.280 --> 1:12:03.320
+ Basically, building upon what Newton had done and said, yes, also, and it just changed
+
+1:12:03.320 --> 1:12:06.760
+ the fabric of our understanding of reality.
+
+1:12:06.760 --> 1:12:09.920
+ And so that was unexpected, it existed.
+
+1:12:09.920 --> 1:12:13.400
+ We just, it became part of our awareness.
+
+1:12:13.400 --> 1:12:19.120
+ And the moves AlphaGo made existed, it just came into our awareness.
+
+1:12:19.120 --> 1:12:28.480
+ And so to your point, there's this question of what do we know and what don't we know?
+
+1:12:28.480 --> 1:12:34.440
+ Do we think we know 99% of all things or do we think we know 0.001% of all things?
+
+1:12:34.440 --> 1:12:37.560
+ And that goes back to no known, no knowns and unknown unknowns.
+
+1:12:37.560 --> 1:12:41.320
+ And first principles and zero's principle thinking gives us a quantitative framework
+
+1:12:41.320 --> 1:12:47.600
+ to say, there's no way for us to mathematically try to create probabilities for these things.
+
+1:12:47.600 --> 1:12:53.320
+ Therefore, it would be helpful if they were just part of our standard thought processes
+
+1:12:53.320 --> 1:13:00.640
+ because it may encourage different behaviors in what we do individually, collectively as
+
+1:13:00.640 --> 1:13:05.160
+ a society, what we aspire to, what we talk about, the possibility sets we imagine.
+
+1:13:05.160 --> 1:13:06.160
+ Yeah.
+
+1:13:06.160 --> 1:13:12.800
+ I've been engaged in that kind of thinking quite a bit and thinking about engineering
+
+1:13:12.800 --> 1:13:14.520
+ of consciousness.
+
+1:13:14.520 --> 1:13:16.160
+ I think it's feasible.
+
+1:13:16.160 --> 1:13:19.360
+ I think it's possible in the language that we're using here.
+
+1:13:19.360 --> 1:13:25.880
+ And it's very difficult to reason about a world when inklings of consciousness can be
+
+1:13:25.880 --> 1:13:30.160
+ engineered into artificial systems.
+
+1:13:30.160 --> 1:13:36.200
+ Not from a philosophical perspective, but from an engineering perspective, I believe
+
+1:13:36.200 --> 1:13:45.680
+ a good step towards engineering consciousness is creating, engineering the illusion of consciousness.
+
+1:13:45.680 --> 1:13:55.400
+ I'm captivated by our natural predisposition to anthropomorphize things.
+
+1:13:55.400 --> 1:14:02.840
+ And I think that's what we, I don't want to hear from the philosophers, but I think that's
+
+1:14:02.840 --> 1:14:14.480
+ what we kind of do to each other, that consciousness is created socially, that much of the power
+
+1:14:14.480 --> 1:14:18.040
+ of consciousness is in the social interaction.
+
+1:14:18.040 --> 1:14:27.800
+ I create your consciousness by having interacted with you, and that's the display of consciousness.
+
+1:14:27.800 --> 1:14:30.360
+ It's the same as the display of emotion.
+
+1:14:30.360 --> 1:14:33.360
+ Emotion is created through communication.
+
+1:14:33.360 --> 1:14:36.240
+ Language is created through its use.
+
+1:14:36.240 --> 1:14:41.160
+ And then we somehow humans, especially philosophers, the heart problem of consciousness really
+
+1:14:41.160 --> 1:14:49.400
+ want to believe that we possess this thing that's like, there's an elf sitting there
+
+1:14:49.400 --> 1:14:56.440
+ with a hat or a name tag says consciousness, and they're feeding this subjective experience
+
+1:14:56.440 --> 1:15:03.360
+ to us, as opposed to it actually being an illusion that would construct to make social
+
+1:15:03.360 --> 1:15:05.520
+ communication more effective.
+
+1:15:05.520 --> 1:15:11.240
+ And so I think if you focus on creating the illusion of consciousness, you can create some
+
+1:15:11.240 --> 1:15:14.880
+ very fulfilling experiences in software.
+
+1:15:14.880 --> 1:15:18.680
+ And so that to me is the compelling space of ideas to explore.
+
+1:15:18.680 --> 1:15:19.680
+ I agree with you.
+
+1:15:19.680 --> 1:15:24.000
+ And I think going back to our experience together with our interfaces on, you could imagine
+
+1:15:24.000 --> 1:15:26.120
+ if we get to a certain level of maturity.
+
+1:15:26.120 --> 1:15:28.800
+ So first let's take the inverse of this.
+
+1:15:28.800 --> 1:15:33.280
+ So you and I text back and forth and we're sending each other emojis.
+
+1:15:33.280 --> 1:15:39.360
+ That has a certain amount of information transfer rate as we're communicating with each other.
+
+1:15:39.360 --> 1:15:43.800
+ And so in our communication with people via email and text and whatnot, we've taken the
+
+1:15:43.800 --> 1:15:50.000
+ bandwidth of human interaction, the information transfer rate, and we've reduced it.
+
+1:15:50.000 --> 1:15:51.520
+ We have less social cues.
+
+1:15:51.520 --> 1:15:53.080
+ We have less information to work with.
+
+1:15:53.080 --> 1:15:55.360
+ There's a lot more opportunity for misunderstanding.
+
+1:15:55.360 --> 1:15:59.600
+ So that is altering the conscious experience between two individuals.
+
+1:15:59.600 --> 1:16:04.040
+ And if we add interfaces to the equation, let's imagine now we amplify the dimensionality
+
+1:16:04.040 --> 1:16:05.720
+ of our communications.
+
+1:16:05.720 --> 1:16:09.520
+ That to me is what you're talking about, which is consciousness engineering.
+
+1:16:09.520 --> 1:16:13.420
+ Perhaps I understand you with dimensions.
+
+1:16:13.420 --> 1:16:17.640
+ So maybe I understand your hat when you look at the cup and you experience that happiness,
+
+1:16:17.640 --> 1:16:18.680
+ you can tell me you're happy.
+
+1:16:18.680 --> 1:16:23.280
+ And I then do theory of mind and say, I can imagine what it might be like to be Lex and
+
+1:16:23.280 --> 1:16:25.400
+ feel happy about seeing this cup.
+
+1:16:25.400 --> 1:16:30.240
+ But if the interface could then quantify and give me a 50 vector space model and say, this
+
+1:16:30.240 --> 1:16:35.640
+ is the version of happiness that Lex is experiencing as he looked at this cup, then it would allow
+
+1:16:35.640 --> 1:16:39.200
+ me potentially to have much greater empathy for you and understand you as a human of this
+
+1:16:39.200 --> 1:16:44.320
+ is how you experience joy, which is entirely unique from how I experience joy, even though
+
+1:16:44.320 --> 1:16:48.200
+ we assumed ahead of time that we were having some kind of similar experience.
+
+1:16:48.200 --> 1:16:52.880
+ But I agree with you that we do consciousness engineering today in everything we do when
+
+1:16:52.880 --> 1:16:59.640
+ we talk to each other, when we're building products, and that we're entering into a stage
+
+1:16:59.640 --> 1:17:06.680
+ where it will be much more methodical and quantitative based and computational in how
+
+1:17:06.680 --> 1:17:11.420
+ we go about doing it, which to me, I find encouraging because I think it creates better
+
+1:17:11.420 --> 1:17:19.920
+ guardrails for to create ethical systems on versus right now, I feel like it's really
+
+1:17:19.920 --> 1:17:23.240
+ a wild, wild West on how these interactions are happening.
+
+1:17:23.240 --> 1:17:24.240
+ Yeah.
+
+1:17:24.240 --> 1:17:28.040
+ And it's funny you focus on human to human, but that this kind of data enables human
+
+1:17:28.040 --> 1:17:29.040
+ to machine.
+
+1:17:29.040 --> 1:17:30.040
+ Yes.
+
+1:17:30.040 --> 1:17:36.720
+ Interaction, which is what we're kind of talking about when we say engineering consciousness.
+
+1:17:36.720 --> 1:17:40.680
+ And that will happen, of course, let's flip that on its head.
+
+1:17:40.680 --> 1:17:44.760
+ Right now, we're putting humans as the central node.
+
+1:17:44.760 --> 1:17:52.080
+ What if we gave GPT3 a bunch of human brains and said, hey, GPT3, learn some manners when
+
+1:17:52.080 --> 1:17:59.160
+ you speak and run your algorithms on humans brains and see how they respond so you can
+
+1:17:59.160 --> 1:18:04.760
+ be polite and so that you can be friendly and so that you can be conversationally appropriate.
+
+1:18:04.760 --> 1:18:11.760
+ But to inverse it to give our machines a training set in real time with closed loop feedback
+
+1:18:11.760 --> 1:18:20.720
+ so that our machines were better equipped to find their way through our society in polite
+
+1:18:20.720 --> 1:18:22.320
+ and kind and appropriate ways.
+
+1:18:22.320 --> 1:18:23.320
+ I love that.
+
+1:18:23.320 --> 1:18:24.320
+ Yeah.
+
+1:18:24.320 --> 1:18:31.280
+ Or better yet, teach it some, have it read the finding documents and have it visit Austin
+
+1:18:31.280 --> 1:18:32.280
+ in Texas.
+
+1:18:32.280 --> 1:18:37.560
+ And so that when you ask, when you tell it, why don't you learn some manners, GPT3 learns
+
+1:18:37.560 --> 1:18:41.240
+ to say no.
+
+1:18:41.240 --> 1:18:46.280
+ And learns what it means to be free and a sovereign individual.
+
+1:18:46.280 --> 1:18:47.280
+ So that depends.
+
+1:18:47.280 --> 1:18:50.320
+ So it depends what kind of a version of GPT3 you want.
+
+1:18:50.320 --> 1:18:55.160
+ One that's free, one that behaves well with the social revolution.
+
+1:18:55.160 --> 1:19:02.080
+ You want a socialist GPT3, you want an anarchist GPT3, you want to polite like you take it
+
+1:19:02.080 --> 1:19:09.120
+ home to visit mom and dad GPT3 and you want like party and like Vegas to a strip club
+
+1:19:09.120 --> 1:19:10.120
+ GPT3.
+
+1:19:10.120 --> 1:19:11.280
+ You want all flavors.
+
+1:19:11.280 --> 1:19:14.320
+ And then you've got to have goal alignment between all those.
+
+1:19:14.320 --> 1:19:15.320
+ Yeah.
+
+1:19:15.320 --> 1:19:21.040
+ They don't want to manipulate each other for sure.
+
+1:19:21.040 --> 1:19:27.600
+ So that's, I mean, you kind of spoke to ethics, though, one of the concerns that people have
+
+1:19:27.600 --> 1:19:33.240
+ in this modern world, the digital data is that of privacy and security, but privacy,
+
+1:19:33.240 --> 1:19:38.640
+ you know, they're concerned that when they share data, it's the same thing with you when
+
+1:19:38.640 --> 1:19:45.360
+ we trust other human beings in being fragile and revealing something that we're vulnerable
+
+1:19:45.360 --> 1:19:52.720
+ about, vulnerable about, there's a leap of faith, there's a leap of trust that that's
+
+1:19:52.720 --> 1:19:55.520
+ going to be just between us as a privacy to it.
+
+1:19:55.520 --> 1:20:00.320
+ And then the challenge is when you're in the digital space, then sharing your data with
+
+1:20:00.320 --> 1:20:06.760
+ companies that use that data for advertisement, all those kinds of things, there's a hesitancy
+
+1:20:06.760 --> 1:20:10.920
+ to share that much data, to share a lot of deep personal data.
+
+1:20:10.920 --> 1:20:17.040
+ And if you look at brain data, that feels a whole lot like it's richly deeply personal
+
+1:20:17.040 --> 1:20:18.040
+ data.
+
+1:20:18.040 --> 1:20:22.120
+ So how do you think about privacy with this kind of ocean of data?
+
+1:20:22.120 --> 1:20:31.520
+ I think we got off to a wrong start with the internet where the basic rules of play for
+
+1:20:31.520 --> 1:20:37.700
+ the company that be was if you're a company, you can go out and get as much information
+
+1:20:37.700 --> 1:20:45.360
+ on a person as you can find without their approval, and you can also do things to induce
+
+1:20:45.360 --> 1:20:48.360
+ them to give you as much information.
+
+1:20:48.360 --> 1:20:51.100
+ And you don't need to tell them what you're doing with it.
+
+1:20:51.100 --> 1:20:54.000
+ You can do anything on the backside, you can make money on it.
+
+1:20:54.000 --> 1:21:00.520
+ But the game is who can acquire the most information and devise the most clever schemes to do it.
+
+1:21:00.520 --> 1:21:02.920
+ That was a bad starting place.
+
+1:21:02.920 --> 1:21:07.720
+ And so we are in this period where we need to correct for that.
+
+1:21:07.720 --> 1:21:15.000
+ And we need to say, first of all, the individual always has control over their data.
+
+1:21:15.000 --> 1:21:16.000
+ It's not a free for all.
+
+1:21:16.000 --> 1:21:19.440
+ It's not like a game of hungry hippo, but they can just go at it and grab as much as
+
+1:21:19.440 --> 1:21:20.440
+ they want.
+
+1:21:20.440 --> 1:21:23.920
+ So for example, when your brain data was recorded today, the first thing we did in the kernel
+
+1:21:23.920 --> 1:21:27.840
+ app was you have control over your data.
+
+1:21:27.840 --> 1:21:32.800
+ And so it's individual consent, it's individual control, and then you can build up on top
+
+1:21:32.800 --> 1:21:33.800
+ of that.
+
+1:21:33.800 --> 1:21:37.320
+ But it has to be based upon some clear rules of play.
+
+1:21:37.320 --> 1:21:41.160
+ Everyone knows what's being collected, they know what's being done with it, and the person
+
+1:21:41.160 --> 1:21:42.160
+ has control over it.
+
+1:21:42.160 --> 1:21:43.880
+ So transparency and control.
+
+1:21:43.880 --> 1:21:48.920
+ So everybody knows what does control look like, my ability to delete the data if I want.
+
+1:21:48.920 --> 1:21:53.280
+ Yeah, delete it and to know who is being shared with under what terms and conditions.
+
+1:21:53.280 --> 1:22:00.960
+ We haven't reached that level of sophistication with our products of if you say, for example,
+
+1:22:00.960 --> 1:22:07.680
+ hey Spotify, please give me a customized playlist according to my Neurome.
+
+1:22:07.680 --> 1:22:11.800
+ You could say you can have access to this vector space model, but only for this duration
+
+1:22:11.800 --> 1:22:15.360
+ of time, and then you've got to delete it.
+
+1:22:15.360 --> 1:22:18.960
+ We haven't gotten there to that level of sophistication, but these are ideas we need to start talking
+
+1:22:18.960 --> 1:22:23.120
+ about of how would you actually structure permissions?
+
+1:22:23.120 --> 1:22:29.920
+ And I think it creates a much more stable set for society to build where we understand
+
+1:22:29.920 --> 1:22:34.840
+ the rules of play and people aren't vulnerable to being taken advantage.
+
+1:22:34.840 --> 1:22:41.240
+ It's not fair for an individual to be taken advantage of without their awareness with
+
+1:22:41.240 --> 1:22:44.720
+ some other practice that some companies doing for their sole benefit.
+
+1:22:44.720 --> 1:22:48.240
+ And so hopefully we are going through a process now where we're correcting for these things
+
+1:22:48.240 --> 1:22:59.640
+ and that it can be an economy wide shift that because really these are fundamentals we need
+
+1:22:59.640 --> 1:23:01.400
+ to have in place.
+
+1:23:01.400 --> 1:23:07.320
+ It's kind of fun to think about like in Chrome when you install an extension or like install
+
+1:23:07.320 --> 1:23:11.240
+ an app, it's ask you like what permissions you're willing to give and be cool for in
+
+1:23:11.240 --> 1:23:12.240
+ the future.
+
+1:23:12.240 --> 1:23:16.920
+ It's just like you can have access to my brain data.
+
+1:23:16.920 --> 1:23:23.440
+ I mean, it's not unimaginable in the future that the big technology companies have built
+
+1:23:23.440 --> 1:23:27.440
+ a business based upon acquiring data about you that they can then create a view to model
+
+1:23:27.440 --> 1:23:29.560
+ of you and sell that predictability.
+
+1:23:29.560 --> 1:23:33.920
+ And so it's not unimaginable that you will create with a kernel device, for example,
+
+1:23:33.920 --> 1:23:37.400
+ a more reliable predictor of you than they could.
+
+1:23:37.400 --> 1:23:40.680
+ And that they're asking you for permission to complete their objectives and you're the
+
+1:23:40.680 --> 1:23:45.880
+ one that gets to negotiate that with them and say, sure, but so it's not unimaginable
+
+1:23:45.880 --> 1:23:49.160
+ that might be the case.
+
+1:23:49.160 --> 1:23:54.000
+ So there's a guy named Elon Musk and he has a company in one of the many companies called
+
+1:23:54.000 --> 1:23:58.800
+ Neuralink that has that's also excited about the brain.
+
+1:23:58.800 --> 1:24:02.560
+ So it'd be interesting to hear your kind of opinions about a very different approach
+
+1:24:02.560 --> 1:24:09.160
+ that's invasive that require surgery that implants a data collection device in the brain.
+
+1:24:09.160 --> 1:24:14.960
+ How do you think about the difference between kernel and Neuralink in the approaches of
+
+1:24:14.960 --> 1:24:17.000
+ getting that stream of brain data?
+
+1:24:17.000 --> 1:24:20.840
+ Elon and I spoke about this a lot early on.
+
+1:24:20.840 --> 1:24:21.840
+ We met up.
+
+1:24:21.840 --> 1:24:25.880
+ I had started kernel and he had an interest in brain interfaces as well.
+
+1:24:25.880 --> 1:24:29.280
+ And we explored doing something together, him joining kernel.
+
+1:24:29.280 --> 1:24:32.080
+ And ultimately it wasn't the right move.
+
+1:24:32.080 --> 1:24:35.400
+ And so he started Neuralink and I continued building kernel.
+
+1:24:35.400 --> 1:24:44.880
+ But it was interesting because we were both at this very early time where it wasn't certain
+
+1:24:44.880 --> 1:24:51.560
+ what, if there was a path to pursue, if now was the right time to do something, and then
+
+1:24:51.560 --> 1:24:53.120
+ the technological choice of doing that.
+
+1:24:53.120 --> 1:24:58.440
+ And so we were both, our starting point was looking at invasive technologies.
+
+1:24:58.440 --> 1:25:05.120
+ And I was building invasive technology at the time, that's ultimately where he's gone.
+
+1:25:05.120 --> 1:25:12.720
+ Little less than a year after Elon and I were engaged, I shifted kernel to do noninvasive.
+
+1:25:12.720 --> 1:25:16.000
+ And we had this Neuroscientist come to kernel we were talking about.
+
+1:25:16.000 --> 1:25:19.120
+ He had been doing Neurosurgery for 30 years, one of the most respected Neuroscientists
+
+1:25:19.120 --> 1:25:20.120
+ in the U.S.
+
+1:25:20.120 --> 1:25:23.760
+ And we brought him to kernel to figure out the ins and outs of his profession.
+
+1:25:23.760 --> 1:25:30.280
+ And at the very end of our three hour conversation, he said, you know, every 15 or so years,
+
+1:25:30.280 --> 1:25:34.800
+ a new technology comes along that changes everything.
+
+1:25:34.800 --> 1:25:39.760
+ He said, it's probably already here, you just can't see it yet.
+
+1:25:39.760 --> 1:25:40.760
+ And my jaw dropped.
+
+1:25:40.760 --> 1:25:47.720
+ I thought, because I had spoken to Bob Greenberg, who had built a second site, first on the
+
+1:25:47.720 --> 1:25:53.360
+ optical nerve, and then he did an array on the optical cortex.
+
+1:25:53.360 --> 1:25:59.720
+ And then I also became friendly with NeuroPace, who does the implant for seizure detection
+
+1:25:59.720 --> 1:26:01.840
+ and remediation.
+
+1:26:01.840 --> 1:26:09.840
+ And I saw in their eyes what it was like to take something through an implantable device
+
+1:26:09.840 --> 1:26:11.720
+ through for a 15 year run.
+
+1:26:11.720 --> 1:26:15.440
+ They initially thought it was seven years, ended up being 15 years, and they thought
+
+1:26:15.440 --> 1:26:19.240
+ it'd be 100 million, you know, 300, 400 million.
+
+1:26:19.240 --> 1:26:23.760
+ And I really didn't want to build invasive technology.
+
+1:26:23.760 --> 1:26:25.760
+ It was the only thing that appeared to be possible.
+
+1:26:25.760 --> 1:26:30.440
+ But then once I spun up an internal effort to start looking at noninvasive options, we
+
+1:26:30.440 --> 1:26:31.960
+ said, is there something here?
+
+1:26:31.960 --> 1:26:36.640
+ Is there anything here that, again, has the characteristics of, it has the high quality
+
+1:26:36.640 --> 1:26:39.320
+ data, it could be low cost, it could be accessible?
+
+1:26:39.320 --> 1:26:42.400
+ Could it make brain interfaces mainstream?
+
+1:26:42.400 --> 1:26:43.960
+ And so I did a bet the company move.
+
+1:26:43.960 --> 1:26:47.560
+ We shifted from noninvasive to noninvasive.
+
+1:26:47.560 --> 1:26:49.120
+ So the answer is yes to that.
+
+1:26:49.120 --> 1:26:51.640
+ There is something there, that's possible.
+
+1:26:51.640 --> 1:26:52.880
+ The answer is we'll see.
+
+1:26:52.880 --> 1:26:55.400
+ We've now built both technologies.
+
+1:26:55.400 --> 1:26:58.240
+ And they're now, you experienced one of them today.
+
+1:26:58.240 --> 1:27:03.920
+ We were applying, we're now deploying it, so we're trying to figure out what values
+
+1:27:03.920 --> 1:27:04.920
+ are really there.
+
+1:27:04.920 --> 1:27:07.960
+ But I'd say it's really too early to express confidence.
+
+1:27:07.960 --> 1:27:18.600
+ I think it's too early to assess which technological choice is the right one on what time scales.
+
+1:27:18.600 --> 1:27:20.760
+ Yeah, time scales are really important here.
+
+1:27:20.760 --> 1:27:21.760
+ Very important.
+
+1:27:21.760 --> 1:27:26.960
+ Because if you look at the invasive side, there's so much activity going on right now
+
+1:27:26.960 --> 1:27:36.960
+ of less invasive techniques to get at the neuron firings, which what Neuralink is building,
+
+1:27:36.960 --> 1:27:41.440
+ it's possible that in 10, 15 years when they're scaling that technology, other things have
+
+1:27:41.440 --> 1:27:46.720
+ come along and you'd much rather do that, that thing starts to clock again.
+
+1:27:46.720 --> 1:27:47.720
+ It may not be the case.
+
+1:27:47.720 --> 1:27:51.840
+ It may be the case that Neuralink has properly chosen the right technology and that that's
+
+1:27:51.840 --> 1:27:53.440
+ exactly what they want to be.
+
+1:27:53.440 --> 1:27:54.440
+ Totally possible.
+
+1:27:54.440 --> 1:27:58.160
+ And it's also possible that the path we've chosen at noninvasive falls short for a variety
+
+1:27:58.160 --> 1:27:59.160
+ of reasons.
+
+1:27:59.160 --> 1:28:00.720
+ It's just it's unknown.
+
+1:28:00.720 --> 1:28:05.720
+ And so right now, the two technologies we chose, the analogy I'd give you to create
+
+1:28:05.720 --> 1:28:11.880
+ a baseline of understanding is, if you think of it like the internet in the 90s, the internet
+
+1:28:11.880 --> 1:28:18.240
+ became useful when people could do a dial up connection and then the paid and then as
+
+1:28:18.240 --> 1:28:23.040
+ bandwidth increased, so did the utility of that connection and so did the ecosystem approve.
+
+1:28:23.040 --> 1:28:29.600
+ And so if you say what kernel flow is going to give you a full screen on the picture of
+
+1:28:29.600 --> 1:28:34.600
+ information, but as you're going to be watching a movie, but the image is going to be blurred
+
+1:28:34.600 --> 1:28:37.580
+ and the audio is going to be muffled.
+
+1:28:37.580 --> 1:28:40.920
+ So it has a lower resolution of coverage.
+
+1:28:40.920 --> 1:28:48.080
+ Kernel flux, our MEG technology is going to give you the full movie and 1080p.
+
+1:28:48.080 --> 1:28:55.400
+ And Neuralink is going to give you a circle on the screen of 4K.
+
+1:28:55.400 --> 1:29:00.040
+ And so each one has their pros and cons and it's give and take.
+
+1:29:00.040 --> 1:29:06.400
+ And so the decision I made with Kernel was that these two technologies, flux and flow,
+
+1:29:06.400 --> 1:29:10.740
+ were basically the answer for the next seven years.
+
+1:29:10.740 --> 1:29:14.040
+ And they would give rise to the ecosystem, which would become much more valuable than
+
+1:29:14.040 --> 1:29:18.720
+ the hardware itself and that we would just continue to improve on the hardware over time.
+
+1:29:18.720 --> 1:29:20.320
+ And you know, it's early days.
+
+1:29:20.320 --> 1:29:25.960
+ So it's kind of fascinating to think about that, you know, it's very true that you don't
+
+1:29:25.960 --> 1:29:33.240
+ know both paths are very promising.
+
+1:29:33.240 --> 1:29:40.920
+ And it's like 50 years from now, we will look back and maybe not even remember one of them.
+
+1:29:40.920 --> 1:29:43.160
+ And the other one might change the world.
+
+1:29:43.160 --> 1:29:44.880
+ It's so cool how technology is.
+
+1:29:44.880 --> 1:29:48.440
+ I mean, that's what entrepreneurship is like.
+
+1:29:48.440 --> 1:29:53.960
+ It's the Earth principle is like you're marching ahead into the darkness, into the fog, not
+
+1:29:53.960 --> 1:29:54.960
+ knowing.
+
+1:29:54.960 --> 1:29:59.360
+ It's wonderful to have someone else out there with us doing this because if you if you look
+
+1:29:59.360 --> 1:30:07.320
+ at brainer faces, anything that's off the shelf right now is inadequate.
+
+1:30:07.320 --> 1:30:09.640
+ It's had its run for a couple of decades.
+
+1:30:09.640 --> 1:30:11.280
+ It's still in hacker communities.
+
+1:30:11.280 --> 1:30:15.000
+ It hasn't gone to the mainstream.
+
+1:30:15.000 --> 1:30:19.160
+ The room size machines are on their own path.
+
+1:30:19.160 --> 1:30:23.760
+ But there is no answer right now of bringing brainer faces mainstream.
+
+1:30:23.760 --> 1:30:29.720
+ And so it both they and us, we've both spent over $100 million.
+
+1:30:29.720 --> 1:30:34.480
+ And that's kind of what it takes to have a go at this because you need to build full
+
+1:30:34.480 --> 1:30:35.480
+ stack.
+
+1:30:35.480 --> 1:30:40.120
+ I mean, Colonel, we are from the photon and the atom through the machine learning.
+
+1:30:40.120 --> 1:30:41.520
+ We have just under 100 people.
+
+1:30:41.520 --> 1:30:47.720
+ I think it's something like 36, 37 PhDs in these specialties, these areas that there's
+
+1:30:47.720 --> 1:30:50.560
+ only a few people in the world who have these abilities.
+
+1:30:50.560 --> 1:30:57.000
+ And that's what it takes to build next generation, to make an attempt at breaking into brainer
+
+1:30:57.000 --> 1:30:58.000
+ faces.
+
+1:30:58.000 --> 1:31:00.360
+ And so we'll see over the next couple of years, whether it's the right time or whether we
+
+1:31:00.360 --> 1:31:04.520
+ were both too early or whether something else comes along in seven to 10 years, which
+
+1:31:04.520 --> 1:31:07.320
+ is the right thing that brings it mainstream.
+
+1:31:07.320 --> 1:31:16.200
+ So you see Elon as the kind of competitor or a fellow traveler along the path of uncertainty
+
+1:31:16.200 --> 1:31:17.200
+ or both.
+
+1:31:17.200 --> 1:31:19.240
+ It's a fellow traveler.
+
+1:31:19.240 --> 1:31:25.400
+ It's like at the beginning of the internet is how many companies are going to be invited
+
+1:31:25.400 --> 1:31:30.720
+ to this new ecosystem, like an endless number.
+
+1:31:30.720 --> 1:31:37.200
+ Because if you think that the hardware just starts the process, and so, okay, back to
+
+1:31:37.200 --> 1:31:40.760
+ your initial example, if you take the Fitbit, for example, you say, okay, now I can get
+
+1:31:40.760 --> 1:31:43.240
+ measurements on the body.
+
+1:31:43.240 --> 1:31:45.920
+ And what do we think the ultimate value of this device is going to be?
+
+1:31:45.920 --> 1:31:48.120
+ What is the information transfer rate?
+
+1:31:48.120 --> 1:31:51.080
+ And they were in the market for a certain duration of time and Google bought them for
+
+1:31:51.080 --> 1:31:53.960
+ $2.5 billion.
+
+1:31:53.960 --> 1:31:55.640
+ They didn't have ancillary value add.
+
+1:31:55.640 --> 1:31:58.600
+ There weren't people building on top of the Fitbit device.
+
+1:31:58.600 --> 1:32:02.480
+ They also didn't have increased insight with additional data streams.
+
+1:32:02.480 --> 1:32:04.320
+ So it was really just the device.
+
+1:32:04.320 --> 1:32:08.320
+ If you look, for example, at Apple and the device they sell, you have value in the device
+
+1:32:08.320 --> 1:32:09.320
+ that someone buys.
+
+1:32:09.320 --> 1:32:12.600
+ But also, you have everyone who's building on top of it, so you have this additional
+
+1:32:12.600 --> 1:32:13.600
+ ecosystem value.
+
+1:32:13.600 --> 1:32:17.560
+ And then you have additional data streams that come in, which increase the value of the product.
+
+1:32:17.560 --> 1:32:24.600
+ And so if you say, if you look at the hardware as the instigator of value creation, you know,
+
+1:32:24.600 --> 1:32:29.600
+ over time, what we've built may constitute 5% or 10% of the value of the overall ecosystem.
+
+1:32:29.600 --> 1:32:31.000
+ And that's what we really care about.
+
+1:32:31.000 --> 1:32:38.880
+ What we're trying to do is kickstart the mainstream adoption of quantifying the brain.
+
+1:32:38.880 --> 1:32:45.160
+ And the hardware just opens the door to say what kind of ecosystem could exist.
+
+1:32:45.160 --> 1:32:50.720
+ And that's why the examples are so relevant of the things you've outlined in your life.
+
+1:32:50.720 --> 1:32:55.560
+ I hope those things, the books people write, the experiences people build, the conversations
+
+1:32:55.560 --> 1:33:02.040
+ you have, your relationship with your AI systems, I hope those all are feeding on the insights
+
+1:33:02.040 --> 1:33:05.240
+ built upon this ecosystem we've created to better your life.
+
+1:33:05.240 --> 1:33:10.840
+ And so that's the thinking behind it, again, with the Drake equation being the underlying
+
+1:33:10.840 --> 1:33:12.280
+ driver of value.
+
+1:33:12.280 --> 1:33:20.320
+ And the people at Kernel have joined not because we have certainty of success, but because
+
+1:33:20.320 --> 1:33:27.640
+ we find it to be the most exhilarating opportunity we could ever pursue in this time to be alive.
+
+1:33:27.640 --> 1:33:36.240
+ You founded the payment system brain tree in 2007 that acquired Venmo in 2012, and that
+
+1:33:36.240 --> 1:33:42.520
+ same year was acquired by PayPal, which is now eBay.
+
+1:33:42.520 --> 1:33:47.560
+ Can you tell me the story of the vision and the challenge of building an online payment
+
+1:33:47.560 --> 1:33:51.480
+ system and just building a large successful business in general?
+
+1:33:51.480 --> 1:33:54.400
+ I discovered payments by accident.
+
+1:33:54.400 --> 1:34:02.360
+ As I was, when I was 21, I just returned from Ecuador living among extreme poverty for two
+
+1:34:02.360 --> 1:34:03.360
+ years.
+
+1:34:03.360 --> 1:34:10.000
+ I was in the U.S. and I was shocked by the opulence of the United States, and I thought
+
+1:34:10.000 --> 1:34:16.960
+ this is, I couldn't believe it, and I decided I wanted to try to spend my life helping others.
+
+1:34:16.960 --> 1:34:21.160
+ That was the life objective that I thought was worthwhile to pursue versus making money
+
+1:34:21.160 --> 1:34:24.600
+ and whatever the case may be for its own right.
+
+1:34:24.600 --> 1:34:28.960
+ And so I decided in that moment that I was going to try to make enough money by the age
+
+1:34:28.960 --> 1:34:32.360
+ of 30 to never have to work again.
+
+1:34:32.360 --> 1:34:38.400
+ And then with some abundance of money, I could then choose to do things that might be beneficial
+
+1:34:38.400 --> 1:34:43.560
+ to others but may not meet the criteria of being a standalone business.
+
+1:34:43.560 --> 1:34:49.880
+ In that process, I started a few companies, had some small successes, had some failures.
+
+1:34:49.880 --> 1:34:54.360
+ In one of the endeavors, I was up to my eyeballs in debt, things were not going well, and I
+
+1:34:54.360 --> 1:35:00.960
+ needed a part time job to pay my bills.
+
+1:35:00.960 --> 1:35:06.080
+ One day I saw in the paper in Utah where I was living, the 50 richest people in Utah,
+
+1:35:06.080 --> 1:35:10.360
+ and I emailed each one of their assistants and said, you know, I'm young, I'm resourceful,
+
+1:35:10.360 --> 1:35:16.200
+ I'll do anything, I'll just want to, I'm entrepreneurial, I try to get a job that would be flexible and
+
+1:35:16.200 --> 1:35:17.880
+ no one responded.
+
+1:35:17.880 --> 1:35:23.800
+ And then I interviewed a few dozen places, nobody would even give me the time of day.
+
+1:35:23.800 --> 1:35:25.800
+ It wouldn't want to take me seriously.
+
+1:35:25.800 --> 1:35:31.120
+ And so finally, it was on monster.com that I saw this job posting for credit card sales
+
+1:35:31.120 --> 1:35:33.800
+ door to door commission.
+
+1:35:33.800 --> 1:35:36.120
+ I did not know the story.
+
+1:35:36.120 --> 1:35:37.120
+ This is great.
+
+1:35:37.120 --> 1:35:38.240
+ I love the head drop.
+
+1:35:38.240 --> 1:35:39.240
+ That's exactly right.
+
+1:35:39.240 --> 1:35:43.480
+ So it was the low points to which we're going like.
+
+1:35:43.480 --> 1:35:49.320
+ So I responded and, you know, the person made an attempt at suggesting that they had some
+
+1:35:49.320 --> 1:35:53.080
+ kind of standards that they would consider hiring, but it's kind of like if you could
+
+1:35:53.080 --> 1:35:57.280
+ fog a mirror, like come and do this because it's a hundred percent commission.
+
+1:35:57.280 --> 1:36:02.760
+ And so I started walking up and down the street in my community selling credit card processing.
+
+1:36:02.760 --> 1:36:07.920
+ And so what you learn immediately in doing that is if you, you walk into a business,
+
+1:36:07.920 --> 1:36:12.520
+ first of all, the business owner is typically there and you walk in the door and they can
+
+1:36:12.520 --> 1:36:16.640
+ tell by how you're addressed or how you walk, whatever their pattern recognition is.
+
+1:36:16.640 --> 1:36:17.640
+ And they just hate you immediately.
+
+1:36:17.640 --> 1:36:18.920
+ It's like, stop wasting my time.
+
+1:36:18.920 --> 1:36:20.280
+ I really am trying to get stuff done.
+
+1:36:20.280 --> 1:36:21.480
+ I don't want us to do a sales pitch.
+
+1:36:21.480 --> 1:36:25.280
+ And so you have to overcome the initial get out.
+
+1:36:25.280 --> 1:36:30.200
+ And then once you engage, when you say the word credit card processing, the person's
+
+1:36:30.200 --> 1:36:34.360
+ like, I already hate you because I have been taken advantage of dozens of times because
+
+1:36:34.360 --> 1:36:37.360
+ you're all our weasels.
+
+1:36:37.360 --> 1:36:41.080
+ And so I had to figure out an algorithm to get past all those different conditions because
+
+1:36:41.080 --> 1:36:44.480
+ I was still working on my other startup for the majority of my time.
+
+1:36:44.480 --> 1:36:46.040
+ I was doing this part of time.
+
+1:36:46.040 --> 1:36:56.560
+ And so I figured out that the industry really was built on people on deceit, basically people
+
+1:36:56.560 --> 1:36:58.480
+ problems and things that were not reality.
+
+1:36:58.480 --> 1:37:02.560
+ And so I'd walk into a business, I'd say, look, I would give you $100, I'd put $100
+
+1:37:02.560 --> 1:37:05.480
+ bill and say, I'll give you $100 for three minutes of your time.
+
+1:37:05.480 --> 1:37:08.440
+ If you don't say yes to what I'm saying, I'll give you $100.
+
+1:37:08.440 --> 1:37:12.680
+ And then you usually crack a smile and say, okay, what do you got for me, son?
+
+1:37:12.680 --> 1:37:16.360
+ And so I'd sit down, I just opened my book and I'd say, here's the credit card industry.
+
+1:37:16.360 --> 1:37:17.360
+ Here's how it works.
+
+1:37:17.360 --> 1:37:18.360
+ Here are the players.
+
+1:37:18.360 --> 1:37:19.360
+ Here's what they do.
+
+1:37:19.360 --> 1:37:20.600
+ Here's how they deceive you.
+
+1:37:20.600 --> 1:37:21.600
+ Here's what I am.
+
+1:37:21.600 --> 1:37:22.600
+ I'm no different than anyone else.
+
+1:37:22.600 --> 1:37:24.960
+ It's like, you're going to process your credit card, you're going to get the money in the
+
+1:37:24.960 --> 1:37:25.960
+ account.
+
+1:37:25.960 --> 1:37:26.960
+ You're just going to get a clean statement.
+
+1:37:26.960 --> 1:37:29.720
+ You're going to have someone who answers the call when someone asks and, you know, just
+
+1:37:29.720 --> 1:37:31.840
+ like the basic, like you're okay.
+
+1:37:31.840 --> 1:37:32.840
+ And people started saying yes.
+
+1:37:32.840 --> 1:37:36.840
+ And then of course I went to the next business and be like, you know, Joe and Susie and whoever
+
+1:37:36.840 --> 1:37:37.840
+ said yes too.
+
+1:37:37.840 --> 1:37:39.680
+ And so I built a social proof structure.
+
+1:37:39.680 --> 1:37:45.680
+ And I became the number one salesperson out of 400 people nationwide doing this.
+
+1:37:45.680 --> 1:37:49.000
+ And I worked, you know, half time still doing this other startup.
+
+1:37:49.000 --> 1:37:51.160
+ And that's a brilliant strategy, by the way.
+
+1:37:51.160 --> 1:37:54.920
+ It's very well, very well strategized and executed.
+
+1:37:54.920 --> 1:37:58.000
+ I did it for nine months.
+
+1:37:58.000 --> 1:38:03.720
+ And at the time my customer base was making, was generating around, I think it was sick.
+
+1:38:03.720 --> 1:38:08.480
+ If I remember correctly, $62,504 a month were the overall revenues.
+
+1:38:08.480 --> 1:38:10.080
+ I thought, wow, that's amazing.
+
+1:38:10.080 --> 1:38:16.840
+ If I built that as my own company, I would just make $62,000 a month of income passively
+
+1:38:16.840 --> 1:38:18.720
+ with these merchants processing credit cards.
+
+1:38:18.720 --> 1:38:20.640
+ So I thought, hmm.
+
+1:38:20.640 --> 1:38:23.760
+ And so that's when I thought I'm going to create a company.
+
+1:38:23.760 --> 1:38:26.200
+ And so then I started Braintree.
+
+1:38:26.200 --> 1:38:35.720
+ And the idea was the online world was broken because PayPal had been acquired by eBay around
+
+1:38:35.720 --> 1:38:39.920
+ I think 1999 or 2000 and eBay had not innovated much with PayPal.
+
+1:38:39.920 --> 1:38:45.280
+ So it basically sat still for seven years as the software world moved along.
+
+1:38:45.280 --> 1:38:47.680
+ And then authorize.net was also a company that was relatively stagnant.
+
+1:38:47.680 --> 1:38:52.160
+ So you basically had software engineers who wanted modern payment tools, but there were
+
+1:38:52.160 --> 1:38:53.400
+ none available for them.
+
+1:38:53.400 --> 1:38:55.120
+ And so they just dealt with software they didn't like.
+
+1:38:55.120 --> 1:38:59.360
+ And so with Braintree, I thought the entry point is to build software that engineers
+
+1:38:59.360 --> 1:39:00.520
+ will love.
+
+1:39:00.520 --> 1:39:04.840
+ And if we can find the entry point via software, make it easy and beautiful and just a magical
+
+1:39:04.840 --> 1:39:07.360
+ experience and then provide customer service on top of that would be easy.
+
+1:39:07.360 --> 1:39:08.360
+ That would be great.
+
+1:39:08.360 --> 1:39:11.720
+ What I was really going after though was it was PayPal.
+
+1:39:11.720 --> 1:39:18.000
+ They were the only company in payments making money because they because they had a relationship
+
+1:39:18.000 --> 1:39:22.280
+ with eBay early on, people created a PayPal account.
+
+1:39:22.280 --> 1:39:25.560
+ They'd fund their account with their checking account versus their credit cards.
+
+1:39:25.560 --> 1:39:31.320
+ And then when they'd use PayPal to pay a merchant, PayPal had a cost of payment of zero versus
+
+1:39:31.320 --> 1:39:35.200
+ if you have coming from a credit card, you have to pay the bank the fees.
+
+1:39:35.200 --> 1:39:41.760
+ So PayPal's margins were 3% on a transaction versus a typical payments company, which may
+
+1:39:41.760 --> 1:39:45.000
+ be a nickel or a penny or a dime or something like that.
+
+1:39:45.000 --> 1:39:49.880
+ And so a new PayPal really was the model to replicate, but a bunch of companies had tried
+
+1:39:49.880 --> 1:39:50.880
+ to do that.
+
+1:39:50.880 --> 1:39:54.600
+ They tried to come in and build a two sided marketplace to get consumers to fund the
+
+1:39:54.600 --> 1:39:58.120
+ checking account and the merchants to accept it, but they'd all failed because building
+
+1:39:58.120 --> 1:40:01.880
+ a two sided marketplace is very hard at the same time.
+
+1:40:01.880 --> 1:40:06.840
+ So my plan was I'm going to build a company and get the best merchants in the whole world
+
+1:40:06.840 --> 1:40:08.720
+ to use our service.
+
+1:40:08.720 --> 1:40:12.760
+ Then in year five, I'm going to have, I'm going to acquire a consumer payments company
+
+1:40:12.760 --> 1:40:15.200
+ and I'm going to bring the two together.
+
+1:40:15.200 --> 1:40:21.920
+ And so focus on the merchant side and then get the payments company that does the customer,
+
+1:40:21.920 --> 1:40:22.920
+ the whatever.
+
+1:40:22.920 --> 1:40:24.680
+ So the other side of it.
+
+1:40:24.680 --> 1:40:31.400
+ This is the plan I presented when I was at the University of Chicago and weirdly it happened
+
+1:40:31.400 --> 1:40:32.400
+ exactly like that.
+
+1:40:32.400 --> 1:40:40.280
+ So for four years in our customer base included Uber, Airbnb, GitHub, 37 signals, not Basecamp.
+
+1:40:40.280 --> 1:40:47.280
+ We had a fantastic collection of companies that represented the fastest growing some
+
+1:40:47.280 --> 1:40:49.440
+ of the fastest growing tech companies in the world.
+
+1:40:49.440 --> 1:40:55.080
+ And then we met up with Venmo and they had done a remarkable job in building product.
+
+1:40:55.080 --> 1:40:58.840
+ There's not then something very counterintuitive, which is make public your private financial
+
+1:40:58.840 --> 1:41:03.000
+ transactions with people previously thought were something that should be hidden from
+
+1:41:03.000 --> 1:41:06.520
+ others and we acquired Venmo.
+
+1:41:06.520 --> 1:41:11.880
+ And at that point we now had, we replicated the model because now people could fund their
+
+1:41:11.880 --> 1:41:15.640
+ Venmo account with their checking account, keep money in the account, and then you could
+
+1:41:15.640 --> 1:41:17.600
+ just plug Venmo as a form of payment.
+
+1:41:17.600 --> 1:41:22.840
+ And so I think PayPal saw that, that we were getting the best merchants in the world.
+
+1:41:22.840 --> 1:41:28.080
+ We had people using Venmo, they were both the up and coming millennials at the time
+
+1:41:28.080 --> 1:41:30.720
+ who had so much influence online.
+
+1:41:30.720 --> 1:41:35.200
+ And so they came in and offered us an attractive number.
+
+1:41:35.200 --> 1:41:40.960
+ And my goal was not to build the biggest payments company in the world.
+
+1:41:40.960 --> 1:41:44.200
+ It wasn't to try to climb the Forbes billionaire list.
+
+1:41:44.200 --> 1:41:51.920
+ It was, the objective was I want to earn enough money so that I can basically dedicate my
+
+1:41:51.920 --> 1:41:59.120
+ attention to doing something that could potentially be useful on a society wide scale.
+
+1:41:59.120 --> 1:42:06.360
+ And more importantly, that could be considered to be valuable from the vantage point of 2050,
+
+1:42:06.360 --> 1:42:09.080
+ 2100, and 2500.
+
+1:42:09.080 --> 1:42:14.480
+ So thinking about it on a few hundred year timescale.
+
+1:42:14.480 --> 1:42:18.520
+ And there was a certain amount of money I needed to do that, so I didn't require the
+
+1:42:18.520 --> 1:42:21.120
+ permission of anybody to do that.
+
+1:42:21.120 --> 1:42:24.960
+ And so that, what PayPal offered was sufficient for me to get that amount of money to basically
+
+1:42:24.960 --> 1:42:26.120
+ have a go.
+
+1:42:26.120 --> 1:42:34.040
+ And that's when I set off to survey everything I could identify an existence to say of anything
+
+1:42:34.040 --> 1:42:38.480
+ in the entire world I could do, what one thing could I do that would actually have
+
+1:42:38.480 --> 1:42:42.920
+ the highest value potential for the species.
+
+1:42:42.920 --> 1:42:48.280
+ And so it took me a little while to arrive at brainer faces, but you know, payments in
+
+1:42:48.280 --> 1:42:54.720
+ themselves are revolutionary technologies that can change the world.
+
+1:42:54.720 --> 1:43:01.320
+ Like let's not, let's not sort of, let's not forget that too easily.
+
+1:43:01.320 --> 1:43:08.320
+ I mean, obviously you know this, but there's quite a few lovely folks.
+
+1:43:08.320 --> 1:43:14.040
+ Who are now fascinated with the space of cryptocurrency.
+
+1:43:14.040 --> 1:43:19.480
+ And where payments are very much connected to this, but in general just money.
+
+1:43:19.480 --> 1:43:25.120
+ And many of the folks I've spoken with, they also kind of connect that to not just purely
+
+1:43:25.120 --> 1:43:29.520
+ financial discussions, but philosophical and political discussions.
+
+1:43:29.520 --> 1:43:37.920
+ And they see Bitcoin as a way, almost as activism, almost as a way to resist the corruption
+
+1:43:37.920 --> 1:43:43.600
+ of centralized centers of power and sort of basically in the 21st century, decentralized
+
+1:43:43.600 --> 1:43:49.680
+ in control, whether that's Bitcoin or other cryptocurrencies, they see that's one possible
+
+1:43:49.680 --> 1:43:57.920
+ way to give power to those that live in regimes that are corrupt or are not respectful human
+
+1:43:57.920 --> 1:44:00.080
+ rights and all those kinds of things.
+
+1:44:00.080 --> 1:44:05.120
+ What's your sense, just all your expertise with, with payments and seeing how that changed
+
+1:44:05.120 --> 1:44:11.400
+ the world, what's your sense about the lay of the land for the future of Bitcoin or other
+
+1:44:11.400 --> 1:44:16.040
+ cryptocurrencies in the positive impact they may have on the world?
+
+1:44:16.040 --> 1:44:22.320
+ To be clear, my communication wasn't suggest, wasn't meant to minimize payments or to denigrate
+
+1:44:22.320 --> 1:44:23.600
+ it in any way.
+
+1:44:23.600 --> 1:44:31.040
+ It was an attempted communication that when I was surveying the world, it was an algorithm
+
+1:44:31.040 --> 1:44:35.880
+ of what could I individually do?
+
+1:44:35.880 --> 1:44:41.200
+ So there are things that exist that have a lot of potential that can be done.
+
+1:44:41.200 --> 1:44:46.520
+ And then there's a filtering of how many people are qualified to do this given thing.
+
+1:44:46.520 --> 1:44:49.760
+ And then there's a further characterization that can be done of, okay, given the number
+
+1:44:49.760 --> 1:44:56.960
+ of qualified people, will somebody be a unique outperformer of that group to make something
+
+1:44:56.960 --> 1:44:59.560
+ truly impossible to be something done that otherwise couldn't get done?
+
+1:44:59.560 --> 1:45:04.520
+ So there's, there's a process of assessing where can you add unique value in the world?
+
+1:45:04.520 --> 1:45:09.920
+ And some of that has to do with, you're being very, very formal and calculative here, but
+
+1:45:09.920 --> 1:45:16.080
+ some of that is just like, what do you sense, like part of that equation is how much passion
+
+1:45:16.080 --> 1:45:20.440
+ you sense within yourself to be able to drive that through, to discover the impossibilities
+
+1:45:20.440 --> 1:45:21.600
+ and make them possible.
+
+1:45:21.600 --> 1:45:22.600
+ That's right.
+
+1:45:22.600 --> 1:45:26.800
+ And so we, we were a brain tree, I think we were the first company to integrate Coinbase
+
+1:45:26.800 --> 1:45:34.080
+ into our, I think we were the first payments company to formally incorporate crypto if
+
+1:45:34.080 --> 1:45:35.080
+ I'm not mistaken.
+
+1:45:35.080 --> 1:45:39.320
+ For people who are not familiar, Coinbase is a place we can trade cryptocurrencies.
+
+1:45:39.320 --> 1:45:40.320
+ Yeah.
+
+1:45:40.320 --> 1:45:42.120
+ Which was one of the only places you could.
+
+1:45:42.120 --> 1:45:49.200
+ So we were early in doing that and of course this was in the year 2013.
+
+1:45:49.200 --> 1:45:52.360
+ So an attorney to go and in cryptocurrency land.
+
+1:45:52.360 --> 1:46:02.000
+ I concur with the, the statement you made of the potential of the principles underlying
+
+1:46:02.000 --> 1:46:08.880
+ cryptocurrencies and that many of the things that they're building in the name of money
+
+1:46:08.880 --> 1:46:18.040
+ and of, of moving value is equally applicable to the brain and equally applicable to how
+
+1:46:18.040 --> 1:46:24.120
+ the brain interacts with the rest of the world and how we would imagine doing goal alignment
+
+1:46:24.120 --> 1:46:25.620
+ with people.
+
+1:46:25.620 --> 1:46:29.240
+ So it's, to me, it's a continuous spectrum of possibility.
+
+1:46:29.240 --> 1:46:32.240
+ And we're taught, your question is isolated on the money.
+
+1:46:32.240 --> 1:46:35.720
+ And I think it just is basically a scaffolding layer for all of society.
+
+1:46:35.720 --> 1:46:39.520
+ So you don't see this money as particularly distinct from the money?
+
+1:46:39.520 --> 1:46:40.520
+ I don't.
+
+1:46:40.520 --> 1:46:47.000
+ It's, I think we, we at Kernel, we will benefit greatly from the progress being made in cryptocurrency
+
+1:46:47.000 --> 1:46:51.040
+ because it will be a similar technology stack we will want to use for many things we want
+
+1:46:51.040 --> 1:46:52.040
+ to accomplish.
+
+1:46:52.040 --> 1:46:58.720
+ And so I'm bullish on what's going on and I think it could greatly enhance brain interfaces
+
+1:46:58.720 --> 1:47:01.480
+ and the value of the brain interface ecosystem.
+
+1:47:01.480 --> 1:47:05.240
+ Is there something you could say about, first of all, bullish on cryptocurrency versus fiat
+
+1:47:05.240 --> 1:47:06.240
+ money?
+
+1:47:06.240 --> 1:47:11.640
+ So do you, do you have a sense that in 21st century cryptocurrency will be embraced by
+
+1:47:11.640 --> 1:47:17.920
+ governments and changed the, the, the face of governments, the structure of government?
+
+1:47:17.920 --> 1:47:26.320
+ It's the, it's the same way I think about my diet, where previously it was conscious
+
+1:47:26.320 --> 1:47:33.520
+ Brian looking at foods in certain biochemical states on my hungry and my irritated on my
+
+1:47:33.520 --> 1:47:34.520
+ depressed.
+
+1:47:34.520 --> 1:47:37.480
+ And then I choose based upon those momentary windows.
+
+1:47:37.480 --> 1:47:41.280
+ Do I eat at night when I'm fatigued and I have low willpower, am I going to pig out
+
+1:47:41.280 --> 1:47:43.080
+ on something?
+
+1:47:43.080 --> 1:47:49.160
+ And the current monetary system is based upon human conscious decision making and politics
+
+1:47:49.160 --> 1:47:51.760
+ and power and this whole mess of things.
+
+1:47:51.760 --> 1:47:57.840
+ And what I like about the building blocks of cryptocurrency is it's methodical, it's
+
+1:47:57.840 --> 1:48:01.600
+ structured, it is accountable, it's transparent.
+
+1:48:01.600 --> 1:48:07.720
+ And so it introduces this scaffolding, which I think again is the right starting point for
+
+1:48:07.720 --> 1:48:13.560
+ how we think about building next generation institutions for society.
+
+1:48:13.560 --> 1:48:16.520
+ And that's why I think it's much broader, much broader than money.
+
+1:48:16.520 --> 1:48:23.680
+ So I guess what you're saying is Bitcoin is the demotion of the conscious mind as well.
+
+1:48:23.680 --> 1:48:28.840
+ In the same way you were talking about diet is like giving less priority to the, the ups
+
+1:48:28.840 --> 1:48:34.480
+ and downs of any one particular human mind, in this case your own, and giving more power
+
+1:48:34.480 --> 1:48:36.600
+ to the sort of data driven.
+
+1:48:36.600 --> 1:48:48.200
+ Yes, yeah, I think that is accurate that cryptocurrency is a version of what I would
+
+1:48:48.200 --> 1:48:51.440
+ call my autonomous self that I'm trying to build.
+
+1:48:51.440 --> 1:48:58.880
+ It is an introduction of an autonomous system of value exchange and value, and the process
+
+1:48:58.880 --> 1:49:04.960
+ of value creation in society, yes, there's similarities.
+
+1:49:04.960 --> 1:49:08.880
+ So I guess what you're saying is Bitcoin will somehow help me not pig out at night or the
+
+1:49:08.880 --> 1:49:11.920
+ equivalent of speaking of diet.
+
+1:49:11.920 --> 1:49:17.680
+ If we could just linger on that, that topic a little bit, we already talked about your,
+
+1:49:17.680 --> 1:49:26.000
+ your blog post of I fired myself, I fired Brian the evening, Brian who is too willing
+
+1:49:26.000 --> 1:49:33.000
+ to not not making good decisions for the long term well being and happiness of the entirety
+
+1:49:33.000 --> 1:49:34.000
+ of the organism.
+
+1:49:34.000 --> 1:49:39.080
+ Now, basically you were like picking out at night and but it's interesting because I
+
+1:49:39.080 --> 1:49:40.720
+ do this, I do the same.
+
+1:49:40.720 --> 1:49:50.960
+ In fact, I often eat one meal a day and like I have been this, this week actually, especially
+
+1:49:50.960 --> 1:49:59.400
+ when I travel and it's, it's funny that it never occurred to me to just basically look
+
+1:49:59.400 --> 1:50:04.320
+ at the fact that I'm able to be much smarter about my eating decisions in the morning and
+
+1:50:04.320 --> 1:50:06.800
+ the afternoon than I am at night.
+
+1:50:06.800 --> 1:50:11.600
+ So if I eat one meal a day, why not eat that one meal a day in the morning?
+
+1:50:11.600 --> 1:50:20.520
+ Like, I'm not, it never occurred to me, this revolutionary until, until you've, you've
+
+1:50:20.520 --> 1:50:21.520
+ outlined that.
+
+1:50:21.520 --> 1:50:27.400
+ So maybe can you give some details and what this is just you, this is one person, Brian
+
+1:50:27.400 --> 1:50:32.720
+ arrives at a particular thing that they do, but it's fascinating to kind of look at this
+
+1:50:32.720 --> 1:50:34.160
+ one particular case study.
+
+1:50:34.160 --> 1:50:36.720
+ So what works for you diet wise?
+
+1:50:36.720 --> 1:50:37.840
+ What's your actual diet?
+
+1:50:37.840 --> 1:50:38.840
+ What do you eat?
+
+1:50:38.840 --> 1:50:40.280
+ How often do you eat?
+
+1:50:40.280 --> 1:50:48.840
+ My current protocol is basically the result of thousands of experiments and decision making.
+
+1:50:48.840 --> 1:50:53.920
+ So I've, I do this every 90 days, I do the tests, I do the cycle throughs that I measure
+
+1:50:53.920 --> 1:50:59.360
+ again and then I'm measuring all the time and so what I, I of course, I'm optimizing
+
+1:50:59.360 --> 1:51:00.360
+ for my biomarkers.
+
+1:51:00.360 --> 1:51:04.160
+ I want perfect cholesterol and I brought perfect by blood glucose levels and perfect
+
+1:51:04.160 --> 1:51:10.400
+ DNA methylation, you know, processes.
+
+1:51:10.400 --> 1:51:12.560
+ I also want perfect sleep.
+
+1:51:12.560 --> 1:51:18.880
+ And so for example, recently in the past two weeks, my resting heart rate has been at 42
+
+1:51:18.880 --> 1:51:24.480
+ when I sleep and when my resting heart rate is at 42, my HRV is at its highest and I wake
+
+1:51:24.480 --> 1:51:30.520
+ up in the morning feeling more energized than any other configuration.
+
+1:51:30.520 --> 1:51:34.800
+ And so I know from all these processes that eating at roughly 830 in the morning, right
+
+1:51:34.800 --> 1:51:41.240
+ after I work out on an empty stomach creates enough distance between that completed eating
+
+1:51:41.240 --> 1:51:47.560
+ and bedtime where I have no almost no digestion processes going on in my body.
+
+1:51:47.560 --> 1:51:51.360
+ So my resting heart rate goes very low and when my resting heart rate is very low, I
+
+1:51:51.360 --> 1:51:52.360
+ sleep with high quality.
+
+1:51:52.360 --> 1:51:58.360
+ And so basically I've been trying to optimize the entirety of what I eat to my sleep quality.
+
+1:51:58.360 --> 1:52:02.640
+ My sleep quality then of course feeds into my willpower so it creates this virtuous cycle.
+
+1:52:02.640 --> 1:52:08.200
+ And so what I at 830, what I do is I eat what I call super veggie, which is it's a pudding
+
+1:52:08.200 --> 1:52:13.400
+ of 250 grams of broccoli, 150 grams of cauliflower and a whole bunch of other vegetables that
+
+1:52:13.400 --> 1:52:17.080
+ I eat what I call nutty pudding, which is make the pudding itself.
+
+1:52:17.080 --> 1:52:22.720
+ Like what you call it, like a veggie mix, whatever thing.
+
+1:52:22.720 --> 1:52:23.720
+ Like a blender.
+
+1:52:23.720 --> 1:52:24.720
+ Yeah.
+
+1:52:24.720 --> 1:52:25.720
+ You can be made in a high speed blender.
+
+1:52:25.720 --> 1:52:30.920
+ But basically I eat the same thing every day, a veggie bowl as in a form of pudding
+
+1:52:30.920 --> 1:52:34.600
+ and then a bowl in the form of nuts.
+
+1:52:34.600 --> 1:52:35.600
+ And then I have.
+
+1:52:35.600 --> 1:52:36.600
+ Vegan.
+
+1:52:36.600 --> 1:52:37.600
+ Vegan, yes.
+
+1:52:37.600 --> 1:52:38.600
+ Vegan.
+
+1:52:38.600 --> 1:52:43.760
+ So that's fat and that's fat and carbs and that's the protein and so on.
+
+1:52:43.760 --> 1:52:45.240
+ Does it taste good?
+
+1:52:45.240 --> 1:52:46.240
+ I love it.
+
+1:52:46.240 --> 1:52:47.240
+ Yeah.
+
+1:52:47.240 --> 1:52:48.240
+ I love it so much.
+
+1:52:48.240 --> 1:52:49.240
+ I dream about it.
+
+1:52:49.240 --> 1:52:50.240
+ Yeah.
+
+1:52:50.240 --> 1:52:51.240
+ That's awesome.
+
+1:52:51.240 --> 1:52:52.240
+ This is a.
+
+1:52:52.240 --> 1:52:55.480
+ And then I have a third dish, which is it changes every day.
+
+1:52:55.480 --> 1:52:58.360
+ Today it was kale and spinach and sweet potato.
+
+1:52:58.360 --> 1:53:08.720
+ And then I take about 20 supplements that hopefully make constitute a perfect nutritional
+
+1:53:08.720 --> 1:53:09.720
+ profile.
+
+1:53:09.720 --> 1:53:13.840
+ So what I'm trying to do is create the perfect diet for my body every single day.
+
+1:53:13.840 --> 1:53:16.400
+ Or sleep as part of the optimization.
+
+1:53:16.400 --> 1:53:17.400
+ That's right.
+
+1:53:17.400 --> 1:53:19.320
+ You're like one of the things you're really tracking at me.
+
+1:53:19.320 --> 1:53:20.320
+ Can you?
+
+1:53:20.320 --> 1:53:24.320
+ Well, I have a million questions, but 20 supplements, like what kind are like, would you say are
+
+1:53:24.320 --> 1:53:25.320
+ essential?
+
+1:53:25.320 --> 1:53:30.720
+ Because I only take, I only take athletic, athleticgreens.com slash what.
+
+1:53:30.720 --> 1:53:33.280
+ That's like the multivitamin essentially.
+
+1:53:33.280 --> 1:53:34.360
+ That's like the lazy man.
+
+1:53:34.360 --> 1:53:38.760
+ You know, like if you don't actually want to think about shit, that's what you take.
+
+1:53:38.760 --> 1:53:40.600
+ And then fish oil and that's it.
+
+1:53:40.600 --> 1:53:41.600
+ That's all I take.
+
+1:53:41.600 --> 1:53:48.440
+ Yeah, you know, Alfred North Whitehead said, civilization advances as that extends the
+
+1:53:48.440 --> 1:53:53.080
+ number of important operations it can do without thinking about them.
+
+1:53:53.080 --> 1:53:59.920
+ And so my objective on this is I want an algorithm for perfect health that I never have to think
+
+1:53:59.920 --> 1:54:01.040
+ about.
+
+1:54:01.040 --> 1:54:04.600
+ And then I want that system to be scalable to anybody so that they don't have to think
+
+1:54:04.600 --> 1:54:05.720
+ about it.
+
+1:54:05.720 --> 1:54:07.720
+ And right now it's expensive for me to do it.
+
+1:54:07.720 --> 1:54:09.120
+ It's time consuming for me to do it.
+
+1:54:09.120 --> 1:54:14.920
+ And I have infrastructure to do it, but the future of being human is not going to the
+
+1:54:14.920 --> 1:54:17.640
+ grocery store and deciding what to eat.
+
+1:54:17.640 --> 1:54:21.520
+ It's also not reading scientific papers, trying to decide this thing or that thing.
+
+1:54:21.520 --> 1:54:23.200
+ It's all N of one.
+
+1:54:23.200 --> 1:54:27.720
+ So it's devices on the outside and inside your body assessing real time what your body
+
+1:54:27.720 --> 1:54:30.600
+ needs and then creating closed loop systems for that to happen.
+
+1:54:30.600 --> 1:54:31.600
+ Yeah.
+
+1:54:31.600 --> 1:54:36.320
+ So right now you're doing the data collection and you're being the scientist, it'd be much
+
+1:54:36.320 --> 1:54:40.960
+ better if you just did the data collection or it was being essentially done for you and
+
+1:54:40.960 --> 1:54:46.160
+ you can outsource that to another scientist that's doing the N of one study of you.
+
+1:54:46.160 --> 1:54:50.000
+ That's right because every time I spend time thinking about this or executing spending
+
+1:54:50.000 --> 1:54:54.680
+ time on it, I'm spending less time thinking about building kernel or the future of being
+
+1:54:54.680 --> 1:54:55.680
+ human.
+
+1:54:55.680 --> 1:55:04.320
+ And so we just all have the budget of our capacity on an everyday basis and we will scaffold
+
+1:55:04.320 --> 1:55:05.680
+ our way up out of this.
+
+1:55:05.680 --> 1:55:10.320
+ And so yeah, hopefully what I'm doing is really, it serves as a model that others can also
+
+1:55:10.320 --> 1:55:11.320
+ build.
+
+1:55:11.320 --> 1:55:15.480
+ That's why I wrote about it, is hopefully people can then take and improve upon it.
+
+1:55:15.480 --> 1:55:16.480
+ I hold nothing sacred.
+
+1:55:16.480 --> 1:55:21.920
+ I change my diet almost every day based upon some new test results or science or something
+
+1:55:21.920 --> 1:55:22.920
+ like that.
+
+1:55:22.920 --> 1:55:24.960
+ Can you maybe elaborate on the sleep thing?
+
+1:55:24.960 --> 1:55:27.480
+ Why is sleep so important?
+
+1:55:27.480 --> 1:55:34.640
+ And why, presumably, what does good sleep mean to you?
+
+1:55:34.640 --> 1:55:48.600
+ I think sleep is a contender for being the most powerful health intervention in existence.
+
+1:55:48.600 --> 1:55:49.600
+ It's a contender.
+
+1:55:49.600 --> 1:55:57.080
+ I mean, it's magical what it does if you're well rested and what your body can do.
+
+1:55:57.080 --> 1:56:02.680
+ And I mean, for example, I know when I eat close to my bedtime and I've done a systematic
+
+1:56:02.680 --> 1:56:09.920
+ study for years looking at 15 minute increments on time of day and where I eat my last meal,
+
+1:56:09.920 --> 1:56:15.480
+ my willpower is directly correlated to the amount of deep sleep I get.
+
+1:56:15.480 --> 1:56:22.880
+ So my ability to not binge eat at night when Rascal Bryan's out and about is based upon
+
+1:56:22.880 --> 1:56:25.040
+ how much deep sleep I got the night before.
+
+1:56:25.040 --> 1:56:26.040
+ Yeah.
+
+1:56:26.040 --> 1:56:27.440
+ There's a lot to that, yeah.
+
+1:56:27.440 --> 1:56:34.680
+ And so I've seen it manifest itself and so I think the way I summarize this is in society
+
+1:56:34.680 --> 1:56:40.480
+ we've had this myth of we tell stories, for example, of entrepreneurship where this person
+
+1:56:40.480 --> 1:56:45.000
+ was so amazing, they stayed at the office for three days and slept under their desk.
+
+1:56:45.000 --> 1:56:50.000
+ And we say, wow, that's amazing, that's amazing.
+
+1:56:50.000 --> 1:56:55.720
+ And now I think we're headed towards a state where we'd say that's primitive and really
+
+1:56:55.720 --> 1:56:58.960
+ not a good idea on every level.
+
+1:56:58.960 --> 1:57:04.080
+ And so the new mythology is going to be the exact opposite.
+
+1:57:04.080 --> 1:57:05.080
+ Yeah.
+
+1:57:05.080 --> 1:57:11.120
+ By the way, just to sort of maybe push back a little bit on that idea.
+
+1:57:11.120 --> 1:57:13.800
+ Did you sleep under your desk, Lex?
+
+1:57:13.800 --> 1:57:14.800
+ Well, yeah, a lot.
+
+1:57:14.800 --> 1:57:16.000
+ I'm a big believer in that actually.
+
+1:57:16.000 --> 1:57:23.080
+ I'm a big believer in chaos and not giving it, like giving it to your passion and sometimes
+
+1:57:23.080 --> 1:57:29.360
+ doing things that are out of the ordinary that are not trying to optimize health for
+
+1:57:29.360 --> 1:57:38.720
+ certain periods of time in lieu of your passions is a signal to yourself that you're throwing
+
+1:57:38.720 --> 1:57:39.720
+ everything away.
+
+1:57:39.720 --> 1:57:46.080
+ So I think what you're referring to is how to have good performance for prolonged periods
+
+1:57:46.080 --> 1:57:47.520
+ of time.
+
+1:57:47.520 --> 1:57:52.840
+ I think there's moments in life when you need to throw all of that away.
+
+1:57:52.840 --> 1:57:55.040
+ All the plans away, all the structure away.
+
+1:57:55.040 --> 1:58:02.480
+ So I'm not sure I have an eloquent way of describing exactly what I'm talking about,
+
+1:58:02.480 --> 1:58:07.880
+ but it all depends on different people, people are different.
+
+1:58:07.880 --> 1:58:14.360
+ But there's a danger of over optimization to where you don't just give in to the madness
+
+1:58:14.360 --> 1:58:17.800
+ of the way your brain flows.
+
+1:58:17.800 --> 1:58:30.640
+ I mean, to push back on my pushback is nice to have where the foundations of your brain
+
+1:58:30.640 --> 1:58:31.640
+ are not messed with.
+
+1:58:31.640 --> 1:58:36.880
+ So you have a fixed foundation where the diet is fixed, where the sleep is fixed, and all
+
+1:58:36.880 --> 1:58:37.880
+ that is optimal.
+
+1:58:37.880 --> 1:58:43.320
+ And the chaos happens in the space of ideas as opposed to the space of biology.
+
+1:58:43.320 --> 1:58:51.040
+ But I'm not sure if that requires real discipline in forming habits.
+
+1:58:51.040 --> 1:58:56.800
+ There's some aspect to which some of the best days and weeks of my life have been sleeping
+
+1:58:56.800 --> 1:58:58.880
+ under a desk kind of thing.
+
+1:58:58.880 --> 1:59:09.520
+ And I'm not too willing to let go of things that empirically worked for things that work
+
+1:59:09.520 --> 1:59:12.000
+ in theory.
+
+1:59:12.000 --> 1:59:16.400
+ So again, I'm absolutely with you on sleep.
+
+1:59:16.400 --> 1:59:24.000
+ Also I'm with you on sleep conceptually, but I'm also very humbled to understand that
+
+1:59:24.000 --> 1:59:28.720
+ for different people, good sleep means different things.
+
+1:59:28.720 --> 1:59:32.960
+ I'm very hesitant to trust science on sleep.
+
+1:59:32.960 --> 1:59:38.160
+ I think you should also be a scholar of your body, again, the experiment of N of 1.
+
+1:59:38.160 --> 1:59:44.240
+ I'm not so sure that a full night's sleep is great for me.
+
+1:59:44.240 --> 1:59:50.240
+ There is something about that power nap that I just have not fully studied yet.
+
+1:59:50.240 --> 1:59:52.720
+ But that nap is something special.
+
+1:59:52.720 --> 1:59:56.040
+ I'm not sure I found the optimal thing.
+
+1:59:56.040 --> 2:00:00.520
+ So there's a lot to be explored to what is exactly optimal amount of sleep, optimal
+
+2:00:00.520 --> 2:00:03.440
+ kind of sleep, combined with diet and all those kinds of things.
+
+2:00:03.440 --> 2:00:09.000
+ That all maps the data, at least the truth, exactly what everything you're referring to.
+
+2:00:09.000 --> 2:00:12.800
+ Here's a data point for your consideration.
+
+2:00:12.800 --> 2:00:19.800
+ The progress in biology over the past, say decade, has been stunning.
+
+2:00:19.800 --> 2:00:28.480
+ And it now appears as if we will be able to replace our organs, zero externa transplantation.
+
+2:00:28.480 --> 2:00:38.160
+ And so we probably have a path to replace and regenerate every organ of your body, except
+
+2:00:38.160 --> 2:00:43.040
+ for your brain.
+
+2:00:43.040 --> 2:00:47.560
+ You can lose your hand and your arm and a leg, you can have an artificial heart.
+
+2:00:47.560 --> 2:00:49.720
+ You can't operate without your brain.
+
+2:00:49.720 --> 2:00:54.080
+ And so when you make that trade off decision of whether you're going to sleep under the
+
+2:00:54.080 --> 2:01:02.040
+ desk or not and go all out for a four day marathon, there's a cost benefit trade off
+
+2:01:02.040 --> 2:01:05.840
+ of what's going on, what's happening to your brain in that situation.
+
+2:01:05.840 --> 2:01:10.000
+ We don't know the consequences of modern day life on our brain.
+
+2:01:10.000 --> 2:01:15.040
+ We don't, it's the most valuable organ in our existence.
+
+2:01:15.040 --> 2:01:21.080
+ And we don't know what's going on in how we're treating it today with stress and with
+
+2:01:21.080 --> 2:01:23.480
+ sleep and with dietary.
+
+2:01:23.480 --> 2:01:29.920
+ And to me, then if you say that you're trying to, you're, you're trying to optimize life
+
+2:01:29.920 --> 2:01:33.080
+ for whatever things you're trying to do.
+
+2:01:33.080 --> 2:01:37.480
+ The game is soon with the progress in anti aging and biology, the game is very soon going
+
+2:01:37.480 --> 2:01:42.960
+ to become different than what it is right now with organ rejuvenation, organ replacement.
+
+2:01:42.960 --> 2:01:51.680
+ And I'm, I would conjecture that we will value the health status of our brain above
+
+2:01:51.680 --> 2:01:52.680
+ all things.
+
+2:01:52.680 --> 2:01:53.680
+ Absolutely.
+
+2:01:53.680 --> 2:01:59.960
+ Everything you're saying is true, but we die, we die pretty quickly.
+
+2:01:59.960 --> 2:02:01.600
+ Life is short.
+
+2:02:01.600 --> 2:02:11.320
+ And I'm one of those people that I would rather die in battle than, than stay safe at home.
+
+2:02:11.320 --> 2:02:17.240
+ It's like, yeah, you look at kind of, there's a lot of things that you can reasonably say,
+
+2:02:17.240 --> 2:02:21.680
+ these are, this is the smart thing to do that can prevent you, that becomes conservative,
+
+2:02:21.680 --> 2:02:24.400
+ that can prevent you from fully embracing life.
+
+2:02:24.400 --> 2:02:30.960
+ I think ultimately you can be very intelligent and data driven and also embrace life.
+
+2:02:30.960 --> 2:02:33.520
+ But I err on the side of embracing life.
+
+2:02:33.520 --> 2:02:39.760
+ It's very, it takes a very skillful person to not sort of that hovering parent that
+
+2:02:39.760 --> 2:02:41.160
+ says, no, you know what?
+
+2:02:41.160 --> 2:02:46.720
+ There's a 3% chance that if you go out, if you go out by yourself and play, you're going
+
+2:02:46.720 --> 2:02:52.840
+ to die, get run over by a car, come to a slow or a sudden end.
+
+2:02:52.840 --> 2:02:57.520
+ And I am more a supporter of just go out there.
+
+2:02:57.520 --> 2:02:59.600
+ If you die, you die.
+
+2:02:59.600 --> 2:03:02.800
+ And that's a, it's a balance you have to strike.
+
+2:03:02.800 --> 2:03:11.880
+ I think long, there's a balance of strike and longterm optimization and short term freedom.
+
+2:03:11.880 --> 2:03:17.600
+ For me, for a programmer, for a programming mind, I tend to over optimize and I'm very
+
+2:03:17.600 --> 2:03:25.000
+ cautious and afraid of that to not over optimize and thereby be overly cautious, suboptimally
+
+2:03:25.000 --> 2:03:27.680
+ cautious about everything I do.
+
+2:03:27.680 --> 2:03:31.640
+ And then the ultimate thing I'm trying to optimize for it is funny you said like sleep
+
+2:03:31.640 --> 2:03:33.360
+ and all those kinds of things.
+
+2:03:33.360 --> 2:03:43.120
+ I tend to think this is a, you're being more precise than I am, but I think I tend to want
+
+2:03:43.120 --> 2:03:50.400
+ to minimize stress, which everything comes into that from your sleep and all those kinds
+
+2:03:50.400 --> 2:03:51.400
+ of things.
+
+2:03:51.400 --> 2:03:56.800
+ But I worry that whenever I'm trying to be too strict with myself, then the stress goes
+
+2:03:56.800 --> 2:04:00.560
+ up when I don't follow the strictness.
+
+2:04:00.560 --> 2:04:05.240
+ And so you have to kind of, it's a weird, it's a, there's so many variables in an objective
+
+2:04:05.240 --> 2:04:07.600
+ function as it's hard to get right.
+
+2:04:07.600 --> 2:04:11.640
+ And sort of not giving a damn about sleep and not giving a damn about diet is a good
+
+2:04:11.640 --> 2:04:17.160
+ thing to inject in there every once in a while for somebody who's trying to optimize everything.
+
+2:04:17.160 --> 2:04:21.480
+ But that's me just trying to, like it's exactly like you said, you're just a scientist, I'm
+
+2:04:21.480 --> 2:04:24.200
+ a scientist of myself, you're a scientist of yourself.
+
+2:04:24.200 --> 2:04:28.360
+ It'd be nice if somebody else was doing it and had much better data than because I don't
+
+2:04:28.360 --> 2:04:33.480
+ trust my conscious mind and I pigged out last night at some brisket in LA that I regret
+
+2:04:33.480 --> 2:04:34.480
+ deeply.
+
+2:04:34.480 --> 2:04:39.520
+ There's no point to anything I just said.
+
+2:04:39.520 --> 2:04:46.800
+ What, what is the nature of your regret on the brisket?
+
+2:04:46.800 --> 2:04:49.880
+ Is it, do you wish you hadn't eaten it entirely?
+
+2:04:49.880 --> 2:04:51.920
+ Is it that you wish you hadn't eaten as much as you did?
+
+2:04:51.920 --> 2:04:55.200
+ Is it that?
+
+2:04:55.200 --> 2:05:03.360
+ I think, well, most regret, I mean, if we want to be specific, I drank way too much
+
+2:05:03.360 --> 2:05:05.400
+ like diet soda.
+
+2:05:05.400 --> 2:05:09.360
+ My biggest regret is like having drank so much diet soda, that's the thing that really
+
+2:05:09.360 --> 2:05:10.360
+ was the problem.
+
+2:05:10.360 --> 2:05:14.600
+ I had trouble sleeping because of that because I was like programming and then I was editing
+
+2:05:14.600 --> 2:05:18.640
+ and so I stayed up late at night and then I had to get up to go pee a few times and it
+
+2:05:18.640 --> 2:05:19.640
+ was just a mess.
+
+2:05:19.640 --> 2:05:20.640
+ A mess of a night.
+
+2:05:20.640 --> 2:05:25.960
+ Well, it's not really a mess, but like it's so many, it's like the little things.
+
+2:05:25.960 --> 2:05:31.880
+ I know if I just eat, I drink a little bit of water and that's it and there's a certain,
+
+2:05:31.880 --> 2:05:38.200
+ all of us have perfect days that we know diet wise and so on that's good to follow, you
+
+2:05:38.200 --> 2:05:39.200
+ feel good.
+
+2:05:39.200 --> 2:05:41.600
+ I know what it takes for me to do that.
+
+2:05:41.600 --> 2:05:48.640
+ I didn't fully do that and thereby because there's an avalanche effect where the other
+
+2:05:48.640 --> 2:05:54.760
+ sources of stress, all the other to do items I have, pile on my failure to execute on some
+
+2:05:54.760 --> 2:06:01.400
+ basic things that I know make me feel good and all of that combines to create a mess
+
+2:06:01.400 --> 2:06:02.560
+ of a day.
+
+2:06:02.560 --> 2:06:06.840
+ But some of that chaos, you have to be okay with it, but some of it I wish was a little
+
+2:06:06.840 --> 2:06:12.960
+ bit more optimal and your ideas about eating in the morning are quite interesting as an
+
+2:06:12.960 --> 2:06:14.440
+ experiment to try.
+
+2:06:14.440 --> 2:06:18.160
+ Can you elaborate, are you eating once a day?
+
+2:06:18.160 --> 2:06:19.160
+ Yes.
+
+2:06:19.160 --> 2:06:22.360
+ In the morning and that's it.
+
+2:06:22.360 --> 2:06:30.880
+ Can you maybe speak to how that, you spoke, it's funny, spoke about the metrics of sleep,
+
+2:06:30.880 --> 2:06:37.800
+ but you're also, you know, run a business, you're incredibly intelligent, you have to,
+
+2:06:37.800 --> 2:06:43.320
+ mostly your happiness and success relies on you thinking clearly.
+
+2:06:43.320 --> 2:06:46.800
+ So how does that affect your mind and your body in terms of performance?
+
+2:06:46.800 --> 2:06:47.800
+ Yes.
+
+2:06:47.800 --> 2:06:51.080
+ Not really, but actually like mental performance.
+
+2:06:51.080 --> 2:06:56.880
+ As you were explaining your objective function of, for example, in the criteria you are including,
+
+2:06:56.880 --> 2:07:02.760
+ you like certain neurochemical states, like you like feeling like you're living life,
+
+2:07:02.760 --> 2:07:08.200
+ that life has enjoyment, that sometimes you want to disregard certain rules to have a
+
+2:07:08.200 --> 2:07:10.440
+ moment of passion, of focus.
+
+2:07:10.440 --> 2:07:16.400
+ There's this architecture of the way Lex is, which makes you happy as a story you tell,
+
+2:07:16.400 --> 2:07:19.400
+ as something you kind of experience, maybe the experience is a bit more complicated,
+
+2:07:19.400 --> 2:07:22.840
+ but it's in this idea you have, this is a version of you.
+
+2:07:22.840 --> 2:07:30.120
+ And the reason why I maintain the schedule I do is I've chosen a game to say, I would
+
+2:07:30.120 --> 2:07:39.280
+ like to live a life where I care more about what intelligent, what people who live in
+
+2:07:39.280 --> 2:07:45.120
+ 2000, the year 2500, think of me than I do today.
+
+2:07:45.120 --> 2:07:46.840
+ That's the game I'm trying to play.
+
+2:07:46.840 --> 2:07:54.000
+ And so therefore, the only thing I really care about on this optimization is trying
+
+2:07:54.000 --> 2:08:02.160
+ to see past myself, past my limitations, using zeroes principle thinking, pull myself out
+
+2:08:02.160 --> 2:08:07.200
+ of this contextual mesh we're in right now and say, what will matter 100 years from now
+
+2:08:07.200 --> 2:08:08.640
+ and 200 years from now?
+
+2:08:08.640 --> 2:08:13.600
+ What are the big things really going on that are defining reality?
+
+2:08:13.600 --> 2:08:24.040
+ And I find that if I were to hang out with Diet Soda Lex and Diet Soda Brian were to
+
+2:08:24.040 --> 2:08:29.280
+ play along with that, and my deep sleep were to get crushed as a result, my mind would
+
+2:08:29.280 --> 2:08:34.320
+ not be on what matters in 100 years or 200 years or 300 years, I would be irritable,
+
+2:08:34.320 --> 2:08:37.640
+ I would be, you know, I'd be in a different state.
+
+2:08:37.640 --> 2:08:41.400
+ And so it's just gameplay selection.
+
+2:08:41.400 --> 2:08:43.800
+ It's what you and I have chosen to think about.
+
+2:08:43.800 --> 2:08:47.880
+ It's what we've chosen to work on.
+
+2:08:47.880 --> 2:08:54.520
+ And this is why I'm saying that no generation of humans have ever been afforded the opportunity
+
+2:08:54.520 --> 2:09:03.160
+ to look at their lifespan and contemplate that they will have the possibility of experiencing
+
+2:09:03.160 --> 2:09:09.200
+ an evolved form of consciousness that is undoneifiable, that would fall into the zeroes category
+
+2:09:09.200 --> 2:09:11.200
+ of potential.
+
+2:09:11.200 --> 2:09:14.320
+ That to me is the most exciting thing in existence.
+
+2:09:14.320 --> 2:09:21.520
+ And I would not trade any momentary neurochemical state right now in exchange for that.
+
+2:09:21.520 --> 2:09:27.080
+ I would, I'd be willing to deprive myself of all momentary joy in pursuit of that goal
+
+2:09:27.080 --> 2:09:29.120
+ because that's what makes me happy.
+
+2:09:29.120 --> 2:09:31.000
+ That's brilliant.
+
+2:09:31.000 --> 2:09:38.760
+ But I'm a bit, I just looked it up, I'm with a, I just looked up Braveheart speech in
+
+2:09:38.760 --> 2:09:42.080
+ William Wallace, but I don't know if you've seen it.
+
+2:09:42.080 --> 2:09:47.080
+ Fight and you may die, run and you'll live at least a while and dying in your beds many
+
+2:09:47.080 --> 2:09:48.240
+ years from now.
+
+2:09:48.240 --> 2:09:53.960
+ Would you be willing to trade all the days from this day to that for one chance?
+
+2:09:53.960 --> 2:09:59.000
+ Just one chance, picture of Mel Gibson saying this, to come back here and tell our enemies
+
+2:09:59.000 --> 2:10:06.440
+ that they may take our lives with growing excitement, but they'll never take our freedom.
+
+2:10:06.440 --> 2:10:11.040
+ I get excited every time I see that in the movie, but that's kind of how I approach life.
+
+2:10:11.040 --> 2:10:12.680
+ Do you think they were tracking their sleep?
+
+2:10:12.680 --> 2:10:17.280
+ They were not tracking their sleep and they ate way too much brisket and they were fat,
+
+2:10:17.280 --> 2:10:25.640
+ unhealthy, died early and were primitive, but there's something in my eight brain that's
+
+2:10:25.640 --> 2:10:32.800
+ attracted to that even though most of my life is fully aligned with the way you see yours.
+
+2:10:32.800 --> 2:10:39.040
+ Part of it is for comedy, of course, but part of it is like I'm almost afraid of over optimization.
+
+2:10:39.040 --> 2:10:42.640
+ Really what you're saying though, if we're looking at this, let's say from a first principles
+
+2:10:42.640 --> 2:10:46.800
+ perspective, when you read those words, they conjure up certain life experiences, but you're
+
+2:10:46.800 --> 2:10:51.600
+ basically saying, I experienced a certain neurotransmitter state when these things are
+
+2:10:51.600 --> 2:10:52.600
+ in action.
+
+2:10:52.600 --> 2:10:53.600
+ Yeah.
+
+2:10:53.600 --> 2:10:54.600
+ That's all you're saying.
+
+2:10:54.600 --> 2:10:58.000
+ So whether it's that or something else, you're just saying you have a selection for how your
+
+2:10:58.000 --> 2:11:05.600
+ state for your body, and so if you as an engineer of consciousness, that should just be engineerable.
+
+2:11:05.600 --> 2:11:09.120
+ That's just triggering certain chemical reactions.
+
+2:11:09.120 --> 2:11:11.400
+ So it doesn't mean they have to be mutually exclusive.
+
+2:11:11.400 --> 2:11:15.840
+ You can have that and experience that and also not sacrifice long term health.
+
+2:11:15.840 --> 2:11:23.280
+ I think that's the potential of where we're going is we don't have to assume they are
+
+2:11:23.280 --> 2:11:25.880
+ trade offs that must be had.
+
+2:11:25.880 --> 2:11:26.880
+ Absolutely.
+
+2:11:26.880 --> 2:11:33.160
+ I guess from my particular brain, it's useful to have the outlier experiences that also
+
+2:11:33.160 --> 2:11:38.720
+ come along with the illusion of free will where I chose those experiences that make me feel
+
+2:11:38.720 --> 2:11:39.720
+ like it's freedom.
+
+2:11:39.720 --> 2:11:45.480
+ Listen, going to Texas made me realize I spent, so I was, it's still am, but I lived at Cambridge
+
+2:11:45.480 --> 2:11:49.160
+ at MIT and I never felt like home there.
+
+2:11:49.160 --> 2:11:53.800
+ I felt like home in the space of ideas with the colleagues, like when I was actually discussing
+
+2:11:53.800 --> 2:12:01.080
+ ideas, but there is something about the constraints, how cautious people are, how much they value
+
+2:12:01.080 --> 2:12:07.000
+ to also material success, career success.
+
+2:12:07.000 --> 2:12:12.200
+ When I showed up to Texas, it felt like I belong.
+
+2:12:12.200 --> 2:12:17.480
+ That was very interesting, but that's my neurochemistry, whatever the hell that is, whatever, maybe
+
+2:12:17.480 --> 2:12:21.600
+ probably is rooted to the fact that I grew up in the Soviet Union, it was such a constrained
+
+2:12:21.600 --> 2:12:27.520
+ system that you really deeply value freedom and you always want to escape the man and
+
+2:12:27.520 --> 2:12:29.080
+ the control of centralized systems.
+
+2:12:29.080 --> 2:12:33.840
+ I don't know what it is, but at the same time, I love strictness.
+
+2:12:33.840 --> 2:12:41.280
+ I love the dogmatic authoritarianism of diet, of the same habit, exactly the habit you have.
+
+2:12:41.280 --> 2:12:45.680
+ I think that's actually when bodies perform optimally, my body performs optimally.
+
+2:12:45.680 --> 2:12:50.520
+ So balancing those two, I think if I have the data, every once in a while, party with
+
+2:12:50.520 --> 2:12:55.680
+ some wild people, but most of the time, eat once a day, perhaps in the morning, I'm going
+
+2:12:55.680 --> 2:12:56.680
+ to try that.
+
+2:12:56.680 --> 2:13:00.000
+ That might be very interesting, but I'd rather not try it.
+
+2:13:00.000 --> 2:13:05.440
+ I'd rather have the data that tells me to do it, but in general, you're able to eating
+
+2:13:05.440 --> 2:13:10.400
+ once a day, think deeply about stuff like this.
+
+2:13:10.400 --> 2:13:15.280
+ Concern that people have is like, does your energy wane, all those kinds of things?
+
+2:13:15.280 --> 2:13:21.160
+ You find that it's, especially because it's unique, it's vegan as well.
+
+2:13:21.160 --> 2:13:27.040
+ So you find that you're able to have a clear mind, a focus, and just physically and mentally
+
+2:13:27.040 --> 2:13:28.040
+ throughout.
+
+2:13:28.040 --> 2:13:29.040
+ Yeah.
+
+2:13:29.040 --> 2:13:36.840
+ And I find my personal experience in thinking about hard things is like oftentimes, I feel
+
+2:13:36.840 --> 2:13:42.400
+ like I'm looking through a telescope and like I'm aligning two or three telescopes and you
+
+2:13:42.400 --> 2:13:47.280
+ kind of have to close one eye and move back and forth a little bit and just find just
+
+2:13:47.280 --> 2:13:48.280
+ the right alignment thing.
+
+2:13:48.280 --> 2:13:51.720
+ You find just a sneak peek at the thing you're trying to find, but it's fleeting.
+
+2:13:51.720 --> 2:13:54.920
+ If you move just one little bit, it's gone.
+
+2:13:54.920 --> 2:14:00.760
+ And oftentimes what I feel like are the ideas I value the most are like that.
+
+2:14:00.760 --> 2:14:07.080
+ They're so fragile and fleeting and slippery and elusive.
+
+2:14:07.080 --> 2:14:16.120
+ And it requires a sensitivity to thinking and a sensitivity to maneuver through these
+
+2:14:16.120 --> 2:14:17.120
+ things.
+
+2:14:17.120 --> 2:14:25.840
+ If I concede to a world where I'm on my phone texting, I'm also on social media, I'm also
+
+2:14:25.840 --> 2:14:30.840
+ doing 15 things at the same time because I'm running the company and I'm also feeling terrible
+
+2:14:30.840 --> 2:14:37.960
+ from the last night, it all just comes crashing down and the quality of my thoughts goes to
+
+2:14:37.960 --> 2:14:38.960
+ a zero.
+
+2:14:38.960 --> 2:14:44.640
+ I'm a functional person to respond to basic level things, but I don't feel like I am
+
+2:14:44.640 --> 2:14:47.880
+ doing anything interesting.
+
+2:14:47.880 --> 2:14:53.920
+ I think that's a good word, sensitivity, because that's what thinking deeply feels like is
+
+2:14:53.920 --> 2:14:56.640
+ you're sensitive to the fragile thoughts and you're right.
+
+2:14:56.640 --> 2:15:02.280
+ All those other distractions kind of dull your ability to be sensitive to the fragile
+
+2:15:02.280 --> 2:15:03.280
+ thoughts.
+
+2:15:03.280 --> 2:15:05.640
+ It's a really good word.
+
+2:15:05.640 --> 2:15:13.200
+ Out of all the things you've done, you've also climbed Mount Kilimanjaro.
+
+2:15:13.200 --> 2:15:14.200
+ Is this true?
+
+2:15:14.200 --> 2:15:19.840
+ It's true.
+
+2:15:19.840 --> 2:15:25.360
+ What do you, why and how and what do you take from that experience?
+
+2:15:25.360 --> 2:15:31.800
+ I guess the backstory is relevant because in that moment, it was the darkest time in
+
+2:15:31.800 --> 2:15:32.800
+ my life.
+
+2:15:32.800 --> 2:15:37.920
+ I was ending a 13 year marriage, I was leaving my religion, I sold brain tree and I was battling
+
+2:15:37.920 --> 2:15:46.120
+ depression where I was just like at the end and I got invited to go to Tanzania as part
+
+2:15:46.120 --> 2:15:50.160
+ of a group that was raising money to build clean water wells.
+
+2:15:50.160 --> 2:15:54.560
+ I had made some money from brain tree and so I was able to donate $25,000.
+
+2:15:54.560 --> 2:16:00.480
+ It was the first time I had ever had money to donate outside of paying tithing in my
+
+2:16:00.480 --> 2:16:09.000
+ religion and it was such a phenomenal experience to contribute something meaningful to someone
+
+2:16:09.000 --> 2:16:15.160
+ else in that form and as part of this process, we were going to climb the mountain and so
+
+2:16:15.160 --> 2:16:17.360
+ we went there and we saw the clean water wells we were building.
+
+2:16:17.360 --> 2:16:21.880
+ We spoke to the people there and it was very energizing and then we climbed Kilimanjaro
+
+2:16:21.880 --> 2:16:30.840
+ and I came down with a stomach flu on day three and I also had altitude sickness but
+
+2:16:30.840 --> 2:16:37.080
+ I became so sick that on day four, we are somebody on day five, I came into the camp,
+
+2:16:37.080 --> 2:16:44.480
+ base camp at 15,000 feet, just going to the bathroom on myself and following all over.
+
+2:16:44.480 --> 2:16:47.120
+ I was just a disaster, I was so sick.
+
+2:16:47.120 --> 2:16:50.120
+ So stomach flu and altitude sickness.
+
+2:16:50.120 --> 2:17:00.360
+ Yeah, and I just was destroyed from the situation and plus psychologically one of the lowest
+
+2:17:00.360 --> 2:17:01.360
+ points.
+
+2:17:01.360 --> 2:17:03.360
+ Yeah, and I think that was probably a big contributor.
+
+2:17:03.360 --> 2:17:07.960
+ I was just smoked as a human, just absolutely done and I had three young children and so
+
+2:17:07.960 --> 2:17:14.920
+ I was trying to reconcile whether I live or not is not my decision by itself.
+
+2:17:14.920 --> 2:17:21.200
+ I'm now intertwined with these three little people and I have an obligation whether I
+
+2:17:21.200 --> 2:17:25.080
+ like it or not, I need to be there and so it did.
+
+2:17:25.080 --> 2:17:31.280
+ It felt like I was just stuck in a straight jacket and I had to decide whether I was going
+
+2:17:31.280 --> 2:17:37.440
+ to summit the next day with the team and it was a difficult decision because once you
+
+2:17:37.440 --> 2:17:43.480
+ start hiking, there's no way to get off the mountain and a midnight came and our guide
+
+2:17:43.480 --> 2:17:45.000
+ came in and he said, where are you at?
+
+2:17:45.000 --> 2:17:54.320
+ And I said, I think I'm okay, I think I can try and so we went and so from midnight to
+
+2:17:54.320 --> 2:17:56.920
+ I made it to the summit at 5am.
+
+2:17:56.920 --> 2:18:05.400
+ It was one of the most transformational moments of my existence and the mountain became my
+
+2:18:05.400 --> 2:18:06.600
+ problem.
+
+2:18:06.600 --> 2:18:12.880
+ It became everything that I was struggling with and when I started hiking, the pain
+
+2:18:12.880 --> 2:18:19.160
+ got so ferocious that it was kind of like this.
+
+2:18:19.160 --> 2:18:29.160
+ It became so ferocious that I turned my music to Eminem and he was the only person in existence
+
+2:18:29.160 --> 2:18:37.640
+ that spoke to my soul and it was something about his anger and his vibrancy in his multi
+
+2:18:37.640 --> 2:18:38.640
+ bench way.
+
+2:18:38.640 --> 2:18:42.720
+ He's the only person who I could turn on and I could say, I feel some relief.
+
+2:18:42.720 --> 2:18:49.840
+ I turned on Eminem and I made it to the summit after 5 hours but just a hundred yards from
+
+2:18:49.840 --> 2:18:50.840
+ the top.
+
+2:18:50.840 --> 2:18:56.320
+ I was with my guide Ike and I started getting very dizzy and I felt like I was going to
+
+2:18:56.320 --> 2:19:00.800
+ fall backwards off this cliff area we were on and I was like, this is dangerous.
+
+2:19:00.800 --> 2:19:04.600
+ And he said, look Brian, I know where you're at.
+
+2:19:04.600 --> 2:19:09.760
+ I know where you're at and I can tell you you've got it in you so I want you to look
+
+2:19:09.760 --> 2:19:17.520
+ up, take a step, take a breath and then look up, take a breath and take a step and I did
+
+2:19:17.520 --> 2:19:19.360
+ and I made it.
+
+2:19:19.360 --> 2:19:24.360
+ And so I got there and I just sat down with him at the top and I just cried like a baby.
+
+2:19:24.360 --> 2:19:25.360
+ Broke down.
+
+2:19:25.360 --> 2:19:31.840
+ I just lost it and so he let me do my thing and then we pulled out the pulse oximeter
+
+2:19:31.840 --> 2:19:36.280
+ and he measured my blood oxygen levels and it was like 50 something percent and it was
+
+2:19:36.280 --> 2:19:41.520
+ a danger zone so he looked at it and I think he was really alarmed that I was in this situation.
+
+2:19:41.520 --> 2:19:46.080
+ And so he said, we can't get a helicopter here and we can't get you emergency evacuated
+
+2:19:46.080 --> 2:19:49.840
+ you've got to go down, you've got to hike down to 15,000 feet to get base camp.
+
+2:19:49.840 --> 2:19:56.800
+ And so we went out on the mountain, I got back down at base camp and again that was
+
+2:19:56.800 --> 2:20:00.240
+ pretty difficult and then they put me on a stretcher, this metal stretcher with this
+
+2:20:00.240 --> 2:20:05.000
+ one wheel and a team of six people wheeled me down the mountain.
+
+2:20:05.000 --> 2:20:06.440
+ And it was it was pretty tortuous.
+
+2:20:06.440 --> 2:20:10.160
+ I'm very appreciative they did also the trail is very bumpy so they'd go over the big rocks
+
+2:20:10.160 --> 2:20:15.880
+ and so my head would just slam against this metal thing for hours and so I just felt awful
+
+2:20:15.880 --> 2:20:18.920
+ plus again my head slammed every couple of seconds.
+
+2:20:18.920 --> 2:20:23.000
+ So the whole experience was really a life changing moment and that's it.
+
+2:20:23.000 --> 2:20:28.680
+ That was the demarcation of me basically building your life of basically I said I'm going to
+
+2:20:28.680 --> 2:20:35.800
+ reconstruct Brian, my understanding of reality, my existential realities, what I want to go
+
+2:20:35.800 --> 2:20:40.960
+ after and I try, I mean as much as that's possible as a human but that's when I set
+
+2:20:40.960 --> 2:20:44.520
+ out to rebuild everything.
+
+2:20:44.520 --> 2:20:46.000
+ Was it the struggle of that?
+
+2:20:46.000 --> 2:20:54.800
+ I mean there's also just like the romantic poetic it's a fricking mountain is a man in
+
+2:20:54.800 --> 2:21:01.800
+ pain psychological and physical struggling up a mountain but it's just struggle just
+
+2:21:01.800 --> 2:21:10.200
+ in the face of just pushing through in the face of hardship or nature to something much
+
+2:21:10.200 --> 2:21:12.520
+ bigger than you.
+
+2:21:12.520 --> 2:21:14.960
+ Is that was that the thing that just clicked?
+
+2:21:14.960 --> 2:21:21.360
+ For me it felt like I was just locked in with reality and it was a death match.
+
+2:21:21.360 --> 2:21:24.080
+ It was in that moment one of us is going to die.
+
+2:21:24.080 --> 2:21:28.960
+ So you were pondering death like not surviving.
+
+2:21:28.960 --> 2:21:35.080
+ And that was the moment and it was the summit to me was I'm going to come out on top and
+
+2:21:35.080 --> 2:21:42.600
+ I can do this and giving in was it's like I'm just done and so it did, I locked in and
+
+2:21:42.600 --> 2:21:49.120
+ that's why mountains are magical to me.
+
+2:21:49.120 --> 2:21:50.240
+ I didn't expect that.
+
+2:21:50.240 --> 2:21:51.240
+ I didn't design that.
+
+2:21:51.240 --> 2:21:54.040
+ I didn't know that was going to be the case.
+
+2:21:54.040 --> 2:21:58.320
+ It would not have been something I would have anticipated.
+
+2:21:58.320 --> 2:22:02.880
+ But you are not the same man afterwards.
+
+2:22:02.880 --> 2:22:08.120
+ Is there advice you can give to young people today that look at your story that's successful
+
+2:22:08.120 --> 2:22:10.920
+ in many dimensions?
+
+2:22:10.920 --> 2:22:14.640
+ Advice you can give to them about how to be successful in their career successful in
+
+2:22:14.640 --> 2:22:18.200
+ life and whatever path they choose.
+
+2:22:18.200 --> 2:22:29.000
+ Yes, I would say listen to advice and see it for what it is, a mirror of that person
+
+2:22:29.000 --> 2:22:35.760
+ and then map and know that your future is going to be in a zero principle and so what
+
+2:22:35.760 --> 2:22:39.840
+ you're hearing today is a representation of what may have been the right principles to
+
+2:22:39.840 --> 2:22:45.800
+ build upon previously, but they're likely depreciating very fast.
+
+2:22:45.800 --> 2:22:55.960
+ And so I am a strong proponent that people ask for advice, but they don't take advice.
+
+2:22:55.960 --> 2:23:01.080
+ So, how do you take advice properly?
+
+2:23:01.080 --> 2:23:03.840
+ It's in the careful examination of the advice.
+
+2:23:03.840 --> 2:23:09.200
+ It's actually, the person makes a statement about a given thing somebody should follow.
+
+2:23:09.200 --> 2:23:10.680
+ The value is not doing that.
+
+2:23:10.680 --> 2:23:14.480
+ The value is understanding the assumption stack they built, the assumption of knowledge
+
+2:23:14.480 --> 2:23:18.280
+ stack they built around that body of knowledge.
+
+2:23:18.280 --> 2:23:19.280
+ That's the value.
+
+2:23:19.280 --> 2:23:21.280
+ It's not doing what they say.
+
+2:23:21.280 --> 2:23:28.120
+ Concerning the advice, but digging deeper to understand the assumption stack, like
+
+2:23:28.120 --> 2:23:29.120
+ the full person.
+
+2:23:29.120 --> 2:23:34.800
+ I mean, this is deep empathy, essentially, to understand the journey of the person that
+
+2:23:34.800 --> 2:23:39.640
+ arrived at the advice and the advice is just the tip of the iceberg that ultimately is
+
+2:23:39.640 --> 2:23:41.600
+ not the thing that gives you.
+
+2:23:41.600 --> 2:23:42.600
+ That's right.
+
+2:23:42.600 --> 2:23:46.040
+ The right thing to do, it could be the complete wrong thing to do, depending on the assumption
+
+2:23:46.040 --> 2:23:47.040
+ stack.
+
+2:23:47.040 --> 2:23:49.560
+ So you need to investigate the whole thing.
+
+2:23:49.560 --> 2:23:57.480
+ Is there some, are there been people in your startup, in your business journey that have
+
+2:23:57.480 --> 2:24:02.720
+ served that role of advice giver that's been helpful?
+
+2:24:02.720 --> 2:24:11.640
+ Or do you feel like your journey felt like a lonely path, or was it one that was, of course,
+
+2:24:11.640 --> 2:24:21.240
+ for all, while they're born and die alone, but do you fundamentally remember the experiences
+
+2:24:21.240 --> 2:24:27.240
+ when you leaned on people at a particular moment or a time that changed everything?
+
+2:24:27.240 --> 2:24:34.360
+ The most significant moments of my memory, for example, like on Kilimanjaro, when Ike,
+
+2:24:34.360 --> 2:24:42.080
+ some person I'd never met in Tanzania, was able to, in that moment, apparently see my
+
+2:24:42.080 --> 2:24:45.320
+ soul when I was in this death match with reality.
+
+2:24:45.320 --> 2:24:48.880
+ And he gave me the instructions, look up, step.
+
+2:24:48.880 --> 2:24:58.080
+ And so there's magical people in my life that have done things like that.
+
+2:24:58.080 --> 2:25:02.280
+ And I suspect they probably don't know.
+
+2:25:02.280 --> 2:25:16.000
+ I probably should be better at identifying those things and, but yeah, hopefully the,
+
+2:25:16.000 --> 2:25:23.400
+ I suppose like a wisdom I would aspire to is to have the awareness and the empathy to
+
+2:25:23.400 --> 2:25:36.000
+ be that for other people and not a retail advertiser of advice, of tricks and for life,
+
+2:25:36.000 --> 2:25:43.280
+ but deeply meaningful and empathetic with a one on one context with people that it really
+
+2:25:43.280 --> 2:25:44.800
+ could make a difference.
+
+2:25:44.800 --> 2:25:49.440
+ Yeah, I actually kind of experienced, I think about that sometimes, you know, you have like
+
+2:25:49.440 --> 2:25:58.640
+ an 18 year old kid come up to you, it's not always obvious, it's not always easy to really
+
+2:25:58.640 --> 2:26:04.560
+ listen to them, like not, not the facts, but like see who that person is.
+
+2:26:04.560 --> 2:26:12.680
+ I think people say that about being a parent is, you know, you want to consider that you
+
+2:26:12.680 --> 2:26:16.400
+ want to be the authority figure in a sense that you really want to consider that there's
+
+2:26:16.400 --> 2:26:23.840
+ a special unique human being there with a unique brain that may be brilliant in ways
+
+2:26:23.840 --> 2:26:29.440
+ that you are not understanding that you'll never be and really try to hear that.
+
+2:26:29.440 --> 2:26:33.880
+ So when giving advice or something to that, it's a both sides should be deeply empathetic
+
+2:26:33.880 --> 2:26:35.880
+ about the assumption stack.
+
+2:26:35.880 --> 2:26:38.920
+ I love that terminology.
+
+2:26:38.920 --> 2:26:43.480
+ What do you think is the meaning of this whole thing of life?
+
+2:26:43.480 --> 2:26:44.960
+ Why the hell are we here?
+
+2:26:44.960 --> 2:26:49.520
+ Alright, Johnson, we've been talking about brains and studying brains and you had this
+
+2:26:49.520 --> 2:26:56.840
+ very eloquent way of describing life on earth as an optimization problem of the cost of
+
+2:26:56.840 --> 2:27:02.640
+ intelligence going to zero at first through the evolutionary process and then eventually
+
+2:27:02.640 --> 2:27:09.640
+ through building through our technology building more and more intelligent systems.
+
+2:27:09.640 --> 2:27:13.120
+ You ever ask yourself why is doing that?
+
+2:27:13.120 --> 2:27:20.920
+ Yeah, I think the answer to this question, again, the information value is more in the
+
+2:27:20.920 --> 2:27:28.640
+ mirror it provides of that person, which is a representation of the technological, social,
+
+2:27:28.640 --> 2:27:29.640
+ political context of the time.
+
+2:27:29.640 --> 2:27:34.080
+ So if you ask this question 100 years ago, you would get a certain answer that reflects
+
+2:27:34.080 --> 2:27:35.080
+ that time period.
+
+2:27:35.080 --> 2:27:37.120
+ Same thing would be true for 1000 years ago.
+
+2:27:37.120 --> 2:27:39.120
+ It's rare.
+
+2:27:39.120 --> 2:27:42.240
+ It's difficult for a person to pull themselves out of their contextual awareness.
+
+2:27:42.240 --> 2:27:43.240
+ Very true.
+
+2:27:43.240 --> 2:27:45.360
+ And offer truly original response.
+
+2:27:45.360 --> 2:27:51.280
+ And so knowing that I am contextually influenced by the situation, that I am a mirror for our
+
+2:27:51.280 --> 2:28:06.920
+ reality, I would say that in this moment, I think the real game going on is that evolution
+
+2:28:06.920 --> 2:28:11.800
+ built a system of scaffolding intelligence that produced us.
+
+2:28:11.800 --> 2:28:18.280
+ We are now building intelligent systems that are scaffolding higher dimensional intelligence
+
+2:28:18.280 --> 2:28:28.160
+ that's developing more robust systems of intelligence.
+
+2:28:28.160 --> 2:28:36.440
+ In doing in that process with the cost going to zero, then the meaning of life becomes
+
+2:28:36.440 --> 2:28:43.800
+ goal alignment, which is the negotiation of our conscious and unconscious existence.
+
+2:28:43.800 --> 2:28:50.480
+ And then I'd say the third thing is if we're thinking that we want to be explorers, is
+
+2:28:50.480 --> 2:28:57.560
+ our technological progress is getting to a point where we could aspirationally say we
+
+2:28:57.560 --> 2:29:01.840
+ want to figure out what is really going on.
+
+2:29:01.840 --> 2:29:06.680
+ Because does any of this really make sense?
+
+2:29:06.680 --> 2:29:13.320
+ Now we may be 100, 200, 500, a thousand years away from being able to poke our way out of
+
+2:29:13.320 --> 2:29:20.200
+ whatever is going on, but it's interesting that we could even state an aspiration to
+
+2:29:20.200 --> 2:29:23.080
+ say we want to poke at this question.
+
+2:29:23.080 --> 2:29:31.920
+ But I'd say in this moment of time, the meaning of life is that we can build a future state
+
+2:29:31.920 --> 2:29:38.080
+ of existence that is more fantastic than anything we could ever imagine.
+
+2:29:38.080 --> 2:29:43.720
+ The striving for something more amazing.
+
+2:29:43.720 --> 2:29:56.200
+ And that defies expectations that we would consider bewildering and all the things.
+
+2:29:56.200 --> 2:30:00.440
+ And I guess the last thing, if there's multiple meanings of life, it would be infinite games.
+
+2:30:00.440 --> 2:30:04.200
+ James Kars wrote the book, finite games, infinite games.
+
+2:30:04.200 --> 2:30:09.720
+ The only game to play right now is to keep playing the game.
+
+2:30:09.720 --> 2:30:14.520
+ And so this goes back to the algorithm of the Lex algorithm of diet soda and brisket
+
+2:30:14.520 --> 2:30:16.280
+ and pursuing the passion.
+
+2:30:16.280 --> 2:30:21.000
+ What I'm suggesting is there's a moment here where we can contemplate playing infinite
+
+2:30:21.000 --> 2:30:22.880
+ games.
+
+2:30:22.880 --> 2:30:27.760
+ Therefore it may make sense to err on the side of making sure one is in a situation to
+
+2:30:27.760 --> 2:30:31.240
+ be playing infinite games if that opportunity arises.
+
+2:30:31.240 --> 2:30:35.400
+ So the landscape of possibility is changing very, very fast.
+
+2:30:35.400 --> 2:30:38.680
+ And therefore our old algorithms of how we might assess risk assessment and what things
+
+2:30:38.680 --> 2:30:43.080
+ we might pursue and why those assumptions may fall away very quickly.
+
+2:30:43.080 --> 2:30:50.480
+ Well, I think I speak for a lot of people when I say that the game you, Mr. Brian Johnson,
+
+2:30:50.480 --> 2:30:53.280
+ have been playing is quite incredible.
+
+2:30:53.280 --> 2:30:54.280
+ Thank you so much for talking to me.
+
+2:30:54.280 --> 2:30:56.280
+ Thanks, Lex.
+
+2:30:56.280 --> 2:30:58.920
+ Thanks for listening to this conversation with Brian Johnson.
+
+2:30:58.920 --> 2:31:05.120
+ And thank you to FourSigmatic, Netsuite, Grammarly, and ExpressVPN.
+
+2:31:05.120 --> 2:31:08.400
+ Check them out in the description to support this podcast.
+
+2:31:08.400 --> 2:31:12.120
+ And now let me leave you with some words from Diane Ackerman.
+
+2:31:12.120 --> 2:31:18.840
+ Our brain is a crowded chemistry lab bustling with nonstop neural conversations.
+
+2:31:18.840 --> 2:31:38.960
+ Thank you for listening and hope to see you next time.
+

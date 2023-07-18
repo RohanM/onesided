@@ -1,0 +1,3881 @@
+WEBVTT
+
+00:00.000 --> 00:02.960
+ The following is a conversation with Peter Norvig.
+
+00:02.960 --> 00:06.000
+ He's the director of research at Google and the coauthor
+
+00:06.000 --> 00:09.360
+ with Stuart Russell of the book, Artificial Intelligence
+
+00:09.360 --> 00:12.840
+ and Modern Approach, that educated and inspired
+
+00:12.840 --> 00:15.680
+ a whole generation of researchers, including myself,
+
+00:15.680 --> 00:18.880
+ to get into the field of artificial intelligence.
+
+00:18.880 --> 00:21.760
+ This is the Artificial Intelligence Podcast.
+
+00:21.760 --> 00:24.160
+ If you enjoy it, subscribe on YouTube,
+
+00:24.160 --> 00:27.200
+ give it five stars on iTunes, support on Patreon,
+
+00:27.200 --> 00:29.080
+ or simply connect with me on Twitter.
+
+00:29.080 --> 00:32.800
+ Alex Friedman, spelled F R I D M A N.
+
+00:32.800 --> 00:36.640
+ And now, here's my conversation with Peter Norvig.
+
+00:37.720 --> 00:40.800
+ Most researchers in the AI community, including myself,
+
+00:40.800 --> 00:43.080
+ own all three editions, red, green, and blue,
+
+00:43.080 --> 00:46.480
+ of the Artificial Intelligence and Modern Approach.
+
+00:46.480 --> 00:49.360
+ It's a field defining textbook as many people are aware
+
+00:49.360 --> 00:52.120
+ that you wrote with Stuart Russell.
+
+00:52.120 --> 00:55.320
+ How has the book changed and how have you changed
+
+00:55.320 --> 00:57.880
+ in relation to it from the first edition to the second
+
+00:57.880 --> 01:00.840
+ to the third and now fourth edition as you work on it?
+
+01:00.840 --> 01:04.320
+ Yeah, so it's been a lot of years, a lot of changes.
+
+01:04.320 --> 01:07.840
+ One of the things changing from the first to maybe the second
+
+01:07.840 --> 01:12.840
+ or third was just the rise of computing power, right?
+
+01:13.000 --> 01:17.800
+ So I think in the first edition, we said,
+
+01:17.800 --> 01:22.560
+ here's predicate logic, but that only goes so far
+
+01:22.560 --> 01:27.560
+ because pretty soon you have millions of short little
+
+01:27.560 --> 01:29.560
+ predicate expressions and they couldn't possibly
+
+01:29.560 --> 01:33.200
+ fit in memory, so we're gonna use first order logic
+
+01:33.200 --> 01:34.640
+ that's more concise.
+
+01:35.720 --> 01:39.360
+ And then we quickly realized, oh, predicate logic
+
+01:39.360 --> 01:42.360
+ is pretty nice because there are really fast
+
+01:42.360 --> 01:44.840
+ SAT solvers and other things and look,
+
+01:44.840 --> 01:46.360
+ there's only millions of expressions
+
+01:46.360 --> 01:48.280
+ and that fits easily into memory
+
+01:48.280 --> 01:51.200
+ or maybe even billions fit into memory now.
+
+01:51.200 --> 01:54.560
+ So that was a change of the type of technology we needed
+
+01:54.560 --> 01:56.720
+ just because the hardware expanded.
+
+01:56.720 --> 01:59.120
+ Even to the second edition, the resource constraints
+
+01:59.120 --> 02:01.880
+ were loosened significantly for the second.
+
+02:01.880 --> 02:04.880
+ And that was the early 2000s second edition.
+
+02:04.880 --> 02:09.880
+ Right, so 95 was the first and then 2000, 2001 or so.
+
+02:10.520 --> 02:12.280
+ And then moving on from there,
+
+02:12.280 --> 02:17.040
+ I think we're starting to see that again with the GPUs
+
+02:17.040 --> 02:21.800
+ and then more specific type of machinery like the TPUs
+
+02:21.800 --> 02:26.280
+ and we're seeing custom ASICs and so on for deep learning.
+
+02:26.280 --> 02:30.520
+ So we're seeing another advance in terms of the hardware.
+
+02:30.520 --> 02:33.640
+ Then I think another thing that we especially noticed
+
+02:33.640 --> 02:37.160
+ this time around is in all three of the first editions,
+
+02:37.160 --> 02:40.160
+ we kind of said, well, we're gonna find AI
+
+02:40.160 --> 02:43.000
+ as maximizing expected utility
+
+02:43.000 --> 02:45.520
+ and you tell me your utility function
+
+02:45.520 --> 02:48.040
+ and now we've got 27 chapters
+
+02:48.040 --> 02:51.800
+ with the cool techniques for how to optimize that.
+
+02:51.800 --> 02:55.280
+ I think in this edition, we're saying more, you know what?
+
+02:55.280 --> 02:58.120
+ Maybe that optimization part is the easy part
+
+02:58.120 --> 03:01.600
+ and the hard part is deciding what is my utility function?
+
+03:01.600 --> 03:03.000
+ What do I want?
+
+03:03.000 --> 03:06.320
+ And if I'm a collection of agents or a society,
+
+03:06.320 --> 03:08.360
+ what do we want as a whole?
+
+03:08.360 --> 03:10.080
+ So you touch that topic in this edition,
+
+03:10.080 --> 03:11.920
+ you get a little bit more into utility.
+
+03:11.920 --> 03:12.760
+ Yeah, yeah.
+
+03:12.760 --> 03:13.600
+ That's really interesting.
+
+03:13.600 --> 03:17.480
+ On a technical level, we're almost pushing the philosophical.
+
+03:17.480 --> 03:19.280
+ I guess it is philosophical, right?
+
+03:19.280 --> 03:21.560
+ So we've always had a philosophy chapter,
+
+03:21.560 --> 03:25.960
+ which I was glad that we were supporting.
+
+03:27.280 --> 03:32.280
+ And now it's less kind of the Chinese room type argument
+
+03:32.920 --> 03:37.480
+ and more of these ethical and societal type issues.
+
+03:37.480 --> 03:41.840
+ So we get into the issues of fairness and bias
+
+03:41.840 --> 03:45.880
+ and just the issue of aggregating utilities.
+
+03:45.880 --> 03:49.760
+ So how do you encode human values into a utility function?
+
+03:49.760 --> 03:53.480
+ Is this something that you can do purely through data
+
+03:53.480 --> 03:56.800
+ in a learned way or is there some systematic?
+
+03:56.800 --> 03:58.520
+ Obviously, there's no good answers yet.
+
+03:58.520 --> 04:01.520
+ There's just beginnings to this,
+
+04:01.520 --> 04:02.920
+ to even opening the door to these questions.
+
+04:02.920 --> 04:04.280
+ So there is no one answer.
+
+04:04.280 --> 04:07.480
+ Yes, there are techniques to try to learn that.
+
+04:07.480 --> 04:10.760
+ So we talk about inverse reinforcement learning, right?
+
+04:10.760 --> 04:14.080
+ So reinforcement learning, you take some actions,
+
+04:14.080 --> 04:15.400
+ you get some rewards,
+
+04:15.400 --> 04:18.000
+ and you figure out what actions you should take.
+
+04:18.000 --> 04:20.160
+ And inverse reinforcement learning,
+
+04:20.160 --> 04:23.000
+ you observe somebody taking actions
+
+04:23.000 --> 04:24.520
+ and you figure out,
+
+04:24.520 --> 04:27.200
+ well, this must be what they were trying to do.
+
+04:27.200 --> 04:30.360
+ If they did this action, it must be because they wanted it.
+
+04:30.360 --> 04:32.960
+ Of course, there's restrictions to that, right?
+
+04:32.960 --> 04:37.120
+ So lots of people take actions that are self destructive
+
+04:37.120 --> 04:39.160
+ or they're suboptimal in a certain way.
+
+04:39.160 --> 04:40.640
+ So you don't want to learn that.
+
+04:40.640 --> 04:44.800
+ You want to somehow learn the perfect actions
+
+04:44.800 --> 04:46.480
+ rather than the ones they actually take.
+
+04:46.480 --> 04:50.040
+ So that's a challenge for that field.
+
+04:51.320 --> 04:55.760
+ Then another big part of it is just kind of theoretical
+
+04:55.760 --> 04:58.680
+ of saying what can we accomplish?
+
+04:58.680 --> 05:03.680
+ And so you look at like this work on the programs
+
+05:04.440 --> 05:09.440
+ to predict recidivism and decide who should get parole
+
+05:10.320 --> 05:12.840
+ or who should get bail or whatever.
+
+05:12.840 --> 05:14.600
+ And how are you gonna evaluate that?
+
+05:14.600 --> 05:17.520
+ And one of the big issues is fairness
+
+05:17.520 --> 05:19.600
+ across protected classes,
+
+05:19.600 --> 05:24.600
+ protected classes being things like sex and race and so on.
+
+05:24.600 --> 05:28.480
+ And so two things you want is you want to say,
+
+05:28.480 --> 05:32.640
+ well, if I get a score of say a six out of 10,
+
+05:32.640 --> 05:34.960
+ then I want that to mean the same,
+
+05:34.960 --> 05:37.640
+ whether no matter what race I'm on, right?
+
+05:37.640 --> 05:42.640
+ So I want to have a 60% chance of reoccurring regardless.
+
+05:42.640 --> 05:47.640
+ Regardless, and one of the makers of a commercial program
+
+05:48.120 --> 05:50.080
+ to do that says, that's what we're trying to optimize.
+
+05:50.080 --> 05:51.320
+ And look, we achieved that.
+
+05:51.320 --> 05:56.160
+ We've reached that kind of balance.
+
+05:56.160 --> 05:58.840
+ And then on the other side, you also want to say,
+
+05:59.720 --> 06:01.880
+ well, if it makes mistakes,
+
+06:01.880 --> 06:05.840
+ I want that to affect both sides of the protected class
+
+06:05.840 --> 06:09.040
+ equally and it turns out they don't do that, right?
+
+06:09.040 --> 06:12.200
+ So they're twice as likely to make a mistake
+
+06:12.200 --> 06:14.840
+ that would harm a black person over a white person.
+
+06:14.840 --> 06:16.520
+ So that seems unfair.
+
+06:16.520 --> 06:17.360
+ So you'd like to say, well,
+
+06:17.360 --> 06:19.640
+ I want to achieve both those goals.
+
+06:19.640 --> 06:21.400
+ And then turns out you do the analysis
+
+06:21.400 --> 06:24.160
+ and it's theoretically impossible to achieve both those goals.
+
+06:24.160 --> 06:27.160
+ So you have to trade them off one against the other.
+
+06:27.160 --> 06:29.080
+ So that analysis is really helpful
+
+06:29.080 --> 06:32.320
+ to know what you can aim for and how much you can get,
+
+06:32.320 --> 06:33.960
+ that you can't have everything.
+
+06:33.960 --> 06:35.520
+ But the analysis certainly can't tell you
+
+06:35.520 --> 06:38.520
+ where should we make that trade off point.
+
+06:38.520 --> 06:42.000
+ But nevertheless, then we can, as humans, deliberate
+
+06:42.000 --> 06:43.360
+ where that trade off should be.
+
+06:43.360 --> 06:45.880
+ Yeah, so at least now we're arguing in an informed way.
+
+06:45.880 --> 06:48.280
+ We're not asking for something impossible.
+
+06:48.280 --> 06:50.120
+ We're saying, here's where we are
+
+06:50.120 --> 06:51.760
+ and here's what we aim for.
+
+06:51.760 --> 06:55.880
+ And this strategy is better than that strategy.
+
+06:55.880 --> 06:57.560
+ So that's, I would argue,
+
+06:57.560 --> 07:00.600
+ is a really powerful and really important first step.
+
+07:00.600 --> 07:01.720
+ But it's a doable one,
+
+07:01.720 --> 07:06.720
+ sort of removing undesirable degrees of bias in systems
+
+07:06.720 --> 07:08.920
+ in terms of protective classes.
+
+07:08.920 --> 07:09.760
+ And then there's something,
+
+07:09.760 --> 07:12.480
+ I listened to your commencement speech,
+
+07:12.480 --> 07:15.560
+ or there's some fuzzier things like,
+
+07:15.560 --> 07:17.240
+ you mentioned angry birds.
+
+07:17.240 --> 07:21.760
+ Do you want to create systems that feed the dopamine
+
+07:21.760 --> 07:25.280
+ enjoyment, that feed, that optimize for you
+
+07:25.280 --> 07:26.720
+ returning to the system,
+
+07:26.720 --> 07:29.080
+ enjoying the moment of playing the game,
+
+07:29.080 --> 07:32.000
+ of getting likes or whatever this kind of thing,
+
+07:32.000 --> 07:34.880
+ or some kind of long term improvement.
+
+07:34.880 --> 07:38.960
+ Right. Are you even thinking about that?
+
+07:40.800 --> 07:43.760
+ That's really going to the philosophical area.
+
+07:43.760 --> 07:45.760
+ I think that's a really important issue too,
+
+07:45.760 --> 07:46.800
+ certainly thinking about that.
+
+07:46.800 --> 07:50.800
+ I don't think about that as an AI issue as much.
+
+07:52.280 --> 07:57.280
+ But as you say, the point is we've built this society
+
+07:58.520 --> 08:01.840
+ in this infrastructure where we say
+
+08:01.840 --> 08:04.520
+ we have a marketplace for attention
+
+08:04.520 --> 08:08.120
+ and we've decided as a society
+
+08:08.120 --> 08:10.280
+ that we like things that are free.
+
+08:10.280 --> 08:13.800
+ And so we want all apps on our phone to be free.
+
+08:13.800 --> 08:16.200
+ And that means they're all competing for your attention
+
+08:16.200 --> 08:18.800
+ and then eventually they make some money some way
+
+08:18.800 --> 08:21.860
+ through ads or in game sales or whatever.
+
+08:23.200 --> 08:27.400
+ But they can only win by defeating all the other apps
+
+08:27.400 --> 08:29.520
+ by instilling your attention.
+
+08:29.520 --> 08:34.360
+ And we build a marketplace where it seems
+
+08:34.360 --> 08:39.040
+ like they're working against you rather than working with you.
+
+08:39.040 --> 08:41.880
+ And I'd like to find a way where we can change
+
+08:41.880 --> 08:43.920
+ the playing field so we feel more like,
+
+08:43.920 --> 08:45.720
+ well, these things are on my side.
+
+08:46.760 --> 08:49.720
+ Yes, they're letting me have some fun in the short term,
+
+08:49.720 --> 08:52.160
+ but they're also helping me in the long term
+
+08:53.160 --> 08:55.000
+ rather than competing against me.
+
+08:55.000 --> 08:57.200
+ And those aren't necessarily conflicting objectives.
+
+08:57.200 --> 09:01.280
+ They're just the incentives, the direct current incentives
+
+09:01.280 --> 09:03.160
+ as we try to figure out this whole new world
+
+09:03.160 --> 09:06.680
+ that seemed to be on the easier part of that,
+
+09:06.680 --> 09:09.240
+ which is feeding the dopamine, the rush.
+
+09:09.240 --> 09:10.080
+ Right.
+
+09:10.080 --> 09:14.400
+ But let me be taking a quick step back
+
+09:15.600 --> 09:18.040
+ at the beginning of the artificial intelligence
+
+09:18.040 --> 09:20.160
+ and modern approach book of writing.
+
+09:20.160 --> 09:22.280
+ So here you are in the 90s,
+
+09:22.280 --> 09:25.760
+ when you first sat down with Stuart to write the book
+
+09:25.760 --> 09:27.880
+ to cover an entire field,
+
+09:27.880 --> 09:30.480
+ which is one of the only books that's successfully done
+
+09:30.480 --> 09:33.720
+ at F4AI and actually in a lot of other computer science
+
+09:33.720 --> 09:37.360
+ fields, it's a huge undertaking.
+
+09:37.360 --> 09:40.800
+ So it must have been quite daunting.
+
+09:40.800 --> 09:42.080
+ What was that process like?
+
+09:42.080 --> 09:44.920
+ Did you envision that you would be trying to cover
+
+09:44.920 --> 09:46.080
+ the entire field?
+
+09:47.240 --> 09:48.840
+ Was there a systematic approach to it
+
+09:48.840 --> 09:50.360
+ that was more step by step?
+
+09:50.360 --> 09:52.160
+ How did it feel?
+
+09:52.160 --> 09:54.400
+ So I guess it came about,
+
+09:54.400 --> 09:57.400
+ go to lunch with the other AI faculty at Berkeley
+
+09:57.400 --> 10:00.720
+ and we'd say the field is changing,
+
+10:00.720 --> 10:03.640
+ seems like the current books are a little bit behind,
+
+10:03.640 --> 10:05.240
+ nobody's come out with a new book recently,
+
+10:05.240 --> 10:06.840
+ we should do that.
+
+10:06.840 --> 10:07.760
+ And everybody said, yeah, yeah,
+
+10:07.760 --> 10:09.080
+ that's a great thing to do.
+
+10:09.080 --> 10:10.040
+ And we never did anything.
+
+10:10.040 --> 10:11.080
+ Right.
+
+10:11.080 --> 10:14.360
+ And then I ended up heading off to industry.
+
+10:14.360 --> 10:15.960
+ I went to Sun Labs.
+
+10:15.960 --> 10:17.120
+ So I thought, well, that's the end
+
+10:17.120 --> 10:20.720
+ of my possible academic publishing career.
+
+10:21.760 --> 10:25.200
+ But I met Stuart again at a conference like a year later
+
+10:25.200 --> 10:28.200
+ and said, you know, that book we were always talking about,
+
+10:28.200 --> 10:30.360
+ you guys must be half done with it by now, right?
+
+10:30.360 --> 10:34.120
+ And he said, well, we keep talking, we never do anything.
+
+10:34.120 --> 10:36.080
+ So I said, well, you know, we should do it.
+
+10:36.080 --> 10:40.560
+ And I think the reason is that we all felt
+
+10:40.560 --> 10:43.440
+ it was a time where the field was changing.
+
+10:44.600 --> 10:46.600
+ And that was in two ways.
+
+10:47.920 --> 10:50.200
+ So, you know, the good old fashioned AI
+
+10:50.200 --> 10:53.320
+ was based primarily on Boolean logic.
+
+10:53.320 --> 10:56.800
+ And you had a few tricks to deal with uncertainty.
+
+10:56.800 --> 11:00.080
+ And it was based primarily on knowledge engineering,
+
+11:00.080 --> 11:01.960
+ that the way you got something done is you went out
+
+11:01.960 --> 11:03.000
+ and you interviewed an expert
+
+11:03.000 --> 11:05.560
+ and you wrote down by hand everything they knew.
+
+11:06.560 --> 11:11.560
+ And we saw in 95 that the field was changing in two ways.
+
+11:11.560 --> 11:14.800
+ One, we were moving more towards probability
+
+11:14.800 --> 11:16.280
+ rather than Boolean logic.
+
+11:16.280 --> 11:18.680
+ And we were moving more towards machine learning
+
+11:18.680 --> 11:21.360
+ rather than knowledge engineering.
+
+11:21.360 --> 11:23.960
+ And the other books hadn't caught that way
+
+11:23.960 --> 11:27.640
+ if they were still in the, more in the old school,
+
+11:27.640 --> 11:30.840
+ although certainly they had part of that on the way.
+
+11:30.840 --> 11:34.600
+ But we said, if we start now completely taking
+
+11:34.600 --> 11:37.600
+ that point of view, we can have a different kind of book
+
+11:37.600 --> 11:39.600
+ and we were able to put that together.
+
+11:40.800 --> 11:45.280
+ And what was literally the process, if you remember?
+
+11:45.280 --> 11:46.800
+ Did you start writing a chapter?
+
+11:46.800 --> 11:48.680
+ Did you outline?
+
+11:48.680 --> 11:50.640
+ Yeah, I guess we did an outline
+
+11:50.640 --> 11:54.920
+ and then we sort of assigned chapters to each person.
+
+11:56.000 --> 11:58.280
+ At the time, I had moved to Boston
+
+11:58.280 --> 12:00.120
+ and Stuart was in Berkeley.
+
+12:00.120 --> 12:04.480
+ So basically we did it over the internet.
+
+12:04.480 --> 12:08.040
+ And that wasn't the same as doing it today.
+
+12:08.040 --> 12:13.040
+ It meant dial up lines and telnetting in.
+
+12:15.200 --> 12:19.360
+ You telnetted into one shell
+
+12:19.360 --> 12:21.080
+ and you type cat file name
+
+12:21.080 --> 12:23.880
+ and you hoped it was captured at the other end.
+
+12:23.880 --> 12:26.160
+ And certainly you're not sending images
+
+12:26.160 --> 12:27.200
+ and figures back and forth.
+
+12:27.200 --> 12:29.680
+ Right, right, that didn't work.
+
+12:29.680 --> 12:33.200
+ But did you anticipate where the field would go
+
+12:34.080 --> 12:37.720
+ from that day, from the 90s?
+
+12:37.720 --> 12:42.720
+ Did you see the growth into learning based methods
+
+12:42.960 --> 12:44.640
+ and to data driven methods
+
+12:44.640 --> 12:47.080
+ that followed in the future decades?
+
+12:47.080 --> 12:50.920
+ We certainly thought that learning was important.
+
+12:51.960 --> 12:56.960
+ I guess we missed it as being as important as it is today.
+
+12:58.080 --> 13:00.120
+ We missed this idea of big data.
+
+13:00.120 --> 13:02.800
+ We missed that the idea of deep learning
+
+13:02.800 --> 13:04.480
+ hadn't been invented yet.
+
+13:04.480 --> 13:07.520
+ We could have taken the book
+
+13:07.520 --> 13:11.200
+ from a complete machine learning point of view
+
+13:11.200 --> 13:12.440
+ right from the start.
+
+13:12.440 --> 13:15.080
+ We chose to do it more from a point of view
+
+13:15.080 --> 13:17.480
+ of we're gonna first develop the different types
+
+13:17.480 --> 13:20.160
+ of representations and we're gonna talk
+
+13:20.160 --> 13:22.600
+ about different types of environments.
+
+13:24.040 --> 13:26.640
+ Is it fully observable or partially observable
+
+13:26.640 --> 13:29.760
+ and is it deterministic or stochastic and so on?
+
+13:29.760 --> 13:33.400
+ And we made it more complex along those axes
+
+13:33.400 --> 13:38.040
+ rather than focusing on the machine learning axis first.
+
+13:38.040 --> 13:40.880
+ Do you think, there's some sense in which
+
+13:40.880 --> 13:44.200
+ the deep learning craze is extremely successful
+
+13:44.200 --> 13:46.360
+ for a particular set of problems?
+
+13:46.360 --> 13:51.040
+ And eventually it's going to, in the general case,
+
+13:51.040 --> 13:52.560
+ hit challenges.
+
+13:52.560 --> 13:56.320
+ So in terms of the difference between perception systems
+
+13:56.320 --> 13:59.040
+ and robots that have to act in the world,
+
+13:59.040 --> 14:02.720
+ do you think we're gonna return to AI,
+
+14:02.720 --> 14:07.720
+ modern approach type breadth in addition five and six
+
+14:09.200 --> 14:11.400
+ in future decades?
+
+14:11.400 --> 14:13.280
+ Do you think deep learning will take its place
+
+14:13.280 --> 14:17.920
+ as a chapter in this bigger view of AI?
+
+14:17.920 --> 14:19.320
+ Yeah, I think we don't know yet
+
+14:19.320 --> 14:21.120
+ how it's all gonna play out.
+
+14:21.120 --> 14:26.120
+ So in the new edition, we have a chapter on deep learning.
+
+14:26.280 --> 14:29.520
+ We got Ian Goodfellow to be the guest author
+
+14:29.520 --> 14:32.520
+ for that chapter, so he said he could condense
+
+14:32.520 --> 14:36.000
+ his whole deep learning book into one chapter.
+
+14:36.000 --> 14:38.280
+ I think he did a great job.
+
+14:38.280 --> 14:41.440
+ We were also encouraged that we gave him
+
+14:41.440 --> 14:44.360
+ the old neural net chapter and said,
+
+14:45.600 --> 14:46.440
+ I had fun with it.
+
+14:46.440 --> 14:48.120
+ Modernize that, and he said, you know,
+
+14:48.120 --> 14:50.280
+ half of that was okay.
+
+14:50.280 --> 14:52.960
+ That certainly there's lots of new things
+
+14:52.960 --> 14:55.360
+ that have been developed, but some of the core
+
+14:55.360 --> 14:56.400
+ was still the same.
+
+14:58.000 --> 15:02.360
+ So I think we'll gain a better understanding
+
+15:02.360 --> 15:04.240
+ of what you can do there.
+
+15:04.240 --> 15:07.680
+ I think we'll need to incorporate all the things
+
+15:07.680 --> 15:10.040
+ we can do with the other technologies, right?
+
+15:10.040 --> 15:13.200
+ So deep learning started out,
+
+15:13.200 --> 15:17.880
+ convolutional networks, and very close to perception.
+
+15:18.880 --> 15:23.280
+ And it's since moved to be able to do more
+
+15:23.280 --> 15:27.360
+ with actions and some degree of longer term planning.
+
+15:28.680 --> 15:30.160
+ But we need to do a better job
+
+15:30.160 --> 15:32.640
+ with representation and reasoning
+
+15:32.640 --> 15:36.320
+ and one shot learning and so on.
+
+15:36.320 --> 15:39.720
+ And I think we don't know yet
+
+15:39.720 --> 15:41.120
+ how that's gonna play out.
+
+15:41.120 --> 15:45.880
+ So do you think looking at some success,
+
+15:45.880 --> 15:49.840
+ but certainly eventual demise,
+
+15:49.840 --> 15:51.520
+ a partial demise of experts
+
+15:51.520 --> 15:54.160
+ to symbolic systems in the 80s,
+
+15:54.160 --> 15:56.560
+ do you think there is kernels of wisdom
+
+15:56.560 --> 15:59.040
+ in the work that was done there
+
+15:59.040 --> 16:01.080
+ with logic and reasoning and so on
+
+16:01.080 --> 16:05.680
+ that will rise again in your view?
+
+16:05.680 --> 16:08.640
+ So certainly I think the idea of representation
+
+16:08.640 --> 16:10.360
+ and reasoning is crucial,
+
+16:10.360 --> 16:14.000
+ that sometimes you just don't have enough data
+
+16:14.000 --> 16:17.360
+ about the world to learn de novo.
+
+16:17.360 --> 16:22.000
+ So you've got to have some idea of representation,
+
+16:22.000 --> 16:24.960
+ whether that was programmed in or told or whatever,
+
+16:24.960 --> 16:28.600
+ and then be able to take steps of reasoning.
+
+16:28.600 --> 16:33.600
+ I think the problem with the good old fashioned AI
+
+16:33.600 --> 16:38.600
+ was one, we tried to base everything on these symbols
+
+16:38.680 --> 16:42.080
+ that were atomic and that's great
+
+16:42.080 --> 16:46.160
+ if you're like trying to define the properties of a triangle.
+
+16:46.160 --> 16:49.520
+ Because they have necessary and sufficient conditions.
+
+16:49.520 --> 16:50.960
+ But things in the real world don't.
+
+16:50.960 --> 16:54.160
+ The real world is messy and doesn't have sharp edges
+
+16:54.160 --> 16:56.320
+ and atomic symbols do.
+
+16:56.320 --> 16:58.160
+ So that was a poor match.
+
+16:58.160 --> 17:03.160
+ And then the other aspect was that the reasoning
+
+17:05.760 --> 17:09.800
+ was universal and applied anywhere,
+
+17:09.800 --> 17:11.160
+ which in some sense is good,
+
+17:11.160 --> 17:13.320
+ but it also means there's no guidance
+
+17:13.320 --> 17:15.200
+ as to where to apply.
+
+17:15.200 --> 17:17.800
+ And so you started getting these paradoxes,
+
+17:17.800 --> 17:20.680
+ like well, if I have a mountain
+
+17:20.680 --> 17:23.040
+ and I remove one grain of sand,
+
+17:23.040 --> 17:25.160
+ then it's still a mountain.
+
+17:25.160 --> 17:28.160
+ But if I do that repeatedly at some point, it's not.
+
+17:28.160 --> 17:29.000
+ Right?
+
+17:29.000 --> 17:32.240
+ And with logic, there's nothing to stop you
+
+17:32.240 --> 17:35.840
+ from applying things repeatedly.
+
+17:37.320 --> 17:42.000
+ But maybe with something like deep learning,
+
+17:42.000 --> 17:44.640
+ and I don't really know what the right name for it is,
+
+17:44.640 --> 17:46.200
+ we could separate out those ideas.
+
+17:46.200 --> 17:51.200
+ So one, we could say a mountain isn't just an atomic notion.
+
+17:51.200 --> 17:56.040
+ It's some sort of something like a word embedding
+
+17:56.040 --> 18:01.040
+ that has a more complex representation.
+
+18:02.280 --> 18:05.080
+ And secondly, we could somehow learn,
+
+18:05.080 --> 18:08.080
+ yeah, there's this rule that you can remove one grain of sand.
+
+18:08.080 --> 18:09.280
+ You can do that a bunch of times,
+
+18:09.280 --> 18:12.880
+ but you can't do it a near infinite amount of times.
+
+18:12.880 --> 18:13.760
+ But on the other hand,
+
+18:13.760 --> 18:16.200
+ when you're doing induction on the integer, sure,
+
+18:16.200 --> 18:18.800
+ then it's fine to do it an infinite number of times.
+
+18:18.800 --> 18:22.160
+ And if we could, somehow we have to learn
+
+18:22.160 --> 18:24.680
+ when these strategies are applicable,
+
+18:24.680 --> 18:28.280
+ rather than having the strategies be completely neutral
+
+18:28.280 --> 18:31.240
+ and available everywhere.
+
+18:31.240 --> 18:32.440
+ Anytime you use neural networks,
+
+18:32.440 --> 18:34.400
+ anytime you learn from data,
+
+18:34.400 --> 18:37.000
+ form representation from data in an automated way,
+
+18:37.000 --> 18:41.080
+ it's not very explainable as to,
+
+18:41.080 --> 18:44.200
+ or it's not introspective to us humans
+
+18:45.120 --> 18:48.240
+ in terms of how this neural network sees the world,
+
+18:48.240 --> 18:53.240
+ where why does it succeed so brilliantly in so many cases
+
+18:53.280 --> 18:56.480
+ and fail so miserably in surprising ways and small.
+
+18:56.480 --> 19:01.000
+ So what do you think is the future there?
+
+19:01.000 --> 19:03.480
+ Can simply more data, better data,
+
+19:03.480 --> 19:06.120
+ more organized data solve that problem?
+
+19:06.120 --> 19:09.280
+ Or is there elements of symbolic systems
+
+19:09.280 --> 19:10.360
+ that need to be brought in,
+
+19:10.360 --> 19:12.120
+ which are a little bit more explainable?
+
+19:12.120 --> 19:16.800
+ Yeah, so I prefer to talk about trust
+
+19:16.800 --> 19:20.320
+ and validation and verification
+
+19:20.320 --> 19:22.480
+ rather than just about explainability.
+
+19:22.480 --> 19:25.240
+ And then I think explanations are one tool
+
+19:25.240 --> 19:27.680
+ that you use towards those goals.
+
+19:28.880 --> 19:30.600
+ And I think it is important issue
+
+19:30.600 --> 19:32.760
+ that we don't wanna use these systems
+
+19:32.760 --> 19:33.920
+ unless we trust them
+
+19:33.920 --> 19:35.480
+ and we wanna understand where they work
+
+19:35.480 --> 19:37.040
+ and where they don't work.
+
+19:37.040 --> 19:40.760
+ And an explanation can be part of that, right?
+
+19:40.760 --> 19:44.400
+ So I apply for a loan and I get denied,
+
+19:44.400 --> 19:46.120
+ I want some explanation of why.
+
+19:46.120 --> 19:49.200
+ And you have in Europe,
+
+19:49.200 --> 19:51.640
+ we have the GDPR that says you're required
+
+19:51.640 --> 19:52.640
+ to be able to get that.
+
+19:53.880 --> 19:54.840
+ But on the other hand,
+
+19:54.840 --> 19:57.200
+ an explanation alone is not enough, right?
+
+19:57.200 --> 20:01.240
+ So we are used to dealing with people
+
+20:01.240 --> 20:04.800
+ and with organizations and corporations and so on
+
+20:04.800 --> 20:06.200
+ and they can give you an explanation
+
+20:06.200 --> 20:07.320
+ and you have no guarantee
+
+20:07.320 --> 20:11.160
+ that that explanation relates to reality, right?
+
+20:11.160 --> 20:12.560
+ So the bank can tell me,
+
+20:12.560 --> 20:13.960
+ well, you didn't get the loan
+
+20:13.960 --> 20:16.080
+ because you didn't have enough collateral
+
+20:16.080 --> 20:18.200
+ and that may be true or it may be true
+
+20:18.200 --> 20:22.480
+ that they just didn't like my religion or something else.
+
+20:22.480 --> 20:24.600
+ I can't tell from the explanation.
+
+20:24.600 --> 20:27.640
+ And that's true whether the decision was made
+
+20:27.640 --> 20:29.480
+ by a computer or by a person.
+
+20:30.880 --> 20:32.080
+ So I want more,
+
+20:33.360 --> 20:35.040
+ I do wanna have the explanations
+
+20:35.040 --> 20:37.280
+ and I wanna be able to have a conversation
+
+20:37.280 --> 20:39.320
+ to go back and forth and said,
+
+20:39.320 --> 20:41.920
+ well, you gave this explanation, but what about this?
+
+20:41.920 --> 20:44.200
+ And what would have happened if this had happened?
+
+20:44.200 --> 20:48.000
+ And what would I need to change that?
+
+20:48.000 --> 20:50.880
+ So I think a conversation is a better way to think about it
+
+20:50.880 --> 20:54.400
+ than just an explanation as a single output.
+
+20:55.320 --> 20:58.040
+ And I think we need testing of various kinds, right?
+
+20:58.040 --> 20:59.360
+ So in order to know,
+
+21:00.720 --> 21:03.440
+ was the decision really based on my collateral
+
+21:03.440 --> 21:08.440
+ or was it based on my religion or skin color or whatever?
+
+21:08.440 --> 21:10.920
+ I can't tell if I'm only looking at my case,
+
+21:10.920 --> 21:12.920
+ but if I look across all the cases,
+
+21:12.920 --> 21:15.640
+ then I can detect a pattern, right?
+
+21:15.640 --> 21:18.360
+ So you wanna have that kind of capability.
+
+21:18.360 --> 21:21.200
+ You wanna have these adversarial testing, right?
+
+21:21.200 --> 21:23.080
+ So we thought we were doing pretty good
+
+21:23.080 --> 21:25.840
+ at object recognition and images.
+
+21:25.840 --> 21:28.520
+ We said, look, we're at sort of pretty close
+
+21:28.520 --> 21:31.320
+ to human level performance on ImageNet and so on.
+
+21:32.320 --> 21:34.840
+ And then you start seeing these adversarial images
+
+21:34.840 --> 21:36.240
+ and you say, wait a minute,
+
+21:36.240 --> 21:39.320
+ that part is nothing like human performance.
+
+21:39.320 --> 21:40.920
+ Hey, you can mess with it really easily.
+
+21:40.920 --> 21:42.680
+ You can mess with it really easily, right?
+
+21:42.680 --> 21:46.040
+ And yeah, you can do that to humans too, right?
+
+21:46.040 --> 21:47.160
+ In a different way, perhaps.
+
+21:47.160 --> 21:49.480
+ Right, humans don't know what color the dress was.
+
+21:49.480 --> 21:50.520
+ Right.
+
+21:50.520 --> 21:52.480
+ And so they're vulnerable to certain attacks
+
+21:52.480 --> 21:55.680
+ that are different than the attacks on the machines,
+
+21:55.680 --> 21:59.400
+ but the attacks on the machines are so striking.
+
+21:59.400 --> 22:02.040
+ They really change the way you think about what we've done.
+
+22:03.040 --> 22:05.640
+ And the way I think about it is,
+
+22:05.640 --> 22:08.280
+ I think part of the problem is we're seduced
+
+22:08.280 --> 22:13.280
+ by our low dimensional metaphors, right?
+
+22:13.600 --> 22:15.720
+ Yeah, I like that phrase.
+
+22:15.720 --> 22:18.560
+ You look in a textbook and you say,
+
+22:18.560 --> 22:20.360
+ okay, now we've mapped out the space
+
+22:20.360 --> 22:24.960
+ and cat is here and dog is here
+
+22:24.960 --> 22:27.560
+ and maybe there's a tiny little spot in the middle
+
+22:27.560 --> 22:28.600
+ where you can't tell the difference,
+
+22:28.600 --> 22:30.720
+ but mostly we've got it all covered.
+
+22:30.720 --> 22:33.320
+ And if you believe that metaphor,
+
+22:33.320 --> 22:35.040
+ then you say, well, we're nearly there.
+
+22:35.040 --> 22:39.200
+ And there's only gonna be a couple adversarial images,
+
+22:39.200 --> 22:40.600
+ but I think that's the wrong metaphor
+
+22:40.600 --> 22:42.280
+ and what you should really say is,
+
+22:42.280 --> 22:45.960
+ it's not a 2D flat space that we've got mostly covered.
+
+22:45.960 --> 22:47.640
+ It's a million dimension space
+
+22:47.640 --> 22:52.640
+ and cat is this string that goes out in this crazy bath
+
+22:52.800 --> 22:55.800
+ and if you step a little bit off the path in any direction,
+
+22:55.800 --> 22:57.800
+ you're in nowhere's land
+
+22:57.800 --> 22:59.400
+ and you don't know what's gonna happen.
+
+22:59.400 --> 23:01.160
+ And so I think that's where we are
+
+23:01.160 --> 23:03.400
+ and now we've got to deal with that.
+
+23:03.400 --> 23:06.160
+ So it wasn't so much an explanation,
+
+23:06.160 --> 23:09.960
+ but it was an understanding of what the models are
+
+23:09.960 --> 23:10.800
+ and what they're doing
+
+23:10.800 --> 23:12.800
+ and now we can start exploring how do you fix that?
+
+23:12.800 --> 23:15.280
+ Yeah, validating the robustness of the system so on,
+
+23:15.280 --> 23:20.000
+ but take it back to this word trust.
+
+23:20.000 --> 23:22.960
+ Do you think we're a little too hard on our robots
+
+23:22.960 --> 23:25.680
+ in terms of the standards we apply?
+
+23:25.680 --> 23:30.680
+ So, you know, there's a dance.
+
+23:30.680 --> 23:34.080
+ There's a dance and nonverbal
+
+23:34.080 --> 23:36.480
+ and verbal communication between humans.
+
+23:36.480 --> 23:38.880
+ You know, if we apply the same kind of standard
+
+23:38.880 --> 23:40.720
+ in terms of humans, you know,
+
+23:40.720 --> 23:43.320
+ we trust each other pretty quickly.
+
+23:43.320 --> 23:45.600
+ You and I have met before
+
+23:45.600 --> 23:48.320
+ and there's some degree of trust, right?
+
+23:48.320 --> 23:50.560
+ That nothing's gonna go crazy wrong
+
+23:50.560 --> 23:53.560
+ and yet to AI, when we look at AI systems
+
+23:53.560 --> 23:58.560
+ where we seem to approach the skepticism always, always
+
+23:58.560 --> 24:02.960
+ and it's like they have to prove through a lot of hard work
+
+24:02.960 --> 24:06.640
+ that they're even worthy of even inkling of our trust.
+
+24:06.640 --> 24:07.960
+ What do you think about that?
+
+24:07.960 --> 24:11.120
+ How do we break that barrier, close that gap?
+
+24:11.120 --> 24:11.960
+ I think that's right.
+
+24:11.960 --> 24:13.720
+ I think that's a big issue.
+
+24:13.720 --> 24:18.720
+ Just listening, my friend Mark Moffat is a naturalist
+
+24:18.760 --> 24:22.160
+ and he says, the most amazing thing about humans
+
+24:22.160 --> 24:25.080
+ is that you can walk into a coffee shop
+
+24:25.080 --> 24:28.440
+ or a busy street in a city
+
+24:28.440 --> 24:30.440
+ and there's lots of people around you
+
+24:30.440 --> 24:32.000
+ that you've never met before
+
+24:32.000 --> 24:33.440
+ and you don't kill each other.
+
+24:33.440 --> 24:34.560
+ Yeah.
+
+24:34.560 --> 24:36.520
+ He says chimpanzees cannot do that.
+
+24:36.520 --> 24:37.360
+ Yeah, right.
+
+24:37.360 --> 24:38.640
+ Right?
+
+24:38.640 --> 24:42.080
+ If a chimpanzee's in a situation where here's some
+
+24:42.080 --> 24:46.640
+ that aren't from my tribe, bad things happen.
+
+24:46.640 --> 24:48.640
+ Especially in a coffee shop, there's delicious food around,
+
+24:48.640 --> 24:49.480
+ you know.
+
+24:49.480 --> 24:53.080
+ Yeah, yeah, but we humans have figured that out, right?
+
+24:53.080 --> 24:56.600
+ And, you know, for the most part, we still go to war,
+
+24:56.600 --> 24:58.160
+ we still do terrible things,
+
+24:58.160 --> 24:59.240
+ but for the most part,
+
+24:59.240 --> 25:02.760
+ we've learned to trust each other and live together.
+
+25:02.760 --> 25:07.440
+ So that's gonna be important for our AI systems as well.
+
+25:08.400 --> 25:13.400
+ And also, I think, you know, a lot of the emphasis is on AI,
+
+25:13.640 --> 25:18.000
+ but in many cases, AI is part of the technology
+
+25:18.000 --> 25:19.280
+ but isn't really the main thing.
+
+25:19.280 --> 25:22.800
+ So a lot of what we've seen is more due
+
+25:22.800 --> 25:27.360
+ to communications technology than AI technology.
+
+25:27.360 --> 25:30.120
+ Yeah, you wanna make these good decisions,
+
+25:30.120 --> 25:33.920
+ but the reason we're able to have any kind of system at all
+
+25:33.920 --> 25:35.840
+ is we've got the communication
+
+25:35.840 --> 25:37.560
+ so that we're collecting the data
+
+25:37.560 --> 25:41.520
+ and so that we can reach lots of people around the world.
+
+25:41.520 --> 25:45.080
+ I think that's a bigger change that we're dealing with.
+
+25:45.080 --> 25:47.800
+ Speaking of reaching a lot of people around the world,
+
+25:47.800 --> 25:49.640
+ on the side of education,
+
+25:49.640 --> 25:53.320
+ you've, one of the many things in terms of education
+
+25:53.320 --> 25:55.880
+ you've done, you've taught the Intro to Artificial
+
+25:55.880 --> 26:00.640
+ Intelligence course that signed up 160,000 students.
+
+26:00.640 --> 26:02.360
+ It was one of the first successful examples
+
+26:02.360 --> 26:06.800
+ of a MOOC, massive open online course.
+
+26:06.800 --> 26:09.160
+ What did you learn from that experience?
+
+26:09.160 --> 26:12.880
+ What do you think is the future of MOOCs, of education online?
+
+26:12.880 --> 26:15.320
+ Yeah, it was a great fun doing it,
+
+26:15.320 --> 26:18.520
+ particularly being right at the start,
+
+26:19.960 --> 26:21.680
+ just because it was exciting and new,
+
+26:21.680 --> 26:24.920
+ but it also meant that we had less competition, right?
+
+26:24.920 --> 26:27.840
+ So one of the things you hear about,
+
+26:27.840 --> 26:31.200
+ well, the problem with MOOCs is the completion rates
+
+26:31.200 --> 26:33.840
+ are so low, so there must be a failure.
+
+26:33.840 --> 26:37.600
+ And I gotta admit, I'm a prime contributor, right?
+
+26:37.600 --> 26:40.800
+ I've probably started 50 different courses
+
+26:40.800 --> 26:42.400
+ that I haven't finished,
+
+26:42.400 --> 26:44.240
+ but I got exactly what I wanted out of them
+
+26:44.240 --> 26:46.080
+ because I had never intended to finish them.
+
+26:46.080 --> 26:48.680
+ I just wanted to dabble in a little bit,
+
+26:48.680 --> 26:50.320
+ either to see the topic matter
+
+26:50.320 --> 26:53.280
+ or just to see the pedagogy of how are they doing this class.
+
+26:53.280 --> 26:58.080
+ So I guess the main thing I learned is when I came in,
+
+26:58.080 --> 27:03.080
+ I thought the challenge was information,
+
+27:03.160 --> 27:07.520
+ saying, if I'm just take the stuff I want you to know,
+
+27:07.520 --> 27:10.560
+ and I'm very clear and explain it well,
+
+27:10.560 --> 27:13.720
+ then my job is done and good things are gonna happen.
+
+27:14.600 --> 27:16.440
+ And then in doing the course,
+
+27:16.440 --> 27:19.240
+ I learned, well, yeah, you gotta have the information,
+
+27:19.240 --> 27:23.040
+ but really the motivation is the most important thing.
+
+27:23.040 --> 27:26.200
+ But that if students don't stick with it,
+
+27:26.200 --> 27:28.480
+ then it doesn't matter how good the content is.
+
+27:29.560 --> 27:32.840
+ And I think being one of the first classes,
+
+27:32.840 --> 27:36.800
+ we were helped by sort of exterior motivation.
+
+27:36.800 --> 27:39.400
+ So we tried to do a good job of making it enticing
+
+27:39.400 --> 27:44.400
+ and setting up ways for the community
+
+27:44.520 --> 27:47.040
+ to work with each other to make it more motivating.
+
+27:47.040 --> 27:49.560
+ But really a lot of it was, hey, this is a new thing
+
+27:49.560 --> 27:51.600
+ and I'm really excited to be part of a new thing.
+
+27:51.600 --> 27:54.520
+ And so the students brought their own motivation.
+
+27:54.520 --> 27:56.800
+ And so I think this is great
+
+27:56.800 --> 27:58.640
+ because there's lots of people around the world
+
+27:58.640 --> 28:00.520
+ who have never had this before,
+
+28:03.560 --> 28:07.000
+ would never have the opportunity to go to Stanford
+
+28:07.000 --> 28:08.520
+ and take a class or go to MIT
+
+28:08.520 --> 28:10.440
+ or go to one of the other schools.
+
+28:10.440 --> 28:12.800
+ But now we can bring that to them.
+
+28:12.800 --> 28:15.760
+ And if they bring their own motivation,
+
+28:15.760 --> 28:18.920
+ they can be successful in a way they couldn't before.
+
+28:18.920 --> 28:21.600
+ But that's really just the top tier of people
+
+28:21.600 --> 28:22.800
+ that are ready to do that.
+
+28:22.800 --> 28:27.000
+ The rest of the people just don't see
+
+28:27.000 --> 28:29.520
+ or don't have their motivation
+
+28:29.520 --> 28:31.600
+ and don't see how if they push through
+
+28:31.600 --> 28:32.720
+ and we're able to do it,
+
+28:32.720 --> 28:34.680
+ what advantage that would get them.
+
+28:34.680 --> 28:36.240
+ So I think we got a long way to go
+
+28:36.240 --> 28:37.920
+ before we were able to do that.
+
+28:37.920 --> 28:38.960
+ And I think it'll be,
+
+28:38.960 --> 28:40.960
+ some of it is based on technology,
+
+28:40.960 --> 28:44.000
+ but more of it's based on the idea of community.
+
+28:44.000 --> 28:46.160
+ You gotta actually get people together.
+
+28:46.160 --> 28:49.360
+ Some of the getting together can be done online.
+
+28:49.360 --> 28:51.800
+ I think some of it really has to be done in person
+
+28:51.800 --> 28:56.440
+ in order to build that type of community and trust.
+
+28:56.440 --> 28:59.520
+ You know, there's an intentional mechanism
+
+28:59.520 --> 29:02.680
+ that we've developed a short attention span,
+
+29:02.680 --> 29:04.480
+ especially younger people,
+
+29:04.480 --> 29:08.840
+ because sort of short on short of videos online,
+
+29:08.840 --> 29:13.680
+ there's a whatever the way the brain is developing now
+
+29:13.680 --> 29:16.720
+ and with people that have grown up with the internet,
+
+29:16.720 --> 29:18.480
+ they have quite a short attention span.
+
+29:18.480 --> 29:21.120
+ So, and I would say I had the same
+
+29:21.120 --> 29:22.320
+ when I was growing up too,
+
+29:22.320 --> 29:23.960
+ probably for different reasons.
+
+29:23.960 --> 29:28.160
+ So I probably wouldn't have learned as much as I have
+
+29:28.160 --> 29:31.400
+ if I wasn't forced to sit in a physical classroom,
+
+29:31.400 --> 29:34.040
+ sort of bored, sometimes falling asleep,
+
+29:34.040 --> 29:36.680
+ but sort of forcing myself through that process
+
+29:36.680 --> 29:39.760
+ to sometimes extremely difficult computer science courses.
+
+29:39.760 --> 29:43.920
+ What's the difference in your view between in person
+
+29:44.960 --> 29:48.200
+ education experience, which you first of all,
+
+29:48.200 --> 29:50.000
+ you yourself had and you yourself taught
+
+29:50.000 --> 29:52.120
+ and online education?
+
+29:52.120 --> 29:54.320
+ And how do we close that gap if it's even possible?
+
+29:54.320 --> 29:56.360
+ Yeah, so I think there's two issues.
+
+29:56.360 --> 30:00.760
+ One is whether it's in person or online.
+
+30:00.760 --> 30:03.000
+ So it's sort of the physical location.
+
+30:03.000 --> 30:07.120
+ And then the other is kind of the affiliation, right?
+
+30:07.120 --> 30:10.920
+ So you stuck with it in part
+
+30:10.920 --> 30:12.560
+ because you were in the classroom
+
+30:12.560 --> 30:14.640
+ and you saw everybody else was suffering
+
+30:14.640 --> 30:16.560
+ the same way you were,
+
+30:17.440 --> 30:20.160
+ but also because you were enrolled,
+
+30:20.160 --> 30:22.200
+ you had paid tuition,
+
+30:22.200 --> 30:25.400
+ sort of everybody was expecting you to stick with it.
+
+30:25.400 --> 30:29.440
+ Society, parents, peers, yeah.
+
+30:29.440 --> 30:31.160
+ And so those are two separate things.
+
+30:31.160 --> 30:33.000
+ I mean, you could certainly imagine,
+
+30:33.000 --> 30:35.240
+ I pay a huge amount of tuition
+
+30:35.240 --> 30:39.160
+ and everybody signed up and says, yes, you're doing this,
+
+30:39.160 --> 30:40.720
+ but then I'm in my room
+
+30:40.720 --> 30:42.920
+ and my classmates are in different rooms, right?
+
+30:42.920 --> 30:44.920
+ We could have things set up that way.
+
+30:45.960 --> 30:48.840
+ So it's not just the online versus offline.
+
+30:48.840 --> 30:51.920
+ I think what's more important is the commitment
+
+30:51.920 --> 30:52.840
+ that you've made.
+
+30:53.920 --> 30:56.080
+ And certainly it is important
+
+30:56.080 --> 30:58.920
+ to have that kind of informal,
+
+30:59.960 --> 31:01.760
+ I meet people outside of class,
+
+31:01.760 --> 31:05.040
+ we talk together because we're all in it together.
+
+31:05.040 --> 31:07.560
+ I think that's a really important,
+
+31:07.560 --> 31:10.120
+ both in keeping your motivation
+
+31:10.120 --> 31:11.440
+ and also that's where some
+
+31:11.440 --> 31:13.440
+ of the most important learning goes on.
+
+31:13.440 --> 31:15.360
+ So you wanna have that.
+
+31:15.360 --> 31:17.480
+ Maybe, especially now,
+
+31:17.480 --> 31:19.760
+ we start getting into higher bandwidths
+
+31:19.760 --> 31:22.560
+ and augmented reality and virtual reality.
+
+31:22.560 --> 31:23.600
+ You might be able to get that
+
+31:23.600 --> 31:25.920
+ without being in the same physical place.
+
+31:25.920 --> 31:30.000
+ Do you think it's possible we'll see a course at Stanford?
+
+31:30.720 --> 31:33.920
+ For example, that for students,
+
+31:33.920 --> 31:37.360
+ enrolled students is only online in the near future
+
+31:37.360 --> 31:39.760
+ who are literally, it's part of the curriculum
+
+31:39.760 --> 31:41.200
+ and there is no...
+
+31:41.200 --> 31:42.640
+ Yeah, so you're starting to see that.
+
+31:42.640 --> 31:46.640
+ I know Georgia Tech has a master's that's done that way.
+
+31:46.640 --> 31:48.400
+ Oftentimes, it's sort of,
+
+31:48.400 --> 31:51.000
+ they're creeping in in terms of master's program
+
+31:51.000 --> 31:54.320
+ or sort of further education,
+
+31:54.320 --> 31:56.640
+ considering the constraints of students and so on.
+
+31:56.640 --> 31:58.640
+ But I mean, literally, is it possible
+
+31:58.640 --> 32:02.760
+ that we just, you know, Stanford, MIT, Berkeley,
+
+32:02.760 --> 32:07.760
+ all these places go online only in the next few decades?
+
+32:07.800 --> 32:08.760
+ Yeah, probably not,
+
+32:08.760 --> 32:13.280
+ because they've got a big commitment to a physical campus.
+
+32:13.280 --> 32:16.520
+ Sure, so there's a momentum
+
+32:16.520 --> 32:18.360
+ that's both financial and culturally.
+
+32:18.360 --> 32:21.160
+ Right, and then there are certain things
+
+32:21.160 --> 32:25.080
+ that's just hard to do virtually, right?
+
+32:25.080 --> 32:29.320
+ So, you know, we're in a field where
+
+32:29.320 --> 32:32.680
+ if you have your own computer and your own paper,
+
+32:32.680 --> 32:35.640
+ and so on, you can do the work anywhere,
+
+32:36.800 --> 32:39.440
+ but if you're in a biology lab or something,
+
+32:39.440 --> 32:42.880
+ you know, you don't have all the right stuff at home.
+
+32:42.880 --> 32:45.720
+ Right, so our field, programming,
+
+32:45.720 --> 32:47.440
+ you've also done a lot of,
+
+32:47.440 --> 32:49.640
+ you've done a lot of programming yourself.
+
+32:50.920 --> 32:54.320
+ In 2001, you wrote a great article about programming
+
+32:54.320 --> 32:57.320
+ called Teach Yourself Programming in 10 Years,
+
+32:57.320 --> 32:59.360
+ sort of response to all the books
+
+32:59.360 --> 33:01.600
+ that say Teach Yourself Programming in 21 Days.
+
+33:01.600 --> 33:03.000
+ So if you were giving advice to someone
+
+33:03.000 --> 33:04.840
+ getting into programming today,
+
+33:04.840 --> 33:07.280
+ this is a few years since you've written that article,
+
+33:07.280 --> 33:09.680
+ what's the best way to undertake that journey?
+
+33:10.880 --> 33:12.360
+ I think there's lots of different ways,
+
+33:12.360 --> 33:15.980
+ and I think programming means more things now.
+
+33:17.480 --> 33:20.160
+ And I guess, you know, when I wrote that article,
+
+33:20.160 --> 33:23.840
+ I was thinking more about becoming
+
+33:23.840 --> 33:25.720
+ a professional software engineer.
+
+33:25.720 --> 33:27.680
+ And I thought that's a, you know,
+
+33:27.680 --> 33:30.460
+ sort of a career long field of study.
+
+33:30.460 --> 33:33.340
+ But I think there's lots of things now
+
+33:33.340 --> 33:37.620
+ that people can do where programming is a part
+
+33:37.620 --> 33:40.980
+ of solving what they want to solve
+
+33:40.980 --> 33:44.860
+ without achieving that professional level status, right?
+
+33:44.860 --> 33:45.820
+ So I'm not going to be going
+
+33:45.820 --> 33:47.660
+ and writing a million lines of code,
+
+33:47.660 --> 33:50.620
+ but, you know, I'm a biologist or a physicist
+
+33:50.620 --> 33:54.300
+ or something or even a historian,
+
+33:54.300 --> 33:57.100
+ and I've got some data and I want to ask a question
+
+33:57.100 --> 33:58.460
+ of that data.
+
+33:58.460 --> 34:02.140
+ And I think for that, you don't need 10 years, right?
+
+34:02.140 --> 34:05.500
+ So there are many shortcuts to being able
+
+34:05.500 --> 34:08.500
+ to answer those kinds of questions.
+
+34:08.500 --> 34:11.860
+ And, you know, you see today a lot of emphasis
+
+34:11.860 --> 34:15.900
+ on learning to code, teaching kids how to code.
+
+34:16.740 --> 34:18.780
+ I think that's great,
+
+34:18.780 --> 34:22.100
+ but I wish they would change the message a little bit, right?
+
+34:22.100 --> 34:24.740
+ So I think code isn't the main thing.
+
+34:24.740 --> 34:27.140
+ I don't really care if you know the syntax
+
+34:27.140 --> 34:31.540
+ of JavaScript or if you can connect these blocks together
+
+34:31.540 --> 34:33.460
+ in this visual language.
+
+34:33.460 --> 34:38.260
+ But what I do care about is that you can analyze a problem,
+
+34:38.260 --> 34:43.260
+ you can think of a solution, you can carry out,
+
+34:43.740 --> 34:47.980
+ you know, make a model, run that model, test the model,
+
+34:47.980 --> 34:52.980
+ see the results, verify that they're reasonable,
+
+34:53.700 --> 34:55.700
+ ask questions and answer them, all right?
+
+34:55.700 --> 34:58.580
+ So it's more modeling and problem solving
+
+34:58.580 --> 35:01.900
+ and you use coding in order to do that,
+
+35:01.900 --> 35:04.340
+ but it's not just learning coding for its own sake.
+
+35:04.340 --> 35:05.220
+ That's really interesting.
+
+35:05.220 --> 35:08.180
+ So it's actually almost, in many cases,
+
+35:08.180 --> 35:10.100
+ it's learning to work with data
+
+35:10.100 --> 35:12.020
+ to extract something useful out of data.
+
+35:12.020 --> 35:13.700
+ So when you say problem solving,
+
+35:13.700 --> 35:15.340
+ you really mean taking some kind of,
+
+35:15.340 --> 35:18.780
+ maybe collecting some kind of data set, cleaning it up
+
+35:18.780 --> 35:20.340
+ and saying something interesting about it,
+
+35:20.340 --> 35:22.420
+ which is useful in all kinds of domains.
+
+35:22.420 --> 35:27.420
+ And you know, and I see myself being stuck sometimes
+
+35:28.100 --> 35:30.500
+ in kind of the old ways, right?
+
+35:30.500 --> 35:34.220
+ So, you know, I'll be working on a project,
+
+35:34.220 --> 35:37.700
+ maybe with a younger employee and we say,
+
+35:37.700 --> 35:39.300
+ oh, well here's this new package
+
+35:39.300 --> 35:42.340
+ that could help solve this problem.
+
+35:42.340 --> 35:44.500
+ And I'll go and I'll start reading the manuals
+
+35:44.500 --> 35:48.220
+ and you know, I'll be two hours into reading the manuals
+
+35:48.220 --> 35:51.140
+ and then my colleague comes back and says, I'm done.
+
+35:51.140 --> 35:53.820
+ You know, I downloaded the package, I installed it,
+
+35:53.820 --> 35:56.500
+ I tried calling some things, the first one didn't work,
+
+35:56.500 --> 35:58.380
+ the second one didn't work, now I'm done.
+
+35:58.380 --> 36:00.820
+ And I say, but I have under questions about
+
+36:00.820 --> 36:02.100
+ how does this work and how does that work?
+
+36:02.100 --> 36:04.140
+ And they say, who cares, right?
+
+36:04.140 --> 36:05.500
+ I don't need to understand the whole thing.
+
+36:05.500 --> 36:09.180
+ I answered my question, it's a big complicated package.
+
+36:09.180 --> 36:10.540
+ I don't understand the rest of it,
+
+36:10.540 --> 36:12.180
+ but I got the right answer.
+
+36:12.180 --> 36:15.900
+ And I'm just, it's hard for me to get into that mindset.
+
+36:15.900 --> 36:17.620
+ I want to understand the whole thing.
+
+36:17.620 --> 36:19.420
+ And you know, if they wrote a manual,
+
+36:19.420 --> 36:21.380
+ I should probably read it.
+
+36:21.380 --> 36:23.380
+ And, but that's not necessarily the right way.
+
+36:23.380 --> 36:28.380
+ And I think I have to get used to dealing with more,
+
+36:28.580 --> 36:30.500
+ being more comfortable with uncertainty
+
+36:30.500 --> 36:32.060
+ and not knowing everything.
+
+36:32.060 --> 36:34.660
+ Yeah, so I struggle with the same instead of the,
+
+36:34.660 --> 36:37.740
+ the spectrum between Donald and Don Knuth,
+
+36:37.740 --> 36:39.420
+ looks kind of the very, you know,
+
+36:39.420 --> 36:42.460
+ before you can say anything about a problem,
+
+36:42.460 --> 36:45.940
+ he really has to get down to the machine code to assembly.
+
+36:45.940 --> 36:50.180
+ And versus exactly what you said of several students
+
+36:50.180 --> 36:53.420
+ in my group that, you know, like 20 years old,
+
+36:53.420 --> 36:56.780
+ and they can solve almost any problem within a few hours
+
+36:56.780 --> 36:58.220
+ that would take me probably weeks
+
+36:58.220 --> 37:00.940
+ because I would try to, as you said, read the manual.
+
+37:00.940 --> 37:04.340
+ So do you think the nature of mastery,
+
+37:04.340 --> 37:08.540
+ you're mentioning biology, sort of outside disciplines,
+
+37:08.540 --> 37:13.540
+ applying programming, but computer scientists.
+
+37:13.540 --> 37:16.460
+ So over time, there's higher and higher levels
+
+37:16.460 --> 37:18.380
+ of abstraction available now.
+
+37:18.380 --> 37:23.380
+ So with this week, there's the TensorFlow Summit, right?
+
+37:23.740 --> 37:27.540
+ So if you're not particularly into deep learning,
+
+37:27.540 --> 37:29.980
+ but you're still a computer scientist,
+
+37:29.980 --> 37:33.220
+ you can accomplish an incredible amount with TensorFlow
+
+37:33.220 --> 37:35.980
+ without really knowing any fundamental internals
+
+37:35.980 --> 37:37.500
+ of machine learning.
+
+37:37.500 --> 37:40.940
+ Do you think the nature of mastery is changing,
+
+37:40.940 --> 37:43.860
+ even for computer scientists, like what it means
+
+37:43.860 --> 37:45.700
+ to be an expert programmer?
+
+37:45.700 --> 37:47.740
+ Yeah, I think that's true.
+
+37:47.740 --> 37:49.660
+ You know, we never really should have focused
+
+37:49.660 --> 37:51.500
+ on programmer, right?
+
+37:51.500 --> 37:53.660
+ Because it's still, it's a skill,
+
+37:53.660 --> 37:56.580
+ and what we really want to focus on is the result.
+
+37:56.580 --> 38:01.300
+ So we built this ecosystem where the way you can get stuff done
+
+38:01.300 --> 38:04.140
+ is by programming it yourself.
+
+38:04.140 --> 38:06.820
+ At least when I started it with it, you know,
+
+38:06.820 --> 38:09.060
+ library functions meant you had square root,
+
+38:09.060 --> 38:10.900
+ and that was about it, right?
+
+38:10.900 --> 38:13.020
+ Everything else you built from scratch.
+
+38:13.020 --> 38:16.100
+ And then we built up an ecosystem where a lot of times,
+
+38:16.100 --> 38:17.420
+ well, you can download a lot of stuff
+
+38:17.420 --> 38:20.180
+ that does a big part of what you need.
+
+38:20.180 --> 38:23.700
+ And so now it's more a question of assembly
+
+38:23.700 --> 38:27.180
+ rather than manufacturing.
+
+38:28.260 --> 38:32.180
+ And that's a different way of looking at problems.
+
+38:32.180 --> 38:34.220
+ From another perspective, in terms of mastery
+
+38:34.220 --> 38:37.620
+ and looking at programmers or people that reason
+
+38:37.620 --> 38:39.740
+ about problems in a computational way,
+
+38:39.740 --> 38:44.100
+ so Google, you know, from the hiring perspective,
+
+38:44.100 --> 38:45.100
+ from the perspective of hiring
+
+38:45.100 --> 38:47.420
+ or building a team of programmers,
+
+38:47.420 --> 38:50.260
+ how do you determine if someone's a good programmer?
+
+38:50.260 --> 38:53.620
+ Or if somebody, again, so I want to deviate from,
+
+38:53.620 --> 38:55.340
+ I want to move away from the word programmer,
+
+38:55.340 --> 38:58.740
+ but somebody who can solve problems of large scale data
+
+38:58.740 --> 39:02.700
+ and so on, what's, how do you build a team like that
+
+39:02.700 --> 39:03.940
+ through the interviewing process?
+
+39:03.940 --> 39:08.820
+ Yeah, and I think as a company grows,
+
+39:08.820 --> 39:11.380
+ you get more expansive
+
+39:11.380 --> 39:14.380
+ in the types of people you're looking for, right?
+
+39:14.380 --> 39:16.540
+ So I think, you know, in the early days,
+
+39:16.540 --> 39:19.340
+ we'd interview people and the question we were trying
+
+39:19.340 --> 39:22.460
+ to ask is how close are they to Jeff Dean?
+
+39:24.980 --> 39:26.740
+ And most people were pretty far away,
+
+39:26.740 --> 39:29.340
+ but we take the ones that were, you know, not that far away.
+
+39:29.340 --> 39:31.740
+ And so we got kind of a homogeneous group
+
+39:31.740 --> 39:34.500
+ of people who are really great programmers.
+
+39:34.500 --> 39:36.940
+ Then as a company grows, you say,
+
+39:36.940 --> 39:39.060
+ well, we don't want everybody to be the same,
+
+39:39.060 --> 39:40.620
+ to have the same skill set.
+
+39:40.620 --> 39:45.620
+ And so now we're hiring biologists in our health areas
+
+39:47.340 --> 39:48.900
+ and we're hiring physicists
+
+39:48.900 --> 39:51.140
+ and we're hiring mechanical engineers
+
+39:51.140 --> 39:54.740
+ and we're hiring, you know, social scientists
+
+39:54.740 --> 39:59.100
+ and ethnographers and people with different backgrounds
+
+39:59.100 --> 40:00.860
+ who bring different skills.
+
+40:01.700 --> 40:06.020
+ So you have mentioned that you still make part
+
+40:06.020 --> 40:09.980
+ taking code reviews, given that you have a wealth
+
+40:09.980 --> 40:12.180
+ of experiences, you've also mentioned it.
+
+40:13.860 --> 40:16.620
+ What errors do you often see and tend to highlight
+
+40:16.620 --> 40:20.020
+ in the code of junior developers of people coming up now,
+
+40:20.020 --> 40:23.420
+ given your background from Blisp
+
+40:23.420 --> 40:25.980
+ to a couple of decades of programming?
+
+40:25.980 --> 40:27.420
+ Yeah, that's a great question.
+
+40:28.380 --> 40:31.900
+ You know, sometimes I try to look at flexibility
+
+40:31.900 --> 40:36.900
+ of the design of, yes, this API solves this problem
+
+40:37.540 --> 40:39.900
+ but where's it gonna go in the future?
+
+40:39.900 --> 40:41.940
+ Who else is gonna wanna call this?
+
+40:41.940 --> 40:46.940
+ And are you making it easier for them to do that?
+
+40:46.940 --> 40:50.620
+ That's a matter of design, is it documentation,
+
+40:50.620 --> 40:53.900
+ is it sort of an amorphous thing
+
+40:53.900 --> 40:56.660
+ you can't really put into words, it's just how it feels.
+
+40:56.660 --> 40:58.340
+ If you put yourself in the shoes of a developer,
+
+40:58.340 --> 40:59.540
+ would you use this kind of thing?
+
+40:59.540 --> 41:01.500
+ I think it is how you feel, right?
+
+41:01.500 --> 41:03.900
+ And so yeah, documentation is good
+
+41:03.900 --> 41:06.460
+ but it's more a design question, right?
+
+41:06.460 --> 41:07.620
+ If you get the design right,
+
+41:07.620 --> 41:10.220
+ then people will figure it out
+
+41:10.220 --> 41:12.100
+ whether the documentation is good or not
+
+41:12.100 --> 41:16.180
+ and if the design's wrong, then it'll be harder to use.
+
+41:16.180 --> 41:20.700
+ How have you yourself changed as a programmer
+
+41:20.700 --> 41:25.700
+ over the years in a way you already started to say,
+
+41:26.700 --> 41:28.100
+ you want to read the manual,
+
+41:28.100 --> 41:30.860
+ you want to understand the core of the syntax
+
+41:30.860 --> 41:33.780
+ to how the language is supposed to be used and so on,
+
+41:33.780 --> 41:36.540
+ but what's the evolution been like
+
+41:36.540 --> 41:39.820
+ from the 80s, 90s to today?
+
+41:40.700 --> 41:42.820
+ I guess one thing is you don't have to worry
+
+41:42.820 --> 41:46.380
+ about the small details of efficiency
+
+41:46.380 --> 41:48.060
+ as much as you used to, right?
+
+41:48.060 --> 41:53.060
+ So like I remember I did my list book in the 90s
+
+41:53.380 --> 41:56.300
+ and one of the things I wanted to do was say,
+
+41:56.300 --> 41:58.900
+ here's how you do an object system
+
+41:58.900 --> 42:02.460
+ and basically we're going to make it so each object
+
+42:02.460 --> 42:04.700
+ is a hash table and you look up the methods
+
+42:04.700 --> 42:06.340
+ and here's how it works and then I said,
+
+42:06.340 --> 42:10.940
+ of course, the real common list object system
+
+42:10.940 --> 42:12.140
+ is much more complicated,
+
+42:12.140 --> 42:15.180
+ it's got all these efficiency type issues
+
+42:15.180 --> 42:17.380
+ and this is just a toy and nobody would do this
+
+42:17.380 --> 42:20.580
+ in real life and it turns out Python pretty much
+
+42:20.580 --> 42:25.580
+ did exactly what I said and said objects are just dictionaries
+
+42:25.580 --> 42:28.380
+ and yeah, they have a few little tricks as well,
+
+42:28.380 --> 42:33.380
+ but mostly the thing that would have been 100 times
+
+42:33.380 --> 42:37.380
+ too slow in the 80s is now plenty fast for most everything.
+
+42:37.380 --> 42:41.380
+ So you had to, as a programmer, let go of perhaps
+
+42:41.380 --> 42:44.180
+ an obsession that I remember coming up with
+
+42:44.180 --> 42:46.580
+ of trying to write efficient code.
+
+42:46.580 --> 42:51.580
+ Yeah, to say what really matters is the total time
+
+42:51.580 --> 42:54.580
+ it takes to get the project done
+
+42:54.580 --> 42:57.580
+ and most of that's going to be the programmer time,
+
+42:57.580 --> 42:59.580
+ so if you're a little bit less efficient
+
+42:59.580 --> 43:02.580
+ but it makes it easier to understand and modify,
+
+43:02.580 --> 43:04.580
+ then that's the right trade off.
+
+43:04.580 --> 43:06.580
+ So you've written quite a bit about Lisp,
+
+43:06.580 --> 43:08.580
+ your book on programing is in Lisp,
+
+43:08.580 --> 43:11.580
+ you have a lot of code out there that's in Lisp,
+
+43:11.580 --> 43:15.580
+ so myself and people who don't know what Lisp is
+
+43:15.580 --> 43:17.580
+ should look it up, it's my favorite language
+
+43:17.580 --> 43:19.580
+ for many AI researchers,
+
+43:19.580 --> 43:21.580
+ it is a favorite language,
+
+43:21.580 --> 43:24.580
+ the favorite language they never use these days,
+
+43:24.580 --> 43:26.580
+ so what part of the list do you find most beautiful
+
+43:26.580 --> 43:27.580
+ and powerful?
+
+43:27.580 --> 43:30.580
+ So I think the beautiful part is the simplicity
+
+43:30.580 --> 43:34.580
+ that in half a page you can define the whole language
+
+43:34.580 --> 43:37.580
+ and other languages don't have that,
+
+43:37.580 --> 43:40.580
+ so you feel like you can hold everything in your head
+
+43:41.580 --> 43:47.580
+ and then a lot of people say well then that's too simple,
+
+43:47.580 --> 43:49.580
+ here's all these things I want to do
+
+43:49.580 --> 43:53.580
+ and my Java or Python or whatever
+
+43:53.580 --> 43:57.580
+ has 100 or 200 or 300 different syntax rules
+
+43:57.580 --> 43:59.580
+ and don't I need all those,
+
+43:59.580 --> 44:01.580
+ and Lisp's answer was no,
+
+44:01.580 --> 44:04.580
+ we're only going to give you eight or so syntax rules,
+
+44:04.580 --> 44:07.580
+ but we're going to allow you to define your own
+
+44:07.580 --> 44:10.580
+ and so that was a very powerful idea
+
+44:10.580 --> 44:14.580
+ and I think this idea of saying
+
+44:14.580 --> 44:19.580
+ I can start with my problem and with my data
+
+44:19.580 --> 44:22.580
+ and then I can build the language I want
+
+44:22.580 --> 44:25.580
+ for that problem and for that data
+
+44:25.580 --> 44:28.580
+ and then I can make Lisp define that language,
+
+44:28.580 --> 44:31.580
+ so you're sort of mixing levels
+
+44:31.580 --> 44:34.580
+ and saying I'm simultaneously a programmer
+
+44:34.580 --> 44:37.580
+ in a language and a language designer
+
+44:37.580 --> 44:40.580
+ and that allows a better match
+
+44:40.580 --> 44:43.580
+ between your problem and your eventual code
+
+44:43.580 --> 44:47.580
+ and I think Lisp had done that better than other languages.
+
+44:47.580 --> 44:49.580
+ Yeah, it's a very elegant implementation
+
+44:49.580 --> 44:51.580
+ of functional programming,
+
+44:51.580 --> 44:54.580
+ but why do you think Lisp has not had
+
+44:54.580 --> 44:57.580
+ the mass adoption and success of languages like Python?
+
+44:57.580 --> 44:59.580
+ Is it the parentheses?
+
+44:59.580 --> 45:01.580
+ Is it all the parentheses?
+
+45:01.580 --> 45:04.580
+ Yeah, so I think a couple of things.
+
+45:05.580 --> 45:08.580
+ So one was, I think it was designed
+
+45:08.580 --> 45:12.580
+ for a single programmer or a small team
+
+45:12.580 --> 45:16.580
+ and a skilled programmer who had the good taste
+
+45:16.580 --> 45:19.580
+ to say, well, I am doing language design
+
+45:19.580 --> 45:21.580
+ and I have to make good choices
+
+45:21.580 --> 45:23.580
+ and if you make good choices, that's great.
+
+45:23.580 --> 45:27.580
+ If you make bad choices, you can hurt yourself
+
+45:27.580 --> 45:30.580
+ and it can be hard for other people on the team to understand it.
+
+45:30.580 --> 45:33.580
+ So I think there was a limit to the scale
+
+45:33.580 --> 45:36.580
+ of the size of a project in terms of number of people
+
+45:36.580 --> 45:38.580
+ that Lisp was good for
+
+45:38.580 --> 45:42.580
+ and as an industry, we kind of grew beyond that.
+
+45:42.580 --> 45:46.580
+ I think it is in part the parentheses.
+
+45:46.580 --> 45:49.580
+ One of the jokes is the acronym for Lisp
+
+45:49.580 --> 45:52.580
+ is lots of irritating silly parentheses.
+
+45:52.580 --> 45:57.580
+ My acronym was Lisp is syntactically pure
+
+45:57.580 --> 46:00.580
+ saying all you need is parentheses and atoms.
+
+46:00.580 --> 46:04.580
+ But I remember as we had the AI textbook
+
+46:04.580 --> 46:08.580
+ and because we did it in the 90s,
+
+46:08.580 --> 46:10.580
+ we had pseudocode in the book
+
+46:10.580 --> 46:12.580
+ but then we said, well, we'll have Lisp online
+
+46:12.580 --> 46:15.580
+ because that's the language of AI at the time.
+
+46:15.580 --> 46:17.580
+ And I remember some of the students complaining
+
+46:17.580 --> 46:19.580
+ because they hadn't had Lisp before
+
+46:19.580 --> 46:21.580
+ and they didn't quite understand what was going on
+
+46:21.580 --> 46:23.580
+ and I remember one student complained,
+
+46:23.580 --> 46:25.580
+ I don't understand how this pseudocode
+
+46:25.580 --> 46:28.580
+ corresponds to this Lisp
+
+46:28.580 --> 46:30.580
+ and there was a one to one correspondence
+
+46:30.580 --> 46:35.580
+ between the symbols in the code and the pseudocode
+
+46:35.580 --> 46:38.580
+ and the only thing difference was the parentheses.
+
+46:38.580 --> 46:40.580
+ So I said it must be that for some people
+
+46:40.580 --> 46:42.580
+ a certain number of left parentheses
+
+46:42.580 --> 46:44.580
+ shuts off their brain.
+
+46:44.580 --> 46:46.580
+ Yeah, it's very possible in that sense
+
+46:46.580 --> 46:48.580
+ and Python just goes the other way.
+
+46:48.580 --> 46:50.580
+ So that was the point at which I said,
+
+46:50.580 --> 46:53.580
+ okay, can't have only Lisp as a language
+
+46:53.580 --> 46:55.580
+ because I don't want to,
+
+46:55.580 --> 46:58.580
+ you only got 10 or 12 or 15 weeks
+
+46:58.580 --> 47:00.580
+ to whatever it is to teach AI
+
+47:00.580 --> 47:02.580
+ and I don't want to waste two weeks of that teaching Lisp.
+
+47:02.580 --> 47:04.580
+ So I said, I got to have another language.
+
+47:04.580 --> 47:06.580
+ Java was the most popular language at the time.
+
+47:06.580 --> 47:08.580
+ I started doing that and then I said,
+
+47:08.580 --> 47:12.580
+ it's really hard to have a one to one correspondence
+
+47:12.580 --> 47:14.580
+ between the pseudocode and the Java
+
+47:14.580 --> 47:16.580
+ because Java is so verbose.
+
+47:16.580 --> 47:18.580
+ So then I said, I'm going to do a survey
+
+47:18.580 --> 47:22.580
+ and find the language that's most like my pseudocode
+
+47:22.580 --> 47:25.580
+ and turned out Python basically was my pseudocode.
+
+47:25.580 --> 47:29.580
+ Somehow I had channeled Guido
+
+47:29.580 --> 47:32.580
+ and designed a pseudocode that was the same as Python,
+
+47:32.580 --> 47:35.580
+ although I hadn't heard of Python at that point.
+
+47:35.580 --> 47:38.580
+ And from then on, that's what I've been using
+
+47:38.580 --> 47:40.580
+ because it's been a good match.
+
+47:40.580 --> 47:45.580
+ So what's the story in Python behind Pytudes?
+
+47:45.580 --> 47:48.580
+ You're a GitHub repository with puzzles and exercises
+
+47:48.580 --> 47:50.580
+ and Python is pretty fun.
+
+47:50.580 --> 47:52.580
+ Yeah, it seems like fun.
+
+47:52.580 --> 47:57.580
+ You know, I like doing puzzles and I like being an educator.
+
+47:57.580 --> 48:01.580
+ I did a class with Udacity, Udacity 2.12.
+
+48:01.580 --> 48:05.580
+ I think it was, it was basically problem solving,
+
+48:05.580 --> 48:08.580
+ using Python and looking at different problems.
+
+48:08.580 --> 48:11.580
+ Does Pytudes feed that class in terms of the exercises?
+
+48:11.580 --> 48:12.580
+ I was wondering what the...
+
+48:12.580 --> 48:14.580
+ Yeah, so the class came first.
+
+48:14.580 --> 48:16.580
+ Some of the stuff that's in Pytudes
+
+48:16.580 --> 48:18.580
+ was write ups of what was in the class
+
+48:18.580 --> 48:23.580
+ and then some of it was just continuing to work on new problems.
+
+48:23.580 --> 48:26.580
+ So what's the organizing madness of Pytudes?
+
+48:26.580 --> 48:29.580
+ Is it just a collection of cool exercises?
+
+48:29.580 --> 48:31.580
+ Just whatever I thought was fun.
+
+48:31.580 --> 48:32.580
+ Okay, awesome.
+
+48:32.580 --> 48:35.580
+ So you were the director of search quality at Google
+
+48:35.580 --> 48:39.580
+ from 2001 to 2005 in the early days
+
+48:39.580 --> 48:41.580
+ when there were just a few employees
+
+48:41.580 --> 48:45.580
+ and when the company was growing like crazy.
+
+48:45.580 --> 48:51.580
+ So, I mean, Google revolutionized the way we discover,
+
+48:51.580 --> 48:54.580
+ share and aggregate knowledge.
+
+48:54.580 --> 49:00.580
+ So this is one of the fundamental aspects of civilization,
+
+49:00.580 --> 49:02.580
+ is information being shared
+
+49:02.580 --> 49:04.580
+ and there's different mechanisms throughout history
+
+49:04.580 --> 49:07.580
+ but Google has just 10x improved that.
+
+49:07.580 --> 49:11.580
+ And you're a part of that, people discovering that information.
+
+49:11.580 --> 49:13.580
+ So what were some of the challenges
+
+49:13.580 --> 49:17.580
+ on the philosophical or the technical level in those early days?
+
+49:17.580 --> 49:19.580
+ It definitely was an exciting time
+
+49:19.580 --> 49:23.580
+ and as you say, we were doubling in size every year
+
+49:23.580 --> 49:28.580
+ and the challenges were we wanted to get the right answers.
+
+49:28.580 --> 49:32.580
+ And we had to figure out what that meant.
+
+49:32.580 --> 49:36.580
+ We had to implement that and we had to make it all efficient
+
+49:36.580 --> 49:41.580
+ and we had to keep on testing
+
+49:41.580 --> 49:43.580
+ and seeing if we were delivering good answers.
+
+49:43.580 --> 49:45.580
+ And now when you say good answers,
+
+49:45.580 --> 49:48.580
+ it means whatever people are typing in in terms of keywords
+
+49:48.580 --> 49:50.580
+ in terms of that kind of thing,
+
+49:50.580 --> 49:54.580
+ that the results they get are ordered by the desirability
+
+49:54.580 --> 49:56.580
+ for them of those results.
+
+49:56.580 --> 49:59.580
+ The first thing they click on will likely be the thing
+
+49:59.580 --> 50:01.580
+ that they were actually looking for.
+
+50:01.580 --> 50:04.580
+ Right, one of the metrics we had was focused on the first thing.
+
+50:04.580 --> 50:07.580
+ Some of it was focused on the whole page,
+
+50:07.580 --> 50:11.580
+ some of it was focused on top three or so.
+
+50:11.580 --> 50:13.580
+ So we looked at a lot of different metrics
+
+50:13.580 --> 50:15.580
+ for how well we were doing
+
+50:15.580 --> 50:19.580
+ and we broke it down into subclasses of, you know,
+
+50:19.580 --> 50:23.580
+ maybe here's a type of query that we're not doing well on
+
+50:23.580 --> 50:25.580
+ and we try to fix that.
+
+50:25.580 --> 50:27.580
+ Early on, we started to realize
+
+50:27.580 --> 50:30.580
+ that we were in an adversarial position.
+
+50:30.580 --> 50:32.580
+ So we started thinking,
+
+50:32.580 --> 50:36.580
+ well, we're kind of like the card catalog in the library.
+
+50:36.580 --> 50:39.580
+ The books are here and we're off to the side
+
+50:39.580 --> 50:42.580
+ and we're just reflecting what's there.
+
+50:42.580 --> 50:45.580
+ And then we realized every time we make a change,
+
+50:45.580 --> 50:47.580
+ the webmasters make a change.
+
+50:47.580 --> 50:49.580
+ And it's game theoretic.
+
+50:49.580 --> 50:53.580
+ And so we had to think not only is this the right move
+
+50:53.580 --> 50:55.580
+ for us to make now,
+
+50:55.580 --> 50:57.580
+ but also if we make this move,
+
+50:57.580 --> 50:59.580
+ what's the counter move going to be?
+
+50:59.580 --> 51:01.580
+ Is that going to get us into a worse place,
+
+51:01.580 --> 51:03.580
+ in which case we won't make that move,
+
+51:03.580 --> 51:05.580
+ we'll make a different move.
+
+51:05.580 --> 51:07.580
+ And did you find, I mean, I assume,
+
+51:07.580 --> 51:09.580
+ with the popularity and the growth of the internet
+
+51:09.580 --> 51:11.580
+ that people were creating new content,
+
+51:11.580 --> 51:14.580
+ so you're almost helping guide the creation of content?
+
+51:14.580 --> 51:16.580
+ Yeah, so that's certainly true, right?
+
+51:16.580 --> 51:21.580
+ So we definitely changed the structure of the network, right?
+
+51:21.580 --> 51:25.580
+ So if you think back, you know, in the very early days,
+
+51:25.580 --> 51:28.580
+ Larry and Sergey had the PageRank paper
+
+51:28.580 --> 51:33.580
+ and John Kleinberg had this hubs and authorities model,
+
+51:33.580 --> 51:38.580
+ which says the web is made out of these hubs,
+
+51:38.580 --> 51:44.580
+ which will be my page of cool links about dogs or whatever,
+
+51:44.580 --> 51:46.580
+ and people would just list links.
+
+51:46.580 --> 51:49.580
+ And then there'd be authorities which were the ones,
+
+51:49.580 --> 51:52.580
+ the page about dogs that most people linked to.
+
+51:52.580 --> 51:54.580
+ That doesn't happen anymore.
+
+51:54.580 --> 51:57.580
+ People don't bother to say my page of cool links
+
+51:57.580 --> 51:59.580
+ because we took over that function, right?
+
+51:59.580 --> 52:03.580
+ So we changed the way that worked.
+
+52:03.580 --> 52:05.580
+ Did you imagine back then that the internet
+
+52:05.580 --> 52:08.580
+ would be as massively vibrant as it is today?
+
+52:08.580 --> 52:10.580
+ I mean, it was already growing quickly,
+
+52:10.580 --> 52:12.580
+ but it's just another...
+
+52:12.580 --> 52:14.580
+ I don't know if you've ever...
+
+52:14.580 --> 52:17.580
+ Today, if you sit back and just look at the internet
+
+52:17.580 --> 52:20.580
+ with wonder, the amount of content
+
+52:20.580 --> 52:22.580
+ that's just constantly being created,
+
+52:22.580 --> 52:24.580
+ constantly being shared and employed.
+
+52:24.580 --> 52:27.580
+ Yeah, it's always been surprising to me.
+
+52:27.580 --> 52:30.580
+ Because I'm not very good at predicting the future.
+
+52:30.580 --> 52:35.580
+ And I remember being a graduate student in 1980 or so,
+
+52:35.580 --> 52:39.580
+ and we had the ARPANET,
+
+52:39.580 --> 52:44.580
+ and then there was this proposal to commercialize it
+
+52:44.580 --> 52:49.580
+ and have this internet and this crazy Senator Gore
+
+52:49.580 --> 52:51.580
+ thought that might be a good idea.
+
+52:51.580 --> 52:53.580
+ And I remember thinking, oh, come on.
+
+52:53.580 --> 52:55.580
+ You can't expect a commercial company
+
+52:55.580 --> 52:57.580
+ to understand this technology.
+
+52:57.580 --> 52:59.580
+ They'll never be able to do it.
+
+52:59.580 --> 53:01.580
+ Yeah, okay, we can have this.com domain,
+
+53:01.580 --> 53:03.580
+ but it won't go anywhere.
+
+53:03.580 --> 53:05.580
+ So I was wrong, Al Gore was right.
+
+53:05.580 --> 53:07.580
+ At the same time, the nature of what it means
+
+53:07.580 --> 53:09.580
+ to be a commercial company has changed, too.
+
+53:09.580 --> 53:12.580
+ So Google, many ways, at its founding,
+
+53:12.580 --> 53:16.580
+ is different than what companies were before, I think.
+
+53:16.580 --> 53:19.580
+ Right, so there's all these business models
+
+53:19.580 --> 53:22.580
+ that are so different than what was possible back then.
+
+53:22.580 --> 53:24.580
+ So in terms of predicting the future,
+
+53:24.580 --> 53:26.580
+ what do you think it takes to build a system
+
+53:26.580 --> 53:29.580
+ that approaches human level intelligence?
+
+53:29.580 --> 53:31.580
+ You've talked about, of course,
+
+53:31.580 --> 53:33.580
+ that we shouldn't be so obsessed
+
+53:33.580 --> 53:35.580
+ about creating human level intelligence.
+
+53:35.580 --> 53:38.580
+ We just create systems that are very useful for humans.
+
+53:38.580 --> 53:44.580
+ But what do you think it takes to approach that level?
+
+53:44.580 --> 53:47.580
+ Right, so certainly I don't think human level intelligence
+
+53:47.580 --> 53:49.580
+ is one thing, right?
+
+53:49.580 --> 53:51.580
+ So I think there's lots of different tasks,
+
+53:51.580 --> 53:53.580
+ lots of different capabilities.
+
+53:53.580 --> 53:56.580
+ I also don't think that should be the goal, right?
+
+53:56.580 --> 54:01.580
+ So I wouldn't want to create a calculator
+
+54:01.580 --> 54:03.580
+ that could do multiplication at human level.
+
+54:03.580 --> 54:05.580
+ That would be a step backwards.
+
+54:05.580 --> 54:07.580
+ And so for many things,
+
+54:07.580 --> 54:09.580
+ we should be aiming far beyond human level.
+
+54:09.580 --> 54:11.580
+ For other things,
+
+54:11.580 --> 54:14.580
+ maybe human level is a good level to aim at.
+
+54:14.580 --> 54:16.580
+ And for others, we'd say,
+
+54:16.580 --> 54:18.580
+ well, let's not bother doing this,
+
+54:18.580 --> 54:21.580
+ because we already have humans who can take on those tasks.
+
+54:21.580 --> 54:25.580
+ So as you say, I'd like to focus on what's a useful tool.
+
+54:25.580 --> 54:28.580
+ And in some cases,
+
+54:28.580 --> 54:30.580
+ being at human level is an important part
+
+54:30.580 --> 54:33.580
+ of crossing that threshold to make the tool useful.
+
+54:33.580 --> 54:38.580
+ So we see in things like these personal assistants now
+
+54:38.580 --> 54:40.580
+ that you get either on your phone
+
+54:40.580 --> 54:43.580
+ or on a speaker that sits on the table,
+
+54:43.580 --> 54:46.580
+ you want to be able to have a conversation with those.
+
+54:46.580 --> 54:49.580
+ And I think as an industry,
+
+54:49.580 --> 54:51.580
+ we haven't quite figured out what the right model is
+
+54:51.580 --> 54:53.580
+ for what these things can do.
+
+54:53.580 --> 54:55.580
+ And we're aiming towards,
+
+54:55.580 --> 54:57.580
+ well, you just have a conversation with them
+
+54:57.580 --> 54:59.580
+ the way you can with a person.
+
+54:59.580 --> 55:02.580
+ But we haven't delivered on that model yet, right?
+
+55:02.580 --> 55:04.580
+ So you can ask it, what's the weather?
+
+55:04.580 --> 55:08.580
+ You can ask it, play some nice songs
+
+55:08.580 --> 55:11.580
+ and five or six other things,
+
+55:11.580 --> 55:13.580
+ and then you run out of stuff that it can do.
+
+55:13.580 --> 55:15.580
+ In terms of a deep, meaningful connection.
+
+55:15.580 --> 55:17.580
+ So you've mentioned the movie Her
+
+55:17.580 --> 55:19.580
+ as one of your favorite A.I. movies.
+
+55:19.580 --> 55:21.580
+ Do you think it's possible for a human being
+
+55:21.580 --> 55:23.580
+ to fall in love with an A.I. system,
+
+55:23.580 --> 55:25.580
+ A.I. assistant, as you mentioned,
+
+55:25.580 --> 55:28.580
+ to have taken this big leap from what's the weather
+
+55:28.580 --> 55:30.580
+ to having a deep connection?
+
+55:30.580 --> 55:33.580
+ Yeah, I think as people,
+
+55:33.580 --> 55:35.580
+ that's what we love to do.
+
+55:35.580 --> 55:38.580
+ And I was at a showing of Her
+
+55:38.580 --> 55:40.580
+ where we had a panel discussion
+
+55:40.580 --> 55:42.580
+ and somebody asked me,
+
+55:42.580 --> 55:45.580
+ what other movie do you think Her is similar to?
+
+55:45.580 --> 55:48.580
+ And my answer was Life of Brian,
+
+55:48.580 --> 55:51.580
+ which is not a science fiction movie,
+
+55:51.580 --> 55:55.580
+ but both movies are about wanting to believe
+
+55:55.580 --> 55:58.580
+ in something that's not necessarily real.
+
+55:58.580 --> 56:00.580
+ Yeah, by the way, for people who don't know,
+
+56:00.580 --> 56:01.580
+ it's Monty Python.
+
+56:01.580 --> 56:03.580
+ Yeah, it's brilliantly put.
+
+56:03.580 --> 56:04.580
+ Right?
+
+56:04.580 --> 56:06.580
+ So I mean, I think that's just the way we are.
+
+56:06.580 --> 56:09.580
+ We want to trust, we want to believe,
+
+56:09.580 --> 56:11.580
+ we want to fall in love,
+
+56:11.580 --> 56:14.580
+ and it doesn't necessarily take that much, right?
+
+56:14.580 --> 56:18.580
+ So, you know, my kids fell in love with their teddy bear,
+
+56:18.580 --> 56:21.580
+ and the teddy bear was not very interactive, right?
+
+56:21.580 --> 56:25.580
+ So that's all us pushing our feelings
+
+56:25.580 --> 56:28.580
+ onto our devices and our things,
+
+56:28.580 --> 56:30.580
+ and I think that that's what we like to do,
+
+56:30.580 --> 56:32.580
+ so we'll continue to do that.
+
+56:32.580 --> 56:35.580
+ So yeah, as human beings, we long for that connection,
+
+56:35.580 --> 56:38.580
+ and just A.I. has to do a little bit of work
+
+56:38.580 --> 56:40.580
+ to catch us on the other end.
+
+56:40.580 --> 56:42.580
+ Yeah, and certainly, you know,
+
+56:42.580 --> 56:45.580
+ if you can get to dog level,
+
+56:45.580 --> 56:48.580
+ a lot of people have invested a lot of love in their pets.
+
+56:48.580 --> 56:49.580
+ In their pets.
+
+56:49.580 --> 56:52.580
+ Some people, as I've been told,
+
+56:52.580 --> 56:54.580
+ in working with autonomous vehicles,
+
+56:54.580 --> 56:57.580
+ have invested a lot of love into their inanimate cars,
+
+56:57.580 --> 57:00.580
+ so it really doesn't take much.
+
+57:00.580 --> 57:04.580
+ So what is a good test to linger on a topic
+
+57:04.580 --> 57:07.580
+ that may be silly or a little bit philosophical?
+
+57:07.580 --> 57:11.580
+ What is a good test of intelligence in your view?
+
+57:11.580 --> 57:14.580
+ Is natural conversation, like in the touring test,
+
+57:14.580 --> 57:17.580
+ a good test, put another way,
+
+57:17.580 --> 57:22.580
+ what would impress you if you saw a computer do it these days?
+
+57:22.580 --> 57:24.580
+ Yeah, I mean, I get impressed all the time.
+
+57:24.580 --> 57:29.580
+ Right, so, you know, go playing,
+
+57:29.580 --> 57:33.580
+ Starcraft playing, those are all pretty cool.
+
+57:33.580 --> 57:37.580
+ You know, and I think, sure,
+
+57:37.580 --> 57:39.580
+ conversation is important.
+
+57:39.580 --> 57:43.580
+ I think, you know,
+
+57:43.580 --> 57:46.580
+ we sometimes have these tests where it's easy to fool the system,
+
+57:46.580 --> 57:51.580
+ where you can have a chat bot that can have a conversation,
+
+57:51.580 --> 57:55.580
+ but it never gets into a situation where it has to be deep enough
+
+57:55.580 --> 58:00.580
+ that it really reveals itself as being intelligent or not.
+
+58:00.580 --> 58:05.580
+ I think, you know, Turing suggested that,
+
+58:05.580 --> 58:07.580
+ but I think if he were alive, he'd say,
+
+58:07.580 --> 58:10.580
+ you know, I didn't really mean that seriously.
+
+58:10.580 --> 58:14.580
+ And I think, you know, this is just my opinion,
+
+58:14.580 --> 58:19.580
+ but I think Turing's point was not that this test of conversation
+
+58:19.580 --> 58:21.580
+ is a good test.
+
+58:21.580 --> 58:24.580
+ I think his point was having a test is the right thing.
+
+58:24.580 --> 58:27.580
+ So rather than having the philosopher say,
+
+58:27.580 --> 58:29.580
+ oh, no, AI is impossible,
+
+58:29.580 --> 58:31.580
+ you should say, well, we'll just have a test.
+
+58:31.580 --> 58:34.580
+ And then the result of that will tell us the answer
+
+58:34.580 --> 58:36.580
+ and doesn't necessarily have to be a conversation test.
+
+58:36.580 --> 58:37.580
+ That's right.
+
+58:37.580 --> 58:38.580
+ And coming up with you,
+
+58:38.580 --> 58:41.580
+ but a test as a technology evolves is probably the right way.
+
+58:41.580 --> 58:46.580
+ Do you worry, as a lot of the general public does about,
+
+58:46.580 --> 58:50.580
+ not a lot, but some vocal part of the general public
+
+58:50.580 --> 58:53.580
+ about the existential threat of artificial intelligence?
+
+58:53.580 --> 58:56.580
+ So looking farther into the future, as you said,
+
+58:56.580 --> 58:58.580
+ most of us are not able to predict much.
+
+58:58.580 --> 59:01.580
+ So when shrouded in such mystery, there's a concern of,
+
+59:01.580 --> 59:04.580
+ well, you start to think about worst case.
+
+59:04.580 --> 59:08.580
+ Is that something that occupies your mind space much?
+
+59:08.580 --> 59:10.580
+ So I certainly think about threats.
+
+59:10.580 --> 59:13.580
+ I think about dangers.
+
+59:13.580 --> 59:19.580
+ And I think any new technology has positives and negatives.
+
+59:19.580 --> 59:21.580
+ And if it's a powerful technology,
+
+59:21.580 --> 59:24.580
+ it can be used for bad as well as for good.
+
+59:24.580 --> 59:28.580
+ So I'm certainly not worried about the robot apocalypse
+
+59:28.580 --> 59:32.580
+ and the Terminator type scenarios.
+
+59:32.580 --> 59:37.580
+ I am worried about change in employment.
+
+59:37.580 --> 59:41.580
+ And are we going to be able to react fast enough to deal with that?
+
+59:41.580 --> 59:44.580
+ I think we're already seeing it today where a lot of people
+
+59:44.580 --> 59:50.580
+ are disgruntled about the way income inequality is working.
+
+59:50.580 --> 59:55.580
+ And automation could help accelerate those kinds of problems.
+
+59:55.580 --> 59:59.580
+ I see powerful technologies can always be used as weapons,
+
+59:59.580 --> 1:00:03.580
+ whether they're robots or drones or whatever.
+
+1:00:03.580 --> 1:00:06.580
+ Some of that we're seeing in due to AI.
+
+1:00:06.580 --> 1:00:09.580
+ A lot of it, you don't need AI.
+
+1:00:09.580 --> 1:00:12.580
+ And I don't know what's a worst threat.
+
+1:00:12.580 --> 1:00:17.580
+ If it's an autonomous drone or it's a CRISPR technology
+
+1:00:17.580 --> 1:00:21.580
+ becoming available or we have lots of threats to face
+
+1:00:21.580 --> 1:00:24.580
+ and some of them involve AI and some of them don't.
+
+1:00:24.580 --> 1:00:27.580
+ So the threats that technology presents
+
+1:00:27.580 --> 1:00:31.580
+ are, for the most part, optimistic about technology
+
+1:00:31.580 --> 1:00:34.580
+ also alleviating those threats or creating new opportunities
+
+1:00:34.580 --> 1:00:38.580
+ or protecting us from the more detrimental effects of these.
+
+1:00:38.580 --> 1:00:39.580
+ Yeah, I don't know.
+
+1:00:39.580 --> 1:00:41.580
+ Again, it's hard to predict the future.
+
+1:00:41.580 --> 1:00:45.580
+ And as a society so far,
+
+1:00:45.580 --> 1:00:50.580
+ we've survived nuclear bombs and other things.
+
+1:00:50.580 --> 1:00:53.580
+ Of course, only societies that have survived
+
+1:00:53.580 --> 1:00:55.580
+ are having this conversation.
+
+1:00:55.580 --> 1:00:58.580
+ Maybe that's survivorship bias there.
+
+1:00:58.580 --> 1:01:02.580
+ What problem stands out to you as exciting, challenging,
+
+1:01:02.580 --> 1:01:05.580
+ impactful to work on in the near future
+
+1:01:05.580 --> 1:01:08.580
+ for yourself, for the community, and broadly?
+
+1:01:08.580 --> 1:01:12.580
+ So we talked about these assistance and conversation.
+
+1:01:12.580 --> 1:01:14.580
+ I think that's a great area.
+
+1:01:14.580 --> 1:01:20.580
+ I think combining common sense reasoning
+
+1:01:20.580 --> 1:01:25.580
+ with the power of data is a great area.
+
+1:01:25.580 --> 1:01:27.580
+ In which application?
+
+1:01:27.580 --> 1:01:29.580
+ In conversational issues, just broadly speaking?
+
+1:01:29.580 --> 1:01:31.580
+ Just in general, yeah.
+
+1:01:31.580 --> 1:01:35.580
+ As a programmer, I'm interested in programming tools,
+
+1:01:35.580 --> 1:01:39.580
+ both in terms of the current systems we have today
+
+1:01:39.580 --> 1:01:41.580
+ with TensorFlow and so on.
+
+1:01:41.580 --> 1:01:45.580
+ Can we make them much easier to use for a broader class of people?
+
+1:01:45.580 --> 1:01:50.580
+ And also, can we apply machine learning to the more traditional
+
+1:01:50.580 --> 1:01:51.580
+ type of programming?
+
+1:01:51.580 --> 1:01:56.580
+ So when you go to Google and you type in a query
+
+1:01:56.580 --> 1:01:59.580
+ and you spell something wrong, it says, did you mean?
+
+1:01:59.580 --> 1:02:02.580
+ And the reason we're able to do that is because lots of other people
+
+1:02:02.580 --> 1:02:05.580
+ made a similar error and then they corrected it.
+
+1:02:05.580 --> 1:02:08.580
+ We should be able to go into our code bases
+
+1:02:08.580 --> 1:02:10.580
+ and our bugfix spaces.
+
+1:02:10.580 --> 1:02:13.580
+ And when I type a line of code, it should be able to say,
+
+1:02:13.580 --> 1:02:15.580
+ did you mean such and such?
+
+1:02:15.580 --> 1:02:20.580
+ If you type this today, you're probably going to type in this bugfix tomorrow.
+
+1:02:20.580 --> 1:02:25.580
+ Yeah, that's a really exciting application of almost an assistant
+
+1:02:25.580 --> 1:02:29.580
+ for the coding program experience at every level.
+
+1:02:29.580 --> 1:02:34.580
+ So I think I could safely speak for the entire AI community.
+
+1:02:34.580 --> 1:02:38.580
+ First of all, thank you for the amazing work you've done.
+
+1:02:38.580 --> 1:02:42.580
+ Certainly for the amazing work you've done with AI, a modern approach book.
+
+1:02:42.580 --> 1:02:45.580
+ I think we're all looking forward very much for the fourth edition
+
+1:02:45.580 --> 1:02:47.580
+ and then the fifth edition and so on.
+
+1:02:47.580 --> 1:02:50.580
+ So Peter, thank you so much for talking today.
+
+1:02:50.580 --> 1:03:12.580
+ Yeah, thank you.
+

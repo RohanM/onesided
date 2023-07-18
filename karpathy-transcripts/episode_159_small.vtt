@@ -1,0 +1,4520 @@
+WEBVTT
+
+00:00.000 --> 00:06.400
+ The following is a conversation with Richard Crape, founder of Numeri, which is a crowdsourced
+
+00:06.400 --> 00:11.680
+ hedge fund, very much in the spirit of Wall Street bets, but where the trading is done,
+
+00:11.680 --> 00:17.680
+ not directly by humans, but by artificial intelligence systems submitted by those humans.
+
+00:18.240 --> 00:22.720
+ It's a fascinating and extremely difficult machine learning competition
+
+00:22.720 --> 00:28.320
+ where the incentives of everybody is aligned, the code is kept and owned by the people who
+
+00:28.320 --> 00:34.880
+ develop it, the data, anonymous data is very well organized and made freely available.
+
+00:35.520 --> 00:41.360
+ I think this kind of idea has a chance to change the nature of stock trading and even just money
+
+00:41.360 --> 00:48.880
+ management in general by empowering people who are interested in trading stocks with the modern
+
+00:48.880 --> 00:55.440
+ and quickly advancing tools of machine learning. Quick mention of our sponsors, Audible Audiobooks,
+
+00:55.440 --> 01:02.480
+ ChiroLabs Machine Learning Company, Blinkist App that summarizes books and Athletic Greens,
+
+01:02.480 --> 01:07.520
+ all in one nutrition drink. Click the sponsor links to get a discount and to support this
+
+01:07.520 --> 01:13.360
+ podcast. As a side note, let me say that this whole set of events around GameStop and Wall
+
+01:13.360 --> 01:20.400
+ Street bets has been really inspiring to me as a demonstration that a distributed system,
+
+01:20.400 --> 01:26.800
+ a large number of regular people are able to coordinate and collaborate in
+
+01:27.520 --> 01:34.960
+ taking on the elite centralized power structures, especially when those elites are misbehaving.
+
+01:36.080 --> 01:41.920
+ I believe that power in as many cases as possible should be distributed and in this case,
+
+01:41.920 --> 01:49.520
+ the internet as it is for many cases is the fundamental enabler of that power and at the core
+
+01:49.520 --> 01:54.640
+ what the internet and its distributed nature represents is freedom. Of course, the thing
+
+01:54.640 --> 02:03.360
+ about freedom is it enables chaos or progress or sometimes both. And that's kind of the point
+
+02:03.360 --> 02:11.120
+ of the thing. Freedom is empowering, but ultimately unpredictable. And I think in the end, freedom
+
+02:11.120 --> 02:16.880
+ wins. If you enjoy this podcast, subscribe on YouTube, review it on Apple Podcasts,
+
+02:16.880 --> 02:22.640
+ follow on Spotify, support on Patreon or connect with me on Twitter at Lex Freedman.
+
+02:23.200 --> 02:30.160
+ And now here's my conversation with Richard Kraeb. From your perspective, can you summarize the
+
+02:30.160 --> 02:34.720
+ important events around this amazing saga that we've been living through of Wall Street bets,
+
+02:34.720 --> 02:39.760
+ the subreddit and GameStop and in general, just what are your thoughts about it from
+
+02:39.760 --> 02:44.640
+ technical to the philosophical level? I think it's amazing. It's like my favorite story ever.
+
+02:44.640 --> 02:53.040
+ Like when I was reading about it, I was like, this is the best. And it's also connected with
+
+02:53.040 --> 02:59.440
+ my company, which we can talk about. But what I liked about it is I like decentralized coordination
+
+02:59.440 --> 03:06.960
+ and looking at the mechanisms that these are Wall Street bets users use to hype each other up,
+
+03:06.960 --> 03:14.000
+ to get excited, to prove that they bought the stock and they're holding. And then also to see
+
+03:14.000 --> 03:21.040
+ that how big of an impact that that decentralized coordination had. It really was a big deal.
+
+03:21.040 --> 03:26.160
+ Well, you're impressed by the distributed coordination, the collaboration amongst like,
+
+03:26.160 --> 03:29.600
+ I don't know what the numbers are, I know a numerized looking at the data.
+
+03:30.320 --> 03:36.400
+ After all of this is over and done, it'd be interesting to see like from a large scale
+
+03:36.400 --> 03:41.200
+ distributed system perspective to see how everything played out. But just from your current
+
+03:41.200 --> 03:48.240
+ perspective, what we know, is it obvious to you that such incredible level of coordination
+
+03:48.960 --> 03:53.760
+ could happen where a lot of people come together and distribute a sense there's an emergent behavior
+
+03:53.760 --> 03:59.200
+ that happens after that? No, it's not at all obvious. And one of the reasons is the lack of
+
+03:59.200 --> 04:03.760
+ kind of like credibility. To coordinate with someone, you need to kind of make credible
+
+04:03.760 --> 04:12.080
+ contracts or credible claims. So if you have a username on our Wall Street bets, like some of
+
+04:12.080 --> 04:16.800
+ them are like deep fucking value is one of them. That's an actual username. By the way,
+
+04:16.800 --> 04:21.840
+ we're talking about there's a website called Reddit and there's subreddits on it. And a lot
+
+04:21.840 --> 04:28.400
+ of people, most the anonymous, I think for the most part, anonymous can create user accounts and then
+
+04:28.400 --> 04:32.560
+ can then just talk on form like style boards. You should know what Reddit is. If you don't know
+
+04:32.560 --> 04:40.320
+ what Reddit is, check it out. If you don't know what Reddit is, maybe go to the subreddit first,
+
+04:40.320 --> 04:45.040
+ AWW with Q pictures of cats and dogs. That's my recommendation. Anyway. Yeah, that would be a
+
+04:45.040 --> 04:50.800
+ good start to Reddit. When you get into it more, go to our Wall Street bets. It gets dark quickly.
+
+04:50.800 --> 04:57.520
+ We'll probably talk about that too. So yeah, so there's these users and there's no contracts,
+
+04:57.520 --> 05:02.480
+ like you were saying. There's no contracts. The users are anonymous, but there are little things
+
+05:02.480 --> 05:07.600
+ that do help. So for example, if you've posted a really good investment idea in the past,
+
+05:07.600 --> 05:14.000
+ that exists on Reddit as well. And it might have lots of upvotes. And that's also giving
+
+05:14.000 --> 05:24.720
+ credibility to your next thing. And then they are also putting up screenshots. Here's the trades
+
+05:24.720 --> 05:30.720
+ I've made and here's a screenshot. Now you could fake the screenshot, but still, it seems like
+
+05:30.720 --> 05:35.680
+ if you've got a lot of karma and you've had a good performance on the community, it somehow
+
+05:35.680 --> 05:41.280
+ becomes credible enough for other people to be like, you know what? He actually probably did
+
+05:41.280 --> 05:46.160
+ put a million dollars into this. And you know what? I can follow that trade easily.
+
+05:46.160 --> 05:50.160
+ And there's a bunch of people like that. So you're kind of integrating all that information
+
+05:50.160 --> 05:54.880
+ together yourself to see like, huh, there's something happening here. And then you jump it onto this
+
+05:54.880 --> 06:02.160
+ little boat of behavior. We should buy the stock or sell the stock. And then another person jumps
+
+06:02.160 --> 06:07.680
+ on, another person jumps on. And all of a sudden you have just a huge number of people behaving
+
+06:07.680 --> 06:12.400
+ in the same direction. It's like flock of whatever birds. Exactly. What was strange with this one,
+
+06:12.400 --> 06:18.720
+ it wasn't just let's all buy Tesla. We love Elon. We love the Tesla. Let's all buy Tesla.
+
+06:18.720 --> 06:24.800
+ Because that we've heard before, right? Everybody likes Tesla. Now they do.
+
+06:26.160 --> 06:31.760
+ So what they did with this, in this case, they're buying a stock that was bad. They're buying it
+
+06:31.760 --> 06:38.400
+ because it was bad. And that's really weird, because that's a little bit too galaxy brain
+
+06:38.400 --> 06:44.400
+ for a decentralized community. How did they come up with it? How did they know that was the right
+
+06:44.400 --> 06:50.320
+ one? And the reason they liked it is because it had really, really high short interest. It had been
+
+06:50.320 --> 06:57.760
+ shorted more than its own float, I believe. And so they figured out that if they all bought this
+
+06:57.760 --> 07:05.200
+ bad stock, they could short squeeze some hedge funds. And those hedge funds would have to capitulate
+
+07:05.200 --> 07:10.640
+ and buy the stock at really, really high prices. And we should say that shorted means that these
+
+07:10.640 --> 07:17.040
+ are a bunch of people, when you short a stock, you're predicting that the stock is going to go
+
+07:17.040 --> 07:22.160
+ down and then you will make money if it does. And then what's the short squeeze?
+
+07:22.160 --> 07:27.600
+ It's really that if you are a hedge fund and you take a big short position in a company,
+
+07:28.720 --> 07:35.360
+ there's a certain level at which you can't sustain holding that position. There's no limit
+
+07:35.360 --> 07:40.240
+ to how high a stock can go, but there is a limit to how low it can go, right? So if you short
+
+07:40.240 --> 07:46.640
+ something, you have infinite loss potential. And if the stock doubles overnight, like GameStop did,
+
+07:48.480 --> 07:53.600
+ you're putting a lot of stress on that hedge fund. And that hedge fund manager might have to say,
+
+07:53.600 --> 07:59.040
+ you know what? I have to get out of the trade. And the only way to get out is to buy the bad
+
+07:59.040 --> 08:05.280
+ stock that they don't want, like they believe will go down. So it's an interesting situation,
+
+08:05.280 --> 08:12.320
+ particularly because it's not zero sum. If you say, let's all get together and make a bubble in
+
+08:12.320 --> 08:19.920
+ watermelons, you buy a bunch of watermelons, the price goes up, comes down again, it's a zero sum
+
+08:19.920 --> 08:24.320
+ game. If someone's already shorted a stock and you can make them short squeeze, it's actually
+
+08:24.320 --> 08:29.520
+ a positive sum game. So yes, some redditors will make a lot of money, some will lose a lot,
+
+08:29.520 --> 08:36.800
+ but actually the whole group will make money. And that's really why it's such a clever thing
+
+08:36.800 --> 08:43.360
+ for them to do. A couple to the fact that shorting, I mean, maybe you can push back, but to me,
+
+08:43.360 --> 08:48.720
+ always from an outsider's perspective, seemed, I hope I'm not using too strong of a word,
+
+08:48.720 --> 08:54.160
+ but it seemed almost unethical. Maybe not unethical. Maybe it's just an asshole thing to do.
+
+08:54.160 --> 08:59.440
+ It's okay. I'm speaking not from an economics or financial perspective. I'm speaking from
+
+09:00.080 --> 09:05.440
+ just somebody who loves, I'm a fan of a lot of people. I love celebrating the success of a lot
+
+09:05.440 --> 09:13.760
+ of people. And this is like the stock market equivalent of like haters. I know that's not
+
+09:13.760 --> 09:18.320
+ what it is. I know that there's efficient, you want to have an economy efficient mechanism for
+
+09:18.320 --> 09:26.480
+ punishing sort of overhyped, overvalued things. That's what shorting is designed for. But it just
+
+09:26.480 --> 09:33.360
+ always felt like these people are just because they're not just betting on the loss of the company.
+
+09:33.360 --> 09:39.760
+ It feels like they're also using their leverage and power to manipulate media or just to write
+
+09:39.760 --> 09:45.440
+ articles or just to hate on you on social media. Then you get to see that with Elon Musk and so on.
+
+09:45.440 --> 09:54.320
+ So this is like the man, so people like hedge funds that we're shorting are like the
+
+09:55.520 --> 10:02.720
+ sort of embodiment of the evil or just the bad guy, the overpowerful that's misusing their power.
+
+10:02.720 --> 10:08.400
+ And here's the crowd, the people that are standing up and rising up. So it's not just that they were
+
+10:08.400 --> 10:14.720
+ able to collaborate on Wall Street bets to sort of effectively make money for themselves.
+
+10:14.720 --> 10:21.520
+ It's also that this is like a symbol of the people getting together and fighting the centralized
+
+10:21.520 --> 10:29.680
+ elites, the powerful. I don't know what your thoughts are about that in general. At this stage,
+
+10:29.680 --> 10:38.080
+ it feels like that's really exciting that people have power, just like regular people have power.
+
+10:38.080 --> 10:46.400
+ At the same time, it's scary a little bit because just studying history, people can be manipulated
+
+10:46.400 --> 10:55.120
+ by charismatic leaders. And so just like Elon right now is manipulating, encouraging people to
+
+10:55.120 --> 11:02.000
+ buy Dogecoin or whatever. There can be good charismatic leaders and there can be bad charismatic
+
+11:02.000 --> 11:08.720
+ leaders. And so it's nerve wracking. It's a little bit scary how much power a subreddit can have to
+
+11:09.520 --> 11:13.920
+ destroy somebody because right now we're celebrating they might be attacking or
+
+11:13.920 --> 11:19.840
+ destroying somebody that everybody doesn't like. But what if they attack somebody that is actually
+
+11:19.840 --> 11:28.960
+ good for this world? And that's kind of the awesomeness and the price of freedom. It's like
+
+11:28.960 --> 11:34.000
+ it could destroy the world or it can save the world. But at this stage, it feels like, I don't
+
+11:34.000 --> 11:40.080
+ know, overall, when you sit back, do you think this was just a positive wave of emergent behavior?
+
+11:40.080 --> 11:45.600
+ Is there something negative about what happened? Well, yeah, the cool thing is they weren't doing
+
+11:45.600 --> 11:53.840
+ anything. The reddit people weren't doing anything exotic. It was a creative trade, but it wasn't
+
+11:53.840 --> 12:01.840
+ exotic. It was just buying the stock. Maybe they bought some options too. But it was the hedge fund
+
+12:01.840 --> 12:09.840
+ that was doing the exotic thing. So I like that. It's hard to say, well, we've got together
+
+12:10.400 --> 12:15.280
+ and we've pulled all our money together and now there's a company out there that's worth more.
+
+12:16.240 --> 12:22.560
+ What's wrong with that? But it doesn't talk about the motivations which is, and then we destroyed
+
+12:22.560 --> 12:30.720
+ some hedge funds in the process. Is there something to be said about the humor and I don't know,
+
+12:30.720 --> 12:35.680
+ the edginess, sometimes viciousness of that subreddit? I haven't looked at it too much,
+
+12:36.400 --> 12:42.000
+ but it feels like people can be quite aggressive on there. So is there...
+
+12:44.560 --> 12:50.960
+ What is that? Is that what freedom looks like? I think it does. Yeah, you definitely need to let
+
+12:50.960 --> 12:57.120
+ people... One of the things that people have compared it to is the Occupy Wall Street, which is,
+
+12:57.120 --> 13:04.880
+ let's say, some very sincere liberals, like 23 years old, whatever, and they go out with signs
+
+13:04.880 --> 13:14.640
+ and they have some case to make. But this isn't sincere, really. It's a little bit more nihilistic,
+
+13:14.640 --> 13:22.000
+ a little bit more YOLO, and therefore a little bit more scary because who's scared of the Occupy
+
+13:22.000 --> 13:26.720
+ Wall Street people with the signs? Nobody. But these hedge funds really are scared. I was scared
+
+13:26.720 --> 13:35.360
+ of the Wall Street bats people. I'm still scared of them. Yeah, the anonymity is a bit terrifying
+
+13:35.360 --> 13:42.640
+ and exciting. I don't know what to do. I've been following events in Russia, for example.
+
+13:42.640 --> 13:47.520
+ It's like there's a struggle between centralized power and the distributed. I mean, that's the
+
+13:47.520 --> 13:54.240
+ struggle of the history of human civilization, right? But this on the internet, just that you
+
+13:54.240 --> 14:02.960
+ can multiply people. Some of them don't have to be real. You can probably create bots. It starts
+
+14:02.960 --> 14:10.240
+ getting me as a programmer. I start to think, hmm, me as one person, how much cast can I create by
+
+14:10.240 --> 14:18.640
+ writing some bots? Yeah. And I'm sure I'm not the only one thinking that. I'm sure there's
+
+14:18.640 --> 14:23.200
+ hundreds, thousands of good developers out there listening to this, thinking the same thing.
+
+14:23.760 --> 14:29.280
+ And then as that develops further and further in the next decade or two, what impact does that have
+
+14:29.280 --> 14:40.560
+ on financial markets on just destruction of reputations or politics, the bickering of
+
+14:40.560 --> 14:45.040
+ left and right political discourse, the dynamics of that being manipulated by
+
+14:46.720 --> 14:52.640
+ people talk about Russian bots or whatever. We're probably in the very early stage of that, right?
+
+14:52.640 --> 15:00.720
+ Exactly. And this is a good example. Do you have a sense that most of Wall Street bets folks are
+
+15:00.720 --> 15:05.200
+ actually individual people, right? That's the feeling I have is they're just individual,
+
+15:05.200 --> 15:10.080
+ maybe young investors, just doing a little bit of an investment, but just on a large scale.
+
+15:10.080 --> 15:14.160
+ Yeah, exactly. The reason I found out, I've known about Wall Street bets for a while, but the
+
+15:14.160 --> 15:18.800
+ reason I found out about GameStop was this, I met somebody at a party who told me about it,
+
+15:18.800 --> 15:23.200
+ and he was like 21 years old, and he's like, it's going to go up 100% in the next one day.
+
+15:23.760 --> 15:26.000
+ That we're talking about in last year?
+
+15:26.000 --> 15:33.040
+ This was probably, no, this was a few days ago. It was like maybe two weeks ago or something.
+
+15:34.160 --> 15:39.680
+ So it was already high GameStop, but it was just strange to me that there was someone telling me
+
+15:39.680 --> 15:49.040
+ at a party how to trade stocks who was like 21 years old, and it started to look into it.
+
+15:50.160 --> 15:56.240
+ Yeah, and he did make, yeah, he made 140% in one day. He was right, and now he's
+
+15:57.120 --> 16:01.040
+ supercharged. He's a little bit wealthier, and now he's going to look, wait for the next thing,
+
+16:01.040 --> 16:04.400
+ and this decentralized entity is just going to get bigger and bigger.
+
+16:04.400 --> 16:07.920
+ And they're going to, together, search for the next thing. So there's thousands of folks like
+
+16:07.920 --> 16:12.720
+ him, and they're going to probably search for the next thing to attack. People that have power in
+
+16:12.720 --> 16:20.160
+ this world that sit there with power right now in government and in finance in any kind of position
+
+16:20.160 --> 16:25.520
+ are probably a little bit scared right now. And honestly, that's probably a little bit good.
+
+16:26.160 --> 16:28.000
+ It's dangerous, but it's good.
+
+16:28.000 --> 16:32.400
+ Yeah, it certainly makes you think twice about shorting. It certainly makes you think
+
+16:32.400 --> 16:37.920
+ it's right about putting a lot of money into a short. These funds put a lot into one or two
+
+16:37.920 --> 16:45.280
+ names, and so it was very, very badly risk managed. Do you think shorting is, can you speak at a
+
+16:45.280 --> 16:51.200
+ high level just for your own as a person? Is it good for the world? Is it good for markets?
+
+16:52.000 --> 16:55.840
+ I do think that the two kinds of shorting, evil shorting,
+
+16:55.840 --> 17:04.160
+ and chill shorting, evil shorting is what Melvin Capital was doing.
+
+17:05.600 --> 17:10.800
+ And it's like, you put a huge position down, you get all your buddies to also short it,
+
+17:10.800 --> 17:17.520
+ and you start making press and trying to bring this company down. And I don't think,
+
+17:18.080 --> 17:23.200
+ in some cases, you go out to fraudulent companies, say, this company is a fraud,
+
+17:23.200 --> 17:27.600
+ maybe that's okay. But they weren't even saying games up, they were just saying,
+
+17:27.600 --> 17:31.760
+ it's a bad company, and we're going to bring it to the ground, bring it to its knees.
+
+17:33.600 --> 17:40.320
+ A quant fund, like Numeri, we always have lots of positions, and we never have a position that's
+
+17:40.320 --> 17:49.920
+ like more than 1% of our fund. So we actually have right now 250 shorts. I don't know any of them,
+
+17:49.920 --> 18:01.680
+ except for one, because it was one of the meme stocks. But we shorting them not to make them go,
+
+18:01.680 --> 18:05.840
+ we don't even want them to go down necessarily. That doesn't sound a bit strange, I say that.
+
+18:05.840 --> 18:15.280
+ But we just want them to not go up as much as our longs. So by shorting a little bit,
+
+18:15.280 --> 18:20.800
+ we can actually go long more in the things we do believe in. So when we were going
+
+18:20.800 --> 18:27.040
+ long in Tesla, we could do it with more money than we had, because we'd borrow from banks
+
+18:27.600 --> 18:34.480
+ who would lend us money, because we had longs and shorts, because we didn't have market exposure,
+
+18:34.480 --> 18:38.480
+ we didn't have market risk. And so I think that's a good thing, because that means
+
+18:39.600 --> 18:44.000
+ we can short the oil companies and go along Tesla and make the future come forward faster.
+
+18:44.000 --> 18:50.320
+ And I do think that's not a bad thing. So we talked about this incredible distributed system
+
+18:50.960 --> 18:55.840
+ created by Wall Street Bets. And then there's a platform, which is Robinhood,
+
+18:56.800 --> 19:00.560
+ which allows investors to efficiently, as far as you can correct me if I'm wrong, but
+
+19:01.200 --> 19:07.120
+ there's those and there's others and there's numeri that allow you to make it accessible
+
+19:07.120 --> 19:16.800
+ for people to invest. But that said, Robinhood was in a centralized way applied its power to
+
+19:16.800 --> 19:22.800
+ restrict trading on the stock that we're referring to. Do you have a thought on actually the things
+
+19:22.800 --> 19:29.840
+ that happened? I don't know how much you were paying attention to the shadiness around the whole
+
+19:29.840 --> 19:34.560
+ thing. Do you think it was forced to do it? Was there something shady going on? What are
+
+19:34.560 --> 19:40.800
+ your thoughts in general? Well, I think I want to see the alternate history. I want to see the
+
+19:40.800 --> 19:46.560
+ counterfactual history of them not doing that. Not doing it. How bad would it have gotten for
+
+19:46.560 --> 19:52.560
+ hedge funds? How much more damage could have been done if the momentum of these short squeezes could
+
+19:52.560 --> 20:01.120
+ continue? What happens when there are short squeezes, even if they're in a few stocks,
+
+20:01.120 --> 20:07.040
+ they affect kind of all the other shorts, too. And suddenly brokers are saying things like,
+
+20:07.040 --> 20:14.320
+ you need to put a more collateral. So we had a short. It wasn't GameStop. Luckily, it was BlackBerry.
+
+20:14.960 --> 20:19.680
+ And it went up like 100% in a day. It was one of these meme stocks, super bad company. The AIs
+
+20:19.680 --> 20:26.080
+ don't like it. The AIs think it's going down. What's a meme stock? A meme stock is kind of a
+
+20:26.080 --> 20:35.520
+ new term for these stocks that catch memetic momentum on Reddit. And so the meme stocks were
+
+20:35.520 --> 20:45.760
+ GameStop, the biggest one. GameStunk, as Elon calls it, AMC. And BlackBerry was one. Nokia was one.
+
+20:46.480 --> 20:51.920
+ So these are high short interest stocks as well. So these are targeted stocks. Some people say,
+
+20:51.920 --> 20:58.640
+ oh, isn't it adorable that these people are investing money in these companies that are
+
+20:59.440 --> 21:04.080
+ nostalgic? It's like, you're going to the AMC movie theater. It's like nostalgic. It's like, no.
+
+21:04.720 --> 21:08.880
+ It's not why they're doing it. It's that they had a lot of short interest. That was the main thing.
+
+21:09.440 --> 21:11.920
+ And so there were high chance of short squeeze.
+
+21:12.560 --> 21:16.640
+ In saying, I would love to see an alternate history, do you have a sense that that
+
+21:18.160 --> 21:20.800
+ what is your prediction of what that history would have looked like?
+
+21:20.800 --> 21:28.160
+ Well, you wouldn't have needed very many more days of that kind of chaos to hurt hedge funds.
+
+21:29.200 --> 21:37.920
+ I think it's underrated how damaging it could have been. Because when your shorts go up,
+
+21:39.200 --> 21:44.400
+ your collateral requirements for them go up. It's similar to Robinhood. We have a prime broker
+
+21:44.400 --> 21:52.640
+ that said to us, you need to put up $40 per $100 of short exposure. And then the next day,
+
+21:52.640 --> 21:57.680
+ they said, actually, you have to put up all of it, 100%. And we were like, what?
+
+21:59.280 --> 22:05.840
+ But if that happens to all the short, all the commonly held hedge fund shorts,
+
+22:05.840 --> 22:11.520
+ because they're all kind of holding the same things, if that happens, not only do you have to
+
+22:11.520 --> 22:19.600
+ cover the short, which means you're buying the bad companies, you need to sell your good companies
+
+22:20.160 --> 22:26.160
+ in order to cover the short. So suddenly, all the good companies, all the ones that the hedge
+
+22:26.160 --> 22:32.080
+ funds like are coming down, and all the ones that the hedge funds hate are going up in a
+
+22:32.960 --> 22:40.640
+ cascading way. So I believe that if you could have had a few more days of GameStop doubling,
+
+22:40.640 --> 22:44.960
+ AMC doubling, you would have had more and more hedge fund deleveraging.
+
+22:44.960 --> 22:50.480
+ But so hedge funds, I mean, they get a lot of shit, but do you have a sense
+
+22:51.200 --> 22:58.080
+ that they do some good for the world? First of all, Wall Street Bets itself is a kind of distributed
+
+22:58.080 --> 23:03.920
+ hedge fund. Numerize a kind of hedge fund. So like a hedge fund is a very broad category.
+
+23:03.920 --> 23:10.480
+ I mean, if some of those were destroyed, would that be good for the world? Or would there be
+
+23:10.480 --> 23:17.040
+ coupled with the destroying the evil shorting? Would there be just a lot of pain in terms of
+
+23:17.040 --> 23:22.880
+ investment in good companies? Yeah. A thing I like to tell people if they hate hedge funds is
+
+23:23.520 --> 23:28.800
+ I don't think you want to rerun American economic history without hedge funds.
+
+23:29.840 --> 23:35.200
+ So on mass, they're good. Yeah, they're good. Yeah, you really wouldn't want to.
+
+23:35.200 --> 23:40.560
+ Because hedge funds are kind of like picking up, they're making liquidity right in stocks.
+
+23:41.120 --> 23:48.160
+ And so if you love venture capitalists, they're investing in new technology, it's so good.
+
+23:48.160 --> 23:53.360
+ You have to also kind of like hedge funds because they're the reason venture capitalists
+
+23:53.360 --> 23:58.080
+ exist because their companies can have a liquidity event when they go to the public markets.
+
+23:58.960 --> 24:03.440
+ So it's kind of essential that we have them. There are many different kinds of them.
+
+24:03.440 --> 24:09.360
+ I believe we could maybe get away with only having an AI hedge fund,
+
+24:11.440 --> 24:16.160
+ but we don't necessarily need these evil billions type hedge funds that make the
+
+24:16.160 --> 24:20.080
+ media and try to kill companies. But we definitely need hedge funds.
+
+24:20.080 --> 24:30.640
+ Maybe from your perspective, because you run such an organization and Vlad, the CEO of Robinhood,
+
+24:30.640 --> 24:34.160
+ sort of had to make decisions really quickly, probably had to wake up in the middle of the
+
+24:34.160 --> 24:40.560
+ night kind of thing. And he also had a conversation with Elon Musk on Clubhouse,
+
+24:40.560 --> 24:46.880
+ which I just signed up for. It was a fascinating, one of the great journalistic performances of
+
+24:46.880 --> 24:53.200
+ our time with Elon Musk. Pulitzer Prize for Elon. How hilarious would it be if he gets a Pulitzer
+
+24:53.200 --> 25:00.640
+ Prize? And then his Wikipedia would be like journalist and part time entrepreneur. Business
+
+25:00.640 --> 25:08.480
+ magnet. I don't know if you can comment on any aspects of that, but if you were with Vlad,
+
+25:08.480 --> 25:12.560
+ how would you do things differently? What are your just thoughts about his interaction with
+
+25:12.560 --> 25:18.720
+ Elon? How he should have played it differently? I guess there's a lot of aspects to this
+
+25:18.720 --> 25:24.080
+ interaction. One is about transparency. How much do you want to tell people about really what went
+
+25:24.080 --> 25:34.080
+ down? There's NDAs potentially involved. How much in private do you want to push back and say,
+
+25:34.080 --> 25:39.120
+ no, fuck you to centralize power, whatever the phone calls you're getting, which I'm sure he's
+
+25:39.120 --> 25:44.320
+ getting some kind of phone calls that might not be contractual. It's not contracts that are forcing
+
+25:44.320 --> 25:50.480
+ him, but he was being what do you call it, pressured to behave in certain kinds of ways
+
+25:50.480 --> 25:56.240
+ from all kinds of directions. What do you take from this whole situation?
+
+25:56.240 --> 26:01.440
+ I was very excited to see Vlad's response. It's pretty cool to have him talk to Elon.
+
+26:01.440 --> 26:07.360
+ And one of the things that struck me in the first few seconds of Vlad speaking was I was like,
+
+26:07.360 --> 26:17.280
+ is Vlad like a boomer? But here we are. He seemed like a 55 year old man talking to a
+
+26:17.280 --> 26:23.040
+ 20 year old. Elon was like the 20 year old. And he's like the 55 year old man. You can see why
+
+26:23.040 --> 26:28.880
+ Citadel are NMR buddies, right? Like you can. You can see why. It's like this is a nice,
+
+26:28.880 --> 26:34.800
+ it's not a bad thing. It's like he's got a respectable professional attitude.
+
+26:34.800 --> 26:41.680
+ Well, he also tried to do like a jokey thing. No, we're not being ageist here, boomer.
+
+26:42.560 --> 26:48.400
+ But like a 60 year old CEO, Bank of America, would try to make a joke for the kids. That's
+
+26:48.400 --> 26:52.560
+ what Vlad's talking about. Exactly. Yeah. I was like, what is this? This guy's like,
+
+26:52.560 --> 27:00.400
+ what is he, 30? Yeah. And I'm like, this is weird. But I think maybe that's also what I like
+
+27:00.400 --> 27:05.680
+ about Elon's kind of influence on American business is like, he's super like anti the
+
+27:05.680 --> 27:15.200
+ professional. Why say 100 words about nothing? And so I liked how he was cutting in and saying,
+
+27:15.200 --> 27:19.600
+ Vlad, what do you mean spill the beans, bro? Yeah. So you don't have to be courteous. It's
+
+27:19.600 --> 27:24.560
+ like the first principle thinking is like, what the hell happened? Yes. And let's just talk
+
+27:24.560 --> 27:33.200
+ like normal people. The problem of course is, you know, for Elon, it's cost him, what is it,
+
+27:33.200 --> 27:39.440
+ tens of millions of dollars is tweeting like that. But perhaps it's a worthy price to pay,
+
+27:39.440 --> 27:46.880
+ because ultimately, there's something magical about just being real and honest, and just going
+
+27:46.880 --> 27:51.760
+ off the cuff and making mistakes and paying for them, but just being real. And then moments like
+
+27:51.760 --> 27:59.120
+ this, that was an opportunity for Vlad to be that. And it felt like he wasn't. Do you think we'll
+
+27:59.120 --> 28:05.520
+ ever find out what really went down if there was something shady underneath it all? Yeah. I mean,
+
+28:06.560 --> 28:13.360
+ it would be sad if nothing shady happened, but his presence made it shady. Sometimes I feel like
+
+28:13.360 --> 28:19.840
+ that would mark Zuckerberg, the CEO of Facebook. Sometimes I feel like, yeah, there's a lot of
+
+28:19.840 --> 28:25.680
+ shitty things that Facebook is doing. But sometimes I think he makes it look worse, by the way,
+
+28:25.680 --> 28:31.440
+ he presents himself about those things. Like I honestly think that a large amount of people at
+
+28:31.440 --> 28:40.080
+ Facebook just have a huge unstable chaotic system. And they're all not all, but mass are trying to
+
+28:40.080 --> 28:44.800
+ do good with this chaotic system. But the presentation is like, it sounds like there's a lot of
+
+28:44.800 --> 28:51.680
+ back room conversations that are trying to manipulate people. And there's something about
+
+28:51.680 --> 28:57.040
+ the realness that Elon has that it feels like CEO should have. And Vlad had that opportunity.
+
+28:57.040 --> 29:01.440
+ I think Mark Zuckerberg had that too, when he was younger. Younger. And somebody said,
+
+29:01.440 --> 29:07.440
+ you got to be more professional, man. You can't say, you know, lol to an interview. And then
+
+29:07.440 --> 29:12.400
+ suddenly he became like this distant person that was hot. I'd like, you'd rather have him make
+
+29:12.400 --> 29:16.880
+ mistakes, but be honest than be like professional and never make mistakes.
+
+29:17.920 --> 29:24.880
+ Yeah. One of the difficult hires, I think, is like marketing people or like PR people,
+
+29:25.600 --> 29:31.120
+ is you have to hire people that get the fact that you can say lol on an interview. Or,
+
+29:32.880 --> 29:39.760
+ you know, take risks as opposed to what the PR, I've talked to quite a few big CEOs and
+
+29:39.760 --> 29:47.360
+ the people around them are trying to constantly minimize the risk of like, what if he says the
+
+29:47.360 --> 29:51.840
+ wrong thing? What if she says the wrong thing? It's like, what? Like, be careful. It's constantly
+
+29:51.840 --> 29:56.560
+ like, ooh, like, I don't know. And there's this nervous energy that builds up over time with
+
+29:56.560 --> 30:02.160
+ larger, larger teams where the whole thing, like I visited YouTube, for example, everybody I talked
+
+30:02.160 --> 30:09.520
+ to at YouTube, incredible engineering, an incredible system, but everybody's scared. Like, let's be,
+
+30:10.160 --> 30:15.920
+ let's be honest about this like madness that we have going on of huge amounts of video that we
+
+30:15.920 --> 30:21.360
+ can't possibly ever handle. There's a bunch of hate on YouTube. There's this chaos of comments,
+
+30:21.360 --> 30:26.720
+ bunch of conspiracy theories, some of which might be true. And then just like this mess that we're
+
+30:26.720 --> 30:32.720
+ dealing with, and it's exciting, it's beautiful. It's a place where like democratizes education,
+
+30:32.720 --> 30:37.920
+ all that kind of stuff. And instead, they're all like, sitting in like, trying to be very polite
+
+30:37.920 --> 30:41.680
+ and saying like, well, we're just want to improve the health of our platform. Like,
+
+30:44.560 --> 30:49.520
+ all right, man, let's just be real. Let's, let's, let's both advertise how amazing this freaking
+
+30:49.520 --> 30:54.480
+ thing is. But also to say like, we don't know what we're doing. We have all these Nazis posting
+
+30:54.480 --> 30:59.840
+ videos on YouTube. We don't, we don't know how to like handle it. And just being real like that,
+
+30:59.840 --> 31:04.160
+ because I suppose that's just the skill. Maybe it can't be taught. But over time,
+
+31:05.040 --> 31:09.200
+ the, whatever the dynamics of the company is, it does seem like Zuckerberg and others get worn
+
+31:09.200 --> 31:16.320
+ down. They just get tired. They get tired of not being real, of not being real, which is sad.
+
+31:16.320 --> 31:25.600
+ So let's talk about Numeri, which is an incredible company system idea, I think, but good place to
+
+31:25.600 --> 31:33.760
+ start. What is Numeri and how does it work? So Numeri is the first hedge fund that gives away
+
+31:33.760 --> 31:39.360
+ all of its data. So this is like, probably the last thing a hedge fund would do, right? Why would
+
+31:39.360 --> 31:45.760
+ we give away a data? It's like giving away your edge. But the reason we do it is because we're
+
+31:45.760 --> 31:54.320
+ looking for people to model our data. And the way we do it is by obfuscating the data. So when you
+
+31:54.320 --> 32:01.520
+ look at Numeri's data that you can download for free, it just looks like a million rows of numbers
+
+32:01.520 --> 32:07.120
+ between zero and one. And you have no idea what the columns mean. But you do know that if you're
+
+32:08.080 --> 32:13.840
+ good at machine learning or have done regressions before, you know that I can still find patterns
+
+32:13.840 --> 32:19.040
+ in this data even though I don't know what the features mean. And the data itself is a time
+
+32:19.040 --> 32:26.080
+ series data. And even though it's obfuscated, anonymized, what is the source data like
+
+32:26.080 --> 32:31.280
+ approximately? What are we talking about? So we are buying data from lots of different data vendors.
+
+32:32.240 --> 32:38.480
+ And they would also never want us to share that data. So we have strict contracts with them.
+
+32:38.480 --> 32:44.960
+ So we only can, but it's the kind of data you could never buy yourself unless you had maybe
+
+32:44.960 --> 32:50.720
+ a million dollars a year of budget to buy data. So what's happened with the hedge fund industry is
+
+32:51.360 --> 33:00.080
+ you have a lot of talented people who used to be able to trade and still can trade. But now
+
+33:00.080 --> 33:06.240
+ they have such a data disadvantage, it would never make sense for them to trade themselves.
+
+33:06.240 --> 33:10.960
+ But Numeri, by giving away this obfuscated data, we can give them a really, really high quality
+
+33:10.960 --> 33:17.360
+ data set that would otherwise be very expensive. And they can use whatever new machine learning
+
+33:17.360 --> 33:22.720
+ technique they want to find patterns in that data that we can use in our hedge fund.
+
+33:22.720 --> 33:27.120
+ And so how much of a variety is there in underlying data? We're talking about,
+
+33:28.400 --> 33:34.080
+ I apologize if I'm using the wrong terms, but one is just like the stock price. The other,
+
+33:34.080 --> 33:39.440
+ there's options and all that kind of stuff like the, what are they called, order books or whatever.
+
+33:41.120 --> 33:46.800
+ Is there maybe other totally unrelated to directly to the stock market data,
+
+33:48.960 --> 33:51.120
+ natural language as well, all that kind of stuff?
+
+33:51.120 --> 33:58.800
+ Yeah, we were really focused on data that's specific to stocks. So things like,
+
+33:58.800 --> 34:03.600
+ you can have, every stock has a PE ratio. For some stocks, it's not as meaningful,
+
+34:03.600 --> 34:09.360
+ but every stock has that. Every stock has one year momentum, how much they went up in the last year.
+
+34:10.480 --> 34:15.520
+ But those are very common factors. But we try to get lots and lots of those factors that we
+
+34:15.520 --> 34:24.480
+ have for many, many years, like 15, 20 years history. And then the setup of the problem is
+
+34:24.480 --> 34:29.040
+ commonly in quant called like cross sectional global equity. You're not really trying to say,
+
+34:29.040 --> 34:35.680
+ I want, I believe the stock will go up. You're trying to say the relative position of this
+
+34:35.680 --> 34:41.600
+ stock in feature space makes it not a bad buy in a portfolio.
+
+34:41.600 --> 34:46.640
+ So it captures some period of time and you're trying to find the patterns, the dynamics,
+
+34:47.200 --> 34:51.840
+ captured by the data of that period of time in order to make short term predictions about
+
+34:51.840 --> 34:56.400
+ what's going to happen. Yeah. So our predictions are also not that short. We're not really
+
+34:56.400 --> 35:02.640
+ caring about things like order books and tick data, not high frequency at all. We're actually
+
+35:02.640 --> 35:07.600
+ holding things for quite a bit longer. So our prediction time horizon is about one month.
+
+35:07.600 --> 35:11.760
+ We end up holding stocks for maybe like three or four months. So I kind of believe that's a
+
+35:11.760 --> 35:20.880
+ little bit more like investing than kind of plumbing. To go long a stock that's mispriced
+
+35:20.880 --> 35:26.640
+ on one exchange and short on another exchange, that's just arbitrage. But what we're trying
+
+35:26.640 --> 35:31.760
+ to do is really know something more about the longer term future of the stock.
+
+35:31.760 --> 35:38.480
+ Yeah. So from the patterns, from these periods of time series data, you're trying to understand
+
+35:38.480 --> 35:45.760
+ something fundamental about the stock, not about deep value, about as big in the context of the
+
+35:45.760 --> 35:50.960
+ market as underpriced, overpriced, all that kind of stuff. So this is about investing. It's not
+
+35:50.960 --> 35:57.040
+ about just like you said, high frequency trading, which I think is a fascinating open question for
+
+35:57.040 --> 36:02.640
+ a machine learning perspective. But just to build on that, so you've anonymized the data
+
+36:02.640 --> 36:12.880
+ and now you're giving away the data. And then now anyone can try to build algorithms that make
+
+36:12.880 --> 36:16.320
+ investing decisions on top of that data or predictions on the top of that data.
+
+36:16.320 --> 36:23.120
+ Exactly. So what does that look like? What's the goal of that? What are the underlying
+
+36:23.120 --> 36:28.240
+ principles of that? So the first thing is, we could obviously model that data in house.
+
+36:28.960 --> 36:37.200
+ We can make an XGBoost model on the data and that would be quite good too. But what we're trying to
+
+36:37.200 --> 36:45.040
+ do is by opening it up and letting anybody participate, we can do quite a lot better
+
+36:45.040 --> 36:51.120
+ than if we modeled it ourselves. And a lot better on the stock market doesn't need to be
+
+36:51.120 --> 36:57.120
+ very much. It really matters the difference between if you can make 10 and 12% in an equity
+
+36:57.120 --> 37:04.880
+ market neutral hedge fund because usually you're charging 2% fees. So if you can do 2% better,
+
+37:04.880 --> 37:10.320
+ that's all your fees. It's worth it. So we're trying to make sure that we always have the
+
+37:10.320 --> 37:14.800
+ best possible model. As new machine learning libraries come out, new techniques come out,
+
+37:14.800 --> 37:19.760
+ they get automatically synthesized. If there's a great paper on supervised learning,
+
+37:19.760 --> 37:23.440
+ someone on Numeri will figure out how to use it on Numeri's data.
+
+37:23.440 --> 37:32.000
+ And is there an ensemble of models going on? Or is it more towards one or two
+
+37:32.000 --> 37:39.360
+ or three best performing models? So the way we decide on how to weight all of the predictions
+
+37:39.360 --> 37:46.640
+ together is by how much the users are staking on them, how much of the cryptocurrency that
+
+37:46.640 --> 37:50.320
+ they're putting behind their models. So they're saying, I believe in my model.
+
+37:51.200 --> 37:56.480
+ You can trust me because I'm going to put skin in the game. And so we can take the
+
+37:56.480 --> 38:02.160
+ stake weighted predictions from all our users, add those together, average those together.
+
+38:02.160 --> 38:07.120
+ And that's a much better model than any one model in the sum because
+
+38:07.120 --> 38:11.120
+ assembling a lot of models together is kind of the key thing you need to do in investing too.
+
+38:12.240 --> 38:17.680
+ Yeah. So you're putting, there's a kind of duality from the user from the perspective
+
+38:17.680 --> 38:22.400
+ of a machine learning engineer with your, it's both a competition, just a really interesting,
+
+38:22.400 --> 38:29.280
+ difficult machine learning problem. And it's a way to invest algorithmically.
+
+38:30.960 --> 38:38.320
+ But the way to invest algorithmically also is a way to put skin in the game that communicates to
+
+38:38.320 --> 38:47.760
+ you that you're the quality of the algorithm and also forces you to really be serious about the
+
+38:47.760 --> 38:53.920
+ models that you build. So it's like everything just works nicely together. Like, I guess one
+
+38:53.920 --> 39:01.920
+ way to say that is the interests are aligned. Exactly. Okay. So it's just like poker is not
+
+39:01.920 --> 39:07.440
+ fun when it's like for very low stakes, the higher the stakes, the more the dynamics of the system
+
+39:07.440 --> 39:14.000
+ starts playing out correctly. Like as a small side note, is there something you can say about
+
+39:14.000 --> 39:22.000
+ which kind, looking at the big broad view of machine learning today or AI, what kind of algorithms
+
+39:22.880 --> 39:29.440
+ seem to do good in these kinds of competitions at this time? Is there some universal thing you
+
+39:29.440 --> 39:35.040
+ can say like neural networks suck, recurrent neural networks suck, transformers suck, or they're
+
+39:35.040 --> 39:41.840
+ awesome, like old school, sort of more basic kind of classifiers are better. Is there some kind of
+
+39:41.840 --> 39:46.480
+ conclusions so far that you can say? There is. There definitely is something pretty nice about
+
+39:46.480 --> 39:55.280
+ tree models like XGBoost. And they just seem to work pretty nicely on this type of data. So out
+
+39:55.280 --> 40:01.760
+ of the box, if you're trying to come a hundredth in the competition or in the tournament, maybe you
+
+40:01.760 --> 40:10.800
+ would try to use that. But what's particularly interesting about the problem that not many
+
+40:10.800 --> 40:16.960
+ people understand, if you're familiar with machine learning, this typically will surprise you when
+
+40:16.960 --> 40:24.800
+ you model our data. So one of the things that you look at in finance is you don't want to be too
+
+40:24.800 --> 40:35.600
+ exposed to any one risk. Even if the best sector in the world to invest in over the last 10 years
+
+40:35.600 --> 40:42.800
+ was tech, it does not mean you should put all of your money into tech. So if you train a model,
+
+40:42.800 --> 40:48.160
+ it would say put all your money into tech. It's super good. But what you want to do is actually
+
+40:48.160 --> 40:55.680
+ be very careful of how much of this exposure you have to certain features. So on Numeri, what a
+
+40:55.680 --> 41:03.120
+ lot of people figure out is actually if you train a model on this kind of data, you want to somehow
+
+41:03.120 --> 41:09.760
+ neutralize or minimize your exposure to certain features, which is unusual because if you did
+
+41:09.760 --> 41:19.840
+ train a stop light or stop street detection on computer vision, your favorite feature,
+
+41:19.840 --> 41:23.520
+ let's say you have an auto encoder and it's figuring out, okay, it's got to be red and it's
+
+41:23.520 --> 41:31.040
+ got to be white, that's the last thing you want to reduce your exposure to. Why would you reduce
+
+41:31.040 --> 41:35.680
+ your exposure to the thing that's helping you model the most? And that's actually this counter
+
+41:35.680 --> 41:41.280
+ intuitive thing you have to do with machine learning on financial data. So reducing your
+
+41:41.280 --> 41:47.680
+ exposure would help you generalize the things that are, so basically financial data has a large
+
+41:47.680 --> 41:53.680
+ amount of patterns that appeared in the past and also a large amount of patterns that have not
+
+41:53.680 --> 41:58.800
+ appeared in the past. And so in that sense, you have to reduce the exposure to red lights,
+
+41:58.800 --> 42:06.240
+ to the color red. That's interesting, but how much of this is art and how much of it is science
+
+42:06.240 --> 42:12.480
+ from your perspective so far in terms of as you start to climb from the hundredth position to the
+
+42:12.480 --> 42:22.400
+ 95th in the competition? Yeah, well, if you do make yourself super exposed to one or two features,
+
+42:22.400 --> 42:28.320
+ you can have a lot of volatility when you're playing numerite. You could maybe very rapidly
+
+42:28.320 --> 42:35.600
+ rise to be high if you were getting lucky. Yes. And that's a bit like the stock market.
+
+42:35.600 --> 42:42.400
+ Sure. Take on massive risk exposure, put all your money into one stock and you might make 100%,
+
+42:42.400 --> 42:51.280
+ but it doesn't in the long run work out very well. And so the best users are trying to
+
+42:51.280 --> 43:00.080
+ stay high for as long as possible and not necessarily try to be first for a little bit.
+
+43:00.080 --> 43:06.960
+ So to me, a developer, machine learning researcher, how do I like to participate in
+
+43:06.960 --> 43:11.280
+ this competition and how do others, which I'm sure there'll be a lot of others interested
+
+43:11.280 --> 43:15.680
+ in participating in this competition, what are, let's see, there's like a million questions,
+
+43:15.680 --> 43:22.880
+ but like first one is how do I get started? Well, you can go to numerite.ai, sign up,
+
+43:23.440 --> 43:31.840
+ download the data. And on the data is pretty small. In the data pack you download,
+
+43:31.840 --> 43:38.640
+ there's like an example script, Python script, that just builds a XGBoost model very quickly from
+
+43:38.640 --> 43:46.960
+ the data. And so in a very short time, you can have an example model. Is that a particular
+
+43:46.960 --> 43:51.920
+ structure? Like what is this model then submitted somewhere? So there needs to be some kind of
+
+43:51.920 --> 43:57.840
+ structure that communicates with some kind of API. Like how does the whole, how does your model,
+
+43:57.840 --> 44:02.560
+ once you've built, once you create a little baby Frankenstein, how does it then live in its...
+
+44:02.560 --> 44:06.880
+ Okay, well, we want you to keep your baby Frankenstein at home and take care of it. We
+
+44:06.880 --> 44:14.560
+ don't want it. Okay. So you never upload your model to us. You always only giving us predictions.
+
+44:14.560 --> 44:19.040
+ So we never see the code that wrote your model, which is pretty cool, that our whole hedge fund
+
+44:19.040 --> 44:26.000
+ is built from models where we've never ever seen the code. But it's important for the users because
+
+44:26.000 --> 44:30.880
+ it's their IP, why they want to give it to us. That's brilliant. So they've got it themselves,
+
+44:30.880 --> 44:40.880
+ but they can basically almost like license the predictions from that part. So what some users
+
+44:40.880 --> 44:46.320
+ do is they set up a compute server and we call numeric compute. It's like a little AWS kind of
+
+44:46.320 --> 44:52.320
+ image. And you can automate this process. So we can ping you. We can be like, we need more predictions
+
+44:52.320 --> 45:00.240
+ now. And then you send it to us. Okay, cool. So that's, is that described somewhere? Like what
+
+45:00.240 --> 45:06.400
+ the preferred is the AWS or whether another cloud platform, is there, I mean, is there sort of
+
+45:06.400 --> 45:12.320
+ specific technical things you want to say that comes to mind that is a good path for getting
+
+45:12.320 --> 45:18.960
+ started. So download the data, maybe play around, see if you can modify the basic
+
+45:21.120 --> 45:28.800
+ algorithm provided in the example. And then you what set up a little server on the AWS that then
+
+45:28.800 --> 45:35.360
+ runs this model and takes pings and then makes predictions. And so how does your own money
+
+45:35.360 --> 45:40.400
+ actually come into play doing the stake of cryptocurrency?
+
+45:40.400 --> 45:47.200
+ Yeah, so you don't have to stake. You can start without staking. And many users might try for
+
+45:47.200 --> 45:53.520
+ months without staking anything at all to see if their model works on the real life data, right?
+
+45:53.520 --> 46:02.640
+ And is not overfit. But then you can get numerair many different ways. You can buy it on,
+
+46:03.280 --> 46:07.840
+ you can buy some on Coinbase, you can buy some on Uniswap, you can buy some on Binance.
+
+46:09.120 --> 46:13.040
+ So what did you say this is? How do you pronounce it? So this is the numeri
+
+46:14.080 --> 46:19.120
+ cryptocurrency. Yeah, NMR. NMR. What's, you just say NMR?
+
+46:19.120 --> 46:27.120
+ It is technically called numerair. Numerair? I like it. Yeah. But NMR is simple. NMR, numerair.
+
+46:27.120 --> 46:31.760
+ Okay. So, and you could buy it, you know, basically anywhere.
+
+46:31.760 --> 46:35.360
+ Yeah. So it's a bit strange because sometimes people are like, is this like pay to play?
+
+46:36.000 --> 46:42.400
+ Right. And it's like, yeah, you need to put some money down to show us you believe in your model.
+
+46:42.400 --> 46:45.840
+ But weirdly, we're not selling you the cryptocurrency, like you can't buy the
+
+46:45.840 --> 46:53.360
+ cryptocurrency from us. Right. It's like, it's also, we never, if you do badly,
+
+46:54.320 --> 46:59.920
+ we destroy your cryptocurrency. Okay, that's not good, right? You don't want it to be destroyed.
+
+46:59.920 --> 47:05.760
+ But what's good about it is it's also not coming to us. Right. So it's not like we win when you
+
+47:05.760 --> 47:10.640
+ lose or something like, like we're the house, like we're definitely on the same team. Yes.
+
+47:10.640 --> 47:14.000
+ You're helping us make a hedge fund that's never been done before.
+
+47:14.000 --> 47:19.120
+ Yeah. So again, interests are aligned. There's no, there's no tension there at all, which is
+
+47:19.120 --> 47:24.240
+ really fascinating. You're giving away everything and then the IP is owned by sort of the code.
+
+47:24.240 --> 47:30.880
+ You never share the code. That's fascinating. So since I have you here, and you said a hundredth,
+
+47:30.880 --> 47:38.560
+ I didn't ask out of how many. So we'll just, but if I, if I then once you get started and you find
+
+47:38.560 --> 47:47.440
+ this interesting, how do you then win or do well, but also how do you potentially try to win if this
+
+47:47.440 --> 47:51.680
+ is something you want to take on seriously from the machine learning perspective, not from a
+
+47:51.680 --> 47:57.440
+ financial perspective? Yeah, I think the first of all, you want to talk to the community. People
+
+47:57.440 --> 48:02.960
+ are pretty open. We give out really interesting scripts and ideas for things you might want to
+
+48:02.960 --> 48:10.800
+ try. And, but you're also going to need a lot of compute probably. And so some of the best users
+
+48:10.800 --> 48:16.640
+ are, are, you know, actually the very first time someone won on Numeri, I would write them a personal
+
+48:16.640 --> 48:21.760
+ email. It's like, you know, you've won some money. We're so excited to give you $300. And then they
+
+48:21.760 --> 48:29.040
+ said, I spend way more on the compute. So this is fundamental machine learning problem first,
+
+48:29.040 --> 48:34.080
+ I think is this is one of the exciting things. I don't know full in how many ways you can approach
+
+48:34.080 --> 48:42.800
+ this. But really, this is less about kind of no offense, but like finance people finance minded
+
+48:42.800 --> 48:49.440
+ people. They're also I'm sure great people. But it feels like from the community that I've experienced,
+
+48:49.440 --> 48:58.480
+ these are people who see finance as a fascinating problem space, the source of data. But ultimately,
+
+48:58.480 --> 49:03.440
+ they're machine learning people or AI people, which is a very different kind of flavor of community.
+
+49:03.440 --> 49:10.000
+ And I mean, I should say to that, I'd love to participate in this and I will participate in
+
+49:10.000 --> 49:14.240
+ this. And I'd love to hear from other people, if you're listening to this, if you're a machine
+
+49:14.240 --> 49:20.240
+ learning person, you should participate in it and tell me, give me some hints, how I can do
+
+49:20.240 --> 49:26.560
+ well at this thing. Because this boomer, I'm not sure I still got it. But because some of it is,
+
+49:26.560 --> 49:34.240
+ it's like Kaggle competitions, like some of it is certainly set up ideas like research ideas,
+
+49:34.880 --> 49:39.920
+ you know, like fundamental innovation. But I'm sure some of it is like deeply understanding,
+
+49:39.920 --> 49:45.680
+ getting like an intuition about the data. And then like, a lot of it will be like figuring out
+
+49:45.680 --> 49:49.920
+ like what works like tricks. I mean, you could you could argue most of deep learning research
+
+49:49.920 --> 49:57.120
+ is just tricks on top of tricks. But there's a, some of it is just the art of getting to know
+
+49:57.120 --> 49:59.600
+ how to work in a really difficult machine learning problem.
+
+50:00.400 --> 50:04.720
+ And I think what's important, the important difference with something like a Kaggle competition
+
+50:04.720 --> 50:10.800
+ where they'll set up this kind of toy problem. And then they will be out of sample tests like,
+
+50:10.800 --> 50:16.640
+ hey, you did well out of sample. And this is like, okay, cool. But what's cool with Nimera is
+
+50:16.640 --> 50:23.200
+ you're, you're the out of sample is the real life stock market. We, we don't even know,
+
+50:23.200 --> 50:27.600
+ like we don't know the answer to the problem. We don't like, you'll have to find out live.
+
+50:28.240 --> 50:33.280
+ And so we've had users who've like submitted every week for, for like four years.
+
+50:34.800 --> 50:41.200
+ Because it's kind of a interest. We say it's the hardest data science problem on the planet,
+
+50:41.200 --> 50:46.080
+ right? And in that sense, maybe sounds like maybe a bit too much for like a marketing thing. But
+
+50:46.080 --> 50:51.040
+ it's the hardest because it's the stock market. It's like literally there are like billions
+
+50:51.040 --> 50:57.440
+ of dollars at stake and like no one's like letting it be inefficient on purpose. So if you can find
+
+50:57.440 --> 51:02.000
+ something that works on Nimera, you really have something that, that is like working on the real
+
+51:02.000 --> 51:06.720
+ stock market. Yeah, because there's like humans involved in the stock market. I mean, it's,
+
+51:07.520 --> 51:11.280
+ you know, you could argue that might be harder data sets that may be predicting the weather,
+
+51:11.280 --> 51:16.400
+ all those kinds of things. But the fundamental statement here is, which I like, I was thinking
+
+51:16.400 --> 51:21.040
+ like, is this really the hardest data science problem? And you start thinking about that,
+
+51:21.040 --> 51:28.320
+ but ultimately also boils down to a problem where the data is accessible, it's made accessible, made
+
+51:28.320 --> 51:35.520
+ really easy and efficient at like submitting algorithms. So it's not just, you know, it's
+
+51:35.520 --> 51:40.400
+ not about the data being out there, like the weather, it's about making the data super accessible,
+
+51:40.400 --> 51:46.480
+ making the ability to community around it. Like, this is what ImageNet did. Exactly. Like, it's
+
+51:46.480 --> 51:51.920
+ not just, there's always images. The point is, you aggregate them together, you give it a little
+
+51:51.920 --> 51:59.840
+ title, this is community and that, that was one of the hardest, right, for a time. And most important
+
+51:59.840 --> 52:07.600
+ data science problems in the world, because it was accessible because it was made sort of
+
+52:07.600 --> 52:13.520
+ like, there was a mechanisms by which like standards and mechanisms by which to judge your
+
+52:13.520 --> 52:17.760
+ performance, all those kinds of things and numerize access, step up from that. Is there
+
+52:17.760 --> 52:24.080
+ something more you can say about why from your perspective, it's the hardest problem in the
+
+52:24.080 --> 52:28.560
+ world? I mean, you said it's connected to the market. So if you can find a pattern in the market,
+
+52:29.280 --> 52:33.280
+ that's a really difficult thing to do because a lot of people are trying to do it.
+
+52:33.280 --> 52:40.640
+ Exactly. But there's also the, the biggest one is it's, it's non stationary time series. We've
+
+52:40.640 --> 52:46.960
+ tried to regularize the data so you can find patterns by, by doing certain things to the
+
+52:46.960 --> 52:53.200
+ features and the target. But ultimately, you're in a space where you don't, there's no guarantees
+
+52:53.200 --> 53:01.840
+ that the out of sample distributions will conform to any of the training data. And, and every single
+
+53:01.840 --> 53:07.680
+ era, which we call on the website, like every single era in the data, which is like sort of
+
+53:07.680 --> 53:15.120
+ showing you the order of the time. It's, it's even the training data is has the same, same
+
+53:15.120 --> 53:22.160
+ dislocations. And so, yeah, it's, and so, and then there's, you know, yeah, there's so many things
+
+53:22.160 --> 53:28.160
+ that might, might, you might want to try this, this like, there's unlimited possible number
+
+53:28.160 --> 53:39.520
+ of models, right? And so, by, by having it be open, we can at least search that space.
+
+53:40.560 --> 53:45.840
+ Zooming back out to the philosophical, you said that numeri is very much like Wall Street Pets.
+
+53:47.360 --> 53:53.840
+ Is there, I think it'd be interesting to dig in why you think so. I think you're speaking to the
+
+53:53.840 --> 54:00.640
+ distributed nature of the two and the power of the people nature of the two. And so, maybe can
+
+54:00.640 --> 54:06.400
+ you speak to the similarities and the differences and in which ways, numeri more powerful, in which
+
+54:06.400 --> 54:11.680
+ way is Wall Street Pets more powerful? Yeah, this is why the Wall Street Pets story is so interesting
+
+54:11.680 --> 54:17.440
+ to me because it's like feels like connected. Yeah. And looking at how just looking at the
+
+54:17.440 --> 54:22.640
+ forum of Wall Street Pets, it's, I was talking earlier about how, how can you make credible
+
+54:22.640 --> 54:28.160
+ claims? You're anonymous. Okay. Well, maybe you can take a screenshot. How, or maybe you can upvote
+
+54:28.160 --> 54:34.080
+ someone. Maybe you can have karma on Reddit. And those kinds of things make this emerging
+
+54:34.080 --> 54:42.400
+ thing possible. Numeri, it didn't work at all when we started. It didn't work at all. Why?
+
+54:42.400 --> 54:46.960
+ People made multiple accounts. They made really random models and hope they would get lucky.
+
+54:46.960 --> 54:55.120
+ And some of them did. Yes. Staking was our like solution to could we, could we make it so that
+
+54:55.120 --> 55:01.680
+ we could trust, we could know which model people believed in the most. And we could weight models
+
+55:01.680 --> 55:09.040
+ that had high stake more and effectively coordinate this group of people to be like, well, actually,
+
+55:09.040 --> 55:14.720
+ there's no incentive to creating bot accounts anymore. Either I stake my accounts, in which
+
+55:14.720 --> 55:19.840
+ case I should believe in them because I could lose my stake, or I don't. And that's a very powerful
+
+55:19.840 --> 55:25.920
+ thing that having a negative incentive and a positive incentive can make, can make things a
+
+55:25.920 --> 55:31.280
+ lot better. And staking is like this, is this really nice like key thing about blockchain.
+
+55:31.280 --> 55:36.560
+ There's like something special you can do where they don't even trusting us with their stake
+
+55:36.560 --> 55:42.480
+ in some ways. They're trusting the blockchain, right? So the incentives, like you say, it's about
+
+55:42.480 --> 55:47.120
+ making these perfect incentives so that you can have coordination to solve one problem.
+
+55:47.760 --> 55:58.560
+ And nowadays I, I sleep easy because I have less money in my own hedge fund than our users
+
+55:58.560 --> 56:04.080
+ are staking on their models. That's powerful. In some sense, from a human psychology perspective,
+
+56:04.080 --> 56:11.120
+ it's fascinating that the Wall Street bets worked at all, right? That the amidst that chaos,
+
+56:11.120 --> 56:17.200
+ emerging behavior, like behavior that made sense emerged, it would be fascinating to think if
+
+56:17.200 --> 56:23.600
+ numerized style staking could then be transferred to places like Reddit,
+
+56:24.160 --> 56:29.760
+ you know, and not necessarily for financial investments. But like, I wish sometimes people
+
+56:30.960 --> 56:36.240
+ would, you know, would have to stake something in the comments they make on the internet.
+
+56:36.240 --> 56:42.000
+ Yeah. Like that's, that's the problem with anonymity is like, anonymity is freedom and power
+
+56:42.000 --> 56:47.200
+ that you don't have to, you can speak your mind, but it's too easy to just be shitty.
+
+56:48.880 --> 56:54.720
+ Exactly. And so this, I mean, you're making me realize from like a profoundly philosophical
+
+56:55.760 --> 57:02.160
+ aspect, numerized staking is a really clean way to solve this problem. It's a really beautiful way.
+
+57:02.160 --> 57:08.800
+ Of course, it only with numeri currently works for a very particular problem, right? Not for human
+
+57:08.800 --> 57:13.680
+ interaction on the internet, but that's fascinating. Yeah, there's nothing for to stop people. In fact,
+
+57:13.680 --> 57:21.440
+ we've open sourced like the code we use for staking in a protocol we call erasure. And any, if Reddit
+
+57:21.440 --> 57:28.320
+ wanted to, they could even use that code to do have, have enable staking on our Wall Street bets.
+
+57:28.320 --> 57:33.600
+ And they're actually researching now, they've had some Ethereum grants on how could they have more
+
+57:33.600 --> 57:40.640
+ crypto stuff in there in Ethereum, because wouldn't that be interesting? Like imagine you could,
+
+57:41.360 --> 57:48.880
+ instead of seeing a screenshot, like, guys, I promise, I will not sell my GameStop. We're just
+
+57:48.880 --> 57:57.360
+ going to go huge. We're not going to sell at all. And here is a smart contract, which no one in the
+
+57:57.360 --> 58:06.160
+ world, including me, can undo. That says, my, I have staked millions against this claim.
+
+58:07.840 --> 58:12.640
+ That's powerful. And then what could you do? And of course, it doesn't have to be millions. It could
+
+58:12.640 --> 58:17.760
+ be just very small amount, but then just a huge number of users doing that kind of stake. Exactly.
+
+58:19.360 --> 58:24.000
+ That, you know, that could change the internet. It would change and the man Wall Street, it would
+
+58:24.000 --> 58:27.440
+ change Wall Street. They would not, they would never have been able to, they would still be
+
+58:27.440 --> 58:31.760
+ short squeezing one day after the next, every single hedge fund collapsing.
+
+58:32.480 --> 58:38.320
+ If we look into the future, do you think it's possible that Numeri style infrastructure,
+
+58:38.880 --> 58:47.680
+ where AI systems backed by humans are doing the trading, is what the entirety of the stock market
+
+58:47.680 --> 58:55.520
+ is, or the entirety of the economy is run by basically this army of AI systems with high level
+
+58:55.520 --> 59:01.440
+ humans supervision? Yeah, the thing is that some of them could be, could be bad actors.
+
+59:02.480 --> 59:08.080
+ Some of the humans? No, well, these systems could be tricky. So actually, I once met a
+
+59:08.080 --> 59:12.640
+ hedge fund manager. And this is kind of interesting. He said, very famous one. And he said,
+
+59:12.640 --> 59:20.320
+ um, we can see, sometimes we can see things in the market where we know we can make money,
+
+59:20.320 --> 59:25.200
+ but it will mess shit up. Yeah. We know we can make money, but it will mess things up.
+
+59:25.200 --> 59:29.840
+ And we choose not to do those things. And on the one hand, maybe this is like, oh,
+
+59:29.840 --> 59:36.320
+ you're being super arrogant. Of course you can't do this, but maybe he can. And maybe he really
+
+59:36.320 --> 59:42.880
+ isn't doing things he knows he could do, but would change, you know, be pretty bad.
+
+59:43.440 --> 59:53.520
+ Would the Reddit army have that kind of morality or concern for what they're doing?
+
+59:53.520 --> 59:56.800
+ Probably not, based on what we've seen. The madness of crowds.
+
+59:57.440 --> 1:00:02.240
+ There'll be like one person that says, hey, maybe, and then they get trampled over.
+
+1:00:02.240 --> 1:00:06.160
+ Uh, that's, that's the terrifying thing. Actually, this, uh,
+
+1:00:07.200 --> 1:00:11.680
+ a lot of people have written about this is somehow that like little voice,
+
+1:00:11.680 --> 1:00:16.480
+ that's human morality gets silenced when we get in the groups and start chanting.
+
+1:00:16.480 --> 1:00:16.880
+ Yeah.
+
+1:00:17.760 --> 1:00:24.000
+ And that's terrifying. But like, I think, uh, maybe I misunderstood. I thought that, um,
+
+1:00:24.000 --> 1:00:28.240
+ you're saying AI systems can be dangerous, but you just describe how humans can be dangerous.
+
+1:00:28.240 --> 1:00:35.200
+ So which is safer? So, I mean, one thing is, uh, numerite, yeah. So wall street bets,
+
+1:00:35.200 --> 1:00:40.400
+ these kinds of like, these kinds of attacks, like it's not possible to, to model,
+
+1:00:40.400 --> 1:00:46.880
+ numerize data and then come up with the idea from the model, let short screen just game stop.
+
+1:00:46.880 --> 1:00:51.360
+ It's not even framed in that way. It's not like possible to have that idea.
+
+1:00:52.000 --> 1:00:56.320
+ So, but it is possible for like kind of a bunch of humans. So I think there's,
+
+1:00:56.320 --> 1:01:01.760
+ it's, numerite could get very powerful, uh, without it being dangerous.
+
+1:01:01.760 --> 1:01:06.560
+ But wall street bets needs to get a little bit more powerful and it'll be pretty dangerous.
+
+1:01:08.160 --> 1:01:14.320
+ Yeah. Well, I mean, uh, so this is a good place to kind of think about numerite data today,
+
+1:01:15.360 --> 1:01:20.640
+ and numerite signals and what that looks like in 10, 20, 30, 50, 100 years.
+
+1:01:21.680 --> 1:01:25.040
+ You know, like right now, I guess maybe you can correct me, but this,
+
+1:01:25.040 --> 1:01:30.000
+ the data that we're working with is like a window. It's a, you know, anonymized,
+
+1:01:30.720 --> 1:01:35.920
+ obfuscated window into a particular aspect, uh, time period of the market.
+
+1:01:36.640 --> 1:01:41.040
+ And, you know, you can expand that more and more and more and more potentially,
+
+1:01:41.040 --> 1:01:47.040
+ you can imagine in different dimensions to where it encapsulates all the things that, uh,
+
+1:01:47.040 --> 1:01:53.440
+ where you could, uh, include kind of human to human communication that was available for,
+
+1:01:53.440 --> 1:01:57.520
+ like, uh, to buy a GameStop, for example, on, on wall street bets.
+
+1:01:57.520 --> 1:02:04.240
+ So maybe the step back, can you speak to what is numerite signals and, uh,
+
+1:02:04.240 --> 1:02:06.800
+ what are the different data sets that are involved?
+
+1:02:07.360 --> 1:02:14.240
+ So with numerite signals, um, you're still providing, uh, predictions to us, um,
+
+1:02:14.240 --> 1:02:17.360
+ but you can do it from your own data sets.
+
+1:02:18.000 --> 1:02:22.560
+ So numerites all, you have to model our data to come up with predictions.
+
+1:02:22.560 --> 1:02:26.480
+ Numerite signals is whatever data you can find out there,
+
+1:02:26.480 --> 1:02:29.680
+ you can turn it into a signal and give it to us.
+
+1:02:29.680 --> 1:02:34.480
+ So it's a way for us to import signals on data we don't yet have.
+
+1:02:35.360 --> 1:02:42.080
+ And, um, and that's why it's particularly valuable because it's going to be signals.
+
+1:02:42.080 --> 1:02:46.720
+ You're only rewarded for signals that are orthogonal to our core signal.
+
+1:02:46.720 --> 1:02:53.120
+ So you have to be doing something uncorrelated and so strange alternative data tends to have
+
+1:02:53.120 --> 1:02:53.920
+ that property.
+
+1:02:53.920 --> 1:02:59.920
+ There isn't too many other signals that are correlated with, um, with, uh,
+
+1:02:59.920 --> 1:03:02.080
+ you know, what's happening on wall street bets.
+
+1:03:02.080 --> 1:03:05.920
+ That's not going to be like correlated with the price to earnings ratio, right?
+
+1:03:05.920 --> 1:03:10.480
+ Um, and we have some users as of recently, as of like a week ago,
+
+1:03:10.480 --> 1:03:13.520
+ there was a user that created, I think he's in India.
+
+1:03:13.520 --> 1:03:19.520
+ He created, um, a signal that is scraped from wall street bets.
+
+1:03:19.520 --> 1:03:28.000
+ Um, and now we have that signal, uh, as one of our signals in thousands that we use at numerite.
+
+1:03:28.000 --> 1:03:30.000
+ And the structure of the signal is similar.
+
+1:03:30.000 --> 1:03:32.400
+ So this is just numbers and time series data.
+
+1:03:32.400 --> 1:03:33.200
+ It's exactly.
+
+1:03:33.200 --> 1:03:36.800
+ And it's just like, it's kind of a, you're providing a ranking of stocks.
+
+1:03:36.800 --> 1:03:42.400
+ So you just say, give a one means you like the stock, zero means you don't like the stock.
+
+1:03:42.400 --> 1:03:45.760
+ And you provide that for the 5,000 stocks in the world.
+
+1:03:45.760 --> 1:03:50.320
+ And they somehow converted the, the natural language that's in the wall street bet.
+
+1:03:50.320 --> 1:03:50.800
+ Exactly.
+
+1:03:50.800 --> 1:03:51.520
+ So they've come exactly.
+
+1:03:51.520 --> 1:03:54.320
+ So there's then they made, they open source this collab notebook.
+
+1:03:54.320 --> 1:03:56.480
+ Uh, you can go and see it and look at it.
+
+1:03:56.480 --> 1:04:00.720
+ And so yeah, it's taking that, making a sentiment score and then turning it into a
+
+1:04:00.720 --> 1:04:05.920
+ rank of, uh, like this stock sucks or this stock is awesome.
+
+1:04:05.920 --> 1:04:08.000
+ Uh, and then converting that's, that's fast.
+
+1:04:08.000 --> 1:04:10.560
+ Just even looking at that data would be a fascinating.
+
+1:04:10.560 --> 1:04:17.040
+ So on the signal side, what's the vision, this long term, what do you see that becoming?
+
+1:04:17.040 --> 1:04:20.480
+ So we want to manage all the money in the world.
+
+1:04:20.480 --> 1:04:22.080
+ That's Numerize mission.
+
+1:04:22.080 --> 1:04:28.240
+ And to get that, we need to have all the data and have all of the talent.
+
+1:04:28.240 --> 1:04:33.360
+ Like there's no way for the first principles, if you had really good modeling and really
+
+1:04:33.360 --> 1:04:35.840
+ good data that you would lose, right?
+
+1:04:35.840 --> 1:04:40.160
+ Um, it's just a question of how much do you need to get, to get, to get the data?
+
+1:04:40.160 --> 1:04:41.360
+ To get really good.
+
+1:04:41.360 --> 1:04:46.000
+ So Numerize already has some really nice data that we give out this year.
+
+1:04:46.000 --> 1:04:48.240
+ We are 10 xing that.
+
+1:04:48.240 --> 1:04:53.520
+ And I actually think we'll 10 x the amount of data we have on Numerize every year for
+
+1:04:53.520 --> 1:04:55.120
+ at least the next 10 years.
+
+1:04:55.120 --> 1:04:55.760
+ Wow.
+
+1:04:55.760 --> 1:05:02.640
+ So it's going to get very big, the data we give out and signals is more data.
+
+1:05:03.600 --> 1:05:08.960
+ People with any other random data set can turn that into a signal and give it to us.
+
+1:05:08.960 --> 1:05:12.720
+ And in some sense, that kind of data is the edge cases, the weirdness is the,
+
+1:05:12.720 --> 1:05:16.320
+ so you're focused on like the bulk, like the main data.
+
+1:05:16.320 --> 1:05:19.760
+ And then there's just like weirdness from all over the place that just can enter through
+
+1:05:19.760 --> 1:05:21.920
+ this backdoor of the process.
+
+1:05:21.920 --> 1:05:22.560
+ Exactly.
+
+1:05:22.560 --> 1:05:25.760
+ And it's, it's also a little bit shorter term.
+
+1:05:26.320 --> 1:05:33.200
+ So the signals are about a seven day time horizon and the on Numerize, it's like a 30 day.
+
+1:05:33.920 --> 1:05:38.400
+ So it's often for faster situations.
+
+1:05:38.400 --> 1:05:41.760
+ You've written about a master plan and you've mentioned, which I love,
+
+1:05:42.960 --> 1:05:49.520
+ in a similar sort of style of big style thinking, you would like Numerize to manage all of the
+
+1:05:49.520 --> 1:05:50.720
+ world's money.
+
+1:05:52.880 --> 1:05:58.640
+ So how do we get there from, from yesterday to several years from now?
+
+1:05:59.360 --> 1:06:01.120
+ Like what's, what is the plan?
+
+1:06:01.920 --> 1:06:05.120
+ So you've already started to allure to it.
+
+1:06:05.120 --> 1:06:11.760
+ It's like get all the data and get all the talent, humans, models.
+
+1:06:11.760 --> 1:06:12.560
+ Exactly.
+
+1:06:12.560 --> 1:06:16.000
+ I mean, the important thing to note there is what would that mean, right?
+
+1:06:16.000 --> 1:06:20.960
+ And I think the biggest thing it means is like, if there was one hedge fund,
+
+1:06:22.080 --> 1:06:27.600
+ you would have not so much talent wasted on all the other hedge funds.
+
+1:06:27.600 --> 1:06:30.240
+ Like it's super weird how the industry works.
+
+1:06:30.240 --> 1:06:34.880
+ It's like one hedge fund gets a data source and hires a PhD and another hedge fund
+
+1:06:34.880 --> 1:06:37.440
+ has to buy the same data source and hire a PhD.
+
+1:06:37.440 --> 1:06:42.800
+ And suddenly a third of American PhDs are working at hedge funds and we're not even on Mars.
+
+1:06:43.600 --> 1:06:49.600
+ And like, so in some ways Numerize, it's all about freeing up people who work at hedge funds
+
+1:06:49.600 --> 1:06:50.720
+ to go work for Elon.
+
+1:06:52.480 --> 1:06:59.680
+ Yeah. And also the people who are working on Numerize problem, it feels like a lot of the
+
+1:06:59.680 --> 1:07:02.240
+ knowledge there is also transferable to other domains.
+
+1:07:02.240 --> 1:07:02.720
+ Exactly.
+
+1:07:02.720 --> 1:07:07.200
+ One of our top users is, he works at NASA Jet Propulsion Lab.
+
+1:07:08.080 --> 1:07:09.840
+ And he's like amazing.
+
+1:07:09.840 --> 1:07:14.560
+ I went to go visit him there and it's like, he's got like Numerize posters and it's like,
+
+1:07:14.560 --> 1:07:18.640
+ it looks like, you know, the movies, like it looks like Apollo 11 or whatever.
+
+1:07:19.280 --> 1:07:24.960
+ Yeah. The point is, he didn't quit his job to join full time.
+
+1:07:26.080 --> 1:07:29.760
+ He's working on getting us to Jupiter's moon.
+
+1:07:29.760 --> 1:07:31.840
+ That's his mission, the Europa Clipper mission.
+
+1:07:31.840 --> 1:07:33.440
+ Actually, literally what you're saying.
+
+1:07:33.440 --> 1:07:38.400
+ Literally. He's smart enough that we really want his intelligence to reach the stock market.
+
+1:07:38.400 --> 1:07:40.720
+ Because stock market's a good thing, hedge funds are a good thing.
+
+1:07:40.720 --> 1:07:42.160
+ Our kinds of hedge funds, especially.
+
+1:07:42.960 --> 1:07:45.440
+ But we don't want him to quit his job.
+
+1:07:45.440 --> 1:07:47.040
+ So he can just do Numerize on the weekends.
+
+1:07:47.040 --> 1:07:47.680
+ And that's what he does.
+
+1:07:47.680 --> 1:07:50.240
+ He just made a model and it just automatically submits to us.
+
+1:07:50.240 --> 1:07:51.680
+ And he's like one of our best users.
+
+1:07:53.200 --> 1:07:56.160
+ You mentioned briefly that stock markets are good.
+
+1:07:56.160 --> 1:08:03.280
+ For my sort of outsider perspective, is there a sense, do you think trading stocks
+
+1:08:04.400 --> 1:08:09.440
+ is closer to gambling or is it closer to investing?
+
+1:08:09.440 --> 1:08:15.440
+ Sometimes it feels like it's gambling as opposed to betting on companies to succeed.
+
+1:08:15.440 --> 1:08:18.080
+ And this is maybe connected to our discussion of shorting in general.
+
+1:08:18.080 --> 1:08:22.640
+ But from your sense, the way you think about it, is it fundamentally still investing?
+
+1:08:22.640 --> 1:08:27.440
+ I do think, I mean, it's a good question.
+
+1:08:30.080 --> 1:08:33.440
+ I've also seen lately, people say, this is like speculation.
+
+1:08:33.440 --> 1:08:35.600
+ Is there too much speculation in the market?
+
+1:08:35.600 --> 1:08:38.400
+ And it's like, but all the trades are speculative.
+
+1:08:38.400 --> 1:08:40.400
+ Like all the trades have a horizon.
+
+1:08:40.400 --> 1:08:42.080
+ Like people want them to work.
+
+1:08:44.080 --> 1:08:51.600
+ So I would say that there's certainly a lot of aspects of gambling math
+
+1:08:51.600 --> 1:08:53.760
+ that applies to investing.
+
+1:08:53.760 --> 1:08:58.960
+ Like one thing you don't do in gambling is put all your money in one bet.
+
+1:08:58.960 --> 1:09:02.960
+ You have bankroll management, and it's a key part of it.
+
+1:09:03.520 --> 1:09:09.920
+ And small alterations to your bankroll management might be better than improvements to your skill.
+
+1:09:11.760 --> 1:09:14.960
+ And then there are things we care about in our fund.
+
+1:09:14.960 --> 1:09:17.360
+ Like we want to make a lot of independent bets.
+
+1:09:17.360 --> 1:09:18.960
+ We talk about it.
+
+1:09:18.960 --> 1:09:24.400
+ We want to make a lot of independent bets because that's going to be a higher sharp
+
+1:09:24.400 --> 1:09:27.520
+ than if you have a lot of bets that depend on each other, like all in one sector.
+
+1:09:29.840 --> 1:09:40.480
+ But yeah, the point is that you want the prices of the stocks to be reflective of their value.
+
+1:09:40.480 --> 1:09:41.520
+ Of the underlying value.
+
+1:09:41.520 --> 1:09:47.280
+ Yeah, you shouldn't have there be a hedge fund that's able to say, well,
+
+1:09:47.280 --> 1:09:51.360
+ I've looked at some data and all of this stuff is super mispriced.
+
+1:09:51.360 --> 1:09:55.440
+ That's super bad for society if it looks like that to someone.
+
+1:09:55.440 --> 1:10:02.880
+ I guess the underlying question then is, do you see that the market often drifts away from
+
+1:10:03.440 --> 1:10:06.720
+ the underlying value of companies and it becomes a game in itself?
+
+1:10:06.720 --> 1:10:19.680
+ What are these derivatives options and shorting and all that kind of stuff?
+
+1:10:19.680 --> 1:10:26.080
+ It's like layers of game on top of the actual what you said, which is the basic thing that
+
+1:10:26.080 --> 1:10:28.800
+ the Wall Street Bets was doing, which is just buying stocks.
+
+1:10:29.680 --> 1:10:33.760
+ Yeah, there are a lot of games that people play that are
+
+1:10:33.760 --> 1:10:36.880
+ in the derivatives market.
+
+1:10:36.880 --> 1:10:41.920
+ And I think a lot of the stuff people dislike when they look at the history of what's happened,
+
+1:10:42.480 --> 1:10:48.000
+ they hate credit default swaps or collateralized debt obligations.
+
+1:10:48.000 --> 1:10:52.080
+ Like these are the enemies of 2008.
+
+1:10:52.080 --> 1:10:57.360
+ And then the long term capital management thing, it was like that 30 times leverage
+
+1:10:57.360 --> 1:11:05.680
+ or something. You could just go to a gas station and ask anybody at the gas station,
+
+1:11:05.680 --> 1:11:07.440
+ is it a good idea to have 30 times leverage?
+
+1:11:08.080 --> 1:11:08.720
+ And they just say no.
+
+1:11:09.360 --> 1:11:11.520
+ It's a common sense just like went out the window.
+
+1:11:15.760 --> 1:11:18.320
+ I don't respect long term capital management.
+
+1:11:21.600 --> 1:11:26.160
+ But Numerain doesn't actually use any derivatives unless you call shorting derivative.
+
+1:11:26.160 --> 1:11:28.640
+ We do put money into companies.
+
+1:11:30.080 --> 1:11:32.160
+ That does help the companies we're investing in.
+
+1:11:32.160 --> 1:11:33.280
+ It's just in little ways.
+
+1:11:34.320 --> 1:11:43.440
+ We really did buy Tesla and we played some role in its success.
+
+1:11:44.080 --> 1:11:46.480
+ Super small, make no mistake.
+
+1:11:46.480 --> 1:11:48.160
+ But still, I think that's important.
+
+1:11:48.160 --> 1:11:53.840
+ Can I ask you a pothead question, which is what is money, man?
+
+1:11:53.840 --> 1:12:01.920
+ So if we just kind of zoom out and look at, because let's talk to you about cryptocurrency,
+
+1:12:01.920 --> 1:12:03.680
+ which perhaps could be the future of money.
+
+1:12:04.320 --> 1:12:07.520
+ In general, how do you think about money?
+
+1:12:07.520 --> 1:12:14.560
+ You said Numerain, the vision, the goal is to run to manage the world's money.
+
+1:12:15.440 --> 1:12:18.160
+ What is money in your view?
+
+1:12:18.160 --> 1:12:25.120
+ I don't have a good answer to that, but it's definitely in my personal life,
+
+1:12:25.120 --> 1:12:27.600
+ it's become more and more warped.
+
+1:12:29.120 --> 1:12:32.800
+ And you start to care about the real thing.
+
+1:12:33.840 --> 1:12:35.280
+ What's really going on here?
+
+1:12:36.880 --> 1:12:40.320
+ Elon talks about things like this, like what is a company?
+
+1:12:40.320 --> 1:12:40.720
+ Really?
+
+1:12:40.720 --> 1:12:45.440
+ It's like a bunch of people who kind of show up to work together and they solve a problem.
+
+1:12:45.440 --> 1:12:49.760
+ And there might be a stock out there that's trading that represents what they're doing,
+
+1:12:49.760 --> 1:12:51.680
+ but it's not the real thing.
+
+1:12:52.880 --> 1:13:03.280
+ And being involved in crypto, I put in crowd sale of Ethereum and all these other things,
+
+1:13:03.280 --> 1:13:06.960
+ and different crypto hedge funds and things that I've invested in.
+
+1:13:06.960 --> 1:13:15.840
+ And it feels like how I used to think about money stuff is just totally warped.
+
+1:13:15.840 --> 1:13:24.720
+ Because you stop caring about the price and you care about the product.
+
+1:13:25.920 --> 1:13:30.160
+ But the product, you mean the different mechanisms that money has exchanged?
+
+1:13:31.040 --> 1:13:35.040
+ Money is ultimately a kind of, one is the store of wealth,
+
+1:13:35.040 --> 1:13:37.840
+ but it's also a mechanism of exchanging wealth.
+
+1:13:38.640 --> 1:13:42.480
+ But what wealth means becomes a totally different thing,
+
+1:13:42.480 --> 1:13:46.880
+ especially with cryptocurrency, where it's almost like these little contracts,
+
+1:13:46.880 --> 1:13:51.120
+ these little agreements, these transactions between human beings that represent
+
+1:13:51.840 --> 1:13:58.080
+ something that's bigger than just cash being exchanged at 7.11, it feels like.
+
+1:13:58.080 --> 1:14:00.400
+ Yeah, maybe I'll answer what is finance.
+
+1:14:00.400 --> 1:14:08.000
+ It's what are you doing when you have the ability to take out a loan?
+
+1:14:08.640 --> 1:14:14.160
+ You can bring a whole new future into being with finance.
+
+1:14:15.760 --> 1:14:20.160
+ If you couldn't get a student loan to get a college degree,
+
+1:14:20.160 --> 1:14:23.840
+ you couldn't get a college degree if you didn't have the money.
+
+1:14:23.840 --> 1:14:30.560
+ But now, weirdly, you can get it with, yeah, all you have is this loan,
+
+1:14:30.560 --> 1:14:34.160
+ which is like, so now you can bring a different future into the world.
+
+1:14:34.160 --> 1:14:37.920
+ And that's how, when I was saying earlier about, if you rerun American history,
+
+1:14:37.920 --> 1:14:42.320
+ economic history, without these things, you're not allowed to take out loans,
+
+1:14:42.320 --> 1:14:45.600
+ you're not allowed to have derivatives, you're not allowed to have money,
+
+1:14:46.880 --> 1:14:48.800
+ it just doesn't really work.
+
+1:14:48.800 --> 1:14:53.200
+ And it's a really magic thing, how much you can do with finance,
+
+1:14:53.200 --> 1:14:55.360
+ by kind of bringing the future forward.
+
+1:14:55.920 --> 1:15:00.960
+ Finance is empowering, we sometimes forget this, but yeah, it enables innovation,
+
+1:15:00.960 --> 1:15:05.440
+ it enables big risk takers and bold builders that ultimately make this world better.
+
+1:15:06.000 --> 1:15:09.680
+ You said you were early in on cryptocurrency.
+
+1:15:09.680 --> 1:15:14.320
+ Can you give your high level overview of just your thoughts about the past,
+
+1:15:14.320 --> 1:15:16.800
+ present, and future of cryptocurrency?
+
+1:15:17.600 --> 1:15:22.000
+ Yeah, so my friends told me about Bitcoin and I was interested in
+
+1:15:22.000 --> 1:15:27.040
+ equities a lot, and I was like, well, it has no net present value,
+
+1:15:27.600 --> 1:15:31.760
+ it has no future cash flows, Bitcoin pays no dividends.
+
+1:15:32.960 --> 1:15:37.520
+ So I really couldn't get my head around it, that this could be valuable.
+
+1:15:39.440 --> 1:15:44.240
+ And then I, but I did, so I didn't feel like I was early in cryptocurrency,
+
+1:15:44.240 --> 1:15:48.320
+ in fact, because I was like, it was like 2014, it felt like a long time off the Bitcoin.
+
+1:15:48.320 --> 1:15:54.080
+ And then, but then I really liked some of the things that Ethereum was doing,
+
+1:15:54.080 --> 1:15:56.800
+ it seemed like a super visionary thing.
+
+1:15:56.800 --> 1:16:00.560
+ Like I was reading something that was just going to change the world
+
+1:16:00.560 --> 1:16:01.760
+ when I was reading the white paper.
+
+1:16:03.280 --> 1:16:07.840
+ And I liked the different constructs you could have inside of Ethereum
+
+1:16:07.840 --> 1:16:09.600
+ that you couldn't have on Bitcoin.
+
+1:16:09.600 --> 1:16:11.760
+ Like smart contracts and all that kind of stuff.
+
+1:16:11.760 --> 1:16:16.400
+ Exactly, yeah, and even spoke about different,
+
+1:16:16.400 --> 1:16:18.720
+ different, yeah, different constructions you could have.
+
+1:16:18.720 --> 1:16:21.840
+ Yeah, that's the cool dance between Bitcoin and Ethereum of,
+
+1:16:21.840 --> 1:16:23.520
+ it's in the space of ideas.
+
+1:16:23.520 --> 1:16:24.480
+ It feels so young.
+
+1:16:25.120 --> 1:16:29.760
+ Like I wonder what cryptocurrencies will look like in the future.
+
+1:16:29.760 --> 1:16:34.320
+ Like if Bitcoin or Ethereum 2.0 or some version will stick around
+
+1:16:34.320 --> 1:16:37.040
+ or any of those, like who's going to win out,
+
+1:16:37.040 --> 1:16:39.840
+ or if there's even a concept of winning out at all.
+
+1:16:39.840 --> 1:16:43.200
+ Is there a cryptocurrency that you're especially
+
+1:16:43.200 --> 1:16:48.800
+ really find interesting that technically financially,
+
+1:16:48.800 --> 1:16:53.120
+ philosophically you think is something you're keeping your eye on?
+
+1:16:54.000 --> 1:16:57.920
+ Well, I don't really, I'm not looking to like invest in cryptocurrencies anymore.
+
+1:16:59.120 --> 1:17:04.960
+ But I, they are, I mean, they're, and many are almost identical.
+
+1:17:04.960 --> 1:17:08.240
+ I mean, there's not, there wasn't too much difference
+
+1:17:08.240 --> 1:17:12.000
+ between even Ethereum and Bitcoin in some ways, right?
+
+1:17:12.000 --> 1:17:14.560
+ But there are some that I like the privacy ones.
+
+1:17:14.560 --> 1:17:17.680
+ I mean, I was like, I like Zcash for its like coolness.
+
+1:17:17.680 --> 1:17:22.160
+ It's actually, it's like a different kind of invention
+
+1:17:22.160 --> 1:17:24.160
+ compared to some of the other things.
+
+1:17:24.160 --> 1:17:27.040
+ Can you speak to just briefly to privacy?
+
+1:17:27.760 --> 1:17:30.960
+ What is there some mechanism of preserving some privacy of the,
+
+1:17:30.960 --> 1:17:33.120
+ so I guess everything is public.
+
+1:17:33.120 --> 1:17:37.120
+ Yeah, the, yeah, none of the transactions are private.
+
+1:17:37.120 --> 1:17:42.080
+ And so, you know, even like, I have some of my,
+
+1:17:42.080 --> 1:17:45.040
+ I have some numeraire and you can just see it.
+
+1:17:45.040 --> 1:17:47.040
+ In fact, you can go to a website and says like,
+
+1:17:47.040 --> 1:17:49.520
+ you can go to like ETHIScan and it'll say like,
+
+1:17:49.520 --> 1:17:53.920
+ numeraifounder and I'm like, how the hell do you guys know this?
+
+1:17:53.920 --> 1:17:57.440
+ So they can reverse engine and then, you know, whatever that's called.
+
+1:17:57.440 --> 1:17:59.280
+ Yeah. And so they can see me move it too.
+
+1:17:59.280 --> 1:18:01.200
+ They can see me. Oh, why is he moving it?
+
+1:18:01.200 --> 1:18:01.840
+ Yeah.
+
+1:18:03.120 --> 1:18:06.240
+ So, you know, you can see the, you know,
+
+1:18:06.240 --> 1:18:10.720
+ so, but yeah, Zcash, they're also,
+
+1:18:10.720 --> 1:18:12.480
+ when you can make private transactions,
+
+1:18:12.480 --> 1:18:14.400
+ you can also play different games.
+
+1:18:14.400 --> 1:18:14.720
+ Yes.
+
+1:18:15.520 --> 1:18:17.760
+ And it's unclear.
+
+1:18:17.760 --> 1:18:19.440
+ It's like, what's quite cool about Zcash is,
+
+1:18:19.440 --> 1:18:20.800
+ I wonder what games are being played there.
+
+1:18:21.440 --> 1:18:22.160
+ No one will know.
+
+1:18:22.960 --> 1:18:26.080
+ So from a deeply analytical perspective,
+
+1:18:27.120 --> 1:18:30.000
+ can you describe why Dogecoin is going to win?
+
+1:18:31.040 --> 1:18:32.240
+ Which it surely will.
+
+1:18:32.240 --> 1:18:34.800
+ Like it very likely will take over the world.
+
+1:18:34.800 --> 1:18:37.200
+ And once we expand out into the universe,
+
+1:18:37.200 --> 1:18:38.400
+ it will take over the universe.
+
+1:18:39.840 --> 1:18:42.160
+ Or in a more serious note, like,
+
+1:18:42.160 --> 1:18:45.040
+ what are your thoughts on the recent success of Dogecoin?
+
+1:18:45.040 --> 1:18:49.040
+ Where you've spoken to sort of the meme stocks,
+
+1:18:49.040 --> 1:18:50.640
+ the memetics of the whole thing,
+
+1:18:51.200 --> 1:18:57.520
+ that it feels like the joke can become the reality.
+
+1:18:58.080 --> 1:19:02.320
+ Like the meme, the joke has power in this world.
+
+1:19:02.320 --> 1:19:03.280
+ Yeah. It's fascinating.
+
+1:19:03.280 --> 1:19:04.560
+ Exactly.
+
+1:19:05.440 --> 1:19:12.080
+ It's like, why is it correlated with Elon tweeting about it?
+
+1:19:12.080 --> 1:19:14.880
+ It's not just Elon alone tweeting, right?
+
+1:19:14.880 --> 1:19:18.640
+ It's like Elon tweeting and that becomes a catalyst
+
+1:19:18.640 --> 1:19:20.160
+ for everybody on the internet,
+
+1:19:20.160 --> 1:19:22.720
+ kind of like spreading the joke, right?
+
+1:19:22.720 --> 1:19:23.360
+ Exactly.
+
+1:19:23.360 --> 1:19:24.080
+ The joke of it.
+
+1:19:24.080 --> 1:19:27.440
+ So it's the initial spark of the fire
+
+1:19:27.440 --> 1:19:30.000
+ for Wall Street Bets type of situation.
+
+1:19:30.560 --> 1:19:30.880
+ Yeah.
+
+1:19:30.880 --> 1:19:36.320
+ And that's fascinating because jokes seem to spread faster
+
+1:19:36.320 --> 1:19:37.760
+ than other mechanisms.
+
+1:19:37.760 --> 1:19:38.080
+ Yeah.
+
+1:19:38.080 --> 1:19:45.200
+ Funny shit is very effective at captivating the discourse
+
+1:19:45.200 --> 1:19:45.920
+ on the internet.
+
+1:19:47.120 --> 1:19:48.480
+ Yeah. And I think you can have,
+
+1:19:49.360 --> 1:19:50.720
+ like though I like the one meme,
+
+1:19:51.440 --> 1:19:53.520
+ like Doge, I haven't heard that name in a long time.
+
+1:19:57.680 --> 1:20:00.080
+ Like, I think back to that meme often.
+
+1:20:00.080 --> 1:20:01.680
+ That's like funny.
+
+1:20:01.680 --> 1:20:03.440
+ And every time I think back to it,
+
+1:20:04.000 --> 1:20:06.960
+ there's a little probability that I might buy.
+
+1:20:06.960 --> 1:20:07.920
+ Buy some Doge kind.
+
+1:20:07.920 --> 1:20:08.640
+ Right.
+
+1:20:08.640 --> 1:20:11.120
+ And so I imagine you should have millions of people
+
+1:20:11.120 --> 1:20:13.440
+ who have had all these great jokes told them.
+
+1:20:14.400 --> 1:20:16.160
+ And every now and then they reminisce,
+
+1:20:16.160 --> 1:20:17.760
+ oh, that was really funny.
+
+1:20:17.760 --> 1:20:20.000
+ And then they're like, let me buy some.
+
+1:20:21.840 --> 1:20:24.000
+ Wouldn't that be interesting if like the entire,
+
+1:20:24.000 --> 1:20:26.560
+ if we travel in time, like multiple centuries,
+
+1:20:26.560 --> 1:20:29.520
+ where the entirety of the communication
+
+1:20:29.520 --> 1:20:32.160
+ of the human species is like humor.
+
+1:20:33.360 --> 1:20:35.360
+ Like it's all just jokes.
+
+1:20:35.360 --> 1:20:38.400
+ Like we're high on probably some really advanced drugs.
+
+1:20:39.760 --> 1:20:42.400
+ And we're all just laughing nonstop.
+
+1:20:42.400 --> 1:20:46.560
+ It's a weird like dystopian future of just humor.
+
+1:20:47.280 --> 1:20:53.120
+ Elon has made me realize how like good it feels
+
+1:20:53.120 --> 1:20:55.360
+ to just not take shit seriously every once in a while
+
+1:20:55.360 --> 1:20:57.920
+ and just relieve like the pressure of the world.
+
+1:20:58.560 --> 1:21:03.200
+ At the same time, the reason I don't always like
+
+1:21:03.200 --> 1:21:05.280
+ when people finish their sentences with lol
+
+1:21:06.320 --> 1:21:10.800
+ is like that you don't, when you don't take anything seriously,
+
+1:21:11.360 --> 1:21:13.040
+ when everything becomes a joke,
+
+1:21:14.000 --> 1:21:19.520
+ then it feels like that way of thinking
+
+1:21:20.240 --> 1:21:22.320
+ feels like it will destroy the world.
+
+1:21:22.320 --> 1:21:24.000
+ It's like, I often think it like,
+
+1:21:24.000 --> 1:21:25.920
+ well, me and save the world to destroy
+
+1:21:25.920 --> 1:21:28.640
+ because I think both are possible directions.
+
+1:21:28.640 --> 1:21:30.320
+ Yeah. I think this is a big problem.
+
+1:21:30.320 --> 1:21:32.640
+ I mean, America, I always felt that about America.
+
+1:21:33.200 --> 1:21:35.680
+ A lot of people are telling jokes kind of all the time
+
+1:21:36.320 --> 1:21:37.600
+ and they're kind of good at it.
+
+1:21:38.800 --> 1:21:41.920
+ And you take someone aside and American,
+
+1:21:41.920 --> 1:21:44.080
+ you're like, I really want to have a sincere conversation.
+
+1:21:44.080 --> 1:21:46.080
+ It's like hard to even keep a straight face
+
+1:21:46.640 --> 1:21:49.600
+ because everything is so, there's so much levity.
+
+1:21:50.240 --> 1:21:51.200
+ So it's complicated.
+
+1:21:51.200 --> 1:21:54.800
+ I like how sincere actually like your Twitter can be.
+
+1:21:54.800 --> 1:21:57.120
+ You're like, I am in love with the world today.
+
+1:21:57.120 --> 1:21:59.280
+ Yeah. I get so much shit for it.
+
+1:22:00.480 --> 1:22:02.960
+ I'm never going to stop because I realize like,
+
+1:22:02.960 --> 1:22:05.120
+ you have to be able to sometimes just be real
+
+1:22:05.120 --> 1:22:09.120
+ and be positive and just be save the cliche things,
+
+1:22:09.120 --> 1:22:11.840
+ which ultimately those things actually capture
+
+1:22:11.840 --> 1:22:14.160
+ some fundamental truths about life.
+
+1:22:14.880 --> 1:22:14.880
+ Yeah.
+
+1:22:14.880 --> 1:22:16.480
+ But it's a dance.
+
+1:22:16.480 --> 1:22:19.280
+ And I think Elon does a good job of that
+
+1:22:19.280 --> 1:22:22.880
+ from an engineering perspective of being able to joke,
+
+1:22:22.880 --> 1:22:26.800
+ but everyone's mostly to pull back and be like,
+
+1:22:26.800 --> 1:22:27.920
+ here's real problems.
+
+1:22:27.920 --> 1:22:29.600
+ Let's solve them and so on.
+
+1:22:29.600 --> 1:22:31.680
+ And then be able to jump back to a joke.
+
+1:22:31.680 --> 1:22:33.920
+ So it's ultimately, I think,
+
+1:22:33.920 --> 1:22:36.800
+ I guess a skill that we have to learn.
+
+1:22:38.960 --> 1:22:41.680
+ But I guess your advice is to invest everything
+
+1:22:41.680 --> 1:22:44.560
+ anyone listening owns into Dogecoin.
+
+1:22:44.560 --> 1:22:45.600
+ That's what I heard from this interaction.
+
+1:22:45.600 --> 1:22:46.640
+ Yeah, no, exactly.
+
+1:22:46.640 --> 1:22:49.360
+ Yeah, our hedge fund is unavailable.
+
+1:22:50.240 --> 1:22:51.520
+ Just go straight to Dogecoin.
+
+1:22:52.240 --> 1:22:54.320
+ You're running a successful company.
+
+1:22:55.200 --> 1:22:58.480
+ It's just interesting because my mind has been in that space
+
+1:22:58.480 --> 1:23:02.560
+ of potentially being one of the millions other entrepreneurs.
+
+1:23:03.520 --> 1:23:08.240
+ What's your advice on how to build a successful startup,
+
+1:23:08.240 --> 1:23:09.760
+ how to build a successful company?
+
+1:23:10.320 --> 1:23:13.600
+ I think that one thing I do like,
+
+1:23:13.600 --> 1:23:16.800
+ and it might be a particular thing about America,
+
+1:23:16.800 --> 1:23:19.760
+ but there is something about playing,
+
+1:23:20.480 --> 1:23:23.280
+ tell people what you really want to happen in the world.
+
+1:23:23.280 --> 1:23:24.880
+ Like, don't stop.
+
+1:23:26.400 --> 1:23:27.440
+ It's not going to make it,
+
+1:23:28.560 --> 1:23:30.960
+ like if you're asking someone to invest in your company,
+
+1:23:30.960 --> 1:23:34.320
+ don't say, I think maybe one day we might make a million dollars.
+
+1:23:35.840 --> 1:23:38.400
+ When you actually believe something else,
+
+1:23:38.400 --> 1:23:41.360
+ you actually believe you're actually more optimistic,
+
+1:23:41.360 --> 1:23:43.920
+ but you're toning down your optimism
+
+1:23:43.920 --> 1:23:49.280
+ because you want to appear low risk.
+
+1:23:49.920 --> 1:23:54.320
+ But actually it's super high risk if your company becomes mediocre
+
+1:23:55.360 --> 1:23:57.360
+ because no one wants to work in a mediocre company,
+
+1:23:57.360 --> 1:23:58.800
+ no one wants to invest in mediocre people.
+
+1:23:59.920 --> 1:24:01.520
+ So you should play the real game.
+
+1:24:02.480 --> 1:24:04.320
+ And obviously this doesn't apply to all businesses,
+
+1:24:04.320 --> 1:24:06.960
+ but if you play a venture backed startup kind of game,
+
+1:24:06.960 --> 1:24:12.560
+ like play for keeps, play to win, go big, and it's very hard to do that.
+
+1:24:12.560 --> 1:24:19.760
+ I've always feel like, yeah, you can start narrowing your focus
+
+1:24:19.760 --> 1:24:22.080
+ because 10 people are telling you,
+
+1:24:22.080 --> 1:24:25.520
+ you got to care about this boring thing
+
+1:24:25.520 --> 1:24:26.880
+ that won't matter five years from now.
+
+1:24:27.520 --> 1:24:31.520
+ And you should push back and do the real, play the real game.
+
+1:24:31.520 --> 1:24:32.560
+ It should be bold.
+
+1:24:32.560 --> 1:24:36.560
+ There's an interesting duality there.
+
+1:24:36.560 --> 1:24:41.120
+ So there's the way you speak to other people about your plans
+
+1:24:41.120 --> 1:24:46.160
+ and what you are privately, just in your own mind.
+
+1:24:46.160 --> 1:24:50.160
+ And maybe it's connected with what you're saying about sincerity as well.
+
+1:24:50.160 --> 1:24:55.280
+ If you appear to be sincerely optimistic about something
+
+1:24:55.280 --> 1:24:57.600
+ that's big or crazy,
+
+1:24:57.600 --> 1:25:01.120
+ it's putting yourself up to be kind of ridiculed or something.
+
+1:25:01.120 --> 1:25:05.840
+ And so if you say, my mission is to go to Mars,
+
+1:25:05.840 --> 1:25:10.080
+ it's just so bonkers that it's hard to say.
+
+1:25:10.080 --> 1:25:14.240
+ It is, but one powerful thing, just like you said,
+
+1:25:15.520 --> 1:25:17.920
+ is if you say it and you believe it,
+
+1:25:19.120 --> 1:25:23.360
+ then actually amazing people come and work with you.
+
+1:25:23.360 --> 1:25:24.160
+ Exactly.
+
+1:25:24.160 --> 1:25:26.560
+ It's not just skill, but the dreams.
+
+1:25:26.560 --> 1:25:28.240
+ There's something about optimism
+
+1:25:28.240 --> 1:25:31.280
+ that like that fire that you have when you're optimistic
+
+1:25:31.280 --> 1:25:34.560
+ of actually having the hope of building something totally cool,
+
+1:25:34.560 --> 1:25:35.920
+ something totally new,
+
+1:25:35.920 --> 1:25:38.320
+ that when those people get in a room together,
+
+1:25:38.320 --> 1:25:40.000
+ like they can actually do it.
+
+1:25:40.000 --> 1:25:40.720
+ Yeah.
+
+1:25:40.720 --> 1:25:44.320
+ Yeah, there's, yeah, there's, that's,
+
+1:25:44.320 --> 1:25:48.000
+ and also makes life really fun when you're in that room.
+
+1:25:48.000 --> 1:25:52.560
+ So all of that together, ultimately, I don't know,
+
+1:25:52.560 --> 1:25:55.040
+ that's what makes this crazy ride of a startup
+
+1:25:55.040 --> 1:25:57.120
+ really, really exciting.
+
+1:25:57.120 --> 1:25:59.520
+ A startup really look fun.
+
+1:25:59.520 --> 1:26:02.320
+ And Elon is an example of a person who succeeded at that.
+
+1:26:02.320 --> 1:26:05.040
+ There's not many other inspiring figures, which is sad.
+
+1:26:06.080 --> 1:26:07.680
+ I used to be a Google and there's,
+
+1:26:10.000 --> 1:26:11.600
+ there's something that happens that sometimes
+
+1:26:11.600 --> 1:26:14.400
+ when the company grows bigger and bigger and bigger,
+
+1:26:14.400 --> 1:26:18.240
+ where that kind of ambition kind of quits down a little bit.
+
+1:26:18.240 --> 1:26:18.800
+ Yeah.
+
+1:26:18.800 --> 1:26:21.760
+ You know, Google had this ambition still does
+
+1:26:21.760 --> 1:26:24.240
+ of making the world's information accessible to everyone.
+
+1:26:24.240 --> 1:26:27.040
+ And I remember, I don't know, that's beautiful.
+
+1:26:28.320 --> 1:26:31.120
+ I still love that dream of,
+
+1:26:31.120 --> 1:26:32.480
+ that, you know, they used to scan books,
+
+1:26:32.480 --> 1:26:34.080
+ but just in every way possible,
+
+1:26:34.080 --> 1:26:36.720
+ make the world's information accessible.
+
+1:26:36.720 --> 1:26:37.920
+ Same with Wikipedia.
+
+1:26:37.920 --> 1:26:39.520
+ Every time I open up Wikipedia,
+
+1:26:41.520 --> 1:26:46.080
+ I'm just awe inspired by how awesome humans are, man.
+
+1:26:46.080 --> 1:26:47.920
+ And creating this together,
+
+1:26:47.920 --> 1:26:49.600
+ I don't know what the meetings are over there,
+
+1:26:49.600 --> 1:26:52.000
+ but they, it's just beautiful.
+
+1:26:52.000 --> 1:26:54.480
+ Like what they've created is incredible.
+
+1:26:54.480 --> 1:26:57.280
+ And I'd love to be able to be part of something like that.
+
+1:26:58.080 --> 1:26:59.200
+ And you're right.
+
+1:26:59.200 --> 1:27:00.400
+ For that, you have to be bold.
+
+1:27:00.960 --> 1:27:02.720
+ And there's, and strange to me also,
+
+1:27:02.720 --> 1:27:03.920
+ I think you're right that there's
+
+1:27:03.920 --> 1:27:05.600
+ how many boring companies there are.
+
+1:27:05.600 --> 1:27:06.080
+ Right.
+
+1:27:06.080 --> 1:27:08.000
+ Something I always talk about, especially in fintech.
+
+1:27:08.000 --> 1:27:10.640
+ It's like, why am I excited about this?
+
+1:27:10.640 --> 1:27:12.000
+ This is so lame.
+
+1:27:12.000 --> 1:27:15.600
+ Like what is, this isn't even like important.
+
+1:27:15.600 --> 1:27:18.160
+ Even if you succeed, this is going to be like, terrible.
+
+1:27:18.160 --> 1:27:18.720
+ Yeah.
+
+1:27:18.720 --> 1:27:19.360
+ This is not good.
+
+1:27:19.360 --> 1:27:22.160
+ This is not good. And it's just strange
+
+1:27:22.160 --> 1:27:24.800
+ how people can kind of get fake enthusiastic
+
+1:27:25.360 --> 1:27:26.960
+ about like boring ideas.
+
+1:27:26.960 --> 1:27:27.760
+ Yeah.
+
+1:27:27.760 --> 1:27:32.720
+ When there's so many bigger ideas that, yeah.
+
+1:27:32.720 --> 1:27:33.840
+ I mean, you read these things like,
+
+1:27:33.840 --> 1:27:35.360
+ this company raises money and it's just like,
+
+1:27:35.360 --> 1:27:37.840
+ that's a lot of money for the worst idea I've ever heard.
+
+1:27:38.480 --> 1:27:41.360
+ Some ideas are really big.
+
+1:27:41.360 --> 1:27:43.760
+ So like I worked on autonomous vehicles quite a bit.
+
+1:27:44.480 --> 1:27:47.360
+ And there's so many ways in which
+
+1:27:47.360 --> 1:27:49.120
+ you can present that idea to yourself
+
+1:27:49.120 --> 1:27:51.360
+ to the team you work with to just, yeah.
+
+1:27:51.360 --> 1:27:53.360
+ Like to yourself when you're quietly looking
+
+1:27:53.360 --> 1:27:54.320
+ in the mirror in the morning,
+
+1:27:55.120 --> 1:27:57.600
+ that's really boring or really exciting.
+
+1:27:58.160 --> 1:28:00.800
+ Like if you're really ambitious with autonomous vehicles,
+
+1:28:01.760 --> 1:28:06.240
+ there, it changes the nature of like human robot interaction.
+
+1:28:06.240 --> 1:28:08.080
+ It's changing the nature of how we move.
+
+1:28:08.080 --> 1:28:08.720
+ Forget money.
+
+1:28:08.720 --> 1:28:09.680
+ Forget all that stuff.
+
+1:28:09.680 --> 1:28:12.560
+ It changes like everything about robotics and AI,
+
+1:28:13.200 --> 1:28:14.080
+ machine learning.
+
+1:28:14.800 --> 1:28:16.400
+ It changes everything about manufacturing.
+
+1:28:16.400 --> 1:28:20.000
+ I mean, the transportation is so fundamentally connected
+
+1:28:20.000 --> 1:28:21.680
+ to cars and if that changes,
+
+1:28:22.240 --> 1:28:26.080
+ it changes the fabric of society, of movies, of everything.
+
+1:28:27.280 --> 1:28:29.520
+ And if you go bold and take risks
+
+1:28:29.520 --> 1:28:33.120
+ and be willing to go bankrupt with your company
+
+1:28:33.920 --> 1:28:37.440
+ as opposed to cautiously, you can really change the world.
+
+1:28:37.440 --> 1:28:40.480
+ And it's so sad for me to see all these autonomous companies,
+
+1:28:40.480 --> 1:28:41.520
+ autonomous vehicle companies,
+
+1:28:41.520 --> 1:28:45.120
+ they're like really more focused about fundraising
+
+1:28:45.120 --> 1:28:46.400
+ and kind of like smoke and mirrors.
+
+1:28:46.400 --> 1:28:47.280
+ They're really afraid.
+
+1:28:48.160 --> 1:28:51.040
+ The entirety of their marketing is grounded in fear
+
+1:28:51.760 --> 1:28:54.880
+ and presenting enough smoke to where they keep raising funds
+
+1:28:54.880 --> 1:28:59.040
+ so they can cautiously use technology of a previous decade
+
+1:28:59.040 --> 1:29:03.120
+ or previous two decades to kind of test vehicles here and there
+
+1:29:03.120 --> 1:29:05.600
+ as opposed to do crazy things in bold
+
+1:29:05.600 --> 1:29:09.440
+ and go huge at scale, do huge data collection.
+
+1:29:11.680 --> 1:29:12.640
+ So that's just an example.
+
+1:29:12.640 --> 1:29:14.320
+ Like the idea can be big,
+
+1:29:14.320 --> 1:29:17.040
+ but if you don't allow yourself to take that idea
+
+1:29:17.040 --> 1:29:19.200
+ and think really big with it,
+
+1:29:20.080 --> 1:29:21.680
+ then you're not going to make anything happen.
+
+1:29:22.240 --> 1:29:24.000
+ Yeah, you're absolutely right in that.
+
+1:29:24.000 --> 1:29:31.200
+ So you've been connected in your work with a bunch of amazing people.
+
+1:29:31.200 --> 1:29:33.920
+ How much interaction do you have with investors?
+
+1:29:33.920 --> 1:29:36.720
+ Like that whole process is an entire mystery to me.
+
+1:29:36.720 --> 1:29:38.480
+ Is there some people that just have influence
+
+1:29:38.480 --> 1:29:42.800
+ on the trajectory of your thinking completely?
+
+1:29:42.800 --> 1:29:46.400
+ Or is it just this collective energy that they behind the company?
+
+1:29:46.960 --> 1:29:52.080
+ Yeah, I mean, I came here and I was amazed how,
+
+1:29:52.080 --> 1:29:54.720
+ yeah, people would, I was only here for a few months
+
+1:29:54.720 --> 1:29:56.480
+ and I met some incredible investors
+
+1:29:57.520 --> 1:29:59.680
+ and I'd almost run out of money.
+
+1:29:59.680 --> 1:30:04.800
+ And once they invested, I was like,
+
+1:30:04.800 --> 1:30:06.640
+ I am not going to let you down.
+
+1:30:06.640 --> 1:30:09.520
+ And I was like, okay, I'm going to send them like an email update
+
+1:30:09.520 --> 1:30:10.880
+ every like three minutes.
+
+1:30:10.880 --> 1:30:12.880
+ And then they don't care at all.
+
+1:30:12.880 --> 1:30:14.880
+ So they kind of want to, I don't know.
+
+1:30:14.880 --> 1:30:18.640
+ So I like it when it's just like, they're always available to talk.
+
+1:30:19.200 --> 1:30:24.320
+ But a lot of building a business, especially a high tech business,
+
+1:30:25.600 --> 1:30:27.840
+ there's little for them to add, right?
+
+1:30:28.400 --> 1:30:30.240
+ There's little for them to add on product.
+
+1:30:30.240 --> 1:30:32.880
+ There's a lot for them to add on like business development.
+
+1:30:33.600 --> 1:30:35.680
+ And if we are doing product research,
+
+1:30:35.680 --> 1:30:38.240
+ which is for us research into the market,
+
+1:30:38.240 --> 1:30:40.240
+ research into how to make a great hedge fund,
+
+1:30:40.240 --> 1:30:45.600
+ and we do that for years, there's not much to tell the investors.
+
+1:30:45.600 --> 1:30:47.520
+ So they're basically like, I believe in you.
+
+1:30:47.520 --> 1:30:50.400
+ There's something, I like to cut your jib.
+
+1:30:50.400 --> 1:30:52.960
+ There's something in your idea,
+
+1:30:52.960 --> 1:30:55.840
+ in your ambition, in your plans that I like.
+
+1:30:56.640 --> 1:30:58.480
+ And it's almost like a pat on the back.
+
+1:30:58.480 --> 1:31:00.320
+ I was like, go get them, kid.
+
+1:31:00.320 --> 1:31:01.680
+ Yeah, it is a bit like that.
+
+1:31:01.680 --> 1:31:02.880
+ And that's cool.
+
+1:31:02.880 --> 1:31:03.920
+ That's a good way to do it.
+
+1:31:03.920 --> 1:31:05.120
+ I'm glad they do it that way.
+
+1:31:05.120 --> 1:31:07.440
+ Like the one and meeting I had,
+
+1:31:07.440 --> 1:31:09.280
+ which was like really good with this one,
+
+1:31:09.280 --> 1:31:12.160
+ was like really good with this was meeting Howard Morgan,
+
+1:31:13.200 --> 1:31:16.720
+ who's actually a co founder of Renaissance Technologies
+
+1:31:16.720 --> 1:31:20.400
+ in the like 1980s and worked with Jim Simons.
+
+1:31:20.960 --> 1:31:26.960
+ And he was in the room and I was meeting some other guy
+
+1:31:26.960 --> 1:31:28.160
+ and he was in the room.
+
+1:31:28.160 --> 1:31:32.880
+ And I was explaining how quantitative finance works.
+
+1:31:32.880 --> 1:31:36.560
+ I was like, so, you know, they use mathematical models.
+
+1:31:36.560 --> 1:31:40.400
+ And then he was like, yeah, I started Renaissance.
+
+1:31:40.400 --> 1:31:41.680
+ I know a bit about this.
+
+1:31:43.120 --> 1:31:44.720
+ And then I was like, oh my God.
+
+1:31:46.640 --> 1:31:49.520
+ So yeah, but then I think he kind of said, well,
+
+1:31:50.240 --> 1:31:52.080
+ yeah, he said, well, because I was talking,
+
+1:31:52.080 --> 1:31:55.120
+ he was working at first round capital as a partner.
+
+1:31:55.840 --> 1:31:57.760
+ And they kind of said, they didn't want to invest.
+
+1:31:59.040 --> 1:32:01.760
+ And then I wrote a blog post describing the idea
+
+1:32:01.760 --> 1:32:03.440
+ and I was like, I really think you guys should invest.
+
+1:32:03.440 --> 1:32:04.400
+ And then they end up.
+
+1:32:04.400 --> 1:32:05.600
+ Oh, interesting.
+
+1:32:05.600 --> 1:32:07.040
+ You convinced them, oh, that must be good.
+
+1:32:07.040 --> 1:32:08.080
+ Yeah, because they're like, we don't really invest
+
+1:32:08.080 --> 1:32:08.720
+ in hedge funds.
+
+1:32:08.720 --> 1:32:11.040
+ And I was like, you don't see like what I'm doing.
+
+1:32:11.040 --> 1:32:11.360
+ This is something different.
+
+1:32:11.360 --> 1:32:13.600
+ This is so a tech company, not a hedge fund, right?
+
+1:32:14.240 --> 1:32:15.680
+ Yeah, and Numerize Brilliant.
+
+1:32:15.680 --> 1:32:19.120
+ It's when it caught my eye, there's something special there.
+
+1:32:19.120 --> 1:32:21.760
+ So I really do hope you succeed.
+
+1:32:21.760 --> 1:32:24.720
+ And obviously it's a risky thing you're taking on,
+
+1:32:24.720 --> 1:32:26.480
+ the ambition of it, the size of it.
+
+1:32:26.480 --> 1:32:28.160
+ But I do hope you succeed.
+
+1:32:28.160 --> 1:32:29.360
+ You mentioned Jim Simons.
+
+1:32:30.240 --> 1:32:33.760
+ He comes up in another world of mine really often on the,
+
+1:32:33.760 --> 1:32:36.960
+ he's just a brilliant guy on the mathematics side
+
+1:32:36.960 --> 1:32:41.120
+ as a mathematician, but he's also a brilliant finance,
+
+1:32:41.120 --> 1:32:42.480
+ hedge fund manager guy.
+
+1:32:43.280 --> 1:32:45.440
+ Have you gotten a chance to interact with him at all?
+
+1:32:46.240 --> 1:32:49.760
+ Have you learned anything from him on the math,
+
+1:32:49.760 --> 1:32:53.760
+ on the finance, on the philosophy, life side of things?
+
+1:32:53.760 --> 1:32:55.440
+ I've played poker with him.
+
+1:32:55.440 --> 1:32:56.320
+ It was pretty cool.
+
+1:32:56.320 --> 1:32:58.960
+ It was like, actually in the show Billions,
+
+1:32:58.960 --> 1:33:02.320
+ they kind of do a little thing about this poker tournament thing
+
+1:33:02.320 --> 1:33:03.920
+ with all the hedge fund managers.
+
+1:33:03.920 --> 1:33:05.120
+ And that's a real life thing.
+
+1:33:06.560 --> 1:33:09.440
+ And they have a lot of like world series of bracelet,
+
+1:33:09.440 --> 1:33:11.520
+ world series poker bracelets holders,
+
+1:33:11.520 --> 1:33:13.040
+ but it's kind of Jim's thing.
+
+1:33:14.400 --> 1:33:16.720
+ And I met him there.
+
+1:33:16.720 --> 1:33:19.920
+ And yeah, it was kind of brief, but I was just like,
+
+1:33:19.920 --> 1:33:21.840
+ he's like, oh, how do you, why are you here?
+
+1:33:21.840 --> 1:33:23.520
+ And I was like, oh, Howard sent me, you know,
+
+1:33:23.520 --> 1:33:25.600
+ he's like, go play this tournament,
+
+1:33:25.600 --> 1:33:28.640
+ meet some of the other players, and then.
+
+1:33:28.640 --> 1:33:29.840
+ Was it Texas Holdem?
+
+1:33:29.840 --> 1:33:31.360
+ Yeah, Texas Holdem tournament.
+
+1:33:31.360 --> 1:33:33.680
+ Do you play poker yourself, or was it?
+
+1:33:33.680 --> 1:33:34.720
+ Yeah, I do.
+
+1:33:34.720 --> 1:33:35.760
+ I mean, it was crazy.
+
+1:33:35.760 --> 1:33:38.960
+ And on my right was the CEO,
+
+1:33:38.960 --> 1:33:41.840
+ who's the current CEO of Renaissance, Peter Brown.
+
+1:33:43.360 --> 1:33:46.880
+ And Peter Muller, who's a hedge fund manager at PDT.
+
+1:33:49.040 --> 1:33:51.040
+ And yeah, I mean, it was just like, and then, you know,
+
+1:33:51.040 --> 1:33:53.120
+ just everyone, and then all these bracelet world series,
+
+1:33:53.120 --> 1:33:55.120
+ like people I know from like TV.
+
+1:33:55.120 --> 1:34:00.080
+ And Robert Mercer, who's fucking crazy.
+
+1:34:02.080 --> 1:34:05.360
+ He's the guy who donated the most money to Trump.
+
+1:34:08.080 --> 1:34:08.960
+ And he's just like.
+
+1:34:08.960 --> 1:34:10.160
+ It's a lot of personality.
+
+1:34:10.160 --> 1:34:11.280
+ Character, yeah.
+
+1:34:11.280 --> 1:34:12.320
+ Geez, this is crazy.
+
+1:34:13.840 --> 1:34:17.520
+ So it's quite cool how, yeah, like the, it was really fun.
+
+1:34:17.520 --> 1:34:19.440
+ And then I managed to knock out Peter Muller.
+
+1:34:19.440 --> 1:34:22.560
+ I have a, I got a little trophy for knocking him out,
+
+1:34:22.560 --> 1:34:24.320
+ because he was a previous champion.
+
+1:34:24.320 --> 1:34:25.680
+ In fact, I think he's won the most.
+
+1:34:25.680 --> 1:34:26.800
+ I think he's won three times.
+
+1:34:27.520 --> 1:34:28.320
+ Super smart guy.
+
+1:34:31.760 --> 1:34:35.440
+ But I will say Jim outlasted me in the tournament.
+
+1:34:37.440 --> 1:34:40.320
+ And they're all extremely good at poker.
+
+1:34:41.600 --> 1:34:44.320
+ But they're also, so it was a $10,000 buy in.
+
+1:34:45.840 --> 1:34:48.560
+ And I was like, this is kind of expensive.
+
+1:34:48.560 --> 1:34:53.280
+ But it all goes to charity, Jim's math charity.
+
+1:34:54.320 --> 1:34:57.440
+ But then the way they play, they have like rebies.
+
+1:34:58.320 --> 1:35:00.960
+ And like, they all do a shit ton of rebies.
+
+1:35:00.960 --> 1:35:02.000
+ This is for charity.
+
+1:35:02.000 --> 1:35:02.720
+ Yeah.
+
+1:35:02.720 --> 1:35:07.520
+ So immediately they're like going all in and I'm like, man, like,
+
+1:35:08.240 --> 1:35:10.880
+ so I end up, you know, adding more as well.
+
+1:35:11.840 --> 1:35:13.040
+ So the state.
+
+1:35:13.040 --> 1:35:14.800
+ Like you couldn't play at all without doing math.
+
+1:35:15.360 --> 1:35:16.480
+ Yeah, the stakes are high.
+
+1:35:16.480 --> 1:35:18.640
+ But you're connected to a lot of these folks.
+
+1:35:18.640 --> 1:35:27.040
+ They're kind of titans of just economics and tech in general.
+
+1:35:27.040 --> 1:35:29.440
+ Do you feel a burden from this, your young guy?
+
+1:35:30.080 --> 1:35:32.320
+ I did feel a bit out of place there.
+
+1:35:32.320 --> 1:35:35.600
+ Like the company was quite new.
+
+1:35:35.600 --> 1:35:39.840
+ And they also don't speak about things, right?
+
+1:35:39.840 --> 1:35:44.160
+ So it's not like going to meet a famous rocket engineer
+
+1:35:44.160 --> 1:35:45.520
+ who will tell you how to make a rocket.
+
+1:35:45.520 --> 1:35:47.920
+ They do not want to tell you anything
+
+1:35:47.920 --> 1:35:49.440
+ about how to make a hedge fund.
+
+1:35:49.440 --> 1:35:51.360
+ It's like all secretive.
+
+1:35:51.360 --> 1:35:52.640
+ And that part I didn't like.
+
+1:35:54.080 --> 1:35:57.600
+ And they were also kind of making fun of me a little bit.
+
+1:35:57.600 --> 1:36:00.400
+ Like they would say, like they'd call me like,
+
+1:36:00.400 --> 1:36:03.440
+ I don't know, the Bitcoin kid or, and then they would say,
+
+1:36:03.440 --> 1:36:08.720
+ even things like, remember Peter said to me something like,
+
+1:36:08.720 --> 1:36:12.000
+ I don't think AI is going to have a big role in finance.
+
+1:36:12.000 --> 1:36:15.120
+ And I was like, hearing this from the CEO of Renaissance
+
+1:36:15.120 --> 1:36:17.920
+ was like weird to hear because I was like, of course it will.
+
+1:36:17.920 --> 1:36:20.480
+ And he's like, but he can see it.
+
+1:36:20.480 --> 1:36:22.320
+ I can see it having a really big impact
+
+1:36:22.320 --> 1:36:24.160
+ on things like self driving cars.
+
+1:36:24.160 --> 1:36:27.120
+ But finance, it's too noisy and whatever.
+
+1:36:27.120 --> 1:36:29.600
+ And so I don't think it's like the perfect application.
+
+1:36:29.600 --> 1:36:31.600
+ And I was like, that was interesting to hear.
+
+1:36:31.600 --> 1:36:35.280
+ Because it's like, and I think it was that same day that
+
+1:36:36.320 --> 1:36:39.680
+ Libra, I think it is, the poker playing AI
+
+1:36:39.680 --> 1:36:42.000
+ started to beat like the human.
+
+1:36:42.000 --> 1:36:43.760
+ So it's kind of funny hearing them like say,
+
+1:36:43.760 --> 1:36:46.560
+ oh, I'm not sure AI could ever get attack of that problem.
+
+1:36:46.560 --> 1:36:48.640
+ And then that very day is attacking the problem
+
+1:36:48.640 --> 1:36:50.160
+ of the game we're playing.
+
+1:36:50.160 --> 1:36:54.880
+ Well, there's a kind of a magic to somebody
+
+1:36:54.880 --> 1:36:59.120
+ who's exceptionally successful looking at you,
+
+1:36:59.120 --> 1:37:01.920
+ giving you respect, but also saying that
+
+1:37:01.920 --> 1:37:05.520
+ what you're doing is not going to succeed in a sense.
+
+1:37:05.520 --> 1:37:07.360
+ Like they're not really saying it.
+
+1:37:07.360 --> 1:37:10.480
+ But I tend to believe for my interactions with people
+
+1:37:10.480 --> 1:37:14.080
+ that it's a kind of prod to say, like prove me wrong.
+
+1:37:14.080 --> 1:37:15.120
+ Yeah.
+
+1:37:15.120 --> 1:37:17.280
+ That's ultimately, that's how those guys talk.
+
+1:37:17.280 --> 1:37:19.680
+ They see good talent and they're like, I'm...
+
+1:37:19.680 --> 1:37:20.480
+ Yeah.
+
+1:37:20.480 --> 1:37:21.680
+ And I think they're also saying
+
+1:37:21.680 --> 1:37:25.040
+ it's not going to succeed quickly in some way.
+
+1:37:25.040 --> 1:37:27.440
+ They're like, this is going to take a long time.
+
+1:37:27.440 --> 1:37:31.280
+ And maybe that's good to know.
+
+1:37:31.280 --> 1:37:35.200
+ And certainly AI in trading,
+
+1:37:35.200 --> 1:37:40.880
+ that's one of the most so philosophically interesting
+
+1:37:40.880 --> 1:37:43.840
+ questions about artificial intelligence
+
+1:37:43.840 --> 1:37:45.040
+ and the nature of money.
+
+1:37:45.040 --> 1:37:48.000
+ Because it's like, how much can you extract
+
+1:37:48.000 --> 1:37:51.440
+ in terms of patterns from all of these millions
+
+1:37:51.440 --> 1:37:56.160
+ of humans interacting using this methodology of money?
+
+1:37:56.160 --> 1:37:57.600
+ It's like one of the open questions
+
+1:37:57.600 --> 1:37:58.880
+ in the artificial intelligence.
+
+1:37:58.880 --> 1:38:01.360
+ In that sense, you converting it to a dataset
+
+1:38:01.360 --> 1:38:05.040
+ is one of the biggest gifts to people
+
+1:38:05.040 --> 1:38:07.760
+ in the research community, to the whole...
+
+1:38:07.760 --> 1:38:10.960
+ Anyone who loves data science and AI,
+
+1:38:10.960 --> 1:38:13.760
+ this is kind of fascinating.
+
+1:38:13.760 --> 1:38:15.520
+ I'd love to see where this goes, actually.
+
+1:38:15.520 --> 1:38:16.720
+ The thing I say sometimes,
+
+1:38:16.720 --> 1:38:19.680
+ long before AGI destroys the world,
+
+1:38:19.680 --> 1:38:22.880
+ a narrow intelligence will win all the money in the stock market.
+
+1:38:22.880 --> 1:38:25.360
+ Like, wait, just a narrow AI.
+
+1:38:25.360 --> 1:38:26.320
+ Yeah.
+
+1:38:26.320 --> 1:38:29.840
+ And I don't know if I'm going to be the one who invents that.
+
+1:38:29.840 --> 1:38:33.440
+ So I'm building Numeri to make sure that that narrow AI
+
+1:38:33.440 --> 1:38:35.680
+ uses our data.
+
+1:38:35.680 --> 1:38:37.840
+ So you're giving a platform to where millions of people
+
+1:38:37.840 --> 1:38:43.200
+ can participate and build that narrow AI themselves.
+
+1:38:43.200 --> 1:38:45.520
+ People love it when I ask this kind of question
+
+1:38:45.520 --> 1:38:50.480
+ about books, about ideas and philosophers and so on.
+
+1:38:50.480 --> 1:38:56.720
+ I was wondering if you had books or ideas,
+
+1:38:56.720 --> 1:38:59.040
+ philosophers, thinkers that had an influence
+
+1:38:59.040 --> 1:39:01.360
+ on your life when you were growing up
+
+1:39:01.360 --> 1:39:05.200
+ or just today that you would recommend that people check out
+
+1:39:05.200 --> 1:39:09.520
+ blog posts, podcasts, videos, all that kind of stuff.
+
+1:39:09.520 --> 1:39:11.920
+ Is there something that just kind of had an impact on you
+
+1:39:11.920 --> 1:39:13.760
+ that you currently recommend?
+
+1:39:13.760 --> 1:39:18.800
+ A super kind of obvious one that I really...
+
+1:39:18.800 --> 1:39:22.000
+ I was reading Zero to One while coming up with Numeri.
+
+1:39:22.000 --> 1:39:24.720
+ It was like halfway through the book.
+
+1:39:24.720 --> 1:39:26.960
+ And I really do like a lot of the ideas there.
+
+1:39:26.960 --> 1:39:29.200
+ And it's also about kind of thinking big
+
+1:39:29.200 --> 1:39:34.640
+ and also it's like peculiar little book.
+
+1:39:34.640 --> 1:39:36.960
+ It's like there's a little picture of the hipster
+
+1:39:36.960 --> 1:39:38.720
+ versus Unabomber.
+
+1:39:38.720 --> 1:39:40.320
+ And it's a weird little book.
+
+1:39:40.320 --> 1:39:42.640
+ So there's kind of like some depth there.
+
+1:39:42.640 --> 1:39:44.240
+ Turns out a book on a...
+
+1:39:44.240 --> 1:39:47.280
+ If you're thinking of doing a startup, that's a good book.
+
+1:39:47.280 --> 1:39:52.240
+ A book I like a lot is maybe my favorite book
+
+1:39:52.240 --> 1:39:56.080
+ is David Deutsch's Beginning of Infinity.
+
+1:39:56.080 --> 1:40:00.320
+ I just found that so optimistic.
+
+1:40:00.320 --> 1:40:02.000
+ It puts you...
+
+1:40:02.000 --> 1:40:03.680
+ Everything you read in science,
+
+1:40:03.680 --> 1:40:06.320
+ it makes the world feel kind of colder.
+
+1:40:06.320 --> 1:40:10.560
+ Because it's like we're just coming from evolution
+
+1:40:10.560 --> 1:40:12.880
+ and coming from...
+
+1:40:12.880 --> 1:40:15.120
+ Nothing should be this way or whatever.
+
+1:40:15.120 --> 1:40:16.640
+ And humans are not very powerful.
+
+1:40:16.640 --> 1:40:19.200
+ We're just like scum on the earth.
+
+1:40:19.200 --> 1:40:21.600
+ And the way David Deutsch sees things and argues...
+
+1:40:21.600 --> 1:40:23.760
+ He argues them with the same rigor
+
+1:40:23.760 --> 1:40:26.080
+ that the cynics often use
+
+1:40:26.080 --> 1:40:29.760
+ and then has a much better conclusion.
+
+1:40:29.760 --> 1:40:33.360
+ That's some of the statements and things like...
+
+1:40:33.360 --> 1:40:39.200
+ Anything that doesn't violate the laws of physics can be solved.
+
+1:40:39.200 --> 1:40:41.840
+ So ultimately arriving in a hopeful...
+
+1:40:41.840 --> 1:40:42.960
+ Like a hopeful path forward.
+
+1:40:42.960 --> 1:40:45.600
+ Without being like a hippie.
+
+1:40:45.600 --> 1:40:47.600
+ You've mentioned kind of advice for startups.
+
+1:40:47.600 --> 1:40:50.480
+ Is there in general, whether you do a startup or not,
+
+1:40:50.480 --> 1:40:52.640
+ do you have advice for young people today?
+
+1:40:52.640 --> 1:40:56.160
+ You're like an example of somebody who's paved their own path
+
+1:40:56.160 --> 1:40:59.120
+ and were, I would say, exceptionally successful.
+
+1:40:59.120 --> 1:41:00.160
+ Is there advice?
+
+1:41:00.160 --> 1:41:04.000
+ Somebody who's like 20 today, 18 on a grad
+
+1:41:04.000 --> 1:41:07.920
+ or thinking about going to college or in college and so on
+
+1:41:07.920 --> 1:41:09.440
+ that you would give them?
+
+1:41:09.440 --> 1:41:11.840
+ I think I often tell young people,
+
+1:41:11.840 --> 1:41:16.880
+ don't start a company unless you're prepared
+
+1:41:16.880 --> 1:41:19.520
+ to make it your life's work.
+
+1:41:19.520 --> 1:41:22.560
+ That's a really good way of putting it.
+
+1:41:22.560 --> 1:41:23.600
+ And a lot of people think,
+
+1:41:23.600 --> 1:41:27.200
+ well, this semester I'm going to take a semester off
+
+1:41:27.200 --> 1:41:29.600
+ and in that one semester I'm going to start a company
+
+1:41:29.600 --> 1:41:31.120
+ and sell it or whatever.
+
+1:41:31.120 --> 1:41:33.280
+ And it's just like, what are you talking about?
+
+1:41:33.280 --> 1:41:34.880
+ It doesn't really work that way.
+
+1:41:34.880 --> 1:41:37.200
+ You should be like super into the idea,
+
+1:41:37.200 --> 1:41:40.960
+ so into it that you want to spend a really long time on it.
+
+1:41:40.960 --> 1:41:44.000
+ Is that more about psychology or actual time allocation?
+
+1:41:44.000 --> 1:41:47.440
+ Like is it literally the fact that you need to give 100%
+
+1:41:47.440 --> 1:41:49.680
+ for potentially years for it to succeed?
+
+1:41:49.680 --> 1:41:51.600
+ Or is it more about just the mindset
+
+1:41:51.600 --> 1:41:53.520
+ that's required?
+
+1:41:53.520 --> 1:41:57.680
+ Yeah, I mean, I think you certainly don't want to have a plan
+
+1:41:57.680 --> 1:42:02.080
+ to sell the company quickly or something.
+
+1:42:02.080 --> 1:42:07.200
+ Or it's like a company that has a big fashion component.
+
+1:42:07.200 --> 1:42:08.560
+ Like it'll only work now.
+
+1:42:08.560 --> 1:42:10.240
+ It's like an app or something.
+
+1:42:12.560 --> 1:42:14.880
+ So yeah, that's a big one.
+
+1:42:14.880 --> 1:42:18.800
+ And then I also think something I've thought about recently
+
+1:42:18.800 --> 1:42:21.440
+ is I had a job as a quant
+
+1:42:21.440 --> 1:42:25.760
+ at a fund for about two and a half years.
+
+1:42:25.760 --> 1:42:30.880
+ And part of me thinks if I had spent another two years there,
+
+1:42:30.880 --> 1:42:36.560
+ I would have learned a lot more and had even more knowledge
+
+1:42:36.560 --> 1:42:41.040
+ to be where, to basically accelerate how long numer I took.
+
+1:42:41.040 --> 1:42:44.560
+ So the idea that you can sit in an air conditioned room
+
+1:42:44.560 --> 1:42:48.720
+ and get free food or even sit at home now in your underwear
+
+1:42:48.720 --> 1:42:52.480
+ and make a huge amount of money and learn whatever you want
+
+1:42:53.280 --> 1:42:54.960
+ and get, it's just crazy.
+
+1:42:54.960 --> 1:42:56.400
+ It's such a good deal.
+
+1:42:56.400 --> 1:42:56.880
+ Yeah.
+
+1:42:56.880 --> 1:42:57.760
+ Oh, that's interesting.
+
+1:42:57.760 --> 1:43:00.160
+ That's the case for, I was terrified of that.
+
+1:43:00.160 --> 1:43:03.120
+ Like a Google, I thought I would become really comfortable
+
+1:43:03.840 --> 1:43:05.120
+ in that air conditioned room.
+
+1:43:06.000 --> 1:43:09.200
+ And that I was afraid of the quant situation is,
+
+1:43:10.480 --> 1:43:13.120
+ I mean, what you presented is really brilliant
+
+1:43:13.120 --> 1:43:17.360
+ that it's exceptionally valuable the lessons you learn
+
+1:43:17.360 --> 1:43:20.960
+ because you get to get paid while you learn from others.
+
+1:43:20.960 --> 1:43:26.880
+ If you see jobs in the space of your passion that way,
+
+1:43:27.760 --> 1:43:29.200
+ that it's just an education.
+
+1:43:29.200 --> 1:43:31.280
+ It's like the best kind of education.
+
+1:43:31.280 --> 1:43:34.000
+ But of course, from my perspective,
+
+1:43:34.000 --> 1:43:37.200
+ you have to be really careful not to get comfortable.
+
+1:43:37.200 --> 1:43:39.600
+ Again, in a relationship, then you buy a house
+
+1:43:39.600 --> 1:43:40.720
+ or whatever the hell it is.
+
+1:43:40.720 --> 1:43:43.840
+ And then you get, and then you convince yourself,
+
+1:43:43.840 --> 1:43:46.480
+ like, well, I have to pay these fees for the car,
+
+1:43:46.480 --> 1:43:48.080
+ for the house, blah, blah, blah.
+
+1:43:48.080 --> 1:43:49.600
+ And then there's momentum.
+
+1:43:49.600 --> 1:43:51.200
+ And all of a sudden you're in your death bed
+
+1:43:51.200 --> 1:43:52.320
+ and there's grandchildren.
+
+1:43:53.200 --> 1:43:55.360
+ And you're drinking whiskey and complaining
+
+1:43:55.360 --> 1:43:56.240
+ about kids these days.
+
+1:43:56.800 --> 1:44:00.240
+ So I'm afraid of that momentum, but you're right.
+
+1:44:01.520 --> 1:44:03.920
+ There's something special about the education
+
+1:44:03.920 --> 1:44:06.160
+ you get working at these companies.
+
+1:44:06.160 --> 1:44:08.000
+ Yeah, and I remember on my desk,
+
+1:44:08.000 --> 1:44:11.120
+ I had a bunch of papers on quant finance,
+
+1:44:11.120 --> 1:44:13.200
+ a bunch of papers on optimization.
+
+1:44:13.200 --> 1:44:16.400
+ And then a paper on Ethereum, just on my desk as well.
+
+1:44:16.400 --> 1:44:17.440
+ And the white paper.
+
+1:44:17.440 --> 1:44:21.040
+ And it's like, it's been amazing how much, how kind of,
+
+1:44:22.560 --> 1:44:24.560
+ and you can learn about, so that I also thought,
+
+1:44:24.560 --> 1:44:28.240
+ I think this idea of learning about intersections of things.
+
+1:44:28.240 --> 1:44:29.680
+ I don't think there are too many people
+
+1:44:29.680 --> 1:44:32.720
+ that know as much about crypto and quant finance
+
+1:44:33.440 --> 1:44:35.520
+ and machine learning as I do.
+
+1:44:36.160 --> 1:44:39.040
+ And that's a really nice set of three things
+
+1:44:39.040 --> 1:44:40.400
+ to know stuff about.
+
+1:44:40.400 --> 1:44:42.880
+ And that was because I had free time in my job.
+
+1:44:42.880 --> 1:44:46.320
+ Okay, let me ask the perfectly impractical,
+
+1:44:46.320 --> 1:44:47.520
+ but the most important question.
+
+1:44:47.520 --> 1:44:50.560
+ What's the meaning of all the things you're trying
+
+1:44:50.560 --> 1:44:52.800
+ to do so many amazing things?
+
+1:44:52.800 --> 1:44:53.760
+ Why?
+
+1:44:53.760 --> 1:44:57.840
+ What's the meaning of this life of yours or ours?
+
+1:44:57.840 --> 1:44:59.360
+ I don't know.
+
+1:44:59.360 --> 1:45:00.320
+ Humans.
+
+1:45:00.320 --> 1:45:03.280
+ Yeah, so I have yet had some people say,
+
+1:45:03.280 --> 1:45:05.520
+ asking what meaning of life is,
+
+1:45:05.520 --> 1:45:07.600
+ is like asking the wrong question or something.
+
+1:45:07.600 --> 1:45:08.800
+ The question is wrong.
+
+1:45:08.800 --> 1:45:09.600
+ Yeah.
+
+1:45:09.600 --> 1:45:11.760
+ No, usually people get too many questions.
+
+1:45:11.760 --> 1:45:14.480
+ Usually people get too nervous to be able to say that
+
+1:45:14.480 --> 1:45:16.080
+ because it's like your question sucks.
+
+1:45:17.360 --> 1:45:18.720
+ I don't think there's an answer.
+
+1:45:18.720 --> 1:45:20.400
+ It's like the searching for it.
+
+1:45:20.960 --> 1:45:22.800
+ It's like sometimes asking it.
+
+1:45:22.800 --> 1:45:25.440
+ It's like sometimes sitting back and looking up at the stars
+
+1:45:25.440 --> 1:45:29.040
+ and being like, huh, I wonder if there's aliens up there.
+
+1:45:30.160 --> 1:45:36.320
+ There's a useful pallet cleanser aspect to it
+
+1:45:36.320 --> 1:45:39.520
+ because it kind of wakes you up to all the little busy,
+
+1:45:39.520 --> 1:45:42.560
+ hurried day to day activities, all the meetings,
+
+1:45:42.560 --> 1:45:44.480
+ all the things you're like a part of.
+
+1:45:45.040 --> 1:45:47.520
+ We're just like ants, a part of a system,
+
+1:45:47.520 --> 1:45:48.800
+ a part of another system.
+
+1:45:48.800 --> 1:45:52.000
+ And then when this asking this bigger question
+
+1:45:52.000 --> 1:45:53.760
+ allows you to kind of zoom out and think about it.
+
+1:45:53.760 --> 1:45:57.520
+ But there's ultimately, I think it's an impossible thing
+
+1:45:57.520 --> 1:46:01.360
+ for a limited cognitive capacity to capture.
+
+1:46:01.360 --> 1:46:03.760
+ But it's fun to listen to somebody who's exceptionally
+
+1:46:03.760 --> 1:46:09.680
+ successful, exceptionally busy now, who's also young like you,
+
+1:46:09.680 --> 1:46:13.680
+ to ask these kinds of questions about like death.
+
+1:46:15.120 --> 1:46:19.120
+ Do you consider your own mortality kind of thing and life,
+
+1:46:20.080 --> 1:46:21.680
+ whether that enters your mind?
+
+1:46:21.680 --> 1:46:24.960
+ Because it kind of almost gets in the way.
+
+1:46:24.960 --> 1:46:28.720
+ Yeah. It's amazing how many things that are trivial
+
+1:46:28.720 --> 1:46:33.680
+ that occupy a lot of your mind until something bad happens.
+
+1:46:33.680 --> 1:46:35.440
+ Or something flips you.
+
+1:46:36.240 --> 1:46:38.320
+ And then you start thinking about the people you love
+
+1:46:38.320 --> 1:46:39.600
+ that are in your life.
+
+1:46:39.600 --> 1:46:40.960
+ Then you started thinking about like,
+
+1:46:40.960 --> 1:46:42.800
+ holy shit, this right ends.
+
+1:46:42.800 --> 1:46:46.720
+ Exactly. Yeah. I just had COVID.
+
+1:46:47.920 --> 1:46:48.960
+ And I had it quite bad.
+
+1:46:48.960 --> 1:46:50.160
+ It wasn't really bad.
+
+1:46:50.720 --> 1:46:54.960
+ It was just like, I also got a simultaneous lung infection.
+
+1:46:55.520 --> 1:46:59.120
+ So I had like almost like bronchitis or whatever.
+
+1:46:59.120 --> 1:47:01.840
+ I don't even, I don't understand that stuff.
+
+1:47:01.840 --> 1:47:05.760
+ But I started, and then you're forced to be isolated.
+
+1:47:06.800 --> 1:47:08.720
+ And so it's actually kind of nice.
+
+1:47:08.720 --> 1:47:11.440
+ Because it's very depressing.
+
+1:47:12.400 --> 1:47:15.680
+ And then I've heard stories of, I think it's Sean Parker,
+
+1:47:15.680 --> 1:47:18.080
+ he had like all these diseases as a child.
+
+1:47:18.080 --> 1:47:20.560
+ And he had to like just stay in bed for years.
+
+1:47:20.560 --> 1:47:22.000
+ And then he like made Napster.
+
+1:47:23.120 --> 1:47:24.000
+ It's like pretty cool.
+
+1:47:24.720 --> 1:47:28.320
+ So yeah, I had about 15 days of this recently, just last month.
+
+1:47:28.320 --> 1:47:34.480
+ And it feels like it did shock me into a new kind of energy and ambition.
+
+1:47:34.480 --> 1:47:37.840
+ Were there moments when you were just like terrified
+
+1:47:37.840 --> 1:47:39.600
+ at the combination of loneliness?
+
+1:47:39.600 --> 1:47:42.960
+ And like, you know, the thing about COVID is like,
+
+1:47:42.960 --> 1:47:44.640
+ there's some degree of uncertainty.
+
+1:47:45.360 --> 1:47:48.320
+ Like it feels like it's a new thing, a new monster
+
+1:47:48.320 --> 1:47:50.800
+ that's arrived on this earth.
+
+1:47:50.800 --> 1:47:53.360
+ And so, you know, dealing with a loan,
+
+1:47:54.160 --> 1:47:55.600
+ a lot of people are dying.
+
+1:47:55.600 --> 1:47:58.240
+ It's like wondering like... Yeah, you do wonder.
+
+1:47:58.240 --> 1:47:59.120
+ I mean, for sure.
+
+1:47:59.120 --> 1:48:03.040
+ And then there are even new strains in South Africa,
+
+1:48:03.040 --> 1:48:03.840
+ which is where I was.
+
+1:48:03.840 --> 1:48:08.400
+ And maybe the new strain had some interaction of my genes
+
+1:48:08.400 --> 1:48:09.440
+ and I'm just going to die.
+
+1:48:09.440 --> 1:48:11.360
+ But ultimately it was liberating somehow.
+
+1:48:11.360 --> 1:48:11.840
+ I loved it.
+
+1:48:12.400 --> 1:48:14.560
+ Oh, I loved that I got out of it.
+
+1:48:15.360 --> 1:48:15.760
+ Okay.
+
+1:48:15.760 --> 1:48:17.040
+ Because it also affects your mind.
+
+1:48:17.040 --> 1:48:20.560
+ You get confusion and kind of a lot of fatigue.
+
+1:48:21.280 --> 1:48:24.640
+ And you can't do your usual tricks of psyching yourself out of it.
+
+1:48:24.640 --> 1:48:27.280
+ So, you know, sometimes it's like, oh man, I feel tired.
+
+1:48:27.280 --> 1:48:29.520
+ Okay, I'm just going to go have coffee and then I'll be fine.
+
+1:48:29.520 --> 1:48:31.280
+ It's like, now it's like, I feel tired.
+
+1:48:31.280 --> 1:48:33.280
+ I don't even want to get out of bed to get coffee
+
+1:48:33.280 --> 1:48:34.640
+ because I feel so tired.
+
+1:48:34.640 --> 1:48:36.080
+ And then you have to confront.
+
+1:48:36.960 --> 1:48:40.640
+ There's no like quick fix cure and you're trapped at home.
+
+1:48:40.640 --> 1:48:41.040
+ But that...
+
+1:48:41.840 --> 1:48:43.920
+ So, now you have this little thing that happened to you
+
+1:48:43.920 --> 1:48:45.600
+ that was a reminder that you're mortal
+
+1:48:46.400 --> 1:48:52.240
+ and you get to carry that flag in trying to create something
+
+1:48:52.240 --> 1:48:53.600
+ special in this world, right?
+
+1:48:53.600 --> 1:48:54.800
+ With Numeri.
+
+1:48:54.800 --> 1:48:58.160
+ Listen, this was like one of my favorite conversations
+
+1:48:58.160 --> 1:49:03.120
+ because the way you think about this world of money
+
+1:49:03.120 --> 1:49:05.120
+ and just this world in general is so clear
+
+1:49:05.120 --> 1:49:08.560
+ and you're able to explain it so eloquently.
+
+1:49:08.560 --> 1:49:09.760
+ Richard, it was really fun.
+
+1:49:09.760 --> 1:49:10.880
+ Really appreciate you talking to it.
+
+1:49:10.880 --> 1:49:11.440
+ Thank you.
+
+1:49:11.440 --> 1:49:11.840
+ Thank you.
+
+1:49:13.040 --> 1:49:15.520
+ Thanks for listening to this conversation with Richard Crabe
+
+1:49:15.520 --> 1:49:17.680
+ and thank you to our sponsors.
+
+1:49:17.680 --> 1:49:21.760
+ Audible Audio Books, Trial Labs, Machine Learning Company,
+
+1:49:21.760 --> 1:49:25.520
+ Linkist app that summarizes books and Athletic Greens,
+
+1:49:25.520 --> 1:49:26.880
+ all in one nutrition drink.
+
+1:49:27.440 --> 1:49:29.680
+ Click the sponsor links to get a discount
+
+1:49:29.680 --> 1:49:31.200
+ and to support this podcast.
+
+1:49:32.000 --> 1:49:35.760
+ And now let me leave you with some words from Warren Buffett.
+
+1:49:36.640 --> 1:49:40.480
+ Games are won by players who focus on the playing field,
+
+1:49:40.480 --> 1:49:44.480
+ not by those whose eyes are glued to the scoreboard.
+
+1:49:44.480 --> 1:49:54.480
+ Thank you for listening and hope to see you next time.
+

@@ -1,0 +1,3266 @@
+WEBVTT
+
+00:00.000 --> 00:05.040
+ The following is a conversation with Michael Kearns. He's a professor at the University of
+
+00:05.040 --> 00:10.880
+ Pennsylvania and a coauthor of the new book, Ethical Algorithm, that is the focus of much of
+
+00:10.880 --> 00:18.080
+ this conversation. It includes algorithmic fairness, bias, privacy, and ethics in general.
+
+00:18.080 --> 00:22.480
+ But that is just one of many fields that Michael is a world class researcher in,
+
+00:22.480 --> 00:27.840
+ some of which we touch on quickly, including learning theory or the theoretical foundation
+
+00:27.840 --> 00:33.120
+ of machine learning, game theory, quantitative finance, computational social science, and much
+
+00:33.120 --> 00:39.680
+ more. But on a personal note, when I was an undergrad early on, I worked with Michael on
+
+00:39.680 --> 00:44.720
+ an algorithmic trading project and competition that he led. That's when I first fell in love
+
+00:44.720 --> 00:49.600
+ with algorithmic game theory. While most of my research life has been in machine learning and
+
+00:49.600 --> 00:55.440
+ human robot interaction, the systematic way that game theory reveals the beautiful structure in our
+
+00:55.440 --> 01:02.320
+ competitive and cooperating world of humans has been a continued inspiration to me. So for that
+
+01:02.960 --> 01:08.960
+ and other things, I'm deeply thankful to Michael and really enjoyed having this conversation again
+
+01:08.960 --> 01:15.280
+ in person after so many years. This is the Artificial Intelligence Podcast. If you enjoy it,
+
+01:15.280 --> 01:20.160
+ subscribe on YouTube, give it five stars on Apple Podcasts, support on Patreon,
+
+01:20.160 --> 01:27.120
+ or simply connect with me on Twitter. Alex Friedman spelled F R I D M A N. This episode
+
+01:27.120 --> 01:33.200
+ is supported by an amazing podcast called pessimists archive. Jason, the host of the show,
+
+01:33.200 --> 01:39.040
+ reached out to me looking to support this podcast. And so I listened to it to check it out. And by
+
+01:39.040 --> 01:44.160
+ listened, I mean, I went through it Netflix binge style, at least five episodes in a row.
+
+01:45.280 --> 01:49.280
+ It's not one of my favorite podcasts. And I think it should be one of the top podcasts in
+
+01:49.280 --> 01:55.760
+ the world, frankly. It's a history show about why people resist new things. Each episode looks at
+
+01:55.760 --> 02:00.560
+ a moment in history, when something new was introduced, something that today we think of
+
+02:00.560 --> 02:06.880
+ as commonplace, like recorded music, umbrellas, bicycles, cars, chess, coffee, the elevator,
+
+02:06.880 --> 02:12.720
+ and the show explores why it freaked everyone out. The latest episode on mirrors and vanity
+
+02:12.720 --> 02:17.600
+ still stays with me as I think about vanity in the modern day of the Twitter world.
+
+02:17.600 --> 02:22.000
+ That's the fascinating thing about the show is that stuff that happened long ago, especially in
+
+02:22.000 --> 02:26.960
+ terms of our fear of new things, repeats itself in the modern day. And so it has many lessons for
+
+02:26.960 --> 02:31.920
+ us to think about in terms of human psychology, and the role of technology in our society.
+
+02:32.880 --> 02:39.840
+ Anyway, you should subscribe and listen to pessimist archive. I highly recommend it. And now here's my
+
+02:39.840 --> 02:48.160
+ conversation with Michael Kearns. You mentioned reading Fear and Loading in Las Vegas in high
+
+02:48.160 --> 02:55.600
+ school and having more or a bit more of a literary mind. So what books, non technical,
+
+02:55.600 --> 03:02.000
+ non computer science, would you say had the biggest impact on your life, either intellectually or
+
+03:02.000 --> 03:07.760
+ emotionally? You've dug deep into my history, I see. When deep? Yeah, I think my favorite
+
+03:07.760 --> 03:14.800
+ novel is Infinite Jest by David Foster Wallace, which actually coincidentally, much of it takes
+
+03:14.800 --> 03:20.160
+ place in the halls of buildings right around us here at MIT. So that certainly had a big influence
+
+03:20.160 --> 03:25.440
+ on me. And as you noticed, like when I was in high school, I actually even started college
+
+03:25.440 --> 03:31.040
+ as an English major. So was very influenced by sort of that genre of journalism at the time and
+
+03:31.040 --> 03:35.440
+ thought I wanted to be a writer and then realized that an English major teaches you to read, but
+
+03:35.440 --> 03:39.280
+ it doesn't teach you how to write. And then I became interested in math and computer science
+
+03:39.280 --> 03:46.720
+ instead. Well, in your new book, Ethical Algorithm, you kind of sneak up from an algorithmic
+
+03:46.720 --> 03:56.960
+ perspective on these deep profound philosophical questions of fairness, of privacy. In thinking
+
+03:56.960 --> 04:03.840
+ about these topics, how often do you return to that literary mind that you had? Yeah, I'd like to
+
+04:03.840 --> 04:10.720
+ claim there was a deeper connection. But I think both Aaron and I kind of came at these topics
+
+04:10.720 --> 04:16.080
+ first and foremost from a technical angle. I mean, I kind of consider myself primarily
+
+04:17.040 --> 04:21.760
+ and originally a machine learning researcher. And I think as we just watched like the rest
+
+04:21.760 --> 04:26.800
+ of the society, the field technically advance, and then quickly on the heels of that kind of the
+
+04:26.800 --> 04:31.680
+ buzzkill of all of the antisocial behavior by algorithms, just kind of realized there was
+
+04:31.680 --> 04:35.280
+ an opportunity for us to do something about it from a research perspective.
+
+04:37.200 --> 04:42.480
+ More to the point in your question, I mean, I do have an uncle who is literally a moral
+
+04:42.480 --> 04:48.000
+ philosopher. And so in the early days of our technical work on fairness topics, I would
+
+04:48.000 --> 04:52.640
+ occasionally run ideas behind him. So I mean, I remember an early email I sent to him in which
+
+04:52.640 --> 04:58.480
+ I said like, oh, here's a specific definition of algorithmic fairness that we think is some sort
+
+04:58.480 --> 05:04.960
+ of variant of Rawlsian fairness. What do you think? And I thought I was asking a yes or no
+
+05:04.960 --> 05:09.760
+ question. And I got back here, kind of classical philosophers, responding, well, it depends.
+
+05:09.760 --> 05:14.960
+ If you look at it this way, then you might conclude this. And that's when I realized that there was
+
+05:14.960 --> 05:22.560
+ a real kind of rift between the ways philosophers and others had thought about things like fairness,
+
+05:23.120 --> 05:27.840
+ you know, from sort of a humanitarian perspective, and the way that you needed to think about it
+
+05:27.840 --> 05:32.960
+ as a computer scientist, if you were going to kind of implement actual algorithmic solutions.
+
+05:34.080 --> 05:41.360
+ But I would say the algorithmic solutions take care of some of the low hanging fruit,
+
+05:41.360 --> 05:46.080
+ sort of the problem is a lot of algorithms, when they don't consider fairness,
+
+05:47.280 --> 05:52.320
+ they are just terribly unfair. And when they don't consider privacy, they're terribly,
+
+05:52.320 --> 06:01.520
+ they violate privacy, sort of the algorithmic approach fixes big problems. But there's still,
+
+06:01.520 --> 06:05.360
+ you get, when you start pushing into the gray area, that's when you start getting to this
+
+06:05.360 --> 06:11.840
+ philosophy of what it means to be fair, starting from Plato, what is justice kind of questions?
+
+06:12.400 --> 06:17.920
+ Yeah, I think that's right. And I mean, I would even not go as far as you went to say that sort
+
+06:17.920 --> 06:23.520
+ of the algorithmic work in these areas is solving like the biggest problems. And, you know, we
+
+06:23.520 --> 06:28.400
+ discussed in the book, the fact that really we are, there's a sense in which we're kind of looking
+
+06:28.400 --> 06:36.480
+ where the light is in that, you know, for example, if police are racist in who they decide to stop
+
+06:36.480 --> 06:42.080
+ and frisk, and that goes into the data, there's sort of no undoing that downstream by kind of
+
+06:42.080 --> 06:49.760
+ clever algorithmic methods. And I think especially in fairness, I mean, I think less so in privacy
+
+06:49.760 --> 06:54.720
+ where we feel like the community kind of really has settled on the right definition, which is
+
+06:54.720 --> 06:59.360
+ differential privacy. If you just look at the algorithmic fairness literature already, you
+
+06:59.360 --> 07:03.360
+ can see it's going to be much more of a mess. And you know, you've got these theorems saying,
+
+07:03.920 --> 07:11.600
+ here are three entirely reasonable, desirable notions of fairness. And you know, here's a proof
+
+07:11.600 --> 07:16.960
+ that you cannot simultaneously have all three of them. So I think we know that algorithmic
+
+07:17.600 --> 07:22.080
+ fairness compared to algorithmic privacy is going to be kind of a harder problem.
+
+07:22.080 --> 07:25.360
+ And it will have to revisit, I think, things that have been thought about
+
+07:26.160 --> 07:32.240
+ by, you know, many generations of scholars before us. So it's very early days for fairness, I think.
+
+07:32.800 --> 07:37.280
+ So before we get into the details of differential privacy and then the fairness side,
+
+07:37.280 --> 07:42.640
+ I mean, linger on the philosophy, but do you think most people are fundamentally good?
+
+07:43.600 --> 07:48.640
+ Or do most of us have both the capacity for good and evil within us?
+
+07:48.640 --> 07:54.880
+ I mean, I'm an optimist. I tend to think that most people are good and want to do to do right.
+
+07:55.520 --> 08:01.840
+ And that deviations from that are, you know, kind of usually due to circumstance, not due to people
+
+08:01.840 --> 08:08.160
+ being bad at heart. With people with power are people at the heads of governments,
+
+08:08.160 --> 08:13.920
+ people at the heads of companies, people at the heads of maybe so financial power markets.
+
+08:14.960 --> 08:20.960
+ Do you think the distribution there is also most people are good and have good intent?
+
+08:21.920 --> 08:28.800
+ Yeah, I do. I mean, my statement wasn't qualified to people not in positions of power. I mean,
+
+08:28.800 --> 08:34.080
+ I think what happens in a lot of the, you know, the cliche about absolute power corrupts absolutely.
+
+08:34.080 --> 08:39.840
+ I mean, you know, I think even short of that, you know, having spent a lot of time on Wall Street
+
+08:40.720 --> 08:46.960
+ and also in arenas very, very different from Wall Street like academia, you know, one of the things
+
+08:47.920 --> 08:54.000
+ I think I benefited from by moving between two very different worlds is you become aware that,
+
+08:54.000 --> 08:59.440
+ you know, these worlds kind of develop their own social norms and they develop their own
+
+08:59.440 --> 09:05.600
+ rationales for, you know, behavior, for instance, that might look unusual to outsiders. But when
+
+09:05.600 --> 09:11.680
+ you're in that world, it doesn't feel unusual at all. And I think this is true of a lot of,
+
+09:11.680 --> 09:18.480
+ you know, professional cultures, for instance. And, you know, so then your maybe slippery slope
+
+09:18.480 --> 09:23.200
+ is too strong of a word, but, you know, you're in some world where you're mainly around other people
+
+09:23.200 --> 09:30.080
+ with the same kind of viewpoints and training and worldview as you. And I think that's more of a source
+
+09:30.080 --> 09:37.200
+ of, you know, kind of abuses of power than sort of, you know, there being good people and evil
+
+09:37.200 --> 09:42.560
+ people and that somehow the evil people are the ones that somehow rise to power.
+
+09:42.560 --> 09:48.240
+ That's really interesting. So it's the, within the social norms constructed by that particular
+
+09:48.240 --> 09:54.320
+ group of people, you're all trying to do good. But because it's a group, you might be, you might
+
+09:54.320 --> 09:59.280
+ drift into something that for the broader population, it does not align with the values of
+
+09:59.280 --> 10:03.920
+ society. That kind of, that's the word. Yeah. I mean, or not that you drift, but even that
+
+10:03.920 --> 10:11.200
+ things that don't make sense to the outside world don't seem unusual to you. So it's not
+
+10:11.200 --> 10:16.400
+ sort of like a good or a bad thing. But, you know, like so, for instance, you know, on in the world
+
+10:16.400 --> 10:22.000
+ in the world of finance, right, there's a lot of complicated types of activity that if you are not
+
+10:22.000 --> 10:27.040
+ immersed in that world, you cannot see why the purpose of that, you know, that activity exists
+
+10:27.040 --> 10:32.160
+ at all. It just seems like, you know, completely useless and people just like, you know, pushing
+
+10:32.160 --> 10:37.040
+ money around. And when you're in that world, right, you're, you're, and you learn more, your
+
+10:37.040 --> 10:43.040
+ view does become more nuanced, right? You realize, okay, there is actually a function to this activity.
+
+10:43.040 --> 10:47.920
+ And for in some cases, you would conclude that actually, if magically we could eradicate this
+
+10:47.920 --> 10:53.600
+ activity tomorrow, it would come back because it actually is like serving some useful purpose.
+
+10:53.600 --> 11:00.000
+ It's just a useful purpose is very difficult for outsiders to see. And so I think, you know, lots of
+
+11:00.000 --> 11:07.600
+ professional work environments or cultures, as I might put it, kind of have these social norms
+
+11:07.600 --> 11:11.040
+ that, you know, don't make sense to the outside world, academia is the same, right? I mean,
+
+11:11.040 --> 11:15.840
+ lots of people look at academia and say, you know, what the hell are all of you people doing?
+
+11:15.840 --> 11:22.480
+ Yeah. Why are you paid so much? In some cases, a taxpayer expenses to do, you know, to, you know,
+
+11:22.480 --> 11:26.720
+ publish papers that nobody reads, you know, but when you're in that world, you come to see the
+
+11:26.720 --> 11:31.360
+ value for it. And but even though you might not be able to explain it to, you know, the person in
+
+11:31.360 --> 11:38.560
+ the street. Right. And in the case of the financial sector, tools like credit might not make sense
+
+11:38.560 --> 11:43.840
+ to people. Like it's a good example of something that does seem to pop up and be useful or just
+
+11:43.840 --> 11:49.280
+ the power of markets and just in general capitalism. Yeah. And finance, I think the primary example
+
+11:49.280 --> 11:56.880
+ I would give is leverage, right? So being allowed to borrow, to sort of use 10 times as much money
+
+11:56.880 --> 12:00.880
+ as you've actually borrowed, right? So that's an example of something that before I had any
+
+12:00.880 --> 12:04.880
+ experience in financial markets, I might have looked at and said, well, what is the purpose
+
+12:04.880 --> 12:10.400
+ of that? That just seems very dangerous. And it is dangerous and it has proven dangerous.
+
+12:10.400 --> 12:15.920
+ But, you know, if the fact of the matter is that, you know, sort of on some particular timescale,
+
+12:16.560 --> 12:22.960
+ you are holding positions that are, you know, very unlikely to, you know,
+
+12:22.960 --> 12:28.240
+ lose, you know, they're like your value at risk or variance is like one or five percent.
+
+12:29.120 --> 12:32.720
+ Then it kind of makes sense that you would be allowed to use a little bit more than you have
+
+12:32.720 --> 12:38.880
+ because you have, you know, some confidence that you're not going to lose it all in a single day.
+
+12:39.840 --> 12:46.240
+ Now, of course, when that happens, we've seen what happens, you know, not too long ago. But,
+
+12:46.240 --> 12:53.040
+ you know, but the idea that it serves no useful economic purpose under any circumstances is
+
+12:53.040 --> 12:58.640
+ definitely not true. We'll return to the other side of the coast, Silicon Valley,
+
+12:58.640 --> 13:03.680
+ and the problems there as we talk about, privacy as we talk about fairness.
+
+13:05.360 --> 13:10.560
+ At the high level, and I'll ask some sort of basic questions with the hope to get at the
+
+13:10.560 --> 13:18.320
+ fundamental nature of reality, but from a very high level, what is an ethical algorithm? So,
+
+13:18.320 --> 13:23.760
+ I can say that an algorithm has a running time of using big old notation and log n.
+
+13:23.760 --> 13:30.880
+ And I can say that a machine learning algorithm classified cat versus dog with 97% accuracy.
+
+13:31.440 --> 13:38.640
+ Do you think there will one day be a way to measure sort of in the same compelling way as
+
+13:38.640 --> 13:47.200
+ the big old notation of this algorithm is 97% ethical? First of all, let me riff for a second
+
+13:47.200 --> 13:51.840
+ on your specific n log n examples. So, because early in the book when we're just kind of trying
+
+13:51.840 --> 13:56.720
+ to describe algorithms, period, we say like, okay, you know, what's an example of an algorithm
+
+13:57.840 --> 14:01.840
+ or an algorithmic problem? First of all, like it's sorting, right? You have a bunch of index
+
+14:01.840 --> 14:06.160
+ cards with numbers on them and you want to sort them. And we describe, you know, an algorithm
+
+14:06.160 --> 14:10.960
+ that sweeps all the way through finds that the smallest number puts it at the front then sweeps
+
+14:10.960 --> 14:16.160
+ through again finds the second smallest number. So, we make the point that this is an algorithm,
+
+14:16.160 --> 14:22.080
+ and it's also a bad algorithm in the sense that, you know, it's quadratic rather than n log n,
+
+14:22.080 --> 14:27.440
+ which we know is kind of optimal for sorting. And we make the point that sort of like, you know,
+
+14:27.440 --> 14:34.560
+ so even within the confines of a very precisely specified problem, there's, you know, there
+
+14:34.560 --> 14:38.880
+ might be many, many different algorithms for the same problem with different properties,
+
+14:38.880 --> 14:44.400
+ like some might be faster in terms of running time, some might use less memory, some might have,
+
+14:44.400 --> 14:50.720
+ you know, better distributed implementations. And so, the point is, is that already we're used to,
+
+14:51.520 --> 14:57.040
+ you know, in computer science thinking about tradeoffs between different types of quantities
+
+14:57.040 --> 15:05.920
+ and resources, and there being, you know, better and worse algorithms. And our book is about that
+
+15:05.920 --> 15:14.240
+ part of algorithmic ethics that we know how to kind of put on that same kind of quantitative footing
+
+15:14.240 --> 15:20.160
+ right now. So, you know, just to say something that our book is not about, our book is not about
+
+15:20.160 --> 15:26.480
+ kind of broad fuzzy notions of fairness. It's about very specific notions of fairness.
+
+15:27.360 --> 15:33.840
+ There's more than one of them. There are tensions between them, right? But if you pick one of them,
+
+15:33.840 --> 15:39.520
+ you can do something akin to saying that this algorithm is 97% ethical.
+
+15:40.560 --> 15:47.360
+ You can say, for instance, the, you know, for this lending model, the false rejection rate
+
+15:47.360 --> 15:55.520
+ on black people and white people is within 3%, right? So, we might call that a 97% ethical
+
+15:55.520 --> 16:00.160
+ algorithm and a 100% ethical algorithm would mean that that difference is 0%.
+
+16:00.160 --> 16:07.120
+ In that case, fairness is specified when two groups, however they're defined, are given to you.
+
+16:07.920 --> 16:12.240
+ That's right. So, the, and then you can sort of mathematically start describing the algorithm.
+
+16:12.800 --> 16:19.920
+ But nevertheless, the part where the two groups are given to you,
+
+16:20.960 --> 16:26.400
+ I mean, unlike running time, you know, we don't, in computer science, talk about
+
+16:26.400 --> 16:33.120
+ how fast an algorithm feels like when it runs. True. We measure it and ethical starts getting
+
+16:33.120 --> 16:39.600
+ into feelings. So, for example, an algorithm runs, you know, if it runs in the background,
+
+16:39.600 --> 16:44.320
+ it doesn't disturb the performance of my system. It'll feel nice. I'll be okay with it. But if
+
+16:44.320 --> 16:50.160
+ it overloads the system, it'll feel unpleasant. So, in that same way, ethics, there's a feeling of
+
+16:50.160 --> 16:57.200
+ how socially acceptable it is. How does it represent the moral standards of our society today? So,
+
+16:57.200 --> 17:02.240
+ in that sense, and sorry to linger on that first of, high level philosophical question is,
+
+17:02.240 --> 17:06.640
+ do you have a sense we'll be able to measure how ethical an algorithm is?
+
+17:07.440 --> 17:11.840
+ First of all, I didn't, certainly didn't mean to give the impression that you can kind of measure,
+
+17:11.840 --> 17:17.600
+ you know, memory, speed, tradeoffs, you know, and that there's a complete, you know, mapping
+
+17:17.600 --> 17:23.680
+ from that onto kind of fairness, for instance, or ethics and accuracy, for example.
+
+17:24.400 --> 17:30.400
+ In the type of fairness definitions that are largely the objects of study today and starting
+
+17:30.400 --> 17:36.800
+ to be deployed, you as the user of the definitions, you need to make some hard decisions before you
+
+17:36.800 --> 17:44.800
+ even get to the point of designing fair algorithms. One of them, for instance, is deciding who it is
+
+17:44.800 --> 17:50.560
+ that you're worried about protecting, who you're worried about being harmed by, for instance,
+
+17:50.560 --> 17:56.880
+ some notion of discrimination or unfairness. And then you need to also decide what constitutes harm.
+
+17:56.880 --> 18:03.680
+ So, for instance, in a lending application, maybe you decide that, you know, falsely rejecting a
+
+18:03.680 --> 18:10.320
+ credit worthy individual, you know, sort of a false negative is the real harm and that false
+
+18:10.320 --> 18:15.200
+ positives, i.e., people that are not credit worthy or are not going to repay your loan,
+
+18:15.200 --> 18:20.720
+ they get a loan, you might think of them as lucky. And so that's not a harm, although it's not clear
+
+18:20.720 --> 18:27.440
+ that if you don't have the means to repay a loan that being given a loan is not also a harm.
+
+18:28.080 --> 18:34.720
+ So, you know, the literature is sort of so far quite limited in that you sort of need to say,
+
+18:34.720 --> 18:40.080
+ who do you want to protect and what would constitute harm to that group? And when you ask
+
+18:40.080 --> 18:45.680
+ questions like, will algorithms feel ethical? One way in which they won't under the definitions
+
+18:45.680 --> 18:51.520
+ that I'm describing is if, you know, if you are an individual who is falsely denied a loan,
+
+18:52.400 --> 18:56.720
+ incorrectly denied a loan, all of these definitions basically say like, well,
+
+18:56.720 --> 19:02.880
+ you know, your compensation is the knowledge that we are, we're also falsely denying loans to other
+
+19:02.880 --> 19:08.640
+ people, you know, in other groups at the same rate that we're doing it to you. And, you know,
+
+19:08.640 --> 19:14.400
+ and so there is actually this interesting even technical tension in the field right now between
+
+19:14.400 --> 19:20.240
+ these sort of group notions of fairness and notions of fairness that might actually feel
+
+19:20.240 --> 19:25.920
+ like real fairness to individuals, right? They might really feel like their particular interests
+
+19:25.920 --> 19:32.080
+ are being protected or thought about by the algorithm rather than just, you know, the groups
+
+19:32.080 --> 19:38.000
+ that they happen to be members of. Is there parallels to the big O notation of worst case
+
+19:38.000 --> 19:46.400
+ analysis? So is it important to looking at the worst violation of fairness for an individual?
+
+19:46.400 --> 19:51.760
+ Is it important to minimize that one individual? So like worst case analysis, is that something
+
+19:51.760 --> 19:57.280
+ you think about or? I mean, I think we're not even at the point where we can sensibly think
+
+19:57.280 --> 20:03.120
+ about that. So first of all, you know, we're talking here both about fairness applied at the
+
+20:03.120 --> 20:10.240
+ group level, which is a relatively weak thing, but it's better than nothing. And also the more
+
+20:10.240 --> 20:17.120
+ ambitious thing of trying to give some individual promises. But even that doesn't incorporate,
+
+20:17.120 --> 20:21.520
+ I think something that you're hinting at here is what I might call subjective fairness, right?
+
+20:21.520 --> 20:26.400
+ So a lot of the definitions, I mean, all of the definitions in the algorithmic fairness literature
+
+20:26.400 --> 20:31.120
+ are what I would kind of call received wisdom definitions. It's sort of, you know, somebody
+
+20:31.120 --> 20:35.360
+ like me sits around and things like, okay, you know, I think here's a technical definition
+
+20:35.360 --> 20:40.240
+ of fairness that I think people should want or that they should, you know, think of as some
+
+20:40.240 --> 20:44.400
+ notion of fairness, maybe not the only one, maybe not the best one, maybe not the last one.
+
+20:44.960 --> 20:53.040
+ But we really actually don't know from a subjective standpoint, like what people really
+
+20:53.040 --> 20:59.200
+ think is fair. There's, you know, we just started doing a little bit of work in our group
+
+20:59.200 --> 21:05.040
+ at really actually doing kind of human subject experiments in which we, you know,
+
+21:06.080 --> 21:11.760
+ ask people about, you know, we ask them questions about fairness, we survey them,
+
+21:12.320 --> 21:17.440
+ we, you know, we show them pairs of individuals in let's say a criminal recidivism prediction
+
+21:17.440 --> 21:23.600
+ setting. And we ask them, do you think these two individuals should be treated the same as a matter
+
+21:23.600 --> 21:30.720
+ of fairness? And to my knowledge, there's not a large literature in which ordinary people
+
+21:30.720 --> 21:36.800
+ are asked about, you know, they have sort of notions of their subjective fairness elicited
+
+21:36.800 --> 21:42.960
+ from them. It's mainly, you know, kind of scholars who think about fairness, you know,
+
+21:42.960 --> 21:46.880
+ kind of making up their own definitions. And I think, I think this needs to change actually
+
+21:46.880 --> 21:53.680
+ for many social norms, not just for fairness, right? So there's a lot of discussion these days
+
+21:53.680 --> 22:00.160
+ in the AI community about interpretable AI or understandable AI. And as far as I can tell,
+
+22:00.880 --> 22:07.280
+ everybody agrees that deep learning or at least the outputs of deep learning are not very
+
+22:07.280 --> 22:14.400
+ understandable. And people might agree that sparse linear models with integer coefficients are more
+
+22:14.400 --> 22:19.200
+ understandable. But nobody's really asked people, you know, there's very little literature on, you
+
+22:19.200 --> 22:24.160
+ know, sort of showing people models and asking them, do they understand what the model is doing?
+
+22:25.280 --> 22:32.560
+ And I think that in all these topics, as these fields mature, we need to start doing more
+
+22:32.560 --> 22:39.360
+ behavioral work. Yeah, which is so one of my deep passions is psychology. And I always thought
+
+22:39.360 --> 22:46.560
+ computer scientists will be the best future psychologists in the sense that data is,
+
+22:48.160 --> 22:52.160
+ especially in this modern world, the data is a really powerful way to understand and study
+
+22:52.160 --> 22:56.720
+ human behavior. And you've explored that with your game theory side of work as well.
+
+22:56.720 --> 23:02.240
+ Yeah, I'd like to think that what you say is true about computer scientists and psychology
+
+23:02.240 --> 23:09.280
+ from my own limited wandering into human subject experiments. We have a great deal to learn.
+
+23:09.280 --> 23:13.280
+ Not just computer science, but AI and machine learning, more specifically, I kind of think of
+
+23:13.280 --> 23:19.280
+ as imperialist research communities in that, you know, kind of like physicists in an earlier
+
+23:19.280 --> 23:25.280
+ generation, computer scientists kind of don't think of any scientific topic as off limits to
+
+23:25.280 --> 23:31.040
+ them, they will like freely wander into areas that others have been thinking about for decades or
+
+23:31.040 --> 23:38.800
+ longer. And, you know, we usually tend to embarrass ourselves in those efforts for some amount of
+
+23:38.800 --> 23:44.560
+ time. Like, you know, I think reinforcement learning is a good example, right? So a lot of the early
+
+23:44.560 --> 23:50.480
+ work in reinforcement learning, I have complete sympathy for the control theorists that looked
+
+23:50.480 --> 23:56.240
+ at this and said like, okay, you are reinventing stuff that we've known since like the 40s, right?
+
+23:56.880 --> 24:03.040
+ But, you know, in my view, eventually, this sort of, you know, computer scientists have made
+
+24:03.040 --> 24:07.920
+ significant contributions to that field, even though we kind of embarrassed ourselves for the
+
+24:07.920 --> 24:13.120
+ first decade. So I think if computer scientists are going to start engaging in kind of psychology,
+
+24:13.120 --> 24:19.840
+ human subjects type of research, we should expect to be embarrassing ourselves for a good 10 years
+
+24:19.840 --> 24:25.600
+ or so, and then hope that it turns out as well as, you know, some other areas that we've weighted
+
+24:25.600 --> 24:31.040
+ into. So you kind of mentioned this, just to linger on the idea of an ethical algorithm,
+
+24:31.040 --> 24:35.920
+ of idea of groups, sort of group thinking and individual thinking. And we're struggling that,
+
+24:35.920 --> 24:40.880
+ that one of the amazing things about algorithms and your book and just this field of study is
+
+24:41.680 --> 24:48.000
+ it gets us to ask, like, forcing machines, converting these ideas into algorithms is
+
+24:48.000 --> 24:53.840
+ forcing us to ask questions of ourselves as a human civilization. So there's a lot of people now
+
+24:54.480 --> 25:00.640
+ in public discourse doing sort of group thinking, thinking like there's particular
+
+25:00.640 --> 25:04.320
+ sets of groups that we don't want to discriminate against and so on. And then there is
+
+25:04.320 --> 25:11.680
+ individuals, sort of in the individual life stories, the struggles they went through, and so on.
+
+25:11.680 --> 25:16.000
+ Now, like, in philosophy, it's easier to do group thinking because you don't,
+
+25:17.200 --> 25:21.440
+ you know, it's very hard to think about individuals that there's so much variability.
+
+25:21.440 --> 25:28.080
+ But with data, you can start to actually say, you know, what group thinking is too crude?
+
+25:28.080 --> 25:32.560
+ You're actually doing more discrimination by thinking in terms of groups and individuals.
+
+25:32.560 --> 25:40.080
+ Can you linger on that kind of idea of group versus individual and ethics? And is it good to
+
+25:40.080 --> 25:47.600
+ continue thinking in terms of groups in algorithms? So let me start by answering a very good high
+
+25:47.600 --> 25:54.080
+ level question with a slightly narrow technical response, which is these group definitions of
+
+25:54.080 --> 25:59.440
+ fairness, like here's a few groups, like different racial groups, maybe gender groups, maybe age,
+
+25:59.440 --> 26:06.720
+ what have you. And let's make sure that, you know, for none of these groups, do we, you know,
+
+26:06.720 --> 26:10.400
+ have a false negative rate, which is much higher than any other one of these groups.
+
+26:10.400 --> 26:16.000
+ Okay. So these are kind of classic group aggregate notions of fairness. And, you know, but at the
+
+26:16.000 --> 26:20.560
+ end of the day, an individual you can think of as a combination of all their attributes, right?
+
+26:20.560 --> 26:27.760
+ They're a member of a racial group, they have a gender, they have an age, you know, and many other,
+
+26:27.760 --> 26:33.280
+ you know, demographic properties that are not biological, but that, you know, are, are still,
+
+26:33.280 --> 26:39.680
+ you know, very strong determinants of outcome and personality and the like. So one, I think,
+
+26:39.680 --> 26:46.400
+ useful spectrum is to sort of think about that array between the group and the specific individual
+
+26:46.400 --> 26:52.400
+ and to realize that in some ways, asking for fairness at the individual level is to sort of
+
+26:52.400 --> 27:00.000
+ ask for group fairness simultaneously for all possible combinations of groups. So in particular,
+
+27:00.000 --> 27:06.800
+ so in particular, you know, if I build a predictive model that meets some definition of
+
+27:06.800 --> 27:15.120
+ fairness by race, by gender, by age, by what have you, marginally to get it slightly technical,
+
+27:15.120 --> 27:22.080
+ sort of independently, I shouldn't expect that model to not discriminate against disabled
+
+27:22.080 --> 27:28.000
+ Hispanic women over age 55, making less than $50,000 a year annually, even though I might have
+
+27:28.000 --> 27:34.640
+ protected each one of those attributes marginally. So the optimization, actually, that's a fascinating
+
+27:34.640 --> 27:41.600
+ way to put it. So you're just optimizing the one way to achieve the optimizing fairness for
+
+27:41.600 --> 27:46.000
+ individuals, just add more and more definitions of groups that each individual belongs to.
+
+27:46.000 --> 27:50.800
+ So, you know, at the end of the day, we could think of all of ourselves as groups of size one,
+
+27:50.800 --> 27:54.640
+ because eventually there's some attribute that separates you from me and everybody,
+
+27:54.640 --> 28:00.960
+ from everybody else in the world. Okay. And so it is possible to put, you know,
+
+28:00.960 --> 28:06.080
+ these incredibly coarse ways of thinking about fairness and these very, very individualistic
+
+28:06.080 --> 28:12.560
+ specific ways on a common scale. And, you know, one of the things we've worked on from a research
+
+28:12.560 --> 28:18.000
+ perspective is, you know, so we sort of know how to, you know, we, in relative terms, we know
+
+28:18.000 --> 28:24.240
+ how to provide fairness guarantees at the course ascend of the scale. We don't know how to provide
+
+28:24.240 --> 28:29.760
+ kind of sensible, tractable, realistic fairness guarantees at the individual level. But maybe
+
+28:29.760 --> 28:35.120
+ we could start creeping towards that by dealing with more, you know, refined subgroups. I mean,
+
+28:35.120 --> 28:42.160
+ we gave a name to this phenomenon where, you know, you protect, you enforce some definition of
+
+28:42.160 --> 28:48.160
+ fairness for a bunch of marginal attributes or features, but then you find yourself discriminating
+
+28:48.160 --> 28:53.520
+ against a combination of them. We call that fairness gerrymandering, because like political
+
+28:53.520 --> 28:59.760
+ gerrymandering, you know, you're giving some guarantee at the aggregate level. But when you
+
+28:59.760 --> 29:04.000
+ kind of look in a more granular way at what's going on, you realize that you're achieving
+
+29:04.000 --> 29:09.200
+ that aggregate guarantee by sort of favoring some groups and discriminating against other ones.
+
+29:09.200 --> 29:15.520
+ And so there are, you know, it's early days, but there are algorithmic approaches that let you
+
+29:15.520 --> 29:21.360
+ start creeping towards that, you know, individual end of the spectrum.
+
+29:21.360 --> 29:30.720
+ Does there need to be human input in the form of weighing the value of the importance of each kind
+
+29:30.720 --> 29:41.040
+ of group? So, for example, is it, is it like, so gender, say, crudely speaking, male and female,
+
+29:41.040 --> 29:50.080
+ and then different races, are we as humans supposed to put value on saying gender is 0.6
+
+29:50.080 --> 29:59.600
+ and race is 0.4 in terms of in the big optimization of achieving fairness? Is that kind of what humans
+
+29:59.600 --> 30:04.400
+ are supposed to do here? I mean, of course, you know, I don't need to tell you that, of course,
+
+30:04.400 --> 30:10.400
+ technically, one could incorporate such weights if you wanted to into a definition of fairness.
+
+30:11.280 --> 30:18.640
+ You know, fairness is an interesting topic in that having worked in the book being about
+
+30:19.600 --> 30:24.560
+ both fairness, privacy, and many other social norms. Fairness, of course, is a much,
+
+30:24.560 --> 30:31.120
+ much more loaded topic. So, privacy, I mean, people want privacy. People don't like violations of
+
+30:31.120 --> 30:38.560
+ privacy. Violations of privacy cause damage, angst, and bad publicity for the companies that
+
+30:38.560 --> 30:45.200
+ are victims of them. But sort of everybody agrees, more data privacy would be better
+
+30:45.200 --> 30:51.760
+ than less data privacy. And you don't have these, somehow the discussions of fairness don't become
+
+30:51.760 --> 30:59.760
+ politicized along other dimensions like race and about gender and, you know, whether we,
+
+31:00.320 --> 31:07.200
+ and, you know, you quickly find yourself kind of revisiting topics that have been
+
+31:08.320 --> 31:14.160
+ kind of unresolved forever, like affirmative action, right? So, you know, like, why are you
+
+31:14.160 --> 31:17.840
+ protecting, you know, some people will say, why are you protecting this particular racial group?
+
+31:17.840 --> 31:26.560
+ And, and others will say, well, we need to do that as a matter of, of retribution. Other people
+
+31:26.560 --> 31:33.680
+ will say it's a matter of economic opportunity. And I don't know which of, you know, whether any
+
+31:33.680 --> 31:37.760
+ of these are the right answers, but you sort of, fairness is sort of special in that as soon as
+
+31:37.760 --> 31:44.880
+ you start talking about it, you inevitably have to participate in debates about fair to whom,
+
+31:44.880 --> 31:52.240
+ at what expense, to who else. I mean, even in criminal justice, right? You know, where people
+
+31:52.240 --> 32:01.840
+ talk about fairness in criminal sentencing or, you know, predicting failures to appear or making
+
+32:01.840 --> 32:08.160
+ parole decisions or the like, they will, you know, they'll point out that, well, these definitions
+
+32:08.160 --> 32:15.440
+ of fairness are all about fairness for the criminals. And what about fairness for the victims,
+
+32:15.440 --> 32:22.160
+ right? So when I basically say something like, well, the, the false incarceration rate for
+
+32:22.160 --> 32:28.240
+ black people and white people needs to be roughly the same. You know, there's no mention of potential
+
+32:28.240 --> 32:35.280
+ victims of criminals in such a fairness definition. And that's the realm of public discord. I should
+
+32:35.280 --> 32:42.400
+ actually recommend, I just listened to, to people listening, Intelligent Squares Debates, U.S.
+
+32:42.400 --> 32:49.040
+ Edition just had a debate. They have this structure where you have an old Oxford style or whatever
+
+32:49.040 --> 32:53.920
+ they're called, debates, those two versus two, and they talked about affirmative action. And it was,
+
+32:54.720 --> 33:01.520
+ it was incredibly interesting that it's still, there's really good points on every side of this
+
+33:01.520 --> 33:07.040
+ issue, which is fascinating to listen to. Yeah, yeah, I agree. And so it's, it's interesting to be
+
+33:07.760 --> 33:14.880
+ a researcher trying to do, for the most part, technical algorithmic work. But Aaron and I
+
+33:14.880 --> 33:19.520
+ both quickly learned, you cannot do that and then go out and talk about it and expect people to take
+
+33:19.520 --> 33:25.760
+ it seriously. If you're unwilling to engage in these broader debates that are, are entirely
+
+33:25.760 --> 33:30.240
+ extra algorithmic, right? They're, they're, they're not about, you know, algorithms and making
+
+33:30.240 --> 33:34.560
+ algorithms better. They're sort of, you know, as you said, sort of like, what should society be
+
+33:34.560 --> 33:41.120
+ protecting in the first place? When you discuss a fairness, an algorithm that, that achieves fairness,
+
+33:41.120 --> 33:46.240
+ whether in the constraints and the objective function, there's an immediate kind of analysis
+
+33:46.240 --> 33:54.080
+ you can perform, which is saying, if you care about fairness in gender, this is the amount
+
+33:54.080 --> 34:00.080
+ that you have to pay for it in terms of the performance of the system. Like, do you, is there
+
+34:00.080 --> 34:06.320
+ a role for statements like that in a table, in a paper, or do you want to really not touch that?
+
+34:06.320 --> 34:12.320
+ Like, no, we, we want to touch that and we do touch it. So I mean, just, just again, to make sure
+
+34:12.320 --> 34:18.640
+ I'm not promising your, your viewers more than we know how to provide. But if you pick a definition
+
+34:18.640 --> 34:23.280
+ of fairness, like I'm worried about gender discrimination and you pick a notion of harm,
+
+34:23.280 --> 34:29.120
+ like false rejection for a loan, for example, and you give me a model, I can definitely,
+
+34:29.120 --> 34:34.880
+ first of all, go audit that model. It's easy for me to go, you know, from data to kind of say,
+
+34:34.880 --> 34:40.560
+ like, okay, your false rejection rate on women is this much higher than it is on men. Okay.
+
+34:41.520 --> 34:46.800
+ But, you know, once you also put the fairness into your objective function, I mean, I think the
+
+34:46.800 --> 34:50.800
+ table that you're talking about is, you know, what, what we would call the Pareto curve,
+
+34:50.800 --> 34:57.760
+ right? You can literally trace out and we give examples of such plots on real data sets in the
+
+34:57.760 --> 35:05.680
+ book. You have two axes on the x axis is your error on the y axis is unfairness by whatever,
+
+35:05.680 --> 35:10.080
+ you know, if it's like the disparity between false rejection rates between two groups.
+
+35:11.680 --> 35:16.960
+ And, you know, your algorithm now has a knob that basically says, how strongly do I want
+
+35:16.960 --> 35:22.880
+ to enforce fairness? And the less unfair, you know, we, you know, if the two axes are
+
+35:22.880 --> 35:29.120
+ error and unfairness, we'd like to be at zero zero, we'd like zero error and zero fair unfairness
+
+35:29.120 --> 35:34.400
+ simultaneously. Anybody who works in machine learning knows that you're generally not going
+
+35:34.400 --> 35:39.840
+ to get to zero error period without any fairness constraint whatsoever. So that that that's not
+
+35:39.840 --> 35:46.240
+ going to happen. But in general, you know, you'll get this, you'll get some kind of convex curve
+
+35:46.240 --> 35:52.560
+ that specifies the numerical tradeoff you face, you know, if I want to go from 17%
+
+35:53.360 --> 36:00.560
+ error down to 16% error, what will be the increase in unfairness that I would experience as a result
+
+36:00.560 --> 36:06.400
+ of that. And, and so this curve kind of specifies the, you know, kind of
+
+36:07.120 --> 36:13.520
+ undominated models, models that are off that curve are, you know, can be strictly improved in one or
+
+36:13.520 --> 36:17.520
+ both dimensions, you can, you know, either make the error better or the unfairness better or both.
+
+36:18.560 --> 36:25.760
+ And I think our view is that not only are these objects, these Pareto curves, you know,
+
+36:25.760 --> 36:33.920
+ they're efficient frontiers, as you might call them. Not only are they valuable scientific
+
+36:33.920 --> 36:41.360
+ objects, I actually think that they in the near term might need to be the interface between
+
+36:41.360 --> 36:46.960
+ researchers working in the field and, and stakeholders in given problems. So, you know,
+
+36:46.960 --> 36:55.600
+ you could really imagine telling a criminal jurisdiction, look, if you're concerned about
+
+36:55.600 --> 37:01.840
+ racial fairness, but you're also concerned about accuracy, you want to, you know, you want to
+
+37:01.840 --> 37:06.720
+ release on parole people that are not going to recommit a violent crime and you don't want to
+
+37:06.720 --> 37:12.320
+ release the ones who are. So, you know, that's accuracy. But if you also care about those,
+
+37:12.320 --> 37:16.480
+ you know, the mistakes you make not being disproportionately on one racial group or another,
+
+37:17.120 --> 37:21.920
+ you can, you can show this curve. I'm hoping that in the near future, it'll be possible to
+
+37:21.920 --> 37:27.680
+ explain these curves to non technical people that have that are the ones that have to make the
+
+37:27.680 --> 37:34.880
+ decision. Where do we want to be on this curve? Like what are the relative merits or value of
+
+37:34.880 --> 37:40.480
+ having lower air versus lower unfairness? You know, that's not something computer scientists
+
+37:41.280 --> 37:46.720
+ should be deciding for society, right? That, you know, the people in the field, so to speak,
+
+37:46.720 --> 37:50.800
+ the policy makers, the regulators, that's who should be making these decisions.
+
+37:51.360 --> 37:57.120
+ But I think and hope that they can be made to understand that these tradeoffs generally exist
+
+37:57.840 --> 38:03.040
+ and that you need to pick a point and like, and ignoring the tradeoff, you know,
+
+38:03.040 --> 38:08.400
+ you're implicitly picking a point anyway, right? You just don't know it and you're not admitting it.
+
+38:09.120 --> 38:13.120
+ Just to link down the point of tradeoffs, I think that's a really important thing to sort of
+
+38:14.560 --> 38:21.440
+ think about. So you think when we start to optimize for fairness, there's almost always
+
+38:21.440 --> 38:28.240
+ in most system going to be tradeoffs. So can you like, what's the tradeoff between just to
+
+38:28.240 --> 38:34.480
+ clarify? There have been some sort of technical terms thrown around, but sort of
+
+38:36.560 --> 38:42.480
+ a perfectly fair world. Why is that? Why will somebody be upset about that?
+
+38:43.520 --> 38:47.840
+ The specific tradeoff I talked about just in order to make things very concrete was between
+
+38:48.640 --> 38:52.160
+ numerical error and some numerical measure of unfairness.
+
+38:52.160 --> 38:57.840
+ What is numerical error in the case of? Just like say predictive error, like, you know,
+
+38:57.840 --> 39:04.240
+ the probability or frequency with which you release somebody on parole who then goes on to
+
+39:04.240 --> 39:09.920
+ recommit of violent crime or keep incarcerated somebody who would not have recommitted of
+
+39:09.920 --> 39:16.880
+ violent crime. So in the case of awarding somebody parole or giving somebody parole or letting them
+
+39:16.880 --> 39:23.760
+ out on parole, you don't want them to recommit of crime. So it's your system failed in prediction
+
+39:23.760 --> 39:29.280
+ if they happen to do a crime. Okay. So that's the performance. That's one axis.
+
+39:29.280 --> 39:34.480
+ Right. And what's the fairness axis? So then the fairness axis might be the difference between
+
+39:34.480 --> 39:41.920
+ racial groups in the kind of false, false positive predictions, namely people that I
+
+39:41.920 --> 39:48.640
+ kept incarcerated predicting that they would recommit of violent crime when in fact they
+
+39:48.640 --> 39:55.520
+ wouldn't have. Right. And the unfairness of that, just to linger it, and allow me to
+
+39:56.800 --> 40:03.040
+ ineliquently to try to sort of describe why that's unfair, why unfairness is there.
+
+40:03.040 --> 40:10.560
+ The, the unfairness you want to get rid of is that in the judge's mind, the bias of having
+
+40:10.560 --> 40:15.520
+ being brought up to society, the slight racial bias, the racism that exists in the society,
+
+40:15.520 --> 40:23.040
+ you want to remove that from the system. Another way that's been debated is sort of equality
+
+40:24.080 --> 40:30.720
+ of opportunity versus equality of outcome. And there's a weird dance there that's
+
+40:30.720 --> 40:36.960
+ really difficult to get right. And we don't, the affirmative action is exploring that space.
+
+40:37.920 --> 40:43.520
+ Right. And then we, this also quickly, you know, bleeds into questions like, well,
+
+40:44.560 --> 40:51.440
+ maybe if one group really does recommit crimes at a higher rate, the reason for that is that at
+
+40:51.440 --> 40:56.080
+ some earlier point in the pipeline or earlier in their lives, they didn't receive the same
+
+40:56.080 --> 41:02.160
+ resources that the other group did. Right. And that, and so, you know, there's always in, in
+
+41:02.160 --> 41:07.680
+ kind of fairness discussions, the possibility that the, the real injustice came earlier,
+
+41:07.680 --> 41:12.480
+ right, earlier in this individual's life, earlier in this group's history, etc., etc.
+
+41:13.440 --> 41:18.480
+ And so a lot of the fairness discussion is almost, the goal is for it to be a corrective
+
+41:18.480 --> 41:22.560
+ mechanism to account for the injustice earlier in life.
+
+41:22.560 --> 41:27.840
+ By some definitions of fairness or some theories of fairness, yeah. Others would say, like, look,
+
+41:27.840 --> 41:32.880
+ it's, it's, you know, it's not to correct that injustice, it's just to kind of level the playing
+
+41:32.880 --> 41:38.320
+ field right now and not incarcerate, falsely incarcerate more people of one group than another
+
+41:38.320 --> 41:42.480
+ group. But I mean, do you think just, it might be helpful just to demystify a little bit about
+
+41:43.440 --> 41:49.440
+ the many ways in which bias or unfairness can come into
+
+41:49.440 --> 41:53.680
+ algorithms, especially in the machine learning era, right. And, you know, I think many of your
+
+41:53.680 --> 41:58.320
+ viewers have probably heard these examples before. But, you know, let's say I'm building a face
+
+41:58.320 --> 42:04.400
+ recognition system, right. And so, you know, kind of gathering lots of images of faces and,
+
+42:04.400 --> 42:10.400
+ you know, trying to train the system to, you know, recognize new faces of those individuals
+
+42:10.400 --> 42:15.840
+ from training on, you know, a training set of those faces of individuals. And, you know,
+
+42:15.840 --> 42:20.560
+ it shouldn't surprise anybody, or certainly not anybody in the field of machine learning,
+
+42:20.560 --> 42:26.640
+ if my training dataset was primarily white males, and I'm training that the model to
+
+42:26.640 --> 42:35.040
+ maximize the overall accuracy on my training dataset, that, you know, the model can reduce
+
+42:35.040 --> 42:40.720
+ its error most by getting things right on the white data set. And, you know,
+
+42:40.720 --> 42:46.880
+ the model can reduce its error most by getting things right on the white males that constitute
+
+42:46.880 --> 42:52.560
+ the majority of the data set, even if that means that on other groups, they will be less accurate,
+
+42:52.560 --> 42:58.800
+ okay. Now, there's a bunch of ways you could think about addressing this. One is to deliberately
+
+42:58.800 --> 43:06.560
+ put into the objective of the algorithm not to, not to optimize the error at the expense of
+
+43:06.560 --> 43:10.000
+ this discrimination. And then you're kind of back in the land of these kind of two dimensional
+
+43:10.000 --> 43:16.560
+ numerical tradeoffs. A valid counterargument is to say like, well, no, you don't have to,
+
+43:16.560 --> 43:21.920
+ there's no, you know, the notion of the tension between error and accuracy here is a false one.
+
+43:22.560 --> 43:28.400
+ You could instead just go out and get much more data on these other groups that are in the minority
+
+43:29.040 --> 43:35.760
+ and, you know, equalize your dataset, or you could train a separate model on those subgroups and,
+
+43:35.760 --> 43:41.120
+ you know, have multiple models. The point I think we would, you know, we tried to make in the book
+
+43:41.760 --> 43:49.280
+ is that those things have cost too, right? Going out and gathering more data on groups that are
+
+43:49.280 --> 43:54.240
+ relatively rare compared to your plurality or more majority group that, you know, it may not
+
+43:54.240 --> 43:58.480
+ cost you in the accuracy of the model, but it's going to cost, you know, it's going to cost the
+
+43:58.480 --> 44:03.920
+ company developing this model more money to develop that. And it also costs more money to build
+
+44:03.920 --> 44:10.000
+ separate predictive models and to implement and deploy them. So even if you can find a way to
+
+44:10.000 --> 44:17.200
+ avoid the tension between error and accuracy in training a model, you might push the cost somewhere
+
+44:17.200 --> 44:21.440
+ else like money, like development time, research time and the like.
+
+44:22.640 --> 44:30.160
+ There are fundamentally difficult philosophical questions in fairness. And we live in a very
+
+44:30.160 --> 44:38.800
+ divisive political climate, outraged culture. There is alt right folks on 4chan trolls. There is
+
+44:40.240 --> 44:47.840
+ social justice warriors on Twitter. There is very divisive, outraged folks on all sides of
+
+44:47.840 --> 44:56.080
+ every kind of system. How do you, how do we as engineers build ethical algorithms in such
+
+44:56.080 --> 45:02.080
+ divisive culture? Do you think they could be disjoint? The human has to inject your values
+
+45:02.080 --> 45:07.680
+ and then you can optimize over those values. But in our times when, when you start actually
+
+45:07.680 --> 45:13.280
+ applying these systems, things get a little bit challenging for the public discourse. How do you
+
+45:13.280 --> 45:18.640
+ think we can proceed? Yeah, I mean, for the most part in the book, you know, a point that we
+
+45:18.640 --> 45:28.160
+ try to take some pains to make is that we don't view ourselves or people like us as being in
+
+45:28.160 --> 45:33.520
+ the position of deciding for society what the right social norms are, what the right definitions
+
+45:33.520 --> 45:40.880
+ of fairness are. Our main point is to just show that if society or the relevant stakeholders
+
+45:40.880 --> 45:46.720
+ in a particular domain can come to agreement on those sorts of things, there's a way of encoding
+
+45:46.720 --> 45:52.720
+ that into algorithms in many cases, not in all cases. One other misconception that hopefully we
+
+45:52.720 --> 45:58.000
+ definitely dispel is sometimes people read the title of the book and I think not unnaturally
+
+45:58.720 --> 46:03.280
+ fear that what we're suggesting is that the algorithms themselves should decide what those
+
+46:03.280 --> 46:08.320
+ social norms are and develop their own notions of fairness and privacy or ethics. And we're
+
+46:08.320 --> 46:12.640
+ definitely not suggesting that. The title of the book is ethical algorithm, by the way, and I didn't
+
+46:12.640 --> 46:17.040
+ think of that interpretation of the title. That's interesting. Yeah, yeah. I mean, especially these
+
+46:17.040 --> 46:23.200
+ days where people are concerned about the robots becoming our overlords, the idea that the robots
+
+46:23.200 --> 46:30.400
+ would also develop their own social norms is just one step away from that. But I do think,
+
+46:30.400 --> 46:36.400
+ obviously, despite disclaimer that people like us shouldn't be making those decisions for society,
+
+46:36.400 --> 46:42.160
+ we are living in a world where, in many ways, computer scientists have made some decisions
+
+46:42.720 --> 46:49.200
+ that have fundamentally changed the nature of our society and democracy and civil discourse
+
+46:49.200 --> 46:54.720
+ and deliberation in ways that I think most people generally feel are bad these days.
+
+46:55.520 --> 47:01.600
+ But if we look at people at the heads of companies and so on, they had to make those
+
+47:01.600 --> 47:08.560
+ decisions. There has to be decisions. So there's two options. Either you kind of put your head in
+
+47:08.560 --> 47:13.760
+ the sand and don't think about these things and just let the algorithm do what it does,
+
+47:13.760 --> 47:19.280
+ or you make decisions about what you value, injecting moral values into the algorithm.
+
+47:19.840 --> 47:27.920
+ Look, I never mean to be an apologist for the tech industry, but I think it's a little bit too
+
+47:27.920 --> 47:31.920
+ far to say that explicit decisions were made about these things. So let's, for instance,
+
+47:31.920 --> 47:38.240
+ take social media platforms. So like many inventions in technology and computer science,
+
+47:38.240 --> 47:44.960
+ a lot of these platforms that we now use regularly kind of started as curiosities.
+
+47:44.960 --> 47:49.040
+ I remember when things like Facebook came out and its predecessors like Friendster,
+
+47:49.040 --> 47:55.840
+ which nobody even remembers now, people really wonder why would anybody want to spend time
+
+47:55.840 --> 48:00.800
+ doing that? I mean, even the web when it first came out, when it wasn't populated with much
+
+48:00.800 --> 48:06.720
+ content and it was largely kind of hobbyists building their own kind of ramshackle websites,
+
+48:06.720 --> 48:10.320
+ a lot of people looked at this as like, what is the purpose of this thing? Why is this
+
+48:10.320 --> 48:14.960
+ interesting? Who would want to do this? And so even things like Facebook and Twitter,
+
+48:14.960 --> 48:19.840
+ yes, technical decisions were made by engineers, by scientists, by executives,
+
+48:19.840 --> 48:28.080
+ in the design of those platforms. But I don't think 10 years ago, anyone anticipated
+
+48:29.520 --> 48:39.120
+ that those platforms, for instance, might kind of acquire undue influence on political discourse
+
+48:39.120 --> 48:46.080
+ or on the outcomes of elections. And I think the scrutiny that these companies are getting now
+
+48:46.080 --> 48:51.840
+ is entirely appropriate. But I think it's a little too harsh to kind of look at history
+
+48:51.840 --> 48:55.200
+ and sort of say like, oh, you should have been able to anticipate that this would happen with
+
+48:55.200 --> 48:59.680
+ your platform. And in the sort of gaming chapter of the book, one of the points we're making is that,
+
+49:00.400 --> 49:06.480
+ you know, these platforms, right, they don't operate in isolation. So unlike the other topics
+
+49:06.480 --> 49:11.600
+ we're discussing like fairness and privacy, like those are really cases where algorithms can operate
+
+49:11.600 --> 49:16.400
+ on your data and make decisions about you. And you're not even aware of it. Okay. Things like
+
+49:16.400 --> 49:20.880
+ Facebook and Twitter, these are, you know, these are, these are systems, right? These are social
+
+49:20.880 --> 49:27.200
+ systems. And their evolution, even their technical evolution, because machine learning is involved,
+
+49:27.200 --> 49:33.440
+ is driven in no small part by the behavior of the users themselves and how the users decide to adopt
+
+49:33.440 --> 49:42.240
+ them and how to use them. And so, you know, you know, I'm kind of like, who really knew that,
+
+49:42.240 --> 49:46.480
+ that, you know, until until we saw it happen, who knew that these things might be able to influence
+
+49:46.480 --> 49:53.840
+ the outcome of elections? Who knew that, you know, they might polarize political discourse because
+
+49:53.840 --> 49:59.920
+ of the ability to, you know, decide who you interact with on the platform and also with the
+
+49:59.920 --> 50:04.720
+ platform naturally using machine learning to optimize for your own interests that they would
+
+50:04.720 --> 50:10.160
+ further isolate us from each other and, you know, like feed us all basically just the stuff that
+
+50:10.160 --> 50:15.760
+ we already agreed with. And so I think, you know, we've come to that outcome, I think, largely,
+
+50:15.760 --> 50:22.720
+ but I think it's something that we all learned together, including the companies as these things
+
+50:22.720 --> 50:29.760
+ happen. Now, you asked like, well, are there algorithmic remedies to these kinds of things? And
+
+50:31.120 --> 50:34.160
+ again, these are big problems that are not going to be solved with, you know,
+
+50:34.960 --> 50:39.120
+ somebody going in and changing a few lines of code somewhere in a social media platform.
+
+50:39.760 --> 50:45.040
+ But I do think in many ways, there are definitely ways of making things better. I mean,
+
+50:45.040 --> 50:49.360
+ like an obvious recommendation that we make at some point in the book is like, look, you know,
+
+50:49.360 --> 50:55.760
+ to the extent that we think that machine learning applied for personalization purposes in things
+
+50:55.760 --> 51:04.640
+ like news feed, you know, or other platforms has led to polarization and intolerance of opposing
+
+51:04.640 --> 51:10.400
+ viewpoints. As you know, right, these, these algorithms have models, right? And they kind of
+
+51:10.400 --> 51:15.600
+ place people in some kind of metric space and, and they place content in that space. And they
+
+51:15.600 --> 51:21.280
+ sort of know the extent to which I have an affinity for a particular type of content. And by the
+
+51:21.280 --> 51:27.120
+ same token, they also probably have that same model probably gives you a good idea of the stuff
+
+51:27.120 --> 51:33.520
+ I'm likely to violently disagree with or be offended by. Okay. So, you know, in this case,
+
+51:33.520 --> 51:38.960
+ there really is some knob you could tune that says like, instead of showing people only what they
+
+51:38.960 --> 51:43.760
+ like and what they want, let's show them some stuff that we think that they don't like, or that's a
+
+51:43.760 --> 51:49.040
+ little bit further away. And you could even imagine users being able to control this, you know, just
+
+51:49.040 --> 51:55.920
+ like a, everybody gets a slider. And that slider says like, you know, how much stuff do you want
+
+51:55.920 --> 52:00.960
+ to see that's kind of, you know, you might disagree with, or is at least further from your
+
+52:00.960 --> 52:08.000
+ interest. Like, it's almost like an exploration button. So just get your intuition. Do you think
+
+52:08.000 --> 52:14.000
+ do you think engagement? So like, you're staying on the platform, you're staying engaged. Do you
+
+52:14.000 --> 52:21.040
+ think fairness, ideas of fairness won't emerge? Like, how bad is it to just optimize for engagement?
+
+52:22.400 --> 52:27.920
+ Do you think we'll run into big trouble if we're just optimizing for how much you love the platform?
+
+52:28.640 --> 52:32.720
+ Well, I mean, optimizing for engagement kind of got us where we are.
+
+52:32.720 --> 52:41.200
+ So, do you, one, have faith that it's possible to do better? And two, if it is, how do we do better?
+
+52:42.240 --> 52:47.440
+ I mean, it's definitely possible to do different, right? And again, you know, it's not as if I think
+
+52:47.440 --> 52:53.200
+ that doing something different than optimizing for engagement won't cost these companies in real
+
+52:53.200 --> 52:58.640
+ ways, including revenue and profitability potentially. In the short term, at least.
+
+52:58.640 --> 53:06.560
+ Yeah, in the short term, right. And again, you know, if I worked at these companies, I'm sure that
+
+53:08.160 --> 53:11.680
+ it would have seemed like the most natural thing in the world also to want to optimize
+
+53:11.680 --> 53:16.160
+ engagement, right? And that's good for users in some sense. You want them to be, you know,
+
+53:16.160 --> 53:20.800
+ vested in the platform and enjoying it and finding it useful, interesting and or productive.
+
+53:21.360 --> 53:27.440
+ But, you know, my point is, is that the idea that there is, that it's sort of out of their hands,
+
+53:27.440 --> 53:31.840
+ as you said, or that there's nothing to do about it, never say never, but that strikes
+
+53:31.840 --> 53:36.240
+ me as implausible as a machine learning person, right? I mean, these companies are driven by
+
+53:36.240 --> 53:41.280
+ machine learning and this optimization of engagement is essentially driven by machine
+
+53:41.280 --> 53:46.720
+ learning, right? It's driven by not just machine learning, but, you know, very, very large scale
+
+53:46.720 --> 53:52.960
+ A, B experimentation where you kind of tweak some element of the user interface or tweak some
+
+53:52.960 --> 53:58.960
+ component of an algorithm or tweak some component or feature of your click through
+
+53:58.960 --> 54:05.200
+ prediction model. And my point is, is that anytime you know how to optimize for something,
+
+54:05.200 --> 54:10.320
+ you know, by def, almost by definition, that solution tells you how not to optimize for it
+
+54:10.320 --> 54:17.600
+ or to do something different. Engagement can be measured. So, sort of optimizing
+
+54:17.600 --> 54:26.880
+ for, sort of minimizing divisiveness or maximizing intellectual growth over the lifetime of a human
+
+54:26.880 --> 54:33.280
+ being are very difficult to measure. That's right. So, I'm not, I'm not claiming that doing
+
+54:33.280 --> 54:40.400
+ something different will immediately make it apparent that this is a good thing for society.
+
+54:40.400 --> 54:44.640
+ And in particular, I mean, I think one way of thinking about where we are on some of these
+
+54:44.640 --> 54:50.000
+ social media platforms is that, you know, it kind of feels a bit like we're in a bad equilibrium,
+
+54:50.000 --> 54:55.920
+ right? That these systems are helping us all kind of optimize something myopically and selfishly
+
+54:55.920 --> 55:02.240
+ for ourselves. And of course, from an individual standpoint at any given moment, like, why would
+
+55:02.240 --> 55:07.840
+ I want to see things in my newsfeed that I found irrelevant, offensive, or, you know, or the like,
+
+55:07.840 --> 55:15.600
+ okay? But, you know, maybe by all of us, you know, having these platforms myopically optimize in our
+
+55:15.600 --> 55:21.280
+ interests, we have reached a collective outcome as a society that we're unhappy with in different
+
+55:21.280 --> 55:26.160
+ ways, let's say, with respect to things like, you know, political discourse and tolerance
+
+55:26.160 --> 55:33.920
+ of opposing viewpoints. And if Mark Zuckerberg gave you a call and said, I'm thinking of taking
+
+55:33.920 --> 55:38.240
+ a sabbatical, could you run Facebook for me for six months? What would you how?
+
+55:38.240 --> 55:45.840
+ I think no thanks would be the first response. But there are many aspects of being the head of
+
+55:45.840 --> 55:51.680
+ the entire company that are kind of entirely exogenous to many of the things that we're discussing
+
+55:51.680 --> 55:58.480
+ here. And so I don't really think I would need to be CEO of Facebook to kind of implement the,
+
+55:58.480 --> 56:04.880
+ you know, more limited set of solutions that I might imagine. But I think one, one concrete
+
+56:04.880 --> 56:12.560
+ thing they could do is they could experiment with letting people who chose to, to see more stuff in
+
+56:12.560 --> 56:18.960
+ their newsfeed that is not entirely kind of chosen to optimize for their particular interests,
+
+56:20.240 --> 56:27.200
+ beliefs, etc. So the kind of thing is like I speak to YouTube, but I think Facebook probably
+
+56:27.200 --> 56:34.960
+ does something similar is they're quite effective at automatically finding what sorts of groups you
+
+56:34.960 --> 56:41.360
+ belong to, not based on race or gender or so on, but based on the kind of stuff you enjoy watching
+
+56:41.360 --> 56:49.760
+ in the case of YouTube. So it's a difficult thing for Facebook or YouTube to then say,
+
+56:49.760 --> 56:53.120
+ well, you know what, we're going to show you something from a very different cluster.
+
+56:53.120 --> 56:58.400
+ Even though we believe algorithmically, you're unlikely to enjoy that thing.
+
+56:59.360 --> 57:04.960
+ Sort of, that's a weird jump to make. There has to be a human, like at the very top of
+
+57:04.960 --> 57:11.040
+ that system that says, well, that will be long term healthy for you. That's more than an algorithmic
+
+57:11.040 --> 57:17.520
+ decision. Or that same person could say that'll be long term healthy for the platform or for
+
+57:17.520 --> 57:24.800
+ the platform's influence on society outside of the platform. It's easy for me to sit here and say
+
+57:24.800 --> 57:32.960
+ these things, but conceptually, I do not think that these are totally or they shouldn't be completely
+
+57:32.960 --> 57:42.880
+ alien ideas. You could try things like this and we wouldn't have to invent entirely new science
+
+57:42.880 --> 57:47.760
+ to do it because if we're all already embedded in some metric space and there's a notion of
+
+57:47.760 --> 57:59.200
+ distance between you and me and every piece of content, then the same model that dictates how
+
+57:59.200 --> 58:04.240
+ to make me really happy also tells how to make me as unhappy as possible as well.
+
+58:05.760 --> 58:11.040
+ The focus in your book and algorithmic fairness research today in general is on machine learning,
+
+58:11.040 --> 58:17.280
+ like we said, is data. Just even the entire AI field right now is captivated with machine
+
+58:17.280 --> 58:24.320
+ learning, with deep learning. Do you think ideas in symbolic AI or totally other kinds of approaches
+
+58:24.320 --> 58:30.320
+ are interesting, useful in the space, have some promising ideas in terms of fairness?
+
+58:31.200 --> 58:36.800
+ I haven't thought about that question specifically in the context of fairness. I definitely would
+
+58:36.800 --> 58:44.560
+ agree with that statement in the large. I am one of many machine learning researchers who
+
+58:45.360 --> 58:50.160
+ do believe that the great successes that have been shown in machine learning recently
+
+58:50.160 --> 58:54.880
+ are great successes, but they're on a pretty narrow set of tasks. I don't think we're
+
+58:56.800 --> 59:03.200
+ notably closer to general artificial intelligence now than we were when I started my career.
+
+59:03.200 --> 59:08.960
+ I mean, there's been progress. I do think that we are kind of as a community maybe looking at
+
+59:08.960 --> 59:12.880
+ that where the light is, but the light is shining pretty bright there right now and we're finding
+
+59:12.880 --> 59:18.000
+ a lot of stuff. I don't want to argue with the progress that's been made in areas like deep
+
+59:18.000 --> 59:23.840
+ learning, for example. This touches another related thing that you mentioned and that people
+
+59:23.840 --> 59:28.880
+ might misinterpret from the title of your book, Ethical Algorithm. Is it possible for the algorithm
+
+59:28.880 --> 59:36.720
+ to automate some of those decisions, higher level decisions of what should be fair?
+
+59:36.720 --> 59:37.840
+ What should be fair?
+
+59:38.480 --> 59:42.400
+ The more you know about a field, the more aware you are of its limitations.
+
+59:43.600 --> 59:50.960
+ I'm pretty leery of trying. There's so much we already don't know in fairness,
+
+59:51.600 --> 59:56.960
+ even when we're the ones picking the fairness definitions and comparing alternatives and
+
+59:56.960 --> 1:00:01.600
+ thinking about the tensions between different definitions, that the idea of kind of letting
+
+1:00:01.600 --> 1:00:08.560
+ the algorithm start exploring as well. I definitely think this is a much narrower statement. I
+
+1:00:08.560 --> 1:00:12.560
+ definitely think that kind of algorithmic auditing for different types of unfairness,
+
+1:00:12.560 --> 1:00:18.560
+ right? So like in this gerrymandering example where I might want to prevent not just discrimination
+
+1:00:18.560 --> 1:00:24.480
+ against very broad categories, but against combinations of broad categories, you quickly
+
+1:00:24.480 --> 1:00:29.920
+ get to a point where there's a lot of categories. There's a lot of combinations of end features.
+
+1:00:31.920 --> 1:00:36.400
+ You can use algorithmic techniques to sort of try to find the subgroups on which you're
+
+1:00:36.400 --> 1:00:40.640
+ discriminating the most and try to fix that. That's actually kind of the form of one of the
+
+1:00:40.640 --> 1:00:48.080
+ algorithms we developed for this fairness gerrymandering problem. But partly because of our
+
+1:00:48.080 --> 1:00:54.240
+ techno law, our sort of our scientific ignorance on these topics right now. And also partly just
+
+1:00:54.240 --> 1:01:00.640
+ because these topics are so loaded emotionally for people that I just don't see the value.
+
+1:01:00.640 --> 1:01:04.560
+ I mean, again, never say never, but I just don't think we're at a moment where it's a great time
+
+1:01:04.560 --> 1:01:10.400
+ for computer scientists to be rolling out the idea like, hey, not only have we kind of figured
+
+1:01:10.400 --> 1:01:16.240
+ fairness out, but we think the algorithms should start deciding what's fair or giving input on
+
+1:01:16.240 --> 1:01:21.840
+ that decision. I just don't. It's like the cost benefit analysis to the field of kind of going
+
+1:01:21.840 --> 1:01:26.880
+ there right now just doesn't seem worth it to me. That said, I should say that I think computer
+
+1:01:26.880 --> 1:01:31.440
+ scientists should be more philosophically like should enrich their thinking about these kinds
+
+1:01:31.440 --> 1:01:37.840
+ of things. I think it's been too often used as an excuse for roboticists working autonomous vehicles,
+
+1:01:37.840 --> 1:01:44.480
+ for example, to not think about the human factor or psychology or safety in the same way like computer
+
+1:01:44.480 --> 1:01:49.360
+ sizes and algorithms that have been sort of using as an excuse. And I think it's time for basically
+
+1:01:49.360 --> 1:01:53.440
+ everybody to become computer scientists. I was about to agree with everything you said except
+
+1:01:53.440 --> 1:01:59.200
+ that last point. I think that the other way of looking at it is that I think computer scientists,
+
+1:01:59.200 --> 1:02:06.400
+ you know, and many of us are, but we need to wade out into the world more, right? I mean,
+
+1:02:07.040 --> 1:02:13.280
+ just the influence that computer science and therefore computer scientists have had on society
+
+1:02:13.280 --> 1:02:21.760
+ at large, just like has exponentially magnified in the last 10 or 20 years or so. And, you know,
+
+1:02:22.640 --> 1:02:26.960
+ you know, before when we were just tinkering around amongst ourselves and it didn't matter that much,
+
+1:02:27.600 --> 1:02:32.480
+ there was no need for sort of computer scientists to be citizens of the world more broadly.
+
+1:02:33.120 --> 1:02:38.800
+ And I think those days need to be over very, very fast. And I'm not saying everybody needs to do it,
+
+1:02:38.800 --> 1:02:42.560
+ but to me, like the right way of doing it is to not to sort of think that everybody else is going
+
+1:02:42.560 --> 1:02:47.280
+ to become a computer scientist. But, you know, I think, you know, people are becoming more
+
+1:02:47.280 --> 1:02:52.320
+ sophisticated about computer science, even lay people. You know, I think one of the reasons we
+
+1:02:53.120 --> 1:02:58.400
+ decided to write this book is we thought 10 years ago, I wouldn't have tried this just because I
+
+1:02:58.400 --> 1:03:03.360
+ just didn't think that sort of people's awareness of algorithms and machine learning,
+
+1:03:04.000 --> 1:03:08.160
+ you know, the general population would have been high. And I mean, you would have had to first,
+
+1:03:08.160 --> 1:03:13.920
+ you know, write one of the many books kind of just explicating that topic to a lay audience first.
+
+1:03:14.480 --> 1:03:18.800
+ Now I think we're at the point where like lots of people without any technical training
+
+1:03:18.800 --> 1:03:22.160
+ at all know enough about algorithms and machine learning that you can start
+
+1:03:22.160 --> 1:03:27.680
+ getting to these nuances of things like ethical algorithms. I think we agree that there needs to
+
+1:03:27.680 --> 1:03:34.160
+ be much more mixing. But I think I think a lot of the onus of that mixing needs to be on the
+
+1:03:34.160 --> 1:03:39.760
+ computer science community. Yeah. So just to linger on the disagreement, because I do disagree with
+
+1:03:39.760 --> 1:03:49.040
+ you on the point that I think if you're a biologist, if you're a chemist, if you're an MBA business
+
+1:03:49.040 --> 1:03:56.720
+ person, all of those things you can like if you learned a program and not only program, if you
+
+1:03:56.720 --> 1:04:01.920
+ learned to do machine learning, if you learned to do data science, you immediately become much
+
+1:04:01.920 --> 1:04:07.680
+ more powerful in the kinds of things you can do. And therefore, literature, like library sciences,
+
+1:04:07.680 --> 1:04:13.760
+ like, so you were speaking, I think, I think it holds true what you're saying for the next
+
+1:04:13.760 --> 1:04:20.240
+ two years. But long term, if you're interested to me, if you're interested in philosophy,
+
+1:04:21.040 --> 1:04:27.040
+ you should learn a program. Because then you can scrape data, you can study what people are
+
+1:04:27.040 --> 1:04:32.400
+ thinking about on Twitter, and then start making philosophical conclusions about the meaning
+
+1:04:32.400 --> 1:04:39.920
+ of life. I just feel like the access to data, the digitization of whatever problem you're trying to
+
+1:04:39.920 --> 1:04:44.880
+ solve, it fundamentally changes what it means to be a computer scientist. To me, a computer
+
+1:04:44.880 --> 1:04:51.760
+ scientist in 20, 30 years will go back to being a Donald Knuth style theoretical computer science,
+
+1:04:51.760 --> 1:04:56.960
+ and everybody would be doing basically, they're exploring the kinds of ideas that you're exploring
+
+1:04:56.960 --> 1:05:01.360
+ in your book. It won't be a computer science. Yeah, I mean, I don't think I disagree enough,
+
+1:05:01.360 --> 1:05:06.880
+ but I think that that trend of more and more people and more and more disciplines,
+
+1:05:08.320 --> 1:05:13.600
+ adopting ideas from computer science, learning how to code, I think that that trend seems
+
+1:05:13.600 --> 1:05:19.040
+ firmly underway. I mean, you know, like an interesting digressive question along these
+
+1:05:19.040 --> 1:05:24.000
+ lines is, maybe in 50 years, there won't be computer science departments anymore,
+
+1:05:24.800 --> 1:05:31.760
+ because the field will just sort of be ambient in all of the different disciplines. And people
+
+1:05:31.760 --> 1:05:36.880
+ look back and having a computer science department will look like having an electricity department
+
+1:05:36.880 --> 1:05:41.920
+ or something. It's like, everybody uses this, it's just out there. I mean, I do think there will
+
+1:05:41.920 --> 1:05:47.280
+ always be that kind of Knuth style core to it. But it's not an implausible path that we kind of
+
+1:05:47.280 --> 1:05:53.040
+ get to the point where the academic discipline of computer science becomes somewhat marginalized
+
+1:05:53.040 --> 1:05:59.280
+ because of its very success in infiltrating all of science and society and the humanities, etc.
+
+1:06:00.400 --> 1:06:06.240
+ What is differential privacy or more broadly algorithmic privacy?
+
+1:06:07.120 --> 1:06:12.880
+ Algorithmic privacy more broadly is just the study or the notion of privacy
+
+1:06:12.880 --> 1:06:21.600
+ definitions or norms being encoded inside of algorithms. And so, you know, I think we count
+
+1:06:21.600 --> 1:06:28.560
+ among this body of work, just, you know, the literature and practice of things like data
+
+1:06:28.560 --> 1:06:35.200
+ anonymization, which we kind of at the beginning of our discussion of privacy, say like, okay,
+
+1:06:35.200 --> 1:06:39.680
+ this is this is sort of a notion of algorithmic privacy, it kind of tells you, you know,
+
+1:06:39.680 --> 1:06:47.040
+ something to go do with data. But but, you know, our view is that it's and I think this is now,
+
+1:06:47.040 --> 1:06:52.640
+ you know, quite widespread that it's, you know, despite the fact that those notions of
+
+1:06:52.640 --> 1:07:00.720
+ anonymization kind of redacting and coarsening are the most widely adopted technical solutions
+
+1:07:00.720 --> 1:07:07.120
+ for data privacy, they are like deeply fundamentally flawed. And so, you know, to your first question,
+
+1:07:07.120 --> 1:07:14.320
+ what is differential privacy? Differential privacy seems to be a much, much better notion
+
+1:07:14.320 --> 1:07:21.360
+ of privacy that kind of avoids a lot of the weaknesses of anonymization notions while
+
+1:07:22.000 --> 1:07:27.200
+ while still letting us do useful stuff with data. What's anonymization of data?
+
+1:07:27.200 --> 1:07:32.640
+ So by anonymization, I'm, you know, kind of referring to techniques like I have a database,
+
+1:07:32.640 --> 1:07:40.480
+ the rows of that database are, let's say, individual people's medical records. Okay. And I
+
+1:07:41.440 --> 1:07:46.480
+ I want to let people use that data. Maybe I want to let researchers access that data to
+
+1:07:46.480 --> 1:07:53.760
+ build predictive models for some disease. But I'm worried that that will leak, you know,
+
+1:07:53.760 --> 1:07:58.880
+ sensitive information about specific people's medical records. So anonymization broadly
+
+1:07:58.880 --> 1:08:03.040
+ refers to the set of techniques where I say, like, okay, I'm first going to like, like, I'm
+
+1:08:03.040 --> 1:08:08.240
+ going to delete the column with people's names. I'm going to not put, you know, so that would be
+
+1:08:08.240 --> 1:08:15.200
+ like a redaction, right? I'm just redacting that information. I am going to take ages and I'm not
+
+1:08:15.200 --> 1:08:20.720
+ going to like say your exact age, I'm going to say whether you're, you know, zero to 10, 10 to 20,
+
+1:08:20.720 --> 1:08:27.200
+ 20 to 30, I might put the first three digits of your zip code, but not the last two, etc, etc.
+
+1:08:27.200 --> 1:08:31.680
+ And so the idea is that through some series of operations like this on the data, I anonymize it,
+
+1:08:31.680 --> 1:08:37.840
+ you know, another term of art that's used is removing personally identifiable information.
+
+1:08:38.400 --> 1:08:45.600
+ And, you know, this is basically the most common way of providing data privacy, but that's in a
+
+1:08:45.600 --> 1:08:52.320
+ way that still lets people access the some variant form of the data. So at a slightly broader picture,
+
+1:08:52.320 --> 1:08:57.680
+ as you talk about, what does anonymization mean when you have multiple database, like with a
+
+1:08:57.680 --> 1:09:03.680
+ Netflix prize, when you can start combining stuff together. So this is exactly the problem
+
+1:09:03.680 --> 1:09:08.320
+ with these notions, right? Is that notions of a don anonymization, removing personally
+
+1:09:08.320 --> 1:09:14.720
+ identifiable information, the kind of fundamental conceptual flaw is that, you know, these definitions
+
+1:09:14.720 --> 1:09:20.720
+ kind of pretend as if the data set in question is the only data set that exists in the world,
+
+1:09:20.720 --> 1:09:26.160
+ or that ever will exist in the future. And of course, things like the Netflix prize and many,
+
+1:09:26.160 --> 1:09:30.080
+ many other examples since the Netflix prize, I think that was one of the earliest ones, though,
+
+1:09:30.640 --> 1:09:37.360
+ you know, you can reidentify people that were, you know, that were anonymized in the data set by
+
+1:09:37.360 --> 1:09:41.920
+ taking that anonymized data set and combining it with other allegedly anonymized data sets and
+
+1:09:41.920 --> 1:09:46.320
+ maybe publicly available information about you, you know, for people who don't know the Netflix
+
+1:09:46.320 --> 1:09:53.200
+ prize was what was being publicly released as data. So the names from those rows were removed,
+
+1:09:53.200 --> 1:09:57.840
+ but what was released is the preference or the ratings of what movies you like and you don't
+
+1:09:57.840 --> 1:10:03.760
+ like. And from that combined with other things, I think forum posts and so on, you can start to figure
+
+1:10:03.760 --> 1:10:09.280
+ out the names. That case, it was specifically the internet movie database, where lots of
+
+1:10:09.280 --> 1:10:16.560
+ Netflix users publicly rate their movie, you know, their movie preferences. And so the anonymized data
+
+1:10:16.560 --> 1:10:23.680
+ and Netflix when it's just this phenomenon, I think that we've all come to realize in the last
+
+1:10:23.680 --> 1:10:31.840
+ decade or so is that just knowing a few apparently irrelevant innocuous things about you can often
+
+1:10:31.840 --> 1:10:38.480
+ act as a fingerprint. Like if I know, you know, what rating you gave to these 10 movies and the
+
+1:10:38.480 --> 1:10:43.120
+ date on which you entered these movies, this is almost like a fingerprint for you is in the sea
+
+1:10:43.120 --> 1:10:48.160
+ of all Netflix users. There were just another paper on this in science or nature of about a
+
+1:10:48.160 --> 1:10:53.760
+ month ago that, you know, kind of 18 attributes. I mean, my favorite example of this was actually
+
+1:10:54.400 --> 1:11:01.600
+ a paper from several years ago now where it was shown that just from your likes on Facebook,
+
+1:11:01.600 --> 1:11:07.360
+ just from the, you know, the things on which you clicked on the thumbs up button on the platform,
+
+1:11:07.360 --> 1:11:11.920
+ not using any information, demographic information, nothing about who your friends are,
+
+1:11:12.480 --> 1:11:19.360
+ just knowing the content that you had liked was enough to, you know, in the aggregate,
+
+1:11:19.360 --> 1:11:25.440
+ accurately predict things like sexual orientation, drug and alcohol use, whether you were the child
+
+1:11:25.440 --> 1:11:31.360
+ of divorced parents. So we live in this era where, you know, even the apparently irrelevant data that
+
+1:11:31.360 --> 1:11:38.960
+ we offer about ourselves on public platforms and forums often unbeknownst to us, more or less acts as
+
+1:11:38.960 --> 1:11:45.680
+ signature or, you know, fingerprint, and that if you can kind of, you know, do a join between that
+
+1:11:45.680 --> 1:11:52.240
+ kind of data and allegedly anonymized data, you have real trouble. So is there hope for any kind
+
+1:11:52.240 --> 1:11:59.920
+ of privacy in the world where a few likes can identify you? So there is differential privacy,
+
+1:11:59.920 --> 1:12:04.240
+ right? So what is differential privacy? So differential privacy basically is a kind of
+
+1:12:04.240 --> 1:12:11.840
+ alternate much stronger notion of privacy than these anonymization ideas. And it, you know,
+
+1:12:11.840 --> 1:12:20.640
+ it's a technical definition, but like the spirit of it is we compare two alternate worlds. Okay, so
+
+1:12:20.640 --> 1:12:26.480
+ let's suppose I'm a researcher and I want to do, you know, there's a database of medical records
+
+1:12:26.480 --> 1:12:32.480
+ and one of them is yours. And I want to use that database of medical records to build a predictive
+
+1:12:32.480 --> 1:12:38.560
+ model for some disease. So based on people's symptoms and test results and the like, I want to,
+
+1:12:38.560 --> 1:12:42.240
+ you know, build a problem, you know, model predicting the probability that people have disease. So,
+
+1:12:42.240 --> 1:12:46.960
+ you know, this is the type of scientific research that we would like to be allowed to continue.
+
+1:12:47.760 --> 1:12:52.400
+ And in differential privacy, you act, ask a very particular counterfactual question.
+
+1:12:52.400 --> 1:13:01.840
+ We basically compare two alternatives. One is when I do this, I build this model on the
+
+1:13:01.840 --> 1:13:09.120
+ database of medical records, including your medical record. And the other one is where I do the same
+
+1:13:09.920 --> 1:13:16.640
+ exercise with the same database with just your medical record removed. So basically, you know,
+
+1:13:16.640 --> 1:13:23.680
+ it's two databases, one with n records in it, and one with n minus one records in it. The n minus
+
+1:13:23.680 --> 1:13:28.640
+ one records are the same. And the only one that's missing in the second case is your medical record.
+
+1:13:29.600 --> 1:13:40.640
+ So differential privacy basically says that any harms that might come to you from the analysis
+
+1:13:40.640 --> 1:13:47.600
+ in which your data was included are essentially nearly identical to the harms that would have come
+
+1:13:47.600 --> 1:13:54.080
+ to you if the same analysis had been done without your medical record included. So in other words,
+
+1:13:54.080 --> 1:13:59.600
+ this doesn't say that bad things cannot happen to you as a result of data analysis. It just says
+
+1:13:59.600 --> 1:14:05.200
+ that these bad things were going to happen to you already, even if your data wasn't included.
+
+1:14:05.200 --> 1:14:11.760
+ And to give a very concrete example, right, you know, like we discussed at some length,
+
+1:14:11.760 --> 1:14:18.560
+ the study that in the 50s that was done that established the link between smoking and lung
+
+1:14:18.560 --> 1:14:24.000
+ cancer. And we make the point that like, well, if your data was used in that analysis,
+
+1:14:24.800 --> 1:14:29.520
+ and the world kind of knew that you were a smoker because there was no stigma associated
+
+1:14:29.520 --> 1:14:35.440
+ with smoking before that, those findings, real harm might have come to you as a result of that
+
+1:14:35.440 --> 1:14:41.040
+ study that your data was included in. In particular, your insurer now might have a higher posterior
+
+1:14:41.040 --> 1:14:46.720
+ belief that you might have lung cancer and raise your premium. So you've suffered economic damage.
+
+1:14:47.520 --> 1:14:54.480
+ But the point is, is that if the same analysis has been done without with all the other n minus
+
+1:14:54.480 --> 1:15:00.240
+ one medical records and just yours missing, the outcome would have been the same. Your data was
+
+1:15:00.240 --> 1:15:06.320
+ an idiosyncratically crucial to establishing the link between smoking and lung cancer because the
+
+1:15:06.320 --> 1:15:11.840
+ link between smoking and lung cancer is like a fact about the world that can be discovered with any
+
+1:15:11.840 --> 1:15:17.600
+ sufficiently large database of medical records. But that's a very low value of harm. Yeah. So
+
+1:15:17.600 --> 1:15:23.360
+ that's showing that very little harm is done. Great. But how, what is the mechanism of differential
+
+1:15:23.360 --> 1:15:28.880
+ privacy? So that's the kind of beautiful statement of it. But what's the mechanism by which
+
+1:15:28.880 --> 1:15:34.560
+ privacy is preserved? Yeah. So it's basically by adding noise to computations, right? So the
+
+1:15:34.560 --> 1:15:41.280
+ basic idea is that every differentially private algorithm, first of all, or every good differentially
+
+1:15:41.280 --> 1:15:48.080
+ private algorithm, every useful one is a probabilistic algorithm. So it doesn't, on a given input,
+
+1:15:48.080 --> 1:15:53.280
+ if you gave the algorithm the same input multiple times, it would give different outputs each time
+
+1:15:53.280 --> 1:15:58.960
+ from some distribution. And the way you achieve differential privacy algorithmically is by kind
+
+1:15:58.960 --> 1:16:05.440
+ of carefully and tastefully adding noise to a computation in the right places. And, you know,
+
+1:16:05.440 --> 1:16:10.720
+ to give a very concrete example, if I want to compute the average of a set of numbers, right,
+
+1:16:11.360 --> 1:16:16.320
+ the non private way of doing that is to take those numbers and average them and release
+
+1:16:16.320 --> 1:16:23.280
+ like a numerically precise value for the average. Okay. In differential privacy, you wouldn't do
+
+1:16:23.280 --> 1:16:29.120
+ that. You would first compute that average to numerical precisions. And then you'd add some
+
+1:16:29.120 --> 1:16:35.600
+ noise to it, right? You'd add some kind of zero mean, you know, Gaussian or exponential noise to
+
+1:16:35.600 --> 1:16:42.240
+ it. So that the actual value you output, right, is not the exact mean, but it'll be close to the mean.
+
+1:16:42.240 --> 1:16:48.160
+ But it'll be close. The noise that you add will sort of prove that nobody can kind of reverse
+
+1:16:48.160 --> 1:16:55.760
+ engineer any particular value that went into the average. So noise, noise is the savior. How many
+
+1:16:55.760 --> 1:17:05.360
+ algorithms can be aided by adding noise? Yeah, so I'm a relatively recent member of the differential
+
+1:17:05.360 --> 1:17:10.560
+ privacy community. My coauthor Aaron Roth is, you know, really one of the founders of the field
+
+1:17:10.560 --> 1:17:14.880
+ and has done a great deal of work. And I've learned a tremendous amount working with him on it.
+
+1:17:14.880 --> 1:17:18.880
+ It's a pretty grown up field already. Yeah, but now it's pretty mature. But I must admit, the first
+
+1:17:18.880 --> 1:17:23.440
+ time I saw the definition of differential privacy, my reaction was like, well, that is a clever
+
+1:17:23.440 --> 1:17:29.920
+ definition. And it's really making very strong promises. And my, you know, you know, I first
+
+1:17:29.920 --> 1:17:34.880
+ saw the definition in much earlier days. And my first reaction was like, well, my worry about
+
+1:17:34.880 --> 1:17:38.880
+ this definition would be that it's a great definition of privacy, but that it'll be so
+
+1:17:38.880 --> 1:17:43.920
+ restrictive that we won't really be able to use it. Like, you know, we won't be able to do compute
+
+1:17:43.920 --> 1:17:49.360
+ many things in a differentially private way. So that's one of the great successes of the field,
+
+1:17:49.360 --> 1:17:56.000
+ I think, is in showing that the opposite is true. And that, you know, most things that we know how
+
+1:17:56.000 --> 1:18:02.400
+ to compute absent any privacy considerations can be computed in a differentially private way. So
+
+1:18:02.400 --> 1:18:07.280
+ for example, pretty much all of statistics and machine learning can be done differentially
+
+1:18:07.280 --> 1:18:13.840
+ privately. So pick your favorite machine learning algorithm, back propagation and neural networks,
+
+1:18:13.840 --> 1:18:18.640
+ you know, cart for decision trees, support vector machines, boosting, you name it,
+
+1:18:20.000 --> 1:18:26.320
+ as well as classic hypothesis testing and the like and statistics. None of those algorithms
+
+1:18:26.320 --> 1:18:32.960
+ are differentially private in their original form. All of them have modifications that add
+
+1:18:32.960 --> 1:18:38.880
+ noise to the computation in different places in different ways that achieve differential privacy.
+
+1:18:38.880 --> 1:18:45.280
+ So this really means that to the extent that, you know, we've become a, you know, a scientific
+
+1:18:45.280 --> 1:18:51.040
+ community very dependent on the use of machine learning and statistical modeling and data analysis,
+
+1:18:51.920 --> 1:18:59.280
+ we really do have a path to kind of provide privacy guarantees to those methods. And so we
+
+1:18:59.280 --> 1:19:06.960
+ can still, you know, enjoy the benefits of kind of the data science era while providing, you know,
+
+1:19:06.960 --> 1:19:13.760
+ rather robust privacy guarantees to individuals. So perhaps a slightly crazy question, but if we
+
+1:19:13.760 --> 1:19:18.960
+ take that, the idea is a differential privacy and take it to the nature of truth that's being
+
+1:19:18.960 --> 1:19:24.160
+ explored currently. So what's your most favorite and least favorite food?
+
+1:19:24.160 --> 1:19:29.600
+ Hmm. I'm not a real foodie. So I'm a big fan of spaghetti.
+
+1:19:29.600 --> 1:19:32.720
+ Spaghetti? What do you really don't like?
+
+1:19:35.600 --> 1:19:37.280
+ I really don't like cauliflower.
+
+1:19:37.920 --> 1:19:43.680
+ Well, I love cauliflower. Okay. But is one way to protect your preference for spaghetti by
+
+1:19:44.320 --> 1:19:50.400
+ having an information campaign, bloggers and so on, of bots saying that you like cauliflower?
+
+1:19:50.400 --> 1:19:57.040
+ So like this kind of the same kind of noise ideas. I mean, if you think of in our politics today,
+
+1:19:57.040 --> 1:20:03.600
+ there's this idea of Russia hacking our elections. What's meant there, I believe,
+
+1:20:03.600 --> 1:20:09.440
+ is bots spreading different kinds of information. Is that a kind of privacy or is that too much
+
+1:20:09.440 --> 1:20:17.520
+ of a stretch? No, it's not a stretch. I've not seen those ideas, you know, that is not a technique
+
+1:20:17.520 --> 1:20:23.200
+ that to my knowledge will provide differential privacy. But to give an example, like one very
+
+1:20:23.200 --> 1:20:29.840
+ specific example about what you're discussing is there was a very interesting project at NYU,
+
+1:20:29.840 --> 1:20:37.040
+ I think led by Helen Nissenbaum there, in which they basically built a browser plugin that
+
+1:20:38.320 --> 1:20:43.280
+ tried to essentially obfuscate your Google searches. So to the extent that you're worried
+
+1:20:43.280 --> 1:20:49.520
+ that Google is using your searches to build, you know, predictive models about you to decide what
+
+1:20:49.520 --> 1:20:54.960
+ ads to show you, which they might very reasonably want to do. But if you object to that, they built
+
+1:20:54.960 --> 1:21:00.000
+ this widget you could plug in. And basically, whenever you put an aquarium to Google, it would
+
+1:21:00.000 --> 1:21:05.200
+ send that query to Google. But in the background, all of the time from your browser, it would just
+
+1:21:05.200 --> 1:21:12.960
+ be sending this torrent of irrelevant queries to the search engine. So, you know, it's like a weed
+
+1:21:12.960 --> 1:21:18.560
+ and chaff thing. So, you know, out of every 1000 queries, let's say that Google was receiving
+
+1:21:18.560 --> 1:21:24.160
+ from your browser, one of them was one that you put in, but the other 999 were not. Okay, so it's
+
+1:21:24.160 --> 1:21:30.800
+ the same kind of idea, kind of, you know, privacy by obfuscation. So I think that's an interesting
+
+1:21:30.800 --> 1:21:37.520
+ idea. Doesn't give you differential privacy. It's also, I was actually talking to somebody at one
+
+1:21:37.520 --> 1:21:42.720
+ of the large tech companies recently about the fact that, you know, just this kind of thing that
+
+1:21:43.280 --> 1:21:51.520
+ there are sometimes when the response to my data needs to be very specific to my data, right?
+
+1:21:51.520 --> 1:21:57.040
+ Like I type mountain biking into Google, I want results on mountain biking, and I really want
+
+1:21:57.040 --> 1:22:02.960
+ Google to know that I typed in mountain biking. I don't want noise added to that. And so I think
+
+1:22:02.960 --> 1:22:07.040
+ there's sort of maybe even interesting technical questions around notions of privacy that are
+
+1:22:07.040 --> 1:22:12.720
+ appropriate where, you know, it's not that my data is part of some aggregate like medical records and
+
+1:22:12.720 --> 1:22:18.640
+ that we're trying to discover important correlations and facts about the world at large, but rather,
+
+1:22:18.640 --> 1:22:23.920
+ you know, there's a service that I really want to, you know, pay attention to my specific data,
+
+1:22:23.920 --> 1:22:28.560
+ yet I still want some kind of privacy guarantee. And I think these kind of obfuscation ideas are
+
+1:22:28.560 --> 1:22:31.920
+ sort of one way of getting at that, but maybe there are others as well.
+
+1:22:31.920 --> 1:22:36.480
+ So where do you think we'll land in this algorithm driven society in terms of privacy? So
+
+1:22:37.520 --> 1:22:45.920
+ sort of China, like Kaifu Lee describes, you know, it's collecting a lot of data on its citizens,
+
+1:22:45.920 --> 1:22:52.880
+ but in the best form, it's actually able to provide a lot of sort of protect human rights and
+
+1:22:52.880 --> 1:22:58.160
+ provide a lot of amazing services. And it's worse forms that can violate those human rights and
+
+1:22:59.680 --> 1:23:08.160
+ limit services. So where do you think we'll land? So algorithms are powerful when they use data.
+
+1:23:08.160 --> 1:23:14.880
+ So as a society, do you think we'll give over more data? Is it possible to protect the privacy of
+
+1:23:14.880 --> 1:23:24.480
+ that data? So I'm optimistic about the possibility of, you know, balancing the desire for individual
+
+1:23:24.480 --> 1:23:32.400
+ privacy and individual control of privacy with kind of societally and commercially beneficial
+
+1:23:32.400 --> 1:23:37.920
+ uses of data, not unrelated to differential privacy or suggestions that say like, well,
+
+1:23:37.920 --> 1:23:43.440
+ individuals should have control of their data. They should be able to limit the uses of that data.
+
+1:23:43.440 --> 1:23:47.760
+ They should even, you know, there's, there's, you know, fledgling discussions going on in
+
+1:23:47.760 --> 1:23:53.600
+ research circles about allowing people selective use of their data and being compensated for it.
+
+1:23:54.480 --> 1:23:59.200
+ And then you get to sort of very interesting economic questions like pricing, right?
+
+1:23:59.200 --> 1:24:04.080
+ And one interesting idea is that maybe differential privacy would also, you know,
+
+1:24:04.080 --> 1:24:08.800
+ be a conceptual framework in which you could talk about the relative value of different people's
+
+1:24:08.800 --> 1:24:13.680
+ data, like, you know, to demystify this a little bit. If I'm trying to predict, build a predictive
+
+1:24:13.680 --> 1:24:18.400
+ model for some rare disease, and I'm trying to use, I'm going to use machine learning to do it,
+
+1:24:19.520 --> 1:24:24.560
+ it's easy to get negative examples because the disease is rare, right? But I really want
+
+1:24:24.560 --> 1:24:31.600
+ to have lots of people with the disease in my data set. Okay. But, but, and so somehow those
+
+1:24:31.600 --> 1:24:36.560
+ people's data with respect to this application is much more valuable to me than just like the
+
+1:24:36.560 --> 1:24:43.520
+ background population. And so maybe they should be compensated more for it. And so, you know,
+
+1:24:43.520 --> 1:24:50.160
+ I think these are kind of very, very fledgling conceptual questions that maybe will have kind
+
+1:24:50.160 --> 1:24:54.480
+ of technical thought on them sometime in the coming years. But, but I do think we'll,
+
+1:24:54.480 --> 1:24:59.120
+ you know, to kind of get more directly answer your question, I think I'm optimistic at this
+
+1:24:59.120 --> 1:25:04.960
+ point from what I've seen that we will land at some, you know, better compromise than we're at
+
+1:25:04.960 --> 1:25:10.880
+ right now, where again, you know, privacy guarantees are few far between and weak,
+
+1:25:11.440 --> 1:25:17.840
+ and users have very, very little control. And I'm optimistic that we'll land in something that,
+
+1:25:17.840 --> 1:25:22.800
+ you know, provides better privacy overall and more individual control of data and privacy. But,
+
+1:25:22.800 --> 1:25:27.840
+ you know, I think to get there, it's again, just like fairness, it's not going to be enough to
+
+1:25:27.840 --> 1:25:32.880
+ propose algorithmic solutions. There's going to have to be a whole kind of regulatory legal process
+
+1:25:32.880 --> 1:25:38.160
+ that prods companies and other parties to kind of adopt solutions.
+
+1:25:38.160 --> 1:25:42.720
+ And I think you've mentioned the word control a lot. And I think giving people control,
+
+1:25:42.720 --> 1:25:48.160
+ that's something that people don't quite have in a lot of these algorithms. And that's a really
+
+1:25:48.160 --> 1:25:53.920
+ interesting idea of giving them control. Some of that is actually literally an interface design
+
+1:25:53.920 --> 1:26:00.240
+ question, sort of just enabling, because I think it's good for everybody to give users control.
+
+1:26:00.240 --> 1:26:05.600
+ It's not, it's not, it's almost not a trade off, except that you have to hire people that are good
+
+1:26:05.600 --> 1:26:10.960
+ at interface design. Yeah, I mean, the other thing that has to be said, right, is that, you know,
+
+1:26:11.840 --> 1:26:18.560
+ it's a cliche, but, you know, we, as the users of many systems, platforms and apps,
+
+1:26:19.040 --> 1:26:24.960
+ you know, we are the product, we are not the customer. The customer are advertisers, and
+
+1:26:24.960 --> 1:26:31.280
+ our data is the product. Okay. So it's one thing to kind of suggest more individual control of
+
+1:26:31.280 --> 1:26:38.960
+ data and privacy and uses. But this, you know, if this happens in sufficient degree, it will
+
+1:26:38.960 --> 1:26:45.840
+ upend the entire economic model that has supported the internet to date. And so some other economic
+
+1:26:45.840 --> 1:26:51.440
+ model will have to be, you know, we'll have to replace it. So the idea of Mark, as you mentioned,
+
+1:26:51.440 --> 1:26:57.520
+ and by exposing the economic model to the people, they will then become a market.
+
+1:26:57.520 --> 1:26:59.840
+ They could be participants in it. Participants in it.
+
+1:26:59.840 --> 1:27:03.120
+ And, and, you know, this isn't, you know, this is not a weird idea, right? Because
+
+1:27:03.760 --> 1:27:08.400
+ there are markets for data already. It's just that consumers are not participants in them.
+
+1:27:08.400 --> 1:27:13.120
+ There's like, you know, there's sort of, you know, publishers and content providers on one side
+
+1:27:13.120 --> 1:27:17.840
+ that have inventory and then they're advertised on others. And, you know, you know, Google and
+
+1:27:17.840 --> 1:27:23.920
+ Facebook are running, you know, they're pretty much their entire revenue stream is by running
+
+1:27:23.920 --> 1:27:29.600
+ two sided markets between those parties, right? And so it's not a crazy idea that there would be
+
+1:27:29.600 --> 1:27:34.320
+ like a three sided market or that, you know, that on one side of the market or the other,
+
+1:27:34.320 --> 1:27:39.120
+ we would have proxies representing our interest. It's not, you know, it's not a crazy idea,
+
+1:27:39.120 --> 1:27:43.920
+ but it would, it's not a crazy technical idea, but it would have
+
+1:27:43.920 --> 1:27:51.920
+ pretty extreme economic consequences. Speaking of markets, a lot of fascinating
+
+1:27:51.920 --> 1:27:58.480
+ aspects of this world arise not from individual humans, but from the interaction of human beings.
+
+1:27:59.680 --> 1:28:05.760
+ You've done a lot of work in game theory. First, can you say, what is game theory and how does
+
+1:28:05.760 --> 1:28:10.880
+ help us model and study? Yeah, game theory, of course, let us give credit where it's due.
+
+1:28:10.880 --> 1:28:16.720
+ It comes from the economist first and foremost. But as I mentioned before, like, you know,
+
+1:28:16.720 --> 1:28:22.640
+ computer scientists never hesitate to wander into other people's turf. And so there is now this
+
+1:28:23.280 --> 1:28:30.080
+ 20 year old field called algorithmic game theory. But, you know, game theory, first and foremost,
+
+1:28:30.080 --> 1:28:37.760
+ is a mathematical framework for reasoning about collective outcomes in systems of interacting
+
+1:28:37.760 --> 1:28:44.640
+ individuals. You know, so you need at least two people to get started in game theory. And
+
+1:28:45.200 --> 1:28:50.160
+ many people are probably familiar with prisoner's dilemma as kind of a classic example of game
+
+1:28:50.160 --> 1:28:56.640
+ theory and a classic example where everybody looking out for their own individual interests
+
+1:28:56.640 --> 1:29:03.040
+ leads to a collective outcome that's kind of worse for everybody than what might be possible if they
+
+1:29:03.040 --> 1:29:08.720
+ cooperate it, for example. But cooperation is not an equilibrium in prisoner's dilemma.
+
+1:29:09.520 --> 1:29:15.360
+ And so my work and the field of algorithmic game theory more generally in these areas
+
+1:29:16.000 --> 1:29:23.920
+ kind of looks at settings in which the number of actors is potentially extraordinarily large
+
+1:29:24.640 --> 1:29:31.360
+ and their incentives might be quite complicated and kind of hard to model directly. But you still
+
+1:29:31.360 --> 1:29:36.720
+ want kind of algorithmic ways of kind of predicting what will happen or influencing what will happen
+
+1:29:36.720 --> 1:29:44.800
+ in the design of platforms. So what to you is the most beautiful idea that you've encountered in
+
+1:29:44.800 --> 1:29:52.480
+ game theory? There's a lot of them. I'm a big fan of the field. I mean, you know, I mean technical
+
+1:29:52.480 --> 1:29:59.120
+ answers to that, of course, would include Nash's work just establishing that, you know, there's
+
+1:29:59.120 --> 1:30:05.200
+ a competitive equilibrium under very, very general circumstances, which in many ways kind of put the
+
+1:30:05.200 --> 1:30:11.920
+ field on a firm conceptual footing because if you don't have equilibrium, it's kind of hard to ever
+
+1:30:11.920 --> 1:30:15.280
+ reason about what might happen since, you know, there's just no stability.
+
+1:30:15.920 --> 1:30:19.680
+ So just the idea of the stability can emerge when there's multiple.
+
+1:30:19.680 --> 1:30:24.560
+ Or not that it will necessarily emerge just that it's possible, right? Like the existence of
+
+1:30:24.560 --> 1:30:30.400
+ equilibrium doesn't mean that sort of natural, iterative behavior will necessarily lead to it.
+
+1:30:30.400 --> 1:30:31.840
+ In the real world, yes.
+
+1:30:31.840 --> 1:30:36.000
+ Maybe answering a slightly less personally than you asked the question. I think within the
+
+1:30:36.000 --> 1:30:42.800
+ field of algorithmic game theory, perhaps the single most important kind of technical
+
+1:30:43.680 --> 1:30:48.400
+ contribution that's been made is the realization between close connections between
+
+1:30:49.120 --> 1:30:52.800
+ machine learning and game theory and in particular between game theory and
+
+1:30:52.800 --> 1:30:55.680
+ the branch of machine learning that's known as no regret learning.
+
+1:30:56.240 --> 1:31:04.000
+ And this sort of provides a very general framework in which a bunch of players interacting
+
+1:31:04.000 --> 1:31:09.840
+ in a game or a system, each one kind of doing something that's in their self interest will
+
+1:31:09.840 --> 1:31:15.520
+ actually kind of reach an equilibrium and actually reach an equilibrium in a pretty,
+
+1:31:16.320 --> 1:31:20.240
+ you know, a rather, you know, short amount of steps.
+
+1:31:20.240 --> 1:31:28.560
+ So you kind of mentioned acting greedily can somehow end up pretty good for everybody.
+
+1:31:29.680 --> 1:31:31.120
+ Or pretty bad.
+
+1:31:31.120 --> 1:31:33.680
+ Or pretty bad. It will end up stable.
+
+1:31:34.240 --> 1:31:41.920
+ Yeah, right. And, you know, stability or equilibrium by itself is not necessarily either a good thing
+
+1:31:41.920 --> 1:31:42.960
+ or a bad thing.
+
+1:31:42.960 --> 1:31:45.600
+ So what's the connection between machine learning and the ideas?
+
+1:31:45.600 --> 1:31:50.880
+ Well, I think we kind of talked about these ideas already in kind of a non technical way,
+
+1:31:50.880 --> 1:31:56.160
+ which is maybe the more interesting way of understanding them first, which is, you know,
+
+1:31:57.040 --> 1:32:04.880
+ we have many systems, platforms and apps these days that work really hard to use our data and
+
+1:32:04.880 --> 1:32:11.840
+ the data of everybody else on the platform to selfishly optimize on behalf of each user.
+
+1:32:11.840 --> 1:32:17.920
+ Okay. So, you know, let me let me give I think the cleanest example, which is just driving apps,
+
+1:32:17.920 --> 1:32:24.080
+ navigation apps like, you know, Google Maps and Waze, where, you know, miraculously compared to
+
+1:32:24.080 --> 1:32:28.640
+ when I was growing up at least, you know, the objective would be the same when you wanted
+
+1:32:28.640 --> 1:32:34.320
+ to drive from point A to point B, spend the least time driving, not necessarily minimize the distance,
+
+1:32:34.320 --> 1:32:39.280
+ but minimize the time, right. And when I was growing up, like the only resources you had to
+
+1:32:39.280 --> 1:32:45.440
+ do that were like maps in the car, which literally just told you what roads were available. And then
+
+1:32:45.440 --> 1:32:51.040
+ you might have like half hourly traffic reports, just about the major freeways, but not about
+
+1:32:51.040 --> 1:32:56.400
+ side roads. So you were pretty much on your own. And now we've got these apps, you pull it out and
+
+1:32:56.400 --> 1:33:01.680
+ you say, I want to go from point A to point B. And in response kind of to what everybody else is
+
+1:33:01.680 --> 1:33:07.360
+ doing, if you like, what all the other players in this game are doing right now, here's the, you
+
+1:33:07.360 --> 1:33:13.520
+ know, the, the route that minimizes your driving time. So it is really kind of computing a selfish
+
+1:33:13.520 --> 1:33:19.280
+ best response for each of us in response to what all of the rest of us are doing at any given moment.
+
+1:33:20.000 --> 1:33:26.880
+ And so, you know, I think it's quite fair to think of these apps as driving or nudging us all
+
+1:33:26.880 --> 1:33:33.840
+ towards the competitive or Nash equilibrium of that game. Now you might ask, like, well,
+
+1:33:33.840 --> 1:33:40.480
+ that sounds great. Why is that a bad thing? Well, you know, it's, it's known both in theory and
+
+1:33:42.000 --> 1:33:50.640
+ with some limited studies from actual like traffic data that all of us being in this competitive
+
+1:33:50.640 --> 1:33:56.160
+ equilibrium might cause our collective driving time to be higher, maybe significantly higher
+
+1:33:56.800 --> 1:34:01.040
+ than it would be under other solutions. And then you have to talk about what those other
+
+1:34:01.040 --> 1:34:06.320
+ solutions might be and what, what the algorithms to implement them are, which we do discuss in the
+
+1:34:06.320 --> 1:34:13.280
+ kind of game theory chapter of the book. But, but similarly, you know, on social media platforms
+
+1:34:13.280 --> 1:34:20.000
+ or on Amazon, you know, all these algorithms that are essentially trying to optimize our behalf,
+
+1:34:20.000 --> 1:34:24.400
+ they're driving us in a colloquial sense towards some kind of competitive equilibrium.
+
+1:34:24.960 --> 1:34:28.400
+ And, you know, one of the most important lessons of game theory is that just because
+
+1:34:28.400 --> 1:34:33.520
+ we're at equilibrium doesn't mean that there's not a solution in which some or maybe even all of us
+
+1:34:33.520 --> 1:34:38.480
+ might be better off. And then the connection to machine learning, of course, is that in all these
+
+1:34:38.480 --> 1:34:43.680
+ platforms I've mentioned, the optimization that they're doing on our behalf is driven by machine
+
+1:34:43.680 --> 1:34:47.840
+ learning, you know, like predicting where the traffic will be, predicting what products I'm
+
+1:34:47.840 --> 1:34:53.520
+ going to like, predicting what would make me happy in my news feed. Now, in terms of the stability
+
+1:34:53.520 --> 1:34:58.800
+ and the promise of that, I have to ask just out of curiosity, how stable are these mechanisms
+
+1:34:58.800 --> 1:35:04.080
+ that you game theory is just the economists came up with. And we all know that economists don't
+
+1:35:04.080 --> 1:35:11.760
+ live in the real world. Just kidding. So what's, do you think when we look at the fact that we
+
+1:35:11.760 --> 1:35:18.400
+ haven't blown ourselves up from the game theoretic concept of mutually shared destruction,
+
+1:35:18.400 --> 1:35:25.680
+ what are the odds that we destroy ourselves with nuclear weapons as one example of a stable
+
+1:35:25.680 --> 1:35:31.520
+ game theoretic system? Just to prime your viewers a little bit, I mean, I think you're referring
+
+1:35:31.520 --> 1:35:37.920
+ to the fact that game theory was taken quite seriously back in the 60s as a tool for reasoning
+
+1:35:37.920 --> 1:35:44.400
+ about kind of Soviet US nuclear armament, disarmative detente, things like that.
+
+1:35:44.400 --> 1:35:51.520
+ I'll be honest, as huge of a fan as I am of game theory and its kind of rich history,
+
+1:35:51.520 --> 1:35:57.680
+ it still surprises me that, you know, you had people at the Rand Corporation back in those days
+
+1:35:57.680 --> 1:36:02.800
+ kind of drawing up, you know, two by two tables and one, the role player is, you know, the US and
+
+1:36:02.800 --> 1:36:08.720
+ the Colin players, Russia, and that they were taking seriously, you know, I'm sure if I was there,
+
+1:36:08.720 --> 1:36:13.680
+ maybe it wouldn't have seemed as naive as it does at the time. It seems to have worked,
+
+1:36:13.680 --> 1:36:17.840
+ which is why it seems naive. Well, we're still here. We're still here in that sense.
+
+1:36:17.840 --> 1:36:22.560
+ Yeah. Even though I kind of laugh at those efforts, they were more sensible then than
+
+1:36:22.560 --> 1:36:26.560
+ they would be now, right? Because there were sort of only two nuclear powers at the time,
+
+1:36:26.560 --> 1:36:32.400
+ and you didn't have to worry about deterring new entrants and who was developing the capacity.
+
+1:36:32.400 --> 1:36:38.640
+ And so we have many, you know, we have this, it's definitely a game with more players now and more
+
+1:36:38.640 --> 1:36:45.280
+ potential entrants. I'm not in general somebody who advocates using kind of simple mathematical
+
+1:36:45.280 --> 1:36:51.840
+ models when the stakes are as high as things like that and the complexities are very political and
+
+1:36:51.840 --> 1:36:59.280
+ social, but we are still here. So you've worn many hats, one of which, the one that first
+
+1:36:59.280 --> 1:37:05.680
+ caused me to become a big fan of your work many years ago is algorithmic trading. So I have to
+
+1:37:05.680 --> 1:37:10.720
+ just ask a question about this because you have so much fascinating work there. In the 21st century,
+
+1:37:10.720 --> 1:37:17.520
+ what role do you think algorithms have in the space of trading, investment in the financial
+
+1:37:17.520 --> 1:37:26.160
+ sector? Yeah. It's a good question. I mean, in the time I've spent on Wall Street and in finance,
+
+1:37:26.880 --> 1:37:31.120
+ you know, I've seen a clear progression. And I think it's a progression that kind of models
+
+1:37:31.120 --> 1:37:37.040
+ the use of algorithms and automation more generally in society, which is, you know,
+
+1:37:37.840 --> 1:37:44.240
+ the things that kind of get taken over by the algos first are sort of the things that computers are
+
+1:37:44.240 --> 1:37:50.320
+ obviously better at than people, right? So, you know, so first of all, there needed to be this
+
+1:37:50.320 --> 1:37:55.280
+ era of automation, right, where just, you know, financial exchanges became largely electronic,
+
+1:37:55.280 --> 1:38:02.240
+ which then enabled the possibility of, you know, trading becoming more algorithmic because once,
+
+1:38:02.240 --> 1:38:07.360
+ you know, that exchanges are electronic, an algorithm can submit an order through an API just
+
+1:38:07.360 --> 1:38:10.960
+ as well as a human can do at a monitor. You can do it really quickly. You can read all the data.
+
+1:38:10.960 --> 1:38:18.160
+ So yeah. And so, you know, I think the places where algorithmic trading have had the greatest
+
+1:38:18.160 --> 1:38:24.160
+ inroads and had the first inroads were in kind of execution problems, kind of optimized execution
+
+1:38:24.160 --> 1:38:30.000
+ problems. So what I mean by that is at a large brokerage firm, for example, one of the lines of
+
+1:38:30.000 --> 1:38:36.400
+ business might be on behalf of large institutional clients taking, you know, what we might consider
+
+1:38:36.400 --> 1:38:40.720
+ difficult trade. So it's not like a mom and pop investor saying, I want to buy 100 shares of
+
+1:38:40.720 --> 1:38:47.200
+ Microsoft. It's a large hedge fund saying, you know, I want to buy a very, very large stake in
+
+1:38:47.200 --> 1:38:53.280
+ Apple. And I want to do it over the span of a day. And it's such a large volume that if you're not
+
+1:38:53.280 --> 1:38:58.640
+ clever about how you break that trade up, not just over time, but over perhaps multiple different
+
+1:38:58.640 --> 1:39:03.520
+ electronic exchanges that all let you trade Apple on their platform, you know, you will, you will
+
+1:39:03.520 --> 1:39:09.520
+ move, you'll push prices around in a way that hurts your, your execution. So you know, this is
+
+1:39:09.520 --> 1:39:14.480
+ the kind of, you know, this is an optimization problem. This is a control problem. Right. And so
+
+1:39:16.240 --> 1:39:20.880
+ machines are better. We know how to design algorithms, you know, that are better at that
+
+1:39:20.880 --> 1:39:26.000
+ kind of thing than a person is going to be able to do because we can take volumes of historical
+
+1:39:26.000 --> 1:39:31.040
+ and real time data to kind of optimize the schedule with which we trade. And, you know,
+
+1:39:31.040 --> 1:39:36.400
+ similarly high frequency trading, you know, which is closely related, but not the same as
+
+1:39:36.400 --> 1:39:44.000
+ optimized execution, where you're just trying to spot very, very temporary, you know, mispricings
+
+1:39:44.000 --> 1:39:50.160
+ between exchanges or within an asset itself, or just predict directional movement of a stock
+
+1:39:50.160 --> 1:39:56.880
+ because of the kind of very, very low level granular buying and selling data in the, in the
+
+1:39:56.880 --> 1:40:02.080
+ exchange. Machines are good at this kind of stuff. It's kind of like the mechanics of trading.
+
+1:40:02.080 --> 1:40:09.760
+ What about the, can machines do long terms of prediction? Yeah. So I think we are in an era
+
+1:40:09.760 --> 1:40:13.360
+ where, you know, clearly there have been some very successful, you know,
+
+1:40:13.360 --> 1:40:19.760
+ you know, quant hedge funds that are, you know, in what we would traditionally call, you know,
+
+1:40:19.760 --> 1:40:25.040
+ still in the stat Arb regime, like so, you know, what's that stat Arb referring to statistical
+
+1:40:25.040 --> 1:40:29.760
+ arbitrage. But, but for the purposes of this conversation, what it really means is making
+
+1:40:29.760 --> 1:40:37.520
+ directional predictions in asset price movement or returns, your prediction about that directional
+
+1:40:37.520 --> 1:40:44.480
+ movement is good for, you know, you have a view that it's valid for some period of time between
+
+1:40:44.480 --> 1:40:49.440
+ a few seconds and a few days. And that's the amount of time that you're going to kind of get
+
+1:40:49.440 --> 1:40:53.920
+ into the position, hold it and then hopefully be right about the directional movement and, you
+
+1:40:53.920 --> 1:41:00.800
+ know, buy low and sell high as the cliche goes. So that is a, you know, kind of a sweet spot,
+
+1:41:00.800 --> 1:41:06.000
+ I think, for quant trading and investing right now and has been for some time.
+
+1:41:06.000 --> 1:41:12.160
+ When you really get to kind of more Warren Buffett style time scales, right? Like, you know,
+
+1:41:12.160 --> 1:41:16.800
+ my cartoon of Warren Buffett is that, you know, Warren Buffett sits and thinks what the long
+
+1:41:16.800 --> 1:41:22.480
+ term value of Apple really should be. And he doesn't even look at what Apple is doing today.
+
+1:41:22.480 --> 1:41:27.520
+ He just decides, you know, you know, I think that this was what its long term value is and
+
+1:41:27.520 --> 1:41:32.400
+ it's far from that right now. And so I'm going to buy some Apple or, you know, short some Apple.
+
+1:41:32.400 --> 1:41:39.840
+ And I'm going to, I'm going to sit on that for 10 or 20 years. Okay. So when you're at that kind of
+
+1:41:39.840 --> 1:41:48.880
+ timescale or even more than just a few days, all kinds of other sources of risk and information,
+
+1:41:48.880 --> 1:41:54.000
+ you know, so now you're talking about holding things through recessions and economic cycles.
+
+1:41:54.000 --> 1:41:58.800
+ Wars can break out. So there you have to understand human nature at a level.
+
+1:41:58.800 --> 1:42:04.480
+ Yeah. And you need to just be able to ingest many, many more sources of data that are on wildly
+
+1:42:04.480 --> 1:42:10.000
+ different timescales, right? So if I'm an HFT, my high frequency trader, like, I don't, I don't,
+
+1:42:11.280 --> 1:42:16.320
+ I really, my main source of data is just the data from the exchanges themselves about the
+
+1:42:16.320 --> 1:42:21.520
+ activity in the exchanges, right? And maybe I need to pay, you know, I need to keep an eye on the
+
+1:42:21.520 --> 1:42:26.960
+ news, right? Because, you know, that can suddenly cause sudden, you know, the, you know, CEO gets
+
+1:42:26.960 --> 1:42:31.600
+ caught in a scandal or, you know, gets run over by a bus or something that can cause very sudden
+
+1:42:31.600 --> 1:42:36.960
+ changes. But, you know, I don't need to understand economic cycles. I don't need to understand
+
+1:42:36.960 --> 1:42:42.160
+ recessions. I don't need to worry about the political situation or war breaking out in this
+
+1:42:42.160 --> 1:42:46.320
+ part of the world, because, you know, all you need to know is as long as that's not going to happen
+
+1:42:46.960 --> 1:42:53.280
+ in the next 500 milliseconds, then, you know, my model is good. When you get to these longer
+
+1:42:53.280 --> 1:42:56.800
+ time scales, you really have to worry about that kind of stuff. And people in the machine learning
+
+1:42:56.800 --> 1:43:04.000
+ community are starting to think about this. We held a, we jointly sponsored a workshop at Penn
+
+1:43:04.000 --> 1:43:09.120
+ with the Federal Reserve Bank of Philadelphia a little more than a year ago on, you know, I think
+
+1:43:09.120 --> 1:43:15.120
+ the title is something like machine learning for macroeconomic prediction, you know, macroeconomic
+
+1:43:15.120 --> 1:43:20.000
+ referring specifically to these longer time scales. And, you know, it was an interesting
+
+1:43:20.000 --> 1:43:28.320
+ conference, but it, you know, it left me with greater confidence that you have a long way to
+
+1:43:28.320 --> 1:43:33.440
+ go to, you know, and so I think that people that, you know, in the grand scheme of things, you know,
+
+1:43:33.440 --> 1:43:39.200
+ if somebody asks me like, well, whose job on Wall Street is safe from the bots, I think people
+
+1:43:39.200 --> 1:43:44.400
+ that are at that longer, you know, time scale and have that appetite for all the risks involved in
+
+1:43:44.400 --> 1:43:50.640
+ long term investing and that really need kind of not just algorithms that can optimize from data,
+
+1:43:50.640 --> 1:43:56.640
+ but they need views on stuff. They need views on the political landscape, economic cycles and the
+
+1:43:56.640 --> 1:44:02.240
+ like. And I think, you know, they're, they're, they're pretty safe for a while, as far as I can
+
+1:44:02.240 --> 1:44:07.440
+ tell. So Warren Buffett's job is safe. Yeah, I'm not seeing, you know, a robo Warren Buffett
+
+1:44:07.440 --> 1:44:16.480
+ any time soon. Give him comfort. Last question. If you could go back to if there's a day in your
+
+1:44:16.480 --> 1:44:22.800
+ life, you could relive because it made you truly happy. Maybe you outside the family.
+
+1:44:23.600 --> 1:44:31.280
+ Yeah, otherwise, you know, what, what day would it be? What can you look back? You remember just
+
+1:44:31.280 --> 1:44:38.160
+ being profoundly transformed in some way or blissful?
+
+1:44:40.160 --> 1:44:44.960
+ I'll answer a slightly different question, which is like, what's this a day in my, my life or my
+
+1:44:44.960 --> 1:44:53.120
+ career that was kind of a watershed moment? I went straight from undergrad to doctoral studies. And,
+
+1:44:53.120 --> 1:44:58.400
+ you know, that's not at all atypical. And I'm also from an academic family, like my, my dad was a
+
+1:44:58.400 --> 1:45:03.680
+ professor, my uncle on his side as a professor, both my grandfathers were professors. All kinds
+
+1:45:03.680 --> 1:45:10.160
+ of majors to philosophy. So yeah, they're kind of all over the map. Yeah. And I was a grad student
+
+1:45:10.160 --> 1:45:14.400
+ here just up the river at Harvard and came to study with Les Valley, which was a wonderful
+
+1:45:14.400 --> 1:45:19.840
+ experience. But you know, I remember my first year of graduate school, I was generally pretty
+
+1:45:19.840 --> 1:45:25.200
+ unhappy. And I was unhappy because, you know, at Berkeley as an undergraduate, you know, yeah,
+
+1:45:25.200 --> 1:45:29.920
+ I studied a lot of math and computer science. But it was a huge school, first of all. And I took a
+
+1:45:29.920 --> 1:45:34.640
+ lot of other courses, as we discussed, I started as an English major and took history courses and
+
+1:45:34.640 --> 1:45:40.160
+ art history classes, and had friends, you know, that did all kinds of different things. And,
+
+1:45:40.160 --> 1:45:44.720
+ you know, Harvard's a much smaller institution than Berkeley. And its computer science department,
+
+1:45:44.720 --> 1:45:50.080
+ especially at that time, was, was a much smaller place than it is now. And I suddenly just felt
+
+1:45:50.080 --> 1:45:55.760
+ very, you know, like, I'd gone from this very big world to this highly specialized world.
+
+1:45:56.640 --> 1:46:01.280
+ And now all of the classes I was taking were computer science classes. And I was only in
+
+1:46:01.280 --> 1:46:08.160
+ classes with math and computer science people. And so I was, you know, I thought often in that
+
+1:46:08.160 --> 1:46:12.800
+ first year of grad school about whether I really wanted to stick with it or not. And, you know,
+
+1:46:12.800 --> 1:46:18.000
+ I thought like, oh, I could, you know, stop with a master's, I could go back to the Bay Area and
+
+1:46:18.000 --> 1:46:22.160
+ to California. And, you know, this was in one of the early periods where there was, you know,
+
+1:46:22.160 --> 1:46:27.600
+ like, you could definitely get a relatively good job paying job at one of the, one of the tech
+
+1:46:27.600 --> 1:46:32.640
+ companies back, you know, that were the big tech companies back then. And so I distinctly remember
+
+1:46:32.640 --> 1:46:38.240
+ like kind of a late spring day when I was kind of, you know, sitting in Boston Common and kind of
+
+1:46:38.240 --> 1:46:42.080
+ really just kind of chewing over what I wanted to do with my life. And I realized like, okay,
+
+1:46:43.040 --> 1:46:46.240
+ you know, and I think this is where my academic background helped me a great deal. I sort of
+
+1:46:46.240 --> 1:46:51.440
+ realized, you know, yeah, you're not having a great time right now. This feels really narrowing,
+
+1:46:51.440 --> 1:46:56.800
+ but you know that you're here for research eventually and to do something original and to
+
+1:46:56.800 --> 1:47:02.800
+ try to, you know, carve out a career where you kind of, you know, choose what you want to think
+
+1:47:02.800 --> 1:47:07.920
+ about, you know, and have a great deal of independence. And so, you know, at that point,
+
+1:47:07.920 --> 1:47:12.240
+ I really didn't have any real research experience yet. I mean, it was trying to think about some
+
+1:47:12.240 --> 1:47:19.840
+ problems with very little success, but I knew that like I hadn't really tried to do the thing
+
+1:47:19.840 --> 1:47:26.880
+ that I knew I'd come to do. And so I thought, you know, I'm gonna stick through it for the summer
+
+1:47:26.880 --> 1:47:34.240
+ and, you know, and that was very formative because I went from kind of contemplating quitting to,
+
+1:47:35.040 --> 1:47:39.680
+ you know, a year later, it being very clear to me I was going to finish because I still had
+
+1:47:39.680 --> 1:47:44.960
+ a ways to go, but I kind of started doing research. It was going well. It was really
+
+1:47:44.960 --> 1:47:49.280
+ interesting and it was sort of a complete transformation. You know, it's just that transition
+
+1:47:49.280 --> 1:47:55.840
+ that I think every doctoral student makes at some point, which is to sort of go from being like a
+
+1:47:55.840 --> 1:48:02.960
+ student of what's been done before to doing, you know, your own thing and figure out what makes
+
+1:48:02.960 --> 1:48:07.280
+ you interested in what your strengths and weaknesses are as a researcher. And once, you
+
+1:48:07.280 --> 1:48:11.760
+ know, I kind of made that decision on that particular day at that particular moment in
+
+1:48:11.760 --> 1:48:17.920
+ Boston Common. You know, I'm glad I made that decision. And also just accepting the painful
+
+1:48:17.920 --> 1:48:24.240
+ nature of that journey. Yeah, exactly. Exactly. And in that moment said, I'm gonna stick it out.
+
+1:48:24.240 --> 1:48:29.440
+ Yeah, I'm gonna stick around for a while. Well, Michael, I've looked up to you work for a long
+
+1:48:29.440 --> 1:48:32.000
+ time. It's really nice to talk to you. Thank you so much for doing it. It's great to get back in touch
+
+1:48:32.000 --> 1:48:38.080
+ with you too and see how great you're doing as well. Thank you. Thanks a lot. Appreciate it.
+

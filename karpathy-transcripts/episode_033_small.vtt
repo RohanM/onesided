@@ -1,0 +1,4160 @@
+WEBVTT
+
+00:00.000 --> 00:03.440
+ The following is a conversation with Keoki Jackson.
+
+00:03.440 --> 00:06.680
+ He's the CTO of Lockheed Martin,
+
+00:06.680 --> 00:08.720
+ a company that through his long history
+
+00:08.720 --> 00:11.040
+ has created some of the most incredible engineering
+
+00:11.040 --> 00:13.920
+ marvels human beings have ever built,
+
+00:13.920 --> 00:17.040
+ including planes that fly fast and undetected,
+
+00:17.040 --> 00:19.960
+ defense systems that intersect nuclear threats that
+
+00:19.960 --> 00:24.280
+ can take the lives of millions, and systems that venture out
+
+00:24.280 --> 00:28.320
+ into space, the moon, Mars, and beyond.
+
+00:28.320 --> 00:31.800
+ And these days, more and more, artificial intelligence
+
+00:31.800 --> 00:34.840
+ has an assistive role to play in these systems.
+
+00:34.840 --> 00:36.720
+ I've read several books in preparation
+
+00:36.720 --> 00:38.360
+ for this conversation.
+
+00:38.360 --> 00:41.240
+ It is a difficult one, because in part,
+
+00:41.240 --> 00:43.480
+ Lockheed Martin builds military systems
+
+00:43.480 --> 00:46.360
+ that operate in a complicated world that often does not
+
+00:46.360 --> 00:52.440
+ have easy solutions in the gray area between good and evil.
+
+00:52.440 --> 00:56.400
+ I hope one day this world will rid itself of war
+
+00:56.400 --> 00:58.520
+ in all its forms.
+
+00:58.520 --> 01:00.480
+ But the path to achieving that in a world that
+
+01:00.480 --> 01:02.880
+ does have evil is not obvious.
+
+01:02.880 --> 01:05.120
+ What is obvious is good engineering
+
+01:05.120 --> 01:07.120
+ and artificial intelligence research
+
+01:07.120 --> 01:11.200
+ has a role to play on the side of good.
+
+01:11.200 --> 01:14.000
+ Lockheed Martin and the rest of our community
+
+01:14.000 --> 01:17.040
+ are hard at work at exactly this task.
+
+01:17.040 --> 01:19.720
+ We talk about these and other important topics
+
+01:19.720 --> 01:21.320
+ in this conversation.
+
+01:21.320 --> 01:27.040
+ Also, most certainly, both Kiyoki and I have a passion for space,
+
+01:27.040 --> 01:32.280
+ us humans venturing out toward the stars.
+
+01:32.280 --> 01:35.400
+ We talk about this exciting future as well.
+
+01:35.400 --> 01:38.040
+ This is the artificial intelligence podcast.
+
+01:38.040 --> 01:40.480
+ If you enjoy it, subscribe on YouTube,
+
+01:40.480 --> 01:43.880
+ give it five stars on iTunes, support it on Patreon,
+
+01:43.880 --> 01:45.920
+ or simply connect with me on Twitter
+
+01:45.920 --> 01:50.640
+ at Lex Freedman, spelled F R I D M A N.
+
+01:50.640 --> 01:55.480
+ And now, here's my conversation with Kiyoki Jackson.
+
+01:55.480 --> 01:57.880
+ I read several books on Lockheed Martin recently.
+
+01:57.880 --> 02:00.480
+ My favorite, in particular, is by Ben Rich,
+
+02:00.480 --> 02:03.360
+ called Skonkork's personal memoir.
+
+02:03.360 --> 02:05.120
+ It gets a little edgy at times.
+
+02:05.120 --> 02:09.960
+ But from that, I was reminded that the engineers of Lockheed
+
+02:09.960 --> 02:13.360
+ Martin have created some of the most incredible engineering
+
+02:13.360 --> 02:17.000
+ marvels human beings have ever built throughout the 20th century
+
+02:17.000 --> 02:18.680
+ and the 21st.
+
+02:18.680 --> 02:22.640
+ Do you remember a particular project or system at Lockheed
+
+02:22.640 --> 02:25.440
+ or before that at the Space Shuttle Columbia
+
+02:25.440 --> 02:28.240
+ that you were just in awe at the fact
+
+02:28.240 --> 02:32.600
+ that us humans could create something like this?
+
+02:32.600 --> 02:34.160
+ That's a great question.
+
+02:34.160 --> 02:37.400
+ There's a lot of things that I could draw on there.
+
+02:37.400 --> 02:39.800
+ When you look at the Skonkorks and Ben Rich's book,
+
+02:39.800 --> 02:41.600
+ in particular, of course, it starts off
+
+02:41.600 --> 02:46.480
+ with basically the start of the jet age and the P80.
+
+02:46.480 --> 02:50.440
+ I had the opportunity to sit next to one of the Apollo
+
+02:50.440 --> 02:53.040
+ astronauts, Charlie Duke, recently at dinner.
+
+02:53.040 --> 02:56.040
+ And I said, hey, what's your favorite aircraft?
+
+02:56.040 --> 02:59.520
+ And he said, well, it was by far the F104 Starfighter, which
+
+02:59.520 --> 03:02.720
+ was another aircraft that came out of Lockheed there.
+
+03:02.720 --> 03:03.720
+ What kind of?
+
+03:03.720 --> 03:08.200
+ It was the first Mach 2 jet fighter aircraft.
+
+03:08.200 --> 03:11.120
+ They called it the missile with a man in it.
+
+03:11.120 --> 03:12.400
+ And so those are the kinds of things
+
+03:12.400 --> 03:15.240
+ I grew up hearing stories about.
+
+03:15.240 --> 03:19.080
+ Of course, the SR 71 is incomparable
+
+03:19.080 --> 03:25.160
+ as kind of the epitome of speed, altitude, and just
+
+03:25.160 --> 03:26.760
+ the coolest looking aircraft ever.
+
+03:26.760 --> 03:28.560
+ So there's a reconnaissance that's
+
+03:28.560 --> 03:30.920
+ a plane that's a intelligence surveillance
+
+03:30.920 --> 03:33.320
+ and reconnaissance aircraft that was designed
+
+03:33.320 --> 03:36.160
+ to be able to outrun, basically go faster
+
+03:36.160 --> 03:38.560
+ than any air defense system.
+
+03:38.560 --> 03:42.880
+ But I'll tell you, I'm a space junkie.
+
+03:42.880 --> 03:44.800
+ That's why I came to MIT.
+
+03:44.800 --> 03:49.080
+ That's really what took me, ultimately, to Lockheed Martin.
+
+03:49.080 --> 03:51.320
+ And I grew up, and so Lockheed Martin, for example,
+
+03:51.320 --> 03:56.280
+ has been essentially at the heart of every planetary mission,
+
+03:56.280 --> 03:59.520
+ like all the Mars missions we've had a part in.
+
+03:59.520 --> 04:02.560
+ And we've talked a lot about the 50th anniversary of Apollo
+
+04:02.560 --> 04:04.920
+ here in the last couple of weeks, right?
+
+04:04.920 --> 04:10.520
+ But remember, 1976, July 20, again, the National Space
+
+04:10.520 --> 04:15.240
+ Day, so the landing of the Viking lander on the surface
+
+04:15.240 --> 04:17.960
+ of Mars, just a huge accomplishment.
+
+04:17.960 --> 04:20.960
+ And when I was a young engineer at Lockheed Martin,
+
+04:20.960 --> 04:25.000
+ I got to meet engineers who had designed various pieces
+
+04:25.000 --> 04:26.880
+ of that mission as well.
+
+04:26.880 --> 04:29.680
+ So that's what I grew up on is these planetary missions,
+
+04:29.680 --> 04:31.480
+ the start of the space shuttle era,
+
+04:31.480 --> 04:35.720
+ and ultimately had the opportunity
+
+04:35.720 --> 04:39.200
+ to see Lockheed Martin's part in what
+
+04:39.200 --> 04:41.120
+ we can maybe talk about some of these here,
+
+04:41.120 --> 04:43.600
+ but Lockheed Martin's part in all of these space journeys
+
+04:43.600 --> 04:44.720
+ over the years.
+
+04:44.720 --> 04:48.520
+ Do you dream, and I apologize for getting philosophical at times,
+
+04:48.520 --> 04:51.680
+ or sentimental, I do romanticize the notion
+
+04:51.680 --> 04:53.120
+ of space exploration.
+
+04:53.120 --> 04:56.120
+ So do you dream of the day when us humans colonize
+
+04:56.120 --> 05:00.760
+ another planet, like Mars, or a man, a woman, a human being,
+
+05:00.760 --> 05:03.200
+ steps on Mars?
+
+05:03.200 --> 05:04.200
+ Absolutely.
+
+05:04.200 --> 05:06.600
+ And that's a personal dream of mine.
+
+05:06.600 --> 05:09.240
+ I haven't given up yet on my own opportunity
+
+05:09.240 --> 05:14.440
+ to fly into space, but from the Lockheed Martin perspective,
+
+05:14.440 --> 05:16.880
+ this is something that we're working towards every day.
+
+05:16.880 --> 05:20.280
+ And of course, we're building the Orion spacecraft, which
+
+05:20.280 --> 05:23.880
+ is the most sophisticated human rated spacecraft ever built.
+
+05:23.880 --> 05:27.000
+ And it's really designed for these deep space journeys,
+
+05:27.000 --> 05:29.800
+ starting with the moon, but ultimately going to Mars.
+
+05:29.800 --> 05:34.760
+ And being the platform from a design perspective,
+
+05:34.760 --> 05:37.440
+ we call the Mars Base Camp to be able to take humans
+
+05:37.440 --> 05:41.000
+ to the surface, and then after a mission of a couple of weeks,
+
+05:41.000 --> 05:42.280
+ bring them back up safely.
+
+05:42.280 --> 05:45.560
+ And so that is something I want to see happen during my time
+
+05:45.560 --> 05:46.600
+ at Lockheed Martin.
+
+05:46.600 --> 05:49.400
+ So I'm pretty excited about that.
+
+05:49.400 --> 05:54.400
+ And I think once we prove that's possible,
+
+05:54.400 --> 05:57.120
+ colonization might be a little bit further out,
+
+05:57.120 --> 06:00.040
+ but it's something that I'd hope to see.
+
+06:00.040 --> 06:02.080
+ So maybe you can give a little bit
+
+06:02.080 --> 06:04.880
+ of an overview of, so Lockheed Martin
+
+06:04.880 --> 06:08.240
+ has partnered with a few years ago with Boeing
+
+06:08.240 --> 06:11.000
+ to work with the DoD and NASA to build launch systems
+
+06:11.000 --> 06:13.680
+ and rockets with the ULA.
+
+06:13.680 --> 06:15.520
+ What's beyond that?
+
+06:15.520 --> 06:18.000
+ What's Lockheed's mission, timeline, and long term
+
+06:18.000 --> 06:19.360
+ dream in terms of space?
+
+06:19.360 --> 06:22.120
+ You mentioned the moon.
+
+06:22.120 --> 06:26.400
+ I've heard you talk about asteroids as Mars.
+
+06:26.400 --> 06:27.640
+ What's the timeline?
+
+06:27.640 --> 06:29.280
+ What's the engineering challenges?
+
+06:29.280 --> 06:31.360
+ And what's the dream long term?
+
+06:31.360 --> 06:33.400
+ Yeah, I think the dream long term is
+
+06:33.400 --> 06:37.080
+ to have a permanent presence in space beyond low Earth
+
+06:37.080 --> 06:41.080
+ orbit, ultimately with a long term presence on the moon
+
+06:41.080 --> 06:43.760
+ and then to the planets to Mars.
+
+06:43.760 --> 06:45.600
+ And it's very interrupting that.
+
+06:45.600 --> 06:49.640
+ So long term presence means sustained and sustainable
+
+06:49.640 --> 06:52.640
+ presence in an economy, a space economy,
+
+06:52.640 --> 06:54.400
+ that really goes alongside that.
+
+06:54.400 --> 06:58.280
+ With human beings and being able to launch perhaps
+
+06:58.280 --> 07:02.160
+ from those, so like hop.
+
+07:02.160 --> 07:04.520
+ You know, there's a lot of energy
+
+07:04.520 --> 07:06.000
+ that goes in those hops, right?
+
+07:06.000 --> 07:08.960
+ So I think the first step is being
+
+07:08.960 --> 07:12.240
+ able to get there and to be able to establish sustained basis,
+
+07:12.240 --> 07:14.840
+ right, and build from there.
+
+07:14.840 --> 07:18.960
+ And a lot of that means getting, as you know,
+
+07:18.960 --> 07:21.480
+ things like the cost of launch down.
+
+07:21.480 --> 07:23.560
+ And you mentioned United Launch Alliance.
+
+07:23.560 --> 07:26.080
+ And so I don't want to speak for ULA,
+
+07:26.080 --> 07:28.960
+ but obviously they're working really hard
+
+07:28.960 --> 07:34.560
+ to, on their next generation of launch vehicles,
+
+07:34.560 --> 07:39.200
+ to maintain that incredible mission success record
+
+07:39.200 --> 07:41.360
+ that ULA has, but ultimately continue
+
+07:41.360 --> 07:44.320
+ to drive down the cost and make the flexibility, the speed,
+
+07:44.320 --> 07:46.880
+ and the access ever greater.
+
+07:46.880 --> 07:50.360
+ So what's the missions that are in the horizon
+
+07:50.360 --> 07:51.640
+ that you could talk to?
+
+07:51.640 --> 07:53.320
+ Is there a hope to get to the moon?
+
+07:53.320 --> 07:54.600
+ Absolutely, absolutely.
+
+07:54.600 --> 07:57.000
+ I mean, I think you know this, or you
+
+07:57.000 --> 07:59.040
+ may know this, there's a lot of ways
+
+07:59.040 --> 08:00.600
+ to accomplish some of these goals.
+
+08:00.600 --> 08:03.760
+ And so that's a lot of what's in discussion today.
+
+08:03.760 --> 08:06.160
+ But ultimately, the goal is to be
+
+08:06.160 --> 08:09.520
+ able to establish a base, essentially
+
+08:09.520 --> 08:16.280
+ in CIS lunar space that would allow for ready transfer
+
+08:16.280 --> 08:19.920
+ from orbit to the lunar surface and back again.
+
+08:19.920 --> 08:21.800
+ And so that's sort of that near term,
+
+08:21.800 --> 08:25.920
+ I say near term in the next decade or so vision,
+
+08:25.920 --> 08:28.400
+ starting off with a stated objective
+
+08:28.400 --> 08:32.640
+ by this administration to get back to the moon in the 2024,
+
+08:32.640 --> 08:37.200
+ 2025 time frame, which is right around the corner here.
+
+08:37.200 --> 08:41.400
+ How big of an engineering challenge is that?
+
+08:41.400 --> 08:46.040
+ I think the big challenge is not so much to go, but to stay.
+
+08:46.040 --> 08:48.840
+ And so we demonstrated in the 60s
+
+08:48.840 --> 08:52.880
+ that you could send somebody up, do a couple of days of mission,
+
+08:52.880 --> 08:55.560
+ and bring them home again successfully.
+
+08:55.560 --> 08:57.240
+ Now we're talking about doing that,
+
+08:57.240 --> 08:59.760
+ I'd say more to, I don't want to say an industrial scale,
+
+08:59.760 --> 09:01.360
+ but a sustained scale.
+
+09:01.360 --> 09:09.400
+ So permanent habitation, regular reuse of vehicles,
+
+09:09.400 --> 09:16.160
+ the infrastructure to get things like fuel, air, consumables,
+
+09:16.160 --> 09:18.960
+ replacement parts, all the things that you need to sustain
+
+09:18.960 --> 09:20.760
+ that kind of infrastructure.
+
+09:20.760 --> 09:23.640
+ So those are certainly engineering challenges.
+
+09:23.640 --> 09:26.120
+ There are budgetary challenges.
+
+09:26.120 --> 09:29.240
+ And those are all things that we're
+
+09:29.240 --> 09:30.680
+ going to have to work through.
+
+09:30.680 --> 09:33.880
+ The other thing, and I shouldn't,
+
+09:33.880 --> 09:35.080
+ I don't want to minimize this.
+
+09:35.080 --> 09:38.240
+ I mean, I'm excited about human exploration,
+
+09:38.240 --> 09:40.840
+ but the reality is our technology
+
+09:40.840 --> 09:45.040
+ and where we've come over the last 40 years, essentially,
+
+09:45.040 --> 09:48.880
+ has changed what we can do with robotic exploration as well.
+
+09:48.880 --> 09:52.080
+ And to me, it's incredibly thrilling.
+
+09:52.080 --> 09:54.640
+ This seems like old news now, but the fact
+
+09:54.640 --> 09:58.640
+ that we have rovers driving around the surface of Mars
+
+09:58.640 --> 10:01.360
+ and sending back data is just incredible.
+
+10:01.360 --> 10:04.280
+ The fact that we have satellites in orbit around Mars
+
+10:04.280 --> 10:06.600
+ that are collecting weather, they're
+
+10:06.600 --> 10:08.360
+ looking at the terrain, they're mapping,
+
+10:08.360 --> 10:11.360
+ all these kinds of things on a continuous basis,
+
+10:11.360 --> 10:12.760
+ that's incredible.
+
+10:12.760 --> 10:15.440
+ And the fact that you got the time lag,
+
+10:15.440 --> 10:19.040
+ of course, going to the planets, but you can effectively
+
+10:19.040 --> 10:23.520
+ have virtual human presence there in a way
+
+10:23.520 --> 10:25.880
+ that we have never been able to do before.
+
+10:25.880 --> 10:30.080
+ And now, with the advent of even greater processing power,
+
+10:30.080 --> 10:33.600
+ better AI systems, better cognitive systems
+
+10:33.600 --> 10:37.160
+ and decision systems, you put that together
+
+10:37.160 --> 10:39.760
+ with the human piece, and we really
+
+10:39.760 --> 10:42.560
+ opened up the solar system in a whole different way.
+
+10:42.560 --> 10:43.720
+ And I'll give you an example.
+
+10:43.720 --> 10:47.840
+ We've got Osiris Rex, which is a mission to the asteroid Benus.
+
+10:47.840 --> 10:52.000
+ So the spacecraft is out there right now on basically a year
+
+10:52.000 --> 10:57.280
+ mapping activity to map the entire surface of that asteroid
+
+10:57.280 --> 11:02.520
+ in great detail, all autonomously piloted, right?
+
+11:02.520 --> 11:04.840
+ But the idea then that, and this is not too far away,
+
+11:04.840 --> 11:05.920
+ it's going to go in.
+
+11:05.920 --> 11:09.600
+ It's got a sort of fancy vacuum cleaner with a bucket.
+
+11:09.600 --> 11:12.720
+ It's going to collect the sample off the asteroid
+
+11:12.720 --> 11:14.400
+ and then send it back here to Earth.
+
+11:14.400 --> 11:18.960
+ And so we have gone from sort of those tentative steps
+
+11:18.960 --> 11:23.920
+ in the 70s, early landings, video of the solar system
+
+11:23.920 --> 11:27.040
+ to now we've sent spacecraft to Pluto.
+
+11:27.040 --> 11:31.600
+ We have gone to comets and brought and intercepted comets.
+
+11:31.600 --> 11:37.240
+ We've brought stardust, material back.
+
+11:37.240 --> 11:42.520
+ So we've gone far, and there's incredible opportunity
+
+11:42.520 --> 11:43.680
+ to go even farther.
+
+11:43.680 --> 11:47.400
+ So it seems quite crazy that this is even possible,
+
+11:47.400 --> 11:51.400
+ that can you talk a little bit about what
+
+11:51.400 --> 11:55.520
+ it means to orbit an asteroid with a bucket to try
+
+11:55.520 --> 11:58.360
+ to pick up some soil samples?
+
+11:58.360 --> 11:59.360
+ Yeah.
+
+11:59.360 --> 12:02.400
+ So part of it is just kind of the,
+
+12:02.400 --> 12:04.840
+ these are the same kinds of techniques
+
+12:04.840 --> 12:10.960
+ we use here on Earth for high speed, high accuracy imagery,
+
+12:10.960 --> 12:14.760
+ stitching these scenes together, and creating essentially
+
+12:14.760 --> 12:17.480
+ high accuracy world maps.
+
+12:17.480 --> 12:20.320
+ And so that's what we're doing, obviously,
+
+12:20.320 --> 12:23.120
+ on a much smaller scale with an asteroid.
+
+12:23.120 --> 12:24.960
+ But the other thing that's really interesting,
+
+12:24.960 --> 12:30.720
+ you put together sort of that neat control and data
+
+12:30.720 --> 12:33.640
+ and imagery problem.
+
+12:33.640 --> 12:36.960
+ But the stories around how we design the collection,
+
+12:36.960 --> 12:39.800
+ I mean, as essentially, this is the sort of the human
+
+12:39.800 --> 12:41.360
+ ingenuity element, right?
+
+12:41.360 --> 12:46.520
+ That essentially had an engineer who had one day he's like,
+
+12:46.520 --> 12:50.280
+ well, starts messing around with parts, vacuum cleaner,
+
+12:50.280 --> 12:53.440
+ bucket, maybe we could do something like this.
+
+12:53.440 --> 12:56.280
+ And that was what led to what we call the Pogo stick
+
+12:56.280 --> 12:57.000
+ collection, right?
+
+12:57.000 --> 12:59.200
+ Where basically, I think comes down,
+
+12:59.200 --> 13:02.840
+ it's only there for seconds does that collection,
+
+13:02.840 --> 13:07.520
+ grabs the, essentially blows the regolith material
+
+13:07.520 --> 13:10.200
+ into the collection hopper and off it goes.
+
+13:10.200 --> 13:11.880
+ It doesn't really land almost.
+
+13:11.880 --> 13:13.520
+ It's a very short landing.
+
+13:13.520 --> 13:15.440
+ Wow, that's incredible.
+
+13:15.440 --> 13:22.160
+ So what is in those, we talk a little bit more about space.
+
+13:22.160 --> 13:24.360
+ What's the role of the human in all of this?
+
+13:24.360 --> 13:25.800
+ What are the challenges?
+
+13:25.800 --> 13:29.040
+ What are the opportunities for humans
+
+13:29.040 --> 13:33.800
+ as they pilot these vehicles in space
+
+13:33.800 --> 13:41.240
+ and for humans that may step foot on either the moon or Mars?
+
+13:41.240 --> 13:44.280
+ Yeah, it's a great question because I just
+
+13:44.280 --> 13:49.520
+ have been extolling the virtues of robotic and rovers,
+
+13:49.520 --> 13:54.040
+ autonomous systems, and those absolutely have a role.
+
+13:54.040 --> 13:57.280
+ I think the thing that we don't know how to replace today
+
+13:57.280 --> 14:03.320
+ is the ability to adapt on the fly to new information.
+
+14:03.320 --> 14:07.600
+ And I believe that will come, but we're not there yet.
+
+14:07.600 --> 14:08.840
+ There's a ways to go.
+
+14:08.840 --> 14:13.600
+ And so you think back to Apollo 13
+
+14:13.600 --> 14:16.920
+ and the ingenuity of the folks on the ground and on the spacecraft
+
+14:16.920 --> 14:20.120
+ essentially cobbled together a way
+
+14:20.120 --> 14:23.800
+ to get the carbon dioxide scrubbers to work.
+
+14:23.800 --> 14:28.280
+ Those are the kinds of things that ultimately,
+
+14:28.280 --> 14:31.280
+ and I'd say not just from dealing with anomalies,
+
+14:31.280 --> 14:33.640
+ but dealing with new information.
+
+14:33.640 --> 14:38.360
+ You see something, and rather than waiting 20 minutes
+
+14:38.360 --> 14:41.600
+ or half an hour an hour to try to get information back
+
+14:41.600 --> 14:44.000
+ and forth, but be able to essentially
+
+14:44.000 --> 14:47.600
+ revect around the fly, collect different samples,
+
+14:47.600 --> 14:52.680
+ take a different approach, choose different areas to explore.
+
+14:52.680 --> 14:56.680
+ Those are the kinds of things that that human presence enables
+
+14:56.680 --> 15:00.240
+ that still weighs ahead of us on the AI side.
+
+15:00.240 --> 15:02.160
+ Yeah, there's some interesting stuff we'll talk about
+
+15:02.160 --> 15:04.520
+ on the teaming side here on Earth.
+
+15:04.520 --> 15:06.400
+ That's pretty cool to explore.
+
+15:06.400 --> 15:08.800
+ And in space, let's not leave the space piece out.
+
+15:08.800 --> 15:10.320
+ So what is teaming?
+
+15:10.320 --> 15:13.880
+ What does AI and humans working together in space look like?
+
+15:13.880 --> 15:15.400
+ Yeah, one of the things we're working on
+
+15:15.400 --> 15:19.080
+ is a system called Maya, which is, think of it,
+
+15:19.080 --> 15:21.360
+ so it's an AI assistant.
+
+15:21.360 --> 15:24.160
+ And in space, exactly.
+
+15:24.160 --> 15:28.520
+ And think of it as the Alexa in space, right?
+
+15:28.520 --> 15:31.680
+ But this goes hand in hand with a lot of other developments.
+
+15:31.680 --> 15:35.120
+ And so today's world, everything is essentially model based,
+
+15:35.120 --> 15:40.880
+ model based systems engineering to the actual digital tapestry
+
+15:40.880 --> 15:43.880
+ that goes through the design, the build, the manufacture,
+
+15:43.880 --> 15:47.600
+ the testing, and ultimately the sustainment of these systems.
+
+15:47.600 --> 15:52.120
+ And so our vision is really that when our astronauts
+
+15:52.120 --> 15:55.160
+ are there around Mars, you're going
+
+15:55.160 --> 16:01.520
+ to have that entire digital library of the spacecraft,
+
+16:01.520 --> 16:05.440
+ of its operations, all the test data, all the test data
+
+16:05.440 --> 16:08.040
+ and flight data from previous missions
+
+16:08.040 --> 16:11.760
+ to be able to look and see if there are anomalous conditions
+
+16:11.760 --> 16:16.000
+ until the humans, and potentially deal with that
+
+16:16.000 --> 16:20.640
+ before it becomes a bad situation and help
+
+16:20.640 --> 16:23.160
+ the astronauts work through those kinds of things.
+
+16:23.160 --> 16:26.760
+ And it's not just dealing with problems as they come up,
+
+16:26.760 --> 16:29.160
+ but also offering up opportunities
+
+16:29.160 --> 16:32.440
+ for additional exploration capability, for example.
+
+16:32.440 --> 16:35.120
+ So that's the vision is that these
+
+16:35.120 --> 16:37.720
+ are going to take the best of the human to respond
+
+16:37.720 --> 16:43.480
+ to changing circumstances and rely on the best AI
+
+16:43.480 --> 16:48.560
+ capabilities to monitor this almost infinite number
+
+16:48.560 --> 16:51.520
+ of data points and correlations of data points
+
+16:51.520 --> 16:53.960
+ that humans, frankly, aren't that good at.
+
+16:53.960 --> 16:56.200
+ So how do you develop systems in space like this,
+
+16:56.200 --> 17:01.560
+ whether it's a Alexa in space or, in general, any kind
+
+17:01.560 --> 17:04.880
+ of control systems, any kind of intelligent systems,
+
+17:04.880 --> 17:08.600
+ when you can't really test stuff too much out in space,
+
+17:08.600 --> 17:10.760
+ it's very expensive to test stuff.
+
+17:10.760 --> 17:14.160
+ So how do you develop such systems?
+
+17:14.160 --> 17:18.880
+ Yeah, that's the beauty of this digital twin, if you will.
+
+17:18.880 --> 17:21.080
+ And of course, with Lockheed Martin,
+
+17:21.080 --> 17:24.520
+ we've over the past five plus decades
+
+17:24.520 --> 17:28.120
+ been refining our knowledge of the space environment,
+
+17:28.120 --> 17:33.240
+ of how materials behave, dynamics, the controls,
+
+17:33.240 --> 17:37.160
+ the radiation environments, all of these kinds of things.
+
+17:37.160 --> 17:39.880
+ So we're able to create very sophisticated models.
+
+17:39.880 --> 17:43.440
+ They're not perfect, but they're very good.
+
+17:43.440 --> 17:46.600
+ And so you can actually do a lot.
+
+17:46.600 --> 17:51.440
+ I spent part of my career simulating communication
+
+17:51.440 --> 17:56.400
+ spacecraft, missile warning spacecraft, GPS spacecraft,
+
+17:56.400 --> 17:59.280
+ in all kinds of scenarios and all kinds of environments.
+
+17:59.280 --> 18:01.880
+ So this is really just taking that to the next level.
+
+18:01.880 --> 18:04.000
+ The interesting thing is that now you're
+
+18:04.000 --> 18:07.800
+ bringing into that loop a system, depending on how it's
+
+18:07.800 --> 18:10.520
+ developed, that may be non deterministic,
+
+18:10.520 --> 18:13.160
+ it may be learning as it goes.
+
+18:13.160 --> 18:16.560
+ In fact, we anticipate that it will be learning as it goes.
+
+18:16.560 --> 18:22.160
+ And so that brings a whole new level of interest, I guess,
+
+18:22.160 --> 18:25.320
+ into how do you do verification and validation
+
+18:25.320 --> 18:28.520
+ of these non deterministic learning systems
+
+18:28.520 --> 18:32.720
+ in scenarios that may go out of the bounds or the envelope
+
+18:32.720 --> 18:35.000
+ that you have initially designed them to.
+
+18:35.000 --> 18:39.200
+ So this system in its intelligence has the same complexity,
+
+18:39.200 --> 18:41.040
+ some of the same complexity a human does.
+
+18:41.040 --> 18:43.640
+ And it learns over time, it's unpredictable
+
+18:43.640 --> 18:46.240
+ in certain kinds of ways.
+
+18:46.240 --> 18:50.120
+ So you also have to model that when you're thinking about it.
+
+18:50.120 --> 18:53.440
+ So in your thoughts, it's possible
+
+18:53.440 --> 18:57.240
+ to model the majority of situations,
+
+18:57.240 --> 18:59.640
+ the important aspects of situations here on Earth
+
+18:59.640 --> 19:02.280
+ and in space, enough to test stuff.
+
+19:02.280 --> 19:05.560
+ Yeah, this is really an active area of research.
+
+19:05.560 --> 19:07.440
+ And we're actually funding university research
+
+19:07.440 --> 19:10.080
+ in a variety of places, including MIT.
+
+19:10.080 --> 19:13.720
+ This is in the realm of trust and verification
+
+19:13.720 --> 19:17.920
+ and validation of, I'd say, autonomous systems in general.
+
+19:17.920 --> 19:20.920
+ And then as a subset of that, autonomous systems
+
+19:20.920 --> 19:24.520
+ that incorporate artificial intelligence capabilities.
+
+19:24.520 --> 19:27.880
+ And this is not an easy problem.
+
+19:27.880 --> 19:29.520
+ We're working with startup companies.
+
+19:29.520 --> 19:33.160
+ We've got internal R&D, but our conviction
+
+19:33.160 --> 19:39.200
+ is that autonomy and more and more AI enabled autonomy
+
+19:39.200 --> 19:42.680
+ is going to be in everything that Lockheed Martin develops
+
+19:42.680 --> 19:44.200
+ and fields.
+
+19:44.200 --> 19:48.280
+ And autonomy and AI are going to be
+
+19:48.280 --> 19:50.080
+ retrofit into existing systems.
+
+19:50.080 --> 19:52.400
+ They're going to be part of the design
+
+19:52.400 --> 19:54.440
+ for all of our future systems.
+
+19:54.440 --> 19:56.680
+ And so maybe I should take a step back and say,
+
+19:56.680 --> 19:58.600
+ the way we define autonomy.
+
+19:58.600 --> 20:01.400
+ So we talk about autonomy, essentially,
+
+20:01.400 --> 20:08.400
+ a system that composes, selects, and then executes decisions
+
+20:08.400 --> 20:12.400
+ with varying levels of human intervention.
+
+20:12.400 --> 20:15.720
+ And so you could think of no autonomy.
+
+20:15.720 --> 20:18.400
+ So this is essentially a human doing the task.
+
+20:18.400 --> 20:23.000
+ You can think of, effectively, partial autonomy
+
+20:23.000 --> 20:25.720
+ where the human is in the loop.
+
+20:25.720 --> 20:29.040
+ So making decisions in every case
+
+20:29.040 --> 20:31.040
+ about what the autonomous system can do.
+
+20:31.040 --> 20:33.120
+ Either in the cockpit or remotely.
+
+20:33.120 --> 20:35.960
+ Or remotely, exactly, but still in that control loop.
+
+20:35.960 --> 20:39.800
+ And then there's what you'd call supervisory autonomy.
+
+20:39.800 --> 20:42.360
+ So the autonomous system is doing most of the work.
+
+20:42.360 --> 20:45.880
+ The human can intervene to stop it or to change the direction.
+
+20:45.880 --> 20:47.840
+ And then ultimately, full autonomy
+
+20:47.840 --> 20:50.200
+ where the human is off the loop altogether.
+
+20:50.200 --> 20:52.760
+ And for different types of missions,
+
+20:52.760 --> 20:55.760
+ want to have different levels of autonomy.
+
+20:55.760 --> 20:58.280
+ So now take that spectrum and this conviction
+
+20:58.280 --> 21:01.120
+ that autonomy and more and more AI
+
+21:01.120 --> 21:05.000
+ are in everything that we develop.
+
+21:05.000 --> 21:08.960
+ The kinds of things that Lockheed Martin does a lot of times
+
+21:08.960 --> 21:12.600
+ are safety of life critical kinds of missions.
+
+21:12.600 --> 21:15.920
+ Think about aircraft, for example.
+
+21:15.920 --> 21:20.040
+ And so we require, and our customers require,
+
+21:20.040 --> 21:23.480
+ an extremely high level of confidence.
+
+21:23.480 --> 21:26.360
+ One, that we're going to protect life.
+
+21:26.360 --> 21:30.640
+ Two, that we're going to, that these systems will behave
+
+21:30.640 --> 21:33.840
+ in ways that their operators can understand.
+
+21:33.840 --> 21:36.360
+ And so this gets into that whole field.
+
+21:36.360 --> 21:41.320
+ Again, being able to verify and validate
+
+21:41.320 --> 21:44.920
+ that the systems have been, that they will operate
+
+21:44.920 --> 21:48.040
+ the way they're designed and the way they're expected.
+
+21:48.040 --> 21:50.720
+ And furthermore, that they will do that
+
+21:50.720 --> 21:55.400
+ in ways that can be explained and understood.
+
+21:55.400 --> 21:58.800
+ And that is an extremely difficult challenge.
+
+21:58.800 --> 22:00.760
+ Yeah, so here's a difficult question.
+
+22:00.760 --> 22:04.360
+ I don't mean to bring this up,
+
+22:04.360 --> 22:05.560
+ but I think it's a good case study
+
+22:05.560 --> 22:07.840
+ that people are familiar with.
+
+22:07.840 --> 22:11.080
+ Boeing 737 MAX commercial airplane
+
+22:11.080 --> 22:13.360
+ has had two recent crashes
+
+22:13.360 --> 22:15.920
+ where their flight control software system failed.
+
+22:15.920 --> 22:19.080
+ And it's software, so I don't mean to speak about Boeing,
+
+22:19.080 --> 22:21.040
+ but broadly speaking, we have this
+
+22:21.040 --> 22:24.040
+ in the autonomous vehicle space too, semi autonomous.
+
+22:24.040 --> 22:27.840
+ When you have millions of lines of code software
+
+22:27.840 --> 22:32.080
+ making decisions, there is a little bit of a clash
+
+22:32.080 --> 22:35.320
+ of cultures because software engineers
+
+22:35.320 --> 22:38.400
+ don't have the same culture of safety often.
+
+22:39.440 --> 22:43.120
+ That people who build systems like at Lockheed Martin
+
+22:43.120 --> 22:46.480
+ do where it has to be exceptionally safe,
+
+22:46.480 --> 22:48.080
+ you have to test this on.
+
+22:48.080 --> 22:49.880
+ So how do we get this right
+
+22:49.880 --> 22:53.200
+ when software is making so many decisions?
+
+22:53.200 --> 22:57.160
+ Yeah, and there's a lot of things that have to happen.
+
+22:57.160 --> 23:01.280
+ And by and large, I think it starts with the culture,
+
+23:01.280 --> 23:03.320
+ which is not necessarily something
+
+23:03.320 --> 23:05.960
+ that A is taught in school,
+
+23:05.960 --> 23:07.960
+ or B is something that would come,
+
+23:07.960 --> 23:10.840
+ depending on what kind of software you're developing,
+
+23:10.840 --> 23:14.240
+ it may not be relevant if you're targeting ads
+
+23:14.240 --> 23:15.760
+ or something like that.
+
+23:15.760 --> 23:20.600
+ So, and by and large, I'd say not just Lockheed Martin,
+
+23:20.600 --> 23:23.720
+ but certainly the aerospace industry as a whole
+
+23:23.720 --> 23:27.240
+ has developed a culture that does focus on safety,
+
+23:27.240 --> 23:31.000
+ safety of life, operational safety, mission success.
+
+23:32.200 --> 23:34.040
+ But as you know, these systems
+
+23:34.040 --> 23:36.120
+ have gotten incredibly complex.
+
+23:36.120 --> 23:40.720
+ And so they're to the point where it's almost impossible,
+
+23:40.720 --> 23:44.840
+ state spaces become so huge that it's impossible to,
+
+23:44.840 --> 23:48.880
+ or very difficult to do a systematic verification
+
+23:48.880 --> 23:52.280
+ across the entire set of potential ways
+
+23:52.280 --> 23:53.760
+ that an aircraft could be flown,
+
+23:53.760 --> 23:55.560
+ all the conditions that could happen,
+
+23:55.560 --> 23:59.320
+ all the potential failure scenarios.
+
+23:59.320 --> 24:01.120
+ Now, maybe that's soluble one day,
+
+24:01.120 --> 24:03.360
+ maybe when we have our quantum computers
+
+24:03.360 --> 24:07.520
+ that our fingertips will be able to actually simulate
+
+24:07.520 --> 24:11.280
+ across an entire almost infinite state space.
+
+24:11.280 --> 24:16.280
+ But today, there's a lot of work
+
+24:16.280 --> 24:20.960
+ to really try to bound the system,
+
+24:20.960 --> 24:24.760
+ to make sure that it behaves in predictable ways,
+
+24:24.760 --> 24:29.080
+ and then have this culture of continuous inquiry
+
+24:29.080 --> 24:33.160
+ and skepticism and questioning to say,
+
+24:33.160 --> 24:37.320
+ did we really consider the right realm of possibilities,
+
+24:37.320 --> 24:40.160
+ have we done the right range of testing?
+
+24:40.160 --> 24:42.400
+ Do we really understand, in this case,
+
+24:42.400 --> 24:44.640
+ human and machine interactions,
+
+24:44.640 --> 24:46.160
+ the human decision process
+
+24:46.160 --> 24:49.480
+ alongside the machine processes?
+
+24:49.480 --> 24:51.520
+ And so that's that culture,
+
+24:51.520 --> 24:53.520
+ we call it the culture of mission success
+
+24:53.520 --> 24:54.960
+ at Lockheed Martin,
+
+24:54.960 --> 24:56.720
+ that really needs to be established.
+
+24:56.720 --> 24:58.120
+ And it's not something,
+
+24:58.120 --> 25:02.160
+ it's something that people learn by living in it.
+
+25:02.160 --> 25:05.240
+ And it's something that has to be promulgated,
+
+25:05.240 --> 25:07.120
+ and it's done from the highest level.
+
+25:07.120 --> 25:10.160
+ So I had a company of Lockheed Martin, like Lockheed Martin.
+
+25:10.160 --> 25:12.480
+ Yeah, and the same as being faced
+
+25:12.480 --> 25:14.000
+ at certain autonomous vehicle companies
+
+25:14.000 --> 25:15.760
+ where that culture is not there
+
+25:15.760 --> 25:18.600
+ because it started mostly by software engineers,
+
+25:18.600 --> 25:20.400
+ so that's what they're struggling with.
+
+25:21.440 --> 25:25.720
+ Is there lessons that you think we should learn
+
+25:25.720 --> 25:27.280
+ as an industry and a society
+
+25:27.280 --> 25:30.240
+ from the Boeing 737 MAX crashes?
+
+25:30.240 --> 25:34.720
+ These crashes, obviously, are either tremendous tragedies,
+
+25:34.720 --> 25:37.800
+ they're tragedies for all of the people,
+
+25:37.800 --> 25:41.240
+ the crew, the families, the passengers,
+
+25:41.240 --> 25:43.160
+ the people on the ground involved.
+
+25:44.280 --> 25:49.080
+ And it's also a huge business and economic setback as well.
+
+25:49.080 --> 25:51.720
+ I mean, we've seen that it's impacting, essentially,
+
+25:51.720 --> 25:53.840
+ the trade balance of the US.
+
+25:53.840 --> 25:58.360
+ So these are important questions.
+
+25:58.360 --> 26:00.200
+ And these are the kinds of,
+
+26:00.200 --> 26:03.040
+ we've seen similar kinds of questioning at times.
+
+26:03.040 --> 26:06.000
+ We go back to the Challenger accident.
+
+26:06.960 --> 26:10.640
+ And it is, I think, always important to remind ourselves
+
+26:10.640 --> 26:11.960
+ that humans are fallible,
+
+26:11.960 --> 26:14.040
+ that the systems we create,
+
+26:14.040 --> 26:16.560
+ as perfect as we strive to make them,
+
+26:16.560 --> 26:18.960
+ we can always make them better.
+
+26:18.960 --> 26:21.760
+ And so another element of that culture of mission success
+
+26:21.760 --> 26:24.960
+ is really that commitment to continuous improvement.
+
+26:24.960 --> 26:27.480
+ If there's something that goes wrong,
+
+26:27.480 --> 26:31.160
+ a real commitment to root cause
+
+26:31.160 --> 26:33.320
+ and true root cause understanding,
+
+26:33.320 --> 26:35.080
+ to taking the corrective actions
+
+26:35.080 --> 26:38.880
+ and to making the future systems better.
+
+26:38.880 --> 26:43.880
+ And certainly, we strive for no accidents.
+
+26:45.160 --> 26:47.760
+ And if you look at the record
+
+26:47.760 --> 26:50.440
+ of the commercial airline industry as a whole
+
+26:50.440 --> 26:53.360
+ and the commercial aircraft industry as a whole,
+
+26:53.360 --> 26:57.640
+ there's a very nice decaying exponential
+
+26:57.640 --> 27:01.680
+ to years now where we have no commercial aircraft accidents
+
+27:01.680 --> 27:04.760
+ at all, our fatal accidents at all.
+
+27:04.760 --> 27:08.360
+ So that didn't happen by accident.
+
+27:08.360 --> 27:11.640
+ It was through the regulatory agencies, FAA,
+
+27:11.640 --> 27:14.400
+ the airframe manufacturers,
+
+27:14.400 --> 27:18.680
+ really working on a system to identify root causes
+
+27:18.680 --> 27:20.520
+ and drive them out.
+
+27:20.520 --> 27:23.880
+ So maybe we can take a step back
+
+27:23.880 --> 27:25.520
+ and many people are familiar,
+
+27:25.520 --> 27:28.840
+ but Lockheed Martin broadly,
+
+27:28.840 --> 27:31.240
+ what kind of categories of systems
+
+27:32.120 --> 27:34.280
+ are you involved in building?
+
+27:34.280 --> 27:36.240
+ You know, Lockheed Martin, we think of ourselves
+
+27:36.240 --> 27:39.880
+ as a company that solves hard mission problems.
+
+27:39.880 --> 27:42.080
+ And the output of that might be an airplane
+
+27:42.080 --> 27:44.640
+ or a spacecraft or a helicopter or radar
+
+27:44.640 --> 27:45.680
+ or something like that.
+
+27:45.680 --> 27:47.920
+ But ultimately we're driven by these,
+
+27:47.920 --> 27:50.240
+ you know, like what is our customer?
+
+27:50.240 --> 27:52.680
+ What is that mission that they need to achieve?
+
+27:52.680 --> 27:55.480
+ And so that's what drove the SR 71, right?
+
+27:55.480 --> 27:57.840
+ How do you get pictures of a place
+
+27:59.000 --> 28:02.160
+ where you've got sophisticated air defense systems
+
+28:02.160 --> 28:05.440
+ that are capable of handling any aircraft
+
+28:05.440 --> 28:07.440
+ that was out there at the time, right?
+
+28:07.440 --> 28:10.440
+ So that, you know, that's what you'll do to an SR 71.
+
+28:10.440 --> 28:12.480
+ Build a nice flying camera.
+
+28:12.480 --> 28:16.040
+ Exactly, and make sure it gets out and it gets back, right?
+
+28:16.040 --> 28:18.280
+ And that led ultimately to really the start
+
+28:18.280 --> 28:20.440
+ of the space program in the US as well.
+
+28:22.200 --> 28:24.920
+ So now take a step back to Lockheed Martin of today.
+
+28:24.920 --> 28:29.040
+ And we are, you know, on the order of 105 years old now,
+
+28:29.040 --> 28:32.400
+ between Lockheed and Martin, the two big heritage companies.
+
+28:32.400 --> 28:34.600
+ Of course, we're made up of a whole bunch of other companies
+
+28:34.600 --> 28:36.120
+ that came in as well.
+
+28:36.120 --> 28:39.800
+ General Dynamics, you know, kind of go down the list.
+
+28:39.800 --> 28:42.600
+ Today we're, you can think of us
+
+28:42.600 --> 28:44.840
+ in this space of solving mission problems.
+
+28:44.840 --> 28:48.440
+ So obviously on the aircraft side,
+
+28:48.440 --> 28:53.000
+ tactical aircraft, building the most advanced fighter aircraft
+
+28:53.000 --> 28:55.120
+ that the world has ever seen, you know,
+
+28:55.120 --> 28:57.880
+ we're up to now several hundred of those delivered,
+
+28:57.880 --> 29:00.080
+ building almost a hundred a year.
+
+29:00.080 --> 29:04.120
+ And of course, working on the things that come after that.
+
+29:04.120 --> 29:07.720
+ On the space side, we are engaged in pretty much
+
+29:07.720 --> 29:12.720
+ every venue of space utilization and exploration
+
+29:13.160 --> 29:14.280
+ you can imagine.
+
+29:14.280 --> 29:18.040
+ So I mentioned things like navigation timing, GPS,
+
+29:18.040 --> 29:22.400
+ communication satellites, missile warning satellites.
+
+29:22.400 --> 29:24.760
+ We've built commercial surveillance satellites.
+
+29:24.760 --> 29:27.640
+ We've built commercial communication satellites.
+
+29:27.640 --> 29:29.200
+ We do civil space.
+
+29:29.200 --> 29:32.320
+ So everything from human exploration
+
+29:32.320 --> 29:35.000
+ to the robotic exploration of the outer planets.
+
+29:36.000 --> 29:39.080
+ And keep going on the space front.
+
+29:39.080 --> 29:40.640
+ But I don't, you know, a couple of other areas
+
+29:40.640 --> 29:44.520
+ I'd like to put out, we're heavily engaged
+
+29:44.520 --> 29:47.360
+ in building critical defensive systems.
+
+29:47.360 --> 29:51.640
+ And so a couple that I'll mention, the Aegis Combat System,
+
+29:51.640 --> 29:55.680
+ this is basically the integrated air and missile defense system
+
+29:55.680 --> 29:58.640
+ for the US and allied fleets.
+
+29:58.640 --> 30:02.840
+ And so protects, you know, carrier strike groups,
+
+30:02.840 --> 30:06.560
+ for example, from incoming ballistic missile threats,
+
+30:06.560 --> 30:08.480
+ aircraft threats, cruise missile threats,
+
+30:08.480 --> 30:10.080
+ and kind of go down the list.
+
+30:10.080 --> 30:13.240
+ So the carriers, the fleet itself
+
+30:13.240 --> 30:15.280
+ is the thing that is being protected.
+
+30:15.280 --> 30:18.120
+ The carriers aren't serving as a protection
+
+30:18.120 --> 30:19.360
+ for something else.
+
+30:19.360 --> 30:21.840
+ Well, that's a little bit of a different application.
+
+30:21.840 --> 30:24.360
+ We've actually built the version called Aegis Assure,
+
+30:24.360 --> 30:27.960
+ which is now deployed in a couple of places around the world.
+
+30:27.960 --> 30:31.000
+ So that same technology, I mean, basically,
+
+30:31.000 --> 30:35.360
+ can be used to protect either an ocean going fleet
+
+30:35.360 --> 30:37.840
+ or a land based activity.
+
+30:37.840 --> 30:39.680
+ Another one, the THAAD program.
+
+30:41.040 --> 30:44.720
+ So THAAD, this is the Theater High Altitude Area Defense.
+
+30:44.720 --> 30:49.120
+ This is to protect, you know, relatively broad areas
+
+30:49.120 --> 30:53.400
+ against sophisticated ballistic missile threats.
+
+30:53.400 --> 30:57.760
+ And so now, you know, it's deployed
+
+30:57.760 --> 30:59.880
+ with a lot of US capabilities.
+
+30:59.880 --> 31:01.960
+ And now we have international customers
+
+31:01.960 --> 31:04.520
+ that are looking to buy that capability as well.
+
+31:04.520 --> 31:07.000
+ And so these are systems that defend,
+
+31:07.000 --> 31:10.080
+ not just defend militaries and military capabilities,
+
+31:10.080 --> 31:12.400
+ but defend population areas.
+
+31:12.400 --> 31:16.320
+ And we saw, you know, maybe the first public use of these
+
+31:16.320 --> 31:20.200
+ back in the first Gulf War with the Patriot systems.
+
+31:21.200 --> 31:23.120
+ And these are the kinds of things
+
+31:23.120 --> 31:25.960
+ that Lockheed Martin delivers.
+
+31:25.960 --> 31:27.960
+ And there's a lot of stuff that goes with it.
+
+31:27.960 --> 31:31.520
+ So think about the radar systems and the sensing systems
+
+31:31.520 --> 31:35.200
+ that cue these, the command and control systems
+
+31:35.200 --> 31:39.560
+ that decide how you pair a weapon against an incoming threat.
+
+31:39.560 --> 31:42.600
+ And then all the human and machine interfaces
+
+31:42.600 --> 31:45.400
+ to make sure that they can be operated successfully
+
+31:45.400 --> 31:48.040
+ in very strenuous environments.
+
+31:48.040 --> 31:51.840
+ Yeah, there's some incredible engineering
+
+31:51.840 --> 31:54.440
+ that I'd ever find, like you said.
+
+31:54.440 --> 32:00.440
+ So maybe if we just take a look at Lockheed history broadly,
+
+32:00.720 --> 32:02.960
+ maybe even looking at Skunk Works.
+
+32:04.200 --> 32:07.240
+ What are the biggest, most impressive,
+
+32:07.240 --> 32:11.160
+ biggest, most impressive milestones of innovation?
+
+32:11.160 --> 32:13.560
+ So if you look at stealth,
+
+32:13.560 --> 32:15.200
+ I would have called you crazy if you said
+
+32:15.200 --> 32:16.760
+ that's possible at the time.
+
+32:17.880 --> 32:21.280
+ And supersonic and hypersonic.
+
+32:21.280 --> 32:24.000
+ So traveling at, first of all,
+
+32:24.000 --> 32:27.280
+ traveling at the speed of sound is pretty damn fast.
+
+32:27.280 --> 32:29.680
+ And supersonic and hypersonic,
+
+32:29.680 --> 32:32.160
+ three, four, five times the speed of sound,
+
+32:32.160 --> 32:34.360
+ that seems, I would also call you crazy
+
+32:34.360 --> 32:35.760
+ if you say you can do that.
+
+32:35.760 --> 32:38.080
+ So can you tell me how it's possible
+
+32:38.080 --> 32:39.560
+ to do these kinds of things?
+
+32:39.560 --> 32:41.080
+ And is there other milestones
+
+32:41.080 --> 32:45.040
+ and innovation that's going on that you can talk about?
+
+32:45.040 --> 32:49.000
+ Yeah, well, let me start on the Skunk Works saga.
+
+32:49.000 --> 32:51.520
+ And you kind of alluded to it in the beginning.
+
+32:51.520 --> 32:54.920
+ I mean, Skunk Works is as much an idea as a place.
+
+32:54.920 --> 32:59.520
+ And so it's driven really by Kelly Johnson's 14 principles.
+
+32:59.520 --> 33:02.000
+ And I'm not gonna list all 14 of them off,
+
+33:02.000 --> 33:04.480
+ but the idea, and this I'm sure will resonate
+
+33:04.480 --> 33:06.240
+ with any engineer who's worked
+
+33:06.240 --> 33:09.440
+ on a highly motivated small team before.
+
+33:09.440 --> 33:13.400
+ The idea that if you can essentially have a small team
+
+33:13.400 --> 33:17.280
+ of very capable people who wanna work
+
+33:17.280 --> 33:20.520
+ on really hard problems, you can do almost anything.
+
+33:20.520 --> 33:23.280
+ Especially if you kind of shield them
+
+33:23.280 --> 33:26.680
+ from bureaucratic influences,
+
+33:26.680 --> 33:30.680
+ if you create very tight relationships with your customer
+
+33:30.680 --> 33:34.360
+ so that you have that team and shared vision
+
+33:34.360 --> 33:38.280
+ with the customer, those are the kinds of things
+
+33:38.280 --> 33:43.040
+ that enable the Skunk Works to do these incredible things.
+
+33:43.040 --> 33:46.360
+ And we listed off a number that you brought up stealth.
+
+33:46.360 --> 33:50.520
+ And I mean, this whole, I wish I could have seen Ben Rich
+
+33:50.520 --> 33:53.880
+ with a ball bearing rolling across the desk
+
+33:53.880 --> 33:55.880
+ to a general officer and saying,
+
+33:55.880 --> 33:58.400
+ would you like to have an aircraft
+
+33:58.400 --> 34:01.800
+ that has the radar cross section of this ball bearing?
+
+34:01.800 --> 34:04.280
+ Probably one of the least expensive
+
+34:04.280 --> 34:06.320
+ and most effective marketing campaigns
+
+34:06.320 --> 34:08.440
+ in the history of the industry.
+
+34:08.440 --> 34:10.680
+ So just for people not familiar,
+
+34:10.680 --> 34:12.800
+ I mean, the way you detect aircraft,
+
+34:12.800 --> 34:14.680
+ so I mean, I'm sure there's a lot of ways,
+
+34:14.680 --> 34:17.360
+ but radar for the longest time,
+
+34:17.360 --> 34:20.680
+ there's a big blob that appears in the radar.
+
+34:20.680 --> 34:22.360
+ How do you make a plane disappear
+
+34:22.360 --> 34:26.200
+ so it looks as big as a ball bearing?
+
+34:26.200 --> 34:28.040
+ What's involved in technology wise there?
+
+34:28.040 --> 34:32.480
+ What's broadly sort of the stuff you can speak about?
+
+34:32.480 --> 34:34.680
+ I'll stick to what's in Ben Rich's book,
+
+34:34.680 --> 34:39.000
+ but obviously the geometry of how radar gets reflected
+
+34:39.000 --> 34:42.400
+ and the kinds of materials that either reflect or absorb
+
+34:42.400 --> 34:46.480
+ are kind of the couple of the critical elements there.
+
+34:46.480 --> 34:48.080
+ I mean, it's a cat and mouse game, right?
+
+34:48.080 --> 34:52.960
+ I mean, radars get better, stealth capabilities get better.
+
+34:52.960 --> 34:57.680
+ And so it's a really game of continuous improvement
+
+34:57.680 --> 34:58.520
+ and innovation there.
+
+34:58.520 --> 35:00.160
+ I'll leave it at that.
+
+35:00.160 --> 35:04.720
+ Yeah, so the idea that something is essentially invisible
+
+35:04.720 --> 35:06.440
+ is quite fascinating.
+
+35:06.440 --> 35:08.920
+ But the other one is flying fast.
+
+35:08.920 --> 35:13.240
+ So speed of sound is 750, 60 miles an hour.
+
+35:15.360 --> 35:18.480
+ So supersonic is three, Mach three,
+
+35:18.480 --> 35:19.320
+ something like that.
+
+35:19.320 --> 35:21.640
+ Yeah, we talk about the supersonic obviously
+
+35:21.640 --> 35:24.120
+ and we kind of talk about that as that realm
+
+35:24.120 --> 35:26.720
+ from Mach one up through about Mach five.
+
+35:26.720 --> 35:31.720
+ And then hypersonic, so high supersonic speeds
+
+35:32.040 --> 35:34.800
+ would be past Mach five.
+
+35:34.800 --> 35:37.160
+ And you got to remember Lockheed, Martin,
+
+35:37.160 --> 35:39.080
+ and actually other companies have been involved
+
+35:39.080 --> 35:42.240
+ in hypersonic development since the late 60s.
+
+35:42.240 --> 35:45.360
+ You think of everything from the X 15
+
+35:45.360 --> 35:48.040
+ to the space shuttle as examples of that.
+
+35:50.080 --> 35:54.360
+ I think the difference now is if you look around the world,
+
+35:54.360 --> 35:57.360
+ particularly the threat environment that we're in today,
+
+35:57.360 --> 36:02.360
+ you're starting to see publicly folks like the Russians
+
+36:02.520 --> 36:07.520
+ and the Chinese saying they have hypersonic weapons
+
+36:07.560 --> 36:12.560
+ capability that could threaten US and allied capabilities.
+
+36:14.280 --> 36:18.840
+ And also basically the claims are these could get around
+
+36:18.840 --> 36:21.840
+ defensive systems that are out there today.
+
+36:21.840 --> 36:24.520
+ And so there's a real sense of urgency.
+
+36:24.520 --> 36:28.160
+ You hear it from folks like the undersecretary of defense
+
+36:28.160 --> 36:30.800
+ for research and engineering, Dr. Mike Griffin
+
+36:30.800 --> 36:32.800
+ and others in the Department of Defense
+
+36:32.800 --> 36:37.200
+ that hypersonics is something that's really important
+
+36:37.200 --> 36:41.040
+ to the nation in terms of both parity
+
+36:41.040 --> 36:43.120
+ but also defensive capabilities.
+
+36:43.120 --> 36:46.200
+ And so that's something that we're pleased.
+
+36:46.200 --> 36:49.240
+ It's something Lockheed, Martin's had a heritage in.
+
+36:49.240 --> 36:53.800
+ We've invested R&D dollars on our side for many years.
+
+36:53.800 --> 36:56.240
+ And we have a number of things going on
+
+36:56.240 --> 36:59.760
+ with various US government customers in that field today
+
+36:59.760 --> 37:01.520
+ that we're very excited about.
+
+37:01.520 --> 37:04.520
+ So I would anticipate we'll be hearing more about that
+
+37:04.520 --> 37:06.240
+ in the future from our customers.
+
+37:06.240 --> 37:08.880
+ And I've actually haven't read much about this.
+
+37:08.880 --> 37:10.840
+ Probably you can't talk about much of it at all,
+
+37:10.840 --> 37:12.760
+ but on the defensive side,
+
+37:12.760 --> 37:15.600
+ it's a fascinating problem of perception
+
+37:15.600 --> 37:18.360
+ of trying to detect things that are really hard to see.
+
+37:18.360 --> 37:21.560
+ Can you comment on how hard that problem is
+
+37:21.560 --> 37:26.560
+ and how hard is it to stay ahead,
+
+37:26.680 --> 37:29.200
+ even if we're going back a few decades,
+
+37:29.200 --> 37:30.480
+ stay ahead of the competition?
+
+37:30.480 --> 37:33.680
+ Well, maybe I, again, you gotta think of these
+
+37:33.680 --> 37:36.480
+ as ongoing capability development.
+
+37:36.480 --> 37:40.720
+ And so think back to the early phase of missile defense.
+
+37:40.720 --> 37:44.120
+ So this would be in the 80s, the SDI program.
+
+37:44.120 --> 37:46.440
+ And in that timeframe, we proved,
+
+37:46.440 --> 37:48.920
+ and Lockheed Martin proved that you could hit a bullet
+
+37:48.920 --> 37:50.320
+ with a bullet, essentially,
+
+37:50.320 --> 37:53.240
+ and which is something that had never been done before
+
+37:53.240 --> 37:56.200
+ to take out an incoming ballistic missile.
+
+37:56.200 --> 37:58.760
+ And so that's led to these incredible
+
+37:58.760 --> 38:01.880
+ hit to kill kinds of capabilities, PAC 3.
+
+38:03.160 --> 38:07.040
+ That's the Patriot Advanced Capability Model 3
+
+38:07.040 --> 38:08.160
+ that Lockheed Martin builds,
+
+38:08.160 --> 38:10.740
+ the THAAD system that I talked about.
+
+38:12.120 --> 38:13.880
+ So now hypersonics,
+
+38:13.880 --> 38:17.560
+ you know, they're different from ballistic systems.
+
+38:17.560 --> 38:19.520
+ And so we gotta take the next step
+
+38:19.520 --> 38:21.160
+ in defensive capability.
+
+38:22.680 --> 38:25.520
+ I can, I'll leave that there, but I can only imagine.
+
+38:26.520 --> 38:29.160
+ Now, let me just comment, sort of as an engineer,
+
+38:29.160 --> 38:33.440
+ it's sad to know that so much that Lockheed has done
+
+38:33.440 --> 38:37.640
+ in the past is classified,
+
+38:37.640 --> 38:40.960
+ or today, you know, and it's shrouded in secrecy.
+
+38:40.960 --> 38:44.720
+ It has to be by the nature of the application.
+
+38:46.200 --> 38:49.200
+ So like what I do, so what we do here at MIT,
+
+38:49.200 --> 38:53.920
+ we'd like to inspire young engineers, young scientists,
+
+38:53.920 --> 38:56.480
+ and yet in the Lockheed case,
+
+38:56.480 --> 38:59.720
+ some of that engineer has to stay quiet.
+
+38:59.720 --> 39:00.920
+ How do you think about that?
+
+39:00.920 --> 39:02.120
+ How does that make you feel?
+
+39:02.120 --> 39:07.120
+ Is there a future where more can be shown,
+
+39:07.120 --> 39:10.600
+ or is it just the nature, the nature of this world
+
+39:10.600 --> 39:12.760
+ that it has to remain secret?
+
+39:12.760 --> 39:14.920
+ It's a good question.
+
+39:14.920 --> 39:19.920
+ I think the public can see enough of,
+
+39:21.160 --> 39:24.960
+ including students who may be in grade school,
+
+39:24.960 --> 39:27.160
+ high school, college today,
+
+39:28.160 --> 39:31.760
+ to understand the kinds of really hard problems
+
+39:31.760 --> 39:33.360
+ that we work on.
+
+39:33.360 --> 39:36.160
+ And I mean, look at the F35, right?
+
+39:36.160 --> 39:40.640
+ And obviously a lot of the detailed performance levels
+
+39:40.640 --> 39:43.160
+ are sensitive and controlled.
+
+39:43.160 --> 39:48.160
+ But we can talk about what an incredible aircraft this is.
+
+39:48.160 --> 39:50.480
+ It's a supersonic, super cruise kind of a fighter,
+
+39:50.480 --> 39:54.560
+ a stealth capabilities.
+
+39:54.560 --> 39:57.920
+ It's a flying information system in the sky
+
+39:57.920 --> 40:01.480
+ with data fusion, sensor fusion capabilities
+
+40:01.480 --> 40:03.200
+ that have never been seen before.
+
+40:03.200 --> 40:05.280
+ So these are the kinds of things that I believe,
+
+40:05.280 --> 40:08.000
+ these are the kinds of things that got me excited
+
+40:08.000 --> 40:08.960
+ when I was a student.
+
+40:08.960 --> 40:12.240
+ I think these still inspire students today.
+
+40:12.240 --> 40:17.040
+ And the other thing, I mean, people are inspired by space.
+
+40:17.040 --> 40:20.200
+ People are inspired by aircraft.
+
+40:22.000 --> 40:25.360
+ Our employees are also inspired by that sense of mission.
+
+40:25.360 --> 40:27.560
+ And I'll just give you an example.
+
+40:27.560 --> 40:32.640
+ I had the privilege to work and lead our GPS programs
+
+40:32.640 --> 40:34.400
+ for some time.
+
+40:34.400 --> 40:37.800
+ And that was a case where I actually
+
+40:37.800 --> 40:41.040
+ worked on a program that touches billions of people
+
+40:41.040 --> 40:41.680
+ every day.
+
+40:41.680 --> 40:43.480
+ And so when I said I worked on GPS,
+
+40:43.480 --> 40:45.240
+ everybody knew what I was talking about,
+
+40:45.240 --> 40:47.800
+ even though they didn't maybe appreciate the technical
+
+40:47.800 --> 40:51.320
+ challenges that went into that.
+
+40:51.320 --> 40:54.960
+ But I'll tell you, I got a briefing one time
+
+40:54.960 --> 40:57.400
+ from a major in the Air Force.
+
+40:57.400 --> 41:01.640
+ And he said, I go by call sign GIMP.
+
+41:01.640 --> 41:04.320
+ GPS is my passion.
+
+41:04.320 --> 41:05.720
+ I love GPS.
+
+41:05.720 --> 41:08.960
+ And he was involved in the operational test of the system.
+
+41:08.960 --> 41:11.680
+ He said, I was out in Iraq.
+
+41:11.680 --> 41:17.280
+ And I was on a helicopter, Black Hawk helicopter.
+
+41:17.280 --> 41:21.440
+ And I was bringing back a sergeant and a handful of troops
+
+41:21.440 --> 41:23.800
+ from a deployed location.
+
+41:23.800 --> 41:26.600
+ And he said, my job is GPS.
+
+41:26.600 --> 41:27.800
+ So I asked that sergeant.
+
+41:27.800 --> 41:31.360
+ And he's beaten down and half asleep.
+
+41:31.360 --> 41:34.080
+ And I said, what do you think about GPS?
+
+41:34.080 --> 41:35.120
+ And he brightened up.
+
+41:35.120 --> 41:35.920
+ His eyes lit up.
+
+41:35.920 --> 41:39.240
+ And he said, well, GPS, that brings me and my troops home
+
+41:39.240 --> 41:39.960
+ every day.
+
+41:39.960 --> 41:41.080
+ I love GPS.
+
+41:41.080 --> 41:43.760
+ And that's the kind of story where it's like, OK,
+
+41:43.760 --> 41:46.440
+ I'm really making a difference here in the kind of work.
+
+41:46.440 --> 41:48.920
+ So that mission piece is really important.
+
+41:48.920 --> 41:51.720
+ The last thing I'll say is, and this
+
+41:51.720 --> 41:54.840
+ gets to some of these questions around advanced
+
+41:54.840 --> 41:59.560
+ technologies, they're not just airplanes and spacecraft
+
+41:59.560 --> 41:59.960
+ anymore.
+
+41:59.960 --> 42:02.760
+ For people who are excited about advanced software
+
+42:02.760 --> 42:06.040
+ capabilities, about AI, about bringing machine learning,
+
+42:06.040 --> 42:10.120
+ these are the things that we're doing to exponentially
+
+42:10.120 --> 42:13.120
+ increase the mission capabilities that
+
+42:13.120 --> 42:14.280
+ go on those platforms.
+
+42:14.280 --> 42:15.920
+ And those are the kinds of things I think
+
+42:15.920 --> 42:18.400
+ are more and more visible to the public.
+
+42:18.400 --> 42:21.440
+ Yeah, I think autonomy, especially in flight,
+
+42:21.440 --> 42:23.880
+ is super exciting.
+
+42:23.880 --> 42:28.040
+ Do you see a day, here we go, back into philosophy,
+
+42:28.040 --> 42:35.120
+ a future when most fighter jets will be highly autonomous
+
+42:35.120 --> 42:37.720
+ to a degree where a human doesn't need
+
+42:37.720 --> 42:40.640
+ to be in the cockpit in almost all cases?
+
+42:40.640 --> 42:43.520
+ Well, I mean, that's a world that to a certain extent,
+
+42:43.520 --> 42:44.240
+ we're in today.
+
+42:44.240 --> 42:47.800
+ Now, these are remotely piloted aircraft, to be sure.
+
+42:47.800 --> 42:53.920
+ But we have hundreds of thousands of flight hours a year now
+
+42:53.920 --> 42:56.240
+ in remotely piloted aircraft.
+
+42:56.240 --> 43:00.720
+ And then if you take the F 35, I mean,
+
+43:00.720 --> 43:04.640
+ there are huge layers, I guess, in levels of autonomy
+
+43:04.640 --> 43:10.040
+ built into that aircraft so that the pilot is essentially
+
+43:10.040 --> 43:13.280
+ more of a mission manager rather than doing
+
+43:13.280 --> 43:16.560
+ the data, the second to second elements of flying
+
+43:16.560 --> 43:17.160
+ the aircraft.
+
+43:17.160 --> 43:19.920
+ So in some ways, it's the easiest aircraft in the world
+
+43:19.920 --> 43:20.840
+ to fly.
+
+43:20.840 --> 43:22.480
+ I'm kind of a funny story on that.
+
+43:22.480 --> 43:27.280
+ So I don't know if you know how aircraft carrier landings work.
+
+43:27.280 --> 43:30.760
+ But basically, there's what's called a tail hook,
+
+43:30.760 --> 43:33.760
+ and it catches wires on the deck of the carrier.
+
+43:33.760 --> 43:39.360
+ And that's what brings the aircraft to a screeching halt.
+
+43:39.360 --> 43:41.800
+ And there's typically three of these wires.
+
+43:41.800 --> 43:43.480
+ So if you miss the first, the second one,
+
+43:43.480 --> 43:45.920
+ you catch the next one, right?
+
+43:45.920 --> 43:49.280
+ And we got a little criticism.
+
+43:49.280 --> 43:50.880
+ I don't know how true this story is,
+
+43:50.880 --> 43:52.360
+ but we got a little criticism.
+
+43:52.360 --> 43:56.200
+ The F 35 is so perfect, it always gets the second wires.
+
+43:56.200 --> 44:00.880
+ We're wearing out the wire because it always hits that one.
+
+44:00.880 --> 44:04.600
+ But that's the kind of autonomy that just makes these,
+
+44:04.600 --> 44:06.880
+ essentially up levels what the human is doing
+
+44:06.880 --> 44:08.520
+ to more of that mission manager.
+
+44:08.520 --> 44:12.040
+ So much of that landing by the F 35 is autonomous.
+
+44:12.040 --> 44:14.000
+ Well, it's just the control systems
+
+44:14.000 --> 44:17.960
+ are such that you really have dialed out the variability
+
+44:17.960 --> 44:19.720
+ that comes with all the environmental conditions.
+
+44:19.720 --> 44:20.800
+ You're wearing it out.
+
+44:20.800 --> 44:24.320
+ So my point is, to a certain extent,
+
+44:24.320 --> 44:27.320
+ that world is here today.
+
+44:27.320 --> 44:30.000
+ Do I think that we're going to see a day anytime soon
+
+44:30.000 --> 44:31.840
+ when there are no humans in the cockpit?
+
+44:31.840 --> 44:33.320
+ I don't believe that.
+
+44:33.320 --> 44:36.680
+ But I do think we're going to see much more human machine
+
+44:36.680 --> 44:38.760
+ teaming, and we're going to see that much more
+
+44:38.760 --> 44:40.480
+ at the tactical edge.
+
+44:40.480 --> 44:41.480
+ And we did a demo.
+
+44:41.480 --> 44:43.760
+ You asked about what the Skunkworks is doing these days.
+
+44:43.760 --> 44:46.200
+ And so this is something I can talk about.
+
+44:46.200 --> 44:51.200
+ But we did a demo with the Air Force Research Laboratory.
+
+44:51.200 --> 44:52.600
+ We called it HAV Raider.
+
+44:52.600 --> 44:59.760
+ And so using an F 16 as an autonomous wingman,
+
+44:59.760 --> 45:02.480
+ and we demonstrated all kinds of maneuvers
+
+45:02.480 --> 45:06.280
+ and various mission scenarios with the autonomous F 16
+
+45:06.280 --> 45:09.640
+ being that so called loyal or trusted wingman.
+
+45:09.640 --> 45:11.320
+ And so those are the kinds of things
+
+45:11.320 --> 45:15.400
+ that we've shown what is possible now,
+
+45:15.400 --> 45:18.960
+ given that you've upleveled that pilot to be a mission manager.
+
+45:18.960 --> 45:22.280
+ Now they can control multiple other aircraft,
+
+45:22.280 --> 45:25.000
+ they can almost as extensions of your own aircraft
+
+45:25.000 --> 45:27.160
+ flying alongside with you.
+
+45:27.160 --> 45:30.240
+ So that's another example of how this is really
+
+45:30.240 --> 45:31.560
+ coming to fruition.
+
+45:31.560 --> 45:35.120
+ And then I mentioned the landings,
+
+45:35.120 --> 45:38.080
+ but think about just the implications
+
+45:38.080 --> 45:39.800
+ for humans and flight safety.
+
+45:39.800 --> 45:41.800
+ And this goes a little bit back to the discussion
+
+45:41.800 --> 45:45.720
+ we were having about how do you continuously improve
+
+45:45.720 --> 45:48.920
+ the level of safety through automation
+
+45:48.920 --> 45:52.120
+ while working through the complexities that automation
+
+45:52.120 --> 45:53.320
+ introduces.
+
+45:53.320 --> 45:55.520
+ So one of the challenges that you have in high performance
+
+45:55.520 --> 45:57.480
+ fighter aircraft is what's called Glock.
+
+45:57.480 --> 45:59.960
+ So this is G induced loss of consciousness.
+
+45:59.960 --> 46:02.800
+ So you pull 9Gs, you're wearing a pressure suit,
+
+46:02.800 --> 46:05.760
+ that's not enough to keep the blood going to your brain,
+
+46:05.760 --> 46:07.760
+ you black out.
+
+46:07.760 --> 46:12.320
+ And of course, that's bad if you happen to be flying low,
+
+46:12.320 --> 46:17.520
+ near the deck, and in an obstacle or terrain environment.
+
+46:17.520 --> 46:22.400
+ And so we developed a system in our aeronautics division
+
+46:22.400 --> 46:26.040
+ called Auto GCAS, so Autonomous Ground Collision Avoidance
+
+46:26.040 --> 46:27.400
+ System.
+
+46:27.400 --> 46:30.080
+ And we built that into the F16.
+
+46:30.080 --> 46:33.000
+ It's actually saved seven aircraft, eight pilots already.
+
+46:33.000 --> 46:35.840
+ And the relatively short time it's been deployed,
+
+46:35.840 --> 46:39.320
+ it was so successful that the Air Force said,
+
+46:39.320 --> 46:41.480
+ hey, we need to have this in the F35 right away.
+
+46:41.480 --> 46:46.400
+ So we've actually done testing of that now in the F35.
+
+46:46.400 --> 46:50.200
+ And we've also integrated an autonomous air collision
+
+46:50.200 --> 46:51.000
+ avoidance system.
+
+46:51.000 --> 46:53.000
+ So I think the air to air problem.
+
+46:53.000 --> 46:56.000
+ So now it's the integrated collision avoidance system.
+
+46:56.000 --> 46:58.760
+ But these are the kinds of capabilities.
+
+46:58.760 --> 46:59.920
+ I wouldn't call them AI.
+
+46:59.920 --> 47:04.040
+ I mean, they're very sophisticated models
+
+47:04.040 --> 47:08.080
+ of the aircraft's dynamics coupled with the terrain models
+
+47:08.080 --> 47:12.240
+ to be able to predict when essentially the pilot is
+
+47:12.240 --> 47:14.840
+ doing something that is going to take the aircraft into,
+
+47:14.840 --> 47:18.120
+ or the pilot's not doing something in this case.
+
+47:18.120 --> 47:23.280
+ But it just gives you an example of how autonomy can be really
+
+47:23.280 --> 47:25.960
+ a lifesaver in today's world.
+
+47:25.960 --> 47:29.160
+ It's like an autonomous automated emergency
+
+47:29.160 --> 47:30.520
+ braking in cars.
+
+47:30.520 --> 47:35.080
+ But is there any exploration of perception of, for example,
+
+47:35.080 --> 47:39.640
+ detecting a Glock that the pilot is out,
+
+47:39.640 --> 47:42.960
+ so as opposed to perceiving the external environment
+
+47:42.960 --> 47:46.000
+ to infer that the pilot is out, but actually perceiving
+
+47:46.000 --> 47:47.320
+ the pilot directly?
+
+47:47.320 --> 47:48.880
+ Yeah, this is one of those cases where
+
+47:48.880 --> 47:52.040
+ you'd like to not take action if you think the pilot's there.
+
+47:52.040 --> 47:54.160
+ And it's almost like systems that try
+
+47:54.160 --> 47:56.880
+ to detect if a driver is falling asleep on the road,
+
+47:56.880 --> 48:00.000
+ right, with limited success.
+
+48:00.000 --> 48:03.400
+ So I mean, this is what I call the system of last resort,
+
+48:03.400 --> 48:06.880
+ right, where if the aircraft has determined
+
+48:06.880 --> 48:10.880
+ that it's going into the terrain, get it out of there.
+
+48:10.880 --> 48:12.960
+ And this is not something that we're just
+
+48:12.960 --> 48:15.680
+ doing in the aircraft world.
+
+48:15.680 --> 48:18.600
+ And I wanted to highlight, we have a technology we call Matrix,
+
+48:18.600 --> 48:21.960
+ but this is developed at Sikorsky Innovations.
+
+48:21.960 --> 48:26.080
+ The whole idea there is what we call optimal piloting,
+
+48:26.080 --> 48:30.560
+ so not optional piloting or unpiloted,
+
+48:30.560 --> 48:32.240
+ but optimal piloting.
+
+48:32.240 --> 48:35.880
+ So an FAA certified system, so you
+
+48:35.880 --> 48:37.400
+ have a high degree of confidence.
+
+48:37.400 --> 48:40.560
+ It's generally pretty deterministic,
+
+48:40.560 --> 48:43.880
+ so we know that it'll do in different situations,
+
+48:43.880 --> 48:49.240
+ but effectively be able to fly a mission with two pilots,
+
+48:49.240 --> 48:51.560
+ one pilot, no pilots.
+
+48:51.560 --> 48:56.720
+ And you can think of it almost as like a dial of the level
+
+48:56.720 --> 48:59.480
+ of autonomy that you want, so it's
+
+48:59.480 --> 49:01.320
+ running in the background at all times
+
+49:01.320 --> 49:04.040
+ and able to pick up tasks, whether it's
+
+49:04.040 --> 49:10.160
+ sort of autopilot kinds of tasks or more sophisticated path
+
+49:10.160 --> 49:12.040
+ planning kinds of activities.
+
+49:12.040 --> 49:15.200
+ To be able to do things like, for example, land on an oil
+
+49:15.200 --> 49:19.480
+ rig in the North Sea in bad weather, zero, zero conditions.
+
+49:19.480 --> 49:20.880
+ And you can imagine, of course, there's
+
+49:20.880 --> 49:24.560
+ a lot of military utility to capability like that.
+
+49:24.560 --> 49:26.480
+ You could have an aircraft that you
+
+49:26.480 --> 49:28.280
+ want to send out for a crewed mission,
+
+49:28.280 --> 49:31.880
+ but then at night, if you want to use it to deliver supplies
+
+49:31.880 --> 49:35.600
+ in an unmanned mode, that could be done as well.
+
+49:35.600 --> 49:39.960
+ And so there's clear advantages there.
+
+49:39.960 --> 49:41.840
+ But think about on the commercial side,
+
+49:41.840 --> 49:44.560
+ if you're an aircraft taken, you're
+
+49:44.560 --> 49:46.080
+ going to fly out to this oil rig.
+
+49:46.080 --> 49:48.000
+ If you get out there and you can't land,
+
+49:48.000 --> 49:51.200
+ then you've got to bring all those people back, reschedule
+
+49:51.200 --> 49:53.080
+ another flight, pay the overtime for the crew
+
+49:53.080 --> 49:55.280
+ that you just brought back because they didn't get what
+
+49:55.280 --> 49:57.240
+ they were going to pay for the overtime for the folks that
+
+49:57.240 --> 49:58.640
+ are out there on the oil rig.
+
+49:58.640 --> 50:00.680
+ This is real economic.
+
+50:00.680 --> 50:03.480
+ These are dollars and cents kinds of advantages
+
+50:03.480 --> 50:06.000
+ that we're bringing in the commercial world as well.
+
+50:06.000 --> 50:09.120
+ So this is a difficult question from the AI space
+
+50:09.120 --> 50:11.600
+ that I would love it if we were able to comment.
+
+50:11.600 --> 50:15.360
+ So a lot of this autonomy in AI you've mentioned just now
+
+50:15.360 --> 50:17.040
+ has this empowering effect.
+
+50:17.040 --> 50:20.400
+ One is the last resort, it keeps you safe.
+
+50:20.400 --> 50:25.200
+ The other is there's with the teaming and in general,
+
+50:25.200 --> 50:29.120
+ assistive AI.
+
+50:29.120 --> 50:33.160
+ And I think there's always a race.
+
+50:33.160 --> 50:36.960
+ So the world is full of the world is complex.
+
+50:36.960 --> 50:41.160
+ It's full of bad actors.
+
+50:41.160 --> 50:43.600
+ So there's often a race to make sure
+
+50:43.600 --> 50:48.960
+ that we keep this country safe.
+
+50:48.960 --> 50:52.120
+ But with AI, there is a concern that it's
+
+50:52.120 --> 50:55.080
+ a slightly different race.
+
+50:55.080 --> 50:56.760
+ There's a lot of people in the AI space
+
+50:56.760 --> 50:59.600
+ that are concerned about the AI arms race.
+
+50:59.600 --> 51:02.280
+ That as opposed to the United States
+
+51:02.280 --> 51:05.400
+ becoming having the best technology
+
+51:05.400 --> 51:09.160
+ and therefore keeping us safe, even we lose ability
+
+51:09.160 --> 51:11.520
+ to keep control of it.
+
+51:11.520 --> 51:16.800
+ So the AI arms race getting away from all of us humans.
+
+51:16.800 --> 51:19.440
+ So do you share this worry?
+
+51:19.440 --> 51:21.080
+ Do you share this concern when we're
+
+51:21.080 --> 51:23.400
+ talking about military applications
+
+51:23.400 --> 51:26.520
+ that too much control and decision making
+
+51:26.520 --> 51:31.640
+ capabilities giving to software or AI?
+
+51:31.640 --> 51:34.120
+ Well, I don't see it happening today.
+
+51:34.120 --> 51:38.040
+ And in fact, this is something from a policy perspective.
+
+51:38.040 --> 51:39.920
+ It's obviously a very dynamic space.
+
+51:39.920 --> 51:42.800
+ But the Department of Defense has put quite a bit of thought
+
+51:42.800 --> 51:44.280
+ into that.
+
+51:44.280 --> 51:46.560
+ And maybe before talking about the policy,
+
+51:46.560 --> 51:48.920
+ I'll just talk about some of the why.
+
+51:48.920 --> 51:52.640
+ And you alluded to it being sort of a complicated and a little
+
+51:52.640 --> 51:54.040
+ bit scary world out there.
+
+51:54.040 --> 51:57.280
+ But there's some big things happening today.
+
+51:57.280 --> 52:00.600
+ You hear a lot of talk now about a return to great powers
+
+52:00.600 --> 52:05.400
+ competition, particularly around China and Russia with the US.
+
+52:05.400 --> 52:09.400
+ But there are some other big players out there as well.
+
+52:09.400 --> 52:13.400
+ And what we've seen is the deployment
+
+52:13.400 --> 52:20.480
+ of some very, I'd say, concerning new weapons systems,
+
+52:20.480 --> 52:24.520
+ particularly with Russia and breaching some of the IRBM,
+
+52:24.520 --> 52:26.040
+ intermediate range ballistic missile
+
+52:26.040 --> 52:29.480
+ treaties that's been in the news a lot.
+
+52:29.480 --> 52:33.640
+ The building of islands, artificial islands in the South
+
+52:33.640 --> 52:38.720
+ China Sea by the Chinese, and then arming those islands.
+
+52:38.720 --> 52:42.880
+ The annexation of Crimea by Russia,
+
+52:42.880 --> 52:44.800
+ the invasion of Ukraine.
+
+52:44.800 --> 52:47.160
+ So there's some pretty scary things.
+
+52:47.160 --> 52:51.640
+ And then you add on top of that, the North Korean threat has
+
+52:51.640 --> 52:52.960
+ certainly not gone away.
+
+52:52.960 --> 52:56.680
+ There's a lot going on in the Middle East with Iran in particular.
+
+52:56.680 --> 53:02.360
+ And we see this global terrorism threat has not abated, right?
+
+53:02.360 --> 53:06.080
+ So there are a lot of reasons to look for technology
+
+53:06.080 --> 53:08.160
+ to assist with those problems, whether it's
+
+53:08.160 --> 53:11.240
+ AI or other technologies like hypersonage, which
+
+53:11.240 --> 53:13.000
+ was which we discussed.
+
+53:13.000 --> 53:17.280
+ So now, let me give just a couple of hypotheticals.
+
+53:17.280 --> 53:22.320
+ So people react sort of in the second time frame, right?
+
+53:22.320 --> 53:27.760
+ You're photon hitting your eye to a movement
+
+53:27.760 --> 53:30.600
+ is on the order of a few tenths of a second
+
+53:30.600 --> 53:34.440
+ kinds of processing times.
+
+53:34.440 --> 53:38.240
+ Roughly speaking, computers are operating
+
+53:38.240 --> 53:41.560
+ in the nanosecond time scale, right?
+
+53:41.560 --> 53:44.640
+ So just to bring home what that means,
+
+53:44.640 --> 53:50.640
+ a nanosecond to a second is like a second to 32 years.
+
+53:50.640 --> 53:53.920
+ So seconds on the battlefield, in that sense,
+
+53:53.920 --> 53:56.600
+ literally are lifetimes.
+
+53:56.600 --> 54:01.920
+ And so if you can bring an autonomous or AI enabled
+
+54:01.920 --> 54:05.480
+ capability that will enable the human to shrink,
+
+54:05.480 --> 54:07.480
+ maybe you've heard the term the OODA loop.
+
+54:07.480 --> 54:12.120
+ So this whole idea that a typical battlefield decision
+
+54:12.120 --> 54:15.800
+ is characterized by observe.
+
+54:15.800 --> 54:19.040
+ So information comes in, orient.
+
+54:19.040 --> 54:21.240
+ What does that mean in the context?
+
+54:21.240 --> 54:23.040
+ Decide, what do I do about it?
+
+54:23.040 --> 54:25.160
+ And then act, take that action.
+
+54:25.160 --> 54:27.320
+ If you can use these capabilities
+
+54:27.320 --> 54:30.400
+ to compress that OODA loop to stay
+
+54:30.400 --> 54:32.200
+ inside what your adversary is doing,
+
+54:32.200 --> 54:37.640
+ that's an incredible, powerful force on the battlefield.
+
+54:37.640 --> 54:39.120
+ That's a really nice way to put it,
+
+54:39.120 --> 54:41.680
+ that the role of AI in computing in general
+
+54:41.680 --> 54:46.000
+ has a lot to benefit from just decreasing from 32 years
+
+54:46.000 --> 54:49.680
+ to one second, as opposed to on the scale of seconds
+
+54:49.680 --> 54:51.480
+ and minutes and hours making decisions
+
+54:51.480 --> 54:53.400
+ that humans are better at making.
+
+54:53.400 --> 54:54.960
+ And it actually goes the other way, too.
+
+54:54.960 --> 54:57.160
+ So that's on the short time scale.
+
+54:57.160 --> 55:00.600
+ So humans kind of work in the one second, two seconds
+
+55:00.600 --> 55:01.520
+ to eight hours.
+
+55:01.520 --> 55:04.320
+ After eight hours, you get tired.
+
+55:04.320 --> 55:07.480
+ You got to go to the bathroom, whatever the case might be.
+
+55:07.480 --> 55:09.720
+ So there's this whole range of other things.
+
+55:09.720 --> 55:16.560
+ Think about surveillance and guarding facilities.
+
+55:16.560 --> 55:20.480
+ Think about moving material, logistics, sustainment.
+
+55:20.480 --> 55:23.280
+ A lot of these what they call dull, dirty, and dangerous
+
+55:23.280 --> 55:26.160
+ things that you need to have sustained activity,
+
+55:26.160 --> 55:28.000
+ but it's sort of beyond the length of time
+
+55:28.000 --> 55:30.920
+ that a human can practically do as well.
+
+55:30.920 --> 55:34.200
+ So there's this range of things that
+
+55:34.200 --> 55:39.080
+ are critical in military and defense applications
+
+55:39.080 --> 55:43.200
+ that AI and autonomy are particularly well suited to.
+
+55:43.200 --> 55:45.840
+ Now, the interesting question that you brought up
+
+55:45.840 --> 55:49.840
+ is, OK, how do you make sure that stays within human control?
+
+55:49.840 --> 55:52.320
+ So that was the context for the policy.
+
+55:52.320 --> 55:56.160
+ And so there is a DOD directive called 3,000.09,
+
+55:56.160 --> 55:58.520
+ because that's the way we name stuff in this world.
+
+56:01.720 --> 56:04.240
+ And I'd say it's well worth reading.
+
+56:04.240 --> 56:07.240
+ It's only a couple pages long, but it makes some key points.
+
+56:07.240 --> 56:09.480
+ And it's really around making sure
+
+56:09.480 --> 56:14.840
+ that there's human agency and control over use
+
+56:14.840 --> 56:20.240
+ of semi autonomous and autonomous weapons systems,
+
+56:20.240 --> 56:23.800
+ making sure that these systems are tested, verified,
+
+56:23.800 --> 56:28.200
+ and evaluated in realistic, real world type scenarios,
+
+56:28.200 --> 56:29.960
+ making sure that the people are actually
+
+56:29.960 --> 56:32.440
+ trained on how to use them, making sure
+
+56:32.440 --> 56:36.160
+ that the systems have human machine interfaces that
+
+56:36.160 --> 56:39.320
+ can show what state they're in and what kinds of decisions
+
+56:39.320 --> 56:41.080
+ they're making, making sure that you
+
+56:41.080 --> 56:45.800
+ establish doctrine and tactics and techniques and procedures
+
+56:45.800 --> 56:48.240
+ for the use of these kinds of systems.
+
+56:48.240 --> 56:52.880
+ And so, and by the way, I mean, none of this is easy,
+
+56:52.880 --> 56:56.480
+ but I'm just trying to lay kind of the picture of how
+
+56:56.480 --> 56:59.080
+ the US has said, this is the way we're
+
+56:59.080 --> 57:02.600
+ going to treat AI and autonomous systems,
+
+57:02.600 --> 57:04.600
+ that it's not a free for all.
+
+57:04.600 --> 57:08.120
+ And like there are rules of war and rules of engagement
+
+57:08.120 --> 57:10.600
+ with other kinds of systems, think chemical weapons,
+
+57:10.600 --> 57:13.080
+ biological weapons, we need to think
+
+57:13.080 --> 57:15.760
+ about the same sorts of implications.
+
+57:15.760 --> 57:17.920
+ And this is something that's really important for Lockheed
+
+57:17.920 --> 57:20.680
+ Martin, I mean, obviously we are 100%
+
+57:20.680 --> 57:26.400
+ complying with our customer and the policies and regulations.
+
+57:26.400 --> 57:30.760
+ But I mean, AI is an incredible enabler, say,
+
+57:30.760 --> 57:32.360
+ within the walls of Lockheed Martin
+
+57:32.360 --> 57:35.640
+ in terms of improving production efficiency,
+
+57:35.640 --> 57:38.240
+ helping engineers doing generative design,
+
+57:38.240 --> 57:42.040
+ improving logistics, driving down energy costs.
+
+57:42.040 --> 57:44.320
+ I mean, there's so many applications.
+
+57:44.320 --> 57:47.440
+ But we're also very interested in some
+
+57:47.440 --> 57:50.000
+ of the elements of ethical application
+
+57:50.000 --> 57:51.800
+ within Lockheed Martin.
+
+57:51.800 --> 57:56.720
+ So we need to make sure that things like privacy is taken care
+
+57:56.720 --> 57:59.240
+ of, that we do everything we can to drive out
+
+57:59.240 --> 58:03.440
+ bias in AI enabled kinds of systems,
+
+58:03.440 --> 58:06.280
+ that we make sure that humans are involved in decisions
+
+58:06.280 --> 58:10.600
+ that we're not just delegating accountability to algorithms.
+
+58:10.600 --> 58:14.480
+ And so for us, I talked about culture before,
+
+58:14.480 --> 58:17.840
+ and it comes back to sort of the Lockheed Martin culture
+
+58:17.840 --> 58:19.200
+ and our core values.
+
+58:19.200 --> 58:21.680
+ And so it's pretty simple for us to do what's right,
+
+58:21.680 --> 58:24.200
+ respect others, perform with excellence.
+
+58:24.200 --> 58:27.880
+ And now how do we tie that back to the ethical principles
+
+58:27.880 --> 58:31.960
+ that will govern how AI is used within Lockheed Martin?
+
+58:31.960 --> 58:35.520
+ And we actually have a world, so you might not know this,
+
+58:35.520 --> 58:37.680
+ but they're actually awards for ethics programs.
+
+58:37.680 --> 58:41.400
+ Lockheed Martin's had a recognized ethics program
+
+58:41.400 --> 58:43.600
+ for many years, and this is one of the things
+
+58:43.600 --> 58:47.760
+ that our ethics team is working with our engineering team on.
+
+58:47.760 --> 58:51.240
+ One of the miracles to me, perhaps a layman,
+
+58:51.240 --> 58:53.680
+ again, I was born in the Soviet Union,
+
+58:53.680 --> 58:58.400
+ so I have echoes, at least in my family history of World War
+
+58:58.400 --> 59:02.080
+ II and the Cold War, do you have a sense
+
+59:02.080 --> 59:06.120
+ of why human civilization has not destroyed itself
+
+59:06.120 --> 59:09.120
+ through nuclear war, so nuclear deterrence?
+
+59:09.120 --> 59:12.760
+ And thinking about the future, this technology
+
+59:12.760 --> 59:15.080
+ of our role to play here, and what
+
+59:15.080 --> 59:20.440
+ is the long term future of nuclear deterrence look like?
+
+59:20.440 --> 59:25.760
+ Yeah, this is one of those hard, hard questions.
+
+59:25.760 --> 59:28.960
+ And I should note that Lockheed Martin is both proud
+
+59:28.960 --> 59:31.480
+ and privileged to play a part in multiple legs
+
+59:31.480 --> 59:35.880
+ of our nuclear and strategic deterrent systems
+
+59:35.880 --> 59:41.800
+ like the Trident submarine launch ballistic missiles.
+
+59:41.800 --> 59:47.320
+ You talk about, is there still a possibility
+
+59:47.320 --> 59:49.080
+ that human race could destroy itself?
+
+59:49.080 --> 59:54.520
+ I'd say that possibility is real, but interestingly,
+
+59:54.520 --> 59:58.600
+ in some sense, I think the strategic deterrence
+
+59:58.600 --> 1:00:03.400
+ have prevented the kinds of incredibly destructive world
+
+1:00:03.400 --> 1:00:07.280
+ wars that we saw in the first half of the 20th century.
+
+1:00:07.280 --> 1:00:10.880
+ Now, things have gotten more complicated since that time
+
+1:00:10.880 --> 1:00:12.280
+ and since the Cold War.
+
+1:00:12.280 --> 1:00:16.560
+ It is more of a multipolar, great powers world today.
+
+1:00:16.560 --> 1:00:19.000
+ Just to give you an example, back then,
+
+1:00:19.000 --> 1:00:21.840
+ there were in the Cold War timeframe
+
+1:00:21.840 --> 1:00:24.160
+ just a handful of nations that had ballistic missile
+
+1:00:24.160 --> 1:00:25.960
+ capability.
+
+1:00:25.960 --> 1:00:28.200
+ By last count, and this is a few years old,
+
+1:00:28.200 --> 1:00:31.200
+ there's over 70 nations today that have that,
+
+1:00:31.200 --> 1:00:38.000
+ similar kinds of numbers in terms of space based capabilities.
+
+1:00:38.000 --> 1:00:42.520
+ So the world has gotten more complex and more challenging
+
+1:00:42.520 --> 1:00:46.040
+ and the threats, I think, have proliferated in ways
+
+1:00:46.040 --> 1:00:49.480
+ that we didn't expect.
+
+1:00:49.480 --> 1:00:51.920
+ The nation today is in the middle
+
+1:00:51.920 --> 1:00:55.280
+ of a recapitalization of our strategic deterrent.
+
+1:00:55.280 --> 1:00:58.680
+ I look at that as one of the most important things
+
+1:00:58.680 --> 1:01:00.240
+ that our nation can do.
+
+1:01:00.240 --> 1:01:01.840
+ What is involved in deterrence?
+
+1:01:01.840 --> 1:01:08.000
+ Is it being ready to attack?
+
+1:01:08.000 --> 1:01:11.520
+ Or is it the defensive systems that catch attacks?
+
+1:01:11.520 --> 1:01:13.120
+ A little bit of both, and so it's
+
+1:01:13.120 --> 1:01:16.600
+ a complicated game theoretical kind of program.
+
+1:01:16.600 --> 1:01:23.280
+ But ultimately, we are trying to prevent the use
+
+1:01:23.280 --> 1:01:24.880
+ of any of these weapons.
+
+1:01:24.880 --> 1:01:28.000
+ And the theory behind prevention is
+
+1:01:28.000 --> 1:01:33.280
+ that even if an adversary uses a weapon against you,
+
+1:01:33.280 --> 1:01:37.600
+ you have the capability to essentially strike back
+
+1:01:37.600 --> 1:01:40.800
+ and do harm to them that's unacceptable.
+
+1:01:40.800 --> 1:01:44.880
+ And so that will deter them from making use
+
+1:01:44.880 --> 1:01:48.000
+ of these weapons systems.
+
+1:01:48.000 --> 1:01:50.760
+ The deterrence calculus has changed, of course,
+
+1:01:50.760 --> 1:01:56.320
+ with more nations now having these kinds of weapons.
+
+1:01:56.320 --> 1:01:59.120
+ But I think from my perspective, it's
+
+1:01:59.120 --> 1:02:05.000
+ very important to maintain a strategic deterrent.
+
+1:02:05.000 --> 1:02:08.760
+ You have to have systems that you will know will work
+
+1:02:08.760 --> 1:02:10.920
+ when they're required to work.
+
+1:02:10.920 --> 1:02:12.640
+ And you know that they have to be
+
+1:02:12.640 --> 1:02:16.440
+ adaptable to a variety of different scenarios
+
+1:02:16.440 --> 1:02:17.680
+ in today's world.
+
+1:02:17.680 --> 1:02:20.320
+ And so that's what this recapitalization of systems
+
+1:02:20.320 --> 1:02:23.200
+ that were built over previous decades,
+
+1:02:23.200 --> 1:02:26.640
+ making sure that they are appropriate not just for today,
+
+1:02:26.640 --> 1:02:29.080
+ but for the decades to come.
+
+1:02:29.080 --> 1:02:32.160
+ So the other thing I'd really like to note
+
+1:02:32.160 --> 1:02:40.120
+ is strategic deterrence has a very different character today.
+
+1:02:40.120 --> 1:02:42.360
+ We used to think of weapons of mass destruction
+
+1:02:42.360 --> 1:02:45.720
+ in terms of nuclear, chemical, biological.
+
+1:02:45.720 --> 1:02:48.640
+ And today we have a cyber threat.
+
+1:02:48.640 --> 1:02:54.320
+ We've seen examples of the use of cyber weaponry.
+
+1:02:54.320 --> 1:02:58.520
+ And if you think about the possibilities
+
+1:02:58.520 --> 1:03:03.880
+ of using cyber capabilities or an adversary attacking the US
+
+1:03:03.880 --> 1:03:07.560
+ to take out things like critical infrastructure,
+
+1:03:07.560 --> 1:03:12.840
+ electrical grids, water systems, those
+
+1:03:12.840 --> 1:03:16.280
+ are scenarios that are strategic in nature
+
+1:03:16.280 --> 1:03:19.040
+ to the survival of a nation as well.
+
+1:03:19.040 --> 1:03:23.000
+ So that is the kind of world that we live in today.
+
+1:03:23.000 --> 1:03:26.640
+ And part of my hope on this is one
+
+1:03:26.640 --> 1:03:30.840
+ that we can also develop technological systems,
+
+1:03:30.840 --> 1:03:33.640
+ perhaps enabled by AI and autonomy,
+
+1:03:33.640 --> 1:03:38.600
+ that will allow us to contain and to fight back
+
+1:03:38.600 --> 1:03:42.840
+ against these kinds of new threats that were not
+
+1:03:42.840 --> 1:03:46.280
+ conceived when we first developed our strategic deterrence.
+
+1:03:46.280 --> 1:03:48.360
+ Yeah, I know that Lockheed is involved in cyber.
+
+1:03:48.360 --> 1:03:52.040
+ So I saw that you mentioned that.
+
+1:03:52.040 --> 1:03:54.440
+ It's an incredibly change.
+
+1:03:54.440 --> 1:03:57.360
+ Nuclear almost seems easier than cyber,
+
+1:03:57.360 --> 1:03:58.680
+ because there's so many attack.
+
+1:03:58.680 --> 1:04:01.720
+ There's so many ways that cyber can evolve
+
+1:04:01.720 --> 1:04:03.400
+ in such an uncertain future.
+
+1:04:03.400 --> 1:04:05.800
+ But talking about engineering with a mission,
+
+1:04:05.800 --> 1:04:09.680
+ I mean, in this case, your engineering systems
+
+1:04:09.680 --> 1:04:13.880
+ that basically save the world.
+
+1:04:13.880 --> 1:04:18.040
+ Well, like I said, we're privileged to work
+
+1:04:18.040 --> 1:04:20.000
+ on some very challenging problems
+
+1:04:20.000 --> 1:04:23.360
+ for very critical customers here in the US
+
+1:04:23.360 --> 1:04:26.920
+ and with our allies abroad as well.
+
+1:04:26.920 --> 1:04:30.800
+ Lockheed builds both military and nonmilitary systems.
+
+1:04:30.800 --> 1:04:32.960
+ And perhaps the future of Lockheed
+
+1:04:32.960 --> 1:04:35.360
+ may be more in nonmilitary applications
+
+1:04:35.360 --> 1:04:38.320
+ if you talk about space and beyond.
+
+1:04:38.320 --> 1:04:41.480
+ I say that as a preface to a difficult question.
+
+1:04:41.480 --> 1:04:46.200
+ So President Eisenhower in 1961 in his farewell address
+
+1:04:46.200 --> 1:04:49.080
+ talked about the military industrial complex
+
+1:04:49.080 --> 1:04:52.800
+ and that it shouldn't grow beyond what is needed.
+
+1:04:52.800 --> 1:04:55.880
+ So what are your thoughts on those words
+
+1:04:55.880 --> 1:04:58.800
+ on the military industrial complex,
+
+1:04:58.800 --> 1:05:04.080
+ on the concern of growth of their developments
+
+1:05:04.080 --> 1:05:07.120
+ beyond what may be needed?
+
+1:05:07.120 --> 1:05:12.400
+ That what may be needed is a critical phrase, of course.
+
+1:05:12.400 --> 1:05:14.960
+ And I think it is worth pointing out, as you noted,
+
+1:05:14.960 --> 1:05:19.360
+ that Lockheed Martin, we're in a number of commercial businesses
+
+1:05:19.360 --> 1:05:23.960
+ from energy to space to commercial aircraft.
+
+1:05:23.960 --> 1:05:28.640
+ And so I wouldn't neglect the importance
+
+1:05:28.640 --> 1:05:32.160
+ of those parts of our business as well.
+
+1:05:32.160 --> 1:05:34.480
+ I think the world is dynamic.
+
+1:05:34.480 --> 1:05:38.880
+ And there was a time, it doesn't seem that long ago to me,
+
+1:05:38.880 --> 1:05:41.840
+ was I was a graduate student here at MIT
+
+1:05:41.840 --> 1:05:43.320
+ and we were talking about the peace
+
+1:05:43.320 --> 1:05:45.760
+ dividend at the end of the Cold War.
+
+1:05:45.760 --> 1:05:49.200
+ If you look at expenditure on military systems
+
+1:05:49.200 --> 1:05:55.640
+ as a fraction of GDP, we're far below peak levels of the past.
+
+1:05:55.640 --> 1:05:59.120
+ And to me, at least, it looks like a time
+
+1:05:59.120 --> 1:06:02.920
+ where you're seeing global threats changing in a way that
+
+1:06:02.920 --> 1:06:06.920
+ would warrant relevant investments
+
+1:06:06.920 --> 1:06:10.920
+ in defensive capabilities.
+
+1:06:10.920 --> 1:06:18.520
+ The other thing I'd note, for military and defensive systems,
+
+1:06:18.520 --> 1:06:21.440
+ it's not quite a free market, right?
+
+1:06:21.440 --> 1:06:25.720
+ We don't sell to people on the street.
+
+1:06:25.720 --> 1:06:29.440
+ And that warrants a very close partnership
+
+1:06:29.440 --> 1:06:34.280
+ between, I'd say, the customers and the people that design,
+
+1:06:34.280 --> 1:06:39.200
+ build, and maintain these systems because
+
+1:06:39.200 --> 1:06:44.920
+ of the very unique nature, the very difficult requirements,
+
+1:06:44.920 --> 1:06:49.440
+ the very great importance on safety
+
+1:06:49.440 --> 1:06:54.560
+ and on operating the way they're intended every time.
+
+1:06:54.560 --> 1:06:57.680
+ And so that does create, and it's frankly
+
+1:06:57.680 --> 1:06:59.560
+ one of Lockheed Martin's great strengths
+
+1:06:59.560 --> 1:07:01.920
+ is that we have this expertise built up
+
+1:07:01.920 --> 1:07:05.440
+ over many years in partnership with our customers
+
+1:07:05.440 --> 1:07:08.360
+ to be able to design and build these systems that
+
+1:07:08.360 --> 1:07:11.600
+ meet these very unique mission needs.
+
+1:07:11.600 --> 1:07:14.400
+ Yeah, because building those systems very costly,
+
+1:07:14.400 --> 1:07:16.120
+ there's very little room for mistake.
+
+1:07:16.120 --> 1:07:19.000
+ I mean, it's just Ben Rich's book and so on
+
+1:07:19.000 --> 1:07:20.360
+ just tells the story.
+
+1:07:20.360 --> 1:07:22.440
+ It's nowhere I can just reading it.
+
+1:07:22.440 --> 1:07:24.400
+ If you're an engineer, it reads like a thriller.
+
+1:07:24.400 --> 1:07:30.680
+ OK, let's go back to space for a second.
+
+1:07:30.680 --> 1:07:33.080
+ I'm always happy to go back to space.
+
+1:07:33.080 --> 1:07:38.320
+ So a few quick, maybe out there, maybe fun questions,
+
+1:07:38.320 --> 1:07:40.520
+ maybe a little provocative.
+
+1:07:40.520 --> 1:07:46.560
+ What are your thoughts on the efforts of the new folks,
+
+1:07:46.560 --> 1:07:48.840
+ SpaceX and Elon Musk?
+
+1:07:48.840 --> 1:07:50.880
+ What are your thoughts about what Elon is doing?
+
+1:07:50.880 --> 1:07:55.320
+ Do you see him as competition, do you enjoy competition?
+
+1:07:55.320 --> 1:07:56.440
+ What are your thoughts?
+
+1:07:56.440 --> 1:08:00.160
+ First of all, certainly Elon, I'd
+
+1:08:00.160 --> 1:08:03.200
+ say SpaceX and some of his other ventures
+
+1:08:03.200 --> 1:08:08.160
+ are definitely a competitive force in the space industry.
+
+1:08:08.160 --> 1:08:09.880
+ And do we like competition?
+
+1:08:09.880 --> 1:08:11.520
+ Yeah, we do.
+
+1:08:11.520 --> 1:08:15.480
+ And we think we're very strong competitors.
+
+1:08:15.480 --> 1:08:20.800
+ I think competition is what the US is founded on
+
+1:08:20.800 --> 1:08:24.680
+ in a lot of ways and always coming up with a better way.
+
+1:08:24.680 --> 1:08:29.480
+ And I think it's really important to continue
+
+1:08:29.480 --> 1:08:33.000
+ to have fresh eyes coming in, new innovation.
+
+1:08:33.000 --> 1:08:35.480
+ I do think it's important to have level playing fields.
+
+1:08:35.480 --> 1:08:38.760
+ And so you want to make sure that you're not
+
+1:08:38.760 --> 1:08:42.800
+ giving different requirements to different players.
+
+1:08:42.800 --> 1:08:47.560
+ But I tell people, I spent a lot of time at places like MIT.
+
+1:08:47.560 --> 1:08:50.600
+ I'm going to be at the MIT Beaver Works Summer Institute
+
+1:08:50.600 --> 1:08:52.120
+ over the weekend here.
+
+1:08:52.120 --> 1:08:55.040
+ And I tell people, this is the most exciting time
+
+1:08:55.040 --> 1:08:58.400
+ to be in the space business in my entire life.
+
+1:08:58.400 --> 1:09:02.960
+ And it is this explosion of new capabilities
+
+1:09:02.960 --> 1:09:06.960
+ that have been driven by things like the massive increase
+
+1:09:06.960 --> 1:09:10.920
+ in computing power, things like the massive increase
+
+1:09:10.920 --> 1:09:15.120
+ in comms capabilities, advanced and additive manufacturing,
+
+1:09:15.120 --> 1:09:18.800
+ are really bringing down the barriers to entry
+
+1:09:18.800 --> 1:09:21.880
+ in this field and it's driving just incredible innovation.
+
+1:09:21.880 --> 1:09:23.600
+ It's happening at startups, but it's also
+
+1:09:23.600 --> 1:09:25.400
+ happening at Lockheed Martin.
+
+1:09:25.400 --> 1:09:27.600
+ I did not realize this, but Lockheed Martin, working
+
+1:09:27.600 --> 1:09:31.360
+ with Stanford, actually built the first cubes that
+
+1:09:31.360 --> 1:09:35.120
+ was launched here out of the US that was called Quakesat.
+
+1:09:35.120 --> 1:09:37.440
+ And we did that with Stellar Solutions.
+
+1:09:37.440 --> 1:09:41.640
+ This was right around just after 2000, I guess.
+
+1:09:41.640 --> 1:09:45.480
+ And so we've been in that from the very beginning.
+
+1:09:45.480 --> 1:09:50.080
+ And I talked about some of these like Maya and Orion,
+
+1:09:50.080 --> 1:09:54.760
+ but we're in the middle of what we call smartsats and software
+
+1:09:54.760 --> 1:09:58.800
+ to find satellites that can essentially restructure and remap
+
+1:09:58.800 --> 1:10:02.400
+ their purpose, their mission on orbit
+
+1:10:02.400 --> 1:10:06.520
+ to give you almost unlimited flexibility for these satellites
+
+1:10:06.520 --> 1:10:08.000
+ over their lifetimes.
+
+1:10:08.000 --> 1:10:10.200
+ So those are just a couple of examples,
+
+1:10:10.200 --> 1:10:13.440
+ but yeah, this is a great time to be in space.
+
+1:10:13.440 --> 1:10:14.360
+ Absolutely.
+
+1:10:14.360 --> 1:10:20.160
+ So Wright Brothers flew for the first time 116 years ago.
+
+1:10:20.160 --> 1:10:23.040
+ So now we have supersonic stealth planes
+
+1:10:23.040 --> 1:10:25.440
+ and all the technology we've talked about.
+
+1:10:25.440 --> 1:10:29.280
+ What innovations, obviously you can't predict the future,
+
+1:10:29.280 --> 1:10:32.440
+ but do you see Lockheed in the next 100 years?
+
+1:10:32.440 --> 1:10:36.800
+ If you take that same leap, how will the world of technology
+
+1:10:36.800 --> 1:10:37.840
+ and engineering change?
+
+1:10:37.840 --> 1:10:39.320
+ I know it's an impossible question,
+
+1:10:39.320 --> 1:10:42.920
+ but nobody could have predicted that we could even
+
+1:10:42.920 --> 1:10:45.800
+ fly 120 years ago.
+
+1:10:45.800 --> 1:10:50.640
+ So what do you think is the edge of possibility
+
+1:10:50.640 --> 1:10:52.680
+ that we're going to be exploring in the next 100 years?
+
+1:10:52.680 --> 1:10:55.440
+ I don't know that there is an edge.
+
+1:10:55.440 --> 1:11:00.760
+ We've been around for almost that entire time, right?
+
+1:11:00.760 --> 1:11:03.840
+ The Lockheed Brothers and Glenn L. Martin
+
+1:11:03.840 --> 1:11:07.960
+ starting their companies in the basement of a church
+
+1:11:07.960 --> 1:11:11.840
+ and an old service station.
+
+1:11:11.840 --> 1:11:14.240
+ We're very different companies today
+
+1:11:14.240 --> 1:11:15.720
+ than we were back then, right?
+
+1:11:15.720 --> 1:11:17.680
+ And that's because we've continuously
+
+1:11:17.680 --> 1:11:21.680
+ reinvented ourselves over all of those decades.
+
+1:11:21.680 --> 1:11:24.320
+ I think it's fair to say, I know this for sure,
+
+1:11:24.320 --> 1:11:27.840
+ the world of the future, it's going to move faster,
+
+1:11:27.840 --> 1:11:29.320
+ it's going to be more connected,
+
+1:11:29.320 --> 1:11:31.640
+ it's going to be more autonomous,
+
+1:11:31.640 --> 1:11:36.160
+ and it's going to be more complex than it is today.
+
+1:11:36.160 --> 1:11:39.680
+ And so this is the world as a CTO of Lockheed Martin
+
+1:11:39.680 --> 1:11:41.560
+ that I think about, what are the technologies
+
+1:11:41.560 --> 1:11:42.720
+ that we have to invest in?
+
+1:11:42.720 --> 1:11:45.480
+ Whether it's things like AI and autonomy,
+
+1:11:45.480 --> 1:11:47.280
+ you can think about quantum computing,
+
+1:11:47.280 --> 1:11:49.120
+ which is an area that we've invested in
+
+1:11:49.120 --> 1:11:53.520
+ to try to stay ahead of these technological changes
+
+1:11:53.520 --> 1:11:56.280
+ and frankly, some of the threats that are out there.
+
+1:11:56.280 --> 1:11:58.360
+ And I believe that we're going to be out there
+
+1:11:58.360 --> 1:12:00.840
+ in the solar system, that we're going to be defending
+
+1:12:00.840 --> 1:12:04.960
+ and defending well against probably military threats
+
+1:12:04.960 --> 1:12:08.120
+ that nobody has even thought about today.
+
+1:12:08.120 --> 1:12:12.400
+ We are going to be, we're going to use these capabilities
+
+1:12:12.400 --> 1:12:15.720
+ to have far greater knowledge of our own planet,
+
+1:12:15.720 --> 1:12:19.320
+ the depths of the oceans, all the way to the upper reaches
+
+1:12:19.320 --> 1:12:21.400
+ of the atmosphere and everything out to the sun
+
+1:12:21.400 --> 1:12:23.440
+ and to the edge of the solar system.
+
+1:12:23.440 --> 1:12:26.760
+ So that's what I look forward to.
+
+1:12:26.760 --> 1:12:30.840
+ And I'm excited, I mean, just looking ahead
+
+1:12:30.840 --> 1:12:33.360
+ in the next decade or so to the steps
+
+1:12:33.360 --> 1:12:35.320
+ that I see ahead of us in that time.
+
+1:12:35.320 --> 1:12:38.240
+ I don't think there's a better place to end.
+
+1:12:38.240 --> 1:12:39.600
+ Okay, thank you so much.
+
+1:12:39.600 --> 1:12:41.800
+ Lex, it's been a real pleasure and sorry,
+
+1:12:41.800 --> 1:12:43.400
+ it took so long to get up here,
+
+1:12:43.400 --> 1:13:05.680
+ but glad we were able to make it happen.
+

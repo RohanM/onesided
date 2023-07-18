@@ -1,0 +1,3626 @@
+WEBVTT
+
+00:00.000 --> 00:05.440
+ The following is a conversation with Michael Littman, a computer science professor at Brown University
+
+00:05.440 --> 00:11.600
+ doing research on and teaching machine learning, reinforcement learning, and artificial intelligence.
+
+00:12.240 --> 00:18.160
+ He enjoys being silly and lighthearted in conversation, so this was definitely a fun one.
+
+00:18.960 --> 00:22.880
+ Quick mention of each sponsor, followed by some thoughts related to the episode.
+
+00:23.440 --> 00:29.280
+ Thank you to SimplySafe, a home security company I use to monitor and protect my apartment.
+
+00:29.280 --> 00:34.160
+ ExpressVPN, the VPN I've used for many years to protect my privacy on the internet.
+
+00:34.800 --> 00:40.000
+ Masterclass, online courses that I enjoy from some of the most amazing humans in history,
+
+00:40.640 --> 00:44.400
+ and better help online therapy with a licensed professional.
+
+00:45.200 --> 00:50.000
+ Please check out these sponsors in the description to get a discount and to support this podcast.
+
+00:50.560 --> 00:56.480
+ As a side note, let me say that I may experiment with doing some solo episodes in the coming month
+
+00:56.480 --> 01:03.680
+ or two. The three ideas I have floating in my head currently is to use one, a particular moment
+
+01:03.680 --> 01:11.200
+ in history, two, a particular movie, or three, a book to drive a conversation about a set of
+
+01:11.200 --> 01:18.400
+ related concepts. For example, I could use 2001 Space Odyssey or Ex Machina to talk about AGI
+
+01:18.400 --> 01:27.600
+ for one, two, three hours, or I could do an episode on the rise and fall of Hitler and Stalin
+
+01:28.160 --> 01:33.280
+ each in a separate episode, using relevant books and historical moments for reference.
+
+01:34.000 --> 01:39.520
+ I find the format of a solo episode very uncomfortable and challenging, but that just
+
+01:39.520 --> 01:44.080
+ tells me that it's something I definitely need to do and learn from the experience.
+
+01:44.080 --> 01:49.520
+ Of course, I hope you come along for the ride. Also, since we have all this moment of built up
+
+01:50.080 --> 01:55.600
+ unannouncements, I'm giving a few lectures on machine learning at MIT this January. In general,
+
+01:55.600 --> 02:02.720
+ if you have ideas for the episodes, for the lectures, or for just short videos on YouTube,
+
+02:03.440 --> 02:11.120
+ let me know in the comments that I still definitely read despite my better judgment
+
+02:11.120 --> 02:18.240
+ and the wise sage device of the great Joe Rogan. If you enjoy this thing, subscribe on YouTube,
+
+02:18.240 --> 02:21.680
+ review it with five stars and I'll have a podcast, follow on Spotify,
+
+02:21.680 --> 02:25.760
+ support on Patreon, or connect with me on Twitter at Lex Freedman.
+
+02:26.480 --> 02:33.440
+ And now here's my conversation with Michael Littman. I saw a video of you talking to Charles
+
+02:33.440 --> 02:37.760
+ Isbell about Westworld, the TV series. You guys were doing a kind of thing where you're
+
+02:37.760 --> 02:45.280
+ watching new things together, but let's rewind back. Is there a sci fi movie or book
+
+02:46.000 --> 02:53.040
+ or shows that was profound that had an impact on you philosophically or just specifically
+
+02:53.040 --> 02:58.560
+ something you enjoyed nerding out about? Yeah, interesting. I think a lot of us have been inspired
+
+02:58.560 --> 03:05.200
+ by robots in movies. The one that I really like is there's a movie called Robot and Frank,
+
+03:05.200 --> 03:11.600
+ which I think is really interesting because it's very near term future where robots are being deployed
+
+03:11.600 --> 03:18.160
+ as helpers in people's homes. And we don't know how to make robots like that at this point,
+
+03:18.160 --> 03:24.000
+ but it seemed very plausible. It seemed very realistic or imaginable. I thought that was
+
+03:24.000 --> 03:28.480
+ really cool because they're awkward. They do funny things that raise some interesting issues,
+
+03:28.480 --> 03:32.800
+ but it seemed like something that would ultimately be helpful and good if we could do it right.
+
+03:32.800 --> 03:36.960
+ Yeah, he was an older cranky gentleman. He was an older cranky jewel thief. Yeah.
+
+03:38.000 --> 03:43.680
+ It's kind of a funny little thing, which is he's a jewel thief and so he pulls the robot
+
+03:43.680 --> 03:51.840
+ into his life, which is something you could imagine taking a home robotics thing and pulling
+
+03:51.840 --> 03:57.200
+ into whatever quirky thing that's involved in your existence. It's meaningful to you,
+
+03:57.200 --> 04:01.360
+ exactly so. Yeah, and I think from that perspective, I mean, not all of us are jewel thieves. And so
+
+04:01.360 --> 04:08.160
+ when we bring our robots into our lives, explains a lot about this apartment, actually. But no,
+
+04:08.160 --> 04:14.800
+ the idea that people should have the ability to make this technology their own, that it becomes
+
+04:14.800 --> 04:19.840
+ part of their lives. And I think that's, it's hard for us as technologists to make that kind
+
+04:19.840 --> 04:25.200
+ of technology. It's easier to mold people into what we need them to be. And just that opposite
+
+04:25.200 --> 04:30.400
+ vision I think is really inspiring. And then there's a anthropomorphization where we project
+
+04:30.400 --> 04:34.720
+ certain things on them because I think the robot was kind of dumb. But I have a bunch of Roombas
+
+04:34.720 --> 04:40.320
+ that play with and they, you immediately project stuff onto them, much greater level of intelligence.
+
+04:40.320 --> 04:44.720
+ We'll probably do that with each other too. Much, much, much greater degree of compassion.
+
+04:44.720 --> 04:48.640
+ That's right. One of the things we're learning from AI is where we are smart and where we are
+
+04:48.640 --> 04:58.480
+ not smart. Yeah. You also enjoy, as people can see, and I enjoyed myself watching you sing
+
+04:58.480 --> 05:03.440
+ and even dance a little bit, a little bit of dancing. A little bit of dancing. That's not
+
+05:03.440 --> 05:11.840
+ quite my thing. As a method of education, or just in life, in general. So easy question.
+
+05:11.840 --> 05:18.560
+ What's the definitive, objectively speaking, top three songs of all time? Maybe something that,
+
+05:20.720 --> 05:26.960
+ to walk that back a little bit, maybe something that others might be surprised by. Three songs
+
+05:26.960 --> 05:31.840
+ that you kind of enjoy. That is a great question that I cannot answer. But instead, let me tell
+
+05:31.840 --> 05:36.480
+ you a story. Pick a question you do want to answer. That's right. I've been watching the
+
+05:36.480 --> 05:39.440
+ presidential debates and vice presidential debates and it turns out, yeah, it's really,
+
+05:39.440 --> 05:46.640
+ you can just answer any question you want. So it's a related question. Yeah, well said.
+
+05:47.280 --> 05:52.160
+ I really like pop music. I've enjoyed pop music ever since I was very young. So 60s music, 70s
+
+05:52.160 --> 05:57.040
+ music, 80s music, this is all awesome. And then I had kids and I think I stopped listening to music
+
+05:57.040 --> 06:02.000
+ and I was starting to realize that the, like my musical taste had sort of frozen out. And so I
+
+06:02.000 --> 06:09.120
+ decided in 2011, I think to start listening to the top 10 Billboard songs each week. So I'd be on
+
+06:09.120 --> 06:13.680
+ the treadmill and I would listen to that week's top 10 songs so I could find out what was popular
+
+06:13.680 --> 06:20.000
+ now. And what I discovered is that I have no musical taste whatsoever. I like what I'm familiar
+
+06:20.000 --> 06:24.720
+ with. And so the first time I'd hear a song is the first week that was on the charts. I'd be like,
+
+06:25.680 --> 06:29.840
+ and then the second week, I was into it a little bit and the third week, I was loving it. And by
+
+06:29.840 --> 06:35.680
+ the fourth week is like just part of me. And so I'm afraid that I can't tell you the most, my
+
+06:35.680 --> 06:39.840
+ favorite song of all time, because it's whatever I heard most recently. Yeah, that's interesting.
+
+06:39.840 --> 06:47.680
+ People have told me that there's an art to listening to music as well. And you can start to,
+
+06:47.680 --> 06:53.360
+ if you listen to a song, just carefully, explicitly just force yourself to really listen. You start
+
+06:53.360 --> 07:01.200
+ to, I did this when I was part of Jazz Band and Fusion Band in college. You start to hear the layers
+
+07:01.200 --> 07:04.720
+ of the instruments. You start to hear the individual instruments and you start to,
+
+07:05.680 --> 07:09.280
+ you can listen to classical music or to orchestra this way, you can listen to jazz this way.
+
+07:10.800 --> 07:17.440
+ It's funny to imagine you now to walk in that forward to listening to pop hits now as like a
+
+07:17.440 --> 07:23.920
+ scholar listening to like Cardi B or something like that or Justin Timberlake. No, not Timberlake,
+
+07:23.920 --> 07:29.440
+ Bieber. They've both been in the top 10 since I've been listening. They're still up there. Oh,
+
+07:29.440 --> 07:34.080
+ my God, I'm so cool. If you haven't heard Justin Timberlake's top 10 in the last few years,
+
+07:34.080 --> 07:40.720
+ there was one song that he did where the music video was set at essentially NeurIPS. Oh, wow.
+
+07:40.720 --> 07:45.680
+ Oh, the one with the robotics. Yeah, yeah, yeah, yeah. Yeah, yeah. It's like at an academic conference
+
+07:45.680 --> 07:52.640
+ and he's doing a demo and it was sort of a cross between the Apple, like Steve Jobs kind of talk
+
+07:52.640 --> 07:59.120
+ and NeurIPS. So, you know, it's always fun when AI shows up in pop culture. I wonder if he consulted
+
+07:59.120 --> 08:05.680
+ somebody for that. That's really interesting. So maybe on that topic, I've seen your celebrity
+
+08:05.680 --> 08:11.440
+ multiple dimensions, but one of them is you've done cameos in different places. I've seen you
+
+08:11.440 --> 08:19.360
+ in a TurboTax commercial as like I guess the brilliant Einstein character. And the point
+
+08:19.360 --> 08:25.520
+ is that TurboTax doesn't need somebody like you. It doesn't need a brilliant person.
+
+08:25.520 --> 08:29.840
+ Very few things need someone like me. But yes, they were specifically emphasizing the idea that
+
+08:29.840 --> 08:34.320
+ you don't need to be like a computer expert to be able to use their software. How did you end up
+
+08:34.320 --> 08:39.120
+ in that world? I think it's an interesting story. So I was teaching my class. It was an
+
+08:39.120 --> 08:46.400
+ intro computer science class for nonconcentrators, nonmajors. And sometimes when people would visit
+
+08:46.400 --> 08:50.080
+ campus, they would check in to say, hey, we want to see what a class is like. Can we sit on your
+
+08:50.080 --> 09:04.320
+ class? So a person came to my class who was the daughter of the brother of the husband of the best
+
+09:04.320 --> 09:12.720
+ friend of my wife. Anyway, basically a family friend came to campus to check out Brown and
+
+09:12.720 --> 09:19.120
+ asked to come to my class and came with her dad. Her dad is who I've known from various kinds of
+
+09:19.120 --> 09:23.920
+ family events and so forth, but he also does advertising. And he said that he was recruiting
+
+09:24.880 --> 09:33.440
+ scientists for this ad, this TurboTax set of ads. And he said, we wrote the ad with the idea that
+
+09:33.440 --> 09:41.760
+ we get the most brilliant researchers, but they all said no. So can you help us find the B level
+
+09:42.720 --> 09:48.800
+ scientists? And I'm like, sure, that's who I hang out with. So that should be fine. So I put
+
+09:48.800 --> 09:53.440
+ together a list and I did what some people called a Dick Cheney. So I included myself on the list
+
+09:53.440 --> 09:58.320
+ of possible candidates with a little blurb about each one and why I thought that would make sense
+
+09:58.320 --> 10:02.240
+ for them to do it. And they reached out to a handful of them, but then they ultimately,
+
+10:02.240 --> 10:07.280
+ they YouTube stalked me a little bit and they thought, oh, I think he could do this. And they
+
+10:07.280 --> 10:13.440
+ said, okay, we're going to offer you the commercial. I'm like, what? So it was such an interesting
+
+10:13.440 --> 10:21.200
+ experience because they have another world, the people who do nationwide kind of ad campaigns
+
+10:21.200 --> 10:27.520
+ and television shows and movies and so forth. It's quite a remarkable system that they have going
+
+10:27.520 --> 10:32.640
+ because it's like a set. Yeah. So I went to, it was just somebody's house that they rented in
+
+10:32.640 --> 10:41.280
+ New Jersey, but in the commercial, it's just me and this other woman. In reality, there were 50
+
+10:41.280 --> 10:46.080
+ people in that room and another, I don't know, half a dozen kind of spread out around the house
+
+10:46.080 --> 10:51.360
+ in various ways. There were people whose job it was to control the sun. They were in the backyard
+
+10:51.360 --> 10:57.120
+ on ladders putting filters up to try to make sure that the sun didn't glare off the window in a way
+
+10:57.120 --> 11:00.960
+ that would wreck the shot. So there was like six people out there doing that. There was three people
+
+11:00.960 --> 11:06.240
+ out there giving snacks, the craft table. There was another three people giving healthy snacks
+
+11:06.240 --> 11:10.560
+ because that was a separate craft table. There was one person whose job it was to keep me from
+
+11:10.560 --> 11:16.800
+ getting lost. And I think the reason for all this is because so many people are in one place at one
+
+11:16.800 --> 11:21.360
+ time, they have to be time efficient. They have to get it done. The morning they were going to do
+
+11:21.360 --> 11:25.040
+ my commercial and the afternoon they were going to do a commercial of a mathematics professor from
+
+11:25.040 --> 11:31.920
+ Rinston. They had to get it done. No wasted time or energy. And so there's just a fleet of people
+
+11:31.920 --> 11:36.800
+ all working as an organism and it was fascinating. I was just the whole time just looking around like
+
+11:36.800 --> 11:42.400
+ this is so neat. Like one person whose job it was to take the camera off of the cameraman
+
+11:43.680 --> 11:48.240
+ so that someone else whose job it was to remove the film canister because every couple's takes,
+
+11:48.240 --> 11:54.320
+ they had to replace the film because film gets used up. It was just, I don't know, I was geeking
+
+11:54.320 --> 11:58.160
+ out the whole time. It was so fun. How many takes did it take? It looked the opposite like there
+
+11:58.160 --> 12:03.680
+ was more than two people there. It was very relaxed. Right. Yeah. The person who I was in the scene
+
+12:03.680 --> 12:10.880
+ with is a professional. She's an improv comedian from New York City. And when I got there, they
+
+12:10.880 --> 12:15.440
+ had given me a script such as it was. And then I got there and they said, we're going to do this
+
+12:15.440 --> 12:21.280
+ as improv. I'm like, I don't know how to improv. I don't know what you're telling me to do here.
+
+12:21.280 --> 12:27.360
+ Yeah. Don't worry. She knows. I'm like, okay, we'll see how this goes. I guess I got pulled
+
+12:27.360 --> 12:32.000
+ into the story because like, where the heck did you come from? I guess in the scene. Like,
+
+12:32.000 --> 12:36.160
+ how did you show up in this random person's house? I don't know. Yeah. Well, I mean,
+
+12:36.160 --> 12:40.080
+ the reality of it is I stood outside in the blazing sun. There was someone whose job it was
+
+12:40.080 --> 12:44.240
+ to keep an umbrella over me because I started to sweat. I started to sweat. And so I would
+
+12:44.240 --> 12:48.080
+ wreck the shot because my face was all shiny with sweat. So there was one person who would dab me
+
+12:48.080 --> 12:54.240
+ off at an umbrella. But yeah, like the reality of it, like why is this strange stalkery person
+
+12:54.240 --> 12:58.400
+ hanging around outside somebody's house? We're not sure. We have to look in. We have to wait
+
+12:58.400 --> 13:04.960
+ for the book. But are you... So you make, like you said, YouTube, you make videos yourself.
+
+13:04.960 --> 13:11.680
+ You make awesome parody, sort of parody songs that kind of focus in a particular aspect of
+
+13:11.680 --> 13:17.840
+ computer science. How much... Those seem really natural. How much production value goes into
+
+13:17.840 --> 13:22.960
+ that? Do you also have a team of 50 people? The videos, almost all the videos, except for the
+
+13:22.960 --> 13:28.240
+ ones that people would have actually seen, were just me. I write the lyrics. I sing the song. I
+
+13:28.240 --> 13:36.160
+ generally find a backing track online because I'm like, you can't really play an instrument.
+
+13:36.160 --> 13:41.840
+ And then I do, in some cases, I'll do visuals using just like PowerPoint. Lots and lots of
+
+13:41.840 --> 13:46.640
+ PowerPoint to make it sort of like an animation. The most produced one is the one that people
+
+13:46.640 --> 13:51.920
+ might have seen, which is the overfitting video that I did with Charles Isbell. And that was
+
+13:51.920 --> 13:57.200
+ produced by the Georgia Tech and Udacity people because we were doing a class together. It was
+
+13:57.200 --> 14:01.760
+ kind of... I usually do parody songs kind of to cap off a class at the end of a class.
+
+14:01.760 --> 14:06.800
+ So that one you're wearing, so it was just a thriller, you're wearing the Michael Jackson,
+
+14:06.800 --> 14:14.480
+ the red leather jacket. The interesting thing with podcasting that you're also into is that
+
+14:14.480 --> 14:23.600
+ I really enjoy is that there's not a team of people. It's kind of more... Because you know,
+
+14:25.440 --> 14:31.840
+ there's something that happens when there's more people involved than just one person. That's just
+
+14:31.840 --> 14:38.640
+ the way you start acting. I don't know. There's a censorship. You're not given, especially for
+
+14:38.640 --> 14:43.760
+ like slow thinkers like me, you're not... And I think most of us are if we're trying to actually
+
+14:43.760 --> 14:51.520
+ think we're a little bit slow and careful, it kind of large teams get in the way of that.
+
+14:52.560 --> 14:58.640
+ And I don't know what to do with that. To me, it's very popular to criticize
+
+14:58.640 --> 15:04.800
+ quote unquote mainstream media, but there is legitimacy to criticizing them the same. I
+
+15:04.800 --> 15:10.640
+ love listening to NPR for example, but it's clear that there's a team behind it.
+
+15:10.640 --> 15:14.800
+ There's a constant commercial breaks. There's this kind of like rush of like,
+
+15:16.080 --> 15:20.000
+ okay, I have to interrupt you now because we have to go to commercial. Just this whole,
+
+15:20.560 --> 15:26.960
+ it creates, it destroys the possibility of nuanced conversation. Yeah, exactly.
+
+15:28.160 --> 15:36.080
+ Evian, which Charles Isbel who I talked to yesterday told me that Evian is naive backwards,
+
+15:36.080 --> 15:41.920
+ which the fact that his mind thinks this way is just quite brilliant. Anyway, there's a freedom
+
+15:41.920 --> 15:46.560
+ to this podcast. He's Dr. Awkward, which by the way, is a palindrome. That's a palindrome that
+
+15:46.560 --> 15:52.400
+ I happen to know from other parts of my life. And I just figured out, well, you know, use it against
+
+15:52.400 --> 15:59.520
+ Charles. Dr. Awkward. So what was the most challenging parody song to make? Was it the
+
+15:59.520 --> 16:05.360
+ Thriller one? No, that one was really fun. I wrote the lyrics really quickly. And then I gave it
+
+16:05.360 --> 16:11.600
+ over to the production team. They recruited an acapella group to sing. That went really smoothly.
+
+16:11.600 --> 16:14.880
+ It's great having a team because then you can just focus on the part that you really love,
+
+16:14.880 --> 16:20.400
+ which in my case is writing the lyrics. For me, the most challenging one, not challenging in a bad
+
+16:20.400 --> 16:26.560
+ way, but challenging in a really fun way, was I did, one of the parody songs I did is about
+
+16:26.560 --> 16:32.240
+ the halting problem in computer science. The fact that you can't create a program that can tell
+
+16:32.240 --> 16:36.960
+ for any other arbitrary program, whether it's actually going to get stuck in an infinite loop
+
+16:36.960 --> 16:44.400
+ or whether it's going to eventually stop. And so I did it to an 80s song because that's, I hadn't
+
+16:44.400 --> 16:51.600
+ started my new thing of learning current songs. And it was Billy Joel's The Piano Man, which is
+
+16:51.600 --> 17:03.040
+ a great song. Sing me a song. You're The Piano Man. So the lyrics are great because first of all,
+
+17:03.040 --> 17:09.200
+ it rhymes. Not all songs rhyme. I've done Rolling Stone songs, which turn out to have no rhyme scheme
+
+17:09.200 --> 17:13.680
+ whatsoever. They're just sort of yelling and having good time, which makes it not fun from a
+
+17:13.680 --> 17:17.280
+ parody perspective because like you can say anything, but the lines rhyme and there was a lot
+
+17:17.280 --> 17:23.200
+ of internal rhymes as well. And so figuring out how to sing with internal rhymes, a proof of the
+
+17:23.200 --> 17:28.080
+ halting problem was really challenging. And it was, I really enjoyed that process.
+
+17:28.080 --> 17:32.720
+ What about the last question on this topic? What about the dancing in the thriller video?
+
+17:32.720 --> 17:38.800
+ How many takes that take? So I wasn't planning to dance. They had me in the studio and they gave
+
+17:38.800 --> 17:42.240
+ me the jacket and it's like, well, you can't, if you have the jacket and the glove, like there's
+
+17:42.240 --> 17:48.000
+ not much you can do. So I think I just danced around and then they said, why don't you dance a
+
+17:48.000 --> 17:52.720
+ little bit? There was a scene with me and Charles dancing together. They did not use it in the
+
+17:52.720 --> 17:59.040
+ video, but we recorded it. I don't remember. Yeah, yeah. No, it was pretty funny. And Charles,
+
+17:59.040 --> 18:04.320
+ who has this beautiful, wonderful voice, doesn't really sing. He's not really a singer. And so
+
+18:04.320 --> 18:08.320
+ that was why I designed the song with him doing a spoken section and me doing the singing. It's
+
+18:08.320 --> 18:13.280
+ very like Barry White. Yeah, smooth baritone. Yeah. Yeah, it's great. That was awesome.
+
+18:14.320 --> 18:20.960
+ So one of the other things Charles said is that, you know, everyone knows you as like a super nice
+
+18:20.960 --> 18:28.800
+ guy, super passionate about teaching and so on. What he said, I don't know if it's true, that
+
+18:28.800 --> 18:34.880
+ despite the fact that you are cold blood, like, okay, I will admit this finally for the first
+
+18:34.880 --> 18:40.080
+ time that was that was me. It's the Johnny Cash song. The Manorino, just to watch him die.
+
+18:41.760 --> 18:47.840
+ That you actually do have some strong opinions and some topics. So if this in fact is true, what
+
+18:49.120 --> 18:55.120
+ a strong opinions would you say you have? Is there ideas you think maybe an artificial
+
+18:55.120 --> 19:01.200
+ intelligence, machine learning, maybe in life that you believe is true, that others might,
+
+19:01.200 --> 19:08.640
+ you know, some number of people might disagree with you on. So I try very hard to see things from
+
+19:08.640 --> 19:15.360
+ multiple perspectives. There's this great Calvin and Harbs, Calvin and Hobbes cartoon where Cal,
+
+19:15.360 --> 19:21.760
+ do you know, okay, so Calvin's dad is always kind of a bit of a foil and he talked Calvin and Calvin
+
+19:21.760 --> 19:25.440
+ had done something wrong. The dad talks to him into like seeing it from another perspective
+
+19:25.440 --> 19:30.560
+ and Calvin like this breaks Calvin because he's like, oh my gosh, now I can see the opposite
+
+19:30.560 --> 19:36.320
+ sides of things. And so it becomes like a Cubist cartoon where there is no front and back. Everything
+
+19:36.320 --> 19:39.840
+ is just exposed and it really freaks him out. And finally he settles back down. It's like,
+
+19:39.840 --> 19:44.960
+ oh good, no, I can make that go away. But like I'm that, I live in that world where I'm trying to
+
+19:44.960 --> 19:48.720
+ see everything from every perspective all the time. So there are some things that I've formed
+
+19:48.720 --> 19:56.800
+ opinions about that I would be harder, I think, to disavow me of. One is the super intelligence
+
+19:56.800 --> 20:03.360
+ argument and the existential threat of AI is one where I feel pretty confident in my feeling about
+
+20:03.360 --> 20:09.120
+ that one. Like I'm willing to hear other arguments, but like I am not particularly moved by the idea
+
+20:09.120 --> 20:14.640
+ that if we're not careful, we will accidentally create a super intelligence that will destroy
+
+20:14.640 --> 20:19.680
+ human life. Let's talk about that. Let's get you in trouble and record your video. It's like Bill
+
+20:19.680 --> 20:25.600
+ Gates, I think he said like some quote about the internet that that's just going to be a small
+
+20:25.600 --> 20:31.200
+ thing. It's not going to really go anywhere. And then I think Steve Ballmer said, I don't know why
+
+20:31.200 --> 20:37.920
+ I'm sticking on Microsoft. That's something that like smartphones are useless. There's no reason
+
+20:37.920 --> 20:41.920
+ why Microsoft should get into smartphones that kind of. So let's get you, let's talk about
+
+20:41.920 --> 20:47.280
+ AGI. As AGI is destroying the world, we'll look back at this video and see. No, I think it's
+
+20:47.280 --> 20:51.040
+ really interesting to actually talk about because nobody really knows the future. So you have to
+
+20:51.040 --> 20:56.000
+ use your best intuition. It's very difficult to predict it, but you have spoken about AGI
+
+20:57.280 --> 21:02.000
+ and the existential risks around it and sort of based on your intuition that
+
+21:03.280 --> 21:09.600
+ we're quite far away from that being a serious concern relative to the other concerns we have.
+
+21:09.600 --> 21:16.080
+ Can you maybe unpack that a little bit? Yeah, sure, sure, sure. So as I understand it, that
+
+21:16.080 --> 21:22.880
+ for example, I read Boston's book and a bunch of other reading material about this sort of general
+
+21:22.880 --> 21:26.720
+ way of thinking about the world. And I think the story goes something like this, that we
+
+21:27.520 --> 21:35.520
+ will at some point create computers that are smart enough that they can help design the next
+
+21:35.520 --> 21:41.440
+ version of themselves, which itself will be smarter than the previous version of themselves,
+
+21:41.440 --> 21:48.000
+ and eventually bootstrapped up to being smarter than us, at which point we are essentially at
+
+21:48.000 --> 21:55.680
+ the mercy of this sort of more powerful intellect, which in principle, we don't have any control over
+
+21:55.680 --> 22:03.440
+ what its goals are. And so if its goals are at all out of sync with our goals, for example,
+
+22:03.440 --> 22:09.920
+ the continued existence of humanity, we won't be able to stop it. It'll be way more powerful than
+
+22:09.920 --> 22:16.800
+ us and we will be toast. So there's some, I don't know, very smart people who have signed on to
+
+22:16.800 --> 22:23.040
+ that story. And it's a, it's a compelling story. I want to, now I can really get myself in trouble.
+
+22:23.040 --> 22:28.160
+ I once wrote an op ed about this, specifically responding to some quotes from Elon Musk,
+
+22:28.160 --> 22:32.640
+ who has been, you know, on this very podcast, more than once, and
+
+22:34.160 --> 22:38.480
+ AI summoning the demon. I think he said, but then he came to Providence, Rhode Island,
+
+22:38.480 --> 22:44.720
+ which is where I live, and said to the governors of all the states, you know,
+
+22:44.720 --> 22:47.920
+ you're worried about entirely the wrong thing. You need to be worried about AI. You need to be
+
+22:47.920 --> 22:54.160
+ very, very worried about AI. So, and journalists kind of reacted to that. They wanted to get
+
+22:54.160 --> 23:00.320
+ people's people's take. And I was like, okay, my, my, my belief is that one of the things that
+
+23:00.320 --> 23:06.480
+ makes Elon Musk so successful and so remarkable as an individual is that he believes in the power
+
+23:06.480 --> 23:11.120
+ of ideas. He believes that you can have, you can, if you know, if you have a really good idea for
+
+23:11.120 --> 23:15.280
+ getting into space, you can get into space. If you have a really good idea for a company or for
+
+23:15.280 --> 23:20.320
+ how to change the way that people drive, you just have to do it and it can happen.
+
+23:21.360 --> 23:26.000
+ It's really natural to apply that same idea to AI. You see the systems that are doing some pretty
+
+23:26.000 --> 23:33.280
+ remarkable computational tricks, demonstrations, and then to take that idea and just push it
+
+23:33.280 --> 23:37.760
+ all the way to the limit and think, okay, where does this go? Where is this going to take us next?
+
+23:37.760 --> 23:42.800
+ And if you're a deep believer in the power of ideas, then it's really natural to believe that
+
+23:42.800 --> 23:49.280
+ those ideas could be taken to the extreme and, and kill us. So I think, you know, his strength is
+
+23:49.280 --> 23:54.640
+ also his undoing because that doesn't mean it's true. Like it doesn't mean that that has to happen,
+
+23:54.640 --> 23:59.760
+ but it's natural for him to think that. So another way to phrase the way he thinks, and
+
+23:59.760 --> 24:07.360
+ I, I find it very difficult to argue with that line of thinking. So Sam Harris is another person
+
+24:07.360 --> 24:13.600
+ from the neuroscience perspective that thinks like that is saying, well, is there something
+
+24:13.600 --> 24:19.520
+ fundamental in the physics of the universe that prevents this from eventually happening?
+
+24:20.080 --> 24:25.440
+ And that's, Nick Bostrom thinks in the same way that kind of zooming out, yeah, okay, we humans
+
+24:25.440 --> 24:33.520
+ now are existing in this like timescale of minutes and days. And so our intuition is in this timescale
+
+24:33.520 --> 24:40.240
+ of minutes, hours and days. But if you look at the span of human history, is there any reason
+
+24:41.200 --> 24:47.680
+ we can't see this in 100 years? And like, is there, is there something fundamental about
+
+24:47.680 --> 24:52.320
+ the laws of physics that prevent this? And if it doesn't, then it eventually will happen,
+
+24:52.320 --> 24:58.320
+ or we will destroy ourselves in some other way. And it's very difficult, I find to actually argue
+
+24:58.320 --> 25:09.040
+ against that. Yeah. Me too. And not sound like, not sound like you're just like rolling your
+
+25:09.040 --> 25:14.400
+ eyes. Like I have like science fiction, we don't have to think about it. But even, even worse than
+
+25:14.400 --> 25:18.800
+ that, which is like, I don't know, kids, but like, I got to pick up my kids now, like this, okay,
+
+25:18.800 --> 25:22.560
+ I see more pressing short term. Yeah, there's more pressing short term things that like,
+
+25:23.280 --> 25:27.040
+ stop it with this existential crisis will have much, much shorter things like now,
+
+25:27.040 --> 25:30.560
+ especially this year, there's COVID. So like any kind of discussion like that is,
+
+25:31.280 --> 25:38.240
+ like there's, you know, there's pressing things today. And then so the same Harris argument,
+
+25:38.240 --> 25:45.840
+ well, like any day, the exponential singularity can occur is very difficult to argue against.
+
+25:45.840 --> 25:50.400
+ I mean, I don't know. But part of his story is also, he's not going to put a date on it.
+
+25:50.400 --> 25:53.520
+ It could be in a thousand years, it could be in a hundred years, it could be in two years.
+
+25:53.520 --> 25:57.600
+ It's just that as long as we keep making this kind of progress, it's ultimately
+
+25:57.600 --> 26:02.880
+ has to become a concern. I kind of am on board with that. But the thing that the piece that I
+
+26:02.880 --> 26:07.280
+ feel like is missing from that, that way of extrapolating from the moment that we're in,
+
+26:08.240 --> 26:12.400
+ is that I believe that in the process of actually developing technology that can
+
+26:12.400 --> 26:17.360
+ really get around in the world and really process and do things in the world in a sophisticated
+
+26:17.360 --> 26:22.080
+ way, we're going to learn a lot about what that means, which that we don't know now,
+
+26:22.080 --> 26:26.160
+ because we don't know how to do this right now. If you believe that you can just turn on a deep
+
+26:26.160 --> 26:29.760
+ learning network and it eventually give it enough compute and it'll eventually get there.
+
+26:29.760 --> 26:34.240
+ Well, sure, that seems really scary, because we won't be in the loop at all. We won't be
+
+26:34.240 --> 26:42.720
+ helping to design or target these kinds of systems. But I don't see that feels like it
+
+26:42.720 --> 26:47.360
+ is against the laws of physics, because these systems need help. They need to surpass the
+
+26:49.120 --> 26:54.240
+ difficulty, the wall of complexity that happens in arranging something in the form that will
+
+26:54.240 --> 27:01.760
+ happen. I believe in evolution. I believe that there's an argument. There's another argument,
+
+27:01.760 --> 27:05.440
+ just to look at it from a different perspective, that people say, why don't believe in evolution?
+
+27:05.440 --> 27:12.960
+ How could evolution, it's sort of like a random set of parts assemble themselves into a 747,
+
+27:12.960 --> 27:17.520
+ and that could just never happen. So it's like, okay, that's maybe hard to argue against. But
+
+27:17.520 --> 27:22.880
+ clearly, 747s do get assembled. They get assembled by us. Basically, the idea being that
+
+27:23.680 --> 27:28.720
+ there's a process by which we will get to the point of making technology that has that kind of
+
+27:28.720 --> 27:33.680
+ awareness. And in that process, we're going to learn a lot about that process, and we'll have
+
+27:33.680 --> 27:39.680
+ more ability to control it or to shape it or to build it in our own image. It's not something
+
+27:39.680 --> 27:44.720
+ that is going to spring into existence like that 747. And we're just going to have to contend with
+
+27:44.720 --> 27:52.640
+ it completely unprepared. Now, it's very possible that in the context of the long arc of human history,
+
+27:52.640 --> 27:58.720
+ it will in fact spring into existence. But that that springing might take like if you look at
+
+27:58.720 --> 28:06.320
+ nuclear weapons, like even 20 years is a springing in the context of human history. And it's very
+
+28:06.320 --> 28:10.800
+ possible just like with nuclear weapons that we could have, I don't know what percentage you want
+
+28:10.800 --> 28:15.520
+ to put at it, but the possibility of could have knocked ourselves out. Yeah, the possibility of
+
+28:15.520 --> 28:21.200
+ human beings destroying themselves in the 20th century with the nuclear weapons, I don't know,
+
+28:21.200 --> 28:25.360
+ you can, if you really think through it, you could really put it close to like, I don't know,
+
+28:25.360 --> 28:31.440
+ 30 40%, given like the certain moments of crisis that happen. So like, I think
+
+28:33.120 --> 28:40.480
+ one, like fear in the shadows that's not being acknowledged is it's not so much the AI will
+
+28:40.480 --> 28:49.600
+ run away is is that as it's running away, we won't have enough time to think through how to stop it.
+
+28:49.600 --> 28:55.760
+ Right. Fast takeoff or fume. Yeah, I mean, my much bigger concern, I wonder what you think about
+
+28:55.760 --> 29:06.480
+ it, which is we won't know it's happening. So I kind of think that there's an AGI situation
+
+29:06.480 --> 29:12.400
+ already happening with social media, that our minds, our collective intelligence of human
+
+29:12.400 --> 29:19.120
+ civilizations already being controlled by an algorithm. And like, we're we're already super,
+
+29:19.120 --> 29:23.600
+ like the level of a collective intelligence, thanks to Wikipedia, people should donate to
+
+29:23.600 --> 29:29.200
+ Wikipedia to feed the AGI. Man, if we had a super intelligence that that was in line with
+
+29:29.200 --> 29:35.200
+ Wikipedia's values, that it's a lot better than a lot of other things I could imagine. I trust
+
+29:35.200 --> 29:40.480
+ Wikipedia more than I trust Facebook or YouTube as far as trying to do the right thing from a
+
+29:40.480 --> 29:44.800
+ rational perspective. Now, that's not where you were going. I understand that. But it does strike
+
+29:44.800 --> 29:50.640
+ me that there's sort of smarter and less smart ways of exposing ourselves to each other on the
+
+29:50.640 --> 29:54.720
+ internet. Yeah, the interesting thing is that Wikipedia and social media have very different
+
+29:54.720 --> 30:01.680
+ forces. You're right. I mean, Wikipedia, if AGI was Wikipedia, it'd be just like this cranky,
+
+30:01.680 --> 30:09.520
+ overly competent editor of articles. There's something to that. But the social media aspect
+
+30:09.520 --> 30:17.680
+ is not so the vision of AGI is as a separate system that's super intelligent. That's super
+
+30:17.680 --> 30:22.080
+ intelligent. That's one key little thing. I mean, there's the paperclip argument that's super dumb,
+
+30:22.080 --> 30:28.080
+ but super powerful systems. But with social media, you have a relatively like algorithms
+
+30:28.080 --> 30:35.440
+ we may talk about today, very simple algorithms that when something Charles talks a lot about,
+
+30:35.440 --> 30:41.120
+ which is interactive AI, when they start like having at scale, like tiny little interactions
+
+30:41.120 --> 30:46.400
+ with human beings, they can start controlling these human beings. So a single algorithm can
+
+30:46.400 --> 30:51.920
+ control the minds of human beings slowly to where we might not realize it can start wars,
+
+30:51.920 --> 30:59.600
+ it can start, it can change the way we think about things. It feels like in the long arc of history,
+
+30:59.600 --> 31:04.880
+ if I were to sort of zoom out from all the outrage and all the tension on social media,
+
+31:04.880 --> 31:12.640
+ that it's progressing us towards better and better things. It feels like chaos and toxic and all that
+
+31:12.640 --> 31:18.320
+ kind of stuff. It's chaos and toxic. Yeah. But it feels like actually, the chaos and toxic is
+
+31:18.320 --> 31:23.040
+ similar to the kind of debates we had from the founding of this country. There's a civil war
+
+31:23.040 --> 31:29.520
+ that happened over that period. And ultimately, it was all about this tension of like,
+
+31:29.520 --> 31:33.520
+ something doesn't feel right about our implementation of the core values we hold
+
+31:33.520 --> 31:38.080
+ as human beings and they're constantly struggling with this. And that results in
+
+31:38.080 --> 31:46.560
+ people calling each other, just being shady to each other on Twitter. But ultimately,
+
+31:46.560 --> 31:51.760
+ the algorithm is managing all that. And it feels like there's a possible future in which that algorithm
+
+31:53.120 --> 31:58.640
+ controls us into the direction of self destruction and whatever that looks like.
+
+31:58.640 --> 32:05.200
+ Yeah. So all right, I do believe in the power of social media to screw us up royally. I do believe
+
+32:05.200 --> 32:12.160
+ in the power of social media to benefit us too. I do think that we're in a, yeah, it's sort of
+
+32:12.160 --> 32:16.000
+ almost got dropped on top of us. And now we're trying to, as a culture, figure out how to cope
+
+32:16.000 --> 32:22.560
+ with it. There's a sense in which, I don't know, there's some arguments that say that, for example,
+
+32:23.600 --> 32:27.840
+ I guess, college age students now, late college age students now, people who were in middle school
+
+32:27.840 --> 32:34.560
+ when social media started to really take off, maybe really damaged. This may have really
+
+32:34.560 --> 32:38.240
+ hurt their development in a way that we don't have all the implications of quite yet.
+
+32:38.880 --> 32:45.840
+ That's the generation who, and I hate to make it somebody else's responsibility,
+
+32:45.840 --> 32:49.440
+ but they're the ones who can fix it. They're the ones who can figure out,
+
+32:50.080 --> 32:55.520
+ how do we keep the good of this kind of technology without letting it eat us alive?
+
+32:55.520 --> 33:03.440
+ And if they're successful, we move on to the next phase, the next level of the game. If they're not
+
+33:03.440 --> 33:07.840
+ successful, then, yeah, then we're going to wreck each other. We're going to destroy society.
+
+33:07.840 --> 33:12.480
+ So you're going to, in your old age, sit on a porch and watch the world burn because of the
+
+33:12.480 --> 33:18.080
+ TikTok generation that... I believe, well, so this is my kid's age, right? And certainly my
+
+33:18.080 --> 33:23.760
+ daughter's age, and she's very tapped in to social stuff, but she's also, she's trying to find that
+
+33:23.760 --> 33:28.800
+ balance of participating in it and in getting the positives of it, but without letting it eat her
+
+33:28.800 --> 33:35.760
+ alive. And I think sometimes she ventures... I hope she doesn't watch this. Sometimes I think
+
+33:35.760 --> 33:40.800
+ she ventures a little too far and is consumed by it, and other times she gets a little distant.
+
+33:43.040 --> 33:48.240
+ And if there's enough people like her out there, they're going to navigate this choppy waters.
+
+33:48.240 --> 33:55.200
+ That's an interesting skill, actually, to develop. I talked to my dad about it. You know, I've now
+
+33:56.720 --> 34:02.800
+ somehow, this podcast in particular, but other reasons has received a little bit of attention.
+
+34:03.440 --> 34:08.720
+ And with that, apparently in this world, even though I don't shut up about love and I'm just
+
+34:08.720 --> 34:15.840
+ all about kindness, I have now a little mini army of trolls. It's kind of hilarious, actually,
+
+34:15.840 --> 34:22.320
+ but it also doesn't feel good. But it's a skill to learn to not look at that.
+
+34:23.280 --> 34:27.200
+ Like to moderate, actually, how much you look at that. The discussion I have with my dad, it's
+
+34:27.200 --> 34:33.280
+ similar to, it doesn't have to be about trolls. It could be about checking email, which is like,
+
+34:33.280 --> 34:39.200
+ if you're anticipating, you know, there's, my dad runs a large institute at Drexel University,
+
+34:39.200 --> 34:44.000
+ and there could be stressful emails you're waiting, like there's drama of some kinds.
+
+34:44.000 --> 34:49.200
+ And so like, there's a temptation to check the email. If you send an email and you got it,
+
+34:49.200 --> 34:56.320
+ and that pulls you in into, it doesn't feel good. And it's a skill that he actually complains that
+
+34:56.320 --> 35:00.800
+ he hasn't learned, I mean, he grew up without it. So he hasn't learned the skill of how to
+
+35:01.360 --> 35:05.760
+ shut off the internet and walk away. And I think young people, while they're also being,
+
+35:05.760 --> 35:11.600
+ quote unquote, damaged by like, you know, being bullied online, all of those stories,
+
+35:11.600 --> 35:16.640
+ which are very like horrific, you basically can't escape your bullies these days when you're growing
+
+35:16.640 --> 35:23.920
+ up. But at the same time, they're also learning that skill of how to be able to shut off the,
+
+35:23.920 --> 35:28.880
+ like disconnect with it, be able to laugh at it, not take it too seriously. It's a fascinating,
+
+35:28.880 --> 35:31.920
+ like we're all trying to figure this out. Just like you said, has it been dropped on us? And
+
+35:31.920 --> 35:36.160
+ we're trying to figure it out. Yeah, I think that's really interesting. And I, I, I guess I've become
+
+35:36.160 --> 35:42.480
+ a believer in the human design, which I feel like I don't completely understand, like, how do you
+
+35:42.480 --> 35:48.960
+ make something as robust as us? Like we're so flawed in so many ways. And yet, and yet, you know,
+
+35:48.960 --> 35:56.800
+ we dominate the planet. And we do seem to manage to get ourselves out of scrapes, eventually,
+
+35:57.680 --> 36:02.320
+ not necessarily the most elegant possible way, but somehow we get, we get to the next step.
+
+36:02.320 --> 36:09.440
+ And I don't know how I'd make a machine do that. I, I, I generally speaking, like if I train one
+
+36:09.440 --> 36:13.120
+ of my reinforcement learning agents to play a video game, and it works really hard on that
+
+36:13.120 --> 36:16.880
+ first stage over and over and over again, and it makes it through it succeeds on that first level.
+
+36:17.680 --> 36:21.040
+ And then the new level comes, and it's just like, okay, I'm back to the drawing board.
+
+36:21.040 --> 36:26.080
+ And somehow humanity, we keep leveling up, and then somehow managing to put together the skills
+
+36:26.080 --> 36:34.400
+ necessary to achieve success, some semblance of success in that next level too. And, you know,
+
+36:34.400 --> 36:40.800
+ I hope we can keep doing that. You mentioned reinforcement learning. So you've had a couple
+
+36:40.800 --> 36:48.720
+ of years in the field. No, quite, you know, quite a few, quite a long career in artificial
+
+36:48.720 --> 36:55.280
+ intelligence broadly, but reinforcement learning specifically. Can you maybe give a hint about
+
+36:55.280 --> 37:01.760
+ your sense of the history of the field? And in some ways it's changed with the advent of deep
+
+37:01.760 --> 37:07.760
+ learning, but as long roots, like how is it we've done it out of your own life? How have you seen
+
+37:07.760 --> 37:13.680
+ the community change or maybe the ideas that it's playing with change? I've had the privilege,
+
+37:13.680 --> 37:17.760
+ the pleasure of being, of having almost a front row seat to a lot of this stuff. And it's been
+
+37:17.760 --> 37:26.320
+ really, really fun and interesting. So when I was in college in the 80s, early 80s, the neural net
+
+37:27.280 --> 37:32.400
+ thing was starting to happen. And I was taking a lot of psychology classes and a lot of computer
+
+37:32.400 --> 37:37.840
+ science classes as a college student. And I thought, you know, something that can play tic tac toe
+
+37:37.840 --> 37:41.760
+ and just like learn to get better at it, that ought to be a really easy thing. So I spent almost,
+
+37:41.760 --> 37:47.760
+ almost all of my, what would have been vacations during college, like hacking on my home computer,
+
+37:47.760 --> 37:51.760
+ trying to teach it how to play tic tac toe and programming language. Basic. Oh yeah. That's
+
+37:53.040 --> 37:57.440
+ my first language. That's my native language. Is that when you first fell in love with computer
+
+37:57.440 --> 38:03.440
+ science, just like programming basic on that? What was the computer? Do you remember? I had a
+
+38:03.440 --> 38:08.560
+ TRS80 model one before they were called model ones, because there was nothing else. I got my
+
+38:08.560 --> 38:20.640
+ computer in 1979. So I was, I would have been bar mitzvahed, but instead of having a big party
+
+38:20.640 --> 38:24.240
+ that my parents threw on my behalf, they just got me a computer, because that's what I really,
+
+38:24.240 --> 38:28.480
+ really, really wanted. I saw them in the, in the, in the mall in Rayershack. And I thought,
+
+38:29.680 --> 38:33.040
+ what, how are they doing that? I would try to stump them. I would give them math problems,
+
+38:33.040 --> 38:38.160
+ like one plus, and then in parentheses, two plus one. And I would always get it right. I'm like,
+
+38:38.160 --> 38:43.200
+ how do you know so much? Like I've had to go to an algebra class for the last few years to learn
+
+38:43.200 --> 38:48.880
+ this stuff. And you just seem to know. So I was, I was, I was smitten and I got a computer. And I
+
+38:48.880 --> 38:56.480
+ think ages 13 to 15, I have no memory of those years. I think I just was in my room with the
+
+38:56.480 --> 39:00.320
+ computer. Listening to Billy Joel. Communing, possibly listening to the radio, listening to
+
+39:00.320 --> 39:07.280
+ Billy Joel. That was the one album I had on vinyl at that time. And, and then I got it on cassette
+
+39:07.280 --> 39:10.640
+ tape. And that was really helpful. Because then I could play it. I didn't have to go down in my
+
+39:10.640 --> 39:18.000
+ parents Wi Fi or Hi Fi. Sorry. And then age 15, I remember kind of walking out and like, okay,
+
+39:18.000 --> 39:20.960
+ I'm ready to talk to people again. Like I've learned what I need to learn here.
+
+39:22.640 --> 39:26.560
+ And so yeah, so, so that was, that was my home computer. And so I went to college and I was
+
+39:26.560 --> 39:31.040
+ like, oh, I'm totally going to study computer science. I opted the college I chose specifically
+
+39:31.040 --> 39:35.280
+ had a computer science major, the one that I really want the college I really wanted to go to
+
+39:35.280 --> 39:41.280
+ didn't. So bye bye to them. Which college did you go to? So I went to Yale. Princeton would
+
+39:41.280 --> 39:44.960
+ have been way more convenient. And it was just beautiful campus. And it was close enough to
+
+39:44.960 --> 39:49.040
+ home. And I was really excited about Princeton. And I visited, I said, so computer science major
+
+39:49.040 --> 39:52.720
+ like, well, we have computer engineering. I'm like, oh, I don't like that word engineering.
+
+39:54.800 --> 39:58.880
+ I like computer science. I really, I want to do like, you're saying hardware and software.
+
+39:58.880 --> 40:01.840
+ They're like, yeah, I'm like, I just want to do software. I couldn't care less about hardware.
+
+40:01.840 --> 40:06.320
+ You grew up in Philadelphia? I grew up outside Philly. Yeah. Yeah. So the, you know, local
+
+40:06.320 --> 40:12.480
+ schools were like Penn and Drexel and Temple, like everyone in my family went to Temple,
+
+40:12.480 --> 40:17.280
+ at least at one point in their lives, except for me. So yeah, Philly family.
+
+40:17.280 --> 40:21.360
+ Yale had a computer science department. And that's when you, it's kind of interesting.
+
+40:21.360 --> 40:26.080
+ You said 80s in neural networks. That's when the neural networks is a hot new thing or a hot thing
+
+40:26.080 --> 40:30.880
+ period. So what is that in college when you first learned about neural networks? Yeah.
+
+40:30.880 --> 40:34.400
+ When she learned like how it was in a psychology class, not in a CS class.
+
+40:34.400 --> 40:39.040
+ Yeah. Was it psychology or cognitive science or like, do you remember like what context?
+
+40:39.040 --> 40:44.160
+ It was, yeah, yeah, yeah. So, so I was a, I've always been a bit of a cognitive psychology
+
+40:44.160 --> 40:48.720
+ groupie. So like I, I studied computer science, but I like, I like to hang around where the
+
+40:48.720 --> 40:55.200
+ cognitive scientists are. Cause I don't know brains, man. They're like, they're wacky. Cool.
+
+40:55.200 --> 40:59.600
+ And they have a bigger picture view of things. They're a little less engineering, I would say.
+
+40:59.600 --> 41:04.480
+ They're more, they're more interested in the nature of cognition and intelligence and perception
+
+41:04.480 --> 41:09.440
+ and how like division system work. Like they're asking always bigger questions. Now with the
+
+41:09.440 --> 41:14.400
+ deep learning community, there, I think more, there's a lot of intersections, but I do find in
+
+41:15.200 --> 41:22.560
+ that the, the neuroscience folks actually, and cognitive psychology, cognitive science folks
+
+41:23.120 --> 41:27.760
+ are starting to learn how to program, how to use neural artificial neural networks.
+
+41:27.760 --> 41:31.840
+ And they are actually approaching problems in like totally new, interesting ways. It's fun to
+
+41:31.840 --> 41:37.200
+ watch that grass students from those departments like approach a problem of machine learning.
+
+41:37.200 --> 41:40.960
+ Right. They come in with a different perspective. Yeah. They don't care about like your image
+
+41:40.960 --> 41:48.240
+ net data set or whatever. They, they want like to understand the, the, the like the basic mechanisms
+
+41:48.960 --> 41:53.920
+ at the, at the neuronal level, at the functional level of intelligence. So it's kind of, it's
+
+41:53.920 --> 41:58.400
+ going to cool to see them work. But yeah. Okay. So you always love, you're always a
+
+41:58.400 --> 42:04.240
+ group of cognitive psychology. Yeah. Yeah. And so, so it was in a class by Richard Garrick.
+
+42:04.240 --> 42:09.840
+ He was kind of my, my favorite psych professor in college. And I took like three different
+
+42:09.840 --> 42:15.280
+ classes with him. And yeah, so that we were, they were talking specifically the class, I think was
+
+42:15.280 --> 42:22.400
+ kind of a, there was a big paper that was written by Steven Pinker and Prince. I don't, I'm blanking
+
+42:22.400 --> 42:28.480
+ on Prince's first name, but Princeton, Pinker and Prince, they wrote kind of a, they were at that
+
+42:28.480 --> 42:36.400
+ time kind of like, I'm blanking on the names of the current people. The cognitive scientists who
+
+42:36.400 --> 42:44.160
+ were complaining a lot about deep networks. Oh, Gary, Gary Marcus. Gary Marcus. And who else? I
+
+42:44.160 --> 42:48.960
+ mean, there's a few, but Gary, Gary is the most feisty. Sure. Gary is very feisty. And with this,
+
+42:48.960 --> 42:52.720
+ with his coauthor, they, they, you know, they're kind of doing these kind of takedowns where they
+
+42:52.720 --> 42:56.800
+ say, okay, well, yeah, it does all these amazing things, amazing things. But here's a shortcoming,
+
+42:56.800 --> 43:00.960
+ here's a shortcoming, here's a shortcoming. And so the Pinker Prince paper is kind of like the,
+
+43:01.600 --> 43:07.360
+ that generation's version of Marcus and Davis, right? Where they're, they're trained as cognitive
+
+43:07.360 --> 43:12.480
+ scientists, but they're looking skeptically at the results in the, in the artificial intelligence,
+
+43:12.480 --> 43:17.280
+ neural net kind of world and saying, yeah, it can do this and this and this, but like, it can't do
+
+43:17.280 --> 43:21.280
+ that. And it can't do that. And it can't do that. Maybe in principle, or maybe just in practice at
+
+43:21.280 --> 43:27.520
+ this point. But, but the fact of the matter is you're, you've narrowed your focus too far to be
+
+43:27.520 --> 43:31.680
+ impressed, you know, you're impressed with the things within that circle, but you need to broaden
+
+43:31.680 --> 43:36.720
+ that circle a little bit. You need to look at a wider set of problems. And so, so we, so I was
+
+43:36.720 --> 43:42.160
+ in this seminar in college, that was basically a close reading of the Pinker Prince paper,
+
+43:42.160 --> 43:49.600
+ which was like really thick. There was a lot going on in there. And, and it, and it talked about
+
+43:49.600 --> 43:53.200
+ the reinforcement learning idea a little bit. I'm like, Oh, that sounds really cool, because
+
+43:53.200 --> 43:58.880
+ behavior is what is really interesting to me about psychology anyway. So making programs that, I mean,
+
+43:58.880 --> 44:03.840
+ programs are things that behave. People are things that behave. Like I want to make learning that
+
+44:03.840 --> 44:09.520
+ learns to behave. In which way was reinforcement learning presented? Is this talking about human
+
+44:09.520 --> 44:13.040
+ and animal behavior? Or are we talking about actual mathematical construct?
+
+44:13.040 --> 44:18.720
+ That's right. So that's a good question. Right. So this is, I think it wasn't actually talked about
+
+44:18.720 --> 44:22.480
+ as behavior in the paper that I was reading. I think that it just talked about learning.
+
+44:23.040 --> 44:27.600
+ And to me, learning is about learning to behave, but really neural nets at that point were about
+
+44:27.600 --> 44:32.400
+ learning, like supervised learning. So learning to produce outputs from inputs. So I kind of tried
+
+44:32.400 --> 44:38.480
+ to invent reinforcement learning. I, when I graduated, I joined a research group at Belcore,
+
+44:38.480 --> 44:43.200
+ which had spun out of Bellabs recently at that time, because of the divestiture of the, of
+
+44:43.200 --> 44:51.280
+ long distance and local phone service in the 1980s, 1984. And I was in a group with Dave Ackley,
+
+44:51.280 --> 44:56.880
+ who was the first author of the Boltzmann machine paper. So the very first neural net paper that
+
+44:56.880 --> 45:02.720
+ could handle XOR, right? So XOR sort of killed neural nets, the very first, the zero width
+
+45:02.720 --> 45:11.280
+ the first winter. Yeah. The, the Perceptron's paper and Hinton, along with the student Dave Ackley,
+
+45:11.280 --> 45:15.280
+ and, and I think there was other authors as well, showed that no, no, no, with bolts machines,
+
+45:15.280 --> 45:20.640
+ we can actually learn nonlinear concepts. And so everything's back on the table again. And that
+
+45:20.640 --> 45:26.000
+ kind of started that second wave of neural networks. So Dave Ackley was, he became my mentor at,
+
+45:26.000 --> 45:31.760
+ at Belcore. And we talked a lot about learning and life and computation and how all these things
+
+45:31.760 --> 45:38.560
+ fit together. Now, Dave and I have a podcast together. So, so I get to kind of enjoy that
+
+45:38.560 --> 45:45.520
+ sort of his perspective once again, even, even all these years later. And so I said, so I said,
+
+45:45.520 --> 45:49.760
+ I was really interested in learning, but in the concept of behavior. And he's like, oh, well,
+
+45:49.760 --> 45:56.160
+ that's reinforcement learning here. And he gave me Rich Sutton's 1984 TD paper. So I read that
+
+45:56.160 --> 46:01.280
+ paper, I honestly didn't get all of it. But I got the idea, I got that they were using
+
+46:01.280 --> 46:06.080
+ that he was using ideas that I was familiar with in the context of neural nets and, and
+
+46:06.080 --> 46:11.280
+ like sort of back prop. But with this idea of making predictions over time, I'm like,
+
+46:11.280 --> 46:15.280
+ this is so interesting, but I don't really get all the details I said to Dave. And Dave said,
+
+46:15.280 --> 46:19.040
+ oh, well, why don't we have him come and give a talk. And I was like,
+
+46:20.000 --> 46:24.320
+ wait, what, you can do that? Like, these are real people? I thought they were just words. I thought
+
+46:24.320 --> 46:30.400
+ it was just like ideas that somehow magically seeped into paper. He's like, no, I, I, I, I know
+
+46:30.400 --> 46:36.080
+ Rich, like, we'll just have him come down and he'll give a talk. And so I was, you know,
+
+46:36.080 --> 46:41.760
+ my mind was blown. And so Rich came and he gave a talk at Bellcore. And he talked about what he
+
+46:41.760 --> 46:49.040
+ was super excited, which was they had just figured out at the time, Q learning. So Watkins had
+
+46:49.040 --> 46:55.760
+ visited the Rich Sutton's lab at UMass or Andy Bartow's lab that Rich was a part of.
+
+46:55.760 --> 47:01.520
+ And he was really excited about this because it resolved a whole bunch of problems that he
+
+47:01.520 --> 47:07.200
+ didn't know how to resolve in the, in the earlier paper. And so, for people who don't know,
+
+47:07.200 --> 47:11.440
+ TD, temporal difference, these are all just algorithms for reinforcement learning.
+
+47:11.440 --> 47:16.080
+ Right. And TD, temporal difference, in particular, is about making predictions over time.
+
+47:16.080 --> 47:19.680
+ And you can try to use it for making decisions, right? Because if you can predict how good a
+
+47:19.680 --> 47:24.480
+ future action, an action outcomes will be in the future, you can choose one that has better.
+
+47:24.480 --> 47:29.520
+ And, but the theory didn't really support changing your behavior. Like the predictions
+
+47:29.520 --> 47:35.040
+ had to be of a consistent process if you really wanted it to work. And one of the things that
+
+47:35.040 --> 47:38.960
+ was really cool about Q learning, another algorithm for reinforcement learning is it was
+
+47:38.960 --> 47:42.640
+ off policy, which meant that you could actually be learning about the environment and what
+
+47:42.640 --> 47:47.840
+ the value of different actions would be while actually figuring out how to behave optimally.
+
+47:48.800 --> 47:50.320
+ Yeah. So that was a revelation.
+
+47:50.320 --> 47:53.760
+ Yeah. And the proof of that is kind of interesting. I mean, that's really surprising to me when I
+
+47:53.760 --> 48:00.080
+ first read that and then enriched Rich Sutton's book on the matter. It's kind of beautiful that
+
+48:00.080 --> 48:04.240
+ a single equation can capture all one line of code and like you can learn anything.
+
+48:04.800 --> 48:13.200
+ Yeah, like, so equation and code, you're right. Like you can, the code that you can arguably,
+
+48:13.200 --> 48:18.640
+ at least if you like squint your eyes can say this is all of intelligence,
+
+48:18.640 --> 48:25.120
+ that you can implement that in a single, well, I think I started with Lisp, which is a shout
+
+48:25.120 --> 48:30.480
+ out to Lisp, with like a single line of code, key piece of code, maybe a couple,
+
+48:31.200 --> 48:36.080
+ that you could do that as kind of magical. It feels so good to be true.
+
+48:36.880 --> 48:43.280
+ Well, and it sort of is. Yeah. It seems they require an awful lot of extra stuff supporting it.
+
+48:43.280 --> 48:50.480
+ But nonetheless, the idea is really good. And as far as we know, it is a very reasonable way of
+
+48:50.480 --> 48:55.120
+ trying to create adaptive behavior, behavior that gets better at something over time.
+
+48:56.640 --> 49:02.400
+ Did you find the idea of optimal at all compelling that you could prove that it's optimal? So like
+
+49:02.400 --> 49:08.560
+ one part of computer science that it makes people feel warm and fuzzy inside is when you
+
+49:08.560 --> 49:14.960
+ can prove something like that assorting algorithm, worst case, runs and log in, and it makes everybody
+
+49:14.960 --> 49:19.600
+ feel so good. Even though in reality, it doesn't really matter what the worst case is, what matters
+
+49:19.600 --> 49:24.560
+ is like, does this thing actually work in practice on this particular actual set of data that I
+
+49:25.440 --> 49:30.240
+ enjoy? Did you? So here's a place where I have maybe a strong opinion, which is like,
+
+49:30.880 --> 49:38.080
+ you're right, of course, but no, no. So what makes worst case so great, right? If you have a
+
+49:38.080 --> 49:43.280
+ worst case analysis, so great is that you get modularity. You can take that thing and plug it
+
+49:43.280 --> 49:48.160
+ into another thing and still have some understanding of what's going to happen when you click them
+
+49:48.160 --> 49:53.120
+ together, right? If it just works well in practice, in other words, with respect to some distribution
+
+49:53.120 --> 49:57.680
+ that you care about, when you go plug it into another thing, that distribution can shift,
+
+49:57.680 --> 50:02.480
+ it can change, and your thing may not work well anymore. And you want it to and you wish it does
+
+50:02.480 --> 50:10.800
+ and you hope that it will, but it might not. So you're saying you don't like machine learning.
+
+50:13.040 --> 50:18.560
+ But we have some positive theoretical results for these things. You can come back at me
+
+50:19.440 --> 50:24.320
+ with, yeah, but they're really weak and yeah, they're really weak. And you can even say that
+
+50:24.320 --> 50:28.000
+ sorting algorithms, like if you do the optimal sorting algorithm, it's not really the one that
+
+50:28.000 --> 50:33.920
+ you want. And that might be true as well. But it is, the modularity is a really powerful state.
+
+50:33.920 --> 50:38.160
+ I really like that. As an engineer, you can then assemble different things you can count on them
+
+50:38.160 --> 50:45.440
+ to be, I mean, it's interesting. It's a balance, like with everything else in life, you don't want
+
+50:45.440 --> 50:51.280
+ to get too obsessed. I mean, this is what computer scientists do, which they tend to get obsessed,
+
+50:51.280 --> 50:57.360
+ they over optimize things, or they start by optimizing them, they over optimize. So it's
+
+50:57.360 --> 51:06.080
+ easy to like get really granular about this thing. But like the step from an n squared to an n log n
+
+51:06.080 --> 51:11.600
+ sorting algorithm is a big leap for most real world systems, no matter what the actual
+
+51:12.400 --> 51:18.880
+ behavior of the system is, that's a big leap. And the same can probably be said for other kind of
+
+51:18.880 --> 51:25.520
+ first leaps that you would take on a particular problem. Like it's picking the low hanging fruit
+
+51:25.520 --> 51:31.920
+ or whatever the equivalent of doing the not the dumbest thing, but the next to the dumbest thing
+
+51:31.920 --> 51:36.400
+ is picking the most delicious, reachable fruit. Yeah, most delicious, reachable fruit. I don't
+
+51:36.400 --> 51:45.120
+ know why that's not a saying. And yeah. Okay, so, so you then this is the 80s and this kind of idea
+
+51:45.120 --> 51:51.440
+ starts to percolate of learning. Yeah, I got to meet rich Sutton. So everything was sort of
+
+51:51.440 --> 51:55.920
+ downhill from there. And that was that was really the pinnacle of everything. But then I, you know,
+
+51:55.920 --> 52:00.000
+ then I felt like I was kind of on the inside. So then as interesting results were happening,
+
+52:00.000 --> 52:06.080
+ I could like check in with, with rich or with Jerry Tesaro, who had a huge impact on kind of
+
+52:06.080 --> 52:10.880
+ early thinking in, in temple difference learning and reinforcement learning and show that you
+
+52:10.880 --> 52:14.320
+ could do, you could solve problems that we didn't know how to solve any other way.
+
+52:16.000 --> 52:19.840
+ And so that was really cool. So it was good things were happening, I would hear about it from
+
+52:19.840 --> 52:23.120
+ either the people who were doing it, or the people who were talking to the people who were
+
+52:23.120 --> 52:27.200
+ doing it. And so I was able to track things pretty well through, through the 90s.
+
+52:28.080 --> 52:34.720
+ So what wasn't most of the excitement on reinforcement learning in the 90s era with,
+
+52:35.600 --> 52:41.120
+ what is it, TD gamma, like, what's the role of these kind of little like fun,
+
+52:41.680 --> 52:47.360
+ game playing things and breakthroughs about, you know, exciting the community? Was that,
+
+52:47.360 --> 52:52.320
+ like, what were your, because you've also built across or we're part of building a crossword
+
+52:53.600 --> 53:00.160
+ puzzle, uh, solver program, yeah, solving program, uh, called prover. So,
+
+53:01.120 --> 53:09.760
+ so you were interested in this as a problem, like in forming, in using games to understand how to
+
+53:09.760 --> 53:14.640
+ build, uh, intelligent systems. So like, what did you think about TD gamma? Like, what did you
+
+53:14.640 --> 53:19.680
+ think about that whole thing in the 90s? Yeah. I mean, I found the TD gamma result really just
+
+53:19.680 --> 53:24.720
+ remarkable. So I had known about some of Jerry's stuff before he did TD gamma and he did a system,
+
+53:24.720 --> 53:30.560
+ just more vanilla, well, not entirely vanilla, but a more classical backpropy kind of, uh,
+
+53:30.560 --> 53:36.000
+ network for playing backgammon, where he was training it on expert moves. So it was kind of
+
+53:36.000 --> 53:42.640
+ supervised. But the way that it worked was not to mimic the actions, but to learn internally
+
+53:42.640 --> 53:47.920
+ and evaluation function. So to learn, well, if the expert chose this over this, that must mean
+
+53:47.920 --> 53:52.800
+ that the expert values this more than this. And so let me adjust my weights to make it so that
+
+53:52.800 --> 53:58.960
+ the network evaluates this as being better than this. So it could learn from, from human
+
+53:58.960 --> 54:04.880
+ preferences, it could learn its own preferences. And then when he took the step from that to
+
+54:04.880 --> 54:10.000
+ actually doing it as a full on reinforcement learning problem where you didn't need a trainer,
+
+54:10.000 --> 54:15.360
+ you could just let it play, that was, that was remarkable. Right. And so I think as,
+
+54:16.400 --> 54:22.160
+ as humans often do, as we've done in the recent past as well, people extrapolate and it's like,
+
+54:22.160 --> 54:27.120
+ Oh, well, if you can do that, which is obviously very hard, then obviously you could do all these
+
+54:27.120 --> 54:32.240
+ other problems that we, that we want to solve that we know are also really hard. And it turned out
+
+54:32.240 --> 54:36.720
+ very few of them ended up being practical. Um, partly because I think neural nets,
+
+54:36.720 --> 54:43.520
+ it's certainly at the time we're struggling to be consistent and reliable. And so training them
+
+54:43.520 --> 54:49.120
+ in a reinforcement learning setting was a bit of a mess. I had, uh, I don't know, generation
+
+54:49.120 --> 54:55.600
+ after generation of like master students who wanted to do value function approximation,
+
+54:55.600 --> 55:02.720
+ basically learn reinforcement learning with neural nets. And over and over and over again,
+
+55:02.720 --> 55:06.880
+ we were failing. We couldn't get the, the good results that Jerry Tesarro got. I now believe
+
+55:06.880 --> 55:14.160
+ that Jerry is a neural net whisperer. He has a particular ability to get neural networks to
+
+55:14.160 --> 55:20.640
+ do things that other people would find impossible. And it's not the technology, it's the technology
+
+55:20.640 --> 55:27.360
+ and Jerry together. Yeah. At which I think speaks to the role of the human expert in the
+
+55:27.360 --> 55:31.680
+ process of machine learning. Right. It's so easy. We were so drawn to the idea that,
+
+55:31.680 --> 55:35.120
+ that it's the technology that is, that is where the power is coming from,
+
+55:35.920 --> 55:39.360
+ that I think we lose sight of the, of the fact that sometimes you need a really good,
+
+55:39.360 --> 55:42.640
+ just like, I mean, no one would think, Hey, here's this great piece of software. Here's like,
+
+55:42.640 --> 55:47.760
+ I don't know, GNU Emacs or whatever. Um, and it doesn't that prove that computers are super
+
+55:47.760 --> 55:52.240
+ powerful and basically going to take over the world. It's like, no, Stamina is a hell of a hacker.
+
+55:52.240 --> 55:56.640
+ Right. So he was able to make the code do these amazing things. He couldn't have done it without
+
+55:56.640 --> 56:01.360
+ the computer, but the computer couldn't have done it without him. And so I think people discount
+
+56:01.360 --> 56:07.840
+ the role of people like Jerry who, who, um, who have just a particular, a particular set of skills.
+
+56:08.960 --> 56:16.000
+ On that topic, by the way, as a small side note, I tweeted Emacs is greater than Vim yesterday
+
+56:16.000 --> 56:23.680
+ and deleted, deleted the tweet 10 minutes later when I realized it started a war. Yeah. I was like,
+
+56:23.680 --> 56:31.440
+ Oh, I was just kidding. I was just being provocative walk, walk, walk back. So people still feel
+
+56:31.440 --> 56:36.480
+ passionately about that particular piece of, uh, I don't get that cause Emacs is clearly so much
+
+56:36.480 --> 56:41.200
+ better. I don't understand. But you know, why do I say that? Because I, cause like I spent a block
+
+56:41.200 --> 56:48.400
+ of time in the eighties, um, making my fingers know the Emacs keys. And now like that's part
+
+56:48.400 --> 56:53.280
+ of the thought process for me. Like I need to express. And if you take that, if you take my Emacs
+
+56:53.280 --> 57:00.640
+ key bindings away, I become lit. Yeah. I can't express myself. I'm the same way with the, I
+
+57:00.640 --> 57:05.200
+ don't know if you know what, what it is, but a Kinesis keyboard, which is, uh, this butt shaped
+
+57:05.200 --> 57:11.520
+ keyboard. Yes, I've seen them. Yeah. And they're very, uh, I don't know, sexy, elegant. They're
+
+57:11.520 --> 57:18.320
+ beautiful. Yeah. They're, they're gorgeous, uh, way too expensive. But, uh, the, the problem with
+
+57:18.320 --> 57:25.520
+ them similar with Emacs is when you, once you learn to use it, it's harder to use other things.
+
+57:25.520 --> 57:29.760
+ It's hard to use other things. There's this absurd thing where I have like small, elegant,
+
+57:29.760 --> 57:34.240
+ lightweight, beautiful little laptops and I'm sitting there in a coffee shop with a giant
+
+57:34.240 --> 57:40.320
+ Kinesis keyboard and a sexy little laptop. It's absurd. But it, you know, like I used to feel
+
+57:40.320 --> 57:45.200
+ bad about it, but at the same time, you just kind of have to, sometimes it's back to the Billy Joel
+
+57:45.200 --> 57:51.040
+ thing. You just have to throw that Billy Joel record and throw Taylor Swift and Justin Bieber
+
+57:51.040 --> 57:56.560
+ to the wind. So. See, but I like them now because I, because again, I have no musical taste. Like,
+
+57:56.560 --> 58:01.840
+ like now that I've heard Justin Bieber enough, I like, I really like his songs and Taylor Swift,
+
+58:01.840 --> 58:05.280
+ not only do I like her songs, but my daughter's convinced that she's a genius. And so now I
+
+58:05.280 --> 58:10.880
+ basically have, I'm signed on to that. So. So yeah, that, that speaks to the back to the robustness
+
+58:10.880 --> 58:16.640
+ of the human brain. That speaks to the neuroplasticity that you can just, you can just like a mouse,
+
+58:16.640 --> 58:22.560
+ teach yourself to a, or a dog, teach yourself to enjoy Taylor Swift. I'll try it out. I don't know.
+
+58:24.000 --> 58:28.560
+ I try, you know what it has to do with just like acclimation, right? Just like you said,
+
+58:28.560 --> 58:32.080
+ a couple of weeks. Yeah. That's an interesting experiment. I'll actually try that. Like I'll
+
+58:32.080 --> 58:34.880
+ listen to. If that wasn't the intent of the experiment, just like social media, it wasn't
+
+58:34.880 --> 58:39.360
+ intended as an experiment to see what we can take as a society, but it turned out that way.
+
+58:39.360 --> 58:43.200
+ I don't think I'll be the same person on the other side of the week listening to Taylor Swift,
+
+58:43.200 --> 58:47.520
+ but let's try. You know, it's more compartmentalized. Don't be so worried. Like it's,
+
+58:47.520 --> 58:51.120
+ like I get that you can be worried, but don't be so worried because we compartmentalize really
+
+58:51.120 --> 58:54.960
+ well. And so it won't bleed into other parts of your life. You won't start, I don't know,
+
+58:56.160 --> 58:59.840
+ wearing red lipstick or whatever. Like it's, it's fine. It's fine. Change fashion and everything.
+
+58:59.840 --> 59:03.200
+ It's fine. But you know what? The thing you have to watch out for is you'll walk into a
+
+59:03.200 --> 59:06.960
+ coffee shop once we can do that again. And recognize the song. And you'll be, no,
+
+59:06.960 --> 59:11.520
+ you won't know that you're singing along until everybody in the coffee shop is looking at you.
+
+59:11.520 --> 59:18.400
+ And then you're like, that wasn't me. Yeah. That's the, you know, people are afraid of AGI. I'm
+
+59:18.400 --> 59:24.720
+ afraid of the Taylor Swift takeover. Yeah. And I mean, people should know that T.D. Gammon
+
+59:24.720 --> 59:30.800
+ was, I get, would you call it, do you like the terminology of self play by any chance?
+
+59:30.800 --> 59:36.640
+ So, so like systems that learn by playing themselves, just, I don't know if it's the best
+
+59:36.640 --> 59:43.520
+ word, but, uh, so what's, what's the problem with that term? Okay. So it's like the big bang,
+
+59:43.520 --> 59:49.040
+ like it's, it's like talking to serious physicists. Do you like the term big bang when, when it was
+
+59:49.040 --> 59:53.120
+ early? I feel like it's the early days of self play. I don't know. Maybe it was just previously,
+
+59:53.120 --> 59:59.600
+ but I think it's been used by only a small group of people. And so like, I think we're still deciding,
+
+59:59.600 --> 1:00:04.880
+ is this ridiculously silly name, a good name for the concept, potentially one of the most
+
+1:00:04.880 --> 1:00:09.360
+ important concepts in artificial intelligence. Okay. Depends how broadly you apply the term. So I
+
+1:00:09.360 --> 1:00:14.560
+ used the term in my 1996 PhD dissertation. Are you, wow, the actual terms of self play.
+
+1:00:14.560 --> 1:00:20.080
+ Yeah. Because, because Tassaro's paper was something like, um, training up an expert
+
+1:00:20.080 --> 1:00:24.480
+ backgammon player through self play. So I think it was in the title of his paper. If not in the
+
+1:00:24.480 --> 1:00:28.720
+ title, it was definitely a term that he used. There's another term that we got from that work
+
+1:00:28.720 --> 1:00:33.200
+ is rollout. So I don't know if you, do you ever hear the term rollout? That's a backgammon term
+
+1:00:33.200 --> 1:00:40.560
+ that has now applied generally in computers. Well, at least in AI, because of TDGammon. Yeah.
+
+1:00:40.560 --> 1:00:44.480
+ That's fascinating. So how is self play being used now? And like, why is it, does it, does it
+
+1:00:44.480 --> 1:00:48.320
+ feel like a more general powerful concept is sort of the idea of, well, the machine just
+
+1:00:48.320 --> 1:00:52.880
+ going to teach itself to be smart? Yeah. So that's, that's where maybe you can correct me,
+
+1:00:53.600 --> 1:00:58.880
+ but that's where, you know, the continuation of the spirit and actually like literally the exact
+
+1:00:58.880 --> 1:01:05.680
+ algorithms of TDGammon are applied by DeepMind and OpenAI to learn games that are a little bit
+
+1:01:05.680 --> 1:01:11.760
+ more complex, that when I was learning artificial intelligence go was presented to me with artificial
+
+1:01:11.760 --> 1:01:16.720
+ intelligence, the modern approach. I don't know if they explicitly pointed to go in those books
+
+1:01:16.720 --> 1:01:24.640
+ as like unsolvable kind of thing, like implying that these approaches hit their limit in this
+
+1:01:24.640 --> 1:01:28.640
+ have with these particular kind of games. So something, I don't remember if the book said
+
+1:01:28.640 --> 1:01:34.400
+ it or not, but something in my head for was the professors instilled in me the idea like,
+
+1:01:34.400 --> 1:01:41.040
+ this is the limits of artificial intelligence of the field. Like it instilled in me the idea that
+
+1:01:41.040 --> 1:01:46.640
+ if we can create a system that can solve the game of go, we've achieved AGI. That was kind of
+
+1:01:46.640 --> 1:01:52.640
+ I didn't explicitly like say this, but that was the feeling. And so from, I was one of the people
+
+1:01:52.640 --> 1:02:01.280
+ that it seemed magical when a learning system was able to beat a human world champion at the game
+
+1:02:01.280 --> 1:02:08.880
+ of go. And even more so from that, that was AlphaGo, even more so with AlphaGo zero than kind of
+
+1:02:08.880 --> 1:02:17.840
+ renamed and advanced into Alpha zero, beating a world champion or world class player without
+
+1:02:17.840 --> 1:02:25.040
+ any supervised learning on expert games we're doing only through by playing itself. So that
+
+1:02:26.640 --> 1:02:32.880
+ is, I don't know what to make of it. I think it'll be interesting to hear what your opinions are on
+
+1:02:32.880 --> 1:02:43.840
+ just how exciting, surprising, profound, interesting, or boring the breakthrough performance of Alpha
+
+1:02:43.840 --> 1:02:51.520
+ zero was. Okay. So AlphaGo knocked my socks off. That was so remarkable. Which aspect of it?
+
+1:02:54.000 --> 1:02:58.880
+ They got it to work that they actually were able to leverage a whole bunch of different ideas,
+
+1:02:58.880 --> 1:03:04.080
+ integrate them into one giant system. Just the software engineering aspect of it is mind blowing.
+
+1:03:04.080 --> 1:03:08.480
+ I don't, I've never been a part of a program as complicated as the program that they built for
+
+1:03:08.480 --> 1:03:14.720
+ that. And, and just the, you know, like, like Jerry Chisaro is a neural net whisperer, like,
+
+1:03:14.720 --> 1:03:19.280
+ you know, David Silver is a kind of neural net whisperer too. He was able to coax these networks
+
+1:03:19.280 --> 1:03:24.960
+ and these new way out there architectures to do these, you know, solve these problems that,
+
+1:03:24.960 --> 1:03:32.640
+ as you said, you know, when we were learning from AI, no one had an idea how to make it work.
+
+1:03:32.640 --> 1:03:39.440
+ It was, it was remarkable that these, you know, these, these techniques that were so good at
+
+1:03:39.440 --> 1:03:42.960
+ playing chess and that could beat the world champion in chess couldn't beat, you know,
+
+1:03:42.960 --> 1:03:49.200
+ your typical go playing teenager in Go. So the fact that the, you know, in a very short number
+
+1:03:49.200 --> 1:03:55.760
+ of years, we kind of ramped up to trouncing people in Go just blew me away.
+
+1:03:55.760 --> 1:04:00.160
+ So you, you're kind of focusing on the engineering aspect, which is also very surprising. I mean,
+
+1:04:00.160 --> 1:04:06.720
+ there's something different about large, well funded companies. I mean, there's a compute aspect to
+
+1:04:06.720 --> 1:04:14.160
+ it too. Sure. Like that, of course, I mean, that's similar to deep blue, right, with, with IBM.
+
+1:04:14.160 --> 1:04:19.840
+ Like there's something important to be learned and remembered about a large company taking
+
+1:04:19.840 --> 1:04:26.320
+ the ideas that are already out there and investing a few million dollars into it or, or more. And
+
+1:04:27.680 --> 1:04:33.040
+ so you're kind of saying the engineering is kind of fascinating, both on the, with AlphaGo is
+
+1:04:33.040 --> 1:04:38.720
+ probably just gathering all the data, right, of the, of the expert games, like organizing everything,
+
+1:04:38.720 --> 1:04:47.120
+ actually doing distributed supervised learning. And to me, see the engineering I kind of took
+
+1:04:47.120 --> 1:04:57.200
+ for granted, to me philosophically being able to persist in the, in the face of like long odds,
+
+1:04:57.760 --> 1:05:02.720
+ because it feels like for me, I'll be one of the skeptical people in the room thinking that you
+
+1:05:02.720 --> 1:05:08.720
+ can learn your way to, to beat go. Like it sounded like, especially with David Silver, it sounded
+
+1:05:08.720 --> 1:05:18.000
+ like David was not confident at all. So like it was like, not, it's funny how confidence works.
+
+1:05:18.000 --> 1:05:25.680
+ Yeah. It's like, you're not like cocky about it. Like, but. Right. Cause if you're cocky about it,
+
+1:05:25.680 --> 1:05:30.160
+ you, you kind of stop and stall and don't get anywhere. Yeah. But there's like a hope
+
+1:05:30.160 --> 1:05:34.240
+ that's unbreakable. Maybe that's better than confidence. It's a kind of wishful
+
+1:05:34.800 --> 1:05:40.160
+ hope and a little dream. And you almost don't want to do anything else. You kind of keep doing it.
+
+1:05:40.720 --> 1:05:45.840
+ That's, that seems to be the story and. But with enough skepticism that you're looking for where
+
+1:05:45.840 --> 1:05:50.080
+ the problems are and fighting through them. Yeah. Cause you know, there's got to be a way out of
+
+1:05:50.080 --> 1:05:55.280
+ this thing. Yeah. And for him, it was probably, there's, there's a bunch of little factors that
+
+1:05:55.280 --> 1:05:58.800
+ come into play. It's funny how these stories just all come together. Like everything he did in his
+
+1:05:58.800 --> 1:06:05.680
+ life came into play, which is like a love for video games and also a connection to, so the,
+
+1:06:05.680 --> 1:06:10.720
+ the nineties had to happen with TD Gammon and so on. Yeah. And in some ways it's surprising,
+
+1:06:10.720 --> 1:06:16.560
+ maybe you can provide some intuition to it that not much more than TD Gammon was done for quite
+
+1:06:16.560 --> 1:06:21.440
+ a long time on the reinforcement learning front. Yeah. Is that weird to you? I mean,
+
+1:06:21.440 --> 1:06:24.800
+ like I said, the, the students who I worked with, we tried to get,
+
+1:06:24.800 --> 1:06:30.880
+ to basically apply that architecture to other problems and we consistently failed. There were
+
+1:06:30.880 --> 1:06:35.280
+ a couple, a couple of really nice demonstrations that ended up being in the literature. There was
+
+1:06:35.280 --> 1:06:42.080
+ a paper about controlling elevators, right? Where it's, it's like, okay, can we modify the heuristic
+
+1:06:42.080 --> 1:06:46.240
+ that elevators use for deciding, like a bank of elevators for deciding which floors we should
+
+1:06:46.240 --> 1:06:51.520
+ be stopping on to maximize throughput essentially. And you can set that up as a reinforcement
+
+1:06:51.520 --> 1:06:55.680
+ learning problem and you can, you know, have a neural net represent the value function so that
+
+1:06:55.680 --> 1:07:00.480
+ it's taking where all the elevators, where the button pushes, you know, this high dimensional,
+
+1:07:00.480 --> 1:07:06.560
+ well, at the time, high dimensional input, you know, a couple dozen dimensions and turn that
+
+1:07:06.560 --> 1:07:11.280
+ into a prediction as to, oh, is it going to be better if I stop at this floor or not? And ultimately,
+
+1:07:12.160 --> 1:07:17.840
+ it appeared as though for the standard simulation distribution for people trying to leave the
+
+1:07:17.840 --> 1:07:21.840
+ building at the end of the day, that the neural net learned a better strategy than the standard one
+
+1:07:21.840 --> 1:07:27.520
+ that's implemented in elevator controllers. So that, that was nice. There was some work that
+
+1:07:27.520 --> 1:07:36.000
+ Satinder Singh at all did on handoffs with cell phones, you know, deciding when, when should you
+
+1:07:36.000 --> 1:07:40.640
+ hand off from this cell tower to this cell tower. Oh, okay, communication networks. Yeah. And so
+
+1:07:41.760 --> 1:07:45.600
+ a couple things seemed like they were really promising. None of them made it into production
+
+1:07:45.600 --> 1:07:50.640
+ that I'm aware of. And neural nets as a whole started to kind of implode around then. And so
+
+1:07:51.360 --> 1:07:55.040
+ there just wasn't a lot of air in the room for people to try to figure out, okay,
+
+1:07:55.040 --> 1:08:01.200
+ how do we get this to work in the RL setting? And then they, they found their way back in 10,
+
+1:08:01.200 --> 1:08:06.720
+ in 10 plus years. So you said Alpha Go was impressive, like it's a big spectacle. Is there
+
+1:08:07.680 --> 1:08:11.760
+ Right. So then Alpha zero. So I think I may have a slightly different opinion on this than
+
+1:08:11.760 --> 1:08:16.240
+ some people. So I talked to Satinder Singh in particular about this. So Satinder was
+
+1:08:17.120 --> 1:08:21.920
+ like Rich Sutton, a student of Antibarto. So they came out of the same lab, very influential,
+
+1:08:22.720 --> 1:08:28.400
+ machine learning, reinforcement learning researcher. Now deep behind as is, as is Rich,
+
+1:08:29.680 --> 1:08:34.480
+ though different sites, the two of them. He's in Alberta. Rich is in Alberta. And
+
+1:08:34.480 --> 1:08:38.240
+ Satinder would be in England, but I think he's in England from Michigan at the moment.
+
+1:08:38.240 --> 1:08:48.320
+ But the, but he was, yes, he was much more impressed with Alpha Go zero, which is didn't,
+
+1:08:48.320 --> 1:08:52.480
+ didn't get a kind of a bootstrap in the beginning with human trained games. And it's just was purely
+
+1:08:52.480 --> 1:08:58.000
+ self play. Though the first one Alpha Go was also a tremendous amount of self play, right? They
+
+1:08:58.000 --> 1:09:02.720
+ started off, they kickstarted the, the action network that was making decisions. But then
+
+1:09:02.720 --> 1:09:06.800
+ they trained it for a really long time using more traditional temple difference methods.
+
+1:09:06.800 --> 1:09:14.000
+ So, so as a result, I didn't, it didn't seem that different to me. Like, it seems like, yeah, why
+
+1:09:14.000 --> 1:09:21.280
+ wouldn't that work? Like once, once it works, it works. So what, but he found that, that removal
+
+1:09:21.280 --> 1:09:26.320
+ of that extra information to be breathtaking, like that, that's a game changer. To me, the first
+
+1:09:26.320 --> 1:09:30.480
+ thing was more of a game changer. But the open question, I mean, I guess that's the assumption
+
+1:09:30.480 --> 1:09:38.960
+ is the expert games might contain within them, within them a, yeah, this amount of information.
+
+1:09:38.960 --> 1:09:43.520
+ But we know that it went beyond that, right? We know that it somehow got away from that information
+
+1:09:43.520 --> 1:09:47.040
+ because it was learning strategies. I don't think it's, I don't think Alpha Go is just
+
+1:09:48.000 --> 1:09:52.800
+ better at implementing human strategies. I think it actually developed its own strategies that were,
+
+1:09:52.800 --> 1:09:57.920
+ that were more effective. And so from that perspective, okay, well, so it, it made at
+
+1:09:57.920 --> 1:10:04.560
+ least one quantum leap in terms of strategic knowledge. Okay, so now maybe it makes three.
+
+1:10:04.560 --> 1:10:10.480
+ Like, okay, but that first one is the doozy, right? Getting it to, to, to work reliably and,
+
+1:10:10.480 --> 1:10:15.920
+ and for the networks to, to hold on to the value well enough. Like that was, that was a big step.
+
+1:10:15.920 --> 1:10:19.360
+ Well, isn't, maybe you could speak to this on the reinforcement learning front. So the
+
+1:10:19.360 --> 1:10:29.200
+ starting from scratch and learning to do something like the first like, like random behavior to
+
+1:10:30.240 --> 1:10:38.240
+ like crappy behavior to like somewhat okay behavior. It's not obvious to me that that's not
+
+1:10:38.240 --> 1:10:44.960
+ like impossible to take those steps. Like if you just think about the intuition, like how the heck
+
+1:10:44.960 --> 1:10:52.400
+ does random behavior become somewhat basic intelligent behavior? Not, not human level,
+
+1:10:52.400 --> 1:10:57.920
+ not super human level, but just basic. But you're saying to you kind of the intuition is like,
+
+1:10:57.920 --> 1:11:02.800
+ if you can go from human to super human level intelligence on the, on this particular task
+
+1:11:02.800 --> 1:11:08.320
+ of game playing, then you're good at taking leaps. So you can take many of them.
+
+1:11:08.320 --> 1:11:13.200
+ That the system, I believe that the system can take that kind of leap. Yeah. And also,
+
+1:11:13.200 --> 1:11:20.000
+ I think that the beginner knowledge in go, like you can start to get a feel really quickly for
+
+1:11:20.000 --> 1:11:25.760
+ the idea that, you know, certain parts of the being in certain parts of the board seems to be
+
+1:11:25.760 --> 1:11:31.920
+ more associated with winning, right? Cause it's not, it's not stumbling upon the concept of winning.
+
+1:11:31.920 --> 1:11:36.560
+ It's told that it wins or that it loses. Well, it's self play. So it both wins and loses.
+
+1:11:36.560 --> 1:11:43.680
+ It's told which, which side won. And the information is kind of there to start percolating around to
+
+1:11:43.680 --> 1:11:48.880
+ make a difference as to, um, well, these things have a better chance of helping you win and these
+
+1:11:48.880 --> 1:11:52.560
+ things have a worse chance of helping you win. And so, you know, it can get to basic play,
+
+1:11:52.560 --> 1:11:58.000
+ I think pretty quickly, then once it has basic play, well, now it's kind of forced to do some
+
+1:11:58.000 --> 1:12:03.200
+ search to actually experiment with, okay, well, what gets me that next increment of, of improvement?
+
+1:12:03.200 --> 1:12:08.800
+ How far do you think, okay, this is where you kind of bring up the, the Elon Musk and the
+
+1:12:08.800 --> 1:12:14.480
+ Sam Harris is right. How far is your intuition about these kinds of self play mechanisms being
+
+1:12:14.480 --> 1:12:23.600
+ able to take us? Cause it feels one of the ominous, but stated calmly things that when I talked to
+
+1:12:23.600 --> 1:12:31.040
+ David Silver, he said, is that they have not yet discovered a ceiling for Alpha zero, for example,
+
+1:12:31.040 --> 1:12:36.000
+ on the game of Go or chess. Like it's, it keeps, no matter how much they compute, they throw at it,
+
+1:12:36.000 --> 1:12:44.400
+ it keeps improving. So it's possible, it's very possible that you, if you throw, you know, some
+
+1:12:44.400 --> 1:12:51.040
+ like 10 X compute that it will improve by five X or something like that. And when stated calmly,
+
+1:12:51.040 --> 1:12:58.000
+ it's so like, oh yeah, I guess so. But, but like, then you think like, well, can we potentially
+
+1:12:58.000 --> 1:13:04.640
+ have like continuations of Moore's law in totally different way, like broadly defined Moore's law,
+
+1:13:04.640 --> 1:13:11.040
+ not the exponential improvement like, are we going to have an Alpha zero that swallows the world?
+
+1:13:12.960 --> 1:13:18.000
+ But notice it's not getting better at other things. It's getting better at Go. And I think it's a,
+
+1:13:18.000 --> 1:13:22.560
+ that's a big leap to say, okay, well, therefore it's better at other things.
+
+1:13:22.560 --> 1:13:27.520
+ Well, I mean, the question is how much of the game of life can be turned into,
+
+1:13:27.520 --> 1:13:30.960
+ right? So that's, that I think is a really good question. And I think that we don't,
+
+1:13:30.960 --> 1:13:34.880
+ I don't think we as a, I don't know, community really know that the answer to this, but
+
+1:13:36.320 --> 1:13:44.080
+ so okay, so, so I went, I went to a talk by some experts on computer chess. So in particular,
+
+1:13:44.080 --> 1:13:49.200
+ computer chess is really interesting because for, you know, for, of course, for a thousand years,
+
+1:13:49.200 --> 1:13:55.360
+ humans were the best chess playing things on the planet. And then computers, like edge to
+
+1:13:55.360 --> 1:13:59.200
+ head of the best person, and they've been ahead ever since. It's not like people have, have
+
+1:13:59.200 --> 1:14:06.400
+ overtaken computers, but, but computers and people together have overtaken computers.
+
+1:14:06.400 --> 1:14:10.800
+ Right. So at least last time I checked, I don't know what the very latest is, but last time I
+
+1:14:10.800 --> 1:14:16.800
+ checked that there were teams of people who could work with computer programs to defeat the best
+
+1:14:16.800 --> 1:14:20.640
+ computer programs. In the game of Go. In the game of chess. In the game of chess. Right.
+
+1:14:20.640 --> 1:14:28.000
+ And so using the information about how these things called ELO scores, the sort of notion of
+
+1:14:28.000 --> 1:14:33.040
+ how strong a player are you, there's a, there's kind of a range of possible scores and this,
+
+1:14:33.040 --> 1:14:38.640
+ the, you, you increment and score. Basically, if you can beat another player of that lower score,
+
+1:14:39.760 --> 1:14:44.560
+ 62% of the time or something like that, like there's some threshold of, if you can somewhat
+
+1:14:44.560 --> 1:14:49.760
+ consistently beat someone, then you are of a higher score than that person. And there's a question
+
+1:14:49.760 --> 1:14:54.160
+ as to how many times can you do that in chess? Right. And so we know that there's a range of
+
+1:14:54.160 --> 1:14:59.120
+ human ability levels that cap out with the best playing humans. And the computers went a step
+
+1:14:59.120 --> 1:15:05.120
+ beyond that. And computers and people together have not gone, I think, a full step beyond that.
+
+1:15:05.120 --> 1:15:09.760
+ It feels, the estimates that they have is that it's starting to asymptote, that we've reached
+
+1:15:09.760 --> 1:15:15.440
+ kind of the maximum, the best possible chess playing. And so that means that there's kind of a
+
+1:15:15.440 --> 1:15:20.960
+ finite strategic depth, right? At some point, you just can't get any better at this game.
+
+1:15:21.600 --> 1:15:28.960
+ Yeah. I mean, I don't, so I'll actually check that. I think it's interesting, because if you
+
+1:15:28.960 --> 1:15:36.880
+ have somebody like Magnus Carlson, who's using these chess programs to train his mind, like to
+
+1:15:36.880 --> 1:15:41.440
+ learn about chess. To become a better chess player, yeah. And so like, that's a very interesting
+
+1:15:41.440 --> 1:15:46.160
+ thing, because we're not static creatures. We're learning together. I mean, just like we're talking
+
+1:15:46.160 --> 1:15:50.560
+ about social networks, those algorithms are teaching us, just like we're teaching those
+
+1:15:50.560 --> 1:15:57.520
+ algorithms. So that's a fascinating thing. But I think the best chess playing programs are now
+
+1:15:57.520 --> 1:16:03.440
+ better than the pairs. Like they have competition between pairs, but it's still, even if they weren't,
+
+1:16:03.440 --> 1:16:08.880
+ it's an interesting question. Where's the ceiling? So the David, the ominous David Silver kind of
+
+1:16:08.880 --> 1:16:15.280
+ statement is like, we have not found the ceiling. Right. So the question is, okay, so I don't know
+
+1:16:15.280 --> 1:16:23.280
+ his analysis on that. From talking to Go experts, the depth, the strategic depth of Go seems to be
+
+1:16:23.280 --> 1:16:27.920
+ substantially greater than that of chess, that there's more kind of steps of improvement that
+
+1:16:27.920 --> 1:16:31.120
+ you can make getting better and better and better and better. But there's no reason to think that
+
+1:16:31.120 --> 1:16:38.080
+ it's infinite. Infinite, yeah. And so it could be that what David is seeing is a kind of asymptoting,
+
+1:16:38.080 --> 1:16:42.240
+ that you can keep getting better, but with diminishing returns. And at some point,
+
+1:16:42.240 --> 1:16:48.720
+ you hit optimal play. Like in theory, all these finite games, they're finite. They have an optimal
+
+1:16:48.720 --> 1:16:52.720
+ strategy. There's a strategy that is the minimax optimal strategy. And so at that point,
+
+1:16:53.680 --> 1:16:57.520
+ you can't get any better. You can't beat that, that strategy. Now, that strategy may be
+
+1:16:58.080 --> 1:17:03.360
+ from an information processing perspective, intractable, right? That you need.
+
+1:17:03.360 --> 1:17:09.120
+ All the situations are sufficiently different that you can't compress it at all. It's this
+
+1:17:09.120 --> 1:17:16.480
+ giant mess of hardcoded rules. And we can never achieve that. But that still puts a cap on how
+
+1:17:16.480 --> 1:17:22.720
+ many levels of improvement that we can actually make. But the thing about self play is if you put
+
+1:17:22.720 --> 1:17:27.440
+ it, although I don't like doing that, in the broader category of self supervised learning,
+
+1:17:27.440 --> 1:17:34.000
+ is that it doesn't require too much or any human human labeling. Yeah. Yeah. Human label or just
+
+1:17:34.000 --> 1:17:41.040
+ human effort, the human involvement past a certain point. And the same thing you could argue is true
+
+1:17:41.040 --> 1:17:46.160
+ for the recent breakthroughs in natural language processing with language models. Oh, this is
+
+1:17:46.160 --> 1:17:51.680
+ how you get to GPT three. Yeah, see how that did. That was a good, good transition. Yeah,
+
+1:17:51.680 --> 1:17:58.640
+ you're proud. I practiced that for days, leading up to this. But that's one of the questions is,
+
+1:17:59.600 --> 1:18:04.640
+ can we find ways to formulate problems in this world that are important to us humans,
+
+1:18:05.440 --> 1:18:12.400
+ like more important than the game of chess, that to which self supervised kinds of approaches
+
+1:18:12.400 --> 1:18:16.960
+ could be applied, whether it's self play, for example, for like, maybe you could think of
+
+1:18:16.960 --> 1:18:23.920
+ like autonomous vehicles in simulation, that kind of stuff, or just robotics applications
+
+1:18:23.920 --> 1:18:35.760
+ and simulation, or in the self supervised learning, where un annotated data or data that's generated
+
+1:18:35.760 --> 1:18:43.280
+ by humans naturally without extra costs, like the Wikipedia or like all of the internet can be
+
+1:18:43.280 --> 1:18:49.760
+ used to, to learn something about, to create intelligent systems that do something really
+
+1:18:49.760 --> 1:18:55.760
+ powerful, that pass the touring test, or that do some kind of super human level performance.
+
+1:18:56.400 --> 1:19:04.240
+ So what's your intuition, like trying to stitch all of it together about our discussion of AGI,
+
+1:19:05.120 --> 1:19:10.320
+ the limits of self play, and your thoughts about maybe the limits of neural networks
+
+1:19:10.320 --> 1:19:16.400
+ in the context of language models? Is there some intuition in there that might be useful to think
+
+1:19:16.400 --> 1:19:23.920
+ about? Yeah, yeah, yeah. So first of all, the whole transformer network family of things
+
+1:19:25.200 --> 1:19:31.600
+ is really cool. It's really, really cool. I mean, if you've ever, back in the day, you played with,
+
+1:19:31.600 --> 1:19:35.360
+ I don't know, Markov models for generating text, and you've seen the kind of text that they spit
+
+1:19:35.360 --> 1:19:42.400
+ out, and you compare it to what's happening now. It's, it's amazing. It's so amazing. Now, it doesn't
+
+1:19:42.400 --> 1:19:47.600
+ take very long interacting with one of these systems before you find the holes, right? It's,
+
+1:19:47.600 --> 1:19:55.760
+ it's not smart in any kind of general way. It's really good at a bunch of things, and it does seem
+
+1:19:55.760 --> 1:20:01.360
+ to understand a lot of the statistics of language extremely well. And that turns out to be very
+
+1:20:01.360 --> 1:20:06.160
+ powerful. You can answer many questions with that, but it doesn't make it a good conversation list,
+
+1:20:06.160 --> 1:20:10.480
+ right? And it doesn't make it a good storyteller. It just makes it good at imitating of things that
+
+1:20:10.480 --> 1:20:16.480
+ is seen in the past. The exact same thing could be said by people who voting for Donald Trump
+
+1:20:16.480 --> 1:20:21.280
+ about Joe Biden supporters and people voting for Joe Biden about Donald Trump supporters is,
+
+1:20:22.400 --> 1:20:26.080
+ you know, that they're not intelligent. They're just following the, yeah, they're following things
+
+1:20:26.080 --> 1:20:31.520
+ they've seen in the past. And so it's very, it doesn't take long to find the flaws in their,
+
+1:20:32.880 --> 1:20:37.920
+ in their like natural language generation abilities. Yes. Yes. So we're being very.
+
+1:20:37.920 --> 1:20:43.280
+ That's interesting. Critical of AS systems. Right. So, so I've had a similar thought,
+
+1:20:43.280 --> 1:20:51.360
+ which was that the stories that GPT three spits out are amazing and very human like.
+
+1:20:51.360 --> 1:20:57.200
+ And it doesn't mean that computers are smarter than we realize necessarily. It partly means that
+
+1:20:57.200 --> 1:21:03.600
+ people are dumber than we realize or that much of what we do day to day is not that deep. Like,
+
+1:21:03.600 --> 1:21:08.160
+ we're just, we're just kind of going with the flow. We're saying whatever feels like the natural
+
+1:21:08.160 --> 1:21:16.560
+ thing to say next. Not a lot of it is, is, is creative or meaningful or intentional. But enough
+
+1:21:16.560 --> 1:21:22.000
+ is that we actually get, we get by, right? And we do come up with new ideas sometimes and we do
+
+1:21:22.000 --> 1:21:26.720
+ manage to talk each other into things sometimes. And we do sometimes vote for reasonable people
+
+1:21:26.720 --> 1:21:33.280
+ sometimes. But, but it's really hard to see in the statistics because so much of what we're saying
+
+1:21:33.280 --> 1:21:38.640
+ is kind of wrote. And so our metrics that we use to measure how these systems are doing,
+
+1:21:38.640 --> 1:21:45.840
+ don't reveal that because it's, it's, it's in the interstices that, that is very hard to detect.
+
+1:21:45.840 --> 1:21:52.240
+ But is your, do you have an intuition that with these language models, if they grow in size,
+
+1:21:52.240 --> 1:21:57.840
+ it's already surprising that when you go from GPT two to GPT three, that there is a noticeable
+
+1:21:57.840 --> 1:22:02.320
+ improvement. So the question now goes back to the ominous David Silver and the ceiling.
+
+1:22:02.320 --> 1:22:05.680
+ Right. So maybe there's just no ceiling. We just need more compute. Now,
+
+1:22:05.680 --> 1:22:10.800
+ I mean, okay. So now I'm speculating as opposed to before when I was completely on firm ground.
+
+1:22:10.800 --> 1:22:17.840
+ Yeah. All right. I don't believe that you can get something that really can do language and use
+
+1:22:17.840 --> 1:22:23.520
+ language as a thing that doesn't interact with people. Like, I think that it's not enough to just
+
+1:22:23.520 --> 1:22:27.920
+ take everything that we've said written down and just say, that's enough. You can just learn from
+
+1:22:27.920 --> 1:22:33.360
+ that and you can be intelligent. I think you really need to be pushed back at. I think that
+
+1:22:33.360 --> 1:22:38.080
+ conversations, even people who are pretty smart, maybe the smartest thing that we know not, maybe
+
+1:22:38.080 --> 1:22:44.080
+ not the smartest thing we can imagine, but we get so much benefit out of talking to each other
+
+1:22:44.080 --> 1:22:49.600
+ and interacting. That's presumably why you have conversations live with guests is that, that there's
+
+1:22:49.600 --> 1:22:54.480
+ something in that interaction that would not be exposed by, oh, I'll just write you a story and
+
+1:22:54.480 --> 1:22:58.720
+ then you can read it later. And I think, I think because these systems are just learning from our
+
+1:22:58.720 --> 1:23:04.400
+ stories, they're not learning from being pushed back at by us, that they're fundamentally limited
+
+1:23:04.400 --> 1:23:09.760
+ into what they could actually become on this route. They have to, they have to get, you know,
+
+1:23:09.760 --> 1:23:14.640
+ shut down. We have to have an argument that, they have to have an argument with us and lose
+
+1:23:14.640 --> 1:23:19.920
+ a couple of times before they start to realize, oh, okay, wait, there's some nuance here that
+
+1:23:19.920 --> 1:23:26.880
+ actually matters. Yeah, that's actually subtle sounding, but quite profound that the intro
+
+1:23:26.880 --> 1:23:34.320
+ found that the interaction with humans is, is essential. And the limitation within that is
+
+1:23:34.320 --> 1:23:40.400
+ profound as well, because the time scale, like the bandwidth at which you can really interact
+
+1:23:40.400 --> 1:23:47.120
+ with humans is very low. So it's costly. So you can't, one of the underlying things about self
+
+1:23:47.120 --> 1:23:54.800
+ plays, it has to do, you know, a very large number of interactions. And so you can't really deploy
+
+1:23:54.800 --> 1:24:00.400
+ reinforcement learning systems into the real world to interact, like you couldn't deploy a language
+
+1:24:00.400 --> 1:24:07.360
+ model into the real world to interact with humans, because it would just not get enough data relative
+
+1:24:07.360 --> 1:24:13.200
+ to the cost it takes to interact, like the time of humans is, is expensive, which is really
+
+1:24:13.200 --> 1:24:17.680
+ interesting. That's that good, that takes us back to reinforcement learning and trying to figure out
+
+1:24:17.680 --> 1:24:23.920
+ if there's ways to make algorithms that are more efficient at learning, keep the spirit and reinforcement
+
+1:24:23.920 --> 1:24:29.200
+ learning and become more efficient. In some sense, this seems to be the goal. I'd love to hear what
+
+1:24:29.200 --> 1:24:34.560
+ your thoughts are. I don't know if you got the chance to see it. The blog post called Biddle
+
+1:24:34.560 --> 1:24:42.080
+ Lesson. Oh, yes. By Rich Sutton, that makes an argument, hopefully I can summarize it perhaps,
+
+1:24:42.080 --> 1:24:47.680
+ perhaps you can. Yeah, but good. Okay. So I mean, I could try and you can correct me, which is,
+
+1:24:48.480 --> 1:24:53.600
+ he makes an argument that it seems if we look at the long arc of the history of the artificial
+
+1:24:53.600 --> 1:25:00.800
+ intelligence field, it calls, you know, 70 years, that the algorithms from which we've seen the biggest
+
+1:25:00.800 --> 1:25:07.120
+ improvements in practice are the very simple, like dumb algorithms that are able to leverage
+
+1:25:07.120 --> 1:25:13.120
+ computation. And you just wait for the computation to improve, like all of the academics and so on
+
+1:25:13.120 --> 1:25:17.440
+ have fun by finding little tricks and, and congratulate themselves on those tricks. And
+
+1:25:17.440 --> 1:25:22.560
+ sometimes those tricks can be like big, that feel in the moment, like big spikes and breakthroughs,
+
+1:25:22.560 --> 1:25:29.120
+ but in reality, over the decades, it's still the same dumb algorithm that just waits for the
+
+1:25:29.120 --> 1:25:36.720
+ compute to get faster and faster. Do you find that to be an interesting argument against the
+
+1:25:36.720 --> 1:25:41.600
+ entirety of the field of machine learning as an academic discipline? That we're really just a
+
+1:25:41.600 --> 1:25:46.000
+ subfield of computer architecture. Yeah. We're just kind of waiting around for them to do their
+
+1:25:46.000 --> 1:25:49.280
+ next thing. We really don't want to do hardware work. So like, that's right. I really don't want
+
+1:25:49.280 --> 1:25:52.480
+ to, I don't want to think about hardware. We're procrastinating. Yes, that's right. Just waiting
+
+1:25:52.480 --> 1:25:58.240
+ for them to do their job so that we can pretend to have done ours. So, yeah, I mean, the argument
+
+1:25:58.240 --> 1:26:04.320
+ reminds me a lot of, I think it was a Fred Jelenet quote, early computational linguist who said,
+
+1:26:04.320 --> 1:26:09.600
+ you know, we're building these computational linguistic systems. And every time we fire a
+
+1:26:09.600 --> 1:26:14.640
+ linguist, performance goes up by 10%. Something like that. And so the idea of us building the
+
+1:26:14.640 --> 1:26:20.880
+ knowledge in, in that, in that case, was much less, he was finding it to be much less successful
+
+1:26:20.880 --> 1:26:25.440
+ than get rid of the people who know about language as a, you know, from a kind of
+
+1:26:27.280 --> 1:26:31.200
+ scholastic academic kind of perspective and replace them with more compute.
+
+1:26:32.480 --> 1:26:36.320
+ And so I think this is kind of a modern version of that story, which is, okay, we want to do better
+
+1:26:36.320 --> 1:26:44.960
+ on machine vision. You could build in all these, you know, motivated, part based models that,
+
+1:26:44.960 --> 1:26:49.040
+ you know, that just feel like obviously the right thing that you have to have, or we can throw a
+
+1:26:49.040 --> 1:26:55.280
+ lot of data at it and guess what we're doing better with it with a lot of data. So I hadn't
+
+1:26:55.280 --> 1:26:59.680
+ thought about it until this moment in this way. But what I believe, well, I've thought about what
+
+1:26:59.680 --> 1:27:08.240
+ I believe. What I believe is that, you know, compositionality and what's the right way to
+
+1:27:08.240 --> 1:27:14.720
+ say it, the complexity grows rapidly as you consider more and more possibilities, like
+
+1:27:14.720 --> 1:27:21.200
+ explosively. And so far, Moore's law has also been growing explosively, exponentially. And so,
+
+1:27:21.200 --> 1:27:27.360
+ so it really does seem like, well, we don't have to think really hard about the algorithm design
+
+1:27:27.360 --> 1:27:32.560
+ or the way that we build the systems, because the best benefit we could get is exponential,
+
+1:27:32.560 --> 1:27:36.560
+ and the best benefit that we can get from waiting is exponential, so we can just wait.
+
+1:27:38.000 --> 1:27:43.200
+ It's got, that's got to end, right? And there's hints now that Moore's law is starting to feel
+
+1:27:43.200 --> 1:27:49.200
+ some friction, starting to, the world is pushing back a little bit. One thing I don't know,
+
+1:27:50.000 --> 1:27:54.240
+ lots of people know this, I didn't know this, I was trying to write an essay. And
+
+1:27:54.240 --> 1:27:59.200
+ yeah, Moore's law has been amazing, and it's been, it's enabled all sorts of things. But there's a,
+
+1:27:59.200 --> 1:28:03.680
+ there's also a kind of counter Moore's law, which is that the development cost for each
+
+1:28:03.680 --> 1:28:09.680
+ successive generation of chips also is doubling. So it's costing twice as much money. So the amount
+
+1:28:09.680 --> 1:28:15.680
+ of development money per cycle or whatever is actually sort of constant. And at some point,
+
+1:28:15.680 --> 1:28:20.720
+ we run out of money. So, or we have to come up with an entirely different way of doing the
+
+1:28:20.720 --> 1:28:26.080
+ development process. So like, I guess I always, always a bit skeptical of the look, it's an
+
+1:28:26.080 --> 1:28:30.640
+ exponential curve, therefore it has no end. Soon the number of people going to Neuraps will be
+
+1:28:30.640 --> 1:28:35.280
+ greater than the population of the earth. That means we're going to discover life on other planets.
+
+1:28:35.280 --> 1:28:40.640
+ No, it doesn't. It means that we're in a, in a sigmoid curve on the front half, which looks
+
+1:28:40.640 --> 1:28:45.440
+ a lot like an exponential. The second half is going to look a lot like diminishing returns.
+
+1:28:45.440 --> 1:28:50.640
+ Yeah. The, I mean, but the interesting thing about Moore's law, if you actually like, look at the
+
+1:28:50.640 --> 1:28:56.720
+ technologies involved, it's hundreds, not thousands of S curves stacked on top of each other. It's
+
+1:28:56.720 --> 1:29:03.600
+ not actually an exponential curve. It's constant breakthroughs. And then what becomes useful to
+
+1:29:03.600 --> 1:29:07.920
+ think about, which is exactly what you're saying, the cost of development, like the size of teams,
+
+1:29:07.920 --> 1:29:13.600
+ the amount of resources that are invested in continuing to find new S curves, new breakthroughs.
+
+1:29:13.600 --> 1:29:21.360
+ And yeah, it's a, it's an interesting idea. You know, if we live in the moment, if we sit here
+
+1:29:21.360 --> 1:29:30.800
+ today, it seems to be the reasonable thing to say that exponentials end. And yet in the software
+
+1:29:30.800 --> 1:29:39.520
+ realm, they just keep appearing to be happening. And it's so, I mean, it's so hard to disagree
+
+1:29:39.520 --> 1:29:48.000
+ with Elon Musk on this because it like, I've, you know, I used to be one of those folks. I'm
+
+1:29:48.000 --> 1:29:53.120
+ still one of those folks I've studied autonomous vehicles. This is what I worked on. And, and
+
+1:29:53.120 --> 1:29:57.920
+ it's, it's like, you look at what Elon Musk is saying about autonomous vehicles, well, obviously
+
+1:29:57.920 --> 1:30:03.040
+ in a couple of years or in a year or, or next month, we'll have fully autonomous vehicles.
+
+1:30:03.040 --> 1:30:07.840
+ Like there's no reason why we can't driving is pretty simple. Like it's just a learning problem.
+
+1:30:07.840 --> 1:30:12.720
+ And you just need to convert all the driving that we're doing into data and just having you
+
+1:30:12.720 --> 1:30:18.880
+ all know with the trains and that data. And like we use only our eyes. So you can use cameras and
+
+1:30:18.880 --> 1:30:27.120
+ you can train on it. And it's like, yeah, that's that what that should work. And then you put that
+
+1:30:27.120 --> 1:30:31.840
+ hat on like the philosophical hat. And but then you put the pragmatic hat and it's like, this is
+
+1:30:31.840 --> 1:30:36.640
+ what the flaws of computer vision are like, this is what it means to train at scale. And then you
+
+1:30:36.640 --> 1:30:43.440
+ you put the human factors, the psychology hat on, which is like, it's actually driving us a lot,
+
+1:30:43.440 --> 1:30:48.400
+ the cognitive science or cognitive, whatever the heck you call it is, it's really hard. It's much
+
+1:30:48.400 --> 1:30:53.840
+ harder to drive than, than we realize there's a much larger number of edge cases. So building up
+
+1:30:53.840 --> 1:31:01.680
+ an intuition around this is, is around exponential is really difficult. And on top of that, the pandemic
+
+1:31:01.680 --> 1:31:07.760
+ is making us think about exponentials, making us realize that like, we don't understand anything
+
+1:31:07.760 --> 1:31:14.160
+ about it. We're not able to intuit exponentials. We're either ultra terrified, some part of the
+
+1:31:14.160 --> 1:31:22.480
+ population and some part is like the opposite of whatever the different carefree. And we're not
+
+1:31:22.480 --> 1:31:31.360
+ managing it. Blase. Blase. Well, wow, that's French. So it's got an accent. So it's, it's, it's
+
+1:31:31.360 --> 1:31:41.360
+ fascinating to think what, what the limits of this exponential growth of technology, not just
+
+1:31:41.360 --> 1:31:52.640
+ Moore's law, it's technology, how that rubs up against the bitter lesson in GPT three and self
+
+1:31:52.640 --> 1:31:58.160
+ playing mechanisms that is not obvious. I used to be much more skeptical about neural networks,
+
+1:31:58.160 --> 1:32:04.400
+ now at least give us slither possibility that will be all, that will be very much surprised.
+
+1:32:04.400 --> 1:32:16.000
+ And also, you know, caught in a way that like, we are not prepared for, like in applications of
+
+1:32:17.600 --> 1:32:24.400
+ social networks, for example, because it feels like really good transformer models that are able
+
+1:32:24.400 --> 1:32:31.360
+ to do some kind of like very good natural language generation of the same kind of models that could
+
+1:32:31.360 --> 1:32:37.680
+ be used to learn human behavior and then manipulate that human behavior to gain advertiser dollars
+
+1:32:37.680 --> 1:32:43.280
+ and all those kinds of things. Sure. To feed the capitalist system. And they arguably already
+
+1:32:43.280 --> 1:32:50.160
+ are manipulating human behavior. Yeah. So, but not for self preservation, which I think is a big,
+
+1:32:51.120 --> 1:32:55.040
+ that would be a big step. Like if they were trying to manipulate us to convince us not to
+
+1:32:55.040 --> 1:33:01.680
+ shut them off, I would be very freaked out. But I don't see a path to that from where we are now.
+
+1:33:02.560 --> 1:33:08.080
+ They don't have any of those abilities. That's not what they're trying to do. They're trying to
+
+1:33:08.080 --> 1:33:13.360
+ keep people on the site. But see, the thing is this, this is the thing about life on earth is
+
+1:33:13.360 --> 1:33:20.880
+ they might be borrowing our consciousness and sentience. Like, so like in a sense, they do
+
+1:33:20.880 --> 1:33:26.240
+ because the creators of the algorithms have like, they're not, you know, if you look at our body,
+
+1:33:26.240 --> 1:33:30.960
+ yeah, okay, we're not a single organism, we're a huge number of organisms with like tiny little
+
+1:33:30.960 --> 1:33:36.480
+ motivations, we're built on top of each other. In the same sense, the AI algorithms that they're not
+
+1:33:36.480 --> 1:33:41.120
+ like a system that includes human companies and corporations, right? Because corporations are
+
+1:33:41.120 --> 1:33:45.840
+ funny organisms in and of themselves that really do seem to have self preservation built in. And I
+
+1:33:45.840 --> 1:33:51.840
+ think that's at the, at the design level, I think the design to have self preservation be a focus.
+
+1:33:52.400 --> 1:33:59.680
+ So you're right, in that, in that broader system that we're also a part of and can have some influence
+
+1:33:59.680 --> 1:34:05.520
+ on, it's, it's, it is much more complicated, much more powerful. Yeah, I agree with that.
+
+1:34:06.720 --> 1:34:13.600
+ So people really love it when I ask, what three books, technical, philosophical fiction had a
+
+1:34:13.600 --> 1:34:21.120
+ big impact on your life, maybe you can recommend, we went with movies, we went with Billy Joel,
+
+1:34:21.120 --> 1:34:26.400
+ and I forgot what you, what music you recommended, but I didn't, I just said I have no taste in music,
+
+1:34:26.400 --> 1:34:31.040
+ I just like pop music. That was actually really skillful the way you avoided that question.
+
+1:34:31.040 --> 1:34:33.200
+ Thanks, I was, I'm going to try to do the same with the books.
+
+1:34:34.560 --> 1:34:39.600
+ So do you have a skillful way to avoid answering the question about three books you would recommend?
+
+1:34:39.600 --> 1:34:46.240
+ I'd like to tell you a story. So my first job out of college was at Bellcor, I mentioned that
+
+1:34:46.240 --> 1:34:50.080
+ before, where I worked with Dave Ackley, the head of the group was a guy named Tom Landauer,
+
+1:34:50.080 --> 1:34:56.320
+ and I don't know how well known he's known now, but arguably he's the, he's the inventor and the
+
+1:34:56.320 --> 1:35:01.920
+ first proselytizer of word embeddings. So they, they developed a system shortly before I got to the
+
+1:35:01.920 --> 1:35:09.280
+ group. Yeah, that, that called latent semantic analysis that would take words of English and
+
+1:35:09.280 --> 1:35:15.040
+ embed them in, you know, multi hundred dimensional space, and then use that as a way of, you know,
+
+1:35:15.040 --> 1:35:18.800
+ assessing similarity and basically doing reinforcement learning, not sorry, not reinforcement,
+
+1:35:18.800 --> 1:35:22.480
+ information retrieval, you know, sort of pre Google information retrieval.
+
+1:35:23.360 --> 1:35:29.600
+ And he was trained as an anthropologist, but then became a cognitive scientist,
+
+1:35:29.600 --> 1:35:32.720
+ I was in the cognitive science research group. It's, you know, like I said,
+
+1:35:32.720 --> 1:35:36.960
+ I'm a cognitive science groupie. At the time, I thought I'd become a cognitive scientist,
+
+1:35:36.960 --> 1:35:41.040
+ but then I realized in that group, no, I'm a computer scientist, but I'm a computer scientist
+
+1:35:41.040 --> 1:35:46.640
+ who really loves to hang out with cognitive scientists. And he said, he studied language
+
+1:35:46.640 --> 1:35:52.640
+ acquisition in particular, he said, you know, humans have about this number of words of vocabulary,
+
+1:35:52.640 --> 1:35:58.080
+ and most of that is learned from reading. And I said, that can't be true, because I have a really
+
+1:35:58.080 --> 1:36:03.120
+ big vocabulary, and I don't read. He's like, you must. I'm like, I don't think I do. I mean,
+
+1:36:03.120 --> 1:36:08.080
+ like stop signs, I definitely read stop signs. But like reading books is not, is not a thing
+
+1:36:08.080 --> 1:36:14.000
+ that I do a lot. Really, though, it might be just, maybe the red color. Do I read stop signs?
+
+1:36:14.000 --> 1:36:16.560
+ Yeah. No, it's just pattern recognition at this point. I don't sound it out.
+
+1:36:19.360 --> 1:36:25.280
+ Stop. So now I do, I wonder what that, oh yeah, stop the guns. So,
+
+1:36:25.280 --> 1:36:30.080
+ that's fascinating. So you don't, so I don't read very, I mean, obviously, I read and I've read,
+
+1:36:30.080 --> 1:36:35.760
+ I've read plenty of books. But like some people like Charles, my friend Charles and others,
+
+1:36:35.760 --> 1:36:40.560
+ like a lot of people in my field, a lot of academics, like reading was really a central
+
+1:36:40.560 --> 1:36:48.400
+ topic to them in development. And I'm not that guy. In fact, I used to joke that when I got into
+
+1:36:48.400 --> 1:36:54.880
+ college, that it was on kind of a help out the illiterate kind of program, because I got to
+
+1:36:54.880 --> 1:36:58.560
+ college, like in my house, I wasn't a particularly bad or good reader. But when I got to college,
+
+1:36:58.560 --> 1:37:03.520
+ I was surrounded by these people that were just voracious in their reading appetite.
+
+1:37:03.520 --> 1:37:06.560
+ And they would like, have you read this? Have you read this? Have you read this? And I'd be like,
+
+1:37:07.120 --> 1:37:11.600
+ no, I'm clearly not qualified to be at this school. Like there's no way I should be here.
+
+1:37:11.600 --> 1:37:18.160
+ Now I've discovered books on tape, like audio books. And so I'm much better. I'm more caught up,
+
+1:37:18.160 --> 1:37:24.480
+ I read a lot of books. A small tangent on that. It is a fascinating open question to me
+
+1:37:24.480 --> 1:37:31.440
+ on the topic of driving, whether, you know, supervised learning people, machine learning
+
+1:37:31.440 --> 1:37:38.720
+ people think you have to like drive to learn how to drive. To me, it's very possible that just by
+
+1:37:38.720 --> 1:37:45.040
+ us humans, by first of all, walking, but also by watching other people drive, not even being inside
+
+1:37:45.040 --> 1:37:50.960
+ cars as a passenger, but let's say being inside the cars as a passenger, but even just like being
+
+1:37:50.960 --> 1:37:57.680
+ a pedestrian and crossing the road, you learn so much about driving from that. It's very possible
+
+1:37:57.680 --> 1:38:03.440
+ that you can, without ever being inside of a car, be okay at driving once you get in it.
+
+1:38:04.240 --> 1:38:07.440
+ Or like watching a movie, for example, I don't know, something like that.
+
+1:38:07.440 --> 1:38:11.200
+ Have you, have you taught anyone to drive? No.
+
+1:38:11.840 --> 1:38:20.080
+ So I have two children and I learned a lot about car driving because my wife doesn't want to be the
+
+1:38:20.080 --> 1:38:24.800
+ one in the car while they're learning. So that's my job. So I sit in the passenger seat and it's
+
+1:38:24.800 --> 1:38:32.000
+ really scary. I have, you know, I have wishes to live and they're, you know, they're figuring things
+
+1:38:32.000 --> 1:38:39.600
+ out. Now, they start off very, very much better than I imagine like a neural network would, right?
+
+1:38:39.600 --> 1:38:43.920
+ They get that they're seeing the world. They get that there's a road that they're trying to be on.
+
+1:38:43.920 --> 1:38:48.080
+ They get that there's a relationship between the angle of the steering, but it takes a while to
+
+1:38:48.080 --> 1:38:54.240
+ not be very jerky. And so that happens pretty quickly. Like the ability to stay in lane at
+
+1:38:54.240 --> 1:38:59.040
+ speed, that happens relatively fast. It's not zero shot learning, but it's pretty fast.
+
+1:39:00.000 --> 1:39:04.640
+ The thing that's remarkably hard, and this is I think partly why self driving cars are really hard,
+
+1:39:04.640 --> 1:39:10.160
+ is the degree to which driving is a social interaction activity. And that blew me away.
+
+1:39:10.160 --> 1:39:15.920
+ I was completely unaware of it until I watched my son learning to drive. And I was realizing
+
+1:39:15.920 --> 1:39:20.800
+ that he was sending signals to all the cars around him. And those, in his case, he's,
+
+1:39:20.800 --> 1:39:28.160
+ he's always had social communication challenges. He was sending very mixed confusing signals to
+
+1:39:28.160 --> 1:39:32.640
+ the other cars. And that was causing the other cars to drive weirdly and erratically. And there
+
+1:39:32.640 --> 1:39:38.720
+ was no question in my mind that he would, he would have an accident because they didn't know how to
+
+1:39:38.720 --> 1:39:43.520
+ read him. There's things you do with the speed that you drive, the positioning of your car,
+
+1:39:43.520 --> 1:39:50.160
+ that you're constantly like in the head of the other drivers. And seeing him not knowing how to
+
+1:39:50.160 --> 1:39:54.480
+ do that and having to be taught explicitly, okay, you have to be thinking about what the other driver
+
+1:39:54.480 --> 1:40:02.640
+ is thinking was a revelation to me. I was stunned. It's a creating kind of theories of mind of the
+
+1:40:02.640 --> 1:40:07.200
+ other. The theories of mind of the other cars. Yeah. Yeah. Which I just hadn't heard discussed in
+
+1:40:07.200 --> 1:40:11.600
+ the self driving car talks that I've been to. Since then, there's some people who do do
+
+1:40:11.600 --> 1:40:16.960
+ consider those kinds of issues, but it's way more subtle than I think there's a little bit of work
+
+1:40:16.960 --> 1:40:21.520
+ involved with that. When you realize, like when you especially focus not on other cars, but on
+
+1:40:21.520 --> 1:40:27.600
+ pedestrians, for example, it's literally staring you in the face. Yeah. So then when you're just
+
+1:40:27.600 --> 1:40:32.560
+ like, how do I interact with pedestrians? You have pedestrians, you're practically talking to
+
+1:40:32.560 --> 1:40:35.680
+ an octopus at that point. They've got all these weird degrees of freedom. You don't know what
+
+1:40:35.680 --> 1:40:39.760
+ they're going to do. They can turn around any second. But the point is, we humans know what
+
+1:40:39.760 --> 1:40:45.280
+ they're going to do. We have a good theory of mind. We have a good mental model of what they're
+
+1:40:45.280 --> 1:40:50.800
+ doing. And we have a good model of the model they have of you and the model of the model of the
+
+1:40:50.800 --> 1:41:00.160
+ model. We're able to kind of reason about this kind of the social game of it. The hope is that
+
+1:41:00.160 --> 1:41:05.280
+ it's quite simple actually, that it could be learned. That's why I just talked to the Waymo.
+
+1:41:05.280 --> 1:41:11.120
+ I don't know if you know of that company. Google sells their every car. I talked to their CTO
+
+1:41:11.120 --> 1:41:17.680
+ about this podcast and they wrote in their car and it's quite aggressive and it's quite fast
+
+1:41:17.680 --> 1:41:23.680
+ and it's good and it feels great. It also just like Tesla, Waymo made me change my mind about
+
+1:41:24.560 --> 1:41:32.400
+ maybe driving is easier than I thought. Maybe I'm just being speciest human center. Maybe...
+
+1:41:32.400 --> 1:41:39.760
+ It's a speciest argument. Yes, I don't know. But it's fascinating to think about like the same
+
+1:41:41.120 --> 1:41:46.400
+ as with reading, which I think you just said. You avoided the question. I still hope you answered
+
+1:41:46.400 --> 1:41:52.560
+ someone. You avoided it brilliantly. There's blind spots as artificial intelligence that
+
+1:41:52.560 --> 1:41:58.640
+ artificial intelligence researchers have about what it actually takes to learn to solve a problem.
+
+1:41:58.640 --> 1:42:03.680
+ That's fascinating. Have you had Anka Dragan on? Yes. She's one of my favorites. So much energy.
+
+1:42:04.960 --> 1:42:09.120
+ She's amazing. Fantastic. And in particular, she thinks a lot about this kind of...
+
+1:42:10.240 --> 1:42:14.720
+ I know that you know that I know kind of planning. And the last time I spoke with her,
+
+1:42:14.720 --> 1:42:19.920
+ she was very articulate about the ways in which self driving cars are not solved,
+
+1:42:19.920 --> 1:42:26.000
+ like what's still really, really hard. But even her intuition is limited. We're all new to this.
+
+1:42:26.000 --> 1:42:30.160
+ So in some sense, the Elon Musk approach of being ultra confident and just like plowing...
+
+1:42:30.160 --> 1:42:35.280
+ Put it out there. Put it out there. Like some people say it's reckless and dangerous and so on.
+
+1:42:35.280 --> 1:42:41.440
+ But partly it seems to be one of the only ways to make progress in artificial intelligence.
+
+1:42:44.240 --> 1:42:50.960
+ These are difficult things. Democracy is messy. Implementation of artificial
+
+1:42:50.960 --> 1:42:56.400
+ intelligence systems in the real world is messy. So many years ago, before self driving cars were
+
+1:42:56.400 --> 1:43:01.440
+ an actual thing you could have a discussion about, somebody asked me, what if we could
+
+1:43:01.440 --> 1:43:06.400
+ use that robotic technology and use it to drive cars around? Aren't people going to be killed?
+
+1:43:08.400 --> 1:43:11.920
+ That's not what's going to happen. I said with confidence incorrectly, obviously.
+
+1:43:13.200 --> 1:43:16.960
+ What I think is going to happen is we're going to have a lot more like a very gradual kind of
+
+1:43:16.960 --> 1:43:24.240
+ rollout where people have these cars in like closed communities, where it's somewhat realistic,
+
+1:43:24.240 --> 1:43:29.840
+ but it's still in a box so that we can really get a sense of what are the weird things that
+
+1:43:29.840 --> 1:43:37.920
+ can happen? How do we have to change the way we behave around these vehicles? It obviously requires
+
+1:43:37.920 --> 1:43:41.680
+ a kind of co evolution that you can't just plop them in and see what happens.
+
+1:43:42.480 --> 1:43:45.280
+ But of course, we're basically plopping them in and see what happens. So I was wrong,
+
+1:43:45.280 --> 1:43:47.440
+ but I do think that would have been a better plan.
+
+1:43:48.480 --> 1:43:54.000
+ But your intuition is funny, just zooming out and looking at the forces of capitalism.
+
+1:43:54.000 --> 1:44:00.880
+ And it seems that capitalism rewards risk takers and rewards and punishes risk takers and
+
+1:44:02.640 --> 1:44:13.200
+ try it out. The academic approach to let's try a small thing and try to understand slowly the
+
+1:44:13.200 --> 1:44:19.040
+ fundamentals of the problem. And let's start with one and do two and then see that and then do the
+
+1:44:19.040 --> 1:44:26.640
+ three. The capitalists like startup entrepreneurial dream is let's build a thousand and let's...
+
+1:44:26.640 --> 1:44:30.640
+ Right. And 500 of them fail, but whatever the other 500 we learned from them.
+
+1:44:30.640 --> 1:44:34.800
+ But if you're good enough, I mean, one thing is like your intuition would say like,
+
+1:44:34.800 --> 1:44:41.600
+ that's going to be hugely destructive to everything. But actually it's kind of the forces
+
+1:44:41.600 --> 1:44:46.880
+ of capitalism. People are quite... It's easy to be critical, but if you actually look at the data
+
+1:44:46.880 --> 1:44:52.480
+ at the way our world has progressed in terms of the quality of life, it seems like the competent,
+
+1:44:52.480 --> 1:44:58.400
+ good people rise to the top. This is coming from me from the Soviet Union and so on.
+
+1:44:58.400 --> 1:45:07.440
+ It's interesting that somebody like Elon Musk is the way you push progress and artificial
+
+1:45:07.440 --> 1:45:14.000
+ intelligence. Like it's forcing Waymo to step their stuff up and Waymo is forcing Elon Musk
+
+1:45:15.760 --> 1:45:22.960
+ to step up. It's fascinating because I have this tension in my heart and just being upset by
+
+1:45:24.320 --> 1:45:31.360
+ the lack of progress in autonomous vehicles within academia. So there's huge progress
+
+1:45:31.360 --> 1:45:38.560
+ in the early days of the DARPA challenges. And then it just kind of stopped at MIT,
+
+1:45:38.560 --> 1:45:47.120
+ but it's true everywhere else with an exception of a few sponsors here and there. It's not seen
+
+1:45:47.120 --> 1:45:54.080
+ as a sexy problem. The moment artificial intelligence starts approaching the problems
+
+1:45:54.080 --> 1:45:59.360
+ of the real world, like academics kind of like, all right, let the...
+
+1:45:59.360 --> 1:46:01.760
+ Because they get really hard in a different way.
+
+1:46:01.760 --> 1:46:03.120
+ In a different way. That's right.
+
+1:46:03.120 --> 1:46:07.040
+ I think some of us are not excited about that other way.
+
+1:46:07.040 --> 1:46:12.960
+ But I still think there's fundamentals problems to be solved in those difficult things. It's
+
+1:46:12.960 --> 1:46:17.680
+ still publishable, I think. We just need to... It's the same criticism you could have of all
+
+1:46:17.680 --> 1:46:24.320
+ these conferences in Europe, in CVPR, where application papers are often as powerful and
+
+1:46:24.320 --> 1:46:31.120
+ as important as theory paper. Even theory just seems much more respectable and so on.
+
+1:46:31.120 --> 1:46:35.280
+ I mean, machine learning community is changing that a little bit, at least in statements,
+
+1:46:35.280 --> 1:46:41.360
+ but it's still not seen as the sexiest of pursuits, which is like, how do I actually
+
+1:46:41.360 --> 1:46:44.960
+ make this thing work in practice as opposed to on this toy dataset?
+
+1:46:46.960 --> 1:46:51.680
+ All that to say, are you still avoiding the three books question? Is there something on
+
+1:46:51.680 --> 1:46:57.600
+ audiobook that you can recommend? Oh, yeah. I mean, yeah, I've read a lot of really fun stuff.
+
+1:46:58.640 --> 1:47:03.200
+ In terms of books that I find myself thinking back on that I read a while ago,
+
+1:47:03.200 --> 1:47:07.360
+ like that have stood the test of time to some degree, I find myself thinking of
+
+1:47:07.360 --> 1:47:15.680
+ program or B programed a lot by Douglas Roschkopf, which was... It basically put out the premise
+
+1:47:15.680 --> 1:47:23.200
+ that we all need to become programmers in one form or another. It was in analogy to,
+
+1:47:23.200 --> 1:47:28.480
+ once upon a time, we all had to become readers. We had to become literate. There was a time before
+
+1:47:28.480 --> 1:47:32.800
+ that when not everybody was literate, but once literacy was possible, the people who were literate
+
+1:47:32.800 --> 1:47:39.040
+ had more of a say in society than the people who weren't. We made a big effort to get everybody
+
+1:47:39.040 --> 1:47:45.600
+ up to speed and now it's not 100% universal, but it's quite widespread. The assumption
+
+1:47:45.600 --> 1:47:50.960
+ is generally that people can read. The analogy that he makes is that programming is a similar
+
+1:47:50.960 --> 1:47:59.120
+ kind of thing, that we need to have a say in... Right. Being a reader, being literate, being a
+
+1:47:59.120 --> 1:48:04.720
+ reader means you can receive all this information, but you don't get to put it out there. Programming
+
+1:48:04.720 --> 1:48:08.160
+ is the way that we get to put it out there. That was the argument they made. I think he
+
+1:48:08.160 --> 1:48:13.440
+ specifically has now backed away from this idea. He doesn't think it's happening quite this way.
+
+1:48:13.440 --> 1:48:19.760
+ That might be true that society didn't play forward quite that way.
+
+1:48:20.640 --> 1:48:23.280
+ I still believe in the premise. I still believe that at some point,
+
+1:48:23.840 --> 1:48:28.560
+ we have... The relationship that we have to these machines and these networks has to be one of each
+
+1:48:28.560 --> 1:48:36.000
+ individual has the wherewithal to make the machines help them do the things that that
+
+1:48:36.000 --> 1:48:41.120
+ person once done. As software people, we know how to do that. When we have a problem, we're like,
+
+1:48:41.120 --> 1:48:45.760
+ okay, I'll hack up a pulse grip or something and make it so. If we lived in a world where
+
+1:48:45.760 --> 1:48:52.160
+ everybody could do that, that would be a better world. Computers would have, I think, less sway
+
+1:48:52.160 --> 1:48:57.360
+ over us. Other people's software would have less sway over us as a group.
+
+1:48:57.360 --> 1:49:00.160
+ Yeah. In some sense, software engineering is programming's power.
+
+1:49:00.720 --> 1:49:07.840
+ Programming is power. Right. Yeah. It's like magic. It's like magic spells. It's not out of reach
+
+1:49:07.840 --> 1:49:12.800
+ of everyone, but at the moment, it's just a sliver of the population who can
+
+1:49:12.800 --> 1:49:17.760
+ commune with machines in this way. I don't know. That book had a big impact on me.
+
+1:49:18.400 --> 1:49:22.480
+ Currently, I'm reading The Alignment Problem actually by Brian Christian. I don't know if
+
+1:49:22.480 --> 1:49:26.160
+ you've seen this out there yet. Is it similar to Stuart Russell's work with the control problem?
+
+1:49:26.880 --> 1:49:30.640
+ It's in that same general neighborhood. They have different
+
+1:49:30.640 --> 1:49:36.240
+ emphases that they're concentrating on. I think Stuart's book did a remarkably good job.
+
+1:49:36.240 --> 1:49:43.520
+ Like just a celebratory good job at describing AI technology and how it works. I thought that
+
+1:49:43.520 --> 1:49:48.400
+ was great. It was really cool to see that in a book. I think he has some experience writing
+
+1:49:48.400 --> 1:49:54.800
+ some books. That's probably a possible thing. He's maybe thought a thing or two about how to explain
+
+1:49:54.800 --> 1:50:00.640
+ AI to people. Yeah. Yeah. That's a really good point. This book so far has been remarkably good
+
+1:50:00.640 --> 1:50:07.520
+ at telling the story of the recent history of some of the things that have happened.
+
+1:50:08.240 --> 1:50:13.760
+ I'm in the first third. He said this book is in three thirds. The first third is essentially AI
+
+1:50:13.760 --> 1:50:19.920
+ fairness and implications of AI on society that we're seeing right now. That's been great. He's
+
+1:50:19.920 --> 1:50:24.960
+ telling those stories really well. He went out and talked to the frontline people whose names
+
+1:50:24.960 --> 1:50:29.280
+ were associated with some of these ideas. It's been terrific. He says the second half of the book
+
+1:50:29.280 --> 1:50:36.320
+ is on reinforcement learning. Maybe that'll be fun. Then the third half, third third,
+
+1:50:36.320 --> 1:50:43.360
+ is on the superintelligence alignment problem. I suspect that that part will be less fun for
+
+1:50:43.360 --> 1:50:50.640
+ me to read. Yeah. It's an interesting problem to talk about. I find it to be the most interesting
+
+1:50:50.640 --> 1:50:56.480
+ just like thinking about whether we live in a simulation or not as a thought experiment to
+
+1:50:56.480 --> 1:51:02.400
+ think about our own existence. In the same way, talking about alignment problem with AGI is a
+
+1:51:02.400 --> 1:51:07.600
+ good way to think, similar to the trolley problem with autonomous vehicles. It's a useless thing
+
+1:51:07.600 --> 1:51:14.400
+ for engineering, but it's a nice little thought experiment for actually thinking about our own
+
+1:51:14.400 --> 1:51:22.960
+ human ethical systems, our moral systems, by thinking how we engineer these things,
+
+1:51:22.960 --> 1:51:28.960
+ you start to understand yourself. SciFi can be good at that too. One sci fi book to recommend
+
+1:51:28.960 --> 1:51:35.200
+ is Excellations by Ted Chiang, a bunch of short stories. Ted Chiang is the guy who wrote the
+
+1:51:35.200 --> 1:51:42.720
+ short story that became the movie Arrival. All of his stories, just from a, he was a computer
+
+1:51:42.720 --> 1:51:49.920
+ scientist. Actually, he studied at Brown. They all have this really insightful bit of science
+
+1:51:49.920 --> 1:51:58.320
+ or computer science that drives them. It's just a romp. He creates these artificial worlds by
+
+1:51:58.320 --> 1:52:03.360
+ extrapolating on these ideas that we know about, but hadn't really thought through to this kind of
+
+1:52:03.360 --> 1:52:09.840
+ conclusion. His stuff is, it's really fun to read. It's mind warping. I'm not sure if you're
+
+1:52:09.840 --> 1:52:16.240
+ familiar. I seem to mention this every other word. I'm from the Soviet Union and I'm Russian.
+
+1:52:16.240 --> 1:52:21.680
+ I think my roots are Russian too, but a couple of generations back.
+
+1:52:22.480 --> 1:52:28.640
+ Well, it's probably in there somewhere. Maybe we can pull at that thread a little bit
+
+1:52:28.640 --> 1:52:34.000
+ of the existential dread that we all feel. I think somewhere in the conversation,
+
+1:52:34.000 --> 1:52:39.360
+ you mentioned that you don't really pretty much like dying. I forget in which context.
+
+1:52:39.360 --> 1:52:42.160
+ It might have been a reinforcement learning perspective. I don't know.
+
+1:52:42.160 --> 1:52:48.560
+ I know what it was. It was in teaching my kids to drive. That's how you face your mortality.
+
+1:52:48.560 --> 1:52:55.200
+ Yes. From a human beings perspective or from a reinforcement learning researchers perspective,
+
+1:52:55.200 --> 1:53:00.160
+ let me ask you the most absurd question. What do you think is the meaning of this whole thing,
+
+1:53:01.440 --> 1:53:08.880
+ the meaning of life on this spinning rock? I mean, I think reinforcement learning researchers
+
+1:53:08.880 --> 1:53:13.680
+ maybe think about this from a science perspective more often than a lot of other people. As a
+
+1:53:13.680 --> 1:53:18.320
+ supervised learning person, you're probably not thinking about the sweep of a lifetime,
+
+1:53:18.320 --> 1:53:22.800
+ but reinforcement learning agents are having little lifetimes, little weird little lifetimes,
+
+1:53:22.800 --> 1:53:26.480
+ and it's hard not to project yourself into their world sometimes.
+
+1:53:28.080 --> 1:53:34.720
+ As far as the meaning of life, when I turn 42, you may know from, that is a book I read,
+
+1:53:34.720 --> 1:53:41.120
+ The Hitchhiker's Guide to the Galaxy, that that is the meaning of life. When I turned 42,
+
+1:53:41.120 --> 1:53:48.320
+ I had a meaning of life party where I invited people over and everyone shared their meaning
+
+1:53:48.320 --> 1:53:54.960
+ of life. We had slides made up and so we all sat down and did a slide presentation to each other
+
+1:53:54.960 --> 1:54:01.680
+ about the meaning of life. Mine was balance. I think that life is balance.
+
+1:54:01.680 --> 1:54:08.960
+ And so the activity at the party, for a 42 year old, maybe this is a little bit nonstandard,
+
+1:54:08.960 --> 1:54:13.440
+ but I found all the little toys and devices that I had that where you had to balance on them.
+
+1:54:13.440 --> 1:54:19.920
+ You had to stand on it and balance or Pogo Stick I brought, a Rip Stick, which is like a weird
+
+1:54:19.920 --> 1:54:27.840
+ two wheeled skateboard. I got a Unicycle, but I didn't know how to do it. I now can do it.
+
+1:54:27.840 --> 1:54:34.480
+ I love watching you try. Yeah, I'll send you a video. I'm not great, but I managed.
+
+1:54:35.360 --> 1:54:42.960
+ And so balance, yeah. So my wife has a really good one that she sticks to and is probably
+
+1:54:42.960 --> 1:54:49.200
+ pretty accurate and it has to do with healthy relationships with people that you love and
+
+1:54:49.200 --> 1:54:55.360
+ working hard for good causes. But to me, yeah, balance, balance in a word. That works for me.
+
+1:54:55.360 --> 1:54:59.600
+ Not too much of anything because too much of anything is iffy.
+
+1:54:59.600 --> 1:55:03.280
+ That feels like a Rolling Stones song. I feel like there must be.
+
+1:55:03.280 --> 1:55:08.160
+ You can't always get what you want, but if you try sometimes, you can strike a balance.
+
+1:55:09.520 --> 1:55:13.520
+ Yeah, I think that's how it goes. I'll write you a parody.
+
+1:55:14.640 --> 1:55:18.880
+ It's a huge honor to talk to you. This is really fun. I've been a big fan of yours, so
+
+1:55:18.880 --> 1:55:27.040
+ I can't wait to see what you do next in the world of education, the world of parody,
+
+1:55:27.040 --> 1:55:29.600
+ in the world of reinforcement learning. Thanks for talking to me. My pleasure.
+
+1:55:30.640 --> 1:55:35.040
+ Thank you for listening to this conversation with Michael Littman and thank you to our sponsors.
+
+1:55:35.040 --> 1:55:39.520
+ Simply Safe, a home security company I use to monitor and protect my apartment,
+
+1:55:40.160 --> 1:55:44.960
+ ExpressVPN, the VPN I've used for many years to protect my privacy on the internet,
+
+1:55:44.960 --> 1:55:51.360
+ Masterclass, online courses that I enjoy from some of the most amazing humans in history,
+
+1:55:51.360 --> 1:55:54.880
+ and BetterHelp, online therapy with a licensed professional.
+
+1:55:55.440 --> 1:56:00.720
+ Please check out these sponsors in the description to get a discount and to support this podcast.
+
+1:56:00.720 --> 1:56:05.680
+ If you enjoy this thing, subscribe on YouTube, review it with five stars and up a podcast,
+
+1:56:05.680 --> 1:56:11.440
+ follow on Spotify, support on Patreon, or connect with me on Twitter at Lex Freedman.
+
+1:56:11.440 --> 1:56:17.680
+ And now, let me leave you some words from Groucho Marks. If you're not having fun,
+
+1:56:17.680 --> 1:56:41.680
+ you're doing something wrong. Thank you for listening and hope to see you next time.
+

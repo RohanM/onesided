@@ -1,0 +1,4244 @@
+WEBVTT
+
+00:00.000 --> 00:06.240
+ The following is a conversation with Dimitri Dolgov, the CTO of Waymo, which is an autonomous
+
+00:06.240 --> 00:13.040
+ driving company that started as Google self driving car project in 2009 and became Waymo in 2016.
+
+00:13.840 --> 00:19.360
+ Dimitri was there all along. Waymo is currently leading in the fully autonomous vehicle space
+
+00:19.360 --> 00:25.760
+ in that they actually have an at skill deployment of publicly accessible autonomous vehicles
+
+00:25.760 --> 00:34.480
+ driving passengers around with no safety driver with nobody in the driver seat. This to me is an
+
+00:34.480 --> 00:40.000
+ incredible accomplishment of engineering on one of the most difficult and exciting artificial
+
+00:40.000 --> 00:45.680
+ intelligence challenges of the 21st century. Quick mention of a sponsor followed by some
+
+00:45.680 --> 00:51.440
+ thoughts related to the episode. Thank you to Trial Labs, a company that helps businesses
+
+00:51.440 --> 00:57.440
+ apply machine learning to solve real world problems. Blinkist, an app I use for reading
+
+00:57.440 --> 01:02.560
+ through summaries of books, BetterHelp, online therapy with a licensed professional,
+
+01:02.560 --> 01:07.760
+ and cash app, the app I use to send money to friends. Please check out the sponsors in the
+
+01:07.760 --> 01:12.960
+ description to get a discount at the support this podcast. As a side note, let me say that
+
+01:12.960 --> 01:18.960
+ autonomous and semi autonomous driving was the focus of my work at MIT and as a problem space
+
+01:18.960 --> 01:24.960
+ that I find fascinating and full of open questions from both a robotics and a human psychology
+
+01:24.960 --> 01:30.640
+ perspective. There's quite a bit that I could say here about my experiences in academia on this
+
+01:30.640 --> 01:38.320
+ topic that revealed to me, let's say the less admirable sides of human beings. But I choose
+
+01:38.320 --> 01:43.840
+ to focus on the positive, on solutions. I'm brilliant engineers like Dimitri and the team
+
+01:43.840 --> 01:49.600
+ at Waymo, who work tirelessly to innovate and to build amazing technology that will define our
+
+01:49.600 --> 01:56.560
+ future. Because of Dimitri and others like him, I'm excited for this future. And who knows,
+
+01:56.560 --> 02:02.720
+ perhaps I too will help contribute something of value to it. If you enjoy this thing,
+
+02:02.720 --> 02:07.280
+ subscribe on YouTube, review it with five stars and up a podcast, follow on Spotify,
+
+02:07.280 --> 02:12.960
+ support on Patreon, or connect with me on Twitter, Alex Friedman. And now here's my
+
+02:12.960 --> 02:20.160
+ conversation with Dimitri Dolgov. When did you first fall in love with robotics or even computer
+
+02:20.160 --> 02:26.080
+ science more in general? Computer science first at a fairly young age. Then robotics happened
+
+02:26.080 --> 02:36.400
+ much later. I think my first interesting introduction to computers was in the late 80s,
+
+02:36.400 --> 02:45.280
+ when we got our first computer, I think it was an IBM, I think IBM AT. Remember those things
+
+02:45.280 --> 02:49.920
+ that had like a turbo button in the front? You press it and make the thing goes faster.
+
+02:50.560 --> 02:57.120
+ Did they already have floppy disks? Yeah, yeah, yeah. Like the 5.4 inch ones.
+
+02:57.120 --> 03:01.440
+ I think there was a bigger inch. So when something, then five inches and three inches.
+
+03:02.000 --> 03:05.520
+ Yeah, I think that was the five. I don't know, maybe that was before that was the giant plates,
+
+03:05.520 --> 03:09.200
+ then it didn't get that. But it was definitely not the three inch ones.
+
+03:09.920 --> 03:17.840
+ Anyway, so we got that computer. I spent the first few months just playing video games,
+
+03:18.480 --> 03:25.360
+ as you would expect. I got bored of that. So I started messing around and trying to figure
+
+03:25.360 --> 03:34.640
+ out how to make the thing do other stuff. Got into exploring programming. And a couple of years
+
+03:34.640 --> 03:42.000
+ later, I got to a point where I actually wrote a game, a lot of games, and a game developer,
+
+03:42.000 --> 03:45.760
+ a Japanese game developer actually offered to buy it for me for a few hundred bucks,
+
+03:45.760 --> 03:51.280
+ but for a kid in Russia. That's a big deal. That's a big deal. Yeah. I did not take the deal.
+
+03:51.840 --> 03:59.040
+ Wow, integrity. Yeah, I instead used the bid. Yes, that was not the most acute financial move
+
+03:59.040 --> 04:04.240
+ that I made in my life. Looking back at it now, I instead put it, well, I had a reason. I put it
+
+04:04.240 --> 04:09.440
+ online. It was, what did you call it back in the days? It was a freeware thing. It was not open
+
+04:09.440 --> 04:13.280
+ source, but you could upload the binaries, you would put the game online. And the idea was that
+
+04:13.280 --> 04:17.600
+ people like it and then they contribute and they send you a little donations. So I did my quick
+
+04:17.600 --> 04:22.160
+ math of like, of course, thousands and millions of people are going to play my game, send me a
+
+04:22.160 --> 04:27.280
+ couple of bucks a piece. You should definitely do that. As I said, not the best find. You're
+
+04:27.280 --> 04:31.760
+ already playing business models at that age. Remember what language it was? What programming
+
+04:31.760 --> 04:37.920
+ it was? Pascal. Pascal. Pascal. Pascal. And they had a graphical component. So it's not text based.
+
+04:37.920 --> 04:44.880
+ Yeah, it was like, I think there are 320 by 200, whatever it was, I think kind of the earlier
+
+04:44.880 --> 04:48.160
+ version. That's the resolution. That's the resolution, right? And I actually think the reason
+
+04:48.160 --> 04:52.160
+ why this company wanted to buy it is not like the fancy graphics or the implementation. It was
+
+04:52.160 --> 04:59.520
+ maybe the idea of my actual game. The idea of the game. Well, one of the things, it's so funny,
+
+04:59.520 --> 05:06.800
+ I used to play this game called Golden Axe. And the simplicity of the graphics and something
+
+05:06.800 --> 05:12.400
+ about the simplicity of the music, like it still haunts me. I don't know if that's a childhood
+
+05:12.400 --> 05:16.640
+ thing. I don't know if that's the same thing for Call of Duty these days for young kids. But
+
+05:16.640 --> 05:26.400
+ I still think that the simple one of the games are simple, that simple purity makes for like
+
+05:26.400 --> 05:31.840
+ allows your imagination to take over and thereby creating a more magical experience. Like now
+
+05:31.840 --> 05:38.240
+ with better and better graphics, it feels like your imagination doesn't get to create worlds,
+
+05:38.240 --> 05:44.240
+ which is kind of interesting. It could be just an old man on a porch waving at kids these days
+
+05:44.240 --> 05:49.520
+ that have no respect. But I still think that graphics almost get in the way of the experience.
+
+05:49.520 --> 05:58.160
+ I don't know. Flippy Bird. Yeah. Why don't I don't know if the game is closed.
+
+05:58.160 --> 06:03.520
+ I don't yet. But that's more about games that like that's more like Tetris World where they
+
+06:03.520 --> 06:13.840
+ optimally, masterfully like create a fun short term dopamine experience versus I'm more referring to
+
+06:13.840 --> 06:19.360
+ like role playing games where there's like a story you can live in it for months or years.
+
+06:21.120 --> 06:25.040
+ Like there's an Elder Scrolls series, which is probably my favorite set of games.
+
+06:25.680 --> 06:30.000
+ That was a magical experience. And then the graphics are terrible. The characters were
+
+06:30.000 --> 06:36.080
+ all randomly generated. But they're, I don't know, it pulls you in. There's a story. It's like
+
+06:36.080 --> 06:44.160
+ an interactive version of an Elder Scrolls Tolkien world and you get to live in it. I don't know. I
+
+06:44.160 --> 06:50.400
+ miss it. It's one of the things that suck about being an adult is there's no, you have to live
+
+06:50.400 --> 06:55.440
+ in the real world as opposed to the Elder Scrolls world. You know, whatever brings you joy, right?
+
+06:56.080 --> 06:59.440
+ Minecraft, right? Minecraft is a great example. You create like it's not the fancy graphics,
+
+06:59.440 --> 07:04.560
+ but it's the creation of your own worlds. Yeah, that one is crazy. You know, one of the pitches
+
+07:04.560 --> 07:10.480
+ for being a parent that people tell me is that you can like use the excuse of parenting to
+
+07:10.480 --> 07:16.960
+ go back into the video game world. And like, like that's like, you know, father, son, father,
+
+07:16.960 --> 07:22.000
+ father, daughter time, but really you just get to play video games with your kids. So anyway,
+
+07:22.000 --> 07:29.680
+ at that time, did you have any ridiculous, ambitious dreams of where as a creator you might go
+
+07:29.680 --> 07:35.280
+ as an engineer? What did you think of yourself as an engineer, as a tinker, or did you want to be
+
+07:35.280 --> 07:40.240
+ like an astronaut or something like that? You know, I'm tempted to make something up about,
+
+07:40.240 --> 07:46.160
+ you know, robots, engineering or, you know, mysteries of the universe. But that's not the
+
+07:46.160 --> 07:49.760
+ actual memory that pops into my mind when you when you asked me about childhood dreams. So I
+
+07:49.760 --> 08:00.080
+ actually share the real thing. When I was maybe four or five years old, I, as we all do, I thought
+
+08:00.080 --> 08:08.400
+ about no one I wanted to do when I grow up. And I had this dream of being a traffic control cup.
+
+08:09.520 --> 08:12.880
+ You know, they don't have those todays, I think, but you know, back in the 80s and you know, in
+
+08:12.880 --> 08:19.040
+ Russia, you probably are familiar with athletics, they had these, you know, police officers that
+
+08:19.040 --> 08:22.240
+ would stand in the middle of an intersection all day, and they would have their like striped back
+
+08:22.240 --> 08:26.640
+ back and wide batons that they would use to, you know, control the flow of traffic. And you know,
+
+08:26.640 --> 08:31.920
+ for whatever reason, I was strangely infatuated with this whole process. And like that, that was
+
+08:31.920 --> 08:38.720
+ my dream. That's what I wanted to do when I grew up. And you know, my parents, both physics profs,
+
+08:38.720 --> 08:44.000
+ by the way, I think we're, you know, a little concerned with that level of ambition coming
+
+08:44.000 --> 08:50.480
+ from their child at that age. Well, it's an interesting, I don't know if you can relate,
+
+08:50.480 --> 08:55.840
+ but I very much love that idea. I have an OCD nature that I think lends itself
+
+08:56.880 --> 09:03.520
+ very close to the engineering mindset, which is you want to kind of optimize,
+
+09:04.640 --> 09:11.200
+ you know, solve a problem by creating an automated solution, like a set of rules,
+
+09:11.200 --> 09:16.320
+ that set of rules you can follow, and then thereby make it ultra efficient. I don't know if that's,
+
+09:16.320 --> 09:21.760
+ it was of that nature. I certainly have that. There's like factor like SimCity and factory
+
+09:21.760 --> 09:26.720
+ building games, all those kinds of things kind of speak to that engineering mindset. Or did you
+
+09:26.720 --> 09:31.440
+ just like the uniform? I think it was more of the latter. I think it was the uniform and, you know,
+
+09:31.440 --> 09:38.800
+ the, the striped baton that made cars go in the right directions. But I guess, you know, it is,
+
+09:38.800 --> 09:44.240
+ I did end up, I guess, you know, working on the transportation industry one way or another.
+
+09:44.240 --> 09:51.520
+ No uniform, no, but that's right. Maybe it was my, you know, deep inner infatuation with the,
+
+09:51.520 --> 09:57.200
+ you know, traffic control batons that led to this career. Okay, when did you,
+
+09:58.000 --> 10:02.560
+ when was the leap from programming to robotics? That happened later. That was after grad school.
+
+10:02.560 --> 10:09.520
+ After, and actually the, you know, cell driving cars was, I think, my first real hands on introduction
+
+10:09.520 --> 10:15.280
+ to robotics. But I never really had that much hands on experience in school and training. I,
+
+10:15.280 --> 10:23.280
+ you know, worked on applied math and physics. Then in college, I did more abstract computer science.
+
+10:24.160 --> 10:29.680
+ And it was after grad school that I really got involved in robotics, which was actually cell
+
+10:29.680 --> 10:35.200
+ driving cars. And, you know, that was a big, big flip. What, what grad school? So I went to
+
+10:35.200 --> 10:39.760
+ grad school in Michigan, and then I did a postdoc at Stanford, which is that was the postdoc where
+
+10:39.760 --> 10:46.560
+ I got to play with cell driving cars. Yeah, so we'll return there. Let's go back to, to Moscow.
+
+10:46.560 --> 10:52.240
+ So I, you know, for episode 100, I talked to my dad. And also I grew up with my dad, I guess.
+
+10:52.240 --> 11:04.080
+ So I had to put up with them for many years. And he, he went to the Fistyev or MIPT.
+
+11:04.080 --> 11:09.440
+ It's weird to say in English, because I've heard all this in Russian, Moscow Institute of Physics
+
+11:09.440 --> 11:16.080
+ and Technology. And to me, that was like, I met some super interesting, as a child, I met some
+
+11:16.080 --> 11:21.520
+ super interesting characters. It felt to me like the greatest university in the world, the most
+
+11:21.520 --> 11:27.360
+ elite university in the world. And just the people that I met that came out of there were like,
+
+11:29.840 --> 11:35.520
+ not only brilliant, but also special humans. It seems like that place really tested the soul,
+
+11:37.120 --> 11:43.840
+ both like in terms of technically and like spiritually. So that could be just the romanticization
+
+11:43.840 --> 11:48.880
+ of that place. I'm not sure. But so maybe you can speak to it. But is it correct to say that you
+
+11:48.880 --> 11:54.080
+ spent some time at Fistyev? Yeah, that's right. Six years. I got my bachelor's and master's and
+
+11:54.640 --> 12:00.400
+ physics and math there. And it was interesting because my dad, actually both my parents,
+
+12:00.400 --> 12:06.960
+ went there. And I think all the stories that I heard, like, just like you, Alex, growing up
+
+12:06.960 --> 12:10.960
+ about the place and, you know, how interesting and special and magical it was, I think that was
+
+12:10.960 --> 12:18.560
+ a significant, maybe the main reason I wanted to go there for college, enough so that I actually
+
+12:18.560 --> 12:24.720
+ went back to Russia from the U.S. I graduated high school in the U.S. And you went back there.
+
+12:24.720 --> 12:29.680
+ I went back there. Yeah. Wow. Exactly the reaction most of my peers in college had,
+
+12:29.680 --> 12:34.880
+ but, you know, perhaps a little bit stronger that would point me out as this crazy kid.
+
+12:34.880 --> 12:38.240
+ Were your parents supportive of that? Yeah. Yeah. My games, your previous question, they
+
+12:38.960 --> 12:44.320
+ supported me in letting me pursue my passions and the things that I was there.
+
+12:44.320 --> 12:46.560
+ That's a bold move. Wow. What was it like there?
+
+12:46.560 --> 12:51.040
+ It was interesting. You know, definitely fairly hardcore on the fundamentals of, you know,
+
+12:51.040 --> 12:56.240
+ math and physics and, you know, lots of good memories from, you know, from those times.
+
+12:56.800 --> 12:59.840
+ So, okay. So, Stanford, how'd you get into autonomous vehicles?
+
+13:00.400 --> 13:08.720
+ I had the great fortune and great honor to join Stanford's DARPA urban challenge team
+
+13:08.720 --> 13:14.400
+ in 2006. This was a third in the sequence of the DARPA challenges. There were two
+
+13:14.400 --> 13:20.480
+ grand challenges prior to that. And then in 2007, they held the DARPA urban challenge.
+
+13:20.480 --> 13:29.040
+ So, you know, I was doing my postdoc I had. I joined the team and worked on motion planning for,
+
+13:29.600 --> 13:33.680
+ you know, that competition. So, okay. So, for people who might not know,
+
+13:33.680 --> 13:37.680
+ I know from a certain perspective, autonomous vehicles is a funny world.
+
+13:38.320 --> 13:42.400
+ In a certain circle of people, everybody knows everything. And in a certain circle,
+
+13:42.400 --> 13:49.600
+ nobody knows anything in terms of general public. So, it's interesting. It's a good question of
+
+13:49.600 --> 13:56.880
+ what to talk about. But I do think that the urban challenge is worth revisiting. It's a fun little
+
+13:56.880 --> 14:05.040
+ challenge. One that, first of all, like sparked so many incredible minds to focus on one of the
+
+14:05.040 --> 14:10.000
+ hardest problems of our time in artificial intelligence. So, that's a success from a
+
+14:10.000 --> 14:14.800
+ perspective of a single little challenge. But can you talk about, like, what did the challenge
+
+14:14.800 --> 14:21.280
+ involve? So, were there pedestrians? Were there other cars? What was the goal? Who was on the
+
+14:21.280 --> 14:29.360
+ team? How long did it take? Any fun sort of specs? Sure, sure, sure. So, the way that the challenge
+
+14:29.360 --> 14:33.600
+ was constructed in just a little bit of background, as I mentioned, this was the third
+
+14:34.800 --> 14:38.720
+ competition in that series. The first two were the grand challenge called the grand challenge.
+
+14:38.720 --> 14:43.280
+ The goal there was to just drive in a completely static environment. You had to drive in a desert.
+
+14:44.880 --> 14:51.040
+ That was very successful. So, then DARPA followed with what they called the urban challenge, where
+
+14:51.760 --> 14:58.000
+ the goal was to build vehicles that could operate in more dynamic environments and share them with
+
+14:58.000 --> 15:03.200
+ other vehicles. There were no pedestrians there. But what DARPA did is they took over an abandoned
+
+15:03.200 --> 15:10.000
+ air force base. And it was kind of like a little fake city that they built out there. And they had
+
+15:10.000 --> 15:15.440
+ a bunch of robots, you know, cars that were autonomous in there all at the same time,
+
+15:16.160 --> 15:24.320
+ mixed in with other vehicles driven by professional drivers. And each car had a mission. And so,
+
+15:24.320 --> 15:28.960
+ there's a crude map that they received at the beginning. And they had a mission and go, you
+
+15:28.960 --> 15:34.720
+ know, here and then there and over here. And they kind of all were sharing this environment at the
+
+15:34.720 --> 15:38.320
+ same time. They had to interact with each other. They had to interact with the human drivers.
+
+15:38.320 --> 15:45.760
+ So, it's this very first, very rudimentary version of a self driving car that, you know,
+
+15:45.760 --> 15:52.560
+ could operate in an environment shared with other dynamic actors. That, as you said,
+
+15:52.560 --> 15:56.160
+ you know, really, in many ways, you know, kickstarted this whole industry.
+
+15:56.160 --> 16:00.800
+ Okay. So, who was on the team? And how'd you do? I forget.
+
+16:03.200 --> 16:08.240
+ I came in second. Perhaps that was my contribution to the team. I think the staffer team came in
+
+16:08.240 --> 16:12.160
+ first in the DARPA challenge. But then I joined the team and, you know, you were the one with the
+
+16:12.160 --> 16:17.440
+ bug in the code. I mean, do you have sort of memories of some particularly challenging things?
+
+16:17.440 --> 16:23.760
+ Or, you know, one of the cool things is not, you know, this isn't a product. This isn't the thing
+
+16:23.760 --> 16:29.520
+ that, you know, there's, you have a little bit more freedom to experiment. So, you can take risks.
+
+16:29.520 --> 16:35.600
+ And there's, so you can make mistakes. So, is there interesting mistakes? Is there interesting
+
+16:35.600 --> 16:41.280
+ challenges that stand out to you as something that taught you a good technical lesson or a
+
+16:41.280 --> 16:46.960
+ good philosophical lesson from that time? Yeah. You know, definitely, definitely a very memorable
+
+16:46.960 --> 16:54.240
+ time. Not really a challenge, but like one of the most vivid memories that I have from the time. And
+
+16:54.240 --> 17:01.040
+ I think that was actually one of the days that, you know, really got me hooked on this whole field
+
+17:01.040 --> 17:10.720
+ was the first time I got to run my software on the car. And I was working on a part of our planning
+
+17:10.720 --> 17:14.960
+ algorithm that had to navigate in parking lots. So it was, you know, something that, you know,
+
+17:14.960 --> 17:19.920
+ called free space motion planning. So the very first version of that was, you know, we tried on
+
+17:19.920 --> 17:24.880
+ the car. It was on Stanford's campus in the middle of the night. And, you know, I had this little,
+
+17:24.880 --> 17:28.880
+ you know, course constructed with cones in the middle of a parking lot. So we're there like
+
+17:28.880 --> 17:35.200
+ 3am, you know, by the time we got the code to, you know, you know, compile and turn over. And,
+
+17:35.200 --> 17:40.560
+ you know, it drove. I could actually did something quite reasonable. And, you know, it was, of course,
+
+17:40.560 --> 17:48.480
+ very buggy at the time and had all kinds of problems. But it was pretty darn magical. I remember
+
+17:48.480 --> 17:53.600
+ going back and, you know, later at night and trying to fall asleep and just being unable to
+
+17:53.600 --> 18:00.960
+ fall asleep for the rest of the night. Just my mind was blown. And that's what I've been doing
+
+18:00.960 --> 18:06.800
+ ever since for more than a decade. In terms of challenges and, you know, interesting memories
+
+18:06.800 --> 18:11.840
+ like on the day of the competition, it was pretty nerve wrecking. I remember standing there with
+
+18:11.840 --> 18:16.800
+ Mike Montemarillo, who was the software lead and wrote most of the code. I think I did one little
+
+18:16.800 --> 18:22.880
+ part of the planner, Mike, you know, incredibly did pretty much the rest of it with a bunch of
+
+18:22.880 --> 18:27.600
+ other incredible people. But I remember standing on the day of the competition, you know, watching
+
+18:27.600 --> 18:33.040
+ the car, you know, with Mike and your cars are completely empty, right? They're all there,
+
+18:33.040 --> 18:37.360
+ lined up in the beginning of the race. And then, you know, DARPA sends them, you know, on their
+
+18:37.360 --> 18:42.160
+ mission, one by one, something leave. And Mike, you just, they had these sirens. They all had
+
+18:42.160 --> 18:46.800
+ their different silence, right? Each siren had its own personality, if you will. So, you know,
+
+18:46.800 --> 18:50.320
+ off they go and you don't see them. You just kind of, and then every once in a while, they, you know,
+
+18:50.320 --> 18:55.440
+ come a little bit closer to where the audience is. And you can kind of hear, you know, the sound of
+
+18:55.440 --> 18:59.600
+ your car. And, you know, it seems to be moving along. So that gives you hope. And then, you know,
+
+18:59.600 --> 19:02.640
+ it goes away and you can't hear it for too long. You start getting anxious, right? So it's a little
+
+19:02.640 --> 19:05.680
+ bit like, you know, sending your kids to college and like, you know, kind of you invested in them.
+
+19:05.680 --> 19:12.720
+ You hope you, you build it properly, but like, it's still anxiety inducing. So that was an
+
+19:12.720 --> 19:20.080
+ incredibly fun few days. In terms of, you know, bugs, as we mentioned, you know, one that was my bug
+
+19:20.080 --> 19:25.040
+ that caused us the loss of the first place is still a debate that, you know, occasionally have
+
+19:25.040 --> 19:30.400
+ with people on the CMU team, CMU came first, I should mention that. See, you haven't heard of
+
+19:30.400 --> 19:34.480
+ them. But yeah, it's something, you know, it's a small school, it's, it's, it's, you know,
+
+19:34.480 --> 19:38.160
+ it's really a glitch that, you know, they happen to succeed at something robotics related.
+
+19:38.160 --> 19:43.760
+ Very scenic though. So most people go there for the scenery. Yeah, it's a beautiful campus.
+
+19:45.280 --> 19:49.680
+ Unlike Stanford. So for people, yeah, that's true. Unlike Stanford. For people who don't
+
+19:49.680 --> 19:53.920
+ know, CMU is one of the great robotics and sort of artificial intelligence universities in the
+
+19:53.920 --> 20:01.680
+ world. CMU Carnegie Mellon University. Okay, sorry, go ahead. Good, good PSA. So in the part that
+
+20:02.640 --> 20:08.400
+ I contributed to, which was navigating parking lots, and the way, you know, that part of the
+
+20:08.400 --> 20:16.000
+ mission work is you in a parking lot, you would get from DARPA an outline of the map. You basically
+
+20:16.000 --> 20:21.280
+ get this giant polygon that defined the perimeter of the parking lot. And there would be an entrance
+
+20:21.280 --> 20:28.960
+ and maybe multiple entrances or exits to it. And then you would get a goal within that open space,
+
+20:29.840 --> 20:36.080
+ XY heading, where the car had to park. It had no information about the obstacles that the car
+
+20:36.080 --> 20:41.280
+ might encounter there. So it had to navigate kind of completely free space from the entrance to the
+
+20:41.280 --> 20:49.440
+ parking lot into that parking space. And then once you're parked there, it had to exit the
+
+20:49.440 --> 20:52.960
+ parking lot. And you know, while of course, encountering and reasoning about all the obstacles
+
+20:52.960 --> 21:00.080
+ that it encounters in real time. So our interpretation, or at least my interpretation
+
+21:00.080 --> 21:05.200
+ of the rules was that you had to reverse out of the parking spot. And that's what our cars did,
+
+21:05.200 --> 21:09.920
+ even if there's no obstacle in front. That's not what CMU's car did. And it just kind of
+
+21:09.920 --> 21:13.920
+ drove right through. So there's still a debate. And of course, you know, if you stop and then
+
+21:13.920 --> 21:18.800
+ reverse out and go out the different way, that costs you some time. And so there's still a debate
+
+21:18.800 --> 21:23.360
+ whether, you know, it was my poor implementation that cost us extra time, or whether it was,
+
+21:23.360 --> 21:28.560
+ you know, CMU violating an important rule of the competition. And, you know, I have my own
+
+21:29.440 --> 21:34.320
+ opinion here. In terms of other bugs, and like, I have to apologize to Mike Montemarillo for
+
+21:34.320 --> 21:40.560
+ sharing this on air. But it is actually one of the more memorable ones. And it's something that's
+
+21:40.560 --> 21:46.720
+ kind of become a bit of a metaphor in the industry since then, I think, at least in some
+
+21:46.720 --> 21:54.880
+ circles, it's called the victory circle or victory lap. And our cars did that. So in one of the
+
+21:54.880 --> 22:01.280
+ missions in the urban challenge, in one of the courses, there was this big oval right by the
+
+22:01.280 --> 22:05.760
+ start and finish of the race. So the ARPA head, a lot of the missions would finish in that same
+
+22:05.760 --> 22:10.320
+ location. And it was pretty cool because you could see the cars come by, you know, kind of finish
+
+22:10.320 --> 22:17.760
+ that part leg of the trip, that leg of the mission, and then go on and finish the rest of it. And
+
+22:18.480 --> 22:25.600
+ other vehicles would, you know, come hit their waypoint and exit the oval and off they would go.
+
+22:25.600 --> 22:29.920
+ Our car in the hand would hit the checkpoint, and then it would do an extra lap around the
+
+22:29.920 --> 22:34.240
+ oval and only then, you know, leave and go in its merry way. So over the course of the full day,
+
+22:34.240 --> 22:38.960
+ it accumulated some extra time. And the problem was that we had a bug where it wouldn't, you know,
+
+22:38.960 --> 22:42.800
+ start reasoning about the next waypoint and plan a route to get to that next point until it
+
+22:42.800 --> 22:47.280
+ hit a previous one. And in that particular case, by the time you hit that one, it was too late
+
+22:47.280 --> 22:51.200
+ for us to consider the next one and kind of make a lane change so that every time we would do like
+
+22:51.200 --> 22:58.960
+ an extra lap. So, you know, that's the Stanford victory lap. The victory lap. Oh, that's, there's,
+
+22:58.960 --> 23:03.920
+ I feel like there's something philosophically profound in there somehow. But I mean, ultimately,
+
+23:03.920 --> 23:10.880
+ everybody is a winner in that kind of competition. And it led to sort of famously
+
+23:10.880 --> 23:19.360
+ to the creation of Google self driving car project and now Waymo. So can we give an overview of
+
+23:19.360 --> 23:26.000
+ how is Waymo born? How is the Google self driving car project born? What is the mission? What is
+
+23:26.000 --> 23:34.640
+ the hope? What is it is the engineering kind of set of milestones that it seeks to accomplish?
+
+23:35.440 --> 23:38.400
+ There's a lot of questions in there. Yeah. I don't know.
+
+23:38.400 --> 23:42.320
+ But you're right. Kind of the DARPA urban challenge and the previous DARPA grand challenges
+
+23:42.960 --> 23:46.960
+ kind of led, I think, to a very large, you know, degree to that next step. And then, you know,
+
+23:46.960 --> 23:53.920
+ Larry and Sergey, Larry Page and Sergey Brin, Google hunter scores, I saw that competition
+
+23:53.920 --> 24:00.160
+ and believed in the technology that the Google self driving car project was born, you know, at
+
+24:00.160 --> 24:05.360
+ that time, and we started in 2009, it was a pretty small group of us, about a dozen people
+
+24:06.160 --> 24:16.480
+ who came together to work on this project at Google. At that time, we saw an incredible early
+
+24:17.040 --> 24:21.760
+ result in the DARPA urban challenge. I think we're all incredibly excited about
+
+24:21.760 --> 24:27.600
+ where we got to. And we believed in the future of the technology, but we still had a very
+
+24:28.640 --> 24:36.080
+ rudimentary understanding of the problem space. So the first goal of this project in 2009 was to
+
+24:36.080 --> 24:42.720
+ really better understand what we're up against. And, you know, with that goal in mind, when we
+
+24:42.720 --> 24:49.840
+ started the project, we created a few milestones for ourselves that maximized learning. Well,
+
+24:49.840 --> 24:56.320
+ the two milestones were, you know, one was to drive 100,000 miles in autonomous mode, which was,
+
+24:56.320 --> 25:02.160
+ at that time, orders of magnitude that more than anybody has ever done. And the second milestone
+
+25:02.160 --> 25:11.440
+ was to drive 10 routes. Each one was 100 miles long. They were specifically chosen to be kind of
+
+25:11.440 --> 25:20.720
+ extra spicy, extra complicated and sampled the full complexity of that domain. And you had to
+
+25:20.720 --> 25:25.280
+ drive each one from beginning to end with no intervention, no human intervention. So you'd
+
+25:25.280 --> 25:30.080
+ get to the beginning of the course, you would press the button that would engage in autonomy,
+
+25:30.080 --> 25:38.400
+ and you had to go for 100 miles beginning to end with no interventions. And it sampled,
+
+25:38.400 --> 25:43.920
+ again, the full complexity of driving conditions. Some were on freeways. We had one route that
+
+25:43.920 --> 25:48.480
+ went all through all the freeways and all the bridges in the Bay Area. You know, we had some
+
+25:48.480 --> 25:54.800
+ that went around Lake Tahoe and kind of mountains roads. We had some that drove through dense urban
+
+25:55.680 --> 26:01.600
+ environments like downtown Palo Alto and through San Francisco. So it was incredibly
+
+26:01.600 --> 26:11.440
+ interesting to work on. And it took us just under two years, about a year and a half, a little bit
+
+26:11.440 --> 26:20.320
+ more to finish both of these milestones. And in that process, it was an incredible amount of fun,
+
+26:20.320 --> 26:25.360
+ probably the most fun I had in my professional career. And you're just learning so much. You are,
+
+26:25.360 --> 26:28.720
+ you know, the goal here is to learn a prototype. You're not yet starting to build a production
+
+26:28.720 --> 26:33.280
+ system, right? So you just, you were, you know, this is when you're kind of, you know, working 24
+
+26:33.280 --> 26:38.000
+ seven and you're hacking things together. And you also don't know how hard this is. I mean,
+
+26:38.000 --> 26:43.040
+ it's the point, like, so, I mean, that's an ambitious, if I put myself in that mindset, even
+
+26:43.040 --> 26:51.200
+ still, that's a really ambitious set of goals, like just those two to picking, picking 10 different,
+
+26:51.200 --> 27:00.720
+ different, difficult, spicy challenges, and then having zero interventions. So like not saying,
+
+27:00.720 --> 27:07.840
+ gradually, we're going to like, you know, over a period of 10 years, we're going to have a bunch
+
+27:07.840 --> 27:12.240
+ of routes and gradually reduce the number of interventions, you know, that literally says,
+
+27:12.240 --> 27:19.600
+ like, by as soon as possible, we want to have zero and on hard roads. So like to me, if I was
+
+27:19.600 --> 27:25.360
+ facing that, it's unclear that whether that takes two years or whether that takes 20 years.
+
+27:26.560 --> 27:33.280
+ I mean, under two, I guess that speaks to a really big difference between doing something
+
+27:33.280 --> 27:40.160
+ once and having a prototype where you're going after, you know, learning about the problem versus
+
+27:40.160 --> 27:46.560
+ how you go about engineering a product that where you look at, you know, you properly do
+
+27:46.560 --> 27:50.240
+ evaluation, you look at metrics, you know, drive dog, and you're confident that you can do that.
+
+27:50.240 --> 27:57.440
+ And I guess that's why it took a dozen people, you know, 16 months or a little bit more than that,
+
+27:58.480 --> 28:03.760
+ back in 2009 and 2010, with the technology of, you know, the more than a decade ago,
+
+28:04.480 --> 28:11.280
+ that amount of time to achieve that milestone of 10 routes, 100 miles each in no interventions.
+
+28:11.280 --> 28:19.440
+ And, you know, it took us a little bit longer to get to, you know, a full driverless product
+
+28:19.440 --> 28:22.800
+ that customers use. That's another really important moment. Is there some
+
+28:24.720 --> 28:30.960
+ memories of technical lessons? Or just one, like, what did you learn about the problem
+
+28:30.960 --> 28:36.240
+ of driving from that experience? I mean, we can now talk about, like, what you learned from
+
+28:36.240 --> 28:43.520
+ modern day Waymo. But I feel like you may have learned some profound things in those early days,
+
+28:44.720 --> 28:50.480
+ even more so, because it feels like what Waymo is now is to trying to, you know, how to do scale,
+
+28:50.480 --> 28:54.080
+ how to make sure you create a product, how to make sure it's like safe, you know, those things,
+
+28:54.080 --> 28:59.120
+ which is all fascinating challenges. But, like, you were facing the more fundamental
+
+28:59.120 --> 29:05.680
+ philosophical problem of driving in those early days, like, what the hell is driving?
+
+29:06.720 --> 29:13.760
+ As an autonomous, or maybe I'm again romanticizing it, but is there a, is there some
+
+29:14.800 --> 29:17.760
+ valuable lessons you picked up over there at those two years?
+
+29:19.360 --> 29:27.120
+ A ton. The most important one is probably that we believe that it's doable. And we've gotten
+
+29:27.120 --> 29:34.400
+ far enough into the problem that, you know, we had a, I think, only glimpse of the true complexity
+
+29:35.600 --> 29:40.400
+ of that domain. And it's a little bit like, you know, climbing a mountain where you kind of,
+
+29:40.400 --> 29:43.760
+ you know, see the next peak and you think that's kind of the summit, but then you get to that and
+
+29:43.760 --> 29:49.680
+ you kind of see that this is just the start of the journey. But we've tried, we've sampled enough
+
+29:49.680 --> 29:55.440
+ of the problem space, and we've made enough rapid success, even, you know, with technology
+
+29:55.440 --> 30:03.520
+ of 2009, 2010, that it gave us confidence to then pursue this as a real product.
+
+30:04.320 --> 30:11.360
+ So, okay, so the next step, you mentioned the milestones that you had in those two years.
+
+30:11.360 --> 30:15.360
+ What are the next milestones that then led to the creation of Waymo and beyond?
+
+30:15.920 --> 30:20.640
+ Yeah, it was a really interesting journey. And, you know, Waymo came a little bit later.
+
+30:20.640 --> 30:28.560
+ Then, you know, we completed those milestones in 2010. That was the pivot when we decided to
+
+30:29.360 --> 30:36.240
+ focus on actually building a product using this technology. The initial couple years after that,
+
+30:36.240 --> 30:41.520
+ we were focused on a freeway, you know, what you would call a driver assist, maybe, you know,
+
+30:41.520 --> 30:49.680
+ an L3 driver assist program. Then around 2013, we've learned enough about the space and if
+
+30:49.680 --> 30:57.280
+ thought more deeply about, you know, the product that we wanted to build that we pivoted. We pivoted
+
+30:57.280 --> 31:04.080
+ towards this vision of, you know, building a driver and deploying it fully driverless vehicles
+
+31:04.080 --> 31:09.680
+ without a person. And that's the path that we've been on since then. And it was exactly the right
+
+31:09.680 --> 31:13.600
+ decision for us. So there was a moment where you're also considered like, what is the right
+
+31:13.600 --> 31:20.880
+ trajectory here? What is the right role of automation in the task of driving? It wasn't
+
+31:20.880 --> 31:24.640
+ from the early days, obviously, you want to go fully autonomous. From the early days,
+
+31:24.640 --> 31:32.080
+ it was not. I think it was around 2013, maybe, that we've, that became very clear and we made
+
+31:32.080 --> 31:38.480
+ that pivot and it also became very clear. And that it's, even the way you go building a driver
+
+31:38.480 --> 31:43.680
+ assist system is fundamentally different from how you go building a fully driverless vehicle. So,
+
+31:43.680 --> 31:49.760
+ you know, we've pivoted towards the ladder and that's what we've been working on ever since.
+
+31:50.640 --> 31:57.920
+ And so that was around 2013. Then there's a sequence of really meaningful for us,
+
+31:57.920 --> 32:09.200
+ really important defining milestones since then. In 2015, we had our first, actually,
+
+32:09.200 --> 32:17.680
+ the world's first fully driverless ride on public roads. It was in a custom build vehicle that we
+
+32:17.680 --> 32:21.360
+ had. We must have seen those. We called them the Firefly, that, you know, funny looking marshmallow
+
+32:21.360 --> 32:31.200
+ looking thing. And we put a passenger, his name was Steve Mann, a great friend of our project
+
+32:31.200 --> 32:37.280
+ from the early days. The man happens to be blind. So we put him in that vehicle. The car had no
+
+32:37.280 --> 32:42.800
+ steering wheel, no pedals. It was an uncontrolled environment. You know, no, you know, lead or
+
+32:42.800 --> 32:48.240
+ chase cars, no police escorts. And, you know, we did that trip a few times in Austin, Texas.
+
+32:48.240 --> 32:54.400
+ So that was a really big milestone. But that was in Austin. Yeah. Okay. And, you know, we only,
+
+32:54.400 --> 32:58.480
+ but at that time, we're only, it took a tremendous amount of engineering. It took a tremendous amount
+
+32:58.480 --> 33:04.880
+ of validation to get to that point. But, you know, we only did it a few times. We only did that. It
+
+33:04.880 --> 33:08.640
+ was a fixed route. It was not kind of a controlled environment, but it was a fixed route. And we
+
+33:08.640 --> 33:19.360
+ only did a few times. Then in 2016, end of 2016, beginning of 2017 is when we founded Waymo,
+
+33:20.000 --> 33:25.680
+ the company. That's when we kind of, that was the next phase of the project where I wanted,
+
+33:26.560 --> 33:32.400
+ we believed in kind of the commercial vision of this technology. And it made sense to create an
+
+33:32.400 --> 33:38.560
+ independent empty, you know, within that alphabet umbrella to pursue this product at scale.
+
+33:39.760 --> 33:47.920
+ Beyond that, in 2017, later in 2017, was another really huge step for us, really big milestone
+
+33:47.920 --> 33:57.920
+ where we started, it was October of 2017, where when we started regular driverless operations
+
+33:57.920 --> 34:04.640
+ on public roads, that first day of operations, we drove in one day, in that first day, 100 miles
+
+34:04.640 --> 34:10.000
+ in driverless fashion. And then the most important thing about that milestone was not that 100
+
+34:10.000 --> 34:15.280
+ miles in one day, but that it was the start of kind of regular, ongoing driverless operations.
+
+34:15.280 --> 34:18.400
+ And when you say driverless, it means no driver.
+
+34:19.440 --> 34:23.520
+ That's exactly right. So on that first day, we actually hit a mix. And in some,
+
+34:23.520 --> 34:30.800
+ we didn't want to like, you know, be on YouTube and Twitter that same day. So in many of the rides,
+
+34:30.800 --> 34:35.200
+ we had somebody in the driver's seat, but they could not disengage, like the car could not
+
+34:35.200 --> 34:41.840
+ disengage. But actually, on that first day, some of the miles were driven and just completely
+
+34:41.840 --> 34:46.480
+ empty driver's seat. And this is the key distinction that I think people don't realize,
+
+34:46.480 --> 34:54.240
+ it's, you know, that oftentimes when you talk about autonomous vehicles, there's often a driver
+
+34:54.240 --> 35:04.000
+ in the seat that's ready to take over what's called a safety driver. And then Waymo is really one of
+
+35:04.000 --> 35:11.360
+ the only companies that I'm aware of, or at least as like boldly and carefully and all that is
+
+35:11.360 --> 35:17.600
+ actually has cases. And now we'll talk about more and more, where there's literally no driver.
+
+35:17.600 --> 35:22.880
+ So that's another interesting case of where the driver is not supposed to disengage. That's like
+
+35:22.880 --> 35:27.360
+ a nice middle ground. They're still there, but they're not supposed to disengage. But really,
+
+35:27.360 --> 35:34.160
+ there's the case when there's no, okay, there's something magical about there being nobody in
+
+35:34.160 --> 35:42.720
+ the driver's seat. Like, just like to me, you mentioned the first time you wrote some code
+
+35:42.720 --> 35:49.520
+ for free space navigation of the parking lot, that was like a magical moment. To me, just sort of
+
+35:49.520 --> 35:57.680
+ as an observer of robots, the first magical moment is seeing an autonomous vehicle turn,
+
+35:57.680 --> 36:05.280
+ like make a left turn, like, apply sufficient torque to the steering wheel to where like,
+
+36:05.280 --> 36:10.960
+ there's a lot of rotation. And for some reason, and there's nobody in the driver's seat, for some
+
+36:10.960 --> 36:18.160
+ reason that, that communicates that here's a being with power that makes a decision. There's
+
+36:18.160 --> 36:22.560
+ something about like the steering wheel, because we perhaps romanticize the notion of the steering
+
+36:22.560 --> 36:29.120
+ wheel, it's so essential to our conception, our 20th century conception of a car. And it turning
+
+36:29.120 --> 36:35.760
+ the steering wheel with nobody in driver's seat, that to me, I think maybe to others, it's really
+
+36:35.760 --> 36:41.040
+ powerful, like this thing is in control. And then there's this leap of trust that you give,
+
+36:41.040 --> 36:45.600
+ like, I'm going to put my life in the hands of this thing that's in control. So in that sense,
+
+36:45.600 --> 36:53.520
+ when there's no driver in the driver's seat, that's a magical moment for robots. So I got
+
+36:53.520 --> 36:58.960
+ the chance to last year to take a ride in a Williamsville vehicle. And that was the magical
+
+36:58.960 --> 37:05.200
+ moment. There's like, nobody in the driver's seat. It's like the little details, you would think it
+
+37:05.200 --> 37:10.320
+ doesn't matter whether there's a driver or not. But like, if there's no driver, and the steering
+
+37:10.320 --> 37:17.840
+ wheel is turning on its own, I don't know, that's magical. It's absolutely magical. I've taken many
+
+37:17.840 --> 37:23.840
+ of these rides in a completely empty car. No human in the car pulls up. You call it on your
+
+37:23.840 --> 37:30.080
+ cell phone, it pulls up, you get in, it takes you on its way. There's nobody in the car but you,
+
+37:30.080 --> 37:39.760
+ right? That's something called fully driverless, our rider only mode of operation. Yeah, it is
+
+37:39.760 --> 37:47.280
+ magical. It is transformative. This is what we hear from our riders. It really changes your
+
+37:47.280 --> 37:54.160
+ experience. And that really is what unlocks the real potential of this technology. But coming
+
+37:54.160 --> 38:02.720
+ back to our journey, that was 2017 when we started truly driverless operations. Then in 2018, we've
+
+38:02.720 --> 38:13.040
+ launched our public commercial service that we called Waymo One in Phoenix. In 2019, we started
+
+38:13.040 --> 38:22.160
+ offering truly driverless rider only rides to our early rider population of users. And then in
+
+38:22.160 --> 38:28.720
+ 2020, it's also been a pretty interesting year, one of the first months. I less about technology,
+
+38:28.720 --> 38:36.640
+ but more about the maturing and the growth of Waymo as a company. We raised our first
+
+38:37.200 --> 38:42.240
+ round of external financing this year. We were part of Alphabet. So obviously, we have access to
+
+38:43.120 --> 38:48.720
+ significant resources. But on the journey of Waymo maturing as a company, it made sense for us to
+
+38:48.720 --> 38:57.280
+ partially go externally in this round. So we raised about $3.2 billion from that round.
+
+38:57.280 --> 39:06.960
+ We've also started putting our fifth generation of our driver, our hardware that is on the new
+
+39:06.960 --> 39:15.600
+ vehicle. But it's also a qualitatively different set of self driving hardware that is now on the
+
+39:15.600 --> 39:21.440
+ JLR pace. So that was a very important step for us. The hardware specs, fifth generation,
+
+39:21.440 --> 39:30.000
+ I think it would be fun to maybe, I apologize if I'm interrupting, but maybe talk about maybe the
+
+39:30.000 --> 39:34.960
+ generations with the focus on what we're talking about on the fifth generation in terms of hardware
+
+39:34.960 --> 39:41.920
+ specs, like what's on this car. Sure. So we separated on the actual car that we are driving
+
+39:41.920 --> 39:46.720
+ from the self driving hardware we put on it. Right now, we have, so this is, as I mentioned,
+
+39:46.720 --> 39:53.840
+ the fifth generation, we've gone through, we started building our own hardware many,
+
+39:53.840 --> 40:01.840
+ many years ago. And that Firefly vehicle also had the hardware suite that was mostly
+
+40:01.840 --> 40:08.640
+ designed and engineered and built in house. Lighters are one of the more important components
+
+40:08.640 --> 40:12.960
+ that we design and build from the ground up. So on the fifth generation,
+
+40:12.960 --> 40:21.440
+ after drivers of our software and hardware that we're switching to right now, we have,
+
+40:22.640 --> 40:28.400
+ as with previous generations, in terms of sensing, we have lighters, cameras, and radars. And we
+
+40:28.400 --> 40:33.200
+ have a pretty beefy computer that processes all that information and makes decisions and real
+
+40:33.200 --> 40:42.320
+ time on board the car. So in all of the, and it's really a qualitative jump forward in terms of
+
+40:42.320 --> 40:47.840
+ the capabilities and the various parameters and specs of the hardware compared to what we had
+
+40:47.840 --> 40:53.040
+ before and compared to what you can get off the shelf in the market today. Meaning from fifth
+
+40:53.040 --> 40:58.080
+ to fourth or from fifth to first? Definitely from first to fifth, but also from the fourth.
+
+40:58.080 --> 41:06.800
+ World's dumbest question. Definitely from fourth to fifth, as well as the last step is a big step
+
+41:06.800 --> 41:14.560
+ forward. So everything's in house. So like lighters built in house and cameras are built in house?
+
+41:15.920 --> 41:23.040
+ It's different. We work with partners. There's some components that we get from our manufacturing
+
+41:23.040 --> 41:31.280
+ and supply chain partners. What exactly is in house is a bit different. We do a lot of custom
+
+41:31.280 --> 41:37.200
+ design on all of our sensing material. There's lighters, radars, cameras. Exactly. There's
+
+41:37.200 --> 41:43.920
+ lighters are almost exclusively in house. And some of the technologies that we have, some of the
+
+41:43.920 --> 41:50.080
+ fundamental technologies there are completely unique to Waymo. That is also largely true about
+
+41:50.080 --> 41:55.360
+ radars and cameras. It's a little bit more of a mix in terms of what we do ourselves versus what
+
+41:55.360 --> 42:00.720
+ we get from partners. Is there something super sexy about the computer that you can use?
+
+42:00.720 --> 42:07.200
+ The computer that you can mention? That's not top secret. Like for people who enjoy computers,
+
+42:08.240 --> 42:13.360
+ I mean, there's a lot of machine learning involved, but there's a lot of just basic
+
+42:13.360 --> 42:19.200
+ computer. You have to probably do a lot of signal processing on all the different sensors.
+
+42:19.760 --> 42:23.840
+ You have to integrate everything. It has to be in real time. There's probably some kind of redundancy
+
+42:23.840 --> 42:29.200
+ type of situation. Is there something interesting you can say about the computer for the people who
+
+42:29.200 --> 42:33.920
+ love hardware? It does have all of the characteristics, all the properties that you just mentioned.
+
+42:34.480 --> 42:43.280
+ Redundancy, very beefy compute for general processing as well as inference and ML models.
+
+42:43.280 --> 42:47.120
+ It is some of the more sensitive stuff that I don't want to get into for IP reasons, but
+
+42:48.880 --> 42:55.600
+ we've shared a little bit in terms of the specs of the sensors that we have on the car. We've
+
+42:55.600 --> 43:04.480
+ actually shared some videos of what our lighters see in the world. We have 20 line cameras. We have
+
+43:04.480 --> 43:11.120
+ five lighters. We have six radars on these vehicles. You can get a feel for the amount of data that
+
+43:11.120 --> 43:16.960
+ they're producing that all has to be processed in real time to do perception, to do complex
+
+43:16.960 --> 43:20.880
+ reasoning. It gives you some idea of how beefy those computers are, but I don't want to get
+
+43:20.880 --> 43:25.200
+ into specifics of exactly how we build them. Okay. Let me try some more questions that you
+
+43:25.200 --> 43:30.320
+ can get into the specifics of like GPU wise. Is that something you can get into? I know that
+
+43:30.320 --> 43:35.280
+ Google works with GPUs and so on. I mean, for machine learning folks, it's kind of interesting.
+
+43:38.800 --> 43:44.480
+ How do I ask it? I've been talking to people in the government about UFOs and they don't
+
+43:44.480 --> 43:48.320
+ answer any questions. This is how I feel right now asking about GPUs.
+
+43:48.320 --> 43:58.240
+ But is there something interesting that you could reveal or would leave it up to our imagination
+
+43:58.240 --> 44:05.600
+ some of the compute? Is there any fun trickery? Like I talked to Chris Latner for a second time
+
+44:05.600 --> 44:11.920
+ and he was a key person about TPUs and there's a lot of fun stuff going on in Google in terms of
+
+44:11.920 --> 44:18.720
+ hardware that optimizes for machine learning. Is there something you can reveal in terms of how
+
+44:18.720 --> 44:24.320
+ much you mentioned customization, how much customization there is for hardware for machine
+
+44:24.320 --> 44:28.800
+ learning purposes? I'm going to be like that government, you know, you've got a person who
+
+44:28.800 --> 44:38.960
+ bought UFOs, but I guess I will say that it's really compute. It's really important. We have
+
+44:38.960 --> 44:46.720
+ very data hungry and compute hungry ML models all over our stack and this is where, you know,
+
+44:48.320 --> 44:53.520
+ both being part of Alphabet as well as designing our own sensors and the entire hardware suite
+
+44:53.520 --> 45:02.080
+ together where on one hand you get access to really rich raw sensor data that you can pipe from your
+
+45:02.080 --> 45:10.560
+ sensors into your compute platform and build the whole pipe from sensor raw sensor data
+
+45:10.560 --> 45:15.600
+ to the big compute as then have the massive compute to process all that data. This is where
+
+45:15.600 --> 45:21.360
+ we're finding that having a lot of control of that hardware part of the stack is really
+
+45:21.360 --> 45:27.680
+ advantageous. One of the fascinating magical places to me, again, might not be able to speak to
+
+45:27.680 --> 45:33.600
+ the details, but it is the other compute, which is like, we're just talking about a single car,
+
+45:34.320 --> 45:41.520
+ but the driving experience is a source of a lot of fascinating data and you have a huge
+
+45:41.520 --> 45:48.960
+ amount of data coming in on the car and the infrastructure of storing some of that data
+
+45:48.960 --> 45:57.440
+ to then train or to analyze or so on, that's a fascinating piece of it that I understand
+
+45:57.440 --> 46:01.760
+ a single car. I don't understand how you pull it all together in a nice way. Is that something
+
+46:01.760 --> 46:08.720
+ that you could speak to in terms of the challenges of seeing the network of cars and then bringing
+
+46:08.720 --> 46:14.800
+ the data back and analyzing things that went like edge cases of driving, be able to learn on them,
+
+46:14.800 --> 46:20.800
+ to improve the system, to see where things went wrong, where things went right and analyze all
+
+46:20.800 --> 46:25.280
+ that kind of stuff? Is there something interesting there from an engineering perspective?
+
+46:25.280 --> 46:31.760
+ Oh, there's an incredible amount of really interesting work that's happening there,
+
+46:32.480 --> 46:38.240
+ both in the real time operation of the fleet of cars and the information that they exchange
+
+46:38.240 --> 46:45.600
+ with each other in real time to make better decisions, as well as the off board component
+
+46:45.600 --> 46:51.280
+ where you have to deal with massive amounts of data for training your ML models, evaluating
+
+46:51.280 --> 46:58.000
+ the ML models for simulating the entire system and for evaluating your entire system. And this is
+
+46:58.000 --> 47:05.200
+ where being part of Alphabet has, once again, been tremendously advantageous. We consume an
+
+47:05.200 --> 47:11.680
+ incredible amount of compute for ML infrastructure. We build a lot of custom frameworks to get good
+
+47:13.680 --> 47:19.680
+ on data mining, finding the interesting edge cases for training and for evaluation of the system,
+
+47:19.680 --> 47:26.480
+ for both training and evaluating some components and your sub parts of the system in various ML
+
+47:26.480 --> 47:30.320
+ models, as well as the evaluating the entire system and simulation.
+
+47:31.040 --> 47:36.080
+ Okay, that first piece that you mentioned that cars communicating to each other, essentially,
+
+47:36.080 --> 47:40.880
+ I mean, through perhaps through a centralized point. But what, that's fascinating too.
+
+47:41.520 --> 47:45.920
+ How much does that help you? Like, if you imagine, you know, right now the number of
+
+47:45.920 --> 47:52.000
+ way more vehicles is whatever x, I don't know if you can talk to what that number, but it's not in
+
+47:52.000 --> 47:57.440
+ the hundreds of millions yet. And imagine if the whole world is way more vehicles,
+
+47:58.800 --> 48:04.720
+ like that changes potentially the power of connectivity, like the more cars you have,
+
+48:04.720 --> 48:09.040
+ I guess actually, if you look at Phoenix, because there's enough vehicles, there's enough,
+
+48:09.840 --> 48:14.400
+ when there's like some level of density, you can start to probably do some really interesting
+
+48:14.400 --> 48:22.240
+ stuff with the fact that cars can negotiate, can be, can communicate with each other and thereby
+
+48:22.240 --> 48:27.840
+ make decisions. Is there something interesting there that you can talk to about like, how does
+
+48:27.840 --> 48:33.680
+ that help with the driving problem from as compared to just a single car solving the driving problem
+
+48:33.680 --> 48:42.720
+ by itself? Yeah, it's a spectrum. I first to say that, you know, it's it helps. And it helps in
+
+48:42.720 --> 48:47.120
+ various ways, but it's not required. Right now, the way we build our system, like each cars can
+
+48:47.120 --> 48:51.920
+ operate independently, they can operate with no connectivity. So I think it is important that,
+
+48:51.920 --> 49:00.080
+ you know, you have a fully autonomous, you know, fully capable driver that, you know, computerized
+
+49:00.080 --> 49:06.080
+ driver that each car has. Then, you know, they do share information. And they share information
+
+49:06.080 --> 49:13.440
+ in real time, and it really helps. So the way we do this today is, you know, whenever one car
+
+49:14.320 --> 49:18.480
+ encounters something interesting in the world, whether it might be an accident or a new construction
+
+49:18.480 --> 49:24.240
+ zone, that information immediately gets, you know, uploaded over the air and is propagated to the rest
+
+49:24.240 --> 49:30.720
+ of the fleet. So and that's kind of how we think about maps as priors in terms of the knowledge
+
+49:30.720 --> 49:39.440
+ of our drivers, of our fleet of drivers that is distributed across the fleet. And it's updated
+
+49:39.440 --> 49:46.560
+ in real time. So that's one use case. You know, you can imagine as the, you know, the density
+
+49:46.560 --> 49:51.280
+ of these vehicles go up that they can exchange more information in terms of what they're planning
+
+49:51.280 --> 49:58.000
+ to do and start influencing how they interact with each other, as well as, you know, potentially
+
+49:58.000 --> 50:01.840
+ sharing some observations, right, to help with, you know, if you have enough density of these
+
+50:01.840 --> 50:05.600
+ vehicles where, you know, one car might be seeing something that another is relevant to another
+
+50:05.600 --> 50:10.080
+ car that is very dynamic, you know, it's not part of kind of your updating your static prior
+
+50:10.080 --> 50:13.760
+ of the map of the world, but it's more of a dynamic information that could be relevant to the
+
+50:13.760 --> 50:17.680
+ decisions that another car is making real time. So you can see them exchanging that information
+
+50:17.680 --> 50:24.240
+ and you can build on that. But again, I see that as an advantage, but it's, you know, not a requirement.
+
+50:24.240 --> 50:30.160
+ So what about the human in the loop? So when I got a chance to drive with a
+
+50:31.760 --> 50:35.840
+ ride in a Waymo, you know, there's customer service.
+
+50:38.240 --> 50:45.360
+ So like there is somebody that's able to dynamically like tune in and help you out.
+
+50:46.880 --> 50:52.240
+ What, what role does the human play in that picture? That's a fascinating like, you know,
+
+50:52.240 --> 50:57.440
+ the idea of teleoperation, be able to remotely control a vehicle. So here what we're talking about
+
+50:57.440 --> 51:07.280
+ is like, like frictionless, like a human being able to in a, in a frictionless way, sort of
+
+51:07.280 --> 51:11.280
+ help you out. I don't know if they're able to actually control the vehicle. Is that something
+
+51:11.280 --> 51:16.320
+ you could talk to? Yes. Okay. To be clear, we don't do teleoperation. I gotta believe in
+
+51:16.320 --> 51:21.760
+ teleoperation for various reasons. That's not what we have in our cars. We do, as you mentioned,
+
+51:21.760 --> 51:25.280
+ have, you know, version of, you know, customer support, you know, we call it live health. In
+
+51:25.280 --> 51:31.520
+ fact, we find it that it's very important for our rider experience, especially if it's your
+
+51:31.520 --> 51:35.920
+ first trip, you've never been in a fully driverless, right, or only Waymo vehicle, you get in,
+
+51:35.920 --> 51:40.400
+ there's nobody there. And so you can imagine having all kinds of, you know, questions in your head,
+
+51:40.400 --> 51:44.160
+ like how this thing works. So we've put a lot of thought into kind of guiding our,
+
+51:45.680 --> 51:49.040
+ our riders, our customers through that experience, especially for the first time,
+
+51:49.040 --> 51:55.520
+ they get some information on the phone. If the fully driverless vehicle is used to service their
+
+51:55.520 --> 52:01.280
+ trip, when you get into the car, we have an in car, you know, screen and audio that kind of guides
+
+52:01.280 --> 52:08.560
+ them and explains what to expect. They also have a button that they can push that will connect them
+
+52:08.560 --> 52:14.080
+ to, you know, a real life human being that they can talk to, right, about this whole process.
+
+52:14.080 --> 52:20.240
+ So that's one aspect of it. There is, you know, I should mention that there is another function
+
+52:20.240 --> 52:25.520
+ that humans provide to our cars, but it's not teleoperation. You can think of it a little bit
+
+52:25.520 --> 52:30.720
+ more like, you know, fleet assistance, kind of like, you know, traffic control that you have,
+
+52:30.720 --> 52:36.800
+ where our cars, again, they're responsible on their own for making all of the decisions,
+
+52:36.800 --> 52:41.120
+ all of the driving decisions that don't require connectivity. They, you know, anything that is
+
+52:41.120 --> 52:49.360
+ safety or latency critical is done, you know, purely autonomously by onboard system. But there
+
+52:49.360 --> 52:53.680
+ are situations where, you know, if connectivity is available, kind of car encounters a particularly
+
+52:53.680 --> 52:58.880
+ challenging situation, you can imagine like a super hairy scene of an accident, the cars will
+
+52:58.880 --> 53:04.720
+ do their best, they will recognize that it's an off nominal situation, they will, you know, do their
+
+53:04.720 --> 53:08.160
+ best to come up, you know, with the right interpretation, the best course of action in
+
+53:08.160 --> 53:11.920
+ that scenario. But if the connectivity is available, they can ask for confirmation
+
+53:11.920 --> 53:18.560
+ from, you know, a human assistant to kind of confirm those actions and, you know,
+
+53:18.560 --> 53:22.960
+ perhaps provide a little bit of kind of contextual information and guidance.
+
+53:22.960 --> 53:30.880
+ So October 8th was when you're talking about the, was Waymo launched the fully self,
+
+53:31.680 --> 53:37.280
+ the public version of its fully driverless, that's the right term, I think,
+
+53:37.280 --> 53:42.800
+ service in Phoenix. Is that October 8th? That's right. It was the introduction of fully driverless
+
+53:42.800 --> 53:48.160
+ rider only vehicles into our public Waymo One service. Okay, so that's, that's amazing. So
+
+53:48.160 --> 53:56.000
+ it's like anybody can get into Waymo in Phoenix? That's right. So we previously had early people
+
+53:56.000 --> 54:04.560
+ in our early rider program taking fully driverless rides in Phoenix. And just this a little while
+
+54:04.560 --> 54:09.600
+ ago, we opened on October 8th, we opened that mode of operation to the public. So I can,
+
+54:09.600 --> 54:15.520
+ you know, download the app and, you know, go on a ride. There is a lot more demand right now
+
+54:15.520 --> 54:20.240
+ for that service. And then we have capacity. So we're kind of managing that. But that's
+
+54:20.240 --> 54:24.160
+ exactly the way you describe it. Yeah, well, this is interesting. So there's more demand than you can,
+
+54:24.160 --> 54:31.920
+ you can handle. Like what, what has been the reception so far? Like what, I mean, okay, so,
+
+54:31.920 --> 54:38.080
+ you know, that's, this is a product, right? That's a whole nother discussion of like how
+
+54:38.080 --> 54:43.120
+ compelling of a product it is. Great. But it's also like one of the most kind of transformational
+
+54:43.120 --> 54:49.280
+ technologies of the 21st century. So it's also like a tourist attraction. Like it's fun to,
+
+54:49.280 --> 54:54.800
+ you know, to be a part of it. So it'd be interesting to see like, what do people say? What do people,
+
+54:54.800 --> 55:01.200
+ what, what have been the feedback so far? You know, still early days, but so far the feedback has
+
+55:01.200 --> 55:07.600
+ been incredible, incredibly positive. They, you know, we asked them for feedback during the ride,
+
+55:07.600 --> 55:12.400
+ we asked them for feedback after the ride as part of their trip. We asked them some questions,
+
+55:12.400 --> 55:17.520
+ we asked them to rate the performance of our driver. Most by far, you know, most of our
+
+55:17.520 --> 55:24.240
+ drivers give us five stars in our app, which is absolutely great to see. And, you know, that's,
+
+55:24.240 --> 55:28.080
+ and we're, they're also giving us feedback on, you know, things we can improve. And, you know,
+
+55:28.080 --> 55:31.440
+ that's one of the main reasons we're doing this is Phoenix. And, you know, over the last couple
+
+55:31.440 --> 55:37.760
+ years, and every day today, we are just learning a tremendous amount of new stuff from our users.
+
+55:37.760 --> 55:42.720
+ There's, there's no substitute for actually doing the real thing, actually having a fully
+
+55:42.720 --> 55:47.520
+ driverless product out there in the field with, you know, users that are actually, you know,
+
+55:47.520 --> 55:52.400
+ paying us money to get from point A to point B. So this is a legitimate, like, there's a paid
+
+55:52.400 --> 55:58.720
+ service. That's right. And the idea is you use the app to go from point A to point B. And then
+
+55:58.720 --> 56:05.360
+ what, what are the A's? What are the, what's the freedom of the, of the starting and ending places?
+
+56:05.360 --> 56:11.520
+ It's an area of geography where that service is enabled. It's a, you know, decent size of
+
+56:11.520 --> 56:15.440
+ geography of territory. It's actually larger than, you know, than size of San Francisco.
+
+56:16.320 --> 56:20.960
+ And, you know, within that, you have, you know, full freedom of, you know, selecting where you
+
+56:20.960 --> 56:27.200
+ want to go. You know, of course, there's some and you, on your app, you get a map, you tell the car
+
+56:27.200 --> 56:31.520
+ where you want to be picked up, you know, and where you want, you know, the car to pull over
+
+56:31.520 --> 56:34.560
+ and pick you up. And then you tell it where you want to be dropped off. Right. And of course,
+
+56:34.560 --> 56:38.640
+ there are some exclusions, right? You want to be, you know, you wear it in terms of where the car
+
+56:38.640 --> 56:42.080
+ is allowed to pull over, right? So, you know, that you can do, but, you know, besides that,
+
+56:42.640 --> 56:46.080
+ it's amazing. It's not like a fixed, just would be very, I guess, I don't know, maybe that's
+
+56:46.080 --> 56:49.680
+ what's the question behind your question, but it's not a, you know, preset set of.
+
+56:49.680 --> 56:53.920
+ Yes, I guess. So within the geographic constraints with that, within that area,
+
+56:53.920 --> 56:57.280
+ anywhere out, it can be, you can be picked up and dropped off anywhere.
+
+56:57.280 --> 57:01.440
+ That's right. And, you know, people use them on like all kinds of trips they,
+
+57:01.440 --> 57:04.880
+ we have, and we have an incredible spectrum of riders. I think the youngest,
+
+57:04.880 --> 57:07.760
+ actually have car seats in them. And we have, you know, people taking their kids and rides. I
+
+57:07.760 --> 57:11.280
+ think the youngest riders we had on the cars are, you know, one or two years old, you know,
+
+57:11.280 --> 57:15.120
+ and the full spectrum of use cases. People, you can take them to, you know, schools,
+
+57:16.160 --> 57:23.040
+ to, you know, go grocery shopping, to restaurants, to bars, you know, run errands, you know, go
+
+57:23.040 --> 57:27.200
+ shopping, et cetera, et cetera, you go to your office, right? Like the full spectrum of use cases.
+
+57:27.200 --> 57:34.880
+ And people, you know, use them in their daily lives to get around. And we see all kinds of,
+
+57:34.880 --> 57:40.240
+ you know, really interesting use cases and that, that, that's providing us incredibly valuable
+
+57:40.240 --> 57:44.480
+ experience that we then, you know, used to improve our product.
+
+57:44.480 --> 57:53.040
+ So as somebody who's been on, done a few long rants with Joe Rogan and others about the toxicity
+
+57:53.040 --> 57:58.480
+ of the internet and the comments and the negativity in the comments, I'm fascinated by feedback. I,
+
+57:58.480 --> 58:06.080
+ I believe that most people are good and kind and intelligent and can provide, like,
+
+58:07.120 --> 58:12.480
+ even in disagreement, really fascinating ideas. So on a product side, it's fascinating to me,
+
+58:12.480 --> 58:19.040
+ like, how do you get the richest possible user feedback, like, to improve? What's,
+
+58:19.040 --> 58:24.560
+ what are the channels that you use to measure? Because, like, you're, you're no longer,
+
+58:24.560 --> 58:29.760
+ you're, it's one of the magical things about autonomous vehicles. It's not,
+
+58:30.320 --> 58:33.920
+ like, it's frictionless interaction with the human. So, like, you don't get to,
+
+58:34.960 --> 58:39.680
+ you know, it's just giving a ride. So, like, how do you get feedback from people to, in order to
+
+58:39.680 --> 58:46.320
+ improve? Yeah, great question. Various mechanisms. So as part of the normal flow, we ask people for
+
+58:46.320 --> 58:50.960
+ feedback. They, as the car is driving around, you know, we have on the phone and in the car,
+
+58:50.960 --> 58:54.800
+ and we have a touch screen in the car, you can actually click some buttons and provide
+
+58:55.680 --> 59:00.400
+ real time feedback on how the car is doing and how the car is handling a particular situation,
+
+59:00.400 --> 59:05.440
+ you know, both positive and negative. So that's one channel. We have, as we discussed, customer
+
+59:05.440 --> 59:11.120
+ support or life help, where, you know, if a customer wants to, has a question, or he has
+
+59:11.120 --> 59:16.320
+ some sort of concern, they can talk to a person in real time. So that, that is another mechanism
+
+59:16.320 --> 59:22.800
+ that gives us feedback. At the end of a trip, you know, we also ask them how things went. They
+
+59:22.800 --> 59:29.360
+ give us comments and, you know, a star rating. And, you know, if it's, we also, you know, ask them to
+
+59:30.880 --> 59:36.320
+ explain what, you know, what went well and, you know, what could be improved. And we, we have
+
+59:37.680 --> 59:42.480
+ our writers providing, you know, very rich feedback there. A lot, a large fraction is
+
+59:42.480 --> 59:46.480
+ very passionate and very excited about this technology. So we get really good feedback.
+
+59:47.200 --> 59:52.880
+ We also run UXR studies, right? You know, specific and that are kind of more, you know,
+
+59:52.880 --> 59:56.640
+ go more in depth and we will run both kind of lateral and longitudinal studies,
+
+59:57.600 --> 1:00:02.320
+ where we have, you know, deeper engagement with our customers. You know, we have our
+
+1:00:02.320 --> 1:00:07.360
+ user experience research team tracking over time. That's things about longitudinal is cool.
+
+1:00:07.360 --> 1:00:12.720
+ That's, that's exactly right. And, you know, that's another really valuable feedback, source of feedback.
+
+1:00:12.720 --> 1:00:18.560
+ And we're just covering a tremendous amount, right? People go grocery shopping and they like
+
+1:00:18.560 --> 1:00:23.360
+ want to load, you know, 20 bags of groceries in our cars. And like that's one workflow that you
+
+1:00:23.360 --> 1:00:28.960
+ maybe don't, you know, think about, you know, getting just right when you're building the
+
+1:00:28.960 --> 1:00:35.840
+ driverless product. I have people like, you know, who bike as part of their trip. So they,
+
+1:00:35.840 --> 1:00:39.040
+ you know, bike somewhere, then they get in our cars, they take a path or their bike,
+
+1:00:39.040 --> 1:00:42.160
+ they load into our vehicle, then they go, and that's, you know, how they, you know,
+
+1:00:42.160 --> 1:00:48.400
+ where we want to pull over and how that, you know, get in and get out process works,
+
+1:00:48.400 --> 1:00:54.240
+ provides very useful feedback in terms of, you know, what makes a good pickup and drop off location?
+
+1:00:55.120 --> 1:01:02.240
+ We get really valuable feedback. And in fact, we had to do some really interesting work with
+
+1:01:02.240 --> 1:01:08.320
+ high definition maps and thinking about walking directions. And if you imagine you're in a store,
+
+1:01:09.120 --> 1:01:13.600
+ in some giant space, and then, you know, you want to be picked up somewhere, like if you just drop
+
+1:01:13.600 --> 1:01:17.360
+ pin at the current location, which is maybe in the middle of a shopping mall, like what's the best
+
+1:01:17.920 --> 1:01:21.600
+ location for the car to come pick you up. And you can, you know, have simple heuristics where
+
+1:01:21.600 --> 1:01:26.160
+ you just kind of take your, you know, you clean in distance and find the nearest spot where the
+
+1:01:26.160 --> 1:01:29.840
+ car can pull over as closest to you. But oftentimes, that's not the most convenient one,
+
+1:01:29.840 --> 1:01:34.240
+ you know, I have many anecdotes where that heuristic breaks in horrible ways. I want example
+
+1:01:35.520 --> 1:01:39.120
+ that, you know, I often mentioned is somebody wanted to be, you know,
+
+1:01:40.400 --> 1:01:48.720
+ dropped off and Phoenix and, you know, weak car picked location that was close and the closest to
+
+1:01:48.720 --> 1:01:52.480
+ there, you know, where the pin was dropped on the map in terms of, you know, latitude and
+
+1:01:52.480 --> 1:01:59.280
+ longitude. But it happened to be on the other side of a parking lot that had this row of cacti
+
+1:01:59.280 --> 1:02:03.360
+ and the poor person had to like walk all around the parking lot to get to where they wanted to be
+
+1:02:03.360 --> 1:02:07.520
+ in 110 degree heat. So that, you know, that was about. So then, you know, we took all take all of
+
+1:02:07.520 --> 1:02:13.840
+ these, all that feedback from our users and incorporated into our system and improve it.
+
+1:02:13.840 --> 1:02:19.680
+ Yeah, I feel like that's like requires AGI to solve the problem of like, when you're, which is a
+
+1:02:19.680 --> 1:02:24.640
+ very common case when you're in a big space of some kind, like apartment building, it doesn't
+
+1:02:24.640 --> 1:02:30.880
+ matter. It's not some large space. And then you call the like the Waymo from there, right?
+
+1:02:30.880 --> 1:02:37.520
+ Like, whatever that doesn't matter, right? Chair vehicle. And like, where is the pin supposed to
+
+1:02:37.520 --> 1:02:43.120
+ drop? I feel like that's, you don't think I think that requires AGI. I'm going to
+
+1:02:45.120 --> 1:02:51.280
+ okay, the alternative, which I think the Google search engine is taught is like,
+
+1:02:51.280 --> 1:02:58.560
+ there's something really valuable about the perhaps slightly dumb answer, but a really powerful one,
+
+1:02:58.560 --> 1:03:04.480
+ which is like, what was done in the past by others? Like, what was the choice made by others?
+
+1:03:04.480 --> 1:03:09.600
+ That seems to be like in terms of Google search, when you have like billions of searches,
+
+1:03:09.600 --> 1:03:15.040
+ that you could, you could see which, like when they recommend what you might possibly mean,
+
+1:03:15.040 --> 1:03:20.640
+ they suggest based on not some machine learning thing, which they also do, but like on what
+
+1:03:20.640 --> 1:03:24.720
+ was successful for others in the past and finding a thing that they were happy with.
+
+1:03:24.720 --> 1:03:30.160
+ Is that integrated at all? Waymo, like what, what pickups work for others?
+
+1:03:30.160 --> 1:03:34.480
+ It is. I think you're exactly right. So there's a real, it's an interesting problem.
+
+1:03:35.520 --> 1:03:46.080
+ Naive solutions have, you know, interesting failure modes. So there's definitely lots of
+
+1:03:46.080 --> 1:03:55.200
+ things that can be done to improve. And both learning from, you know, what works, what doesn't
+
+1:03:55.200 --> 1:03:59.280
+ work in actual hail from, you know, getting richer data and getting more information about the
+
+1:03:59.280 --> 1:04:04.080
+ environment and, you know, richer maps. But you're absolutely right that there's something,
+
+1:04:04.080 --> 1:04:08.560
+ I think there's some properties of solutions that in terms of the effect that they have on
+
+1:04:08.560 --> 1:04:11.920
+ users so much, much, much, much better than others, right? And predictability and
+
+1:04:11.920 --> 1:04:16.080
+ understandability is important. So you can have maybe something that is not quite as optimal,
+
+1:04:16.080 --> 1:04:22.320
+ but is very natural and predictable to the user and kind of works the same way all the time.
+
+1:04:22.320 --> 1:04:27.680
+ And that matters. That matters a lot for the user experience. And, but, you know, to get to the basics,
+
+1:04:28.720 --> 1:04:36.160
+ the pretty fundamental property is that the car actually arrives where you told it, right? Like,
+
+1:04:36.160 --> 1:04:39.120
+ you can always, you know, change it, see it on the map and you can move it around if you don't
+
+1:04:39.120 --> 1:04:46.240
+ like it. And, but like that property that the car actually shows up on pin is critical, which,
+
+1:04:46.240 --> 1:04:53.200
+ you know, where compared to some of the human driven analogs, I think, you know, you can have
+
+1:04:53.200 --> 1:04:59.600
+ more predictability. It's actually the fact, if I did a little bit of a detail here, I think the
+
+1:04:59.600 --> 1:05:05.040
+ fact that it's, you know, your phone and the cars two computers talking to each other can lead to
+
+1:05:05.040 --> 1:05:09.440
+ some really interesting things we can do. And in terms of the user interfaces, you know, both in
+
+1:05:09.440 --> 1:05:15.040
+ terms of function, like the car actually shows up exactly where you told it, you want it to be.
+
+1:05:15.040 --> 1:05:18.720
+ But also some, you know, really interesting things on the user interface, like as the car is driving,
+
+1:05:18.720 --> 1:05:22.400
+ as you, you know, call it, and it's on the way to come pick you up. And of course, you get the
+
+1:05:22.400 --> 1:05:27.120
+ position of the car and the route on the map. But, and they actually follow that route, of course.
+
+1:05:27.760 --> 1:05:32.720
+ But it can also share some really interesting information about what is doing. So, you know,
+
+1:05:32.720 --> 1:05:38.080
+ our cars, as they are coming to pick you up, if it's come, if a car is coming up to a stop sign,
+
+1:05:38.080 --> 1:05:41.200
+ it will actually show you that, like, it's there sitting, because it's at a stop sign,
+
+1:05:41.200 --> 1:05:44.480
+ or a traffic light will show you that it's sitting at a red light. So, you know, they look
+
+1:05:44.480 --> 1:05:53.680
+ little things, right? But I find those little touch touches really interesting, really magical.
+
+1:05:53.680 --> 1:05:57.520
+ And it's just, you know, little things like that that you can do to kind of delight your users.
+
+1:05:57.520 --> 1:06:03.920
+ You know, this makes me think of there's some products that I just love,
+
+1:06:04.640 --> 1:06:12.800
+ like, there's a, there's a company called Rev, rev.com, where I like for this podcast,
+
+1:06:12.800 --> 1:06:18.560
+ for example, I can drag and drop a video. And then they do all the captioning,
+
+1:06:19.360 --> 1:06:24.640
+ it's humans doing the captioning, but they connect you, they automate everything of connecting you
+
+1:06:24.640 --> 1:06:29.120
+ to the humans, and they do the captioning and transcription, it's all effortless. And it like,
+
+1:06:29.120 --> 1:06:35.840
+ I remember when I first started using them, it was like, life's good. Like, because it was so
+
+1:06:35.840 --> 1:06:42.400
+ painful to figure that out earlier. The same thing with something called Isotope RX, this
+
+1:06:42.400 --> 1:06:47.360
+ company I use for cleaning up audio, like the sound cleanup they do, it's like drag and drop,
+
+1:06:47.360 --> 1:06:52.960
+ and it just cleans everything up very nicely. Another experience like that had with Amazon,
+
+1:06:52.960 --> 1:06:59.360
+ one click purchase, first time, I mean, other places do that now, but just the effortlessness
+
+1:06:59.360 --> 1:07:05.520
+ of purchasing, making it frictionless. It kind of communicates to me, like, I'm a fan of design,
+
+1:07:05.520 --> 1:07:12.400
+ I'm a fan of products, that you can just create a really pleasant experience, the simplicity
+
+1:07:12.400 --> 1:07:18.400
+ of it, the elegance just makes you fall in love with it. So I know, do you think about this kind
+
+1:07:18.400 --> 1:07:23.120
+ of stuff? I mean, it's exactly what we've been talking about. It's like, the little details
+
+1:07:23.120 --> 1:07:29.360
+ that somehow make you fall in love with the product, is that we went from like urban challenge days,
+
+1:07:30.560 --> 1:07:38.080
+ where love was not part of the conversation, probably. And to this point where there's human
+
+1:07:38.080 --> 1:07:43.600
+ beings, and you want them to fall in love with the experience, is that something you're trying to
+
+1:07:43.600 --> 1:07:49.120
+ optimize for, trying to think about like how do you create experience that people love? Absolutely.
+
+1:07:49.920 --> 1:08:01.840
+ That's the vision is removing any friction or complexity from getting our users, our writers,
+
+1:08:01.840 --> 1:08:07.520
+ to where they want to go. Making that as simple as possible. And then beyond that,
+
+1:08:08.320 --> 1:08:13.520
+ just transportation, making things and goods get to their destination as seamlessly as
+
+1:08:13.520 --> 1:08:18.320
+ possible. I talked about a drag and drop experience where I kind of express your intent. And then,
+
+1:08:19.200 --> 1:08:23.760
+ it just magically happens. And for our writers, that's what we're trying to get to is you download
+
+1:08:23.760 --> 1:08:33.520
+ an app, and you click and car shows up. It's the same car. It's very predictable. It's a safe and
+
+1:08:33.520 --> 1:08:39.120
+ high quality experience. And then it gets you in a very reliable, very convenient,
+
+1:08:39.120 --> 1:08:46.320
+ uh, frictionless way to where you want to be. And along the journey,
+
+1:08:46.320 --> 1:08:50.240
+ I think we also want to do little things to delight our users.
+
+1:08:51.120 --> 1:08:56.880
+ Like the ride sharing companies, because they don't control the experience, I think,
+
+1:08:57.680 --> 1:09:01.040
+ they can't make people fall in love necessarily with the experience,
+
+1:09:01.840 --> 1:09:07.360
+ or maybe they haven't put in the effort. But I think if I would just speak to the ride
+
+1:09:07.360 --> 1:09:12.080
+ sharing experience that currently have, it's just very, it's just very convenient.
+
+1:09:13.200 --> 1:09:19.360
+ But there's a lot of room for like falling in love with it. Like we can speak to sort of car
+
+1:09:19.360 --> 1:09:23.680
+ companies. Car companies do this well. You can fall in love with a car, right? And be like a loyal
+
+1:09:24.480 --> 1:09:31.280
+ car person, like whatever. Like I like badass hot rods, I guess 69 Corvette. And at this point,
+
+1:09:31.280 --> 1:09:38.880
+ you know, you can't really, cars are so owning a car. It's so 20th century, man. But is there
+
+1:09:38.880 --> 1:09:43.760
+ something about the way more experience where you hope that people will fall in love with it?
+
+1:09:43.760 --> 1:09:50.480
+ Because that, is that part of it? Or is it part of, is it just about making a convenient ride,
+
+1:09:51.200 --> 1:09:56.000
+ not ride sharing? I don't know what the right term is, but just a convenient A to B autonomous
+
+1:09:56.000 --> 1:10:04.800
+ transport. Or like, do you want them to fall in love with Waymo? Maybe elaborate a little bit.
+
+1:10:05.360 --> 1:10:08.720
+ I mean, almost like from a business perspective, I'm curious, like,
+
+1:10:10.800 --> 1:10:15.280
+ how do you want to be in the background invisible? Or do you want to be
+
+1:10:18.240 --> 1:10:21.920
+ like a source of joy that's in the very much in the foreground?
+
+1:10:21.920 --> 1:10:33.520
+ I want to provide the best, most enjoyable transportation solution. And that means building
+
+1:10:33.520 --> 1:10:41.760
+ it, building our product and building our service in a way that people do, kind of use in a very
+
+1:10:43.200 --> 1:10:47.760
+ seamless, frictionless way in their day to day lives. And I think that does mean,
+
+1:10:47.760 --> 1:10:52.240
+ you know, in some way falling in love in that product, right? It just kind of becomes part
+
+1:10:52.240 --> 1:10:59.680
+ of your routine. It comes down, in my mind, to safety, predictability of the experience,
+
+1:11:00.320 --> 1:11:10.240
+ and privacy, I think, aspects of it, right? Our cars, you get the same car, you get very
+
+1:11:10.240 --> 1:11:15.680
+ predictable behavior. And that is important. And if you're going to use it in your daily life.
+
+1:11:15.680 --> 1:11:20.320
+ Privacy. And when you're in a car, you can do other things. You're spending a bunch of just
+
+1:11:20.320 --> 1:11:25.840
+ another space where you're spending a significant part of your life. So not having to share it
+
+1:11:25.840 --> 1:11:32.320
+ with other people who you don't want to share it with, I think is a very nice property. Maybe
+
+1:11:32.320 --> 1:11:39.840
+ you want to take a phone call or do something else in the vehicle. And safety on the quality
+
+1:11:39.840 --> 1:11:47.760
+ of the driving, as well as the physical safety of not having to share that ride is important
+
+1:11:47.760 --> 1:11:55.920
+ to a lot of people. What about the idea that when there's somebody, like a human driving,
+
+1:11:56.480 --> 1:12:03.040
+ and they do a rolling stop on a stop sign, like sometimes you get an Uber or a Lyft or whatever,
+
+1:12:03.040 --> 1:12:08.880
+ like human driver, and they can be a little bit aggressive as drivers.
+
+1:12:08.880 --> 1:12:16.800
+ It feels like there is not all aggression is bad. Now, that may be a wrong, again, 20th century
+
+1:12:16.800 --> 1:12:22.080
+ conception of driving. Maybe it's possible to create a driving experience. Like, if you're in
+
+1:12:22.080 --> 1:12:27.600
+ the back, busy doing something, maybe aggression is not a good thing. It's a very different kind
+
+1:12:27.600 --> 1:12:34.000
+ of experience, perhaps. But it feels like in order to navigate this world, you need to,
+
+1:12:34.000 --> 1:12:40.720
+ how do I phrase this? You need to kind of bend the rules a little bit, or at least I can test
+
+1:12:40.720 --> 1:12:47.120
+ the rules. I don't know what language politicians use to discuss this, but whatever language they
+
+1:12:47.120 --> 1:12:55.600
+ use, you like flirt with the rules. I don't know. But like you sort of have a bit of an aggressive
+
+1:12:55.600 --> 1:13:02.800
+ way of driving that asserts your presence in this world, thereby making other vehicles and people
+
+1:13:02.800 --> 1:13:08.400
+ respect your presence, and thereby allowing you to navigate through intersections in a timely
+
+1:13:08.400 --> 1:13:15.040
+ fashion. I don't know if any of that made sense, but how does that fit into the experience of
+
+1:13:15.760 --> 1:13:25.040
+ driving autonomously? This is your hitting on a very important point of a number of behavioral
+
+1:13:25.040 --> 1:13:35.520
+ components and parameters that make your driving feel assertive and natural, comfortable,
+
+1:13:35.520 --> 1:13:40.240
+ predictable. Our cars will follow rules. They will do the safest thing possible in all situations,
+
+1:13:40.240 --> 1:13:48.320
+ let me be clear on that. But if you think of really, really good drivers, think about professional
+
+1:13:48.320 --> 1:13:55.280
+ limo drivers. They will follow the rules. They're very, very smooth, and yet they're very efficient,
+
+1:13:55.280 --> 1:14:01.440
+ but they're assertive. They're comfortable for the people in the vehicle. They're predictable for the
+
+1:14:02.160 --> 1:14:05.840
+ other people outside the vehicle that they share the environment with, and that's the kind of driver
+
+1:14:05.840 --> 1:14:15.840
+ that we want to build. Maybe there's a sport analogy there. You can do in many sports the
+
+1:14:15.840 --> 1:14:25.360
+ true professionals are very efficient in their movements. They don't do hectic flailing. They're
+
+1:14:25.920 --> 1:14:31.360
+ smooth and precise, and they get the best results. That's the kind of driver that we want to build.
+
+1:14:31.360 --> 1:14:36.320
+ In terms of aggressiveness, you can roll through the stop signs. You can do crazy lane changes.
+
+1:14:36.960 --> 1:14:41.280
+ Typically, it doesn't get you to your destination faster, typically not the safest or most predictable,
+
+1:14:41.280 --> 1:14:50.000
+ the most comfortable thing to do. But there is a way to do both. That's what we're doing,
+
+1:14:50.000 --> 1:14:56.480
+ we're trying to build the driver that is safe, comfortable, smooth, and predictable.
+
+1:14:57.200 --> 1:15:01.440
+ Yeah, that's a really interesting distinction. I think in the early days of autonomous vehicles,
+
+1:15:02.160 --> 1:15:09.840
+ the vehicles felt cautious as opposed to efficient. But when I rode in the Waymo,
+
+1:15:09.840 --> 1:15:21.600
+ it was quite assertive. It moved pretty quickly. One of the surprising feelings was that it
+
+1:15:21.600 --> 1:15:31.600
+ actually went fast and it didn't feel awkwardly cautious than autonomous vehicles. I've also
+
+1:15:31.600 --> 1:15:37.520
+ programmed autonomous vehicles, and everything I've ever built felt awkwardly either overly
+
+1:15:37.520 --> 1:15:45.520
+ aggressive, especially when it was my code, or awkwardly cautious as the way I would put it.
+
+1:15:47.680 --> 1:15:56.720
+ Waymo's vehicle felt assertive, and I think efficient is the right terminology here.
+
+1:15:58.720 --> 1:16:07.280
+ I also like the professional limo driver. We often think an Uber driver or a bus driver or
+
+1:16:07.280 --> 1:16:19.520
+ taxi. People think taxi drivers are professionals. That's like saying I'm a professional walker
+
+1:16:19.520 --> 1:16:25.760
+ just because I've been walking all my life. I think there's an art to it. If you take it
+
+1:16:25.760 --> 1:16:33.120
+ seriously as an art form, then there's a certain way that mastery looks like. It's interesting
+
+1:16:33.120 --> 1:16:41.520
+ to think about what does mastery look like in driving? Perhaps what we associate with aggressiveness
+
+1:16:41.520 --> 1:16:48.800
+ is unnecessary. It's not part of the experience of driving. It's like unnecessary fluff,
+
+1:16:49.840 --> 1:16:58.640
+ that efficiency. You can create a good driving experience within the rules.
+
+1:16:58.640 --> 1:17:05.520
+ You're the first person to tell me this, so it's kind of interesting. I need to think about this,
+
+1:17:05.520 --> 1:17:09.520
+ but that's exactly what it felt like with Waymo. I kind of had this intuition. Maybe it's the
+
+1:17:09.520 --> 1:17:14.080
+ Russian thing. I don't know that you have to break the rules in life to get anywhere,
+
+1:17:16.000 --> 1:17:23.120
+ but maybe it's possible that that's not the case in driving. I have to think about that,
+
+1:17:23.120 --> 1:17:27.280
+ but it certainly felt that way on the streets of Phoenix when I was there in Waymo,
+
+1:17:27.280 --> 1:17:32.720
+ that that was a very pleasant experience. It wasn't frustrating in that come on,
+
+1:17:32.720 --> 1:17:38.160
+ move already kind of feeling. That wasn't there. That's what we're going after.
+
+1:17:38.720 --> 1:17:44.320
+ I don't think you have to pick one. I think truly good driving gives you both efficiency,
+
+1:17:44.320 --> 1:17:52.240
+ assertiveness, but also comfort and predictability and safety. That's what fundamental
+
+1:17:52.240 --> 1:18:00.000
+ improvements in the core capabilities truly unlock. You can kind of think of it as a precision and
+
+1:18:00.000 --> 1:18:04.640
+ recoil tradeoff. You have certain capabilities of your model, and then it's very easy when you
+
+1:18:04.640 --> 1:18:08.160
+ have some curve of precision and recoil. You can move things around. You can choose your operating
+
+1:18:08.160 --> 1:18:11.600
+ point and you're trading off precision versus recoil, false positives versus false negatives.
+
+1:18:13.680 --> 1:18:17.360
+ You can tune things on that curve and be kind of more cautious or more aggressive,
+
+1:18:17.360 --> 1:18:21.920
+ but then aggressive is bad or cautious is bad. True capabilities come from actually
+
+1:18:21.920 --> 1:18:29.600
+ moving the whole curve up, and then you are kind of on a very different plane of those tradeoffs.
+
+1:18:29.600 --> 1:18:32.560
+ That's what we're trying to do here is to move the whole curve up.
+
+1:18:33.440 --> 1:18:39.600
+ Before I forget, let's talk about trucks a little bit. I also got a chance to check out some of
+
+1:18:39.600 --> 1:18:46.640
+ the Waymo trucks. I'm not sure if we want to go too much into that space, but it's a fascinating one,
+
+1:18:46.640 --> 1:18:52.720
+ so maybe you can mention it at least briefly. Waymo is also now doing autonomous trucking,
+
+1:18:53.840 --> 1:18:59.120
+ and how different philosophically and technically is that whole space of problems?
+
+1:19:00.080 --> 1:19:09.840
+ It's one of our two big products and commercial applications of our driver, right hailing and
+
+1:19:09.840 --> 1:19:15.920
+ deliveries. We have Waymo 1 and Waymo Via, moving people and moving goods. Trucking is
+
+1:19:15.920 --> 1:19:29.920
+ an example of moving goods. We've been working on trucking since 2017. It is a very interesting
+
+1:19:29.920 --> 1:19:36.160
+ space. Another question, how different is it? It has this really nice property that the first order
+
+1:19:36.160 --> 1:19:43.440
+ challenges, like the science, the hard engineering, whether it's hardware or onboard software or
+
+1:19:43.440 --> 1:19:50.080
+ offboard software, all of the systems that you build for training your ML models for evaluating
+
+1:19:50.080 --> 1:19:59.120
+ your entire system. Those fundamentals carry over. The true challenges of driving, perception,
+
+1:19:59.120 --> 1:20:05.600
+ semantic understanding, prediction, decision making, planning, evaluation, the simulator,
+
+1:20:05.600 --> 1:20:12.160
+ ML infrastructure, those carry over. The data and the application and the domains might be
+
+1:20:12.160 --> 1:20:18.640
+ different, but the most difficult problems all of that carries over between the domains. That's
+
+1:20:18.640 --> 1:20:24.080
+ very nice. That's how we approach it. We build investing in the core, the technical core,
+
+1:20:25.040 --> 1:20:31.360
+ and then there's specialization of that core technology to different product lines, to different
+
+1:20:31.360 --> 1:20:38.400
+ commercial applications. Just to tease it apart a little bit, on trucks, starting with the hardware.
+
+1:20:38.400 --> 1:20:44.720
+ The configuration of the sensors is different. They're different physically,
+
+1:20:44.720 --> 1:20:51.440
+ geometrically, different vehicles. For example, we have two of our main lasers on the trucks
+
+1:20:51.440 --> 1:20:59.760
+ on both sides so that we don't have the blind spots, whereas on the JLR iPace, we have one of it
+
+1:20:59.760 --> 1:21:05.600
+ sitting at the very top. The actual sensors are almost the same, or largely the same.
+
+1:21:05.600 --> 1:21:11.920
+ So all of the investment that over the years we've put into building our custom lighters,
+
+1:21:11.920 --> 1:21:15.520
+ custom radars, putting the whole system together, that carries over very nicely.
+
+1:21:16.080 --> 1:21:22.160
+ Then on the perception side, the fundamental challenges of seeing, understanding the world,
+
+1:21:22.160 --> 1:21:26.880
+ whether it's object detection, classification, tracking, semantic understanding, all that
+
+1:21:26.880 --> 1:21:32.240
+ carries over. Yes, there's some specialization when you're driving on freeways, range becomes
+
+1:21:32.240 --> 1:21:36.640
+ more important. The domain is a little bit different. But again, the fundamentals carry over
+
+1:21:36.640 --> 1:21:44.000
+ very, very nicely. Same, you get into prediction or decision making. The fundamentals of what it
+
+1:21:44.000 --> 1:21:51.280
+ takes to predict what other people are going to do, to find the long tail, to improve your system
+
+1:21:51.280 --> 1:21:56.400
+ and that long tail of behavior prediction and response, that carries over and so on and so on.
+
+1:21:56.400 --> 1:22:04.960
+ So, I mean, that's pretty exciting. By the way, does Waymovia include using the smaller vehicles
+
+1:22:04.960 --> 1:22:08.000
+ for transportation of goods? That's an interesting distinction. So I would say
+
+1:22:08.720 --> 1:22:15.680
+ there's three interesting modes of operation. So one is moving humans, one is moving goods,
+
+1:22:15.680 --> 1:22:21.120
+ and one is like moving nothing, zero occupancy, meaning like you're going to
+
+1:22:21.120 --> 1:22:28.480
+ the destination, your empty vehicle. I mean, it's... The third is the last way,
+
+1:22:28.480 --> 1:22:31.680
+ if that's the entirety of it, it's the last exciting from the commercial perspective.
+
+1:22:34.320 --> 1:22:40.080
+ Well, I mean, in terms of like, if you think about what's inside a vehicle as it's moving,
+
+1:22:40.080 --> 1:22:47.680
+ because it does some significant fraction of the vehicle's movement has to be empty.
+
+1:22:47.680 --> 1:22:54.240
+ I mean, it's kind of fascinating. Maybe just on that small point, is there different
+
+1:22:55.760 --> 1:23:02.960
+ control and like policies that are applied for a zero occupancy vehicle? So a vehicle with nothing
+
+1:23:02.960 --> 1:23:09.280
+ in it, or is it just move as if there is a person inside? What was with some subtle differences?
+
+1:23:10.320 --> 1:23:16.880
+ As a first order approximation, there are no differences. And if you think about safety and
+
+1:23:16.880 --> 1:23:27.520
+ comfort and quality of driving, only part of it has to do with the people or the goods inside
+
+1:23:27.520 --> 1:23:32.000
+ of the vehicle. But you don't want to be... You want to drive smoothly as we discussed,
+
+1:23:32.000 --> 1:23:37.760
+ not purely for the benefit of whatever you have inside the car. It's also for the benefit of
+
+1:23:37.760 --> 1:23:42.240
+ the people outside kind of feeding, feeding naturally and predictably into that whole
+
+1:23:42.240 --> 1:23:46.480
+ environment. So yes, there's some second order things you can do. You can change
+
+1:23:46.480 --> 1:23:52.880
+ your route and optimize maybe kind of your fleet things at the fleet scale. And you would take
+
+1:23:52.880 --> 1:24:00.240
+ into account whether some of your cars are actually serving a useful trip, whether with people or
+
+1:24:00.240 --> 1:24:06.960
+ with goods, whereas other cars are driving completely empty to that next valuable trip
+
+1:24:06.960 --> 1:24:10.880
+ that they're going to provide. But those are mostly second order effects.
+
+1:24:10.880 --> 1:24:19.200
+ Okay, cool. So Phoenix is an incredible place. And what you've announced in Phoenix
+
+1:24:19.920 --> 1:24:27.200
+ is kind of amazing. But that's just like one city. How do you take over the world?
+
+1:24:29.920 --> 1:24:31.520
+ I mean, I'm asking for a friend.
+
+1:24:32.560 --> 1:24:33.440
+ One step at a time.
+
+1:24:33.440 --> 1:24:38.720
+ Is that the cartoon pinky in the brain? Yeah. Okay.
+
+1:24:40.000 --> 1:24:45.920
+ But gradually is a true answer. So I think the heart of your question is...
+
+1:24:47.200 --> 1:24:48.720
+ Can you ask a better question than I ask?
+
+1:24:49.440 --> 1:24:51.360
+ You're asking a great question. Answer that one.
+
+1:24:51.360 --> 1:24:56.640
+ I'm just going to phrase it in the terms that I want to answer.
+
+1:24:56.640 --> 1:24:59.920
+ That's perfect. That's exactly right. Brilliant. Please.
+
+1:24:59.920 --> 1:25:07.280
+ Please. Where are we today? And what happens next? And what does it take to go beyond Phoenix?
+
+1:25:07.280 --> 1:25:14.480
+ And what does it take to get this technology to more places and more people around the world?
+
+1:25:14.480 --> 1:25:30.000
+ All right. So our next big area of focus is exactly that larger scale commercialization and just scaling up.
+
+1:25:30.000 --> 1:25:38.960
+ If I think about the main... And Phoenix gives us that platform.
+
+1:25:38.960 --> 1:25:45.280
+ It gives us that foundation of upon which we can build. And it's...
+
+1:25:47.040 --> 1:25:54.080
+ There are a few really challenging aspects of this whole problem that you have to pull together
+
+1:25:54.080 --> 1:26:06.640
+ in order to build the technology, in order to deploy it into the field, to go from a driverless car
+
+1:26:06.640 --> 1:26:12.720
+ to a fleet of cars that are providing a service and then all the way to commercialization.
+
+1:26:14.480 --> 1:26:20.480
+ This is what we have in Phoenix. We've taken the technology from a proof point to an actual
+
+1:26:20.480 --> 1:26:26.880
+ deployment and have taken our driver from one car to a fleet that can provide a service.
+
+1:26:26.880 --> 1:26:37.040
+ Beyond that, if I think about what it will take to scale up and deploy in more places with more
+
+1:26:37.040 --> 1:26:47.440
+ customers, I tend to think about three main dimensions, three main axes of scale. One
+
+1:26:47.440 --> 1:26:52.800
+ is the core technology, the hardware and software, core capabilities of our driver.
+
+1:26:52.800 --> 1:27:03.440
+ The second dimension is evaluation and deployment. And the third one is the product, commercial,
+
+1:27:03.440 --> 1:27:09.760
+ and operational excellence. So you can talk a bit about where we are along each one of those
+
+1:27:09.760 --> 1:27:17.680
+ three dimensions about where we are today and what will happen next. On the core technology,
+
+1:27:17.680 --> 1:27:27.120
+ on the hardware and software, together comprised of driver, we obviously have that foundation
+
+1:27:27.120 --> 1:27:32.560
+ that is providing fully driverless trips to our customers as we speak, in fact.
+
+1:27:34.160 --> 1:27:42.080
+ And we've learned a tremendous amount from that. So now what we're doing is we are incorporating all
+
+1:27:42.080 --> 1:27:47.200
+ those lessons into some pretty fundamental improvements in our core technology, both on
+
+1:27:47.200 --> 1:27:53.200
+ the hardware side and on the software side, to build a more general, more robust solution
+
+1:27:53.200 --> 1:27:59.040
+ that then will enable us to massively scale and be young Phoenix. So on the hardware side,
+
+1:28:00.000 --> 1:28:07.200
+ all of those lessons are now incorporated into this fifth generation hardware platform
+
+1:28:07.200 --> 1:28:13.840
+ that is being deployed right now. And that's the platform, the fourth generation, the thing that
+
+1:28:13.840 --> 1:28:18.560
+ we have right now driving in Phoenix, it's good enough to operate fully driverlessly,
+
+1:28:19.120 --> 1:28:24.560
+ night and day, in various speeds and various conditions. But the fifth generation is the
+
+1:28:24.560 --> 1:28:31.920
+ platform upon which we want to go to massive scale. We've really made qualitative improvements in
+
+1:28:31.920 --> 1:28:36.960
+ terms of the capability of the system, the simplicity of the architecture, the reliability
+
+1:28:36.960 --> 1:28:42.560
+ of the redundancy. It is designed to be manufacturable at very large scale and provides the right
+
+1:28:42.560 --> 1:28:48.720
+ unit economics. So that's the next big step for us on the hardware side. That's already there for
+
+1:28:48.720 --> 1:28:54.960
+ scale, the version five. That's right. Is that a coincidence or should we look into a conspiracy
+
+1:28:54.960 --> 1:29:00.320
+ theory that it's the same version as the Pixel phone? Is that what's the hardware thing?
+
+1:29:00.320 --> 1:29:06.160
+ I can neither confirm nor deluxe. All right, cool. So sorry. So that's the, okay, that's
+
+1:29:06.160 --> 1:29:11.760
+ that axis. What else? So similarly, hardware is a very discreet jump. But you know,
+
+1:29:11.760 --> 1:29:16.800
+ similar to how we're making that change from the fourth generation hardware to the fifth,
+
+1:29:16.800 --> 1:29:20.400
+ we're making similar improvements on the software side to make it more robust and
+
+1:29:20.400 --> 1:29:25.680
+ more general and allow us to quickly scale beyond Phoenix. So that's the first dimension
+
+1:29:25.680 --> 1:29:29.600
+ of core technology. The second dimension is evaluation and deployment. How do you
+
+1:29:31.200 --> 1:29:37.520
+ measure your system? How do you evaluate it? How do you build the release and deployment process
+
+1:29:37.520 --> 1:29:44.640
+ where with confidence, you can regularly release new versions of your driver into a fleet?
+
+1:29:45.360 --> 1:29:52.000
+ How do you get good at it so that it is not a huge tax on your researchers and engineers?
+
+1:29:52.000 --> 1:29:57.840
+ So how do you build all these processes, the frameworks, the simulation, the evaluation,
+
+1:29:57.840 --> 1:30:02.320
+ the data science, the validation so that people can focus on improving the system
+
+1:30:02.320 --> 1:30:06.000
+ and kind of the releases just go out the door and get deployed across the fleet.
+
+1:30:06.000 --> 1:30:12.160
+ So we've gotten really good at that in Phoenix. That's been a tremendously difficult problem.
+
+1:30:12.960 --> 1:30:16.720
+ But that's what we have in Phoenix right now that gives us that foundation. And now we're
+
+1:30:16.720 --> 1:30:21.280
+ working on kind of incorporating all the lessons that we've learned to make it more efficient to
+
+1:30:21.280 --> 1:30:26.400
+ go to new places and scale up and just kind of stamp things out. So that's that second dimension
+
+1:30:26.400 --> 1:30:33.360
+ of evaluation and deployment. And the third dimension is product commercial and operational
+
+1:30:33.360 --> 1:30:40.240
+ excellence. And again, Phoenix there is providing an incredibly valuable platform.
+
+1:30:40.240 --> 1:30:44.880
+ That's why we're doing things end to end in Phoenix. We're learning as we discussed a little
+
+1:30:44.880 --> 1:30:50.480
+ earlier today, tremendous amount of really valuable lessons from our users getting really
+
+1:30:50.480 --> 1:30:58.400
+ incredible feedback. And we'll continue to iterate on that and incorporate all those lessons into
+
+1:30:58.400 --> 1:31:01.600
+ making our product even better and more convenient for our users.
+
+1:31:01.600 --> 1:31:07.360
+ So you're converting this whole process of Phoenix in Phoenix into something that could
+
+1:31:07.360 --> 1:31:13.200
+ be copy and pasted elsewhere. So like, perhaps you didn't think of it that way when you were doing
+
+1:31:13.200 --> 1:31:20.080
+ the experimentation in Phoenix. But so how long did you basically, you can correct me, but you've,
+
+1:31:21.760 --> 1:31:26.080
+ I mean, it's still early days, but you've taken a full journey in Phoenix, right?
+
+1:31:26.080 --> 1:31:31.520
+ As you were saying, of like what it takes to basically automate, I mean, it's not the entirety of
+
+1:31:31.520 --> 1:31:40.240
+ Phoenix, right? But I imagine it can encompass the entirety of Phoenix at some, some near term
+
+1:31:40.240 --> 1:31:45.120
+ date, but that's not even perhaps important. Like as long as it's a large enough geographic area.
+
+1:31:45.120 --> 1:31:57.760
+ So what, how copy pasteable is that process currently? And how like, you know, like when
+
+1:31:57.760 --> 1:32:06.320
+ you copy and paste in, in, in Google docs, I think now in, or in Word, you can like apply source
+
+1:32:06.320 --> 1:32:13.600
+ formatting or apply destination formatting. So when you copy and paste the Phoenix into like,
+
+1:32:13.600 --> 1:32:22.320
+ say, Boston, how do you apply the destination formatting? Like how much of the core of the
+
+1:32:22.320 --> 1:32:30.480
+ entire process of bringing an actual public transportation, autonomous transportation
+
+1:32:30.480 --> 1:32:37.280
+ service to a city is there in Phoenix that you understand enough to copy and paste into Boston
+
+1:32:37.280 --> 1:32:42.560
+ or wherever. So we're not quite there yet. We're not at a point where we're kind of massively
+
+1:32:42.560 --> 1:32:50.400
+ copy and pasting all over the place. But Phoenix, what we did in Phoenix, and we very intentionally
+
+1:32:50.400 --> 1:32:57.840
+ have chosen Phoenix as our first full deployment area, you know, exactly for that reason to kind
+
+1:32:57.840 --> 1:33:03.760
+ of tease the problem apart, look at each dimension, you know, focus on the fundamentals of complexity
+
+1:33:03.760 --> 1:33:09.120
+ and de risking those dimensions, and then bringing the entire thing together to get all the way and
+
+1:33:09.120 --> 1:33:13.680
+ force ourselves to learn all those hard lessons on this technology hardware and software on the
+
+1:33:13.680 --> 1:33:20.400
+ evaluation deployment on operating a service operating a business using actually serving
+
+1:33:20.400 --> 1:33:27.600
+ our customers all the way so that we're fully informed about the most difficult, most important
+
+1:33:27.600 --> 1:33:34.880
+ challenges to get us to that next step of massive copy and pasting, as, as you said. And
+
+1:33:34.880 --> 1:33:41.040
+ that's what we're doing right now. We're incorporating all those things that we learned
+
+1:33:41.040 --> 1:33:46.240
+ into that next system that then will allow us to kind of copy and paste all over the place and to
+
+1:33:46.240 --> 1:33:50.480
+ massively scale to, you know, more users and more locations. I mean, you know, just talked a little
+
+1:33:50.480 --> 1:33:54.240
+ bit about, you know, what does that mean along those different dimensions. So on the hardware
+
+1:33:54.240 --> 1:33:59.120
+ side, for example, again, it's that switch from the fourth to the fifth generation. And the fifth
+
+1:33:59.120 --> 1:34:04.560
+ generation is designed to kind of have that property. Can you say what other cities you're
+
+1:34:04.560 --> 1:34:10.960
+ thinking about? Like, I'm thinking about, sorry, when San Francisco now, I thought I want to move
+
+1:34:10.960 --> 1:34:17.280
+ to San Francisco. But I'm thinking about moving to Austin. I don't know why people are not being
+
+1:34:17.280 --> 1:34:23.360
+ very nice about San Francisco currently. For maybe it's a small, it's maybe it's in vogue right now.
+
+1:34:23.360 --> 1:34:31.440
+ But Austin seems I visited there and it was, I was in a Walmart. It's funny, these moments,
+
+1:34:31.440 --> 1:34:39.440
+ like turn your life, there's this very nice woman with kind eyes, just like stopped and said,
+
+1:34:40.880 --> 1:34:46.160
+ you look so handsome in that tie, honey, to me, this is never happening to me in my life, but
+
+1:34:46.160 --> 1:34:50.560
+ just the sweetness of this woman is something I've never experienced, certainly in the streets of
+
+1:34:50.560 --> 1:34:56.000
+ Boston. But even in San Francisco, where people wouldn't, that's just not how they speak or think.
+
+1:34:56.880 --> 1:35:02.320
+ I don't know, there's a warmth to Austin that love. And since Waymo does have a little bit of a
+
+1:35:03.040 --> 1:35:08.400
+ history there, is that a possibility? Is this your version of asking the question of like,
+
+1:35:08.400 --> 1:35:11.840
+ you know, Dimitri, I know you can't share your commercial and deployment roadmap,
+
+1:35:11.840 --> 1:35:16.880
+ but I'm thinking about moving to San Francisco of Austin, like in a blink twice, if you think I
+
+1:35:16.880 --> 1:35:22.400
+ should move to it. Yeah, that's true. That's true. You got me. Well, you know, we've been testing
+
+1:35:22.400 --> 1:35:27.920
+ in all over the place. I think we've been testing in more than 25 cities. We drive in San Francisco,
+
+1:35:27.920 --> 1:35:33.600
+ we drive in, you know, Michigan for snow. We are doing significant amount of testing
+
+1:35:33.600 --> 1:35:37.920
+ in the Bay Area, including San Francisco. Which is not like, because we're talking about the
+
+1:35:37.920 --> 1:35:44.160
+ very different thing, which is like a full on large geographic area, public service.
+
+1:35:44.160 --> 1:35:47.120
+ You can't share. Okay.
+
+1:35:50.640 --> 1:35:57.920
+ What about Moscow? When is that happening? Take on Yandex. I'm not paying attention to those folks.
+
+1:35:58.720 --> 1:36:04.400
+ They're doing, you know, there's a lot of fun. I mean, maybe as a way of a question,
+
+1:36:04.400 --> 1:36:15.200
+ you didn't speak to sort of like policy or like, is there tricky things with government and so on?
+
+1:36:17.040 --> 1:36:24.720
+ Like, is there other friction that you've encountered, except sort of technological friction
+
+1:36:24.720 --> 1:36:29.440
+ of solving this very difficult problem? Is there other stuff that you have to overcome
+
+1:36:29.440 --> 1:36:35.920
+ when deploying a public service in a city? That's interesting.
+
+1:36:36.640 --> 1:36:44.480
+ It's very important. So we put significant effort in creating those partnerships and,
+
+1:36:44.480 --> 1:36:49.200
+ you know, those relationships with governments at all levels, you know, local governments,
+
+1:36:49.200 --> 1:36:54.400
+ municipalities, you know, state level, federal level. We've been engaged in very deep conversations
+
+1:36:54.400 --> 1:37:00.960
+ from the earliest days of our projects. Whenever at all of these levels, you know, whenever we go
+
+1:37:00.960 --> 1:37:09.200
+ to test or, you know, operate in a new area, you know, we always lead with the conversation
+
+1:37:09.200 --> 1:37:14.560
+ with the local officials. But the result of that investment is that, no, it's not challenges we
+
+1:37:14.560 --> 1:37:19.120
+ have to overcome, but it is a very important that we continue to have this conversation.
+
+1:37:19.120 --> 1:37:28.240
+ Oh, yeah. I love politicians too. Okay. So Mr. Elon Musk said that LiDAR is a crutch.
+
+1:37:29.440 --> 1:37:30.240
+ What are your thoughts?
+
+1:37:32.880 --> 1:37:39.680
+ I wouldn't characterize it exactly that way. I know I think LiDAR is very important. It is a key
+
+1:37:39.680 --> 1:37:45.200
+ sensor that, you know, we use just like other modalities, right? As we discussed, our cars use
+
+1:37:45.200 --> 1:37:54.320
+ cameras, LiDARs and radars. They are all very important. They are at kind of the physical level.
+
+1:37:54.960 --> 1:37:59.440
+ They are very different. They have very different, you know, physical characteristics.
+
+1:38:00.320 --> 1:38:04.160
+ Cameras are passive. LiDARs and radars are active. You use different wavelengths.
+
+1:38:05.440 --> 1:38:12.240
+ So that means they complement each other very nicely. And they, you know, together combine.
+
+1:38:12.240 --> 1:38:21.920
+ They can be used to build a much safer and much more capable system. So, you know,
+
+1:38:22.880 --> 1:38:28.720
+ to me, it's more of a question, you know, why the heck would you handicap yourself and not use one
+
+1:38:28.720 --> 1:38:33.200
+ or more of those sensing modalities when they, you know, undoubtedly just make your system
+
+1:38:33.200 --> 1:38:46.080
+ more capable and safer. Now, it, you know, what might make sense for one product or one business
+
+1:38:46.720 --> 1:38:50.960
+ might not make sense for another one. So if you're talking about driver assist technologies,
+
+1:38:50.960 --> 1:38:54.480
+ you make certain design decisions and you make certain tradeoffs. And you make different ones
+
+1:38:54.480 --> 1:39:00.320
+ if you are, you know, building a driver that you deploy in fully driverless vehicles.
+
+1:39:00.320 --> 1:39:05.760
+ And, you know, and LiDAR specifically, when this question comes up, I, you know, typically the
+
+1:39:05.760 --> 1:39:16.320
+ criticisms that I hear are, you know, the counterpoints that cost and aesthetics. And I don't
+
+1:39:16.320 --> 1:39:22.720
+ find either of those honestly very compelling. So on the cost side, there's nothing fundamentally
+
+1:39:22.720 --> 1:39:27.920
+ prohibitive about, you know, the cost of LiDARs. You know, radars used to be very expensive before
+
+1:39:27.920 --> 1:39:32.640
+ people started, you know, before people made certain advances in technology and you started to
+
+1:39:32.640 --> 1:39:37.840
+ manufacture them massive scale and deploy them in vehicles, right? You know, similar with LiDARs.
+
+1:39:37.840 --> 1:39:42.240
+ And this is where the LiDARs that we have on our car, especially the fifth generation,
+
+1:39:42.240 --> 1:39:48.160
+ you know, we've been able to make some pretty qualitative discontinuous jumps in terms of the
+
+1:39:48.160 --> 1:39:53.440
+ fundamental technology that allow us to, you know, manufacture those things at very significant scale
+
+1:39:53.440 --> 1:40:01.840
+ and add a fraction of the cost of your both our previous generation, as well as a fraction of
+
+1:40:01.840 --> 1:40:06.240
+ the cost of, you know, what might be available on the market, you know, off the shelf right now.
+
+1:40:06.240 --> 1:40:11.520
+ And, you know, that improvement will continue. So I think, you know, cost is not a real issue.
+
+1:40:11.520 --> 1:40:17.200
+ Second one is, you know, aesthetics. You know, I don't think that's, you know, a real issue either.
+
+1:40:18.640 --> 1:40:22.800
+ Beauty is an eye of the beholder. You can make LiDAR sexy again.
+
+1:40:22.800 --> 1:40:26.320
+ I think you're exactly right. I think it is sexy. Like, honestly, I think form is a function.
+
+1:40:26.320 --> 1:40:32.480
+ Well, okay. You know, I was actually somebody brought this up to me. I mean, all forms of
+
+1:40:32.480 --> 1:40:39.920
+ LiDAR, even, even like the ones that are like big, you can make look, I mean, you can make look
+
+1:40:39.920 --> 1:40:44.880
+ beautiful. Like there's no sense in which you can't integrate into design. Like there's all
+
+1:40:44.880 --> 1:40:51.440
+ kinds of awesome designs. I don't think small and humble is beautiful. It could be like,
+
+1:40:51.440 --> 1:40:58.080
+ you know, brutalism or like it could be like harsh corners. I mean, like I said, like hot rods,
+
+1:40:58.080 --> 1:41:03.360
+ like I don't like, I don't necessarily like, like, oh man, I'm going to start so much controversy
+
+1:41:03.360 --> 1:41:10.720
+ with this. I don't like Porsches. Okay. The Porsche 911, like everyone says the most beautiful.
+
+1:41:10.720 --> 1:41:16.480
+ No, it, no, it's like, it's like a baby car. It doesn't make any sense. But everyone, it's
+
+1:41:16.480 --> 1:41:22.080
+ beauties in the eye of the beholder. You're already looking at me like, what's this kid talking about?
+
+1:41:22.080 --> 1:41:28.560
+ I'm happy to talk about you're digging your own hole. The form and function and my take on the beauty
+
+1:41:28.560 --> 1:41:33.040
+ of the hardware that we put on our vehicles. You know, I will not comment on the Porsche.
+
+1:41:33.040 --> 1:41:39.120
+ You know, Porsche monologues. Okay. All right. So, but aesthetics, fine. But there's an underlying
+
+1:41:39.120 --> 1:41:46.160
+ like philosophical question behind the kind of LiDAR question is like, how much of the problem
+
+1:41:46.160 --> 1:41:56.000
+ can be solved with computer vision, with machine learning? So I think without sort of disagreements
+
+1:41:56.000 --> 1:42:03.760
+ and so on, it's nice to put it on the spectrum because Waymo is doing a lot of machine learning as
+
+1:42:03.760 --> 1:42:10.320
+ well. It's interesting to think how much of driving if we look at five years, 10 years, 50 years down
+
+1:42:10.320 --> 1:42:18.160
+ the road would can be learned in almost more and more and more end to end way. If you look at what
+
+1:42:18.160 --> 1:42:23.600
+ Tesla is doing with as a machine learning problem, they're doing a multitask learning
+
+1:42:24.320 --> 1:42:28.320
+ thing where it's just they break up driving into a bunch of learning tasks and they have
+
+1:42:28.320 --> 1:42:32.000
+ one single neural network and they're just collecting huge amounts of data that's training that.
+
+1:42:32.000 --> 1:42:34.880
+ I've recently hung out with George Hots. I don't know if you know George.
+
+1:42:34.880 --> 1:42:43.040
+ I love him so much. He's just an entertaining human being. We were off mic talking about
+
+1:42:43.040 --> 1:42:48.400
+ Hunter S. Thompson. He's the Hunter S. Thompson of the time I was driving. Okay. So he I didn't
+
+1:42:48.400 --> 1:42:54.640
+ realize this with comma AI, but they're like really trying to end to end. They're the machine
+
+1:42:54.640 --> 1:43:00.320
+ like looking at the machine learning problem. They're really not doing multitask learning,
+
+1:43:00.320 --> 1:43:07.040
+ but it's it's it's computing the drivable area as a machine learning task and hoping that like
+
+1:43:08.240 --> 1:43:15.680
+ down the line, this level two system as driver assistance will eventually lead to allowing
+
+1:43:15.680 --> 1:43:20.480
+ you to have a fully autonomous vehicle. Okay. There's an underlying deep philosophical question
+
+1:43:20.480 --> 1:43:28.240
+ there, technical question of how much of driving can be learned. So LiDAR is an effective tool today
+
+1:43:28.240 --> 1:43:34.560
+ for actually deploying a successful service in Phoenix, right? That's safe, that's reliable,
+
+1:43:34.560 --> 1:43:41.600
+ etc, etc. But the the question and I'm not saying you can't do machine learning on LiDAR,
+
+1:43:41.600 --> 1:43:48.160
+ but the question is that like how much of driving can be learned eventually? Can we do fully
+
+1:43:48.160 --> 1:43:54.560
+ autonomous that's learned? Yeah. You know, learning is all over the place and play is the
+
+1:43:54.560 --> 1:44:00.000
+ key role in every part of our system. As you said, I would, you know, decouple the sensing
+
+1:44:00.000 --> 1:44:07.600
+ modalities from the, you know, ML and the software parts of it. LiDAR, radar, cameras,
+
+1:44:08.160 --> 1:44:12.080
+ it's all machine learning. All of the object detection classification, of course, I go that
+
+1:44:12.080 --> 1:44:17.200
+ that's what, you know, these modern deep nuts and con nuts are very good at. You feed them raw data,
+
+1:44:17.200 --> 1:44:22.800
+ massive amounts of raw data. And that's actually what our custom build LiDARs and
+
+1:44:22.800 --> 1:44:26.240
+ radars are really good at. And radars, they don't just give you point estimates of, you know,
+
+1:44:26.240 --> 1:44:30.480
+ objects in space, they give you raw, like physical observations. And then you take all
+
+1:44:30.480 --> 1:44:34.000
+ of that raw information, you know, there's colors of the pixels, whether it's, you know,
+
+1:44:34.000 --> 1:44:37.440
+ LiDAR's returns and some auxiliary information, it's not just distance, right? And, you know,
+
+1:44:37.440 --> 1:44:41.280
+ angle and distance is much richer information that you get from those returns, plus really rich
+
+1:44:41.280 --> 1:44:46.160
+ information from the radars, you fuse it all together and you feed it into those massive ML
+
+1:44:46.160 --> 1:44:53.360
+ models that then, you know, lead to the best results in terms of, you know, object detection,
+
+1:44:53.360 --> 1:44:58.400
+ classification, you know, state estimation. So there's a side to interrupt, but there is a fusion.
+
+1:44:58.400 --> 1:45:02.160
+ I mean, that's something that people didn't do for a very long time, which is like at the
+
+1:45:02.720 --> 1:45:07.680
+ sensor fusion level, I guess, like early on fusing the information together, whether
+
+1:45:07.680 --> 1:45:12.800
+ so that the the sensory information that the vehicle receives from the different modalities,
+
+1:45:12.800 --> 1:45:18.160
+ or even from different cameras is combined before it is fed into the machine learning models.
+
+1:45:19.280 --> 1:45:22.560
+ Yeah. So I think this is one of the trends. You're seeing more of that. You mentioned N10.
+
+1:45:22.560 --> 1:45:27.840
+ There's different interpretations of N10. There is kind of the purest interpretation. I'm going
+
+1:45:27.840 --> 1:45:34.000
+ to like have one model that goes from raw sensor data to like, you know, steering torque and,
+
+1:45:34.000 --> 1:45:37.520
+ you know, gas brakes. But, you know, that's too much. I don't think that's the right way to do it.
+
+1:45:37.520 --> 1:45:44.480
+ There's more, you know, smaller versions of N10, where you're kind of doing more end to end learning
+
+1:45:44.480 --> 1:45:49.600
+ or core training or depropagation of kind of signals back and forth across the different stages
+
+1:45:49.600 --> 1:45:54.320
+ of your system. There's, you know, really good ways. It gets into some fairly complex design
+
+1:45:54.320 --> 1:45:59.040
+ choices, where on one hand you want modularity and the composability, the composability of your
+
+1:45:59.040 --> 1:46:04.480
+ system. But on the other hand, you don't want to create interfaces that are too narrow or too
+
+1:46:04.480 --> 1:46:08.800
+ brittle to engineered, where you're giving up on the generality of a solution, or you're unable
+
+1:46:08.800 --> 1:46:14.720
+ to properly propagate signal, you know, reach signal forward and losses and, you know, back
+
+1:46:14.720 --> 1:46:19.600
+ so you can optimize the whole system jointly. So I would decouple, and I guess what you're seeing
+
+1:46:19.600 --> 1:46:25.600
+ in terms of the fusion of the sensing data from different modalities, as well as kind of fusion
+
+1:46:25.600 --> 1:46:30.800
+ at in the temporal level, going more from, you know, frame by frame, where, you know, you would
+
+1:46:30.800 --> 1:46:34.400
+ have one net that would do frame by frame detection and camera and then, you know, something that does
+
+1:46:34.400 --> 1:46:39.040
+ frame by frame and lighter and then radar. And then you fuse it, you know, in a weaker engineered
+
+1:46:39.040 --> 1:46:44.080
+ way later, like the field over the last decade has been evolving in more kind of joint fusion,
+
+1:46:44.080 --> 1:46:48.080
+ more end to end models that are solving some of these tasks, you know, jointly. And there's
+
+1:46:48.080 --> 1:46:52.960
+ tremendous power in that. And, you know, that's the progression that you kind of are, you know,
+
+1:46:52.960 --> 1:46:58.000
+ our stack has been on as well. Now, you know, so I would decouple the kind of sensing and how
+
+1:46:58.000 --> 1:47:02.480
+ that information is used from the role of ML and the entire stack. And, you know, I guess it's,
+
+1:47:03.920 --> 1:47:11.280
+ there's tradeoffs and modularity and how do you inject inductive bias into your system?
+
+1:47:11.280 --> 1:47:17.920
+ All right, this is, there's tremendous power in being able to do that. So, you know, we have,
+
+1:47:17.920 --> 1:47:24.720
+ there's no part of our system that is not heavily, that does not heavily, you know, leverage,
+
+1:47:24.720 --> 1:47:30.640
+ you know, data driven development or, you know, state of the art of ML. But there's mapping,
+
+1:47:30.640 --> 1:47:34.640
+ there's simulator, or there's perception, you know, object level, you know, perception,
+
+1:47:34.640 --> 1:47:38.560
+ whether it's semantic understanding, prediction, decision making, you know, so forth and so on.
+
+1:47:42.080 --> 1:47:46.080
+ It's, and of course, object detection and classification, like finding pedestrians and
+
+1:47:46.080 --> 1:47:50.880
+ cars and cyclists and, you know, cones and signs and vegetation and being very good at
+
+1:47:50.880 --> 1:47:55.040
+ estimating kind of detection classification and state estimation, there's just stable stakes,
+
+1:47:55.040 --> 1:47:59.360
+ like, like that's step zero of this whole stack. You can be incredibly good at that,
+
+1:47:59.360 --> 1:48:02.400
+ whether you use cameras or light as a radar, but that's just, you know, that's stable stakes,
+
+1:48:02.400 --> 1:48:05.920
+ that's just step zero. Beyond that, you get into the really interesting challenges of
+
+1:48:05.920 --> 1:48:10.000
+ semantic understanding of the perception level, you get into scene level reasoning,
+
+1:48:10.000 --> 1:48:14.480
+ you get into very deep problems that have to do with prediction and joint prediction and
+
+1:48:14.480 --> 1:48:19.120
+ interaction, so the interaction between all the actors in the environment, pedestrians, cyclists,
+
+1:48:19.120 --> 1:48:22.960
+ other cars, and you get into decision making, right? So how do you build a lot of systems?
+
+1:48:22.960 --> 1:48:29.920
+ So we leverage ML very heavily in all of these components. I do believe that the best results
+
+1:48:29.920 --> 1:48:34.880
+ you achieve by kind of using a hybrid approach and having different types of ML,
+
+1:48:36.400 --> 1:48:42.240
+ having different models with different degrees of inductive bias that you can have,
+
+1:48:42.960 --> 1:48:47.520
+ and combining kind of model, you know, free approaches with some, you know, model based
+
+1:48:47.520 --> 1:48:54.560
+ approaches and some rule based, physics based systems. So, you know, one example I can give you
+
+1:48:54.560 --> 1:49:00.160
+ is traffic lights. There's a problem of the detection of traffic light state and obviously
+
+1:49:00.160 --> 1:49:04.960
+ that's a great problem for, you know, computer vision, confinates are, you know, that's their
+
+1:49:04.960 --> 1:49:10.640
+ bread and butter, right? That's how you build that. But then the interpretation of, you know,
+
+1:49:10.640 --> 1:49:15.280
+ of a traffic light that you're gonna need to learn that, right? You read, you don't need to
+
+1:49:15.280 --> 1:49:20.480
+ build some, you know, complex ML model that, you know, infers with some, you know, precision
+
+1:49:20.480 --> 1:49:26.000
+ and recall that read means stop. Like, it was a, it's a very clear engineered signal with very
+
+1:49:26.000 --> 1:49:30.880
+ clear semantics, right? So you want to induce that bias, like how you induce that bias and that,
+
+1:49:30.880 --> 1:49:36.400
+ whether, you know, it's a constraint or a cost, you know, function in your stack. But like,
+
+1:49:36.400 --> 1:49:42.320
+ it is important to be able to inject that like clear semantic signal into your stack. And,
+
+1:49:42.320 --> 1:49:48.080
+ you know, that's what we do. And, but then the question of like, and that's when you apply it
+
+1:49:48.080 --> 1:49:51.520
+ to yourself, when you are making decisions, whether you want to stop for a red light,
+
+1:49:51.520 --> 1:49:58.400
+ you know, or not. But if you think about how other people treat traffic lights, we're back to the
+
+1:49:58.400 --> 1:50:02.160
+ ML version of that. Because, you know, they're supposed to stop for a red light, but that doesn't
+
+1:50:02.160 --> 1:50:09.840
+ mean they will. So then you're back in the like very heavy ML domain where you're picking up on
+
+1:50:09.840 --> 1:50:14.320
+ like very subtle keys about, you know, they have to do with the behavior of objects and pedestrians,
+
+1:50:14.320 --> 1:50:19.840
+ cyclists, cars, and the whole thing, you know, the entire configuration of the scene that allow
+
+1:50:19.840 --> 1:50:24.160
+ you to make accurate predictions on whether they will in fact stop or run a red light.
+
+1:50:24.160 --> 1:50:30.400
+ So it sounds like already for Waymo, like machine learning is a huge part of the stack. So it's a
+
+1:50:30.400 --> 1:50:37.840
+ huge part of like, not just, so obviously, the first level zero or whatever you said, which is
+
+1:50:37.840 --> 1:50:42.560
+ like just the object detection of things that, you know, know that machine learning can do,
+
+1:50:42.560 --> 1:50:49.360
+ but also starting to do prediction behavior and so on to model the what other or the other parties
+
+1:50:49.360 --> 1:50:52.880
+ in the scene, entities in the scene are going to do. So machine learning is more and more
+
+1:50:53.840 --> 1:50:59.840
+ playing a role in that as well. Of course. Oh, absolutely. I think we've been going back to
+
+1:50:59.840 --> 1:51:05.360
+ the earliest days, like DARPA, or even the DARPA grand challenge, and team was leveraging, you
+
+1:51:05.360 --> 1:51:09.680
+ know, machine learning was like pre, you know, image nut and I was very different type of ML,
+
+1:51:09.680 --> 1:51:14.480
+ but and I think actually was it was before my time, but the Stanford team on during the grand
+
+1:51:14.480 --> 1:51:19.920
+ challenge had a very interesting machine learned system that would, you know, use lighter and camera
+
+1:51:20.560 --> 1:51:27.920
+ when driving in the desert. And it we had build the model where it would kind of extend the range
+
+1:51:27.920 --> 1:51:32.560
+ of free space reasoning, we get a clear signal from lighter. And then it had a model said,
+
+1:51:32.560 --> 1:51:36.080
+ hey, like this stuff and camera kind of sort of looks like this stuff and lighter. And I know
+
+1:51:36.080 --> 1:51:39.680
+ this stuff and that I've seen in lighter, I'm very confident of this free space. So let me extend
+
+1:51:39.680 --> 1:51:44.560
+ that free space zone into the camera range that would allow the vehicle to drive faster.
+
+1:51:44.560 --> 1:51:47.920
+ And then we've been building on top of that and kind of staying and pushing the state of the art
+
+1:51:47.920 --> 1:51:53.680
+ in ML in all kinds of different ML over the years. And in fact, from the earliest days, I think,
+
+1:51:53.680 --> 1:52:02.560
+ you know, 2010, probably the year where Google, maybe 2011, probably got pretty heavily involved
+
+1:52:02.560 --> 1:52:08.160
+ in machine learning, kind of deep nuts. And at that time, it's probably the only company that
+
+1:52:08.160 --> 1:52:14.240
+ was very heavily investing in kind of state of the art ML and self driving cars, right? And they
+
+1:52:14.240 --> 1:52:21.200
+ go hand in hand. And we've been on that journey ever since we're doing pushing a lot of these
+
+1:52:21.200 --> 1:52:26.480
+ areas in terms of research, you know, at Waymo and we collaborate very heavily with the researchers
+
+1:52:26.480 --> 1:52:33.280
+ in alphabet. And I call kinds of ML, supervised ML, unsupervised ML, you know, publish some
+
+1:52:34.400 --> 1:52:40.320
+ interesting research papers in the space, especially recently, it's just a super super
+
+1:52:40.320 --> 1:52:44.080
+ active learning as well. Yeah, super super active. Of course, there's kind of the more
+
+1:52:45.280 --> 1:52:49.520
+ mature stuff, like, you know, convenants for, you know, object detection. But there's some
+
+1:52:49.520 --> 1:52:58.960
+ really interesting, really active work that's happening in more and bigger models and models
+
+1:52:58.960 --> 1:53:05.920
+ that have more structure to them, you know, not just large bitmaps and reason about temporal
+
+1:53:05.920 --> 1:53:11.920
+ sequences. And some of the interesting breakthroughs that you've, you know, we've seen in language
+
+1:53:11.920 --> 1:53:17.920
+ models, right, you know, transformers, you know, GPT three and friends. There's some really
+
+1:53:17.920 --> 1:53:21.760
+ interesting applications of some of the core breakthroughs to those problems of, you know,
+
+1:53:21.760 --> 1:53:25.360
+ behavior prediction, as well as, you know, decision making and planning, right? You can
+
+1:53:25.360 --> 1:53:31.440
+ think about it kind of the behavior, how, you know, the path of trajectories, the how people drive,
+
+1:53:31.440 --> 1:53:36.480
+ they have kind of a share a lot of the fundamental structure, you know, this problem. There's,
+
+1:53:36.480 --> 1:53:41.920
+ you know, sequential, you know, nature, there's a lot of structure. In this representation,
+
+1:53:41.920 --> 1:53:46.400
+ there is a strong locality, kind of like in sentences, you know, words that follow each other,
+
+1:53:46.400 --> 1:53:50.560
+ they're strongly connected. But there's also kind of larger context that doesn't have that
+
+1:53:50.560 --> 1:53:54.640
+ locality. And you also see that in driving, right? What's happening in the scene as a whole
+
+1:53:54.640 --> 1:54:00.880
+ has very strong implications on, you know, the kind of the next step in that sequence where
+
+1:54:00.880 --> 1:54:05.360
+ whether you're predicting what other people are going to do, whether you're making your own decisions,
+
+1:54:05.360 --> 1:54:09.440
+ or whether in the simulator, you're building generative models of, you know,
+
+1:54:09.440 --> 1:54:11.680
+ humans walking, cyclists riding and other cars driving.
+
+1:54:11.680 --> 1:54:15.520
+ Oh, that's, that's all really fascinating. Like how it's fascinating to think that, uh,
+
+1:54:15.520 --> 1:54:20.480
+ transforming models and all this, all the breakthroughs in language and NLP that might
+
+1:54:20.480 --> 1:54:25.040
+ be applicable to like driving at the higher level at the behavioral level. That's kind of fascinating.
+
+1:54:25.840 --> 1:54:29.440
+ Let me ask about pesky little creatures called pedestrians and cyclists.
+
+1:54:30.240 --> 1:54:33.600
+ They seem so humans are a problem if we can get rid of them, I would.
+
+1:54:35.200 --> 1:54:39.920
+ But unfortunately, they're also a source of joy and love and beauty. So let's keep them around.
+
+1:54:39.920 --> 1:54:43.680
+ They're also our customers. Oh, for your perspective, yes, yes, for sure.
+
+1:54:44.800 --> 1:54:52.000
+ There's also some money. Very good. Um, but I don't even know where I was going. Oh,
+
+1:54:52.000 --> 1:55:00.560
+ yes, pedestrians and cyclists. Uh, I, you know, they're a fascinating injection into the system of
+
+1:55:00.560 --> 1:55:07.280
+ uncertainty of, um, of like a game theoretic dance of what to do. And also,
+
+1:55:07.280 --> 1:55:15.040
+ uh, they have perceptions of their own and they can tweet about your product. So you
+
+1:55:15.040 --> 1:55:21.040
+ don't want to run them over from that perspective. Uh, I mean, I don't know, I'm, I'm joking a lot,
+
+1:55:21.040 --> 1:55:28.160
+ but I think in seriousness, like, you know, pedestrians are a complicated, um, uh, computer
+
+1:55:28.160 --> 1:55:32.480
+ vision problem, a complicated behavioral problem. Is there something interesting you could say about
+
+1:55:32.480 --> 1:55:38.400
+ we, what you've learned from a machine learning perspective, from also an autonomous vehicle
+
+1:55:38.400 --> 1:55:42.400
+ and a product perspective about just interacting with the humans in this world?
+
+1:55:42.960 --> 1:55:47.120
+ Yeah. Just, you know, to state on record, we care deeply about the safety of pedestrians,
+
+1:55:47.120 --> 1:55:53.360
+ you know, even the ones that don't have Twitter accounts. Um, thank you. All right, cool. Not me.
+
+1:55:54.800 --> 1:55:57.840
+ But yes, I, I'm glad, I'm glad somebody does. Okay.
+
+1:55:57.840 --> 1:56:05.200
+ Uh, but you know, in all seriousness, safety of, uh, vulnerable road users, uh, pedestrians
+
+1:56:05.200 --> 1:56:12.160
+ or cyclists is one of our highest priorities. Uh, we do a tremendous amount of testing, uh,
+
+1:56:12.160 --> 1:56:18.960
+ and validation and put a very significant emphasis on, you know, the capabilities of our systems that
+
+1:56:18.960 --> 1:56:25.760
+ have to do with safety around those unprotected vulnerable road users. Um, you know, cars just,
+
+1:56:25.760 --> 1:56:28.960
+ you know, we discussed earlier in Phoenix, we have completely empty cars, completely driverless
+
+1:56:28.960 --> 1:56:34.080
+ cars, you know, driving in this very large area. Uh, and you know, some people use them to, you
+
+1:56:34.080 --> 1:56:39.280
+ know, go to school. So they'll drive through school zones, right? So, uh, kids are kind of the very
+
+1:56:39.280 --> 1:56:44.400
+ special class of those vulnerable user road users, right? You want to be super, super safe, uh, and
+
+1:56:44.400 --> 1:56:48.560
+ super, super cautious around those. So we take it very, very, very seriously. Um, and you know,
+
+1:56:48.560 --> 1:56:59.360
+ what does it take, uh, to, uh, be good at it? Uh, you know, an incredible amount of, uh, performance
+
+1:56:59.360 --> 1:57:05.760
+ across your whole stack, you know, starts with hardware. Uh, and again, you want to use all
+
+1:57:05.760 --> 1:57:10.320
+ something of modalities available to you. Imagine driving on a residential road at night and kind
+
+1:57:10.320 --> 1:57:15.040
+ of making a turn and you don't have, you know, headlights covering some part of the space and
+
+1:57:15.040 --> 1:57:21.280
+ like, you know, a kid might run out and you know, lighters are amazing at that. Uh, they see just
+
+1:57:21.280 --> 1:57:25.440
+ as well in complete darkness as they do during the day, right? So just again, it gives you that
+
+1:57:25.440 --> 1:57:32.640
+ extra, uh, uh, you know, margin in terms of, you know, capability and performance and safety and
+
+1:57:32.640 --> 1:57:37.200
+ quality. Uh, and in fact, we oftentimes, uh, in these kinds of situations, we have our system
+
+1:57:37.200 --> 1:57:42.160
+ detect something in some cases even earlier than our trained operators in the car might do,
+
+1:57:42.160 --> 1:57:48.160
+ especially, you know, in conditions like, you know, very dark nights. Um, so starts with sensing,
+
+1:57:48.160 --> 1:57:54.880
+ then, you know, perception has to be incredibly good. And you have to be very, very good at kind
+
+1:57:54.880 --> 1:58:01.440
+ of detecting, uh, pedestrians, uh, in all kinds of situations and all kinds of environments,
+
+1:58:01.440 --> 1:58:06.560
+ including, you know, people in weird poses, uh, people kind of running, uh, around and, you know,
+
+1:58:06.560 --> 1:58:14.000
+ being partially occluded. Um, uh, so, you know, that, that's stuff number one, right? Then you
+
+1:58:14.000 --> 1:58:21.840
+ have to have in very high accuracy and very low latency in terms of your reactions, uh, to, you
+
+1:58:21.840 --> 1:58:28.400
+ know, what, you know, these, uh, actors might do, right? And we've put a tremendous amount of
+
+1:58:28.400 --> 1:58:33.760
+ engineering and tremendous amount of validation in to make sure our system performs, uh, properly.
+
+1:58:33.760 --> 1:58:37.920
+ And, you know, oftentimes it does require very strong reaction to do the safe thing. And, you
+
+1:58:37.920 --> 1:58:42.160
+ know, we actually see a lot of cases like that. That's the long tail of really rare, you know,
+
+1:58:42.160 --> 1:58:49.600
+ really, uh, you know, crazy events, uh, that, um, contribute to the safety around pedestrians. Like
+
+1:58:49.600 --> 1:58:54.560
+ one, one example that comes to mind that we actually got happened, uh, in Phoenix where we
+
+1:58:54.560 --> 1:59:00.320
+ were, uh, driving, uh, along and I think it was a 45 mile per hour road. So, you know, pretty high
+
+1:59:00.320 --> 1:59:05.840
+ speed traffic and there was a sidewalk next to it and there was a cyclist on the sidewalk. And
+
+1:59:06.800 --> 1:59:11.520
+ as, uh, we were in the right lane and right next to the site, uh, so it was a multi lane road.
+
+1:59:11.520 --> 1:59:16.320
+ Uh, so as we got close, uh, to the cyclist on the sidewalk, uh, it was a woman, you know, she
+
+1:59:16.320 --> 1:59:22.480
+ tripped and fell, just, you know, fell right into the path of our vehicle. Right. Um, and our, you
+
+1:59:22.480 --> 1:59:28.240
+ know, car, uh, uh, you know, this was actually with a test driver, our test drivers, uh, uh, did
+
+1:59:28.240 --> 1:59:32.560
+ exactly the right thing. Uh, they kind of reacted and came to stop and requires both very strong
+
+1:59:32.560 --> 1:59:36.960
+ steering and, uh, you know, strong application of the brake. Uh, and then we simulated what our
+
+1:59:36.960 --> 1:59:41.520
+ system would have done in that situation and it did, you know, exactly the same thing. It, uh,
+
+1:59:41.520 --> 1:59:47.040
+ and that, that speaks to all of those components of really good, uh, state estimation and tracking
+
+1:59:47.040 --> 1:59:51.440
+ and like imagine, you know, a person on a bike and they're falling over and they're doing that
+
+1:59:51.440 --> 1:59:54.080
+ right in front of you. Right. So you have to be really like, things are changing. The appearance
+
+1:59:54.080 --> 1:59:58.160
+ of that whole, uh, thing is changing. Right. And a person goes one way. They're falling on the road.
+
+1:59:58.160 --> 2:00:02.160
+ They're, you know, being flat on the ground in front of you, you know, the bike goes flying the
+
+2:00:02.160 --> 2:00:06.880
+ other direction. Like the two objects that used to be one, they're now, uh, are splitting apart
+
+2:00:06.880 --> 2:00:11.360
+ and the car has to like detect all of that. Uh, like milliseconds matter and it doesn't, you know,
+
+2:00:11.360 --> 2:00:15.280
+ it's not good enough to just break. You have to like steer and break and there's traffic around
+
+2:00:15.280 --> 2:00:20.160
+ you. So like it all has to come together and it was really great, uh, to see in this case in other
+
+2:00:20.160 --> 2:00:25.120
+ cases like that, uh, that we're actually seeing in the wild that our system is, you know, performing
+
+2:00:25.120 --> 2:00:30.560
+ exactly the way, uh, that we would have liked and is able to, you know, avoid, uh, collisions like
+
+2:00:30.560 --> 2:00:36.160
+ this. It's such an exciting space for robotics. Like in the, in that split second to make decisions
+
+2:00:36.160 --> 2:00:41.840
+ of life and death, I don't know if the stakes are high in a sense, but it's also beautiful that,
+
+2:00:42.640 --> 2:00:47.360
+ um, um, for somebody who loves artificial intelligence, the possibility that an AI system
+
+2:00:47.360 --> 2:00:53.760
+ might be able to save a human life. Uh, that's kind of exciting as a, as a problem. Like to wake up,
+
+2:00:53.760 --> 2:00:58.880
+ you get, it's terrifying probably from an, for an engineer to wake up and to think about,
+
+2:00:58.880 --> 2:01:04.080
+ but it's also exciting because it's like, it's, it's in your hands. Let me try to ask a question
+
+2:01:04.080 --> 2:01:09.440
+ that's often brought up about autonomous vehicles and, uh, it might be fun to see if you have
+
+2:01:09.440 --> 2:01:16.000
+ anything, anything interesting to say, which is about the trolley problem. So, uh, the trolley
+
+2:01:16.000 --> 2:01:22.640
+ problem is a interesting philosophical construct of, uh, that highlights and there's many others
+
+2:01:22.640 --> 2:01:30.480
+ like it of the difficult ethical decisions that, uh, we humans have before us in this complicated
+
+2:01:30.480 --> 2:01:38.240
+ world. Uh, so the specifically is the choice between if you were forced to choose, uh, to kill
+
+2:01:39.040 --> 2:01:45.360
+ a group X of people versus a group Y of people, like one person, if you didn't, if you did nothing,
+
+2:01:45.360 --> 2:01:50.400
+ you would kill one person. But if you, you would kill five people. And if you decide to
+
+2:01:50.400 --> 2:01:55.120
+ swerve out of the way, you would only kill one person. Do you do nothing or you choose to do
+
+2:01:55.120 --> 2:02:00.480
+ something and you can construct all kinds of sort of ethical experiments of this kind that,
+
+2:02:01.600 --> 2:02:08.640
+ uh, I think at least on a positive note, inspire you to think about like introspect
+
+2:02:08.640 --> 2:02:17.440
+ what are the, the physics of our morality. And there's usually not good answers there.
+
+2:02:18.320 --> 2:02:23.040
+ I think people love it because it's just an exciting thing to think about. I think people
+
+2:02:23.040 --> 2:02:28.960
+ who build autonomous vehicles usually roll their eyes because, uh, this is not,
+
+2:02:30.000 --> 2:02:35.680
+ this one as constructed, this like literally never comes up in reality. You never have to
+
+2:02:35.680 --> 2:02:45.280
+ choose between killing one or like one of two groups of people. But I wonder if you can speak to,
+
+2:02:45.280 --> 2:02:52.000
+ is there some, something interesting to use an engineer of autonomous vehicles that's within
+
+2:02:52.000 --> 2:02:58.880
+ the trolley problem? Or maybe more generally, are there difficult ethical decisions that you find
+
+2:02:58.880 --> 2:03:03.680
+ that, uh, algorithm must make on the specific version of the trolley problem? Which one would
+
+2:03:03.680 --> 2:03:11.280
+ you do if you're driving? The question itself is a profound question because we humans ourselves
+
+2:03:11.280 --> 2:03:19.440
+ cannot answer it. And that's the very point. Uh, I will kill both. Um, you know, humans,
+
+2:03:19.440 --> 2:03:22.320
+ I think you're exactly right. And that, you know, humans are not particularly good. I think
+
+2:03:22.320 --> 2:03:27.120
+ they kind of phrased as a, like, what would a computer do? But like humans are not very good.
+
+2:03:27.120 --> 2:03:32.560
+ And actually oftentimes think that, you know, freezing and kind of not doing anything because
+
+2:03:32.560 --> 2:03:36.960
+ like you've taken a few extra milliseconds to just process and then you end up like doing the worst
+
+2:03:36.960 --> 2:03:42.720
+ of the possible outcomes, right? So I do think that as you've pointed out, it can be a bit of
+
+2:03:42.720 --> 2:03:46.240
+ a distraction and it can be a bit of a kind of red herring. I think it's an interesting
+
+2:03:46.240 --> 2:03:52.160
+ philosophy, you know, discussion in the realm of philosophy, right? But in terms of what,
+
+2:03:52.160 --> 2:03:57.840
+ you know, how that affects the actual engineering and deployment of self driving vehicles, I,
+
+2:03:57.840 --> 2:04:03.920
+ um, it's not how you go about building a system, right? We have talked about how you engineer a
+
+2:04:03.920 --> 2:04:08.960
+ system, how you go about evaluating the different components and the, you know, the safety of the
+
+2:04:08.960 --> 2:04:15.520
+ entire thing. How do you kind of inject the, you know, various model based safety based
+
+2:04:15.520 --> 2:04:20.640
+ arguments and like, yes, your reason at parts of the system, you know, your reason about the
+
+2:04:20.640 --> 2:04:26.000
+ probability of a collision, the severity of that collision, right? And that is incorporated. And
+
+2:04:26.000 --> 2:04:29.040
+ there's, you know, you have to properly reason about the uncertainty that flows through the system,
+
+2:04:29.040 --> 2:04:35.200
+ right? So, you know, those, you know, factors definitely play a role in how the cars don't
+
+2:04:35.200 --> 2:04:39.120
+ behave, but they tend to be more of like the immersion behavior. And what you see, like,
+
+2:04:39.120 --> 2:04:44.000
+ you're absolutely right, that these, you know, clear theoretical problems that they, you know,
+
+2:04:44.000 --> 2:04:48.400
+ you don't occur to that in the system and really kind of being back to our previous discussion
+
+2:04:48.400 --> 2:04:52.400
+ of like, what, you know, what, you know, which one do you choose? Well, you know, oftentimes,
+
+2:04:52.400 --> 2:04:58.160
+ like, you made a mistake earlier, like, you shouldn't be in that situation in the first place,
+
+2:04:58.160 --> 2:05:03.760
+ right? And in reality, the system comes up. If you build a very good safe and capable driver,
+
+2:05:03.760 --> 2:05:09.280
+ you have enough, you know, clues in the environment that you drive defensively,
+
+2:05:09.280 --> 2:05:12.480
+ so you don't put yourself in that situation, right? And again, you know, it has, you know,
+
+2:05:12.480 --> 2:05:15.920
+ this, if you go back to that analogy of, you know, precision and recoil, like, okay, you can make a,
+
+2:05:15.920 --> 2:05:21.120
+ you know, very hard tradeoff off, but like neither answer is really good. But what instead you focus
+
+2:05:21.120 --> 2:05:26.000
+ on is kind of moving the whole curve up, and then you focus on building the right capability and
+
+2:05:26.000 --> 2:05:29.440
+ the right defensive driving so that, you know, you don't put yourself in a situation like this.
+
+2:05:31.120 --> 2:05:34.800
+ I don't know if you have a good answer for this, but people love it when I ask this question
+
+2:05:35.440 --> 2:05:43.920
+ about books. Are there books in your life that you've enjoyed philosophical fiction,
+
+2:05:43.920 --> 2:05:49.040
+ technical, that had a big impact on you as an engineer or as a human being, you know,
+
+2:05:49.040 --> 2:05:53.440
+ everything from science fiction to a favorite textbook? Is there three books that stand out
+
+2:05:53.440 --> 2:06:00.000
+ that you can think of? Three books. So I would, you know, that impacted me. I would say,
+
+2:06:02.880 --> 2:06:11.040
+ and this one is, you probably know it well, but not generally well known. I think in the U.S.
+
+2:06:11.040 --> 2:06:20.240
+ or kind of internationally, The Master and Margarita. It's one of actually my favorite books. It is,
+
+2:06:20.240 --> 2:06:26.320
+ you know, by Russian, it's a novel by Russian author Mikhail Bulgakov. And it's just, it's a
+
+2:06:26.320 --> 2:06:30.480
+ great book. It's one of those books that you can like reread your entire life. And it's very
+
+2:06:30.480 --> 2:06:35.280
+ accessible. You can read it as a kid. And like, it's, you know, the plot is interesting. It's,
+
+2:06:35.280 --> 2:06:42.240
+ you know, the devil, you know, visiting the Soviet Union. But it, like, you read it, reread it at
+
+2:06:42.240 --> 2:06:48.080
+ different stages of your life. And you enjoy it for different, very different reasons. And you
+
+2:06:48.080 --> 2:06:52.160
+ keep finding like deeper and deeper meaning. And, you know, it kind of affected, you know,
+
+2:06:52.160 --> 2:06:58.640
+ had a, definitely had an imprint on me, you know, mostly from the, probably kind of the cultural,
+
+2:06:58.640 --> 2:07:03.120
+ stylistic aspect, like it makes you one of those books that, you know, is good and makes you
+
+2:07:03.120 --> 2:07:08.000
+ think, but also has like this really, you know, silly, quirky, dark sense of, you know, humor.
+
+2:07:08.000 --> 2:07:12.000
+ Okay. It captures the Russian soul. That's more than many, perhaps many other books. On that,
+
+2:07:12.000 --> 2:07:16.080
+ like, slight note, just out of curiosity, one of the saddest things is I've read that book
+
+2:07:17.120 --> 2:07:21.760
+ in English. Did you, by chance, read it in English or in Russian?
+
+2:07:22.400 --> 2:07:25.840
+ In Russian, only in Russian. And I actually, that is a question I had.
+
+2:07:28.400 --> 2:07:32.880
+ Post myself every once in a while. I wonder how well it translates, if it translates at all.
+
+2:07:32.880 --> 2:07:36.480
+ And there's the language aspect of it. And then there's the cultural aspect. So I,
+
+2:07:36.480 --> 2:07:40.800
+ and actually, I'm not sure if, you know, either of those would work well in English.
+
+2:07:40.800 --> 2:07:45.280
+ Now, I forget their names, but so when the COVID lifts a little bit, I'm traveling to Paris,
+
+2:07:46.480 --> 2:07:50.320
+ for, for several reasons. One is just, I've never been to Paris. I want to go to Paris,
+
+2:07:50.320 --> 2:07:57.760
+ but there's the most famous translators of the Stiyovsky Tolstoy of most of Russian literature
+
+2:07:58.320 --> 2:08:02.720
+ live there. There's a couple, they're famous, a man and a woman. And I'm going to sort of have
+
+2:08:02.720 --> 2:08:07.040
+ a series of conversations with them. And in preparation for that, I'm starting to read
+
+2:08:07.040 --> 2:08:11.200
+ Stiyovsky in Russian. So I'm really embarrassed to say that I've read this, everything I've
+
+2:08:11.200 --> 2:08:19.600
+ read in Russian literature of like serious depth has been in English, even though I can also read,
+
+2:08:19.600 --> 2:08:28.880
+ I mean, obviously in Russian, but for some reason, it seemed in the optimization of life,
+
+2:08:28.880 --> 2:08:33.200
+ it seemed the improper decision to do, to read in Russian, like, you know,
+
+2:08:33.920 --> 2:08:38.560
+ like I don't need to, I need to think in English, not in Russian, but now I'm changing my mind
+
+2:08:38.560 --> 2:08:42.480
+ on that. And so the question of how well it translates is a really fundamental one, like
+
+2:08:42.480 --> 2:08:49.120
+ even with Dostoyevsky. So for what I understand, Dostoyevsky translates easier. Others don't
+
+2:08:49.120 --> 2:08:56.400
+ as much. Obviously the poetry doesn't translate as well. I'm also the music of big fan of Vladimir
+
+2:08:56.400 --> 2:09:04.320
+ Vosotsky. He doesn't obviously translate well. People have tried. But mastermind, I don't know,
+
+2:09:04.320 --> 2:09:08.400
+ I don't know about that one. I just know it in English, you know, as fun as hell in English.
+
+2:09:08.400 --> 2:09:13.680
+ So, so, but it's a curious question. And I want to study it rigorously from both the machine
+
+2:09:13.680 --> 2:09:22.720
+ learning aspect. And also because I want to do a couple of interviews in Russia, that I'm still
+
+2:09:22.720 --> 2:09:29.600
+ unsure of how to properly conduct an interview across a language barrier. It's a fascinating
+
+2:09:29.600 --> 2:09:35.200
+ question that ultimately communicates to an American audience. There's a few Russian people that
+
+2:09:36.160 --> 2:09:44.480
+ I think are truly special human beings. And I feel like I sometimes encounter this with
+
+2:09:44.480 --> 2:09:51.280
+ some incredible scientists and maybe you encounter this as well at some point in your life that
+
+2:09:51.280 --> 2:09:56.400
+ it feels like because of language barrier, their ideas are lost to history. It's a sad thing. I
+
+2:09:56.400 --> 2:10:03.840
+ think about like Chinese scientists or even authors that like, that we don't in English
+
+2:10:03.840 --> 2:10:07.840
+ speaking world don't get to appreciate some like the depth of the culture because it's
+
+2:10:07.840 --> 2:10:14.480
+ lost in translation. And I feel like I would love to show that to the world. Like I'm just
+
+2:10:14.480 --> 2:10:20.720
+ some idiot. But because I have this, like at least some semblance of skill in speaking Russian,
+
+2:10:20.720 --> 2:10:26.400
+ I feel like and I know how to record stuff on a video camera. I feel like I want to catch like
+
+2:10:26.400 --> 2:10:30.720
+ Gregorio Perlman who's a mathematician. I'm not sure if you're familiar with him. I want to talk
+
+2:10:30.720 --> 2:10:35.920
+ to him like he's a fascinating mind and to bring him to a wider audience in English speaking,
+
+2:10:35.920 --> 2:10:40.800
+ it'll be fascinating. But that requires to be rigorous about this question of how well
+
+2:10:42.400 --> 2:10:48.240
+ Bogakov translates. I mean, I know it's a silly concept, but it's a fundamental one
+
+2:10:48.240 --> 2:10:53.840
+ because how do you translate? And that's the thing that Google Translate is also facing
+
+2:10:55.440 --> 2:11:00.160
+ as a more machine learning problem. But I wonder as a more bigger problem for AI,
+
+2:11:01.440 --> 2:11:04.160
+ how do we capture the magic that's there in the language?
+
+2:11:05.680 --> 2:11:11.440
+ I think that's a really interesting, really challenging problem. If you do read it,
+
+2:11:11.440 --> 2:11:19.760
+ master in Russian and be curious to get your opinion. And I think part of it is language,
+
+2:11:19.760 --> 2:11:24.880
+ but part of it is just centuries of culture. The cultures are different, so it's hard to
+
+2:11:25.600 --> 2:11:31.760
+ connect that. Okay, so that was my first one, right? You had two more. The second one I would
+
+2:11:31.760 --> 2:11:38.720
+ probably pick the science fiction by the Strogosky brothers. It's up there with Isaac
+
+2:11:38.720 --> 2:11:46.800
+ Asimov and Ray Bradbury and Company. The Strogosky brothers kind of appealed more to me. I think
+
+2:11:46.800 --> 2:11:54.960
+ more, it made more of an impression on me growing up. I apologize if I'm showing my complete ignorance.
+
+2:11:54.960 --> 2:12:09.760
+ I'm so weak on sci fi. What are they, right? Oh, roadside picnic. Hard to be a god. Beedle
+
+2:12:09.760 --> 2:12:16.640
+ in an anthill. Monday starts on Saturday. It's not just science fiction. It also has very
+
+2:12:16.640 --> 2:12:24.240
+ interesting interpersonal and societal questions. And some of the language is just completely
+
+2:12:24.240 --> 2:12:31.040
+ hilarious. That's right. That's right. Oh, interesting. Monday starts on Saturday.
+
+2:12:31.040 --> 2:12:35.840
+ So I need to read. Oh, boy. You put that in the category of science fiction.
+
+2:12:36.560 --> 2:12:42.640
+ That one is, I mean, this was more of a silly, humorous work. I mean, there is kind of
+
+2:12:43.520 --> 2:12:49.520
+ profound too, right? Science fiction, right, is about this research institute. It has
+
+2:12:49.520 --> 2:12:55.040
+ deep parallels to serious research, but the setting, of course, is that they're working on
+
+2:12:55.040 --> 2:13:03.440
+ magic, right? And that's their style, right? And other books are very different, right? Hard
+
+2:13:03.440 --> 2:13:08.560
+ to be a god, right? It's about this higher society being injected into this primitive world and how
+
+2:13:08.560 --> 2:13:14.960
+ they operate there. Some of the very deep ethical questions there, right? And they've got this full
+
+2:13:14.960 --> 2:13:19.680
+ spectrum. Some is more about a kind of more adventurous style. But I enjoy all of their
+
+2:13:19.680 --> 2:13:24.080
+ books. There's probably a couple. Actually, one, I think that they consider their most important
+
+2:13:24.080 --> 2:13:30.640
+ work. I think it's the snail on a hill. I don't know exactly how it translates. I tried reading
+
+2:13:30.640 --> 2:13:35.200
+ a couple of times. I still don't get it. But everything else I fully enjoyed. And like for
+
+2:13:35.200 --> 2:13:40.000
+ one of my birthdays as a kid, I got their entire collection occupied a giant shelf in my room.
+
+2:13:40.000 --> 2:13:44.480
+ And then over the holidays, my parents couldn't drag me out of the room. And I read the whole
+
+2:13:44.480 --> 2:13:51.280
+ thing cover to cover. And I really enjoyed it. And that's one more. For the third one,
+
+2:13:51.920 --> 2:13:57.360
+ maybe a little bit darker. But it comes to mind is Orwell's 1984.
+
+2:13:59.280 --> 2:14:03.680
+ And I asked what made an impression on me and the books that people should read. That one,
+
+2:14:03.680 --> 2:14:07.440
+ I think, falls in the category of both. Now, definitely, it's one of those books that you
+
+2:14:07.440 --> 2:14:12.640
+ read and you just kind of put it down and you stare in space for a while.
+
+2:14:12.640 --> 2:14:20.560
+ Yeah, that kind of work. I think there's lessons there people should not ignore.
+
+2:14:23.040 --> 2:14:28.480
+ Nowadays, with everything that's happening in the world, I can't help it. But I have my mind jump
+
+2:14:28.480 --> 2:14:36.400
+ to some parallels with what Orwell described. And there's this whole concept of double think
+
+2:14:36.400 --> 2:14:40.880
+ and ignoring logic and holding completely contradictory opinions in your mind and not
+
+2:14:40.880 --> 2:14:47.200
+ have that not bother you and stick into the party line at all costs. There's something there.
+
+2:14:48.160 --> 2:14:53.680
+ If anything, 2020 has taught me. And I'm a huge fan of Animal Farm, which is a kind of friendly
+
+2:14:54.800 --> 2:15:02.720
+ as a friend of 1984 by Orwell. It's kind of another thought experiment of how our society
+
+2:15:02.720 --> 2:15:12.720
+ may go in directions that we wouldn't like it to go. But if anything, that's been kind of
+
+2:15:12.720 --> 2:15:21.360
+ heartbreaking to an optimist about 2020, is that that society is kind of fragile. Like, we have
+
+2:15:21.360 --> 2:15:28.080
+ this. This is a special little experiment we have going on. And not it's not unbreakable.
+
+2:15:28.080 --> 2:15:34.880
+ Like, we should be careful to preserve whatever the special thing we have going on. I mean,
+
+2:15:34.880 --> 2:15:42.800
+ I think 1984 and in these books, Brave New World, they're helpful in thinking stuff can go wrong
+
+2:15:43.680 --> 2:15:50.640
+ in non obvious ways. And it's up to us to preserve it. And it's a responsibility. It's been weighing
+
+2:15:50.640 --> 2:15:57.760
+ heavy on me. Because like, for some reason, like, more than my mom follows me on Twitter. And I feel
+
+2:15:57.760 --> 2:16:08.000
+ like I have I have like now somehow responsibility to do this world. And it dawned on me that like
+
+2:16:08.000 --> 2:16:15.120
+ me and millions of others are like the little ants that maintain this little colony. Right.
+
+2:16:15.120 --> 2:16:21.440
+ So we have a responsibility not to be, I don't know what the right analogy is, but put a flamethrower
+
+2:16:21.440 --> 2:16:27.120
+ to the place. We want to not do that. And there's interesting, complicated ways of doing that as
+
+2:16:27.120 --> 2:16:31.840
+ 1984 shows. It could be through bureaucracy, it could be through incompetence, it could be through
+
+2:16:31.840 --> 2:16:38.640
+ misinformation, it could be through division and toxicity. I'm a huge believer in like that love
+
+2:16:38.640 --> 2:16:47.120
+ will be the somehow the solution. So love and robots. Love and robots. Yeah. I think you're
+
+2:16:47.120 --> 2:16:51.280
+ exactly right. Unfortunately, I think it's less of a flamethrower type of an extra. I think it's
+
+2:16:51.280 --> 2:16:55.440
+ more of a in many cases, can be more of a slow boil. And that that's the danger.
+
+2:16:56.640 --> 2:17:04.880
+ Let me ask, it's a fun thing to make a world class roboticist, engineer, and leader uncomfortable
+
+2:17:04.880 --> 2:17:11.920
+ with a ridiculous question about life. What is the meaning of life? It's a main tree from a robotics
+
+2:17:11.920 --> 2:17:17.440
+ and a human perspective. You only have a couple of minutes or one minute to answer. So
+
+2:17:19.760 --> 2:17:21.200
+ I don't know if that makes it more difficult or easier.
+
+2:17:21.200 --> 2:17:36.080
+ You know, they're very tempted to quote one of the stories by Isaac Asimov, actually titled
+
+2:17:36.080 --> 2:17:42.000
+ appropriately titled The Last Question, short story, where the plot is that humans build this
+
+2:17:42.000 --> 2:17:48.720
+ supercomputer, this AI intelligence, and once it gets powerful enough, they pose this question to
+
+2:17:48.720 --> 2:17:54.800
+ it. How can the entropy in the universe be reduced? So the computer replies, hang on,
+
+2:17:54.800 --> 2:17:59.840
+ as of yet, insufficient information to give a meaningful answer. And then thousands of years
+
+2:17:59.840 --> 2:18:03.760
+ go by and they keep posing the same question. The computer gets more and more powerful and
+
+2:18:03.760 --> 2:18:07.760
+ keeps giving the same answer. As of yet, insufficient information to give a meaningful
+
+2:18:07.760 --> 2:18:14.080
+ answer or something along those lines. And then it keeps happening and happening fast forward
+
+2:18:14.080 --> 2:18:18.640
+ like millions of years into the future and billions of years. And at some point, it's just the only
+
+2:18:18.640 --> 2:18:23.600
+ entity in the universe. It's absorbed all humanity and all knowledge in the universe. And it keeps
+
+2:18:23.600 --> 2:18:30.160
+ posing the same question to itself. And finally, it gets to the point where it is able to answer
+
+2:18:30.160 --> 2:18:34.640
+ that question. But of course, at that point, there's the heat death of the universe has occurred,
+
+2:18:34.640 --> 2:18:38.880
+ and that's the only entity. And there's nobody else to provide that answer to. So the only thing
+
+2:18:38.880 --> 2:18:44.880
+ it can do is to answer it by demonstration. So it recreates the Big Bang and resets the clock.
+
+2:18:44.880 --> 2:18:54.400
+ Right? But I can try to give a different version of the answer. Maybe not on the
+
+2:18:54.400 --> 2:18:58.400
+ behalf of all humanity. I think that might be a little presumptuous for me to speak about the
+
+2:18:58.400 --> 2:19:05.200
+ meaning of life on the behalf of all humans. But at least, personally, it changes. I think if
+
+2:19:05.200 --> 2:19:14.320
+ you think about what gives you and your life meaning and purpose and what drives you,
+
+2:19:16.720 --> 2:19:26.960
+ it seems to change over time in the lifespan of your existence. When you just enter this world,
+
+2:19:26.960 --> 2:19:34.880
+ it's all about new experiences. You get new smells, new sounds, new emotions. And that's what's
+
+2:19:34.880 --> 2:19:41.200
+ driving you. You're experiencing new amazing things. And that's magical. That's pretty awesome.
+
+2:19:41.200 --> 2:19:46.000
+ That gives you kind of a meaning. Then you get a little bit older. You start more intentionally
+
+2:19:47.760 --> 2:19:51.360
+ learning about things. I guess actually, before you start intentionally learning,
+
+2:19:51.360 --> 2:19:56.000
+ probably fun. Fun is a thing that gives you kind of meaning and purpose and the thing you optimize
+
+2:19:56.000 --> 2:20:04.560
+ for. And fun is good. Then you start learning. And I guess that this joy of
+
+2:20:04.560 --> 2:20:11.280
+ comprehension and discovery is another thing that gives you meaning and purpose and drives you.
+
+2:20:12.320 --> 2:20:19.120
+ You learn enough stuff and you want to give some of it back. So impact and contributions back to
+
+2:20:19.120 --> 2:20:27.200
+ technology or society, people, local or more globally becomes a new thing that drives a lot
+
+2:20:27.200 --> 2:20:34.080
+ of your behavior and something that gives you purpose and that you derive positive feedback
+
+2:20:34.080 --> 2:20:43.520
+ from. Then you go on and so forth. You go through various stages of life. If you have kids,
+
+2:20:43.520 --> 2:20:48.240
+ that definitely changes your perspective on things. I have three that definitely flips
+
+2:20:48.240 --> 2:20:53.360
+ some bits in your head in terms of what you care about and what you optimize for and what
+
+2:20:53.360 --> 2:21:01.440
+ matters, what doesn't matter. And so on and so forth. It seems to me that it's all of those
+
+2:21:01.440 --> 2:21:11.760
+ things. As you go through life, you want these to be additive. New experiences, fun, learning
+
+2:21:11.760 --> 2:21:17.600
+ impact. You want to be accumulating. I don't want to stop having fun or experiencing new things.
+
+2:21:17.600 --> 2:21:23.520
+ And I think it's important that it just becomes additive as opposed to a replacement or subtraction.
+
+2:21:25.200 --> 2:21:29.040
+ Those fewest problems as far as I got, but ask me in a few years, I might have one or two more
+
+2:21:29.040 --> 2:21:33.920
+ to get to the list. And before you know it, time is up just like it is for this conversation.
+
+2:21:34.800 --> 2:21:39.360
+ But hopefully it was a fun ride. It was a huge honor to meet you. As you know, I've been a
+
+2:21:40.160 --> 2:21:46.560
+ fan of yours and a fan of Google self driving car and Waymo for a long time. I can't wait.
+
+2:21:46.560 --> 2:21:50.800
+ I mean, it's one of the most exciting. If we look back in the 21st century, I truly believe
+
+2:21:50.800 --> 2:21:56.160
+ it'll be one of the most exciting things we descendants of apes have created on this earth.
+
+2:21:56.160 --> 2:22:02.320
+ So I'm a huge fan and I can't wait to see what you do next. Thanks so much for talking to me.
+
+2:22:02.320 --> 2:22:05.440
+ Thanks. Thanks for having me. And it's also a huge fan.
+
+2:22:05.440 --> 2:22:25.920
+ Thanks for listening to this conversation. For reading through summaries of books, better help,
+
+2:22:25.920 --> 2:22:31.680
+ online therapy with a licensed professional and cash app, the app I use to send money to friends.
+
+2:22:31.680 --> 2:22:36.320
+ Please check out these sponsors in the description to get a discount and to support this podcast.
+
+2:22:36.960 --> 2:22:41.600
+ If you enjoy this thing, subscribe on YouTube, review it with five stars and upper podcast,
+
+2:22:41.600 --> 2:22:47.040
+ follow on Spotify, support on Patreon or connect with me on Twitter at Lex Friedman.
+
+2:22:47.040 --> 2:22:52.720
+ And now let me leave you with some words from Isaac Asimov. Science can amuse and
+
+2:22:52.720 --> 2:22:58.880
+ fascinate us all, but it is engineering that changes the world. Thank you for listening
+
+2:22:58.880 --> 2:23:04.480
+ and hope to see you next time.
+

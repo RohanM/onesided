@@ -1,0 +1,6959 @@
+WEBVTT
+
+00:00.000 --> 00:02.760
+ The following is a conversation with David Sinclair.
+
+00:02.760 --> 00:06.200
+ He's a professor in the Department of Genetics at Harvard
+
+00:06.200 --> 00:08.960
+ and codirector of the Paul F. Glenn Center
+
+00:08.960 --> 00:12.280
+ for the Biology of Aging at Harvard Medical School.
+
+00:12.280 --> 00:13.280
+ He's the author of the book,
+
+00:13.280 --> 00:16.880
+ Lifespan and cofounder of several biotech companies.
+
+00:16.880 --> 00:20.800
+ He works on turning age into an engineering problem
+
+00:20.800 --> 00:22.160
+ and solving it.
+
+00:22.160 --> 00:24.800
+ Driven by a vision of a world where billions of people
+
+00:24.800 --> 00:28.160
+ can live much longer and much healthier lives.
+
+00:28.160 --> 00:30.360
+ Quick mention of our sponsors.
+
+00:30.360 --> 00:34.400
+ On It, Clear, National Instruments and I,
+
+00:34.400 --> 00:36.840
+ Simply Safe and Linode.
+
+00:36.840 --> 00:38.200
+ Check them out in the description
+
+00:38.200 --> 00:40.040
+ to support this podcast.
+
+00:40.040 --> 00:42.800
+ As a side note, let me say that legivity research
+
+00:42.800 --> 00:45.880
+ challenges us to think how science and engineering
+
+00:45.880 --> 00:47.640
+ will change society.
+
+00:47.640 --> 00:50.400
+ Imagine if we can live 100,000 years,
+
+00:50.400 --> 00:53.720
+ even under controlled conditions like in a spaceship, say,
+
+00:53.720 --> 00:55.960
+ then suddenly a trip to Alpha Centauri
+
+00:55.960 --> 01:00.960
+ that is 4.37 light years away takes a single human lifespan.
+
+01:01.280 --> 01:05.160
+ And on the psychological, maybe even philosophical level,
+
+01:05.160 --> 01:08.720
+ as the horizons of death drift farther into the distance,
+
+01:08.720 --> 01:11.120
+ how will our search for meaning change?
+
+01:11.120 --> 01:13.080
+ Does meaning require death
+
+01:13.080 --> 01:15.720
+ or does it merely require struggle?
+
+01:15.720 --> 01:19.440
+ Reprogramming our biology will require us to delve deeper
+
+01:19.440 --> 01:23.680
+ into understanding the human mind and the robot mind.
+
+01:23.680 --> 01:25.880
+ Both of these efforts are as exciting
+
+01:25.880 --> 01:28.160
+ of a journey as I can imagine.
+
+01:28.160 --> 01:30.320
+ This is the Lex Friedman podcast
+
+01:30.320 --> 01:33.400
+ and here is my conversation with David Sinclair.
+
+01:34.360 --> 01:38.320
+ I usually feel like the same person when I was 12,
+
+01:38.320 --> 01:42.480
+ like when I, right now, as I think about myself,
+
+01:42.480 --> 01:45.040
+ I feel like exactly the same person
+
+01:45.040 --> 01:46.360
+ that I was when I was 12.
+
+01:46.360 --> 01:51.360
+ And yet, I am getting older, both body and mind,
+
+01:52.040 --> 01:54.280
+ and still feel like time hasn't passed at all.
+
+01:54.280 --> 01:56.960
+ Do you feel this tension in yourself
+
+01:56.960 --> 02:01.080
+ that you're the same person and yet you're aging?
+
+02:01.080 --> 02:04.720
+ Yeah, I have this tension that I'm still a kid,
+
+02:04.720 --> 02:05.960
+ but that helps in my career.
+
+02:05.960 --> 02:08.000
+ Scientists need to have a wonder about the world
+
+02:08.000 --> 02:10.560
+ and you don't wanna grow up at 12 year olds
+
+02:10.560 --> 02:13.440
+ and even younger, I would say six, seven year olds.
+
+02:13.440 --> 02:16.600
+ I've still got that boy in me and I can look at things.
+
+02:16.600 --> 02:17.520
+ It's a gift, I think,
+
+02:17.520 --> 02:20.040
+ that I can see things for the first time if I choose to
+
+02:20.040 --> 02:23.200
+ and then explain them as I would to a six year old
+
+02:23.200 --> 02:25.000
+ because I am that mentally.
+
+02:25.000 --> 02:26.760
+ But on the other hand, I'm getting older, right?
+
+02:26.760 --> 02:29.280
+ I run a lab of 20 people at Harvard.
+
+02:29.280 --> 02:33.560
+ I've got a book, I've got science to do, companies to run.
+
+02:33.560 --> 02:35.720
+ And so I have to, on most days,
+
+02:35.720 --> 02:38.200
+ just pretend to be a grown up and be mature,
+
+02:38.200 --> 02:40.720
+ but I definitely don't feel that way.
+
+02:40.720 --> 02:43.440
+ There's something I really appreciated
+
+02:43.440 --> 02:44.960
+ in the opening of your book.
+
+02:44.960 --> 02:46.960
+ You talked about your grandma there.
+
+02:46.960 --> 02:50.400
+ And on this kind of theme, on this kind of topic,
+
+02:50.400 --> 02:53.720
+ she first of all had a big influence on you.
+
+02:53.720 --> 02:56.540
+ My grandmother had a big influence on me.
+
+02:57.800 --> 03:00.840
+ And you also mentioned this poem by the author
+
+03:00.840 --> 03:03.760
+ of Winnie the Pooh, Alan Alexander Milne.
+
+03:04.720 --> 03:06.120
+ Maybe I can read it real quick
+
+03:06.120 --> 03:10.280
+ because I love, on the topic of being children.
+
+03:10.280 --> 03:12.560
+ When I was one, I had just begun.
+
+03:12.560 --> 03:14.800
+ When I was two, I was nearly new.
+
+03:14.800 --> 03:17.280
+ When I was three, I was hardly me.
+
+03:17.280 --> 03:19.840
+ When I was four, I was not much more.
+
+03:19.840 --> 03:22.160
+ When I was five, I was just alive.
+
+03:22.160 --> 03:24.320
+ But now I am six.
+
+03:24.320 --> 03:27.480
+ I am as clever, as clever, so I think I'll be six,
+
+03:27.480 --> 03:29.600
+ now, forever and ever.
+
+03:31.440 --> 03:36.440
+ So this idea of being six and staying six forever,
+
+03:37.720 --> 03:40.560
+ being youthful, being curious, being childlike,
+
+03:41.360 --> 03:43.400
+ this and other things,
+
+03:43.400 --> 03:46.800
+ what influence has your grandmother had
+
+03:46.800 --> 03:51.600
+ when you're thinking about life, about death, about love?
+
+03:53.280 --> 03:55.000
+ Yeah, I was getting misty eyed as you read that
+
+03:55.000 --> 03:58.120
+ because that poem was read to me very often,
+
+03:58.120 --> 04:01.480
+ if not every day by my grandmother who partially raised me.
+
+04:02.360 --> 04:06.480
+ And she was as much a Bohemian as an artist, philosopher.
+
+04:06.480 --> 04:08.200
+ And she's one of those people
+
+04:08.200 --> 04:09.840
+ that wouldn't talk about the little things.
+
+04:09.840 --> 04:11.640
+ She said, I hate small talk.
+
+04:11.640 --> 04:14.000
+ Don't talk to me about politics or the weather.
+
+04:14.000 --> 04:17.000
+ Yeah, talk to me about human beings and culture.
+
+04:17.000 --> 04:18.120
+ So I was raised on that.
+
+04:18.120 --> 04:20.680
+ And this poem was one that she read to me often
+
+04:20.680 --> 04:25.680
+ because she knew that the mind of a child is precious,
+
+04:26.120 --> 04:28.600
+ it's honest, it's pure.
+
+04:28.600 --> 04:31.560
+ And she grew up during the Second World War
+
+04:31.560 --> 04:35.760
+ and in Hungary and Budapest witnessed the worst of humanity.
+
+04:35.760 --> 04:40.120
+ She was trying to save a whole group of Jewish friends
+
+04:40.120 --> 04:41.440
+ in her apartment,
+
+04:41.440 --> 04:46.160
+ saw what happened after the World War, which was there was,
+
+04:46.160 --> 04:47.840
+ the Russians were in control
+
+04:47.840 --> 04:50.400
+ and locals weren't necessarily treated well
+
+04:50.400 --> 04:52.600
+ if they were rebellious, which she was.
+
+04:52.600 --> 04:54.520
+ And then there was the revolution in 56,
+
+04:54.520 --> 04:57.320
+ which she was part of and had to escape the country.
+
+04:57.320 --> 05:01.320
+ So she saw what can happen when humans do their worst.
+
+05:01.320 --> 05:05.320
+ And her words to me expressed in part through that poem
+
+05:05.320 --> 05:09.640
+ was David, always stay young and innocent
+
+05:09.640 --> 05:11.640
+ and have wonder about the world
+
+05:11.640 --> 05:15.480
+ and then do your best to make humanity the best it can be.
+
+05:15.480 --> 05:17.040
+ And that's who I am.
+
+05:17.040 --> 05:18.360
+ That's what I live for.
+
+05:18.360 --> 05:19.840
+ That's what I get up in the morning to do
+
+05:19.840 --> 05:21.680
+ is to leave the world a better place
+
+05:21.680 --> 05:23.200
+ and show to whoever's watching us,
+
+05:23.200 --> 05:26.800
+ whether it's aliens or some future human historian,
+
+05:26.800 --> 05:29.600
+ that we can do better than we did in the 20th century.
+
+05:31.280 --> 05:33.240
+ You know, we mentioned offline this idea
+
+05:33.240 --> 05:34.960
+ of bringing people back to life
+
+05:34.960 --> 05:38.280
+ through artificial intelligence.
+
+05:38.280 --> 05:40.880
+ Sort of, I don't know if you've seen videos
+
+05:40.880 --> 05:45.240
+ of basically animating people back to life,
+
+05:45.240 --> 05:47.680
+ meaning whether it's, for me,
+
+05:47.680 --> 05:49.840
+ a person I've been working on specifically
+
+05:49.840 --> 05:53.240
+ about Albert Einstein, but also Alan Turing,
+
+05:53.240 --> 05:55.800
+ Isaac Newton, and Richard Feynman.
+
+05:56.760 --> 05:59.560
+ And it's an opportunity to bring people
+
+05:59.560 --> 06:02.400
+ that meant a lot to others in the world
+
+06:02.400 --> 06:06.840
+ and animate them and be able to have a conversation with them.
+
+06:06.840 --> 06:11.840
+ At first, to try to visually explore
+
+06:14.840 --> 06:18.000
+ the full richness of character that they had
+
+06:18.000 --> 06:20.880
+ as they struggle with the ideas of the modern age.
+
+06:20.880 --> 06:24.120
+ Sort of, it's less about bringing back their mind
+
+06:24.120 --> 06:27.440
+ and more bringing back the visual quirks
+
+06:27.440 --> 06:29.000
+ that made them who they are.
+
+06:29.000 --> 06:30.920
+ And then maybe in the future,
+
+06:30.920 --> 06:33.200
+ it's using the textual, the visual,
+
+06:33.200 --> 06:38.200
+ the video, the audio data to actually compress
+
+06:38.600 --> 06:41.080
+ down the person for who they are
+
+06:41.080 --> 06:42.480
+ and be able to generate text.
+
+06:42.480 --> 06:43.720
+ There's a few companies.
+
+06:43.720 --> 06:46.200
+ There's Replica, which is a chat engine
+
+06:46.200 --> 06:48.240
+ that was born out of the idea of bringing,
+
+06:48.240 --> 06:53.240
+ the founder lost her friend to,
+
+06:53.480 --> 06:55.880
+ he got ran over by a car.
+
+06:55.880 --> 06:59.720
+ And the initial reason she founded the company
+
+06:59.720 --> 07:02.840
+ was trying to just have a conversation with her friend.
+
+07:02.840 --> 07:07.360
+ She trained machine learning, natural language system
+
+07:07.360 --> 07:09.480
+ on the text that they exchanged with each other
+
+07:09.480 --> 07:11.880
+ and she had a conversation with him
+
+07:11.880 --> 07:13.880
+ sort of after he was gone.
+
+07:13.880 --> 07:16.880
+ And the conversation was very trivial.
+
+07:16.880 --> 07:21.200
+ It was obvious that it's AI agent,
+
+07:21.200 --> 07:23.240
+ but it gave her solace.
+
+07:23.240 --> 07:25.920
+ It made her actually feel really good.
+
+07:25.920 --> 07:27.920
+ And that's the way I wonder if it's possible
+
+07:27.920 --> 07:32.520
+ to bring back people that mean something to us personally,
+
+07:32.520 --> 07:36.600
+ not just Einstein, but people that we've lost.
+
+07:36.600 --> 07:40.480
+ And in that way achieve a kind of small,
+
+07:40.480 --> 07:42.680
+ artificial immortality.
+
+07:42.680 --> 07:44.720
+ I don't know if you think about this kind of stuff.
+
+07:44.720 --> 07:46.600
+ Well, I definitely think about a lot of things.
+
+07:46.600 --> 07:47.640
+ That one's a really good one.
+
+07:47.640 --> 07:49.160
+ There's a great Black Mirror episode
+
+07:49.160 --> 07:52.840
+ about the wife who brings back the boyfriend or husband.
+
+07:52.840 --> 07:54.280
+ I think one of the challenges
+
+07:54.280 --> 07:55.520
+ with bringing back Richard Feynman
+
+07:55.520 --> 07:58.080
+ would be to capture his sense of humor.
+
+07:58.080 --> 07:59.320
+ But that would be awesome.
+
+07:59.320 --> 08:00.920
+ But yeah, bringing back loved ones would be great,
+
+08:00.920 --> 08:05.920
+ especially if they're young and they die early.
+
+08:07.680 --> 08:09.160
+ Though it may hold you back from moving on,
+
+08:09.160 --> 08:11.840
+ that's another thing that could happen as a negative.
+
+08:11.840 --> 08:12.680
+ But I think that's great.
+
+08:12.680 --> 08:14.680
+ And I also think that it's gonna be possible,
+
+08:14.680 --> 08:17.280
+ especially when we're recording some of us,
+
+08:17.280 --> 08:18.440
+ every aspect of our lives,
+
+08:18.440 --> 08:22.600
+ whether it's our face or things we see, right?
+
+08:22.600 --> 08:26.040
+ Eventually one day, everything we see can be recorded.
+
+08:26.040 --> 08:30.600
+ And then you can build somebody's experience and thoughts,
+
+08:30.600 --> 08:35.000
+ speech and you will have replicas of everybody,
+
+08:35.000 --> 08:37.000
+ at least digitally and physically,
+
+08:37.000 --> 08:38.720
+ you could do that too one day.
+
+08:38.720 --> 08:40.360
+ But that's a good idea,
+
+08:40.360 --> 08:42.640
+ especially because there are people that I'd like to meet
+
+08:42.640 --> 08:44.960
+ and I think it's easier than building a time machine.
+
+08:44.960 --> 08:47.320
+ One person I'd love to meet is Benjamin Franklin.
+
+08:47.320 --> 08:48.160
+ Really?
+
+08:48.160 --> 08:51.120
+ Well, I wouldn't go back in time, I would,
+
+08:51.120 --> 08:54.080
+ but I'd prefer to bring him into the future and say,
+
+08:54.080 --> 08:57.040
+ can you believe we have this thinking machine
+
+08:57.040 --> 08:58.440
+ in our pockets now?
+
+08:58.440 --> 09:00.240
+ And he just see the look on his face
+
+09:00.240 --> 09:01.320
+ as to where humanity has come.
+
+09:01.320 --> 09:03.480
+ Cause I think of him as a modern guy
+
+09:03.480 --> 09:05.480
+ that just was before his time.
+
+09:05.480 --> 09:06.320
+ Yeah.
+
+09:06.320 --> 09:08.520
+ So you're thinking Benjamin Franklin, a scientist,
+
+09:08.520 --> 09:10.400
+ not Benjamin Franklin, the political thing.
+
+09:10.400 --> 09:13.000
+ Cause he'd be very upset with Congress right now.
+
+09:13.000 --> 09:13.840
+ Right.
+
+09:13.840 --> 09:16.160
+ So maybe you talk to him about science and technology,
+
+09:16.160 --> 09:19.560
+ not politics, or maybe you just don't get him on Twitter
+
+09:19.560 --> 09:22.400
+ because he'll be very upset with human civilization.
+
+09:22.400 --> 09:25.360
+ You know, I wonder what their personalities are like.
+
+09:25.360 --> 09:29.080
+ Isaac Newton, it does seem complicated to figure out
+
+09:29.080 --> 09:30.520
+ what their personality is like.
+
+09:30.520 --> 09:33.320
+ Even Friedrich Nietzsche, who I also thought about.
+
+09:33.320 --> 09:36.840
+ Feynman is, we just have enough video
+
+09:36.840 --> 09:39.400
+ where we get the full kind of,
+
+09:39.400 --> 09:42.480
+ I mean, it shows you how important it is
+
+09:42.480 --> 09:47.480
+ to get not the official kind of book level presentation
+
+09:47.600 --> 09:49.600
+ of a human, but the authentic,
+
+09:49.600 --> 09:52.000
+ the full spectrum of humanity.
+
+09:52.000 --> 09:54.280
+ You mentioned collecting data about a person,
+
+09:54.280 --> 09:57.320
+ collecting the whole thing, the whole of life,
+
+09:57.320 --> 09:59.520
+ the ups and downs, the embarrassing stuff,
+
+09:59.520 --> 10:01.640
+ the beautiful stuff, not just the things
+
+10:01.640 --> 10:03.200
+ that's condensed into a book.
+
+10:03.200 --> 10:05.920
+ And then with Feynman, you start to see that a little bit.
+
+10:05.920 --> 10:07.960
+ Through conversations, you start to see peaks
+
+10:07.960 --> 10:09.360
+ of like that genius.
+
+10:09.360 --> 10:12.960
+ And then through stories about him from others.
+
+10:12.960 --> 10:16.520
+ And then certainly you, the sad thing about Alan Turing,
+
+10:16.520 --> 10:21.160
+ for example, is there's very little, if any,
+
+10:21.160 --> 10:22.280
+ recording of him.
+
+10:22.280 --> 10:24.200
+ In fact, I haven't been able to find recording.
+
+10:24.200 --> 10:27.200
+ Allegedly, there's supposed to be a recording of him.
+
+10:27.200 --> 10:29.680
+ Doing some kind of radio broadcast,
+
+10:29.680 --> 10:32.120
+ but I haven't been able to find anything.
+
+10:32.120 --> 10:34.720
+ And so that's truly sad.
+
+10:34.720 --> 10:36.840
+ That it feels like it makes you realize
+
+10:38.480 --> 10:42.320
+ how the upside, how nice it is to collect data
+
+10:42.320 --> 10:45.920
+ about a person, to capture that person.
+
+10:45.920 --> 10:48.720
+ That's the upside of the modern internet age,
+
+10:48.720 --> 10:51.320
+ the digital age, that that information,
+
+10:52.440 --> 10:54.240
+ yeah, creates a kind of immortality.
+
+10:54.240 --> 10:57.080
+ And then you can choose to highlight
+
+10:57.080 --> 10:58.160
+ the best parts of the person,
+
+10:58.160 --> 11:00.560
+ maybe throw away the ugly parts
+
+11:00.560 --> 11:03.440
+ and celebrate them even after they're gone.
+
+11:03.440 --> 11:05.040
+ So that's a really interesting opportunity.
+
+11:05.040 --> 11:07.880
+ You've also mentioned to me offline
+
+11:07.880 --> 11:10.320
+ that you're really excited about all the different
+
+11:10.320 --> 11:11.960
+ wearables and all the different ways
+
+11:11.960 --> 11:15.640
+ we can collect information about our bodies,
+
+11:15.640 --> 11:20.240
+ about the whole thing, what's most exciting to you
+
+11:20.240 --> 11:25.240
+ in terms of collecting the biological data
+
+11:25.640 --> 11:27.800
+ about our human being?
+
+11:27.800 --> 11:29.240
+ Well, so I'm a biologist.
+
+11:29.240 --> 11:33.080
+ I find animals and humans as machines very interesting.
+
+11:34.000 --> 11:36.440
+ It's one of the reasons I didn't become an engineer
+
+11:36.440 --> 11:38.080
+ or a surgeon, I wanted to understand
+
+11:38.080 --> 11:39.120
+ how we actually built.
+
+11:40.560 --> 11:45.560
+ And so I think a lot about machines merging with humans.
+
+11:46.000 --> 11:48.960
+ And the first of that are the bio wearables.
+
+11:48.960 --> 11:50.240
+ And so I talked a lot about this,
+
+11:50.240 --> 11:52.400
+ I wrote about it in Lifespan, the book,
+
+11:52.400 --> 11:56.800
+ and pictured a future where you would be monitored constantly
+
+11:56.800 --> 11:59.240
+ so that you wouldn't suddenly have a heart attack,
+
+11:59.240 --> 12:02.600
+ you'd know that was coming or you wouldn't go to the doctor
+
+12:02.600 --> 12:05.640
+ and they don't know if you need an antibiotic or not.
+
+12:07.480 --> 12:09.160
+ Long term, how old are you?
+
+12:09.160 --> 12:10.680
+ How to fix things, what should you eat?
+
+12:10.680 --> 12:11.520
+ What should you take?
+
+12:11.520 --> 12:12.920
+ What should your doctor do?
+
+12:12.920 --> 12:16.040
+ These devices, I predicted, would be smarter,
+
+12:16.040 --> 12:18.040
+ better educated than your physician
+
+12:18.040 --> 12:19.680
+ and would augment them.
+
+12:19.680 --> 12:21.440
+ And then there'd be a human that would just tick off
+
+12:21.440 --> 12:24.280
+ to see if that it's correct and they approve.
+
+12:24.280 --> 12:26.800
+ I also was predicting in the book
+
+12:26.800 --> 12:30.160
+ that we would have video conferences with our doctors
+
+12:30.160 --> 12:32.880
+ and that medicines would be delivered initially by courier
+
+12:32.880 --> 12:34.520
+ but eventually by drones and get it to you,
+
+12:34.520 --> 12:36.200
+ sometimes in an emergency.
+
+12:36.200 --> 12:37.960
+ And that we could even have pills
+
+12:37.960 --> 12:41.800
+ that were synthesized or delivered in your kitchen
+
+12:41.800 --> 12:43.920
+ and combined certainly.
+
+12:43.920 --> 12:45.960
+ What's amazing about that is that,
+
+12:45.960 --> 12:49.160
+ what are we now, two years since the book came out,
+
+12:49.160 --> 12:52.360
+ even less, and that future is basically here already.
+
+12:52.360 --> 12:56.840
+ COVID 19 accelerated that incredibly.
+
+12:56.840 --> 12:59.720
+ So where we're at now in society is if you want to pay for it,
+
+12:59.720 --> 13:01.680
+ you can have a blood test that will detect cancer
+
+13:01.680 --> 13:03.560
+ 10, 20 years earlier than it would
+
+13:03.560 --> 13:05.320
+ before it forms a tumor.
+
+13:05.320 --> 13:07.880
+ You can, of course, do your genome very cheaply
+
+13:07.880 --> 13:09.360
+ for less than $100 now.
+
+13:10.800 --> 13:12.320
+ There are biowarables already.
+
+13:12.320 --> 13:17.160
+ I wear this ring from Aura that I have a number of years of data.
+
+13:17.160 --> 13:19.200
+ I've been doing blood tests for the last 12 years
+
+13:19.200 --> 13:22.560
+ with a company called Inside Tracker, which I consult for.
+
+13:22.560 --> 13:24.160
+ And so I have all of that data as well
+
+13:24.160 --> 13:27.680
+ and there's 34 different parameters on my testosterone,
+
+13:27.680 --> 13:30.000
+ my blood glucose, my inflammation.
+
+13:30.000 --> 13:32.680
+ And I use all that data to, of course,
+
+13:32.680 --> 13:34.680
+ I wear a watch that measures things as well.
+
+13:34.680 --> 13:39.240
+ I use that data to keep my body in optimal shape.
+
+13:39.240 --> 13:42.120
+ So I'm now 51 and according to those parameters,
+
+13:42.120 --> 13:45.720
+ I'm at least as good as someone in their early 40s.
+
+13:45.720 --> 13:47.160
+ And if I really work at it,
+
+13:47.160 --> 13:52.000
+ I can get my biochemistry down to early to mid 30s.
+
+13:52.000 --> 13:56.200
+ Though I like to now eat a little dessert once in a while.
+
+13:56.200 --> 13:58.680
+ So that's the future we're in right now.
+
+13:58.680 --> 14:00.880
+ Anyone can do what I just said.
+
+14:00.880 --> 14:04.200
+ But in the very near future, just in the next few years,
+
+14:04.200 --> 14:06.360
+ you can be wearing wearables.
+
+14:06.360 --> 14:08.520
+ So I'm currently wearing a little,
+
+14:08.520 --> 14:10.920
+ what's called a bio sticker.
+
+14:10.920 --> 14:14.040
+ This one I just put on last night.
+
+14:14.040 --> 14:18.760
+ It's about an inch long, a few millimeters.
+
+14:18.760 --> 14:21.640
+ For people just listening, it's on David's chest.
+
+14:21.640 --> 14:23.120
+ It's just the, how does it attach?
+
+14:23.120 --> 14:24.240
+ It's just kind of.
+
+14:24.240 --> 14:25.080
+ It sticks on.
+
+14:25.080 --> 14:25.920
+ Sticks on.
+
+14:25.920 --> 14:27.680
+ Yeah, so on one side you have an on button that you press.
+
+14:27.680 --> 14:29.240
+ The lights come on, flashes four times.
+
+14:29.240 --> 14:30.440
+ It's good to go.
+
+14:30.440 --> 14:32.920
+ It immediately syncs to your phone.
+
+14:32.920 --> 14:37.200
+ And this one, it's called a bio button, nice name.
+
+14:37.200 --> 14:38.440
+ And there's another one that I have
+
+14:38.440 --> 14:41.440
+ that I haven't tried yet that does EKG on your heart.
+
+14:41.440 --> 14:43.320
+ This is mainly for doctors to monitor patients
+
+14:43.320 --> 14:45.560
+ that go home after a heart attack or surgery.
+
+14:45.560 --> 14:48.920
+ But that's medical grade FDA approved device.
+
+14:48.920 --> 14:51.200
+ So there will be a day, in fact, it's already here
+
+14:51.200 --> 14:55.200
+ that doctors are using these to get patients to go home
+
+14:55.200 --> 14:59.400
+ and save a week in hospital, $2,000 at least
+
+14:59.400 --> 15:00.880
+ for each patient.
+
+15:00.880 --> 15:04.400
+ That's massive savings for the hospital.
+
+15:04.400 --> 15:06.520
+ But ultimately what I'm excited about is a future
+
+15:06.520 --> 15:10.720
+ that isn't that far off where everybody,
+
+15:10.720 --> 15:11.720
+ certainly in developed countries,
+
+15:11.720 --> 15:14.320
+ eventually these will cost a few cents and rechargeable.
+
+15:14.320 --> 15:16.600
+ The only cost will be the software subscription
+
+15:16.600 --> 15:19.200
+ that can be monitored constantly.
+
+15:19.200 --> 15:21.000
+ And to give you an idea what this is measuring me
+
+15:21.000 --> 15:26.000
+ at 1,000 times a second is my vibrations as I speak,
+
+15:26.200 --> 15:29.560
+ my orientation, it already has told me this morning
+
+15:29.560 --> 15:33.200
+ how I slept, where I slept, what side I slept on.
+
+15:33.200 --> 15:37.040
+ We've got sneezing, coughing, body temperature,
+
+15:37.040 --> 15:40.880
+ heart rate, heart of other parameters of the heart
+
+15:40.880 --> 15:42.440
+ that would indicate heart health.
+
+15:44.040 --> 15:49.040
+ These data are being used to now to predict sickness.
+
+15:49.880 --> 15:53.680
+ So eventually we'll have just in the next year or so
+
+15:53.680 --> 15:56.360
+ the ability to predict whether something or diagnose
+
+15:56.360 --> 16:00.920
+ whether something is pneumonia or just a rhinovirus
+
+16:00.920 --> 16:03.120
+ that can be treated or not, right?
+
+16:03.120 --> 16:06.400
+ This is really going to not just revolutionize medicine
+
+16:06.400 --> 16:08.560
+ but I think extend lives dramatically.
+
+16:08.560 --> 16:11.560
+ Because if I'm gonna have a heart attack next week
+
+16:11.560 --> 16:14.480
+ and that's possible, this device should know that
+
+16:14.480 --> 16:17.000
+ and I'll be in hospital before I even have it.
+
+16:17.000 --> 16:19.280
+ Maybe you can talk a little bit about Inside Tracker
+
+16:19.280 --> 16:22.040
+ because I saw that there's some really cool things in there.
+
+16:23.040 --> 16:26.000
+ Like it actually, so maybe you can talk about,
+
+16:26.000 --> 16:27.760
+ I guess that you're collecting blood
+
+16:27.760 --> 16:29.280
+ and to give it the data.
+
+16:29.280 --> 16:32.520
+ So, and it has like basic recommendations
+
+16:32.520 --> 16:34.240
+ on how to improve your life.
+
+16:34.240 --> 16:36.600
+ So we're not just talking about diseases, right?
+
+16:36.600 --> 16:39.120
+ Like anticipating having a particular disease
+
+16:39.120 --> 16:41.920
+ but it's almost like guiding your trajectory to life,
+
+16:41.920 --> 16:44.640
+ how to, whether it's extend your life
+
+16:44.640 --> 16:46.760
+ or just live a more fulfilling,
+
+16:46.760 --> 16:48.240
+ like improve the quality of life,
+
+16:48.240 --> 16:50.320
+ I suppose this is the right way to say it.
+
+16:50.320 --> 16:52.560
+ What, how does Inside Tracker work?
+
+16:52.560 --> 16:53.400
+ What the heck is it?
+
+16:53.400 --> 16:55.160
+ Because I thought there was also pretty cool.
+
+16:55.160 --> 16:56.000
+ Yeah.
+
+16:56.000 --> 16:56.840
+ What is it?
+
+16:56.840 --> 16:58.280
+ Is it something other people can use?
+
+16:58.280 --> 16:59.760
+ You can definitely use it.
+
+16:59.760 --> 17:02.120
+ You can sign up, it's consumer.
+
+17:02.120 --> 17:04.480
+ It's like a company, consumer facing company.
+
+17:04.480 --> 17:06.080
+ It is, yeah.
+
+17:06.080 --> 17:09.040
+ And I also want to democratize the ability
+
+17:09.040 --> 17:11.040
+ to just take a mouth swab eventually.
+
+17:11.040 --> 17:13.600
+ We don't need to have a blood test necessarily.
+
+17:13.600 --> 17:14.680
+ But for now it's a blood test
+
+17:14.680 --> 17:18.440
+ and you'd go to a lab core request in the US.
+
+17:18.440 --> 17:19.880
+ It's also available overseas.
+
+17:19.880 --> 17:22.600
+ You can upload your own data for a minimal cost
+
+17:22.600 --> 17:26.600
+ and get the algorithms, the AI in the background
+
+17:26.600 --> 17:30.160
+ to take that data, plot where you are against others
+
+17:30.160 --> 17:33.480
+ in your age group in terms of health and longevity
+
+17:33.480 --> 17:36.040
+ at bio age, they call it inner age.
+
+17:36.040 --> 17:38.160
+ But also it provides recommendations.
+
+17:38.160 --> 17:39.680
+ And this isn't just a bunch of BS.
+
+17:39.680 --> 17:41.680
+ It sounds like it might be to say,
+
+17:41.680 --> 17:44.400
+ I'll go eat this or go to that restaurant and order that.
+
+17:44.400 --> 17:46.440
+ But it's actually based on,
+
+17:46.440 --> 17:49.840
+ they basic this company has entered hundreds,
+
+17:49.840 --> 17:51.800
+ now it would be thousands of scientific papers
+
+17:51.800 --> 17:54.240
+ into their database and hundreds of thousands
+
+17:54.240 --> 17:55.760
+ of human data points.
+
+17:55.760 --> 17:59.080
+ And they have tens of thousands of individuals
+
+17:59.080 --> 18:01.680
+ that have been tracked over time and anonymously
+
+18:01.680 --> 18:04.320
+ that data is used to say what works and what doesn't.
+
+18:04.320 --> 18:05.800
+ If you eat that, what works?
+
+18:05.800 --> 18:07.680
+ If you take that supplement, what works?
+
+18:07.680 --> 18:09.680
+ And I was a coauthor on a paper that showed
+
+18:09.680 --> 18:13.520
+ that the recommendations for food and supplements
+
+18:15.120 --> 18:18.120
+ was better than the leading drug for type two diabetes.
+
+18:19.000 --> 18:19.840
+ That's so cool.
+
+18:19.840 --> 18:21.720
+ The idea that you can connect,
+
+18:21.720 --> 18:24.960
+ like skipping the human having to do this work,
+
+18:24.960 --> 18:27.440
+ you can connect the scientific papers,
+
+18:27.440 --> 18:30.160
+ almost like meta analysis of the science
+
+18:30.160 --> 18:32.560
+ connected to the individual data.
+
+18:32.560 --> 18:35.480
+ And then based on that sort of connect your data
+
+18:35.480 --> 18:38.440
+ to whatever the proper group is within the,
+
+18:38.440 --> 18:40.520
+ whatever the scientific paper is
+
+18:40.520 --> 18:43.120
+ to make the suggestion of how,
+
+18:43.120 --> 18:47.200
+ like how that work applies to your life.
+
+18:47.200 --> 18:49.720
+ And then that ultimately maps to like a recommendation
+
+18:49.720 --> 18:51.720
+ what you should do with your life.
+
+18:51.720 --> 18:54.600
+ It all, like this giant system
+
+18:54.600 --> 18:57.040
+ that ultimately recommends you should drink more coffee
+
+18:57.040 --> 18:58.520
+ or less.
+
+18:58.520 --> 19:00.360
+ Right, and we'll have the genome in there as well.
+
+19:00.360 --> 19:01.960
+ You can upload that.
+
+19:01.960 --> 19:04.720
+ And so these programs will know us way better
+
+19:04.720 --> 19:07.560
+ than we do and our doctors as well.
+
+19:07.560 --> 19:09.840
+ The idea of going to a doctor once a year for an annual
+
+19:09.840 --> 19:11.280
+ checkup and having, you know,
+
+19:11.280 --> 19:14.720
+ males get a finger up their butt and, you know, you cough.
+
+19:14.720 --> 19:16.080
+ That to me is a joke.
+
+19:16.080 --> 19:18.200
+ That's medieval medicine.
+
+19:18.200 --> 19:21.520
+ And that's very soon going to be seen as medieval.
+
+19:21.520 --> 19:26.000
+ Yeah, it's a, to me as a computer science person,
+
+19:26.000 --> 19:28.680
+ it's always upsetting to go to the doctor
+
+19:28.680 --> 19:31.160
+ and just look at him and like realize,
+
+19:31.160 --> 19:33.200
+ you know nothing about me.
+
+19:33.200 --> 19:38.200
+ Like you're making your like opinions based on like,
+
+19:38.640 --> 19:42.560
+ it is very valuable years of intuition building
+
+19:42.560 --> 19:45.920
+ about basic symptoms, but you're just like, it is medieval.
+
+19:45.920 --> 19:47.240
+ They're very good at it.
+
+19:47.240 --> 19:49.600
+ In fact, doctors in medieval times
+
+19:49.600 --> 19:53.640
+ will probably damn good at working with very little.
+
+19:53.640 --> 19:58.520
+ But the thing is I'd rather prefer a doctor
+
+19:58.520 --> 20:00.080
+ that doesn't really know what they're doing,
+
+20:00.080 --> 20:03.080
+ but has a huge amount of data to work with.
+
+20:03.080 --> 20:03.920
+ Well, you're right.
+
+20:03.920 --> 20:05.600
+ And many of my good friends are doctors.
+
+20:05.600 --> 20:06.520
+ I work at Harvard.
+
+20:06.520 --> 20:09.640
+ So I'm not against the profession at all.
+
+20:09.640 --> 20:11.680
+ But I think that they need just as much help
+
+20:11.680 --> 20:13.480
+ as anyone else does.
+
+20:13.480 --> 20:15.320
+ We wouldn't drive a car without a dashboard.
+
+20:15.320 --> 20:16.160
+ We wouldn't think of it.
+
+20:16.160 --> 20:17.880
+ So why would doctors do the same?
+
+20:18.720 --> 20:21.400
+ If we could, could we step back to the big,
+
+20:21.400 --> 20:24.520
+ profound philosophical, both tragic and beautiful question
+
+20:24.520 --> 20:28.720
+ about age, how and why do we age?
+
+20:28.720 --> 20:31.520
+ Is it from an engineering perspective?
+
+20:31.520 --> 20:33.680
+ You said you like the biological machine.
+
+20:33.680 --> 20:37.760
+ Is that a feature or a bug of the biological machine?
+
+20:37.760 --> 20:40.720
+ It is both a bug and a feature.
+
+20:40.720 --> 20:44.640
+ Evolutionary speaking, we only live as long as we need to
+
+20:44.640 --> 20:46.240
+ to replace ourselves efficiently.
+
+20:47.360 --> 20:49.120
+ If you're a mouse, you're only gonna live
+
+20:49.120 --> 20:50.600
+ two and a half years, three years.
+
+20:50.600 --> 20:52.480
+ You're probably gonna die of starvation, predation,
+
+20:52.480 --> 20:54.480
+ freezing in the winter.
+
+20:54.480 --> 20:57.160
+ So they divert most of their resources
+
+20:57.160 --> 21:00.080
+ to reproducing rapidly, but they don't put a lot
+
+21:00.080 --> 21:04.360
+ of energy into preserving their soma, which is their body.
+
+21:04.360 --> 21:07.480
+ Conversely, a baleen type of whale, a bowhead whale
+
+21:07.480 --> 21:09.360
+ in particular will live hundreds of years
+
+21:09.360 --> 21:11.120
+ because they're at the top of the food chain
+
+21:11.120 --> 21:12.680
+ and they can live as long as they want.
+
+21:12.680 --> 21:15.160
+ So they breed slowly and build a body at last.
+
+21:15.160 --> 21:17.440
+ We're somewhere in between because we've, you know,
+
+21:17.440 --> 21:19.720
+ we've really only just come out of the savannas
+
+21:19.720 --> 21:22.120
+ where we could be picked off by a cat.
+
+21:22.120 --> 21:25.440
+ We were pretty wimpy going back six million years ago.
+
+21:25.440 --> 21:30.120
+ So we actually need to evolve quicker than evolution will.
+
+21:30.120 --> 21:33.600
+ And that's why we can use our oversized brains
+
+21:33.600 --> 21:36.200
+ and intuition to give us what evolution
+
+21:36.200 --> 21:38.320
+ not only didn't give us, but took away from us.
+
+21:38.320 --> 21:40.720
+ Now we're pathetic, look at our bodies.
+
+21:40.720 --> 21:42.960
+ These arms, if any of us, even the strongest person
+
+21:42.960 --> 21:45.040
+ in the world went in a cage with a chimpanzee,
+
+21:45.040 --> 21:47.440
+ the chimp could knock that person's head off, no question.
+
+21:47.440 --> 21:48.280
+ So we're pathetic.
+
+21:48.280 --> 21:50.320
+ We need to engineer ourselves to be healthier
+
+21:50.320 --> 21:51.600
+ and longer lived.
+
+21:51.600 --> 21:55.680
+ So getting to aging, we can do better, right?
+
+21:55.680 --> 21:57.280
+ Whales do way better.
+
+21:57.280 --> 21:59.520
+ We're trying to learn how whales do that.
+
+21:59.520 --> 22:03.320
+ And if you ask really anybody in the field now, professor,
+
+22:03.320 --> 22:07.400
+ they'll say there are eight or nine hallmarks of aging,
+
+22:07.400 --> 22:11.560
+ which are really, it's a word for causes of aging.
+
+22:11.560 --> 22:13.560
+ So that you probably have heard of some of these.
+
+22:13.560 --> 22:16.640
+ Your listeners will have lots of telomeres,
+
+22:16.640 --> 22:19.640
+ the ends of the chromosomes, like the little ends
+
+22:19.640 --> 22:21.920
+ of shoelaces, that kind of thing.
+
+22:21.920 --> 22:23.600
+ They get too short, cells stop dividing,
+
+22:23.600 --> 22:28.600
+ becomes senescent, they put out what are called mitogens
+
+22:28.640 --> 22:31.120
+ that cause cancer and inflammatory molecules.
+
+22:31.120 --> 22:34.320
+ So that's another aspect of aging, cellulose senescence.
+
+22:34.320 --> 22:36.000
+ Another one is loss of the energetics.
+
+22:36.000 --> 22:38.760
+ So mitochondria, the battery packs wind down.
+
+22:39.760 --> 22:43.120
+ There's a whole bunch, stem cells, proteostasis.
+
+22:43.120 --> 22:45.520
+ Well, these are our Achilles heels that I'm talking about.
+
+22:45.520 --> 22:48.440
+ They're a common amongst old life forms, really.
+
+22:48.440 --> 22:51.680
+ But if you want me to jump to the chase as to where,
+
+22:51.680 --> 22:54.440
+ what is the upstream defining factor?
+
+22:54.440 --> 22:57.320
+ If we boil it down, what do we get?
+
+22:57.320 --> 22:59.760
+ So most biologists would say you can't boil it down.
+
+22:59.760 --> 23:01.240
+ It's too complex.
+
+23:01.240 --> 23:03.680
+ I would say you can boil it down to an equation,
+
+23:03.680 --> 23:05.880
+ which is the preservation of information
+
+23:05.880 --> 23:08.960
+ and lost due to entropy, i.e. noise.
+
+23:08.960 --> 23:11.120
+ And that is the basis of my research.
+
+23:12.400 --> 23:14.880
+ It originally came out of discoveries in yeast cells,
+
+23:14.880 --> 23:17.280
+ where I went to MIT in the 1990s.
+
+23:17.280 --> 23:18.800
+ You studied bread?
+
+23:18.800 --> 23:20.240
+ I kind of did.
+
+23:20.240 --> 23:23.160
+ I studied the makers of bread,
+
+23:23.160 --> 23:25.520
+ a little yeast called Saccharomyces cerevisiae,
+
+23:25.520 --> 23:29.240
+ which at the time was one of the hottest, excuse the pun,
+
+23:29.240 --> 23:30.960
+ organisms to work on.
+
+23:30.960 --> 23:35.360
+ But we figured out in the lab why yeast cells get old
+
+23:35.360 --> 23:37.480
+ and found genes that control that process
+
+23:37.480 --> 23:39.040
+ and made them live longer,
+
+23:39.040 --> 23:41.440
+ which was an amazing four years of my life.
+
+23:41.440 --> 23:46.440
+ One of those genes had a name with an acronym SIR2.
+
+23:48.240 --> 23:49.720
+ Now the two is irrelevant.
+
+23:49.720 --> 23:51.840
+ The SIR is important,
+
+23:51.840 --> 23:53.960
+ and the most important letter out of all of those three
+
+23:53.960 --> 23:57.000
+ is i, which stands for information.
+
+23:57.000 --> 23:59.640
+ Silent information regulator number two.
+
+23:59.640 --> 24:01.120
+ When you put more copies of that gene in,
+
+24:01.120 --> 24:02.800
+ just put in one more copy,
+
+24:02.800 --> 24:04.760
+ the yeast cells lived 30% longer
+
+24:04.760 --> 24:06.120
+ and suppressed the cause of aging,
+
+24:06.120 --> 24:09.040
+ which was the dysregulation of information in the cell.
+
+24:09.040 --> 24:11.640
+ And then, so fast forward to now,
+
+24:11.640 --> 24:14.600
+ I've been looking in humans and mice
+
+24:14.600 --> 24:17.760
+ because they live shorter and cheaper to study,
+
+24:17.760 --> 24:20.800
+ where the loss of information in our bodies
+
+24:20.800 --> 24:22.600
+ is a root cause of aging.
+
+24:22.600 --> 24:24.040
+ And I think it is.
+
+24:24.040 --> 24:29.040
+ Your boldness in viewing biology in this way is fascinating
+
+24:29.520 --> 24:31.800
+ because that also leads to a kind of,
+
+24:31.800 --> 24:36.800
+ it's almost like allows for a theory of aging
+
+24:40.280 --> 24:43.120
+ like you could boil it down to a single equation
+
+24:43.120 --> 24:45.960
+ and it leads to a perhaps a metric
+
+24:45.960 --> 24:48.640
+ that allows you to optimize aging,
+
+24:48.640 --> 24:51.320
+ sort of in the fight against entropy.
+
+24:51.320 --> 24:53.360
+ It's to figure out which mechanisms,
+
+24:53.360 --> 24:55.720
+ like you said, the silent information regulator,
+
+24:55.720 --> 24:58.560
+ which mechanisms allow you to preserve information
+
+24:58.560 --> 25:01.640
+ like without injecting noise,
+
+25:01.640 --> 25:03.720
+ without creating entropy,
+
+25:03.720 --> 25:06.960
+ without creating degradation of that information.
+
+25:06.960 --> 25:11.120
+ For some reason, converting biology,
+
+25:11.120 --> 25:13.480
+ which I thought was mostly impossible
+
+25:13.480 --> 25:15.640
+ into an engineering problem,
+
+25:15.640 --> 25:19.360
+ feels like it makes it amenable to optimization,
+
+25:19.360 --> 25:22.520
+ to solving problems, to creating technology
+
+25:22.520 --> 25:26.640
+ that can, whether that's genetic engineering or AI,
+
+25:26.640 --> 25:30.920
+ it makes it possible to create the technology
+
+25:30.920 --> 25:34.880
+ that would improve the degradation of information
+
+25:34.880 --> 25:36.240
+ and aging.
+
+25:36.240 --> 25:38.480
+ Is there more concrete ways you think about
+
+25:38.480 --> 25:41.440
+ the kind of information we want to preserve?
+
+25:41.440 --> 25:46.120
+ And also, is there good ideas about regulators
+
+25:46.120 --> 25:51.120
+ of that information, about ways to prevent the distortion
+
+25:52.400 --> 25:54.000
+ of the degradation of that information?
+
+25:54.000 --> 25:54.840
+ Right.
+
+25:54.840 --> 25:57.080
+ We have silent information regulator genes in our bodies.
+
+25:57.080 --> 25:58.840
+ We have seven of them,
+
+25:58.840 --> 26:00.360
+ SurT1 through SurT7, they're called.
+
+26:00.360 --> 26:03.200
+ And we found in mice, one way to slow down
+
+26:03.200 --> 26:05.840
+ the loss of information is to just give more of these,
+
+26:06.880 --> 26:08.440
+ to upregulate these genes.
+
+26:08.440 --> 26:12.000
+ So we made a mouse that has more of this SurT1 gene,
+
+26:12.000 --> 26:15.160
+ turned it on, and that slowed down the aging of the brain
+
+26:15.160 --> 26:16.520
+ and preserved their information.
+
+26:16.520 --> 26:19.440
+ Now, what information am I talking about, you might ask.
+
+26:19.440 --> 26:22.000
+ Well, again, you can simplify biology.
+
+26:22.000 --> 26:25.120
+ There are two types of information in the cell primarily.
+
+26:25.120 --> 26:27.200
+ The one we all read about and know about
+
+26:27.200 --> 26:29.040
+ is the DNA, the genome.
+
+26:29.040 --> 26:32.480
+ And that's base four information, ATCG,
+
+26:32.480 --> 26:35.280
+ the four chemicals that make up the various sequences
+
+26:35.280 --> 26:37.920
+ of the genome, billions of letters.
+
+26:37.920 --> 26:40.000
+ And that also degrades over time.
+
+26:40.000 --> 26:42.640
+ But what's been fascinating is that we find
+
+26:42.640 --> 26:45.160
+ that that information is pretty much intact
+
+26:45.160 --> 26:47.320
+ in old animals and people.
+
+26:47.320 --> 26:49.160
+ You can clone a dog, one of my friends in LA
+
+26:49.160 --> 26:51.000
+ just cloned his dog three times.
+
+26:51.000 --> 26:52.120
+ So this is dual, right?
+
+26:52.120 --> 26:53.840
+ It means that the genome can be intact.
+
+26:53.840 --> 26:56.240
+ But what's the other type of information?
+
+26:56.240 --> 26:59.960
+ It's the epigenome, the regulators of the genetic
+
+26:59.960 --> 27:01.280
+ information.
+
+27:01.280 --> 27:04.440
+ And physically, that's really just how the DNA is wrapped up
+
+27:04.440 --> 27:08.080
+ or looped out for the cell to access it and read it.
+
+27:08.080 --> 27:11.240
+ So it's similar to, and excuse this analogy,
+
+27:11.240 --> 27:15.240
+ but it's a good one, a compact disc or a DVD.
+
+27:15.240 --> 27:18.520
+ Those pits in the foil are the digital information.
+
+27:18.520 --> 27:19.600
+ That's the genome.
+
+27:19.600 --> 27:22.280
+ And the epigenome is the reader of that information.
+
+27:22.280 --> 27:25.320
+ And in a different cell, you'd read different music,
+
+27:25.320 --> 27:28.040
+ different songs, different symphonies.
+
+27:28.040 --> 27:31.640
+ And that's what gets laid down when we're in the womb
+
+27:31.640 --> 27:34.640
+ and that makes a skin cell forever a skin cell
+
+27:34.640 --> 27:36.400
+ and not a brain cell tomorrow.
+
+27:36.400 --> 27:38.800
+ Thank God, otherwise our brains wouldn't work very well.
+
+27:38.800 --> 27:41.240
+ But over time, what we see is that the brain cells
+
+27:41.240 --> 27:42.960
+ start to look more like skin cells.
+
+27:42.960 --> 27:45.640
+ And the kidney cells start to look more like liver cells.
+
+27:45.640 --> 27:48.120
+ And what we call X differentiate.
+
+27:48.120 --> 27:51.360
+ This is a term that we use in my lab, but isn't yet widely
+
+27:51.360 --> 27:53.440
+ used, but we needed a term to explain this.
+
+27:53.440 --> 27:55.840
+ And that process of X differentiation,
+
+27:55.840 --> 28:01.160
+ the loss of the reader of the CD or the DVD,
+
+28:01.160 --> 28:06.240
+ we liken that to scratches on the DVD
+
+28:06.240 --> 28:09.360
+ so that the reader cannot fully access the information.
+
+28:09.360 --> 28:11.480
+ Now, we can slow down the scratches, as I mentioned.
+
+28:11.480 --> 28:13.160
+ We can turn on these genes.
+
+28:13.160 --> 28:15.520
+ We can even put in molecules into the cell
+
+28:15.520 --> 28:19.000
+ or even eat them and turn on those pathways,
+
+28:19.000 --> 28:21.280
+ which my father and I have been trying
+
+28:21.280 --> 28:24.400
+ to do for about a decade, to slow things down.
+
+28:24.400 --> 28:27.360
+ But the question that I've had is,
+
+28:27.360 --> 28:30.840
+ is there a repository of information still in the body?
+
+28:30.840 --> 28:32.240
+ Because anyone who knows anything
+
+28:32.240 --> 28:34.000
+ about the loss of information or even
+
+28:34.000 --> 28:37.200
+ has tried to copy a cassette tape or photocopy or Xerox
+
+28:37.200 --> 28:40.360
+ anything knows that over time, you lose that information
+
+28:40.360 --> 28:41.760
+ irreparably.
+
+28:41.760 --> 28:43.960
+ So I've been looking for a backup copy,
+
+28:43.960 --> 28:47.680
+ inspired largely by Claude Shannon's work at MIT as well
+
+28:47.680 --> 28:49.680
+ in the 1940s.
+
+28:49.680 --> 28:52.320
+ His mathematical theory of communication
+
+28:52.320 --> 28:53.040
+ is just brilliant.
+
+28:53.040 --> 28:55.720
+ And so I've been looking for what he called the observer, which
+
+28:55.720 --> 28:57.200
+ is the backup copy.
+
+28:57.200 --> 29:01.480
+ We today might call that the TCPIP protocol of the internet
+
+29:01.480 --> 29:04.000
+ that stores information in case it doesn't make it
+
+29:04.000 --> 29:05.040
+ to your computer.
+
+29:05.040 --> 29:06.920
+ It will fill in the gaps.
+
+29:06.920 --> 29:09.360
+ And we've been spending about the last five years
+
+29:09.360 --> 29:12.160
+ to try and find if there really is a backup copy in the body
+
+29:12.160 --> 29:16.040
+ to reset the epigenome and polish those scratches away.
+
+29:16.040 --> 29:16.960
+ That's incredible.
+
+29:16.960 --> 29:19.680
+ So finding the backup, so whenever there are too many
+
+29:19.680 --> 29:25.600
+ scratches pile up, you can just write a new version.
+
+29:25.600 --> 29:29.400
+ Not a new version, but go to the backup and restore it.
+
+29:29.400 --> 29:31.640
+ That's really all we're talking about.
+
+29:31.640 --> 29:34.440
+ It's not that hard once you know the trick.
+
+29:34.440 --> 29:39.120
+ And for people that actually remember DVDs and scratches
+
+29:39.120 --> 29:41.760
+ on them, how frustrating it is, that's
+
+29:41.760 --> 29:45.840
+ a brilliant metaphor for aging.
+
+29:45.840 --> 29:51.040
+ And then the reader is the thing that skips.
+
+29:51.040 --> 29:53.400
+ And then it could destroy your experience,
+
+29:53.400 --> 29:54.960
+ the richness of the experience that
+
+29:54.960 --> 29:57.160
+ is listening to your favorite song.
+
+29:57.160 --> 29:58.960
+ Right, but in biology, it's even worse,
+
+29:58.960 --> 30:01.120
+ because you'll lose your memory, your kidneys will fail,
+
+30:01.120 --> 30:03.640
+ you'll get diabetes, your heart will fail.
+
+30:03.640 --> 30:06.920
+ And we call that aging and age related diseases.
+
+30:06.920 --> 30:09.720
+ So most people forget that diseases
+
+30:09.720 --> 30:13.880
+ that we get when we get old are 80% to 90% caused by aging.
+
+30:13.880 --> 30:15.960
+ And we've been trying to fix things with band aids
+
+30:15.960 --> 30:19.040
+ after they occur without even generally talking
+
+30:19.040 --> 30:21.400
+ about the root cause of the problem.
+
+30:21.400 --> 30:24.560
+ Is there the scratches?
+
+30:24.560 --> 30:31.920
+ Do those come from, are those programmed or are they failures?
+
+30:31.920 --> 30:36.480
+ Meaning is it, so if it's by design,
+
+30:36.480 --> 30:40.960
+ then there's like an encoded timeline schedule
+
+30:40.960 --> 30:44.560
+ that the body's just on purpose degrading the whole thing.
+
+30:44.560 --> 30:47.080
+ And then there's just the wear and tear
+
+30:47.080 --> 30:50.160
+ of the scratches and a disc that happen through time.
+
+30:50.160 --> 30:51.480
+ Which one is it?
+
+30:51.480 --> 30:54.200
+ That's the source of aging.
+
+30:54.200 --> 30:55.440
+ It's more akin to wear and tear.
+
+30:55.440 --> 30:56.920
+ There isn't a program.
+
+30:56.920 --> 31:00.960
+ Getting back to evolution, there's no selection for aging.
+
+31:00.960 --> 31:02.080
+ We're not designed to age.
+
+31:02.080 --> 31:03.840
+ We just live as long as we need to.
+
+31:03.840 --> 31:06.120
+ And then we're at the whim of entropy, basically.
+
+31:06.120 --> 31:09.080
+ Second law of thermodynamics stuff falls apart.
+
+31:09.080 --> 31:11.400
+ We live a bit longer than age 40 only
+
+31:11.400 --> 31:13.400
+ because there are robust, resilient systems.
+
+31:13.400 --> 31:15.280
+ But eventually they fail as well.
+
+31:15.280 --> 31:16.920
+ Current limit to the human lifespan
+
+31:16.920 --> 31:21.440
+ where they completely fail is 122.
+
+31:21.440 --> 31:23.200
+ But I don't like to think of it as wear and tear
+
+31:23.200 --> 31:25.880
+ because there's two aspects to it.
+
+31:25.880 --> 31:29.320
+ There's a system that's built to keep us alive when we're young.
+
+31:29.320 --> 31:33.280
+ But actually comes back to bite us as we get older.
+
+31:33.280 --> 31:37.800
+ And we call this issue antagonistic pleotropy.
+
+31:37.800 --> 31:39.480
+ What's good for you when you're young
+
+31:39.480 --> 31:42.920
+ can cause problems when you're older.
+
+31:42.920 --> 31:46.160
+ So we've been looking, what is the main causes of the noise?
+
+31:46.160 --> 31:49.320
+ And we've found two of them definitively.
+
+31:49.320 --> 31:52.000
+ The first one is broken chromosomes.
+
+31:52.000 --> 31:55.000
+ When a chromosome breaks, the cell has to panic
+
+31:55.000 --> 31:58.280
+ because that's either gonna cause a cancer or kill the cell.
+
+31:58.280 --> 31:59.320
+ There's only two outcomes.
+
+31:59.320 --> 32:01.160
+ It's pretty much a problem.
+
+32:01.160 --> 32:05.080
+ And so what the cell does is it reorganizes the epigenome
+
+32:05.080 --> 32:06.120
+ in a massive way.
+
+32:07.360 --> 32:10.720
+ What that leads to is think of it as a tennis match
+
+32:10.720 --> 32:12.600
+ or a ping pong game.
+
+32:12.600 --> 32:15.040
+ The proteins are the balls and they now leave
+
+32:15.040 --> 32:17.640
+ where they should be, which is regulating the genes
+
+32:17.640 --> 32:20.040
+ that make the cell type, whatever it is.
+
+32:20.040 --> 32:21.560
+ And after they have a dual function,
+
+32:21.560 --> 32:23.080
+ they actually go to the break,
+
+32:23.080 --> 32:25.600
+ the chromosomal break and fix that.
+
+32:25.600 --> 32:27.800
+ And then they come back.
+
+32:27.800 --> 32:29.320
+ You might ask, well, why is it set up that way?
+
+32:29.320 --> 32:30.280
+ Well, it's a beautiful system.
+
+32:30.280 --> 32:31.840
+ It coordinates gene expression,
+
+32:31.840 --> 32:33.760
+ the control systems with the repair.
+
+32:33.760 --> 32:35.040
+ You want them coordinated.
+
+32:35.960 --> 32:38.360
+ Problem is as we get older, this ping pong game,
+
+32:38.360 --> 32:39.480
+ some of the balls get lost.
+
+32:39.480 --> 32:42.600
+ They don't come back to where they originally started.
+
+32:42.600 --> 32:46.960
+ And that's what we think is the main noise for aging.
+
+32:46.960 --> 32:50.440
+ And the other cause of aging that we found is cell stress.
+
+32:50.440 --> 32:52.920
+ We damage nerves and they age rapidly.
+
+32:52.920 --> 32:54.640
+ So that's the other issue.
+
+32:54.640 --> 32:58.240
+ There's probably others, smoking, chemicals, for example.
+
+32:58.240 --> 32:59.760
+ We know accelerates biological age.
+
+32:59.760 --> 33:00.720
+ Pretty dramatically.
+
+33:02.160 --> 33:04.160
+ But the question is, can you slow that down
+
+33:04.160 --> 33:06.200
+ or can you reset them to get those ping pong balls
+
+33:06.200 --> 33:09.680
+ to go back to where they originally started in the game?
+
+33:09.680 --> 33:12.040
+ And we think we found a way to do that.
+
+33:12.040 --> 33:13.920
+ What, can you give me hints?
+
+33:13.920 --> 33:15.960
+ Whose fault is it, and the ball's not coming back,
+
+33:15.960 --> 33:17.720
+ is it the proteins themselves?
+
+33:17.720 --> 33:20.120
+ Like, are they starting?
+
+33:20.120 --> 33:22.280
+ Again, I've been obsessed with the protein folding problem
+
+33:22.280 --> 33:23.240
+ from the AI perspective.
+
+33:23.240 --> 33:25.680
+ So is it the proteins or is it something else?
+
+33:25.680 --> 33:29.280
+ Well, we know who hits the balls and recruits them.
+
+33:29.280 --> 33:33.080
+ So that the break is recognized by proteins
+
+33:33.080 --> 33:37.040
+ who send out a signal through phosphorylation
+
+33:37.040 --> 33:40.960
+ is a typical way cells talk to other proteins.
+
+33:40.960 --> 33:43.560
+ And that recruits those repair factors,
+
+33:43.560 --> 33:45.120
+ those ping pong balls to the break.
+
+33:45.120 --> 33:49.120
+ So the cells actively doing this to try and help itself.
+
+33:49.120 --> 33:53.920
+ But we don't know who's to blame for them not coming back.
+
+33:53.920 --> 33:58.480
+ That could just be a flaw in the quote unquote design.
+
+33:58.480 --> 34:00.280
+ I don't think that there's something saying,
+
+34:00.280 --> 34:04.200
+ well, 1% of you balls proteins never go back.
+
+34:04.200 --> 34:06.120
+ I just think it's hard to reset a system
+
+34:06.120 --> 34:07.680
+ that's constantly changing.
+
+34:07.680 --> 34:12.760
+ We have in our bodies close to a trillion DNA breaks every day.
+
+34:12.760 --> 34:14.280
+ And imagine that over 80 years,
+
+34:14.280 --> 34:17.520
+ what damage that does to our epigenomic information.
+
+34:17.520 --> 34:20.240
+ Now, we know that this is, well,
+
+34:20.240 --> 34:21.520
+ we never know anything in biology,
+
+34:21.520 --> 34:24.000
+ but we have strong evidence that this is true
+
+34:24.000 --> 34:27.600
+ because we can mess with animals.
+
+34:27.600 --> 34:31.200
+ We can create DNA breaks and tickle them with a few breaks,
+
+34:31.200 --> 34:34.040
+ maybe raise it by three fold of background levels
+
+34:34.040 --> 34:35.800
+ of normal breakage.
+
+34:35.800 --> 34:40.400
+ And if we're right, those mice should get old and they do.
+
+34:40.400 --> 34:42.400
+ We can actually, we've created these breaks
+
+34:42.400 --> 34:44.000
+ in a way that's titratable.
+
+34:44.000 --> 34:45.280
+ We can, it's like a rheostat.
+
+34:45.280 --> 34:47.360
+ We can send it to 11.
+
+34:47.360 --> 34:48.800
+ And you know, I drove my Tesla here
+
+34:48.800 --> 34:52.400
+ and I'm a big fan of Spinal Tap 2, going to 11.
+
+34:52.400 --> 34:54.200
+ If we go to 11, we can make a mouse old
+
+34:54.200 --> 34:55.720
+ in a matter of months.
+
+34:55.720 --> 34:58.600
+ We prefer to go to a level of about four
+
+34:58.600 --> 35:00.200
+ and it gets old in 10 months.
+
+35:00.200 --> 35:01.160
+ But it's definitely old.
+
+35:01.160 --> 35:03.720
+ It's got all of the hallmarks of aging.
+
+35:03.720 --> 35:05.200
+ It's got diseases.
+
+35:05.200 --> 35:06.040
+ It looks old.
+
+35:06.040 --> 35:06.880
+ It's skin is old.
+
+35:06.880 --> 35:08.000
+ It's got gray hair.
+
+35:08.000 --> 35:10.000
+ But importantly, we can now measure age
+
+35:10.000 --> 35:11.400
+ by looking at the scratches.
+
+35:11.400 --> 35:12.360
+ We can look at the epigenome.
+
+35:12.360 --> 35:14.560
+ We can measure it and use machine learning
+
+35:14.560 --> 35:15.800
+ to give us a number.
+
+35:15.800 --> 35:19.160
+ And those mice are 50% older than normal.
+
+35:19.160 --> 35:21.840
+ So you can replicate the aging process in a controlled way.
+
+35:21.840 --> 35:26.000
+ You can, I mean, in a way that, I mean, you could accelerate it
+
+35:26.000 --> 35:31.000
+ in a controlled way and measure how much exactly it's aging.
+
+35:31.600 --> 35:34.960
+ And that gives you step one of a two step process
+
+35:34.960 --> 35:36.520
+ to when you can then figure out, well,
+
+35:36.520 --> 35:37.960
+ how can we reverse this?
+
+35:37.960 --> 35:40.160
+ And now we're reversing those mice.
+
+35:40.160 --> 35:42.520
+ Is there a good, I love what you said.
+
+35:42.520 --> 35:45.200
+ I mean, in biology, you really don't know.
+
+35:45.200 --> 35:47.640
+ It's such a beautiful mess.
+
+35:48.480 --> 35:51.480
+ Is there ideas how to do that?
+
+35:51.480 --> 35:55.040
+ Is that on the genetic engineering level?
+
+35:55.040 --> 35:57.640
+ Is it like, what can you mess with?
+
+35:57.640 --> 36:02.320
+ Is it going to the, trying to discover the backup copies
+
+36:02.320 --> 36:04.200
+ and restoring from them?
+
+36:04.200 --> 36:06.280
+ Like what's, if it's possible to convert
+
+36:06.280 --> 36:09.520
+ into natural language words, what are the ideas here?
+
+36:09.520 --> 36:11.520
+ What is the observer and how do we contact it?
+
+36:11.520 --> 36:12.360
+ Exactly.
+
+36:12.360 --> 36:14.320
+ What's the observer and how do you contact?
+
+36:14.320 --> 36:15.920
+ Or if there's other ideas,
+
+36:15.920 --> 36:20.600
+ how to reverse the balls getting lost process.
+
+36:20.600 --> 36:22.880
+ Yeah. Well, you can slow it down.
+
+36:22.880 --> 36:23.720
+ Slow it.
+
+36:23.720 --> 36:26.280
+ But we found a reset switch recently.
+
+36:26.280 --> 36:31.280
+ We just published this in the December 2020 issue of nature.
+
+36:33.120 --> 36:36.920
+ And what we found is that there are three embryonic genes
+
+36:36.920 --> 36:39.840
+ that we could put into the adult animal
+
+36:39.840 --> 36:42.080
+ to reset the age of the tissues.
+
+36:42.080 --> 36:44.720
+ And it only takes four to eight weeks to work well.
+
+36:44.720 --> 36:47.280
+ And we can take a blind mouse that's lost its vision
+
+36:47.280 --> 36:48.360
+ due to aging.
+
+36:48.360 --> 36:50.520
+ Neurons aren't working well towards the brain.
+
+36:50.520 --> 36:52.680
+ Reset those neurons back to a younger age.
+
+36:52.680 --> 36:54.240
+ And now the mice can see again.
+
+36:55.160 --> 36:57.240
+ These three genes are famous actually
+
+36:57.240 --> 36:59.480
+ because they're a set of four genes
+
+36:59.480 --> 37:01.680
+ discovered by Shinya Yamanaka,
+
+37:01.680 --> 37:04.000
+ who won the Nobel Prize in 2016,
+
+37:04.000 --> 37:05.880
+ for discovering that those four genes
+
+37:05.880 --> 37:09.600
+ when turned on at high levels in adult cells
+
+37:09.600 --> 37:11.880
+ can generate stem cells.
+
+37:11.880 --> 37:14.040
+ And this is, I think, well known now
+
+37:14.040 --> 37:16.880
+ that we can create stem cells from adult tissue.
+
+37:16.880 --> 37:19.440
+ But what wasn't known is can you partially take age back
+
+37:19.440 --> 37:21.880
+ without becoming a tumor or generating a stem cell
+
+37:21.880 --> 37:24.120
+ in the eye, which would be a disaster?
+
+37:24.120 --> 37:24.960
+ And the answer is yes.
+
+37:24.960 --> 37:26.640
+ There is a system in the body
+
+37:26.640 --> 37:29.040
+ that can take the age of a cell back to a certain point,
+
+37:29.040 --> 37:33.080
+ but no further, safely, and reset the age.
+
+37:33.080 --> 37:36.560
+ And we're now using that to reset the age of the brain
+
+37:36.560 --> 37:39.360
+ of those mice that we aged prematurely,
+
+37:39.360 --> 37:41.680
+ and they're getting their ability to learn back.
+
+37:42.560 --> 37:44.320
+ This is really exciting, right?
+
+37:44.320 --> 37:46.880
+ Like, what's the downside of this?
+
+37:46.880 --> 37:49.160
+ Well, the downside is if you overdo it,
+
+37:49.160 --> 37:52.160
+ and you don't get it right, you might cause tumors.
+
+37:53.280 --> 37:54.880
+ But we do it very carefully,
+
+37:54.880 --> 37:57.840
+ and we also know that in the eye, it's very safe.
+
+37:57.840 --> 38:01.560
+ We also injected these, we deliver them by viruses,
+
+38:01.560 --> 38:05.960
+ so we can control where and when they get turned on.
+
+38:06.920 --> 38:08.480
+ And in this paper, we've published that
+
+38:08.480 --> 38:10.480
+ if we put high levels in the mouse,
+
+38:10.480 --> 38:12.360
+ into their veins throughout the body,
+
+38:12.360 --> 38:14.640
+ they don't get cancer for over a year.
+
+38:14.640 --> 38:18.560
+ So I'm so optimistic that we're going into human studies
+
+38:18.560 --> 38:20.400
+ in less than two years from now.
+
+38:20.400 --> 38:23.920
+ Is there a place where AI can help?
+
+38:23.920 --> 38:27.640
+ Sorry to inject one of the things
+
+38:27.640 --> 38:30.160
+ I'm very excited about and passionate about.
+
+38:30.160 --> 38:35.000
+ So Google DeepMind recently had a big breakthrough
+
+38:35.000 --> 38:39.000
+ with Alpha Fold 2, but also Alpha Fold two years ago,
+
+38:39.000 --> 38:44.000
+ with achieving sort of state of the art performance
+
+38:46.200 --> 38:47.600
+ on the protein folding problem,
+
+38:47.600 --> 38:49.200
+ single protein folding.
+
+38:49.200 --> 38:52.960
+ But it also paints a hopeful picture of what's possible
+
+38:52.960 --> 38:56.040
+ to do in terms of simulating the folding of proteins,
+
+38:56.040 --> 39:00.680
+ but also simulating biological systems through AI.
+
+39:00.680 --> 39:04.840
+ Is there something to you combined with this brilliant work
+
+39:04.840 --> 39:07.840
+ on the biology side that you're hopeful about
+
+39:07.840 --> 39:10.240
+ where AI can be a tool to help?
+
+39:10.240 --> 39:11.480
+ Where isn't it a tool?
+
+39:11.480 --> 39:13.480
+ I mean, if you're not using AI right now in biology,
+
+39:13.480 --> 39:14.600
+ you're getting left behind.
+
+39:14.600 --> 39:15.480
+ We use it all the time.
+
+39:15.480 --> 39:18.560
+ We're using it to generate these biological clocks
+
+39:18.560 --> 39:21.160
+ to be able to read those scratches.
+
+39:21.160 --> 39:23.920
+ We're using it to predict the folding of proteins
+
+39:23.920 --> 39:27.440
+ so we can target molecules and modulate their activity.
+
+39:27.440 --> 39:30.560
+ We're using it to assemble genomes of different species.
+
+39:32.000 --> 39:35.840
+ We use it to predict the longevity of a mouse
+
+39:35.840 --> 39:38.400
+ based on how it reacts to certain things,
+
+39:38.400 --> 39:41.080
+ hearing eyesight, generally frailty.
+
+39:41.080 --> 39:45.680
+ So we just put out a paper last year on that.
+
+39:45.680 --> 39:46.880
+ The other thing we can use it for,
+
+39:46.880 --> 39:49.080
+ which is a little off the track here,
+
+39:49.080 --> 39:52.480
+ but we use it for predicting which microorganisms
+
+39:52.480 --> 39:55.680
+ are in your body, actually not predicting, telling you.
+
+39:55.680 --> 39:58.400
+ So our daughter, Natalie,
+
+39:58.400 --> 40:00.920
+ was infected with Lyme disease a few years ago.
+
+40:00.920 --> 40:03.720
+ Almost went blind from it and the test took four days
+
+40:03.720 --> 40:06.880
+ and I thought, just give me the DNA from her spinal fluid.
+
+40:06.880 --> 40:07.880
+ I'll go tell you what's in it.
+
+40:07.880 --> 40:10.080
+ If it's Lyme disease or not, they refused.
+
+40:10.080 --> 40:12.600
+ And so at that point I said, this has to be done better.
+
+40:12.600 --> 40:15.760
+ So I've started a company that now can take a sample
+
+40:15.760 --> 40:17.320
+ of any part of your body.
+
+40:17.320 --> 40:21.640
+ It's typically done now with liver transplant patients
+
+40:21.640 --> 40:24.920
+ to detect viruses that come out of their organs.
+
+40:24.920 --> 40:28.400
+ But that's another area that AI is extremely important for.
+
+40:29.360 --> 40:31.520
+ I think if you're not, in five years,
+
+40:31.520 --> 40:35.400
+ if you're not using deep learning, you've got a problem
+
+40:35.400 --> 40:36.960
+ because the amount of data that we generate now
+
+40:36.960 --> 40:40.480
+ as biologists is just terabytes, can be terabytes per week.
+
+40:40.480 --> 40:42.320
+ It'll eventually be terabytes per day.
+
+40:42.320 --> 40:43.920
+ And then we just go from there.
+
+40:43.920 --> 40:46.320
+ And I actually have trouble recruiting enough
+
+40:46.320 --> 40:47.680
+ bioinformaticians.
+
+40:49.040 --> 40:51.240
+ A lot of our work is now just number crunching.
+
+40:52.480 --> 40:55.160
+ A part of that is collecting the data,
+
+40:55.160 --> 40:57.560
+ which is kind of something we've talked a little bit about,
+
+40:57.560 --> 41:00.160
+ but is there something you can say
+
+41:00.160 --> 41:04.480
+ about how we can collect more and more data,
+
+41:04.480 --> 41:07.600
+ not just on the one person level,
+
+41:07.600 --> 41:12.600
+ like for you to understand your various markers,
+
+41:13.240 --> 41:16.640
+ but to create huge data sets,
+
+41:16.640 --> 41:20.440
+ to understand how we can detect certain pathogens,
+
+41:20.440 --> 41:22.680
+ detect certain property characteristics
+
+41:22.680 --> 41:25.560
+ of whether it's aging or all the other ways
+
+41:25.560 --> 41:27.120
+ that your human body can fail.
+
+41:27.120 --> 41:29.760
+ It seems like with biology,
+
+41:29.760 --> 41:32.160
+ there's a kind of privacy concerns
+
+41:32.160 --> 41:34.960
+ that, well, actually not privacy concerns,
+
+41:34.960 --> 41:36.760
+ it's almost like regulation
+
+41:36.760 --> 41:40.360
+ that kind of prevents like hospitals and sharing data.
+
+41:42.400 --> 41:44.520
+ You know, I'm not sure exactly how to say it,
+
+41:44.520 --> 41:48.280
+ but it seems like when you look at autonomous vehicles,
+
+41:48.280 --> 41:50.200
+ people are much more willing to share data.
+
+41:50.200 --> 41:52.560
+ When you look at human biology system,
+
+41:52.560 --> 41:54.360
+ people are much less willing to share data.
+
+41:54.360 --> 41:56.880
+ Is there a hopeful path forward
+
+41:56.880 --> 42:00.240
+ where we can share more and more data at a large scale
+
+42:00.240 --> 42:03.760
+ that ultimately ends up helping us understand the human body
+
+42:03.760 --> 42:06.800
+ and then treat problems with the human body?
+
+42:06.800 --> 42:08.320
+ So we are right in the middle.
+
+42:08.320 --> 42:10.120
+ We're living through what's gonna be seen
+
+42:10.120 --> 42:12.640
+ as one of the biggest revolutions in human health
+
+42:12.640 --> 42:16.400
+ through the gathering of data about our bodies.
+
+42:16.400 --> 42:19.520
+ And 20 years ago, people didn't wanna go on social media
+
+42:19.520 --> 42:20.360
+ that worried about it.
+
+42:20.360 --> 42:23.640
+ Now you have to, if you're a kid, that's for sure.
+
+42:23.640 --> 42:25.520
+ Same with medical records.
+
+42:25.520 --> 42:29.400
+ These are becoming all digitized and expanded.
+
+42:29.400 --> 42:31.320
+ Ultimately, we're going to,
+
+42:31.320 --> 42:34.760
+ even if we don't want to, have to be monitored.
+
+42:34.760 --> 42:36.680
+ There's gonna be a court case that,
+
+42:36.680 --> 42:38.320
+ I bet two, three years from now,
+
+42:38.320 --> 42:39.760
+ someone's gonna say,
+
+42:39.760 --> 42:42.360
+ how come my father died from a heart attack?
+
+42:42.360 --> 42:44.320
+ You had these biosensors, 20 bucks,
+
+42:44.320 --> 42:46.560
+ and you didn't use it, lawsuit right there.
+
+42:46.560 --> 42:49.560
+ And suddenly all hospitals have to give you one of these.
+
+42:49.560 --> 42:50.800
+ There'll be a reversal,
+
+42:50.800 --> 42:53.640
+ like to where it's your fault
+
+42:53.640 --> 42:54.800
+ if you don't collect the data.
+
+42:54.800 --> 42:58.160
+ That's brilliant, and that's absolutely right.
+
+42:58.160 --> 43:00.800
+ I mean, that's absolutely right.
+
+43:00.800 --> 43:03.880
+ That's the frustration I feel when going to the doctor
+
+43:03.880 --> 43:07.800
+ is like, it's almost negligent
+
+43:08.760 --> 43:10.600
+ to not collect the data
+
+43:10.600 --> 43:11.920
+ because you're making,
+
+43:11.920 --> 43:13.920
+ if there's something really wrong with me
+
+43:13.920 --> 43:17.920
+ and you're making decisions based on very few tests,
+
+43:17.920 --> 43:19.080
+ that's almost negligent
+
+43:19.080 --> 43:20.160
+ when you have the opportunity
+
+43:20.160 --> 43:22.000
+ to collect a huge amount more data.
+
+43:22.000 --> 43:23.240
+ Well, let me tell you something.
+
+43:23.240 --> 43:26.840
+ Yeah, I've got this inside tracker data
+
+43:26.840 --> 43:29.040
+ for myself over a decade.
+
+43:29.040 --> 43:31.800
+ And you'd think my doctor would roll his eyes at this,
+
+43:31.800 --> 43:34.760
+ oh, he's gone to a consumer company, blah, blah, blah.
+
+43:34.760 --> 43:36.760
+ I had my first checkup in a year
+
+43:36.760 --> 43:39.080
+ with him through video conference.
+
+43:39.080 --> 43:42.640
+ And he was running blind.
+
+43:42.640 --> 43:45.360
+ He really didn't know what was going on with me.
+
+43:45.360 --> 43:46.360
+ He asked the usual things,
+
+43:46.360 --> 43:47.200
+ how am I sleeping?
+
+43:47.200 --> 43:48.560
+ How am I eating?
+
+43:48.560 --> 43:50.040
+ These kind of usual things.
+
+43:50.040 --> 43:53.160
+ And I said, well, I've got new tests back from inside tracker.
+
+43:53.160 --> 43:55.880
+ And he said, great, I'd love to see them.
+
+43:55.880 --> 43:58.120
+ So I'd share screen and we look at the graphs,
+
+43:58.120 --> 44:00.840
+ look at the data, and he's loving it.
+
+44:00.840 --> 44:04.480
+ Cause he cannot order these tests willy nilly.
+
+44:04.480 --> 44:08.960
+ So I said, well, let's order a HBA1C blood glucose levels
+
+44:08.960 --> 44:10.120
+ because I'm very interested in that.
+
+44:10.120 --> 44:11.360
+ That tracks with longevity.
+
+44:11.360 --> 44:13.960
+ And he said, well, I have no reason to order that.
+
+44:13.960 --> 44:15.520
+ Do you have a family history?
+
+44:15.520 --> 44:18.880
+ No, do you have any symptoms of diabetes?
+
+44:18.880 --> 44:20.680
+ No, well, I can't order the test.
+
+44:20.680 --> 44:22.200
+ I almost wanted to reach through the computer
+
+44:22.200 --> 44:23.840
+ and strangle him.
+
+44:23.840 --> 44:26.840
+ But instead, I pay a little bit to get these tests done
+
+44:26.840 --> 44:28.320
+ and then he looks at them.
+
+44:28.320 --> 44:30.600
+ So that's now the way consumer health is going
+
+44:30.600 --> 44:32.720
+ is that you can get better data than your doctor can,
+
+44:32.720 --> 44:34.520
+ but they like you to do that.
+
+44:34.520 --> 44:37.520
+ Quick human question, maybe you can educate me.
+
+44:39.160 --> 44:42.440
+ I think doctors sometimes have a bit of an ego.
+
+44:42.440 --> 44:44.680
+ I understand that the doctor is super experienced
+
+44:44.680 --> 44:45.520
+ with a lot of things,
+
+44:45.520 --> 44:49.240
+ but this is a fundamental question of human variability.
+
+44:49.240 --> 44:52.800
+ Like I know a lot of specific details about like,
+
+44:52.800 --> 44:54.640
+ I mean, it depends, of course, what we're talking about,
+
+44:54.640 --> 44:56.720
+ but I bring a lot of knowledge.
+
+44:56.720 --> 44:58.440
+ And if I have data with me,
+
+44:58.440 --> 45:02.960
+ then I have like several orders of magnitude more knowledge.
+
+45:02.960 --> 45:04.760
+ And I think there's an aspect to it
+
+45:04.760 --> 45:09.680
+ where the doctor has to put their expert hat,
+
+45:09.680 --> 45:13.240
+ like take it off and actually be a curious,
+
+45:13.240 --> 45:16.520
+ open minded person and study and look at that data.
+
+45:16.520 --> 45:20.000
+ Do you think it's possible to sort of change the culture
+
+45:20.000 --> 45:21.840
+ of the medical system to where the doctors
+
+45:21.840 --> 45:25.680
+ are almost, as you said, are excited to see the data?
+
+45:25.680 --> 45:26.840
+ Or is that already happening?
+
+45:26.840 --> 45:27.640
+ It's really happening.
+
+45:27.640 --> 45:30.640
+ Now, we've probably lost the last generation
+
+45:30.640 --> 45:31.880
+ that there are no hopers,
+
+45:31.880 --> 45:34.480
+ but so I teach at Harvard Medical School
+
+45:34.480 --> 45:35.960
+ and they're excited about this.
+
+45:35.960 --> 45:37.120
+ They're excited about aging,
+
+45:37.120 --> 45:39.560
+ which is a new aspect to medicine.
+
+45:39.560 --> 45:41.720
+ Oh wow, we can do something about that.
+
+45:41.720 --> 45:43.880
+ And then yeah, all this data, what do we do with it?
+
+45:43.880 --> 45:45.880
+ There's still the traditional pathology and all that stuff
+
+45:45.880 --> 45:47.160
+ which they need to know,
+
+45:47.160 --> 45:52.160
+ but time will change their mindset.
+
+45:52.920 --> 45:54.320
+ I'm not worried about that.
+
+45:54.320 --> 45:55.760
+ And like we were discussing,
+
+45:55.760 --> 45:59.000
+ this isn't a question of if, it's just a matter of when.
+
+45:59.000 --> 46:02.280
+ And I have a front row seat on all of this.
+
+46:02.280 --> 46:07.280
+ I had breakfast with a CEO who is making this happen
+
+46:07.360 --> 46:08.280
+ just yesterday.
+
+46:09.560 --> 46:12.760
+ I can tell you for sure that most people have no idea
+
+46:12.760 --> 46:14.600
+ that this revolution is occurring
+
+46:14.600 --> 46:17.280
+ and is happening so quickly.
+
+46:17.280 --> 46:18.400
+ If you're running a hospital
+
+46:18.400 --> 46:21.400
+ and you can save $2,000 per cardiac patient,
+
+46:21.400 --> 46:22.440
+ what are you gonna do?
+
+46:22.440 --> 46:23.400
+ You have to use it.
+
+46:23.400 --> 46:25.640
+ Otherwise, the hospital down the road
+
+46:25.640 --> 46:28.200
+ is gonna be beating you.
+
+46:28.200 --> 46:30.880
+ And there are large hospital aggregation.
+
+46:30.880 --> 46:32.920
+ So there's Ascension and others
+
+46:32.920 --> 46:37.560
+ that just have to go this way for budgetary reasons.
+
+46:37.560 --> 46:39.520
+ And right now the US spends,
+
+46:39.520 --> 46:42.480
+ what is it, 17% of their GDP on healthcare.
+
+46:42.480 --> 46:45.200
+ Let's say one of these buttons on my chest
+
+46:45.200 --> 46:47.280
+ costs 20 bucks, it's rechargeable.
+
+46:47.280 --> 46:48.640
+ And it can predict people's health
+
+46:48.640 --> 46:52.080
+ and save on antibiotics to prevent heart attacks.
+
+46:52.080 --> 46:54.960
+ How many billions, if not trillions of dollars
+
+46:54.960 --> 46:57.280
+ will that save over the next decade?
+
+46:58.400 --> 47:00.280
+ Yeah, so when the public wakes up to this,
+
+47:00.280 --> 47:01.520
+ they'll almost demand it.
+
+47:01.520 --> 47:04.080
+ Like this should be accepted everywhere.
+
+47:04.080 --> 47:05.080
+ This is obvious.
+
+47:05.080 --> 47:06.040
+ It's gonna save a lot of money.
+
+47:06.040 --> 47:07.680
+ It's gonna improve the quality of life.
+
+47:07.680 --> 47:11.520
+ Well, and the CFOs of hospital groups will have to.
+
+47:11.520 --> 47:15.760
+ And insurance companies are gonna wanna get in on this.
+
+47:15.760 --> 47:17.120
+ So now that gets to privacy, right?
+
+47:17.120 --> 47:20.480
+ If should an insurance company have access to your data?
+
+47:20.480 --> 47:21.760
+ I would say no.
+
+47:21.760 --> 47:24.120
+ But you could voluntarily show them some of it
+
+47:24.120 --> 47:25.520
+ if they give you a discount.
+
+47:25.520 --> 47:27.680
+ And that's also being worked on right now.
+
+47:29.000 --> 47:30.960
+ I hope that we do create kind of systems
+
+47:30.960 --> 47:33.200
+ where I can volunteer to share my data
+
+47:33.200 --> 47:35.840
+ and I can also take the data back,
+
+47:35.840 --> 47:38.960
+ meaning like delete the data, request the deletion of data.
+
+47:38.960 --> 47:42.160
+ And then maybe policy creates rules to where
+
+47:42.160 --> 47:44.960
+ you can share data, you could delete the data.
+
+47:44.960 --> 47:49.960
+ And I think if I have the option to delete all my data
+
+47:50.320 --> 47:52.640
+ that a particular company has,
+
+47:52.640 --> 47:54.640
+ then I'll share my data with everyone.
+
+47:55.840 --> 48:00.840
+ I feel like if, because that gives me the tools
+
+48:01.280 --> 48:04.520
+ to be a consumer, an intelligent consumer,
+
+48:04.520 --> 48:08.640
+ of awarding my data to a company that deserves it
+
+48:08.640 --> 48:11.200
+ and taking it back when the company is behaving.
+
+48:11.200 --> 48:14.200
+ And in that way, encourage, as a consumer
+
+48:14.200 --> 48:17.240
+ in the capitalist system, encourage the companies
+
+48:17.240 --> 48:20.240
+ that are doing great work with that data.
+
+48:20.240 --> 48:24.120
+ Well, yeah, healthcare data security is number one.
+
+48:24.120 --> 48:27.720
+ On my mind, Inside Tracker made sure that that was true,
+
+48:27.720 --> 48:32.160
+ but these buttons on your chest, there's very private stuff.
+
+48:32.160 --> 48:35.520
+ They can probably tell if you're having sex one night, right?
+
+48:35.520 --> 48:37.800
+ So this is not the kind of stuff you want leaked.
+
+48:37.800 --> 48:39.680
+ So I don't know whether it's blockchain or something.
+
+48:39.680 --> 48:40.520
+ Speak for yourself.
+
+48:40.520 --> 48:41.680
+ I don't want this public.
+
+48:41.680 --> 48:43.520
+ The live stream.
+
+48:43.520 --> 48:45.640
+ Well, I guess it depends on how you go.
+
+48:45.640 --> 48:48.960
+ But there's a lot of stuff you don't want out there.
+
+48:48.960 --> 48:51.560
+ And this definitely has to be number one,
+
+48:51.560 --> 48:54.480
+ because it's one thing to have your credit card
+
+48:54.480 --> 48:55.840
+ information stolen, it's another thing
+
+48:55.840 --> 48:57.680
+ your health records are permanently out there.
+
+48:57.680 --> 48:58.520
+ Yeah.
+
+48:58.520 --> 48:59.840
+ So there's on the biology side,
+
+48:59.840 --> 49:03.600
+ super exciting ways to slow aging,
+
+49:03.600 --> 49:05.560
+ but there's also on the lifestyle side.
+
+49:05.560 --> 49:08.040
+ I've recently did a 72 hour fast,
+
+49:08.040 --> 49:09.880
+ just an opportunity to take a pause and be,
+
+49:09.880 --> 49:11.640
+ you know, I appreciate life.
+
+49:12.480 --> 49:14.360
+ Think about like, there's something about fasting
+
+49:14.360 --> 49:19.280
+ that encourages you to reflect deeper
+
+49:19.280 --> 49:24.040
+ than you otherwise might, the time kind of slows.
+
+49:24.040 --> 49:25.920
+ And you also realize that you're human
+
+49:25.920 --> 49:27.320
+ because your body needs food.
+
+49:27.320 --> 49:30.480
+ And you start to see your body is almost as a machine
+
+49:30.480 --> 49:33.640
+ that takes food and produces thoughts.
+
+49:33.640 --> 49:36.880
+ And then ends brief.
+
+49:36.880 --> 49:39.800
+ I mean, you start to, depending who you are,
+
+49:39.800 --> 49:41.720
+ if you're like engineering minded,
+
+49:41.720 --> 49:43.600
+ you start to think of this whole thing
+
+49:43.600 --> 49:46.120
+ as a kind of, yeah, as a machine.
+
+49:46.120 --> 49:50.880
+ And then also feelings fill this machine.
+
+49:50.880 --> 49:52.480
+ Feelings of gratitude of love,
+
+49:52.480 --> 49:57.400
+ but also the uglier things of jealousy and greed
+
+49:57.400 --> 49:59.280
+ and hate and all those kinds of things.
+
+49:59.280 --> 50:04.280
+ And you start to think, okay, how do I manage this body
+
+50:04.600 --> 50:06.200
+ to create a rich experience?
+
+50:06.200 --> 50:07.840
+ All of that comes from fasting for me.
+
+50:07.840 --> 50:11.840
+ Anyway, but there's also health benefits to fasting.
+
+50:11.840 --> 50:13.400
+ I intermittent fast a lot.
+
+50:13.400 --> 50:16.560
+ I eat just one meal a day most of the time.
+
+50:16.560 --> 50:18.920
+ Is there something you can say about the benefits
+
+50:18.920 --> 50:20.520
+ of fasting in your own life
+
+50:20.520 --> 50:23.520
+ and in general, the anti aging process?
+
+50:23.520 --> 50:25.640
+ Well, you're a philosopher too.
+
+50:25.640 --> 50:26.960
+ Sorry, I apologize.
+
+50:26.960 --> 50:30.400
+ No, I'm impressed, true Renaissance man.
+
+50:30.400 --> 50:32.000
+ It's a joy to be here.
+
+50:32.000 --> 50:33.480
+ So when it comes to fasting,
+
+50:33.480 --> 50:37.200
+ this is being epistemious is one of the oldest ways
+
+50:37.200 --> 50:38.480
+ to improve health.
+
+50:38.480 --> 50:41.600
+ Probably they knew this 5,000 plus years ago.
+
+50:41.600 --> 50:43.160
+ So that's not new.
+
+50:43.160 --> 50:45.640
+ But what we're figuring out is what is optimal
+
+50:45.640 --> 50:47.080
+ and how does it work?
+
+50:47.080 --> 50:49.560
+ And one of the things we help contribute to,
+
+50:49.560 --> 50:51.840
+ which I can speak to with some authority,
+
+50:51.840 --> 50:54.400
+ is that these longevity genes we work on,
+
+50:54.400 --> 50:58.600
+ we showed back in the early 2000s are turned on by fasting.
+
+50:58.600 --> 51:01.200
+ And at least in yeast, we were the first to show
+
+51:01.200 --> 51:03.320
+ that how calorie restriction fasting works
+
+51:03.320 --> 51:04.480
+ to extend lifespan.
+
+51:04.480 --> 51:06.480
+ And that was the first for any species.
+
+51:06.480 --> 51:08.200
+ Something similar happens in our bodies.
+
+51:08.200 --> 51:10.560
+ When we're hungry or put our bodies
+
+51:10.560 --> 51:12.680
+ under any other perceived adversity,
+
+51:12.680 --> 51:14.880
+ such as running, our bodies think, wow,
+
+51:14.880 --> 51:18.480
+ we're getting chased by a sabertooth cat or something.
+
+51:19.560 --> 51:21.000
+ If we're really hot or cold,
+
+51:21.000 --> 51:23.080
+ these probably also work to put our bodies
+
+51:23.080 --> 51:25.880
+ in this defensive state to activate these genes
+
+51:25.880 --> 51:28.640
+ in the way that whales do and mice don't.
+
+51:28.640 --> 51:31.320
+ And so hunger is the best way to do that.
+
+51:31.320 --> 51:33.760
+ In fact, I don't think you have to feel hungry.
+
+51:33.760 --> 51:35.320
+ You can get used to it.
+
+51:35.320 --> 51:38.280
+ But if there was one thing I would recommend to anybody
+
+51:38.280 --> 51:42.840
+ to slow down aging would be to skip a meal or two a day.
+
+51:42.840 --> 51:44.480
+ Now, it doesn't mean you don't have to live well.
+
+51:44.480 --> 51:47.720
+ You can go out, I go to restaurants, I eat regular food.
+
+51:47.720 --> 51:50.040
+ I try to be as healthy as possible.
+
+51:50.040 --> 51:53.400
+ But I've gone from skipping breakfast most of my life
+
+51:53.400 --> 51:55.480
+ now to skipping lunch as well.
+
+51:55.480 --> 51:59.320
+ And I have my physique back that I had when I was 20.
+
+51:59.320 --> 52:01.280
+ I feel 20 mentally.
+
+52:01.280 --> 52:02.560
+ I'm much sharper.
+
+52:02.560 --> 52:03.520
+ I don't feel tired anymore.
+
+52:03.520 --> 52:04.680
+ I sleep well.
+
+52:04.680 --> 52:07.560
+ So I'm a huge fan of the one meal a day thing.
+
+52:07.560 --> 52:11.160
+ Where I'm not good at is going beyond one day.
+
+52:11.160 --> 52:12.000
+ But if you do three days.
+
+52:12.000 --> 52:15.640
+ Have you ever fasted longer than 24 hours?
+
+52:15.640 --> 52:17.160
+ I tried doing two days.
+
+52:17.160 --> 52:20.200
+ I might have made it to the third and given up.
+
+52:20.200 --> 52:23.840
+ I just find that I don't have a lot of willpower.
+
+52:23.840 --> 52:24.880
+ I also hate exercise.
+
+52:24.880 --> 52:27.920
+ So I'm not sure how long I'm going to live.
+
+52:27.920 --> 52:29.280
+ But I've managed to do one meal a day.
+
+52:29.280 --> 52:33.120
+ So if I can do that, seriously, anybody can do that.
+
+52:33.120 --> 52:36.040
+ To your listeners and viewers, I would say,
+
+52:36.040 --> 52:38.120
+ don't try to do it all at once.
+
+52:38.120 --> 52:40.720
+ You can't go from snacking and eating three meals a day
+
+52:40.720 --> 52:42.880
+ to what I do easily.
+
+52:42.880 --> 52:44.040
+ Work your way up to it.
+
+52:44.040 --> 52:45.600
+ But also compensate with drinking.
+
+52:45.600 --> 52:48.880
+ If you like tea, if you like coffee, put some milk in it.
+
+52:48.880 --> 52:49.480
+ That's fine.
+
+52:49.480 --> 52:53.000
+ You can fill your stomach up with liquids, diet sodas.
+
+52:53.000 --> 52:54.800
+ I get criticized for drinking, but I'm
+
+52:54.800 --> 52:56.480
+ going to continue to have those.
+
+52:56.480 --> 52:58.240
+ But I power through the day.
+
+52:58.240 --> 52:59.680
+ I definitely don't feel tired.
+
+52:59.680 --> 53:00.800
+ I don't have a lag anymore.
+
+53:00.800 --> 53:02.640
+ But also give it at least two weeks
+
+53:02.640 --> 53:04.880
+ because there's a habit as well.
+
+53:04.880 --> 53:08.440
+ Having something in your mouth chewing, feeling that fullness.
+
+53:08.440 --> 53:09.480
+ You can break that habit.
+
+53:09.480 --> 53:12.040
+ And within two, three weeks, you'll have done it.
+
+53:12.040 --> 53:12.520
+ Absolutely.
+
+53:12.520 --> 53:14.440
+ So I'm not actually even that strict about it.
+
+53:14.440 --> 53:15.920
+ You said diet soda.
+
+53:15.920 --> 53:19.600
+ Yeah, people are very weirdly strict about fasting the rules.
+
+53:19.600 --> 53:23.800
+ And fasting, like for example, I drink
+
+53:23.800 --> 53:26.360
+ element electrolytes when I was fasting.
+
+53:26.360 --> 53:28.520
+ And that has five calories.
+
+53:28.520 --> 53:31.200
+ And so technically, it's not fasting.
+
+53:31.200 --> 53:34.480
+ Or people will say, if you drink coffee, there's caffeine.
+
+53:34.480 --> 53:36.920
+ And they'll say, that's technically not fasting
+
+53:36.920 --> 53:39.200
+ because there's some kind of biological effects of caffeine,
+
+53:39.200 --> 53:40.280
+ but whatever.
+
+53:40.280 --> 53:42.400
+ Of course, there's biological benefits
+
+53:42.400 --> 53:43.520
+ that you can argue about.
+
+53:43.520 --> 53:45.960
+ But there's also just experiential benefits.
+
+53:45.960 --> 53:48.800
+ Just calorie restriction broadly
+
+53:48.800 --> 53:52.440
+ has a certain experience to it that, for me personally,
+
+53:52.440 --> 53:55.160
+ just as you said, has made me feel really good.
+
+53:55.160 --> 54:01.400
+ That said, especially I've gained quite a bit away,
+
+54:01.400 --> 54:03.320
+ maybe even like 15 pounds or something like that
+
+54:03.320 --> 54:05.640
+ since I moved to Austin, Texas.
+
+54:05.640 --> 54:08.520
+ And I still keep the same diet.
+
+54:08.520 --> 54:12.840
+ But I eat a lot of meat in that one
+
+54:12.840 --> 54:14.040
+ just because it's delicious.
+
+54:14.040 --> 54:19.280
+ Because it's also the amazing people I met in Texas.
+
+54:19.280 --> 54:22.240
+ It's just there's camaraderie, a friendship,
+
+54:22.240 --> 54:25.640
+ a love to the people that makes you really enjoy
+
+54:25.640 --> 54:29.320
+ the atmosphere of eating the brisket and the meat.
+
+54:29.320 --> 54:31.040
+ Is this Joe Rogan insisting?
+
+54:31.040 --> 54:34.640
+ Joe is very different.
+
+54:34.640 --> 54:38.640
+ Joe loves bread and pasta.
+
+54:38.640 --> 54:44.200
+ He knows that his body feels best doing keto or carnivore.
+
+54:44.200 --> 54:47.360
+ So that's what he usually tries to stick to.
+
+54:47.360 --> 54:50.080
+ But he also does not hold back.
+
+54:50.080 --> 54:52.760
+ And he'll just eat pasta when he does pasta.
+
+54:52.760 --> 54:56.040
+ And he sort of enjoys life in that way.
+
+54:56.040 --> 54:57.800
+ I don't know how to enjoy life in that way.
+
+54:57.800 --> 55:01.760
+ I also love pasta, but I'm just not going to enjoy it.
+
+55:01.760 --> 55:06.000
+ Because I know my body ultimately does not
+
+55:06.000 --> 55:06.960
+ feel good with pasta.
+
+55:06.960 --> 55:09.320
+ So it's a funny kind of dichotomies.
+
+55:09.320 --> 55:16.120
+ I would like to cheat, I guess, by eating more meat
+
+55:16.120 --> 55:21.800
+ than overeating on the things that I know my body feels
+
+55:21.800 --> 55:24.880
+ good on, as opposed to eating stuff I shouldn't, like cake
+
+55:24.880 --> 55:26.400
+ and all those kinds of things.
+
+55:26.400 --> 55:32.520
+ I tend to find happiness in overeating the good stuff
+
+55:32.520 --> 55:35.960
+ versus eating the bad stuff.
+
+55:35.960 --> 55:37.800
+ And that's the kind of balance.
+
+55:37.800 --> 55:41.080
+ Him, he's like, fuck it.
+
+55:41.080 --> 55:43.400
+ Every once in a while, you've got to enjoy it.
+
+55:43.400 --> 55:48.960
+ And then also coupled with that, for him, is just exercise,
+
+55:48.960 --> 55:51.080
+ like then faces demons the next day
+
+55:51.080 --> 55:53.520
+ and just burn a huge amount of calories.
+
+55:53.520 --> 55:58.840
+ Which is, I mean, whatever's up with that guy's mind,
+
+55:58.840 --> 56:04.040
+ there's an ability to fully experience life, which
+
+56:04.040 --> 56:06.920
+ is represented by the pasta, and the ability
+
+56:06.920 --> 56:09.960
+ to just fight the demons, which is represented
+
+56:09.960 --> 56:13.000
+ by all the crazy kettle balls and running the hills
+
+56:13.000 --> 56:14.720
+ and all this kind of stuff that he does.
+
+56:14.720 --> 56:16.240
+ That takes a lot out of you doing
+
+56:16.240 --> 56:17.800
+ that kind of insane exercise.
+
+56:17.800 --> 56:21.880
+ I think I'm more like you, or at least towards your direction,
+
+56:21.880 --> 56:24.400
+ is like, I really hate exercise.
+
+56:24.400 --> 56:26.840
+ So I do it, but I really hate it.
+
+56:26.840 --> 56:29.640
+ And so it's a balance that you have to strike.
+
+56:29.640 --> 56:33.440
+ Is there something you could say about the diet side of that?
+
+56:33.440 --> 56:37.040
+ For you personally, but in general,
+
+56:37.040 --> 56:39.800
+ in order to achieve calorie restriction,
+
+56:39.800 --> 56:43.960
+ like for me, eating, I know it may not sound healthy,
+
+56:43.960 --> 56:47.840
+ but eating carnivore, eating mostly meat,
+
+56:47.840 --> 56:52.880
+ has made me feel really good, both mentally and physically.
+
+56:52.880 --> 56:56.240
+ Is there something you could say about the kinds of diets
+
+56:56.240 --> 57:01.160
+ that may improve longevity, but also enable calorie restriction?
+
+57:01.160 --> 57:02.840
+ Well, sure.
+
+57:02.840 --> 57:04.560
+ I mean, the first thing that's important to know
+
+57:04.560 --> 57:07.800
+ is that while many people are interested
+
+57:07.800 --> 57:11.240
+ slash obsessed with what they eat,
+
+57:11.240 --> 57:13.640
+ the data that's come out of animal studies, at least,
+
+57:13.640 --> 57:17.360
+ is it's far more important when you eat than what you eat.
+
+57:17.360 --> 57:20.120
+ And this was a fantastic study a few years ago
+
+57:20.120 --> 57:23.080
+ by my friend Rafael de Cabo at the National Institutes
+
+57:23.080 --> 57:24.760
+ of Health in Bethesda.
+
+57:24.760 --> 57:26.920
+ And he had 10,000 mice on different diets,
+
+57:26.920 --> 57:31.000
+ hoping to find the perfect mix of carbs, protein, and fat.
+
+57:31.000 --> 57:33.240
+ And it turns out that the only ones that lived longer
+
+57:33.240 --> 57:35.880
+ were the ones that only ate once a day.
+
+57:35.880 --> 57:37.960
+ And so that, we're not mice,
+
+57:37.960 --> 57:40.320
+ but I think that we're close enough to mice
+
+57:40.320 --> 57:42.640
+ that this tells us a lot.
+
+57:42.640 --> 57:44.920
+ But okay, but I still think the best bang
+
+57:44.920 --> 57:47.840
+ for the longevity buck is to do both well,
+
+57:47.840 --> 57:51.640
+ eat less often and eat the right things.
+
+57:51.640 --> 57:54.400
+ Now I'll preface this to say, I'm not a nut about this.
+
+57:54.400 --> 57:57.960
+ I will eat occasionally, very occasionally a dessert.
+
+57:57.960 --> 58:00.920
+ Usually I steal from others, which doesn't count, right?
+
+58:00.920 --> 58:01.760
+ Exactly.
+
+58:01.760 --> 58:03.040
+ But you gotta live life, right?
+
+58:03.040 --> 58:05.520
+ What's a long life if it's not enjoyable anyway?
+
+58:05.520 --> 58:08.880
+ But I also have found, and I'll get to your question
+
+58:08.880 --> 58:11.520
+ in a second, but my microbiome right now
+
+58:11.520 --> 58:14.520
+ and stomach is at a point where if I try to overeat
+
+58:14.520 --> 58:16.920
+ on a steak, which I did a couple of days ago,
+
+58:16.920 --> 58:21.920
+ I actually had a fried chicken specifically.
+
+58:22.320 --> 58:23.920
+ For two days I felt terrible.
+
+58:23.920 --> 58:26.080
+ I couldn't sleep, it wouldn't go down.
+
+58:26.080 --> 58:29.200
+ So I'm now at a point where even if I want to binge on meat
+
+58:29.200 --> 58:31.640
+ and fried foods, I just can't, it just feels bad.
+
+58:32.800 --> 58:34.320
+ But what do I recommend?
+
+58:34.320 --> 58:37.480
+ Well, what the data says, which I try to follow is
+
+58:38.440 --> 58:41.320
+ that plant based foods will be better than meat based foods.
+
+58:41.320 --> 58:43.920
+ And I know that there are a lot of people who disagree.
+
+58:43.920 --> 58:46.240
+ But one of the facts is, there's a few facts.
+
+58:46.240 --> 58:47.640
+ One is that people who live a long time
+
+58:47.640 --> 58:48.840
+ tend to eat those type of diets,
+
+58:48.840 --> 58:51.080
+ Mediterranean or Canawa diet.
+
+58:51.080 --> 58:53.960
+ They're eating mostly plants with a little bit of meat
+
+58:53.960 --> 58:56.000
+ and not a lot of red meat.
+
+58:56.000 --> 58:57.800
+ And the other fact is that in animals,
+
+58:57.800 --> 59:00.320
+ we know that there's a mechanism
+
+59:00.320 --> 59:02.880
+ that's called M to a little M capital TOR
+
+59:02.880 --> 59:05.440
+ that responds to certain amino acids
+
+59:05.440 --> 59:07.640
+ that are found in more abundance in meat.
+
+59:07.640 --> 59:10.280
+ And when it responds, it actually shortens lifespan.
+
+59:10.280 --> 59:11.560
+ And the converse, if you starve it
+
+59:11.560 --> 59:15.840
+ of those three amino acids mostly in meat,
+
+59:15.840 --> 59:17.560
+ then it extends lifespan.
+
+59:17.560 --> 59:19.480
+ And there's a drug called rapamycin,
+
+59:19.480 --> 59:22.760
+ which some people are experimenting with that does that.
+
+59:22.760 --> 59:25.560
+ So you might be able to, I'm just saying this here
+
+59:25.560 --> 59:27.680
+ from all my colleagues, we don't know the results here,
+
+59:27.680 --> 59:30.680
+ but you could potentially take a rapamycin like drug
+
+59:30.680 --> 59:34.320
+ and counteract the effects of meat in the long run.
+
+59:34.320 --> 59:35.840
+ Don't know, we should try that actually.
+
+59:35.840 --> 59:37.360
+ We could do that in the lab.
+
+59:37.360 --> 59:39.400
+ But getting to the bottom of this,
+
+59:39.400 --> 59:41.280
+ what I think is going on is that
+
+59:41.280 --> 59:42.960
+ just like testosterone and growth hormone,
+
+59:42.960 --> 59:47.120
+ you will get temporary, maybe not temporary,
+
+59:47.120 --> 59:48.600
+ immediate health benefits.
+
+59:48.600 --> 59:51.960
+ You'll feel great, you'll get more muscle energy.
+
+59:51.960 --> 59:54.360
+ But the problem is, I think it's at the expense
+
+59:54.360 --> 59:56.160
+ of longterm health and longevity.
+
+59:56.160 --> 59:59.880
+ Well, this is actually something I worry about
+
+59:59.880 --> 1:00:02.600
+ in terms of longterm effects
+
+1:00:02.600 --> 1:00:05.320
+ or the cost in terms of longevity.
+
+1:00:05.320 --> 1:00:07.680
+ It's very difficult to know how your choices affect
+
+1:00:07.680 --> 1:00:12.160
+ your longevity because the impact is down the line.
+
+1:00:12.160 --> 1:00:16.920
+ Like just because something makes me feel good now,
+
+1:00:16.920 --> 1:00:19.680
+ like eating only meat makes me feel good now,
+
+1:00:19.680 --> 1:00:21.680
+ I wonder what are the costs down the line?
+
+1:00:21.680 --> 1:00:23.240
+ Well, think about what I was saying
+
+1:00:23.240 --> 1:00:26.720
+ about the tradeoffs between growth and reproduction,
+
+1:00:26.720 --> 1:00:28.080
+ which is what a mouse does,
+
+1:00:28.080 --> 1:00:31.080
+ and a whale that grows slowly, reproduces slowly,
+
+1:00:31.080 --> 1:00:32.520
+ lives a long time.
+
+1:00:32.520 --> 1:00:34.560
+ It's called the disposable soma theory.
+
+1:00:34.560 --> 1:00:38.280
+ Coke would just propose that in the 70s.
+
+1:00:38.280 --> 1:00:41.640
+ What meat probably does is put you in the mouse category,
+
+1:00:41.640 --> 1:00:44.240
+ super fertile, grow fast, heal fast,
+
+1:00:44.240 --> 1:00:46.120
+ and then if you want to be a whale,
+
+1:00:46.120 --> 1:00:49.160
+ you should restrict meat and do things
+
+1:00:49.160 --> 1:00:52.720
+ that promote the preservation of your body.
+
+1:00:52.720 --> 1:00:57.720
+ Is it difficult to eat a plant based diet
+
+1:00:57.840 --> 1:01:01.960
+ that you perform well under so mentally and physically?
+
+1:01:01.960 --> 1:01:06.880
+ Just almost, I'm asking almost like an anecdotal question.
+
+1:01:06.880 --> 1:01:08.880
+ All right, unless you know the science.
+
+1:01:08.880 --> 1:01:12.200
+ Well, the science is still being worked out,
+
+1:01:12.200 --> 1:01:15.200
+ but from the synthesis of everything that I've read,
+
+1:01:15.200 --> 1:01:20.200
+ I try to eat a diet that's definitely full of leafy greens,
+
+1:01:21.200 --> 1:01:22.600
+ particularly spinach is great
+
+1:01:22.600 --> 1:01:25.840
+ because it's got the iron that we need, plenty of vitamins.
+
+1:01:25.840 --> 1:01:30.840
+ I also try to avoid too much fruit and berries,
+
+1:01:32.440 --> 1:01:34.000
+ particularly fruit juice,
+
+1:01:34.000 --> 1:01:35.920
+ definitely avoid that sugar high.
+
+1:01:35.920 --> 1:01:39.880
+ Spiking your sugar is not healthy in the long run.
+
+1:01:39.880 --> 1:01:42.080
+ The other thing that's interesting is we discovered
+
+1:01:42.080 --> 1:01:45.520
+ what we called xeno hermetic molecules.
+
+1:01:45.520 --> 1:01:47.560
+ Let me unpack that because it's a terrible name
+
+1:01:47.560 --> 1:01:51.760
+ and I take full responsibility with my friend Conrad Howitz.
+
+1:01:51.760 --> 1:01:53.920
+ The xeno means cross species
+
+1:01:53.920 --> 1:01:57.400
+ and hormesis is the term that what doesn't kill you
+
+1:01:57.400 --> 1:02:01.200
+ makes you live longer and be healthier.
+
+1:02:01.200 --> 1:02:04.640
+ And so we're getting cross species health improvements
+
+1:02:04.640 --> 1:02:06.960
+ by molecules that plants make.
+
+1:02:06.960 --> 1:02:08.240
+ And plants make these molecules
+
+1:02:08.240 --> 1:02:11.840
+ when they're also under adversity or perceived adversity.
+
+1:02:11.840 --> 1:02:15.440
+ For instance, I understand if you want really healthy
+
+1:02:15.440 --> 1:02:18.880
+ or good oranges, you can drive nails into the bark
+
+1:02:18.880 --> 1:02:20.400
+ of the tree before you harvest.
+
+1:02:20.400 --> 1:02:23.240
+ Same with wine, you typically want them to be dry
+
+1:02:23.240 --> 1:02:25.960
+ before you harvest or covered in fungus.
+
+1:02:25.960 --> 1:02:28.840
+ And that's because these plants make these colorful
+
+1:02:28.840 --> 1:02:30.680
+ and xeno hermetic molecules
+
+1:02:30.680 --> 1:02:33.400
+ that make themselves stress resistant,
+
+1:02:33.400 --> 1:02:37.720
+ turn on their sirtuin defenses, the sergines, remember?
+
+1:02:37.720 --> 1:02:40.320
+ And when we eat them, we get those same benefits.
+
+1:02:40.320 --> 1:02:42.240
+ That's the idea and we've evolved to do so.
+
+1:02:42.240 --> 1:02:43.720
+ This isn't a coincidence.
+
+1:02:43.720 --> 1:02:47.040
+ It's my theory, our theory that we want to know
+
+1:02:47.040 --> 1:02:49.200
+ when our food supply is under adversity
+
+1:02:49.200 --> 1:02:51.960
+ because we need to get ready for a famine.
+
+1:02:51.960 --> 1:02:54.520
+ And so we hunker down and preserve our body.
+
+1:02:54.520 --> 1:02:55.800
+ And by eating these colored food,
+
+1:02:55.800 --> 1:02:58.760
+ so practically speaking, if it's full of color,
+
+1:02:58.760 --> 1:03:01.880
+ if there's been some chewing by a caterpillar,
+
+1:03:01.880 --> 1:03:04.960
+ organic, grown locally in local farms,
+
+1:03:04.960 --> 1:03:09.560
+ I'll eat that versus a watery, insipid, light colored
+
+1:03:10.760 --> 1:03:12.720
+ lettuce that's been grown in California.
+
+1:03:12.720 --> 1:03:14.520
+ So you want vegetables that have suffered.
+
+1:03:14.520 --> 1:03:16.720
+ You want the David Goggins as vegetables.
+
+1:03:16.720 --> 1:03:19.320
+ That's the xeno hermetic molecules.
+
+1:03:19.320 --> 1:03:20.800
+ I love that term.
+
+1:03:20.800 --> 1:03:22.040
+ I'm gonna take that one with me.
+
+1:03:22.040 --> 1:03:23.360
+ Thank you.
+
+1:03:23.360 --> 1:03:25.000
+ Yeah.
+
+1:03:25.000 --> 1:03:26.280
+ Oh, I follow him on Instagram.
+
+1:03:26.280 --> 1:03:27.400
+ He's always screaming.
+
+1:03:27.400 --> 1:03:29.920
+ So you want the, that he's basically
+
+1:03:30.960 --> 1:03:34.880
+ the xeno hermetic version of a human.
+
+1:03:36.080 --> 1:03:36.920
+ I like it.
+
+1:03:36.920 --> 1:03:39.000
+ So these are the molecules that are representative
+
+1:03:39.000 --> 1:03:41.000
+ of the stress that's been,
+
+1:03:42.400 --> 1:03:44.560
+ that a plant has been under.
+
+1:03:44.560 --> 1:03:46.720
+ Yeah, the best example of that is resveratrol,
+
+1:03:46.720 --> 1:03:48.200
+ which many people, including myself,
+
+1:03:48.200 --> 1:03:49.720
+ take as a supplement.
+
+1:03:49.720 --> 1:03:52.720
+ Grape, grapevines produce that in abundance
+
+1:03:52.720 --> 1:03:55.840
+ when they're dried out or they have too much light
+
+1:03:55.840 --> 1:03:56.880
+ or fungus.
+
+1:03:56.880 --> 1:04:01.560
+ And that we've shown activates the SOTU enzyme in our bodies,
+
+1:04:01.560 --> 1:04:03.840
+ which remember is what extends lifespan in yeast
+
+1:04:03.840 --> 1:04:05.840
+ and slows down aging in the brain.
+
+1:04:05.840 --> 1:04:06.960
+ That's beautiful.
+
+1:04:06.960 --> 1:04:09.320
+ Yeah, I tend to avoid fruit as well.
+
+1:04:09.320 --> 1:04:12.720
+ So green veggies, anything that's not very sweet.
+
+1:04:12.720 --> 1:04:15.440
+ So I would just say you're relatively low.
+
+1:04:15.440 --> 1:04:19.200
+ Like you try to avoid sugary things as well.
+
+1:04:19.200 --> 1:04:21.520
+ Yeah, I'm fairly militant about that.
+
+1:04:21.520 --> 1:04:23.960
+ I rarely would add sugar to anything.
+
+1:04:23.960 --> 1:04:27.880
+ Occasionally I would eat a slice of cheesecake,
+
+1:04:27.880 --> 1:04:31.120
+ but that would be maybe once or twice a year.
+
+1:04:31.120 --> 1:04:32.960
+ You have to give in occasionally.
+
+1:04:32.960 --> 1:04:34.800
+ But yeah, anything that's sweet,
+
+1:04:34.800 --> 1:04:37.480
+ I would rather substitute something like stevia
+
+1:04:37.480 --> 1:04:38.680
+ if I need a sugar hit.
+
+1:04:38.680 --> 1:04:42.440
+ What about exercise?
+
+1:04:42.440 --> 1:04:43.600
+ Your favorite topic?
+
+1:04:43.600 --> 1:04:47.480
+ I don't like talking about it.
+
+1:04:47.480 --> 1:04:49.240
+ Yeah, okay, great.
+
+1:04:49.240 --> 1:04:53.520
+ Is there benefits to longevity from exercise?
+
+1:04:53.520 --> 1:04:55.960
+ Well, no doubt, that's proven.
+
+1:04:55.960 --> 1:04:59.240
+ Just like fasting, it's pretty clear that that works.
+
+1:04:59.240 --> 1:05:01.880
+ For example, there are studies of cyclists.
+
+1:05:01.880 --> 1:05:06.200
+ It was something like people that cycle over 80 miles a week
+
+1:05:06.200 --> 1:05:08.880
+ have a 40% reduction in a variety of diseases,
+
+1:05:08.880 --> 1:05:10.400
+ certainly heart disease.
+
+1:05:10.400 --> 1:05:11.640
+ So that's not even a question.
+
+1:05:11.640 --> 1:05:13.520
+ But what's interesting is that we're learning
+
+1:05:13.520 --> 1:05:15.680
+ that you don't need much to have a big benefit.
+
+1:05:15.680 --> 1:05:17.520
+ It's an asymptotic curve.
+
+1:05:17.520 --> 1:05:19.200
+ And in fact, if you overdo it,
+
+1:05:19.200 --> 1:05:20.680
+ you probably have reduced benefits,
+
+1:05:20.680 --> 1:05:22.160
+ particularly if you start to wear out joints,
+
+1:05:22.160 --> 1:05:23.520
+ that kind of thing.
+
+1:05:23.520 --> 1:05:25.760
+ But just 10 minutes on a treadmill a few times a week,
+
+1:05:25.760 --> 1:05:28.600
+ getting your, lose your breath, get hypoxic as it's called,
+
+1:05:28.600 --> 1:05:32.640
+ seems to be very beneficial for long term health.
+
+1:05:32.640 --> 1:05:35.640
+ And that's the kind of exercise that I like to do.
+
+1:05:35.640 --> 1:05:36.480
+ Yeah, aerobic.
+
+1:05:36.480 --> 1:05:38.520
+ Though I do enjoy lifting weights.
+
+1:05:38.520 --> 1:05:40.920
+ So that is what I call my exercise,
+
+1:05:40.920 --> 1:05:41.880
+ which has other benefits,
+
+1:05:41.880 --> 1:05:46.240
+ including maintaining hormone levels, male hormone levels.
+
+1:05:46.240 --> 1:05:50.720
+ But also really why I do it is I want to be able to
+
+1:05:50.720 --> 1:05:53.480
+ counteract the effects of sitting for most of the day.
+
+1:05:53.480 --> 1:05:55.760
+ And as you get older, you lose muscle mass.
+
+1:05:55.760 --> 1:05:57.680
+ It's a percent or so a year.
+
+1:05:57.680 --> 1:05:59.440
+ And I don't want to be frail when I'm older
+
+1:05:59.440 --> 1:06:00.840
+ and fall over and break my hip,
+
+1:06:00.840 --> 1:06:04.120
+ which happens every 20 seconds in this country.
+
+1:06:04.120 --> 1:06:05.480
+ So maintaining that strength,
+
+1:06:05.480 --> 1:06:07.960
+ but also doing the cardio for the longevity,
+
+1:06:07.960 --> 1:06:10.160
+ for the avoiding the heart disease.
+
+1:06:10.160 --> 1:06:13.080
+ Yeah, I definitely just like with fasting,
+
+1:06:13.080 --> 1:06:15.640
+ have the philosophical benefit of running long
+
+1:06:15.640 --> 1:06:17.120
+ and running slow.
+
+1:06:17.120 --> 1:06:19.360
+ I enjoy it because it kind of clears the mind
+
+1:06:19.360 --> 1:06:20.600
+ and allows you to think,
+
+1:06:20.600 --> 1:06:23.040
+ actually listen to brown noise as I run.
+
+1:06:23.040 --> 1:06:26.400
+ It really helps remove myself from the world
+
+1:06:26.400 --> 1:06:28.760
+ and just like zoom in on particular thoughts.
+
+1:06:28.760 --> 1:06:30.040
+ What are these brown noise?
+
+1:06:30.040 --> 1:06:31.920
+ It's like white noise, but deeper.
+
+1:06:31.920 --> 1:06:34.040
+ So like the white noise is like,
+
+1:06:34.040 --> 1:06:36.760
+ shh, and then brown noise is more like,
+
+1:06:38.880 --> 1:06:39.960
+ like ocean.
+
+1:06:39.960 --> 1:06:40.800
+ That sounds great.
+
+1:06:40.800 --> 1:06:41.760
+ I might try that.
+
+1:06:41.760 --> 1:06:42.600
+ Yeah.
+
+1:06:42.600 --> 1:06:43.680
+ Yeah, it's a...
+
+1:06:43.680 --> 1:06:44.920
+ It's more soothing probably.
+
+1:06:44.920 --> 1:06:45.760
+ I'm not sure.
+
+1:06:45.760 --> 1:06:46.600
+ There could be science to this.
+
+1:06:46.600 --> 1:06:47.640
+ I need to look this up.
+
+1:06:47.640 --> 1:06:48.880
+ I've been meaning to,
+
+1:06:48.880 --> 1:06:50.520
+ but when I started,
+
+1:06:52.120 --> 1:06:53.840
+ this is maybe like five years ago,
+
+1:06:53.840 --> 1:06:56.080
+ I started listening to brown noise when I work.
+
+1:06:56.080 --> 1:06:58.400
+ And the first time I listened to it,
+
+1:06:58.400 --> 1:07:00.280
+ something happened to my mind
+
+1:07:00.280 --> 1:07:03.720
+ where it just went like zoomed in
+
+1:07:03.720 --> 1:07:07.840
+ to like in a way that it felt like really weird,
+
+1:07:07.840 --> 1:07:12.640
+ like how precisely it was able to sort of remove
+
+1:07:12.640 --> 1:07:16.560
+ the distractions of the world and really help my mind.
+
+1:07:16.560 --> 1:07:19.640
+ Obviously, like the mind is trying to focus
+
+1:07:19.640 --> 1:07:21.800
+ and then it just enabled that process
+
+1:07:21.800 --> 1:07:24.480
+ of trying to focus on a particular problem.
+
+1:07:24.480 --> 1:07:26.320
+ I don't know if this is generalizable to others.
+
+1:07:26.320 --> 1:07:29.040
+ People should definitely try it if you're listening to this.
+
+1:07:29.040 --> 1:07:30.240
+ Maybe it's just my own mind,
+
+1:07:30.240 --> 1:07:34.480
+ but it's funny like it made me,
+
+1:07:34.480 --> 1:07:35.840
+ brown noise made me realize
+
+1:07:35.840 --> 1:07:38.680
+ that there's probably hacks out there
+
+1:07:38.680 --> 1:07:41.840
+ that work for me that I should be constantly looking for.
+
+1:07:41.840 --> 1:07:46.840
+ It's almost like an encouraging and motivating of event
+
+1:07:48.320 --> 1:07:49.960
+ that maybe there's other stuff out there.
+
+1:07:49.960 --> 1:07:52.800
+ Maybe there's other brown noise like things out there
+
+1:07:52.800 --> 1:07:56.080
+ that truly like almost immediately make me feel better.
+
+1:07:56.080 --> 1:07:57.800
+ I don't know if it's generalizable to others,
+
+1:07:57.800 --> 1:08:00.520
+ but it does seem that it's the case
+
+1:08:00.520 --> 1:08:03.200
+ that there's probably for many others
+
+1:08:03.200 --> 1:08:05.840
+ things like that that could be discovered.
+
+1:08:05.840 --> 1:08:10.320
+ And so it's always disappointing when I find things in life
+
+1:08:10.320 --> 1:08:12.880
+ that I wish I would have found earlier.
+
+1:08:12.880 --> 1:08:17.280
+ Like I got LASIK eye surgery a few years ago
+
+1:08:17.280 --> 1:08:19.360
+ and the first thought I had like the next day
+
+1:08:19.360 --> 1:08:21.720
+ when I woke up is like, damn it,
+
+1:08:21.720 --> 1:08:24.120
+ why didn't I do this way earlier?
+
+1:08:24.120 --> 1:08:27.240
+ There's all this stuff of that nature
+
+1:08:27.240 --> 1:08:29.560
+ that there are yet to be discovered.
+
+1:08:29.560 --> 1:08:31.680
+ So it pays to explore.
+
+1:08:31.680 --> 1:08:32.960
+ Yeah, though you have a different mind.
+
+1:08:32.960 --> 1:08:34.480
+ You have quite a beautiful mind.
+
+1:08:34.480 --> 1:08:37.120
+ So I suspect brown noise helps you focus
+
+1:08:37.120 --> 1:08:39.120
+ and cause you're probably all over the place
+
+1:08:39.120 --> 1:08:40.200
+ if you don't control it.
+
+1:08:40.200 --> 1:08:41.040
+ Yeah, exactly.
+
+1:08:41.040 --> 1:08:42.320
+ It means something about it.
+
+1:08:42.320 --> 1:08:43.440
+ It's a programmer thing.
+
+1:08:43.440 --> 1:08:48.440
+ I don't, a programming is a really difficult mental journey
+
+1:08:50.160 --> 1:08:52.880
+ cause you have to keep a lot of things in mind.
+
+1:08:52.880 --> 1:08:56.480
+ You have to, so you're constantly designing things
+
+1:08:56.480 --> 1:08:58.080
+ and you have to be extremely precise
+
+1:08:58.080 --> 1:09:01.080
+ by making those things concrete in code.
+
+1:09:01.080 --> 1:09:05.120
+ You also have to look stuff up on the internet
+
+1:09:06.160 --> 1:09:08.680
+ to sort of feed like information
+
+1:09:08.680 --> 1:09:10.400
+ and looking up stuff on the internet.
+
+1:09:10.400 --> 1:09:12.360
+ The internet is full of like distracting things.
+
+1:09:12.360 --> 1:09:13.760
+ So you have to be really focused
+
+1:09:13.760 --> 1:09:16.760
+ in the way you look stuff up in pulling that information in.
+
+1:09:16.760 --> 1:09:19.080
+ So it requires a certain discipline
+
+1:09:19.080 --> 1:09:23.400
+ and a certain focus that I've been very much exploring
+
+1:09:23.400 --> 1:09:26.320
+ how to do, like I do it really well in the morning,
+
+1:09:26.320 --> 1:09:28.280
+ coffee is involved, all those kinds of things.
+
+1:09:28.280 --> 1:09:29.640
+ You're trying to optimize,
+
+1:09:30.800 --> 1:09:33.560
+ keeping very positive, inspired, no social media,
+
+1:09:33.560 --> 1:09:36.120
+ all those kinds of things and trying to optimize for.
+
+1:09:36.120 --> 1:09:38.640
+ And everybody has their own kind of little journey
+
+1:09:38.640 --> 1:09:40.520
+ that they try to understand.
+
+1:09:40.520 --> 1:09:41.960
+ You get this from like writers
+
+1:09:41.960 --> 1:09:45.800
+ when you read about the habits of writers,
+
+1:09:45.800 --> 1:09:47.840
+ like the habits they do in the morning.
+
+1:09:47.840 --> 1:09:49.800
+ They usually write like two, three, four hours a day
+
+1:09:49.800 --> 1:09:50.960
+ and that's it.
+
+1:09:50.960 --> 1:09:53.440
+ It's like they optimize that ritual.
+
+1:09:53.440 --> 1:09:55.440
+ And then there's always Hunter Stompson.
+
+1:09:55.440 --> 1:10:00.440
+ So sometimes it pays off to be wild.
+
+1:10:01.320 --> 1:10:04.560
+ What about sleep?
+
+1:10:04.560 --> 1:10:06.720
+ How important is sleep for longevity?
+
+1:10:06.720 --> 1:10:10.720
+ I would guess based on the evidence
+
+1:10:10.720 --> 1:10:12.160
+ that it's really important
+
+1:10:12.160 --> 1:10:15.040
+ and because we don't know for sure.
+
+1:10:15.040 --> 1:10:17.560
+ But what we know from animal studies is the following.
+
+1:10:17.560 --> 1:10:20.240
+ If you restrict sleep from a rat for just two weeks,
+
+1:10:20.240 --> 1:10:22.160
+ it'll develop type two diabetes.
+
+1:10:22.160 --> 1:10:23.360
+ It's that important.
+
+1:10:23.360 --> 1:10:25.840
+ So that's the main thing.
+
+1:10:25.840 --> 1:10:28.480
+ What we also know is at the molecular level
+
+1:10:28.480 --> 1:10:33.360
+ that if you disrupt your sleep wake cycle,
+
+1:10:33.360 --> 1:10:35.120
+ so we actually have proteins that go up and down
+
+1:10:35.120 --> 1:10:36.720
+ that control our sleep wake.
+
+1:10:36.720 --> 1:10:39.240
+ All of us, most of ourselves do that.
+
+1:10:39.240 --> 1:10:42.480
+ If you disrupt that, you'll get premature aging.
+
+1:10:42.480 --> 1:10:43.320
+ And guess what?
+
+1:10:43.320 --> 1:10:44.160
+ The opposite is true.
+
+1:10:44.160 --> 1:10:46.760
+ That as you get older, that cycle,
+
+1:10:46.760 --> 1:10:49.480
+ the amplitude becomes diminished.
+
+1:10:49.480 --> 1:10:51.880
+ And this is why it's harder to get to sleep as you get older
+
+1:10:51.880 --> 1:10:54.480
+ and then you got all sorts of problems.
+
+1:10:54.480 --> 1:10:56.920
+ And I think what's going on is there's positive feedback loop
+
+1:10:56.920 --> 1:10:59.440
+ which is a disaster in your old age,
+
+1:10:59.440 --> 1:11:02.040
+ which is right, you're aging.
+
+1:11:02.040 --> 1:11:05.760
+ You can't at this moment totally prevent that.
+
+1:11:05.760 --> 1:11:06.880
+ And then it's disrupting your sleep
+
+1:11:06.880 --> 1:11:08.000
+ and you get not enough sleep
+
+1:11:08.000 --> 1:11:10.480
+ and then that's gonna accelerate your aging process.
+
+1:11:10.480 --> 1:11:13.720
+ And so it's known that people who are shift workers
+
+1:11:13.720 --> 1:11:17.560
+ are more susceptible to certain age related diseases.
+
+1:11:17.560 --> 1:11:19.960
+ So your bottom line, you definitely wanna work on that.
+
+1:11:19.960 --> 1:11:21.840
+ It's one of the reasons I have this ring on my finger
+
+1:11:21.840 --> 1:11:23.320
+ which helps me optimize my sleep
+
+1:11:23.320 --> 1:11:25.880
+ and learn what I do the day before
+
+1:11:25.880 --> 1:11:28.400
+ if it was a bad idea and I'll stop doing that
+
+1:11:28.400 --> 1:11:29.760
+ like eating a fried chicken.
+
+1:11:31.760 --> 1:11:34.840
+ I see you're still carrying the burdens of that decision.
+
+1:11:34.840 --> 1:11:37.920
+ But yeah, sleep is one of those things
+
+1:11:37.920 --> 1:11:41.600
+ that's making me wonder about the variability
+
+1:11:41.600 --> 1:11:43.160
+ between humans a little bit
+
+1:11:43.160 --> 1:11:46.080
+ and how science is often focused on,
+
+1:11:47.520 --> 1:11:51.520
+ like it's not often focused on high performers
+
+1:11:51.520 --> 1:11:52.640
+ in a particular way.
+
+1:11:53.640 --> 1:11:55.240
+ And it's looking at the aggregate
+
+1:11:55.240 --> 1:11:56.960
+ versus the individual cases.
+
+1:11:57.880 --> 1:11:59.400
+ For example, like for me,
+
+1:11:59.400 --> 1:12:01.000
+ I don't know what the exact hours are,
+
+1:12:01.000 --> 1:12:04.320
+ but like power naps are incredible.
+
+1:12:06.560 --> 1:12:10.720
+ I tend to look at the metric of stress and happiness
+
+1:12:10.720 --> 1:12:13.120
+ and joy and try to optimize those.
+
+1:12:13.120 --> 1:12:16.040
+ So decreasing stress, increasing happiness
+
+1:12:16.040 --> 1:12:20.200
+ and using sleep as just one of the tools to do that
+
+1:12:20.200 --> 1:12:23.760
+ because like hitting the five, six, seven, eight,
+
+1:12:23.760 --> 1:12:27.240
+ nine hour mark or whatever the correct mark is,
+
+1:12:27.240 --> 1:12:30.040
+ I find that to be stress inducing for me
+
+1:12:30.040 --> 1:12:34.240
+ versus stress relieving, like thinking about that.
+
+1:12:34.240 --> 1:12:37.360
+ I feel best if I sleep sometimes for eight hours,
+
+1:12:37.360 --> 1:12:39.640
+ sometimes for four hours in the power nap.
+
+1:12:39.640 --> 1:12:42.640
+ And as long as I have a stupid private,
+
+1:12:42.640 --> 1:12:44.520
+ usually smile on my face,
+
+1:12:44.520 --> 1:12:46.240
+ that's what I'm doing good
+
+1:12:46.240 --> 1:12:49.520
+ as opposed to getting a perfect amount of sleep
+
+1:12:49.520 --> 1:12:53.360
+ according to whatever the latest blog post is.
+
+1:12:53.360 --> 1:12:55.440
+ And I also pull all nighters still.
+
+1:12:56.560 --> 1:12:59.400
+ I also think there's something about the body,
+
+1:12:59.400 --> 1:13:02.920
+ like as long as you do it regularly,
+
+1:13:02.920 --> 1:13:04.480
+ it's not as stress inducing.
+
+1:13:04.480 --> 1:13:06.880
+ Like you know what it is.
+
+1:13:06.880 --> 1:13:09.040
+ The reason I pull all nighters isn't for like,
+
+1:13:09.040 --> 1:13:11.640
+ I'm playing Diablo three or something
+
+1:13:11.640 --> 1:13:14.040
+ is because I'm doing something I'm truly passionate about.
+
+1:13:14.040 --> 1:13:15.920
+ Well, like I'm also love video games,
+
+1:13:15.920 --> 1:13:18.520
+ but I'm doing something I'm truly passionate about.
+
+1:13:18.520 --> 1:13:21.480
+ And it's almost like there's the jockel willing feeling
+
+1:13:21.480 --> 1:13:23.760
+ of when I'm up at seven AM
+
+1:13:23.760 --> 1:13:27.240
+ and I haven't slept all night and still I'm working on it.
+
+1:13:27.240 --> 1:13:29.560
+ There's a kind of a celebration of the human spirit
+
+1:13:29.560 --> 1:13:31.120
+ that I really enjoy it.
+
+1:13:31.120 --> 1:13:33.800
+ Like, and that's happiness.
+
+1:13:33.800 --> 1:13:36.040
+ And to sort of then,
+
+1:13:36.040 --> 1:13:38.040
+ and I usually don't tell that kind of stuff to people
+
+1:13:38.040 --> 1:13:40.920
+ because their first statement will be like,
+
+1:13:40.920 --> 1:13:42.640
+ you should get more sleep.
+
+1:13:42.640 --> 1:13:46.280
+ It's like, no, I'm doing stuff I love.
+
+1:13:46.280 --> 1:13:49.040
+ You should get more love in your life, bro.
+
+1:13:49.040 --> 1:13:50.480
+ That's right.
+
+1:13:50.480 --> 1:13:52.600
+ So, but that said, in aggregate,
+
+1:13:52.600 --> 1:13:55.440
+ when you look at the full span of life,
+
+1:13:55.440 --> 1:13:58.120
+ it's probably you should be getting
+
+1:13:58.120 --> 1:14:00.800
+ a consistent amount of sleep.
+
+1:14:00.800 --> 1:14:05.000
+ And it seems like it's in that seven, eight hour range.
+
+1:14:05.000 --> 1:14:06.760
+ Yeah, but it's similar to food.
+
+1:14:06.760 --> 1:14:09.400
+ It's the quality, not the quantity.
+
+1:14:09.400 --> 1:14:10.800
+ And when you get it.
+
+1:14:10.800 --> 1:14:14.520
+ So I look at my data pretty often.
+
+1:14:14.520 --> 1:14:17.200
+ And what makes a difference to me is not the amount of hours
+
+1:14:17.200 --> 1:14:20.480
+ but the quality, the depth and the deep sleep
+
+1:14:20.480 --> 1:14:22.000
+ is what will do it.
+
+1:14:22.000 --> 1:14:24.920
+ So if I have a lot of alcohol before going to sleep
+
+1:14:24.920 --> 1:14:26.440
+ and I can see my heart rate being different,
+
+1:14:26.440 --> 1:14:28.280
+ but what really kills me is that I don't get
+
+1:14:28.280 --> 1:14:30.560
+ a lot of that deep sleep and I wake up,
+
+1:14:30.560 --> 1:14:32.480
+ you know, barely remembering stuff.
+
+1:14:32.480 --> 1:14:34.480
+ So that, like you say, if you're happy and contented
+
+1:14:34.480 --> 1:14:37.200
+ and you're not done have these cortisol chemicals
+
+1:14:37.200 --> 1:14:38.440
+ going through your body,
+
+1:14:38.440 --> 1:14:40.760
+ you will more naturally get into that deep state.
+
+1:14:40.760 --> 1:14:42.360
+ And even if you just get four hours,
+
+1:14:42.360 --> 1:14:45.440
+ way better than eight hours of none of that.
+
+1:14:45.440 --> 1:14:46.800
+ Yeah, that's beautiful.
+
+1:14:46.800 --> 1:14:48.240
+ And some of that could be genetic.
+
+1:14:48.240 --> 1:14:52.120
+ For me, I just fall asleep like this.
+
+1:14:52.120 --> 1:14:54.160
+ If you want me to fall asleep right now, I can do it.
+
+1:14:54.160 --> 1:14:57.360
+ It's no, I have no problem with it.
+
+1:14:57.360 --> 1:14:59.320
+ Combined with coffee, I just had two energy drinks
+
+1:14:59.320 --> 1:15:01.480
+ I can probably sleep.
+
+1:15:01.480 --> 1:15:03.560
+ So that, I don't know if that's genetics
+
+1:15:03.560 --> 1:15:07.560
+ or it's kind of, I don't know what it is.
+
+1:15:07.560 --> 1:15:09.720
+ Or maybe that I don't have kids that I'm single.
+
+1:15:09.720 --> 1:15:12.440
+ So I don't have, I'm almost listening to some kind
+
+1:15:12.440 --> 1:15:15.360
+ of biological signal versus societal signal.
+
+1:15:15.360 --> 1:15:17.080
+ I'm not supposed to go to sleep.
+
+1:15:17.080 --> 1:15:20.680
+ So I just go to sleep whenever I feel like going to sleep.
+
+1:15:20.680 --> 1:15:22.480
+ Well, that's cause you're self employed.
+
+1:15:22.480 --> 1:15:23.320
+ Self employed.
+
+1:15:23.320 --> 1:15:24.640
+ Most people don't have that luxury,
+
+1:15:24.640 --> 1:15:27.600
+ but we're lucky the two of us that we can make our own hours.
+
+1:15:27.600 --> 1:15:28.440
+ Yeah.
+
+1:15:28.440 --> 1:15:29.800
+ But yeah, it's super important.
+
+1:15:29.800 --> 1:15:32.360
+ And those people who have the shift work,
+
+1:15:32.360 --> 1:15:35.480
+ I mean, they really need to change the way that works
+
+1:15:35.480 --> 1:15:37.800
+ because they're literally killing those people.
+
+1:15:37.800 --> 1:15:42.800
+ Is there something you can say about the mind and stress
+
+1:15:45.600 --> 1:15:48.360
+ in terms of effect on longevity?
+
+1:15:48.360 --> 1:15:52.520
+ Sort of, cause I don't know if you think about it this way,
+
+1:15:52.520 --> 1:15:55.080
+ but when you talk about the biological machine,
+
+1:15:55.080 --> 1:15:57.800
+ it's always these mechanisms that don't,
+
+1:15:57.800 --> 1:16:00.920
+ are not necessarily directly connected to the brain
+
+1:16:00.920 --> 1:16:02.640
+ or the operation of the brain.
+
+1:16:02.640 --> 1:16:06.320
+ Like what's the role about stress and happiness
+
+1:16:06.320 --> 1:16:10.760
+ and yeah, the sort of higher cognitive things
+
+1:16:10.760 --> 1:16:13.080
+ going on in the brain on longevity.
+
+1:16:14.280 --> 1:16:15.120
+ Right.
+
+1:16:15.120 --> 1:16:16.240
+ Well, that's a great point.
+
+1:16:16.240 --> 1:16:18.760
+ The brain is the center for longevity actually.
+
+1:16:18.760 --> 1:16:22.800
+ We do know that first off, when I'm stressed,
+
+1:16:22.800 --> 1:16:24.680
+ I can see mentally stressed,
+
+1:16:24.680 --> 1:16:27.120
+ then I can see it in my body.
+
+1:16:27.120 --> 1:16:29.560
+ Heart rate, hormones, it's clear.
+
+1:16:29.560 --> 1:16:31.440
+ That's no true surprise.
+
+1:16:31.440 --> 1:16:34.000
+ So you've got to work on your brain first and foremost.
+
+1:16:34.000 --> 1:16:39.000
+ If you are totally freaked out, agitated all the time,
+
+1:16:40.080 --> 1:16:41.160
+ you will live shorter.
+
+1:16:41.160 --> 1:16:42.520
+ I'm certain of it.
+
+1:16:42.520 --> 1:16:47.520
+ I keep fish, I'm a big aquarium guy.
+
+1:16:47.520 --> 1:16:48.360
+ And you can see the difference
+
+1:16:48.360 --> 1:16:51.480
+ between the fish that's having a good time and dominant
+
+1:16:51.480 --> 1:16:53.360
+ and one that gets picked on.
+
+1:16:53.360 --> 1:16:55.240
+ It just looks like crap.
+
+1:16:55.240 --> 1:16:57.600
+ You don't want to be the little fish getting picked on
+
+1:16:57.600 --> 1:16:58.680
+ if you can help it.
+
+1:16:58.680 --> 1:17:00.960
+ So I used to be extremely stressed as a kid.
+
+1:17:00.960 --> 1:17:03.400
+ I was a perfectionist, very shy,
+
+1:17:03.400 --> 1:17:06.160
+ always worried about being a failure.
+
+1:17:06.160 --> 1:17:08.760
+ If I didn't get an A+, I was crying in my bedroom,
+
+1:17:08.760 --> 1:17:11.040
+ that kind of sad existence.
+
+1:17:11.040 --> 1:17:13.440
+ I got into my 20s, picked then in my 30s
+
+1:17:13.440 --> 1:17:15.840
+ and realized that's not the way to live.
+
+1:17:15.840 --> 1:17:18.040
+ So I've worked very hard to get to this point
+
+1:17:18.040 --> 1:17:21.280
+ where I almost never get stressed, never.
+
+1:17:21.280 --> 1:17:23.680
+ There's nothing that, I've never gotten angry in my lab.
+
+1:17:23.680 --> 1:17:24.680
+ I've got 20 kids.
+
+1:17:24.680 --> 1:17:26.840
+ Sometimes it's like a, most of the time
+
+1:17:26.840 --> 1:17:28.880
+ it's like a kindergarten.
+
+1:17:28.880 --> 1:17:30.560
+ I haven't lost my temper.
+
+1:17:30.560 --> 1:17:32.960
+ I'm very calm, but that's intentional.
+
+1:17:32.960 --> 1:17:35.000
+ And I don't worry about stuff.
+
+1:17:35.000 --> 1:17:38.000
+ Millions of dollars, billions of dollars at stake sometimes.
+
+1:17:39.120 --> 1:17:39.960
+ Keep it cool.
+
+1:17:39.960 --> 1:17:40.800
+ It's only life.
+
+1:17:40.800 --> 1:17:42.800
+ We're all headed to the same place anyway.
+
+1:17:42.800 --> 1:17:44.320
+ Don't worry about it.
+
+1:17:44.320 --> 1:17:47.800
+ But to answer your question, I think in a better way,
+
+1:17:47.800 --> 1:17:49.800
+ if you manipulate the brain of an animal,
+
+1:17:50.760 --> 1:17:51.600
+ I'll give you an example.
+
+1:17:51.600 --> 1:17:53.840
+ If we turn on this certain gene that I mentioned,
+
+1:17:53.840 --> 1:17:56.720
+ sort one, we, a good friend of mine at Wash U,
+
+1:17:56.720 --> 1:17:58.120
+ Sheena Mai did this.
+
+1:17:58.120 --> 1:18:01.840
+ They upregulated that gene just in the neurons
+
+1:18:01.840 --> 1:18:04.800
+ of the animal, it lived longer.
+
+1:18:04.800 --> 1:18:06.960
+ So that's sufficient to extend lifespan.
+
+1:18:06.960 --> 1:18:10.040
+ We also know that you can manipulate the part of the brain
+
+1:18:10.040 --> 1:18:12.720
+ called the hypothalamus, which leaches a lot of chemicals
+
+1:18:12.720 --> 1:18:17.120
+ into the body and proteins, most of which we don't know yet,
+
+1:18:17.120 --> 1:18:19.720
+ but just changing the inflammation of that little organ
+
+1:18:21.040 --> 1:18:22.920
+ or part of the brain is sufficient
+
+1:18:22.920 --> 1:18:24.960
+ to make animals live longer as well.
+
+1:18:24.960 --> 1:18:26.520
+ So get your brain in order first
+
+1:18:26.520 --> 1:18:29.480
+ before you tackle anything else, I would say.
+
+1:18:29.480 --> 1:18:33.120
+ So you kind of mentioned this with the inside tracker,
+
+1:18:33.120 --> 1:18:36.200
+ there's a ability to take blood measurement
+
+1:18:36.200 --> 1:18:40.360
+ and then infer from that a bunch of different things
+
+1:18:40.360 --> 1:18:42.520
+ about your body, how you can improve,
+
+1:18:42.520 --> 1:18:44.720
+ how you can improve the longevity.
+
+1:18:44.720 --> 1:18:49.200
+ And you've also mentioned saliva in more efficient ways
+
+1:18:51.000 --> 1:18:52.520
+ to get data.
+
+1:18:54.040 --> 1:18:55.440
+ What does that involve?
+
+1:18:55.440 --> 1:18:57.160
+ What's the future of data collection?
+
+1:18:57.160 --> 1:18:59.600
+ Yeah, for the human biological system.
+
+1:18:59.600 --> 1:19:01.640
+ Well, yeah, the issue with blood
+
+1:19:01.640 --> 1:19:03.400
+ is you need someone to take it.
+
+1:19:03.400 --> 1:19:06.080
+ I mean, already prick your finger, which hurts.
+
+1:19:06.080 --> 1:19:07.120
+ So you've got to have something better.
+
+1:19:07.120 --> 1:19:09.000
+ So I think what the future looks like
+
+1:19:09.000 --> 1:19:12.360
+ is that you'll spit onto a little piece of paper
+
+1:19:12.360 --> 1:19:14.760
+ and stick it in a machine, it'll do that for you.
+
+1:19:14.760 --> 1:19:15.600
+ But we're not there yet.
+
+1:19:15.600 --> 1:19:20.600
+ So the intermediate future that I'm building right now
+
+1:19:20.960 --> 1:19:24.200
+ is that you would take a swab of the inside of your mouth,
+
+1:19:24.200 --> 1:19:26.760
+ which is the easiest way to take cells out of your body
+
+1:19:26.760 --> 1:19:28.360
+ and just ship them off.
+
+1:19:28.360 --> 1:19:30.800
+ Okay, so it's called a buckle swab.
+
+1:19:30.800 --> 1:19:33.560
+ I think we became very used to that right now
+
+1:19:33.560 --> 1:19:35.760
+ because of COVID, people don't like going to the doctor
+
+1:19:35.760 --> 1:19:36.920
+ as much, they don't like going out,
+
+1:19:36.920 --> 1:19:38.800
+ they just want to have home tests.
+
+1:19:38.800 --> 1:19:40.760
+ And so that I think is the next 10 years
+
+1:19:40.760 --> 1:19:43.120
+ where you'll get a kit in the mail,
+
+1:19:43.120 --> 1:19:45.280
+ you'll swab your cheek, stick it back in an envelope,
+
+1:19:45.280 --> 1:19:47.400
+ send it off and a week later,
+
+1:19:47.400 --> 1:19:52.400
+ you have either a doctor's report or a health recommendation.
+
+1:19:52.840 --> 1:19:54.960
+ And what can you get off a cheek swab?
+
+1:19:54.960 --> 1:19:55.800
+ Well, you can get anything,
+
+1:19:55.800 --> 1:19:58.360
+ you can get hormones, stress levels,
+
+1:19:58.360 --> 1:20:00.880
+ stress hormones, blood glucose levels.
+
+1:20:00.880 --> 1:20:03.880
+ You can also tell your age reasonably accurately
+
+1:20:03.880 --> 1:20:05.880
+ doing that, actually quite accurately.
+
+1:20:05.880 --> 1:20:08.200
+ And those clocks cannot just tell you
+
+1:20:08.200 --> 1:20:10.160
+ how you're doing over time,
+
+1:20:10.160 --> 1:20:12.160
+ but can be used to give you recommendations
+
+1:20:12.160 --> 1:20:14.160
+ to slow that process down.
+
+1:20:14.160 --> 1:20:16.560
+ Cause some people sometimes are 10 years older biologically
+
+1:20:16.560 --> 1:20:19.560
+ than their actual chronological age.
+
+1:20:19.560 --> 1:20:21.880
+ I mean, why does it matter how many times
+
+1:20:21.880 --> 1:20:23.680
+ the earth's gone around the sun seriously?
+
+1:20:23.680 --> 1:20:24.880
+ Who cares about birthdays?
+
+1:20:24.880 --> 1:20:27.200
+ It's how long your body's clock has been ticking
+
+1:20:27.200 --> 1:20:28.520
+ and how fast.
+
+1:20:28.520 --> 1:20:30.560
+ So I could take a cheek swab from you today,
+
+1:20:30.560 --> 1:20:32.720
+ Lex, take it back to my lab.
+
+1:20:32.720 --> 1:20:35.360
+ And we then by tomorrow tell you
+
+1:20:35.360 --> 1:20:36.840
+ how old you are biologically
+
+1:20:36.840 --> 1:20:40.880
+ based on what we call the epigenetic clock.
+
+1:20:40.880 --> 1:20:43.080
+ And you might be freaked out, you might be happy,
+
+1:20:43.080 --> 1:20:45.560
+ but either way, we can advise you
+
+1:20:45.560 --> 1:20:47.800
+ on how to improve the trajectory.
+
+1:20:47.800 --> 1:20:49.360
+ Cause we know that smoking increases
+
+1:20:49.360 --> 1:20:50.840
+ the speed of that clock.
+
+1:20:50.840 --> 1:20:54.200
+ We also know that fasting and people who eat the right foods
+
+1:20:54.200 --> 1:20:55.960
+ have a slower clock.
+
+1:20:55.960 --> 1:20:58.400
+ Without that knowledge, you're flying blind.
+
+1:20:58.400 --> 1:21:01.000
+ But I like the idea of a swab cause it's just so easy.
+
+1:21:01.000 --> 1:21:02.560
+ We've, a lot of us have done something like that
+
+1:21:02.560 --> 1:21:03.400
+ for COVID tests.
+
+1:21:03.400 --> 1:21:04.240
+ It's not a big deal.
+
+1:21:04.240 --> 1:21:06.160
+ I've been doing a lot of rapid antigen tests.
+
+1:21:06.160 --> 1:21:11.040
+ So let me say that particular one rapid antigen tests,
+
+1:21:11.040 --> 1:21:12.680
+ they've been a source of frustration for me
+
+1:21:12.680 --> 1:21:14.840
+ because like everybody should be doing it.
+
+1:21:14.840 --> 1:21:16.080
+ It's so easy.
+
+1:21:16.080 --> 1:21:17.280
+ We've also been working in my lab
+
+1:21:17.280 --> 1:21:19.120
+ on democratizing these tests
+
+1:21:19.120 --> 1:21:22.080
+ to bring them down from a few hundred bucks to a dollar.
+
+1:21:22.080 --> 1:21:24.280
+ So just to clarify, you're talking about not research,
+
+1:21:24.280 --> 1:21:25.800
+ you're talking about like company stuff,
+
+1:21:25.800 --> 1:21:28.600
+ like actual consumer facing things.
+
+1:21:28.600 --> 1:21:29.440
+ Well, right.
+
+1:21:29.440 --> 1:21:31.000
+ The research on bringing the price down
+
+1:21:31.000 --> 1:21:32.920
+ has occurred in my lab at Harvard.
+
+1:21:32.920 --> 1:21:35.080
+ And then that intellectual property is being licensed
+
+1:21:35.080 --> 1:21:37.160
+ and has been licensed out to a company
+
+1:21:37.160 --> 1:21:40.320
+ that will be consumer facing.
+
+1:21:40.320 --> 1:21:43.320
+ So anybody for a small amount of money can do this.
+
+1:21:43.320 --> 1:21:46.400
+ Well, you got subscriber number one obsessed.
+
+1:21:46.400 --> 1:21:48.640
+ I think that's a beautiful, beautiful idea.
+
+1:21:48.640 --> 1:21:51.480
+ So somebody who maybe I would have been more hesitant
+
+1:21:51.480 --> 1:21:56.320
+ about it until COVID, but the home tests are super easy.
+
+1:21:56.320 --> 1:21:59.360
+ I almost wanted to share that data with the world,
+
+1:21:59.360 --> 1:22:01.800
+ like in some way, not the entirety of the data,
+
+1:22:01.800 --> 1:22:05.760
+ but like some visualization of like how I'm doing.
+
+1:22:05.760 --> 1:22:08.840
+ Like it's almost like, like, you know,
+
+1:22:08.840 --> 1:22:10.600
+ when you share if you had like a long run
+
+1:22:10.600 --> 1:22:11.440
+ or something like that,
+
+1:22:11.440 --> 1:22:14.560
+ I wish I could share because it inspires others
+
+1:22:14.560 --> 1:22:16.880
+ and then you can have a conversation about like,
+
+1:22:16.880 --> 1:22:18.800
+ well, what are the hacks that you've tried
+
+1:22:18.800 --> 1:22:20.440
+ and have a conversation about like
+
+1:22:20.440 --> 1:22:22.480
+ how to improve lifestyle and those kinds of things
+
+1:22:22.480 --> 1:22:23.640
+ that's grounded in data.
+
+1:22:23.640 --> 1:22:25.600
+ That's exactly, that's what's gonna happen.
+
+1:22:25.600 --> 1:22:27.440
+ Now, everything's anonymous, of course.
+
+1:22:27.440 --> 1:22:29.600
+ We talked about security there,
+
+1:22:29.600 --> 1:22:32.560
+ but once it's anonymized, you can then plot these numbers.
+
+1:22:32.560 --> 1:22:35.600
+ And I've plotted my epigenetic age
+
+1:22:35.600 --> 1:22:39.080
+ versus hundreds of other people who have taken this test now.
+
+1:22:39.080 --> 1:22:41.440
+ And I can tell you where I fit relative to others
+
+1:22:41.440 --> 1:22:43.600
+ in terms of my biological age.
+
+1:22:43.600 --> 1:22:45.080
+ And I'm happy to share that with you all
+
+1:22:45.080 --> 1:22:46.360
+ because it's pretty low.
+
+1:22:47.240 --> 1:22:48.520
+ You can choose to share it, of course,
+
+1:22:48.520 --> 1:22:50.480
+ not everyone wants to share that.
+
+1:22:50.480 --> 1:22:52.280
+ But when you go to the doctor,
+
+1:22:52.280 --> 1:22:54.880
+ first of all, your doctor does treat you
+
+1:22:54.880 --> 1:22:56.000
+ as though you're an average person
+
+1:22:56.000 --> 1:22:58.640
+ and none of us are average, there's no such thing.
+
+1:22:58.640 --> 1:23:00.360
+ But second of all, we never know
+
+1:23:00.360 --> 1:23:01.800
+ how we're doing relative to others
+
+1:23:01.800 --> 1:23:05.840
+ because we all, most of us, we don't share our information.
+
+1:23:05.840 --> 1:23:08.080
+ So we might have this number and that number,
+
+1:23:08.080 --> 1:23:11.320
+ but do you know that your numbers are good for your age or not?
+
+1:23:11.320 --> 1:23:12.760
+ You have no idea.
+
+1:23:12.760 --> 1:23:14.560
+ Even your doctor probably doesn't even know.
+
+1:23:14.560 --> 1:23:16.400
+ So this graph that I'm talking about
+
+1:23:16.400 --> 1:23:18.080
+ is the beginning of a world where you can say,
+
+1:23:18.080 --> 1:23:19.400
+ how am I doing?
+
+1:23:19.400 --> 1:23:21.200
+ I'm a, you know, for the two of us,
+
+1:23:21.200 --> 1:23:24.480
+ we're white and we're male and we're this age.
+
+1:23:24.480 --> 1:23:27.000
+ And we do this, are we good?
+
+1:23:27.000 --> 1:23:28.640
+ Are we doing the right things or the wrong things?
+
+1:23:28.640 --> 1:23:30.480
+ Do we need to fix certain things?
+
+1:23:30.480 --> 1:23:32.160
+ And this is what the future is.
+
+1:23:32.160 --> 1:23:35.400
+ It's forget about just experimenting
+
+1:23:35.400 --> 1:23:36.320
+ and not knowing the result.
+
+1:23:36.320 --> 1:23:37.320
+ I mean, who doesn't experiment
+
+1:23:37.320 --> 1:23:38.560
+ and doesn't look at the data?
+
+1:23:38.560 --> 1:23:40.240
+ No one, it makes no sense.
+
+1:23:40.240 --> 1:23:42.200
+ So we're gonna enter a world where we have a dashboard
+
+1:23:42.200 --> 1:23:45.480
+ on our body, the swabs, the blood tests,
+
+1:23:45.480 --> 1:23:48.520
+ the biosensors where our doctors can look at that,
+
+1:23:48.520 --> 1:23:51.360
+ but we can also look at it and they can recommend,
+
+1:23:51.360 --> 1:23:52.960
+ you know, go to this restaurant down the road.
+
+1:23:52.960 --> 1:23:54.400
+ They've got this great meal.
+
+1:23:54.400 --> 1:23:56.280
+ It's high in whatever you need today
+
+1:23:56.280 --> 1:23:58.480
+ because you're lacking vitamin D and vitamin K2.
+
+1:23:58.480 --> 1:23:59.320
+ Go for it.
+
+1:24:00.360 --> 1:24:03.240
+ Ridiculous question or perhaps not.
+
+1:24:03.240 --> 1:24:05.080
+ If you look maybe 50 years from now
+
+1:24:05.080 --> 1:24:07.760
+ or a hundred years from now, a person born then,
+
+1:24:07.760 --> 1:24:09.280
+ what do you think is a good goal
+
+1:24:09.280 --> 1:24:12.320
+ in terms of how long a person would live?
+
+1:24:12.320 --> 1:24:14.720
+ Like what is the maximum longevity
+
+1:24:14.720 --> 1:24:17.360
+ that we can achieve through the methods
+
+1:24:17.360 --> 1:24:19.840
+ that we have today of,
+
+1:24:19.840 --> 1:24:21.120
+ or are developing some of the things
+
+1:24:21.120 --> 1:24:25.120
+ we've been talking about in terms of genetics,
+
+1:24:25.120 --> 1:24:26.520
+ in terms of biology?
+
+1:24:26.520 --> 1:24:28.160
+ What's, is there a number?
+
+1:24:29.680 --> 1:24:31.760
+ Right, well, so it changes all the time
+
+1:24:31.760 --> 1:24:33.440
+ because technology's changing so quickly.
+
+1:24:33.440 --> 1:24:36.240
+ I keep revising the number upward,
+
+1:24:36.240 --> 1:24:38.680
+ but I would say that if you do the right things
+
+1:24:38.680 --> 1:24:41.760
+ during your life and start at an early age, let's say 25,
+
+1:24:41.760 --> 1:24:43.280
+ we don't want malnutrition starvation.
+
+1:24:43.280 --> 1:24:45.200
+ That's not what I'm talking about.
+
+1:24:45.200 --> 1:24:48.880
+ But in your 20s, start eating the kind of diets
+
+1:24:48.880 --> 1:24:51.920
+ that I talked about, skipping meals.
+
+1:24:51.920 --> 1:24:55.960
+ In animals, that gives you an extra 20 to 30%.
+
+1:24:55.960 --> 1:24:57.880
+ We don't know if that's true for humans
+
+1:24:57.880 --> 1:25:00.880
+ and that would, even 5% more would be a good,
+
+1:25:00.880 --> 1:25:02.160
+ a big deal for the planet.
+
+1:25:03.240 --> 1:25:06.680
+ I think that we should all aim to at least reach a century.
+
+1:25:07.920 --> 1:25:09.400
+ I'm a little bit behind.
+
+1:25:09.400 --> 1:25:12.080
+ I was born too early to benefit the most
+
+1:25:12.080 --> 1:25:13.880
+ from all of this discovery.
+
+1:25:13.880 --> 1:25:16.040
+ Those of you who are in your 20s,
+
+1:25:16.040 --> 1:25:18.720
+ you should definitely aim to reach 100.
+
+1:25:18.720 --> 1:25:19.720
+ I don't see why not.
+
+1:25:20.920 --> 1:25:23.200
+ Consider this, this is really important.
+
+1:25:23.200 --> 1:25:25.080
+ The average lifespan of a human
+
+1:25:25.080 --> 1:25:28.160
+ that looks after themselves but doesn't pay attention
+
+1:25:29.560 --> 1:25:31.040
+ is about 80, okay?
+
+1:25:31.040 --> 1:25:34.200
+ Japan, that's the average age for a male bit higher.
+
+1:25:35.280 --> 1:25:37.240
+ If you do the right things in your life,
+
+1:25:37.240 --> 1:25:41.160
+ which is eat healthy food, don't overeat,
+
+1:25:41.160 --> 1:25:42.960
+ don't become obese, do a bit of exercise,
+
+1:25:42.960 --> 1:25:44.760
+ get good sleep and don't stress.
+
+1:25:44.760 --> 1:25:47.280
+ That gives you, on average, 14 extra years.
+
+1:25:47.280 --> 1:25:49.120
+ That gets you to 94.
+
+1:25:49.120 --> 1:25:51.160
+ So, getting to 100, if you just focus
+
+1:25:51.160 --> 1:25:53.760
+ on what I'm talking about, it's not a big deal.
+
+1:25:53.760 --> 1:25:54.680
+ So, what's the maximum?
+
+1:25:54.680 --> 1:25:57.440
+ Well, we know that one human made it to 122
+
+1:25:57.440 --> 1:26:00.440
+ and a number of them make it into their teens.
+
+1:26:00.440 --> 1:26:02.200
+ I think that's also the next level
+
+1:26:02.200 --> 1:26:06.360
+ of where we can get to with the types of technologies
+
+1:26:06.360 --> 1:26:07.640
+ that I'm talking about.
+
+1:26:07.640 --> 1:26:10.040
+ Medicines, like I mentioned, Rappamycin,
+
+1:26:10.040 --> 1:26:12.880
+ is one called Metformin, which is the diabetes drug,
+
+1:26:12.880 --> 1:26:14.440
+ which I take.
+
+1:26:14.440 --> 1:26:16.480
+ That, in combination with these lifestyle changes,
+
+1:26:16.480 --> 1:26:18.400
+ should get us beyond 100.
+
+1:26:18.400 --> 1:26:19.680
+ How long can we ultimately live?
+
+1:26:19.680 --> 1:26:22.280
+ Well, there's no maximum limit to human lifespan.
+
+1:26:22.280 --> 1:26:24.640
+ Why can a whale live 300 years, but we cannot?
+
+1:26:24.640 --> 1:26:26.280
+ We're basically the same structure.
+
+1:26:26.280 --> 1:26:28.000
+ We just need to learn from them.
+
+1:26:28.000 --> 1:26:31.120
+ So, anyone who says, oh, you max out at X,
+
+1:26:31.120 --> 1:26:33.320
+ I think is full of it.
+
+1:26:33.320 --> 1:26:35.080
+ There's nothing that I've seen
+
+1:26:35.080 --> 1:26:37.560
+ that says biological organisms have to die.
+
+1:26:37.560 --> 1:26:39.560
+ There are trees that live for thousands of years
+
+1:26:39.560 --> 1:26:42.520
+ and their biochemistry is pretty close to ours.
+
+1:26:42.520 --> 1:26:45.000
+ What do you think it means to live for a very long time?
+
+1:26:45.000 --> 1:26:47.320
+ Let's say if it's 200 years we're talking about
+
+1:26:47.320 --> 1:26:52.320
+ or 1,000 years, there's some sense,
+
+1:26:53.960 --> 1:26:56.760
+ you could argue that there is immortal organisms
+
+1:26:56.760 --> 1:26:59.080
+ already living on earth, like there's bacteria.
+
+1:26:59.080 --> 1:27:03.760
+ So, there's certain living organisms
+
+1:27:03.760 --> 1:27:08.000
+ that in some fundamental way do not die
+
+1:27:08.000 --> 1:27:10.360
+ because they keep replicating their genetic,
+
+1:27:10.360 --> 1:27:12.160
+ they keep like cloning themselves.
+
+1:27:13.800 --> 1:27:18.800
+ Is it the same human if we can somehow persist
+
+1:27:19.040 --> 1:27:23.880
+ the human mind, like copy clone certain aspects
+
+1:27:23.880 --> 1:27:26.360
+ and just keep replacing body parts?
+
+1:27:27.320 --> 1:27:30.400
+ Do you think that's another way to achieve immortality,
+
+1:27:30.400 --> 1:27:33.720
+ to achieve of a prolonged sort of increased longevity
+
+1:27:33.720 --> 1:27:37.080
+ is to replace the parts that break easily
+
+1:27:37.080 --> 1:27:39.960
+ and keep, because actually from your theory
+
+1:27:39.960 --> 1:27:44.400
+ of aging as degradation of information,
+
+1:27:44.400 --> 1:27:46.520
+ it's an information theory view of aging,
+
+1:27:48.240 --> 1:27:51.440
+ like what is the key information that makes a human?
+
+1:27:51.440 --> 1:27:53.400
+ Can we persist that information
+
+1:27:53.400 --> 1:27:56.160
+ and just replace the trivial parts?
+
+1:27:57.280 --> 1:27:59.320
+ Yeah, I mean, the short answer is yes.
+
+1:27:59.320 --> 1:28:01.320
+ We're already replacing body parts,
+
+1:28:01.320 --> 1:28:03.800
+ but what makes us human is our brain.
+
+1:28:03.800 --> 1:28:07.320
+ Everything else is suboptimal, except our brain.
+
+1:28:08.720 --> 1:28:13.640
+ The ability to replace actual neurons is really hard.
+
+1:28:13.640 --> 1:28:16.200
+ All right, I think it might be easy to upload
+
+1:28:16.200 --> 1:28:19.120
+ rather than replace neurons because they're so tight,
+
+1:28:19.120 --> 1:28:22.200
+ it's such a network and just perturbing the system.
+
+1:28:24.200 --> 1:28:27.600
+ It's frozen, Gizcat, you change everything
+
+1:28:27.600 --> 1:28:28.720
+ once you get in there.
+
+1:28:28.720 --> 1:28:31.760
+ The problem is, well, I guess the solution,
+
+1:28:31.760 --> 1:28:34.160
+ let me go to the solution, that's more interesting.
+
+1:28:34.160 --> 1:28:36.320
+ What we're learning is that if you reverse the age
+
+1:28:36.320 --> 1:28:40.440
+ of nerve cells, it looks like they get their memories back.
+
+1:28:41.400 --> 1:28:42.600
+ So the memories are not lost,
+
+1:28:42.600 --> 1:28:45.280
+ they're just that the cells don't know how to interpret them
+
+1:28:45.280 --> 1:28:46.920
+ and function correctly.
+
+1:28:46.920 --> 1:28:48.800
+ And this is one of the things we're studying in my lab,
+
+1:28:48.800 --> 1:28:50.400
+ if you take an old mouse that has learned something
+
+1:28:50.400 --> 1:28:53.640
+ when it was young, but forgotten, does it get that back?
+
+1:28:53.640 --> 1:28:56.440
+ And all evidence points to that being true.
+
+1:28:56.440 --> 1:28:59.000
+ So I'd rather go in and rejuvenate the brain
+
+1:28:59.000 --> 1:29:01.240
+ as it sits rather than replace individual cells,
+
+1:29:01.240 --> 1:29:03.080
+ which would be really hard.
+
+1:29:03.080 --> 1:29:06.680
+ What do you think about efforts like Neuralink,
+
+1:29:06.680 --> 1:29:10.200
+ which basically, you mentioned uploading,
+
+1:29:10.200 --> 1:29:11.720
+ are trying to figure out,
+
+1:29:11.720 --> 1:29:13.640
+ so creating brain computer interfaces,
+
+1:29:13.640 --> 1:29:15.680
+ they're trying to figure out how to communicate
+
+1:29:15.680 --> 1:29:18.080
+ with the brain, but one of the features of that
+
+1:29:18.080 --> 1:29:22.720
+ is trying to record the human brain more and more accurately.
+
+1:29:22.720 --> 1:29:27.720
+ Do you have hope for that to, of course it will lead
+
+1:29:27.720 --> 1:29:31.440
+ to us better understanding from a neuroscience perspective
+
+1:29:31.440 --> 1:29:33.760
+ of the human mind, but do you have hope for it
+
+1:29:33.760 --> 1:29:37.360
+ to increase longevity in terms of how it's used?
+
+1:29:37.360 --> 1:29:40.120
+ I think that it can help with certain diseases.
+
+1:29:40.120 --> 1:29:42.120
+ But I see, at least within our lifetime,
+
+1:29:42.120 --> 1:29:44.800
+ that's the best use of it, is to be able to replace parts
+
+1:29:44.800 --> 1:29:46.960
+ of the body that are not functioning,
+
+1:29:46.960 --> 1:29:49.400
+ such as the retina and other parts,
+
+1:29:49.400 --> 1:29:52.960
+ the visual cortex back here, that's going to be doable.
+
+1:29:52.960 --> 1:29:56.040
+ In terms of longevity, maybe we could put something
+
+1:29:56.040 --> 1:29:59.600
+ on the hypothalamus and start secreting those hormones
+
+1:29:59.600 --> 1:30:00.560
+ and get that back.
+
+1:30:02.280 --> 1:30:06.760
+ Ultimately, I think the best way to preserve the brain
+
+1:30:06.760 --> 1:30:10.760
+ is going to be to record it,
+
+1:30:10.760 --> 1:30:12.680
+ but also, I think it's going to require death,
+
+1:30:12.680 --> 1:30:16.960
+ unfortunately, to then do very detailed scans,
+
+1:30:16.960 --> 1:30:19.200
+ even if you have enough time and money,
+
+1:30:19.200 --> 1:30:22.520
+ atomic microscopy, and rebuild the brain from scratch.
+
+1:30:22.520 --> 1:30:24.320
+ Rebuild from scratch, yeah.
+
+1:30:24.320 --> 1:30:28.040
+ I mean, we are living more and more in a digital world.
+
+1:30:28.880 --> 1:30:31.520
+ I wonder if the scanning is good enough
+
+1:30:31.520 --> 1:30:34.440
+ for the critical things in terms of memories,
+
+1:30:34.440 --> 1:30:36.440
+ in terms of the particular quirks
+
+1:30:36.440 --> 1:30:38.160
+ of your cognitive processes.
+
+1:30:38.160 --> 1:30:40.440
+ They're not, they're not, yeah.
+
+1:30:40.440 --> 1:30:44.640
+ We're not close, yes, but we've made quite a bit of progress,
+
+1:30:44.640 --> 1:30:49.640
+ so it's, if you're an exponential type of person.
+
+1:30:50.240 --> 1:30:52.120
+ Yeah, well, let's dream a little here.
+
+1:30:52.120 --> 1:30:54.600
+ Yes, that's the point. The way it would work
+
+1:30:54.600 --> 1:30:56.200
+ that I could see it working is,
+
+1:30:56.200 --> 1:31:00.880
+ so you take a single cell slice through your dead brain,
+
+1:31:00.880 --> 1:31:04.160
+ and we can now, the problem with the engineering aspect
+
+1:31:04.160 --> 1:31:06.040
+ is that the engineering is,
+
+1:31:06.040 --> 1:31:09.240
+ the physical aspect of the brain is not even half
+
+1:31:09.240 --> 1:31:11.000
+ the problem, the problem is which genes
+
+1:31:11.000 --> 1:31:13.000
+ are switched on and off.
+
+1:31:13.000 --> 1:31:15.160
+ This experience that we're having here
+
+1:31:15.160 --> 1:31:18.280
+ is altering certain genes in neurons
+
+1:31:18.280 --> 1:31:22.080
+ that will be preserved hopefully for a number of decades,
+
+1:31:22.080 --> 1:31:25.280
+ but you cannot see that with a microscope easily,
+
+1:31:25.280 --> 1:31:27.800
+ but there are technologies invented,
+
+1:31:27.800 --> 1:31:30.760
+ actually just down the hall in the building I'm at,
+
+1:31:30.760 --> 1:31:32.000
+ George Church invented a way,
+
+1:31:32.000 --> 1:31:34.560
+ his lab invented a way to look at
+
+1:31:34.560 --> 1:31:36.840
+ which genes are switched on and off,
+
+1:31:36.840 --> 1:31:38.040
+ not only in a single cell,
+
+1:31:38.040 --> 1:31:40.080
+ which any lab can do these days,
+
+1:31:40.080 --> 1:31:43.000
+ but in situ, where it's situated in the brain.
+
+1:31:43.000 --> 1:31:45.240
+ So you can say, okay, this nerve cell
+
+1:31:45.240 --> 1:31:47.680
+ had these genes switched on and these switched off,
+
+1:31:47.680 --> 1:31:49.720
+ we can recreate that,
+
+1:31:49.720 --> 1:31:50.960
+ but just scanning the brain
+
+1:31:50.960 --> 1:31:52.560
+ and looking how the nerves are touching each other
+
+1:31:52.560 --> 1:31:53.400
+ is not gonna do it.
+
+1:31:54.840 --> 1:31:55.920
+ Wow, okay.
+
+1:31:55.920 --> 1:31:58.120
+ So you have to scan the full biology,
+
+1:31:58.120 --> 1:31:59.280
+ the full details.
+
+1:31:59.280 --> 1:32:00.440
+ And look at the epigenome.
+
+1:32:00.440 --> 1:32:01.560
+ And the epigenome too.
+
+1:32:01.560 --> 1:32:03.120
+ Yeah, which genes are on and off?
+
+1:32:03.120 --> 1:32:05.080
+ It's just easier to reset the epigenome
+
+1:32:05.080 --> 1:32:06.520
+ and get them to work like they used to.
+
+1:32:06.520 --> 1:32:07.360
+ Yeah, true, true.
+
+1:32:07.360 --> 1:32:08.360
+ We're doing that now.
+
+1:32:08.360 --> 1:32:09.760
+ Use the hardware we already have,
+
+1:32:09.760 --> 1:32:13.840
+ just figure out how to make that hardware last longer.
+
+1:32:13.840 --> 1:32:15.720
+ Right, ultimately information will be lost,
+
+1:32:15.720 --> 1:32:19.400
+ even genetic information degrades slowly through mutation.
+
+1:32:19.400 --> 1:32:22.520
+ So we, immortality is not achievable through that means,
+
+1:32:22.520 --> 1:32:25.280
+ though I think we could potentially reset the body
+
+1:32:25.280 --> 1:32:28.480
+ hundreds of times and live for thousands of years.
+
+1:32:28.480 --> 1:32:31.560
+ Okay, so we talked about biology.
+
+1:32:31.560 --> 1:32:32.960
+ Let's forgive me,
+
+1:32:32.960 --> 1:32:36.720
+ but let's talk about philosophy for just a brief moment.
+
+1:32:36.720 --> 1:32:38.720
+ So somebody I've enjoyed reading,
+
+1:32:38.720 --> 1:32:40.680
+ Ernest Becker wrote the Denial of Death.
+
+1:32:40.680 --> 1:32:42.960
+ There's also Martin Heidegger.
+
+1:32:42.960 --> 1:32:47.800
+ There's a bunch of philosophers who claim
+
+1:32:47.800 --> 1:32:51.960
+ that most people live life in denial of death.
+
+1:32:51.960 --> 1:32:56.960
+ Sort of, we don't fully internalize
+
+1:32:58.360 --> 1:33:00.080
+ the idea that we're going to die.
+
+1:33:04.200 --> 1:33:06.960
+ Because if we did, as they say,
+
+1:33:06.960 --> 1:33:10.200
+ there will be a kind of terror of,
+
+1:33:11.200 --> 1:33:14.080
+ I mean, a deep fear of death.
+
+1:33:15.360 --> 1:33:17.240
+ The fact that we don't know what's,
+
+1:33:17.240 --> 1:33:22.240
+ like we almost don't know what to do with non existence
+
+1:33:23.240 --> 1:33:28.240
+ with disappearing, like the way we draw meaning from life
+
+1:33:28.280 --> 1:33:30.840
+ seems to be grounded in the fact that we exist
+
+1:33:30.840 --> 1:33:34.600
+ and that we some point will not exist is terrifying.
+
+1:33:34.600 --> 1:33:37.600
+ And so we live in an illusion that we're not going to die
+
+1:33:37.600 --> 1:33:39.640
+ and we run from that terror.
+
+1:33:39.640 --> 1:33:41.680
+ That's what Ernest Becker would say.
+
+1:33:41.680 --> 1:33:44.200
+ Do you think there's any truth to that?
+
+1:33:44.200 --> 1:33:45.400
+ Oh, I know there's truth to that.
+
+1:33:45.400 --> 1:33:47.800
+ I experience it every day when I talk to people.
+
+1:33:47.800 --> 1:33:51.360
+ We have to live that way, although unfortunately I can't,
+
+1:33:51.360 --> 1:33:56.360
+ but for most people it's extremely distressing
+
+1:33:56.520 --> 1:33:59.360
+ to think about their own mortality.
+
+1:33:59.360 --> 1:34:00.560
+ We think about it occasionally.
+
+1:34:00.560 --> 1:34:02.280
+ And if we really thought about it every day,
+
+1:34:02.280 --> 1:34:03.960
+ we'd probably be brought to tears.
+
+1:34:03.960 --> 1:34:05.760
+ How much we not just miss ourselves,
+
+1:34:05.760 --> 1:34:07.520
+ but miss our family, our friends.
+
+1:34:08.400 --> 1:34:11.760
+ We are of all living life forms have evolved
+
+1:34:11.760 --> 1:34:14.400
+ to not want to die.
+
+1:34:14.400 --> 1:34:15.640
+ And what I mean want,
+
+1:34:15.640 --> 1:34:18.200
+ biochemically, genetically, physically,
+
+1:34:18.200 --> 1:34:21.640
+ that yeast cell, the cells that I studied at MIT,
+
+1:34:21.640 --> 1:34:23.680
+ they were fighting for their lives.
+
+1:34:23.680 --> 1:34:25.240
+ They didn't think,
+
+1:34:25.240 --> 1:34:28.920
+ but our brain has evolved the same survival aspect.
+
+1:34:28.920 --> 1:34:30.320
+ Of course, we don't want to die,
+
+1:34:30.320 --> 1:34:32.480
+ but the problem for us unfortunately,
+
+1:34:32.480 --> 1:34:34.920
+ it's a curse and a blessing is the way now conscious.
+
+1:34:34.920 --> 1:34:37.120
+ We know that we're going to die.
+
+1:34:37.120 --> 1:34:40.280
+ Most species that have ever existed don't.
+
+1:34:40.280 --> 1:34:42.280
+ That's a burden, that's a curse.
+
+1:34:42.280 --> 1:34:43.640
+ And so what I think's happened is
+
+1:34:43.640 --> 1:34:46.840
+ we've evolved certainly to want to live for a long time,
+
+1:34:46.840 --> 1:34:49.120
+ perhaps never want to die.
+
+1:34:49.120 --> 1:34:52.120
+ But the thought about dying is so traumatic
+
+1:34:52.120 --> 1:34:55.560
+ that there isn't an innate part of our brains.
+
+1:34:55.560 --> 1:34:59.200
+ And it's probably genetically wired to not think about it.
+
+1:35:00.920 --> 1:35:03.160
+ I really think that's part of being human.
+
+1:35:03.160 --> 1:35:05.240
+ Because, you know, think about tribes
+
+1:35:05.240 --> 1:35:07.800
+ that obsessed with longevity every day
+
+1:35:07.800 --> 1:35:09.560
+ and that we're going to die.
+
+1:35:09.560 --> 1:35:12.280
+ They probably didn't make much technological progress
+
+1:35:12.280 --> 1:35:14.600
+ because they were just crying in their huts every day
+
+1:35:14.600 --> 1:35:16.280
+ or, you know, in the savannah.
+
+1:35:16.280 --> 1:35:20.360
+ I really think that we've evolved to naturally deny aging.
+
+1:35:20.360 --> 1:35:23.240
+ And it's one of the problems that I face in my career.
+
+1:35:23.240 --> 1:35:26.840
+ And, you know, when I speak publicly and on social media,
+
+1:35:26.840 --> 1:35:28.400
+ is that it's shocking.
+
+1:35:28.400 --> 1:35:29.960
+ People don't want to think about their age,
+
+1:35:29.960 --> 1:35:31.760
+ but I think it's getting better.
+
+1:35:31.760 --> 1:35:33.960
+ I think my book has helped.
+
+1:35:33.960 --> 1:35:36.320
+ These tests that we're developing should help people
+
+1:35:36.320 --> 1:35:38.400
+ understand it's not a problem
+
+1:35:38.400 --> 1:35:40.360
+ to think about your longterm health.
+
+1:35:40.360 --> 1:35:42.760
+ In fact, if you don't, you're going to reach 80
+
+1:35:42.760 --> 1:35:43.880
+ and really regret it.
+
+1:35:45.320 --> 1:35:47.800
+ And the other side of it, so again, Ernest Becker,
+
+1:35:47.800 --> 1:35:50.680
+ but also Victor Franco, I recommend a highly manned search
+
+1:35:50.680 --> 1:35:54.920
+ for meaning, Bernard Williams is a moral philosopher.
+
+1:35:54.920 --> 1:35:58.640
+ They kind of argue that this knowledge of death,
+
+1:35:58.640 --> 1:36:03.640
+ even if we often don't contemplate it, we do at times.
+
+1:36:03.880 --> 1:36:07.000
+ And the very, what you call the curse,
+
+1:36:07.000 --> 1:36:10.680
+ which I agree with you, it's a curse and a blessing
+
+1:36:10.680 --> 1:36:13.920
+ that we're able to contemplate our own mortality.
+
+1:36:13.920 --> 1:36:16.600
+ That gives meaning to life.
+
+1:36:16.600 --> 1:36:18.880
+ So death gives meaning to life.
+
+1:36:18.880 --> 1:36:21.200
+ As what Victor Franco's argues,
+
+1:36:21.200 --> 1:36:22.640
+ I would probably argue the same.
+
+1:36:22.640 --> 1:36:25.240
+ There's something about the scarcity of life
+
+1:36:25.240 --> 1:36:30.240
+ and contemplating that makes each moment that much sweeter.
+
+1:36:30.240 --> 1:36:32.400
+ Is there something to that?
+
+1:36:32.400 --> 1:36:33.880
+ I think it's individual.
+
+1:36:33.880 --> 1:36:36.040
+ In my case, it's completely wrong.
+
+1:36:36.040 --> 1:36:39.840
+ I appreciate you saying that.
+
+1:36:39.840 --> 1:36:41.840
+ I don't get joy out of every day
+
+1:36:41.840 --> 1:36:43.760
+ because I think I'm going to die.
+
+1:36:43.760 --> 1:36:46.040
+ I get joy out of every day because every day is joyous
+
+1:36:46.040 --> 1:36:47.440
+ and I make it that way.
+
+1:36:47.440 --> 1:36:50.440
+ And even if I thought I was going to live forever,
+
+1:36:50.440 --> 1:36:53.120
+ I would still be enjoying this moment just as much.
+
+1:36:54.560 --> 1:36:56.320
+ And I bet you would too.
+
+1:36:56.320 --> 1:36:59.880
+ Well, that's, I think about that a lot.
+
+1:36:59.880 --> 1:37:03.560
+ I think it's very difficult to know.
+
+1:37:03.560 --> 1:37:06.720
+ I'm almost afraid that I wouldn't enjoy it as much
+
+1:37:06.720 --> 1:37:07.960
+ if I was immortal.
+
+1:37:07.960 --> 1:37:10.000
+ I'm almost afraid to want to be immortal
+
+1:37:10.000 --> 1:37:15.000
+ or to live longer because it perhaps is a kind of justification
+
+1:37:18.480 --> 1:37:21.680
+ for me to accept that I'm going to die.
+
+1:37:21.680 --> 1:37:23.480
+ It's saying like, oh, if I was immortal,
+
+1:37:23.480 --> 1:37:26.160
+ I wouldn't be able to enjoy life as much as I do.
+
+1:37:26.160 --> 1:37:29.240
+ But it's very possible that I would enjoy just as much.
+
+1:37:29.240 --> 1:37:34.240
+ Of course, enjoying life, whether you're immortal or not,
+
+1:37:34.240 --> 1:37:35.560
+ takes work.
+
+1:37:35.560 --> 1:37:39.880
+ Like it requires you to have the right kind of frame of mind.
+
+1:37:39.880 --> 1:37:42.480
+ You can discover, you can focus your mind
+
+1:37:42.480 --> 1:37:44.520
+ on the ugliness of life.
+
+1:37:44.520 --> 1:37:46.920
+ There's plenty of ugly things in this world
+
+1:37:46.920 --> 1:37:48.000
+ and you can focus on them.
+
+1:37:48.000 --> 1:37:49.360
+ You can complain.
+
+1:37:49.360 --> 1:37:53.520
+ Whenever, like, you know, if it's raining outside,
+
+1:37:53.520 --> 1:37:56.760
+ you can focus on the fact that you have shelter
+
+1:37:56.760 --> 1:37:58.520
+ and enjoy the hell out of it
+
+1:37:58.520 --> 1:38:02.080
+ or you can enjoy running in the rain when it's warm
+
+1:38:02.080 --> 1:38:05.760
+ and the beauty of nature just being one with nature
+
+1:38:05.760 --> 1:38:09.040
+ or you can just complain this fucking weather again in Boston
+
+1:38:09.040 --> 1:38:11.240
+ and then it's either always raining or freezing,
+
+1:38:11.240 --> 1:38:16.240
+ damn it, and the same thing with Wi Fi going out
+
+1:38:16.800 --> 1:38:18.400
+ on airplanes.
+
+1:38:18.400 --> 1:38:23.400
+ You can either complain about stupid Wi Fi
+
+1:38:23.400 --> 1:38:25.880
+ on JetBlue or something,
+
+1:38:25.880 --> 1:38:27.680
+ or you could say like, how incredible it is
+
+1:38:27.680 --> 1:38:29.200
+ that I can fly through the sky
+
+1:38:29.200 --> 1:38:31.800
+ and in a matter of hours be anywhere else in the world.
+
+1:38:31.800 --> 1:38:33.440
+ And then it could also on occasion,
+
+1:38:33.440 --> 1:38:36.840
+ watch, like, check email and even watch movies
+
+1:38:36.840 --> 1:38:39.600
+ through this, while connecting through satellites
+
+1:38:39.600 --> 1:38:40.520
+ that are flying through space.
+
+1:38:40.520 --> 1:38:41.920
+ So it's a matter of perspective
+
+1:38:41.920 --> 1:38:45.000
+ and perhaps there's an extra level of work required
+
+1:38:45.000 --> 1:38:47.640
+ when you're immortal because it's easier
+
+1:38:47.640 --> 1:38:51.720
+ when you're immortal or live longer to be lazy,
+
+1:38:51.720 --> 1:38:53.040
+ to delay stuff.
+
+1:38:53.040 --> 1:38:55.480
+ But if you're not, you can still derive the same amount
+
+1:38:55.480 --> 1:38:56.320
+ of joy.
+
+1:38:56.320 --> 1:38:59.040
+ It's possible, it's possible.
+
+1:38:59.040 --> 1:39:00.560
+ It's definitely possible in my life.
+
+1:39:00.560 --> 1:39:03.040
+ I went from being the nothing's working
+
+1:39:03.040 --> 1:39:06.560
+ to everyday's great to wake up to.
+
+1:39:06.560 --> 1:39:08.880
+ And I think even if you live,
+
+1:39:08.880 --> 1:39:10.360
+ think you're gonna live forever,
+
+1:39:10.360 --> 1:39:12.080
+ you can enjoy every day.
+
+1:39:12.080 --> 1:39:14.840
+ What I do is everything's relative.
+
+1:39:14.840 --> 1:39:16.560
+ We can compare ourselves to our neighbor
+
+1:39:16.560 --> 1:39:18.800
+ who has more money or to the flight
+
+1:39:18.800 --> 1:39:20.400
+ that should have had Wi Fi,
+
+1:39:20.400 --> 1:39:23.520
+ or which is what I do, I'm still six years old, remember?
+
+1:39:23.520 --> 1:39:26.960
+ What a six year old does, says, look,
+
+1:39:26.960 --> 1:39:29.880
+ I can, when I tell my fingers to form a fist,
+
+1:39:29.880 --> 1:39:31.240
+ they actually do that.
+
+1:39:31.240 --> 1:39:32.640
+ That's really cool.
+
+1:39:32.640 --> 1:39:34.720
+ That's how I live my life.
+
+1:39:34.720 --> 1:39:36.800
+ I can pick up on your desk here, this metal object.
+
+1:39:36.800 --> 1:39:39.800
+ It's a metal cube, about an inch by an inch by an inch.
+
+1:39:39.800 --> 1:39:42.520
+ And I tell myself, not about cubes,
+
+1:39:42.520 --> 1:39:44.880
+ but about inanimate objects.
+
+1:39:44.880 --> 1:39:48.240
+ Probably once a day I'll say, I am a living thing.
+
+1:39:48.240 --> 1:39:49.880
+ I can think, I can move, I can eat.
+
+1:39:49.880 --> 1:39:51.840
+ I am full of energy.
+
+1:39:51.840 --> 1:39:53.880
+ And there's that leaf or this cube here
+
+1:39:53.880 --> 1:39:55.800
+ that will never be alive.
+
+1:39:55.800 --> 1:39:59.160
+ That's what I look at and compare myself to.
+
+1:39:59.160 --> 1:40:01.080
+ And for as long as I live, if it's forever,
+
+1:40:01.080 --> 1:40:04.000
+ of course it won't be, but even if it was forever,
+
+1:40:04.000 --> 1:40:07.800
+ the relative to this lump of metal on this table here,
+
+1:40:07.800 --> 1:40:10.840
+ we are wondrous things in the universe.
+
+1:40:10.840 --> 1:40:13.760
+ And probably the most wondrous things in the universe.
+
+1:40:13.760 --> 1:40:18.680
+ Yeah, we're able to deeply appreciate the leaf or the cube
+
+1:40:18.680 --> 1:40:20.560
+ and deeply appreciate ourselves,
+
+1:40:20.560 --> 1:40:24.400
+ which is, it can be a curse, but it's mostly a gift.
+
+1:40:25.520 --> 1:40:28.160
+ Especially when you're, it's such a beautiful poem.
+
+1:40:29.080 --> 1:40:31.680
+ Now I'm six, I'm as clever as clever.
+
+1:40:31.680 --> 1:40:35.400
+ So I think I'll be six now forever and ever.
+
+1:40:35.400 --> 1:40:37.880
+ That's a good thing to aspire to.
+
+1:40:37.880 --> 1:40:40.640
+ Your grandmother was onto something.
+
+1:40:40.640 --> 1:40:43.040
+ David, this was an incredible conversation.
+
+1:40:43.040 --> 1:40:44.640
+ I'm a huge fan of your work.
+
+1:40:44.640 --> 1:40:49.360
+ So thank you for wasting your valuable time with me today.
+
+1:40:49.360 --> 1:40:50.520
+ I really, really appreciate it.
+
+1:40:50.520 --> 1:40:51.360
+ This was awesome.
+
+1:40:51.360 --> 1:40:54.000
+ Thank you for having me on Lex, appreciate it.
+
+1:40:54.000 --> 1:40:55.520
+ Thanks for listening to this conversation
+
+1:40:55.520 --> 1:40:57.880
+ with David Sinclair, and thank you too.
+
+1:40:57.880 --> 1:41:01.280
+ On It, Clear, National Instruments,
+
+1:41:01.280 --> 1:41:03.640
+ Simply Safe, and Linode.
+
+1:41:03.640 --> 1:41:05.080
+ Check them out in the description
+
+1:41:05.080 --> 1:41:07.160
+ to support this podcast.
+
+1:41:07.160 --> 1:41:08.720
+ And now let me leave you some words
+
+1:41:08.720 --> 1:41:10.600
+ from Arthur Schopenhauer.
+
+1:41:10.600 --> 1:41:13.680
+ All truth passes through three stages.
+
+1:41:13.680 --> 1:41:15.480
+ First, it is ridiculed.
+
+1:41:15.480 --> 1:41:18.240
+ Second, it is violently opposed.
+
+1:41:18.240 --> 1:41:22.280
+ Third, it is accepted as being self evident.
+
+1:41:22.280 --> 1:41:49.840
+ Thank you for listening, and hope to see you next time.
+

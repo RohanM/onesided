@@ -1,0 +1,2474 @@
+WEBVTT
+
+00:00.000 --> 00:06.240
+ The following is a conversation with Bjarn Strelstrom. He's a creator of C++, a programming
+
+00:06.240 --> 00:12.480
+ language that after 40 years is still one of the most popular and powerful languages in the world.
+
+00:12.480 --> 00:18.080
+ Its focus on fast, stable, robust code underlies many of the biggest systems in the world
+
+00:18.080 --> 00:23.120
+ that we have come to rely on as a society. If you're watching this on YouTube, for example,
+
+00:23.120 --> 00:29.280
+ many of the critical backend components of YouTube are written in C++. Same goes for Google,
+
+00:29.280 --> 00:35.120
+ Facebook, Amazon, Twitter, most Microsoft applications, Adobe applications, most database
+
+00:35.120 --> 00:42.080
+ systems and most physical systems that operate in the real world like cars, robots, rockets that
+
+00:42.080 --> 00:49.840
+ launch us into space and one day will land us on Mars. C++ also happens to be the language
+
+00:49.840 --> 00:55.600
+ that I use more than any other in my life. I've written several hundred thousand lines of C++
+
+00:55.600 --> 01:01.440
+ source code. Of course, lines of source code don't mean much, but they do give hints of my
+
+01:01.440 --> 01:06.800
+ personal journey through the world of software. I've enjoyed watching the development of C++
+
+01:06.800 --> 01:12.960
+ as a programming language leading up to the big update in the standard in 2011 and those that
+
+01:12.960 --> 01:20.240
+ followed in 14, 17 and toward the new C++20 standard hopefully coming out next year.
+
+01:20.240 --> 01:26.560
+ This is the Artificial Intelligence Podcast. If you enjoy it, subscribe on YouTube, give it
+
+01:26.560 --> 01:31.840
+ five stars on iTunes, support it on Patreon, or simply connect with me on Twitter at Lex
+
+01:31.840 --> 01:38.880
+ Friedman, spelled F R I D M A N. And now here's my conversation with Bjorn Straussstroke.
+
+01:40.240 --> 01:44.000
+ What was the first program you've ever written? Do you remember?
+
+01:44.000 --> 01:52.560
+ It was my second year in university, first year of computer science and it was an Algor 60.
+
+01:53.520 --> 02:02.320
+ I calculated the shape of a super ellipse and then connected points on the perimeter,
+
+02:02.320 --> 02:10.400
+ creating star patterns. It was with a wedding on a paper printer.
+
+02:10.400 --> 02:17.120
+ And that was in college, university? Yeah. I learned to program the second year in university.
+
+02:18.400 --> 02:24.960
+ And what was the first programming language, if I may ask it this way, that you fell in love with?
+
+02:26.480 --> 02:38.480
+ I think Algor 60 and after that I remember I remember Snowball. I remember Fortran didn't
+
+02:38.480 --> 02:43.840
+ fall in love with that. I remember Pascal didn't fall in love with that. It already got in the
+
+02:43.840 --> 02:51.440
+ way of me. And then I discovered Assembler and that was much more fun. And from there I went to
+
+02:53.200 --> 03:01.120
+ microcode. So you were drawn to the, you found the low level stuff beautiful?
+
+03:01.120 --> 03:08.800
+ I went through a lot of languages and then I spent significant time in Assembler and microcode.
+
+03:09.440 --> 03:14.560
+ That was sort of the first really profitable things I paid for my masters actually.
+
+03:15.360 --> 03:18.480
+ And then I discovered Simula, which was absolutely great.
+
+03:19.520 --> 03:28.800
+ Simula? Simula was the extension of Algor 60 done primarily for simulation, but basically
+
+03:28.800 --> 03:35.360
+ they invented object oriented programming at inheritance and runtime polymorphism while
+
+03:35.360 --> 03:45.600
+ they were doing it. And that was a language that taught me that you could have the sort of the
+
+03:45.600 --> 03:51.840
+ problems of a program grow with the size of the program rather than with the square of the size
+
+03:51.840 --> 04:00.560
+ of the program. That is, you can actually modularize very nicely. And that was a surprise to me.
+
+04:00.560 --> 04:08.720
+ It was also a surprise to me that a stricter type system than Pascal's was helpful, whereas
+
+04:08.720 --> 04:17.760
+ Pascal's type system got in my way all the time. So you need a strong type system to organize your
+
+04:17.760 --> 04:23.680
+ code well, but it has to be extensible and flexible. Let's get into the details a little bit. What
+
+04:23.680 --> 04:29.680
+ if you remember what kind of type system did Pascal have? What type system typing system did Algor
+
+04:29.680 --> 04:38.400
+ 60 have? Basically, Pascal was sort of the simplest language that Nicholas could define
+
+04:38.960 --> 04:46.640
+ that served the needs of Nicholas. We had at the time and it has a sort of a highly
+
+04:46.640 --> 04:53.600
+ moral tone to it. That is, if you can say it in Pascal, it's good. And if you can't, it's not so good.
+
+04:54.560 --> 05:05.280
+ Whereas, Simula, allowed you basically to build your own type system. So instead of trying to fit
+
+05:05.280 --> 05:13.920
+ yourself into Nicholas Vietz's world, Christen Nugol's language and Oliwann Dahl's language
+
+05:13.920 --> 05:22.640
+ allowed you to build your own. So it's sort of close to the original idea of you build a domain
+
+05:22.640 --> 05:31.200
+ specific language. As a matter of fact, what you build is a set of types and relations among types
+
+05:31.200 --> 05:35.440
+ that allows you to express something that's suitable for an application.
+
+05:36.160 --> 05:42.080
+ So when you say types, stuff you're saying has echoes of object during a programming.
+
+05:42.080 --> 05:50.480
+ Yes, they invented it. Every language that uses the word class for type is a descent of Simula,
+
+05:52.000 --> 06:01.360
+ directly or indirectly. Christen Nugol and Oliwann Dahl were mathematicians and they didn't think in
+
+06:01.360 --> 06:09.520
+ terms of types, but they understood sets and classes of elements and so they called their
+
+06:09.520 --> 06:17.040
+ types classes. And basically in C++, as in Simula, classes are user defined type.
+
+06:18.560 --> 06:25.200
+ So can you try the impossible task and give a brief history of programming languages from
+
+06:25.200 --> 06:33.200
+ your perspective? So we started with Algal 60, Simula, Pascal, but that's just the 60s and 70s.
+
+06:33.200 --> 06:42.480
+ I can try. The most sort of interesting and major improvement of programming languages was
+
+06:43.600 --> 06:49.840
+ Fortran, the first Fortran. Because before that, all code was written for a specific machine and
+
+06:49.840 --> 06:58.800
+ each specific machine had a language, a simply language or a core Simula or some extension
+
+06:58.800 --> 07:05.760
+ of that idea, but you are writing for a specific machine in the language of that machine.
+
+07:06.960 --> 07:17.120
+ And Barker and his team at IBM built a language that would allow you to write what you really
+
+07:17.120 --> 07:24.080
+ wanted. That is, you could write it in a language that was natural for people. Now these people
+
+07:24.080 --> 07:29.280
+ happened to be engineers and physicists, so the language that came out was somewhat unusual for
+
+07:29.280 --> 07:34.240
+ the rest of the world. But basically they said formula translation because they wanted to have
+
+07:34.240 --> 07:42.480
+ the mathematical formulas translated into the machine. And as a side effect, they got portability
+
+07:43.200 --> 07:49.920
+ because now they are writing in the terms that the humans used and the way humans thought.
+
+07:49.920 --> 07:56.720
+ And then they had a program that translated it into the machine's needs. And that was new and
+
+07:56.720 --> 08:04.800
+ that was great. And it's something to remember. We want to raise the language to the human level,
+
+08:04.800 --> 08:11.440
+ but we don't want to lose the efficiency. And that was the first step towards the human?
+
+08:11.440 --> 08:16.800
+ That was the first step. And of course, there were very particular kinds of humans,
+
+08:16.800 --> 08:23.120
+ business people who were different, so they got cobalt instead and et cetera, et cetera.
+
+08:23.680 --> 08:32.320
+ And Simula came out. No, let's not go to Simula yet. Let's go to Algor. Fortran didn't have,
+
+08:33.280 --> 08:40.800
+ at the time, the notions of not a precise notion of type, not a precise notion of scope,
+
+08:40.800 --> 08:52.560
+ not a set of translation phases that was what we have today, lexical, syntax, semantics. It was
+
+08:52.560 --> 08:59.280
+ sort of a bit of a model in the early days, but hey, they had just done the biggest breakthrough
+
+08:59.280 --> 09:04.560
+ in the history of programming. So you can't criticize them for not having gotten all the
+
+09:04.560 --> 09:13.760
+ technical details right. So we got Algor. That was very pretty. And most people in commerce
+
+09:13.760 --> 09:19.920
+ and science considered it useless because it was not flexible enough and it wasn't efficient enough
+
+09:19.920 --> 09:25.520
+ and et cetera, et cetera. But that was the breakthrough from the technical point of view.
+
+09:25.520 --> 09:34.640
+ And then Simula came along to make that idea more flexible and you could define your own types. And
+
+09:35.200 --> 09:43.920
+ that's where I got very interested. Preston Nygo, who's the main idea man behind Simula.
+
+09:43.920 --> 09:45.120
+ That was late 60s.
+
+09:45.120 --> 09:52.000
+ This was late 60s. Well, I was a visiting professor in Aarhus. And so I learned object
+
+09:52.000 --> 09:58.720
+ oriented programming by sitting around and well, in theory, discussing with
+
+10:01.280 --> 10:09.200
+ Kaisen Nygo. But Kaisen, once you get started and in full flow, it's very hard to get a word in
+
+10:09.200 --> 10:14.160
+ edge ways with you just listen. So it was great. I learned it from there.
+
+10:14.160 --> 10:20.160
+ Not to romanticize the notion, but it seems like a big leap to think about object oriented programming.
+
+10:20.160 --> 10:25.280
+ It's really a leap of abstraction. Yes.
+
+10:25.840 --> 10:34.800
+ And was that as big and beautiful of a leap as it seems from now in retrospect,
+
+10:34.800 --> 10:37.040
+ or was it an obvious one at the time?
+
+10:38.160 --> 10:45.600
+ It was not obvious. And many people have tried to do something like that. And most people didn't
+
+10:45.600 --> 10:52.800
+ come up with something as wonderful as Simula. Lots of people got their PhDs and made their
+
+10:52.800 --> 11:00.480
+ careers out of forgetting about Simula or never knowing it. For me, the key idea was basically
+
+11:00.480 --> 11:09.040
+ I could get my own types. And that's the idea that goes further into C++, where I can get
+
+11:09.680 --> 11:14.160
+ better types and more flexible types and more efficient types. But it's still the
+
+11:14.160 --> 11:18.400
+ fundamental idea when I want to write a program, I want to write it with my types.
+
+11:19.200 --> 11:27.200
+ That is appropriate to my problem and under the constraints that I'm under with hardware,
+
+11:27.200 --> 11:36.400
+ software, environment, etc. And that's the key idea. People picked up on the class hierarchies
+
+11:36.400 --> 11:44.880
+ and the virtual functions and the inheritance. And that was only part of it. It was an
+
+11:44.880 --> 11:49.440
+ interesting and major part and still a major part and a lot of graphic stuff.
+
+11:50.160 --> 11:57.840
+ But it was not the most fundamental. It was when you wanted to relate one type to another,
+
+11:57.840 --> 12:04.320
+ you don't want them all to be independent. The classical example is that you don't
+
+12:04.320 --> 12:12.640
+ actually want to write a city simulation with vehicles where you say, well, if it's a bicycle,
+
+12:13.360 --> 12:19.200
+ write the code for turning a bicycle to the left, if it's a normal car, turn right the normal car
+
+12:19.200 --> 12:26.240
+ way, if it's a fire engine, turn right the fire engine, you get these big case statements and
+
+12:26.240 --> 12:36.240
+ bunches of if statements and such. Instead, you tell the base class that that's the vehicle and say,
+
+12:36.240 --> 12:44.160
+ turn left the way you want to. And this is actually a real example. They used it to simulate
+
+12:45.040 --> 12:54.560
+ and optimize the emergency services for somewhere in Norway back in the 60s.
+
+12:54.560 --> 13:01.680
+ Wow. So this was one of the early examples for why you needed inheritance and you needed
+
+13:03.120 --> 13:12.080
+ runtime polymorphism because you wanted to handle this set of vehicles in a manageable way.
+
+13:13.760 --> 13:18.640
+ You can't just rewrite your code each time a new kind of vehicle comes along.
+
+13:18.640 --> 13:24.800
+ Yeah, that's a beautiful, powerful idea. And of course, it is stretched through your work
+
+13:24.800 --> 13:33.440
+ with C++ as we'll talk about. But I think you structured nicely what other breakthroughs came
+
+13:33.440 --> 13:38.480
+ along in the history of programming languages. If we were to tell the history in that way.
+
+13:39.520 --> 13:44.720
+ Obviously, I'm better telling the part of the history that that is the part that I'm on as
+
+13:44.720 --> 13:50.960
+ opposed to all the parts. Yeah, you skipped the hippie John McCarthy and Lisb, one of my favorite
+
+13:50.960 --> 13:59.040
+ languages. But Lisb is not one of my favorite languages. It's obviously important. It's obviously
+
+13:59.040 --> 14:05.520
+ interesting. Lots of people write code in it. And then they rewrite it into CSE++ when they want to
+
+14:05.520 --> 14:15.520
+ go to production. It's in the world I'm at, which are constrained by performance, reliability,
+
+14:17.520 --> 14:25.440
+ issues, deployability, cost of hardware. I don't like things to be too dynamic.
+
+14:26.400 --> 14:31.520
+ It is really hard to write a piece of code that's perfectly flexible
+
+14:31.520 --> 14:38.640
+ that you can also deploy on a small computer. And that you can also put in, say, a telephone switch
+
+14:38.640 --> 14:44.640
+ in Bogota. What's the chance if you get an error and you find yourself in the debugger
+
+14:44.640 --> 14:50.160
+ that the telephone switch in Bogota on late Sunday night has a programmer around?
+
+14:50.160 --> 14:55.840
+ Right. The chance is zero. And so a lot of things I think most about
+
+14:55.840 --> 15:08.480
+ most about can't afford that flexibility. I'm quite aware that maybe 70, 80% of all code
+
+15:09.200 --> 15:16.400
+ are not under the kind of constraints I'm interested in. But somebody has to do the job I'm doing
+
+15:17.120 --> 15:22.960
+ because you have to get from these high level flexible languages to the hardware.
+
+15:22.960 --> 15:29.680
+ The stuff that lasts for 10, 20, 30 years is robust, operates under very constrained conditions.
+
+15:29.680 --> 15:34.080
+ Yes, absolutely. That's right. And it's fascinating and beautiful in its own way.
+
+15:34.080 --> 15:42.000
+ It's C++ is one of my favorite languages and so is Lisp. So I can embody it too
+
+15:42.000 --> 15:51.120
+ for different reasons as a programmer. I understand why Lisp is popular and I can see
+
+15:51.120 --> 16:05.200
+ the beauty of the ideas and similarly with Smalltalk. It's just not as relevant in my world.
+
+16:05.200 --> 16:09.280
+ And by the way, I distinguish between those in the functional languages
+
+16:09.280 --> 16:17.040
+ where I go to things like ML and Haskell. Different kind of languages. They have a
+
+16:17.040 --> 16:22.560
+ different kind of beauty and they're very interesting. And I actually try to learn from
+
+16:23.600 --> 16:28.560
+ all the languages I encounter to see what is there that would make
+
+16:29.920 --> 16:35.040
+ working on the kind of problems I'm interested in with the kind of constraints
+
+16:36.640 --> 16:43.440
+ that I'm interested in. What can actually be done better because we can surely do better than we do
+
+16:43.440 --> 16:50.160
+ today. You've said that it's good for any professional programmer to know at least
+
+16:50.160 --> 16:57.440
+ five languages. Speaking about a variety of languages that you've taken inspiration from
+
+16:57.440 --> 17:06.640
+ and you've listed yours as being at least at the time C++ obviously, Java, Python, Ruby and JavaScript.
+
+17:06.640 --> 17:13.600
+ Can you first of all update that list? Modify it. You don't have to be constrained
+
+17:15.200 --> 17:20.400
+ to just five. But can you describe what you picked up also from each of these languages?
+
+17:21.760 --> 17:25.920
+ How you see them as inspirations for even when you're working with C++?
+
+17:25.920 --> 17:34.320
+ This is a very hard question to answer. So about languages, you should know languages.
+
+17:34.320 --> 17:42.800
+ I reckon I knew about 25 or thereabouts when I did C++. It was easier in those days because
+
+17:42.800 --> 17:49.600
+ the languages were smaller and you didn't have to learn a whole programming environment and such
+
+17:49.600 --> 17:55.760
+ to do it. You could learn the language quite easily and it's good to learn so many languages.
+
+17:55.760 --> 18:03.920
+ I imagine just like with natural language for communication, there's different paradigms that
+
+18:03.920 --> 18:08.160
+ emerge in all of them. That there's commonalities and so on.
+
+18:08.800 --> 18:16.640
+ So I picked five out of a hat. Obviously. The important thing that the number is not one.
+
+18:17.760 --> 18:24.240
+ That's right. I don't like, I mean, if you're a monoglot, you are likely to think that your
+
+18:24.240 --> 18:29.920
+ own culture is the only one's period for everybody else's. A good learning of a foreign language
+
+18:29.920 --> 18:36.160
+ and a foreign culture is important. It helps you think and be a better person. With programming
+
+18:36.160 --> 18:41.680
+ languages, you become a better programmer, a better designer with the second language.
+
+18:41.680 --> 18:49.040
+ Now, once you've got two, the way to five is not that long. It's the second one that's most
+
+18:49.040 --> 18:59.200
+ important. And then when I had to pick five, I sort of thinking what kinds of languages are there.
+
+18:59.200 --> 19:04.160
+ Well, there's a really low level stuff. It's good. It's actually good to know machine code.
+
+19:05.040 --> 19:13.200
+ Even still, sorry. Even today. Even today. The C++ optimizes right better machine code than I do.
+
+19:13.200 --> 19:21.120
+ Yes. But I don't think I could appreciate them if I actually didn't understand machine code and
+
+19:21.120 --> 19:26.640
+ machine architecture. At least in my position, I have to understand a bit of it. Because
+
+19:28.160 --> 19:35.280
+ you mess up the cash and you're off in performance by a factor of 100. Right? It shouldn't be that
+
+19:35.280 --> 19:40.480
+ if you are interested in either performance or the size of the computer you have to deploy.
+
+19:40.480 --> 19:50.320
+ Yeah. So I would go, that's a simpler. I used to mention C, but these days going low level
+
+19:50.320 --> 19:57.040
+ is not actually what gives you the performance. It is to express your ideas so cleanly that you
+
+19:57.040 --> 20:03.120
+ can think about it and the optimizer can understand what you're up to. My favorite way of optimizing
+
+20:03.120 --> 20:10.320
+ these days is to throw out the clever bits and see if it still runs fast. And sometimes it runs
+
+20:10.320 --> 20:18.400
+ faster. So I need the abstraction mechanisms or something like C++ to write compact high
+
+20:18.400 --> 20:26.000
+ performance code. There was a beautiful keynote by Jason Turner at the CPP Con a couple of years ago
+
+20:26.000 --> 20:38.560
+ where he decided he was going to program Pong on Motorola 6800, I think it was. And he says,
+
+20:38.560 --> 20:44.240
+ well this is relevant because it looks like a microcontroller. It has specialized hardware,
+
+20:44.240 --> 20:51.760
+ it has not very much memory and it's relatively slow. And so he shows in real time how he writes
+
+20:51.760 --> 20:58.800
+ Pong starting with fairly straightforward low level stuff, improving his abstractions
+
+20:58.800 --> 21:09.920
+ and what he's doing, he's writing C++ and it translates into 86 assembler which you can do
+
+21:09.920 --> 21:17.440
+ with Clang and you can see it in real time. It's the compiler explorer which you can use on the web
+
+21:17.440 --> 21:26.160
+ and then he wrote a little program that translated 86 assembler into Motorola assembler. And so he
+
+21:26.160 --> 21:31.600
+ types and you can see this thing in real time. You can see it in real time and even if you can't
+
+21:31.600 --> 21:38.000
+ read the assembly code, you can just see it, his code gets better, the code, the assembler gets
+
+21:38.000 --> 21:47.600
+ smaller, he increases the abstraction level, uses C++ 11 as it were better, this code gets cleaner,
+
+21:47.600 --> 21:56.640
+ it gets easier to maintain what the code shrinks and it keeps shrinking. And I could not in any
+
+21:56.640 --> 22:03.920
+ reasonable amount of time write that assembler as good as the compiler generated from really
+
+22:03.920 --> 22:10.960
+ quite nice modern C++. And I'll go as far as to say that the thing that looked like C was
+
+22:10.960 --> 22:21.040
+ significantly uglier and smaller when it became and larger when it became machine code.
+
+22:22.160 --> 22:28.480
+ So the abstractions that can be optimized are important. I would love to see that kind of
+
+22:28.480 --> 22:34.880
+ visualization in larger code bases. That might be beautiful. But you can't show a larger code base
+
+22:34.880 --> 22:41.680
+ in a one hour talk and have it fit on screen. Right. So that's C and C++. So my two languages
+
+22:41.680 --> 22:48.960
+ would be machine code and C++. And then I think you can learn a lot from the functional languages.
+
+22:48.960 --> 22:56.480
+ So PIG has Goliom L. I don't care which. I think actually you learn the same lessons
+
+22:56.480 --> 23:06.320
+ of expressing especially mathematical notions really clearly and having a type system that's
+
+23:06.320 --> 23:13.280
+ really strict. And then you should probably have a language for sort of quickly churning out
+
+23:13.920 --> 23:19.680
+ something. You could pick JavaScript, you could pick Python, you could pick Ruby.
+
+23:19.680 --> 23:26.800
+ What do you make of JavaScript in general? So you're talking in the platonic sense about
+
+23:26.800 --> 23:32.880
+ languages, about what they're good at, what their philosophy of design is. But there's also a large
+
+23:32.880 --> 23:38.400
+ user base behind each of these languages and they use it in the way sometimes maybe it wasn't
+
+23:38.400 --> 23:43.760
+ really designed for. That's right. JavaScript is used way beyond probably what it was designed for.
+
+23:43.760 --> 23:48.800
+ Let me say it this way. When you build a tool, you do not know how it's going to be used.
+
+23:48.800 --> 23:54.800
+ You try to improve the tool by looking at how it's being used and when people cut their fingers off
+
+23:54.800 --> 24:01.280
+ and try and stop that from happening. But really you have no control over how something is used.
+
+24:01.280 --> 24:08.080
+ So I'm very happy and proud of some of the things C++ is being used at and some of the things I wish
+
+24:08.080 --> 24:15.200
+ people wouldn't do. Bitcoin mining being my favorite example uses as much energy as Switzerland
+
+24:15.200 --> 24:26.240
+ and mostly serves criminals. But back to the languages, I actually think that having JavaScript
+
+24:26.240 --> 24:34.640
+ run in the browser was an enabling thing for a lot of things. Yes, you could have done it better,
+
+24:34.640 --> 24:42.960
+ but people were trying to do it better and they were using more principles, language designs,
+
+24:42.960 --> 24:50.080
+ but they just couldn't do it right. And the nonprofessional programmers that write lots of
+
+24:50.080 --> 24:59.360
+ that code just couldn't understand them. So it did an amazing job for what it was. It's not
+
+24:59.360 --> 25:05.680
+ the prettiest language and I don't think it ever will be the prettiest language, but that's not
+
+25:05.680 --> 25:15.760
+ the biggest here. So what was the origin story of C++? You basically gave a few perspectives of
+
+25:16.720 --> 25:24.560
+ your inspiration of object oriented programming. You had a connection with C in performance,
+
+25:24.560 --> 25:31.360
+ efficiency was an important thing you were drawn to. Efficiency and reliability. You have to get
+
+25:31.360 --> 25:39.840
+ both. What's reliability? I really want my telephone calls to get through and I want the
+
+25:39.840 --> 25:47.200
+ quality of what I am talking coming out at the other end. The other end might be in London or
+
+25:47.840 --> 25:54.560
+ wherever. And you don't want the system to be crashing. If you're doing a bank,
+
+25:54.560 --> 26:03.280
+ you mustn't crash. It might be your bank account that is in trouble. There's different constraints
+
+26:03.280 --> 26:08.720
+ like in games, it doesn't matter too much if there's a crash, nobody dies and nobody gets ruined.
+
+26:08.720 --> 26:16.720
+ But I'm interested in the combination of performance partly because of sort of speed
+
+26:16.720 --> 26:24.240
+ of things being done, part of being able to do things that is necessary to have reliable
+
+26:24.240 --> 26:34.640
+ reliability of larger systems. If you spend all your time interpreting a simple function call,
+
+26:35.200 --> 26:39.920
+ you are not going to have enough time to do proper signal processing to get the telephone
+
+26:39.920 --> 26:46.480
+ calls to sound right. Either that or you have to have 10 times as many computers and you can't
+
+26:46.480 --> 26:52.720
+ afford your phone anymore. It's a ridiculous idea in the modern world because we've solved all of
+
+26:52.720 --> 26:59.200
+ those problems. I mean they keep popping up in different ways because we tackle bigger and
+
+26:59.200 --> 27:04.960
+ bigger problems so efficiency remains always an important aspect. But you have to think about
+
+27:04.960 --> 27:12.320
+ efficiency not just as speed but as an enabler to important things. And one of the things it
+
+27:12.320 --> 27:23.600
+ enables is reliability, is dependability. When I press the brake pedal of a car, it is not actually
+
+27:23.600 --> 27:30.240
+ connected directly to anything but a computer. That computer better work.
+
+27:31.680 --> 27:39.600
+ Let's talk about reliability just a little bit. So modern cars have ECUs, have millions of lines
+
+27:39.600 --> 27:46.560
+ of code today. So this is certainly especially true of autonomous vehicles where some of the
+
+27:46.560 --> 27:51.360
+ aspect of the control or driver assistance systems that steer the car, keeping the lanes on.
+
+27:52.000 --> 27:57.120
+ So how do you think, you know, I talked to regulators, people in the government who are
+
+27:57.120 --> 28:03.520
+ very nervous about testing the safety of these systems of software, ultimately software that
+
+28:03.520 --> 28:11.920
+ makes decisions that could lead to fatalities. So how do we test software systems like these?
+
+28:13.600 --> 28:24.480
+ First of all, safety, like performance and like security is a systems property. People tend to
+
+28:24.480 --> 28:31.600
+ look at one part of a system at a time and saying something like, this is secure. That's all right.
+
+28:31.600 --> 28:36.800
+ I don't need to do that. Yeah, that piece of code is secure. I'll buy your operator.
+
+28:38.480 --> 28:44.560
+ If you want to have reliability, if you want to have performance, if you want to have security,
+
+28:44.560 --> 28:49.520
+ you have to look at the whole system. I did not expect you to say that, but that's very true.
+
+28:49.520 --> 28:54.560
+ Yes. I'm dealing with one part of the system and I want my part to be really good,
+
+28:54.560 --> 29:02.000
+ but I know it's not the whole system. Furthermore, making an individual part perfect
+
+29:04.320 --> 29:09.680
+ may actually not be the best way of getting the highest degree of reliability and performance and
+
+29:09.680 --> 29:18.080
+ such. Those people say C++ type safe, not type safe, you can break it. Sure. I can break anything
+
+29:18.080 --> 29:24.880
+ that runs on a computer. I may not go through your type system. If I wanted to break into your
+
+29:24.880 --> 29:31.920
+ computer, I'll probably try SQL injection. It's very true. If you think about safety or even
+
+29:31.920 --> 29:40.400
+ reliability at a system level, especially when a human being is involved, it starts becoming
+
+29:40.400 --> 29:49.440
+ hopeless pretty quickly in terms of proving that something is safe to a certain level,
+
+29:49.440 --> 29:52.080
+ because there are so many variables. It's so complex.
+
+29:52.080 --> 29:57.520
+ Well, let's get back to something we can talk about and actually make some progress on.
+
+29:58.480 --> 30:05.600
+ We can look at C++ programs and we can try and make sure they crash less often.
+
+30:05.600 --> 30:18.240
+ The way you do that is largely by simplification. The first step is to simplify the code, have less
+
+30:18.240 --> 30:25.200
+ code, have code that are less likely to go wrong. It's not by runtime testing everything. It is not
+
+30:25.200 --> 30:33.840
+ by big test frameworks that you're using. Yes, we do that also, but the first step is actually to
+
+30:33.840 --> 30:41.360
+ make sure that when you want to express something, you can express it directly in code rather than
+
+30:41.360 --> 30:46.960
+ going through endless loops and convolutions in your head before it gets down the code.
+
+30:49.760 --> 30:57.200
+ The way you're thinking about a problem is not in the code. There is a missing piece that's just
+
+30:57.200 --> 31:04.640
+ in your head and the code, you can see what it does, but it cannot see what you thought about it
+
+31:04.640 --> 31:11.440
+ unless you have expressed things directly. When you express things directly, you can maintain it.
+
+31:11.440 --> 31:17.120
+ It's easier to find errors. It's easier to make modifications. It's actually easier to test it
+
+31:17.920 --> 31:25.440
+ and, lo and behold, it runs faster. Therefore, you can use a smaller number of computers,
+
+31:25.440 --> 31:33.360
+ which means there's less hardware that could possibly break. I think the key here is simplification,
+
+31:33.920 --> 31:39.920
+ but it has to be to use the Einstein quote as simple as possible and no simpler.
+
+31:39.920 --> 31:45.600
+ Not simpler. There are other areas with under constraints where you can be simpler than you
+
+31:45.600 --> 31:52.160
+ can be in C++, but in the domain I'm dealing with, that's the simplification I'm after.
+
+31:52.160 --> 32:02.560
+ How do you inspire or ensure that the Einstein level simplification is reached?
+
+32:04.560 --> 32:13.760
+ Can you do code review? Can you look at code? If I gave you the code for the Ford F150 and said,
+
+32:13.760 --> 32:21.520
+ here, is this a mess or is this okay? Is it possible to tell? Is it possible to regulate?
+
+32:23.040 --> 32:31.680
+ An experienced developer can look at code and see if it smells. I mixed made it for us deliberately.
+
+32:31.680 --> 32:45.440
+ Yes. The point is that it is hard to generate something that is really obviously clean and
+
+32:46.880 --> 32:52.240
+ can be appreciated, but you can usually recognize when you haven't reached that point.
+
+32:52.240 --> 33:05.280
+ If I have never looked at the F150 code, so I wouldn't know, but I know what I would be looking
+
+33:05.280 --> 33:13.440
+ for. I would be looking for some tricks that correlate with bugs and elsewhere. I have tried
+
+33:13.440 --> 33:23.840
+ to formulate rules for what good code looks like. The current version of that is called the C++
+
+33:23.840 --> 33:33.440
+ core guidelines. One thing people should remember is there's what you can do in a language and what
+
+33:33.440 --> 33:40.800
+ you should do. In a language, you have lots of things that is necessary in some context,
+
+33:40.800 --> 33:46.640
+ but not in others. There are things that exist just because there's 30 year old code out there
+
+33:46.640 --> 33:52.000
+ and you can't get rid of it, but you can't have rules that says when you create it, try and follow
+
+33:52.000 --> 34:02.800
+ these rules. This does not create good programs by themselves, but it limits the damage for
+
+34:02.800 --> 34:10.000
+ mistakes. It limits the possibilities of mistakes. Basically, we are trying to say what is it
+
+34:10.000 --> 34:16.880
+ that a good programmer does at the fairly simple level of where you use the language and how you
+
+34:16.880 --> 34:25.440
+ use it. Now, I can put all the rules for chiseling and marble. It doesn't mean that somebody who
+
+34:25.440 --> 34:33.200
+ follows all of those rules can do a masterpiece by Michelangelo. That is, there's something else
+
+34:33.200 --> 34:43.600
+ to write a good program. Is there something else to create important work of art? There's
+
+34:43.600 --> 34:57.040
+ some kind of inspiration, understanding, gift, but we can approach the technical, the craftsmanship
+
+34:57.040 --> 35:06.000
+ level of it. The famous painters, the famous sculptures was, among other things, superb
+
+35:06.000 --> 35:17.360
+ craftsmen. They could express their ideas using their tools very well. These days, I think what
+
+35:17.360 --> 35:22.320
+ I'm doing, what a lot of people are doing, we're still trying to figure out how it is to use our
+
+35:22.320 --> 35:31.280
+ tools very well. For a really good piece of code, you need a spark of inspiration and you
+
+35:31.280 --> 35:41.680
+ can't, I think, regulate that. You cannot say that I'll buy your picture only if you're,
+
+35:41.680 --> 35:48.960
+ at least, Van Gogh. There are other things you can regulate, but not the inspiration.
+
+35:48.960 --> 35:58.080
+ I think that's quite beautifully put. It is true that there is, as an experienced programmer,
+
+35:58.080 --> 36:07.040
+ when you see code that's inspired, that's like Michelangelo, you know it when you see it.
+
+36:09.200 --> 36:15.040
+ The opposite of that is code that is messy, code that smells, you know when you see it.
+
+36:15.040 --> 36:20.480
+ I'm not sure you can describe it in words except vaguely through guidelines and so on.
+
+36:20.480 --> 36:29.200
+ Yes. It's easier to recognize ugly than to recognize beauty in code. The reason is that
+
+36:29.200 --> 36:35.280
+ sometimes beauty comes from something that's innovative and unusual and you have to
+
+36:35.280 --> 36:42.720
+ sometimes think reasonably hard to appreciate that. On the other hand, the messes have things
+
+36:42.720 --> 36:54.240
+ in common and you can have static checkers and dynamic checkers that finds a large number of the
+
+36:55.200 --> 37:03.840
+ most common mistakes. You can catch a lot of sloppiness mechanically. I'm a great fan of
+
+37:04.640 --> 37:10.480
+ static analysis in particular because you can check for not just the language rules,
+
+37:10.480 --> 37:17.440
+ but for the usage of language rules. I think we will see much more static analysis in the
+
+37:17.440 --> 37:24.320
+ coming decade. Can you describe what static analysis is? You represent a piece of code
+
+37:25.840 --> 37:33.760
+ so that you can write a program that goes over that representation and look for things that are
+
+37:33.760 --> 37:47.200
+ right and not right. For instance, you can analyze a program to see if resources are leaked.
+
+37:48.080 --> 37:55.440
+ That's one of my favorite problems. It's not actually all that hard in modern C++,
+
+37:55.440 --> 38:00.640
+ but you can do it. If you are writing in the C level, you have to have a malloc and a free
+
+38:00.640 --> 38:08.880
+ function. They have to match. If you have them in a single function, you can usually do it very
+
+38:08.880 --> 38:15.920
+ easily. If there's a malloc here, there should be a free there. On the other hand, in between
+
+38:15.920 --> 38:23.280
+ can be showing complete code and then it becomes impossible. If you pass that pointer to the memory
+
+38:23.280 --> 38:31.520
+ out of a function and then want to make sure that the free is done somewhere else,
+
+38:31.520 --> 38:36.960
+ now it gets really difficult. For static analysis, you can run through a program
+
+38:37.600 --> 38:46.560
+ and you can try and figure out if there's any leaks. What you will probably find is that you
+
+38:46.560 --> 38:53.920
+ will find some leaks and you'll find quite a few places where your analysis can't be complete. It
+
+38:53.920 --> 39:02.800
+ might depend on runtime. It might depend on the cleverness of your analyzer and it might take
+
+39:02.800 --> 39:11.120
+ a long time. Some of these programs run for a long time, but if you combine such analysis
+
+39:11.120 --> 39:18.080
+ with a set of rules, such as how people could use it, you can actually see why the rules are
+
+39:18.080 --> 39:26.320
+ violated and that stops you from getting into the impossible complexities. You don't want to solve
+
+39:26.320 --> 39:31.840
+ the holding problem. The static analysis is looking at the code without running the code.
+
+39:31.840 --> 39:42.800
+ Not in production code, but it's almost like an education tool of how the language should be used.
+
+39:43.680 --> 39:51.280
+ It guides you at its best. It would guide you in how you write future code as well and you learn
+
+39:51.280 --> 39:57.760
+ together. Basically, you need a set of rules for how you use the language. Then you need
+
+39:57.760 --> 40:06.960
+ a static analysis that catches your mistakes when you violate the rules or when your code ends up
+
+40:07.760 --> 40:12.400
+ doing things that it shouldn't, despite the rules, because those are the language rules. We can go
+
+40:12.400 --> 40:19.280
+ further. Again, it's back to my idea that I would much rather find errors before I start
+
+40:19.280 --> 40:26.000
+ running the code. If nothing else, once the code runs, if it catches an error at runtime,
+
+40:26.000 --> 40:33.440
+ I have to have an error handler. One of the hardest things to write in code is error handling code,
+
+40:33.440 --> 40:38.640
+ because you know something went wrong. Do you know really exactly what went wrong?
+
+40:39.360 --> 40:45.120
+ Usually not. How can you recover when you don't know what the problem was? You can't be 100%
+
+40:45.120 --> 40:55.120
+ sure what the problem was in many, many cases. This is part of it. Yes, we need good languages,
+
+40:55.120 --> 41:01.840
+ with good type systems. We need rules for how to use them. We need static analysis. The ultimate
+
+41:01.840 --> 41:08.160
+ for static analysis is course program proof, but that still doesn't scale to the kind of systems
+
+41:08.160 --> 41:19.040
+ we deploy. Then we start needing testing and the rest of the stuff. C++ is an object oriented
+
+41:19.040 --> 41:23.840
+ programming language that creates, especially with newer versions, as we'll talk about,
+
+41:23.840 --> 41:33.360
+ higher and higher levels of abstraction. Let's even go back to the origin C++. How do you design
+
+41:33.360 --> 41:42.240
+ something with so much abstraction that's still efficient and is still something that you can
+
+41:43.840 --> 41:49.680
+ manage, do static analysis on, you can have constraints on, they can be,
+
+41:49.680 --> 41:57.440
+ relive all those things we've talked about. To me, there's a slight tension between
+
+41:58.000 --> 42:04.480
+ high level abstraction and efficiency. That's a good question. I could probably have a year's
+
+42:04.480 --> 42:11.520
+ course just trying to answer it. Yes, there's a tension between efficiency and abstraction,
+
+42:12.160 --> 42:18.480
+ but you also get the interesting situation that you get the best efficiency out of the best
+
+42:18.480 --> 42:26.720
+ abstraction. My main tool for efficiency, for performance, actually is abstraction.
+
+42:28.320 --> 42:34.880
+ Let's go back to how C++ got there. You said it was object oriented programming language. I
+
+42:34.880 --> 42:42.320
+ actually never said that. It's always quoted, but I never did. I said C++ supports object oriented
+
+42:42.320 --> 42:52.000
+ programming and other techniques. That's important because I think that the best solution to most
+
+42:52.800 --> 43:01.280
+ complex interesting problems require ideas and techniques from things that have been called
+
+43:01.280 --> 43:12.720
+ object oriented, data abstraction, functional, traditional C style code, all of the above.
+
+43:15.440 --> 43:21.680
+ When I was designing C++, I soon realized I couldn't just add features.
+
+43:23.520 --> 43:28.560
+ If you just add what looks pretty or what people ask for or what you think is good,
+
+43:28.560 --> 43:36.560
+ one by one, you're not going to get a coherent whole. What you need is a set of guidelines that
+
+43:38.640 --> 43:44.320
+ guides your decisions. Should this feature be in or should this feature be out? How should
+
+43:44.320 --> 43:51.440
+ a feature be modified before it can go in and such? In the book I wrote about that,
+
+43:51.440 --> 43:57.440
+ that's signed an evolution of C++. There's a whole bunch of rules like that. Most of them are not
+
+43:57.440 --> 44:06.000
+ language technical. There are things like don't violate static type system because I like static
+
+44:06.000 --> 44:14.720
+ type system for the obvious reason that I like things to be reliable on reasonable amounts of
+
+44:14.720 --> 44:25.920
+ hardware. One of these rules is the zero overhead principle. It basically says that
+
+44:25.920 --> 44:35.680
+ if you have an abstraction, it should not cost anything compared to write the equivalent code
+
+44:35.680 --> 44:48.560
+ at a lower level. If I have, say, a matrix multiply, it should be written in such a way that you
+
+44:48.560 --> 44:55.200
+ could not drop to the C level of abstraction and use arrays and pointers and such and run faster.
+
+44:55.200 --> 45:06.160
+ People have written such matrix multiplications. They've actually gotten code that ran faster than
+
+45:06.160 --> 45:13.920
+ Fortran because once you had the right abstraction, you can eliminate temporaries and you can do
+
+45:15.520 --> 45:20.640
+ loop fusion and other good stuff like that. That's quite hard to do by hand and in a lower
+
+45:20.640 --> 45:28.720
+ level language. There's some really nice examples of that. The key here is that that matrix
+
+45:29.520 --> 45:36.000
+ multiplication, the matrix abstraction, allows you to write code that's simple and easy. You can
+
+45:36.000 --> 45:41.840
+ do that in any language. With C++, it has the features so that you can also have this thing
+
+45:41.840 --> 45:49.680
+ run faster than if you hand coded it. People have given that lecture many times, I and others,
+
+45:49.680 --> 45:54.880
+ and a very common question after the talk where you have demonstrated that you're going
+
+45:54.880 --> 46:00.080
+ to perform Fortran for dense matrix multiplication, people come up and say, yeah,
+
+46:00.080 --> 46:08.080
+ but that was C++. If I rewrote your code and see how much faster would it run, the answer is much
+
+46:08.080 --> 46:14.800
+ slower. This happened the first time actually back in the ages with a friend of mine called
+
+46:14.800 --> 46:25.280
+ Doug McElroy who demonstrated exactly this effect. The principle is you should give programmers the
+
+46:25.280 --> 46:32.000
+ tools so that the abstractions can follow the zero word principle. Furthermore, when you put in a
+
+46:32.000 --> 46:38.640
+ language feature on C++ or a standard library feature, you try to meet this. It doesn't mean
+
+46:38.640 --> 46:46.880
+ it's absolutely optimal, but it means if you hand code it with the usual facilities in the language
+
+46:46.880 --> 46:55.040
+ in C++ in C, you should not be able to better it. Usually you can do better if you use embedded
+
+46:55.040 --> 47:02.560
+ assembler for machine code for some of the details to utilize part of a computer that
+
+47:02.560 --> 47:09.360
+ the compiler doesn't know about, but you should get to that point before you beat the abstraction.
+
+47:09.360 --> 47:14.640
+ That's a beautiful idea to reach for. And we meet it quite often.
+
+47:14.640 --> 47:21.760
+ Quite often. Where's the magic of that coming from? Some of it is the compilation process,
+
+47:21.760 --> 47:28.480
+ so the implementation is C++. Some of it is the design of the feature itself, the guidelines.
+
+47:28.480 --> 47:38.960
+ I've recently often talked to Chris Ladner, so Clang. Just out of curiosity, is your
+
+47:40.320 --> 47:45.920
+ relationship in general with the different implementations in C++, as you think about
+
+47:46.560 --> 47:51.200
+ you and committee and other people in C++, think about the design of new features or design of
+
+47:51.200 --> 48:02.080
+ previous features in trying to reach the ideal of zero overhead? Does the magic come from the
+
+48:02.080 --> 48:13.840
+ design, the guidelines, or from the implementations? And not all. You go for programming technique,
+
+48:13.840 --> 48:18.000
+ program language features, and implementation techniques. You need all three.
+
+48:18.000 --> 48:22.880
+ And how can you think about all three at the same time?
+
+48:22.880 --> 48:29.120
+ It takes some experience, takes some practice, and sometimes you get it wrong. But after a while,
+
+48:29.120 --> 48:38.640
+ you sort of get it right. I don't write compilers anymore. But Brian Kernighan pointed out that
+
+48:38.640 --> 48:49.680
+ one of the reasons C++ succeeded was some of the craftsmanship I put into the early compilers.
+
+48:50.720 --> 48:54.800
+ And of course, I did the languages sign. Of course, I wrote a fair amount of code
+
+48:54.800 --> 49:03.760
+ using this kind of stuff. And I think most of the successes involves progress in all three areas
+
+49:03.760 --> 49:11.520
+ together. A small group of people can do that. Two, three people can work together to do something
+
+49:11.520 --> 49:17.040
+ like that. It's ideal if it's one person that has all the skills necessary. But nobody has all
+
+49:17.040 --> 49:24.160
+ the skills necessary in all the fields where C++ is used. So if you want to approach my ideal in,
+
+49:24.160 --> 49:30.560
+ say, concurrent programming, you need to know about algorithms on concurrent programming. You
+
+49:30.560 --> 49:37.040
+ need to know the trigger of lock free programming. You need to know something about the compiler
+
+49:37.040 --> 49:44.080
+ techniques. And then you have to know some of the application areas where this is,
+
+49:45.520 --> 49:55.600
+ like some forms of graphics or some forms of what we call a web serving kind of stuff.
+
+49:55.600 --> 50:00.560
+ And that's very hard to get into a single head. But small groups can do it too.
+
+50:01.440 --> 50:08.720
+ So is there differences in your view? Not saying which is better or so on, but difference in
+
+50:08.720 --> 50:16.080
+ the different implementations of C++? Why are there several sort of maybe naive questions for me?
+
+50:16.080 --> 50:25.680
+ This is a very reasonable question. When I designed C++,
+
+50:28.480 --> 50:36.480
+ most languages have multiple implementations. Because if you run on an IBM, if you run on a
+
+50:36.480 --> 50:41.920
+ Sun, if you run on a Motorola, there was just many, many companies and they each have their
+
+50:41.920 --> 50:48.160
+ own compilation structure, the old compilers. It was just fairly common that there was many of them.
+
+50:49.200 --> 50:56.800
+ And I wrote Cfront assuming that other people would write compilers with C++ if they were
+
+50:56.800 --> 51:05.600
+ successful. And furthermore, I wanted to utilize all the back end infrastructures that were available.
+
+51:05.600 --> 51:10.880
+ I soon realized that my users were using 25 different linkers. I couldn't write my own linker.
+
+51:12.800 --> 51:19.200
+ Yes, I could, but I couldn't write 25 linkers and also get any work done on the language.
+
+51:20.080 --> 51:28.480
+ And so it came from a world where there was many linkers, many optimizers, many compiler front ends,
+
+51:28.480 --> 51:39.440
+ not to start, but many operating systems. The whole world was not an 86 and Linux box or something,
+
+51:39.440 --> 51:47.600
+ whatever is the standard today. In the old days, they said a Vax. So basically, I assumed there
+
+51:47.600 --> 51:54.080
+ would be lots of compilers. It was not a decision that there should be many compilers. It was just
+
+51:54.080 --> 52:04.400
+ the fact that's the way the world is. And yes, many compilers emerged. And today, there's
+
+52:05.680 --> 52:16.560
+ at least four front ends, Clang, GCC, Microsoft, and EDG. It is the sign group. They supply a lot
+
+52:16.560 --> 52:25.120
+ of the independent organizations and the embedded systems industry. And there's lots and lots of
+
+52:25.120 --> 52:33.200
+ back ends. We have to think about how many dozen back ends there are because different machines
+
+52:33.200 --> 52:38.400
+ have different things, especially in the embedded world, the machines are very different. The
+
+52:38.400 --> 52:48.080
+ architectures are very different. And so having a single implementation was never an option.
+
+52:48.720 --> 52:57.760
+ Now, I also happen to dislike monocultures. Monocultures. They are dangerous because whoever
+
+52:57.760 --> 53:05.440
+ owns the monoculture can go stale and there's no competition and there's no incentive to innovate.
+
+53:05.440 --> 53:12.640
+ There's a lot of incentive to put barriers in the way of change because, hey, we own the world and
+
+53:12.640 --> 53:21.120
+ it's a very comfortable world for us. And who are you to mess with that? So I really am very happy
+
+53:21.120 --> 53:31.520
+ that there's four front ends for C++. Clang's great, but GCC was great. But then it got somewhat
+
+53:31.520 --> 53:40.000
+ stale. Clang came along and GCC is much better now. Competition is good. Microsoft is much better
+
+53:40.000 --> 53:47.840
+ now. So at least a low number of front ends puts a lot of pressure on
+
+53:51.040 --> 53:57.680
+ standards compliance and also on performance and error messages and compile time speed,
+
+53:57.680 --> 54:04.960
+ all of this good stuff that we want. Do you think, crazy question, there might come along,
+
+54:05.760 --> 54:14.560
+ do you hope there might come along implementation of C++ written given all of its history written
+
+54:14.560 --> 54:23.760
+ from scratch? So written today from scratch? Well, Clang and the LLVM is more or less written
+
+54:23.760 --> 54:33.360
+ from scratch. But there's been C++ 11, 14, 17, 20. Sooner or later somebody is going to try again.
+
+54:33.920 --> 54:41.200
+ There has been attempts to write new C++ compilers and some of them has been used and some of them
+
+54:41.200 --> 54:48.240
+ has been absorbed into others and such. Yeah, it'll happen. So what are the key features of C++?
+
+54:48.240 --> 54:57.040
+ And let's use that as a way to sort of talk about the evolution of C++, the new feature.
+
+54:57.040 --> 55:02.560
+ So at the highest level, what are the features that were there in the beginning and what features
+
+55:02.560 --> 55:14.160
+ got added? Let's first get a principle or an aim in place. C++ is for people who want to use
+
+55:14.160 --> 55:19.920
+ hardware really well and then manage the complexity of doing that through abstraction.
+
+55:21.600 --> 55:30.400
+ And so the first facility you have is a way of manipulating the machines at a fairly low level.
+
+55:30.960 --> 55:39.920
+ That looks very much like C. It has loops, it has variables, it has pointers like machine
+
+55:39.920 --> 55:49.360
+ addresses, it can access memory directly, it can allocate stuff in the absolute minimum of space
+
+55:49.360 --> 55:56.400
+ needed on the machine. There's a machine facing part of C++, which is roughly equivalent to C.
+
+55:57.200 --> 56:04.160
+ I said C++ could beat C and it can. It doesn't mean I dislike C. If I disliked C, I wouldn't have
+
+56:04.160 --> 56:12.560
+ built on it. Furthermore, after Dennis Ritchie, I'm probably the major contributor to modern C.
+
+56:13.760 --> 56:24.480
+ And well, I had lunch with Dennis most days for 16 years and we never had a harsh word between us.
+
+56:24.480 --> 56:31.120
+ So these C versus C++ fights are for people who don't quite understand what's going on.
+
+56:31.120 --> 56:38.000
+ Then the other part is the abstraction. And there, the key is the class, which is a user defined type.
+
+56:39.040 --> 56:44.240
+ And my ideal for the class is that you should be able to build a type that's just like the
+
+56:44.240 --> 56:52.080
+ built in types in the way you use them, in the way you declare them, in the way you get the memory
+
+56:52.080 --> 57:00.960
+ and you can do just as well. So in C++ there's an int. As in C, you should be able to build
+
+57:00.960 --> 57:09.200
+ an abstraction, a class, which we can call capital int, that you can use exactly like an integer
+
+57:09.200 --> 57:16.320
+ and run just as fast as an integer. There's the idea right there. And of course, you probably
+
+57:16.320 --> 57:23.920
+ don't want to use the int itself, but it has happened. People have wanted integers that were
+
+57:23.920 --> 57:29.040
+ range checked so that you couldn't overflow and such, especially for very safety critical
+
+57:29.040 --> 57:35.120
+ applications, like the fuel injection for a marine diesel engine for the largest ships.
+
+57:35.840 --> 57:42.000
+ This is a real example, by the way. This has been done. They built themselves an integer
+
+57:42.000 --> 57:48.000
+ that was just like integer, except that it couldn't overflow. If there was an overflow,
+
+57:48.000 --> 57:55.120
+ you went into the error handling. And then you built more interesting types. You can build
+
+57:55.120 --> 58:03.520
+ a matrix, which you need to do graphics, or you could build a gnome for a video game.
+
+58:03.520 --> 58:07.520
+ And all of these are classes and they appear just like the built in types,
+
+58:07.520 --> 58:12.720
+ in terms of efficiency and so on. So what else is there? And flexibility.
+
+58:16.000 --> 58:19.920
+ I don't know. For people who are not familiar with object joining programming,
+
+58:19.920 --> 58:25.840
+ there's inheritance. There's a hierarchy of classes. You can, just like you said,
+
+58:25.840 --> 58:34.800
+ create a generic vehicle that can turn left. So what people found was that you don't actually
+
+58:34.800 --> 58:47.440
+ know. How do I say this? A lot of types are related. That is, the vehicles, all vehicles are
+
+58:47.440 --> 58:55.920
+ related. Bicycles, cars, fire engines, tanks, they have some things in common and some things
+
+58:55.920 --> 59:01.440
+ that differ. And you would like to have the common things common and having the differences
+
+59:01.440 --> 59:07.440
+ specific. And when you didn't want to know about the differences, like just turn left,
+
+59:09.040 --> 59:14.480
+ you don't have to worry about it. That's how you get the traditional object oriented
+
+59:14.480 --> 59:21.040
+ programming coming out of Simula adopted by Smalltalk and C++ and all the other languages.
+
+59:21.600 --> 59:27.280
+ The other kind of obvious similarity between types comes when you have something like a vector.
+
+59:27.280 --> 59:37.280
+ Fortune gave us the vector as called array of doubles. But the minute you have a vector of
+
+59:37.280 --> 59:44.480
+ doubles, you want a vector of double precision doubles and for short doubles for graphics.
+
+59:44.480 --> 59:51.760
+ And why should you have not have a vector of integers while you're at it? Or that vector of
+
+59:51.760 --> 1:00:01.440
+ vectors and a vector of vectors of chess pieces. Now we have a board, right? So this is you express
+
+1:00:02.320 --> 1:00:09.280
+ the commonality as the idea of a vector and the variations come through parameterization.
+
+1:00:10.080 --> 1:00:17.360
+ And so here we get the two fundamental ways of abstracting of having similarities of
+
+1:00:17.360 --> 1:00:24.720
+ types in C++. There's the inheritance and there's a parameterization. There's the
+
+1:00:24.720 --> 1:00:29.600
+ object oriented programming and there's the generic programming with the templates for
+
+1:00:29.600 --> 1:00:37.920
+ the generic programming. So you've presented it very nicely. But now you have to make all that
+
+1:00:37.920 --> 1:00:44.800
+ happen and make it efficient. So generic programming with templates, there's all kinds of magic going
+
+1:00:44.800 --> 1:00:52.240
+ on, especially recently, that you can help catch up on. But it feels to me like you can do way more
+
+1:00:52.240 --> 1:00:57.920
+ than what you just said with templates. You can start doing this kind of metaprogramming.
+
+1:00:57.920 --> 1:01:04.960
+ You can do metaprogramming also. I didn't go there in that explanation. We're trying to be
+
+1:01:04.960 --> 1:01:10.720
+ very basics. But go back on to the implementation. If you couldn't implement this efficiently,
+
+1:01:10.720 --> 1:01:18.080
+ if you couldn't use it so that it became efficient, it has no place in C++ because it
+
+1:01:18.080 --> 1:01:26.080
+ will violate the zero overhead principle. So when I had to get object oriented programming
+
+1:01:26.080 --> 1:01:34.800
+ inheritance, I took the idea of virtual functions from Simula. Virtual functions is a Simula term.
+
+1:01:34.800 --> 1:01:42.160
+ Class is a Simula term. If you ever use those words, say thanks to Christian Nugor and Oli Handal.
+
+1:01:43.920 --> 1:01:52.000
+ And I get the simplest implementation I knew of, which was basically a jump table. So you get the
+
+1:01:52.000 --> 1:01:58.000
+ virtual function table, the function goes in, do it, does an interaction through a table and get
+
+1:01:58.000 --> 1:02:05.760
+ the right function. That's how you pick the right thing there. And I thought that was trivial. It's
+
+1:02:05.760 --> 1:02:11.760
+ close to optimal. And it was obvious. It turned out the Simula had a more complicated way of doing
+
+1:02:11.760 --> 1:02:17.680
+ it and therefore was slower. And it turns out that most languages have something that's a little
+
+1:02:17.680 --> 1:02:23.600
+ bit more complicated, sometimes more flexible, but you pay for it. And one of the strengths of
+
+1:02:23.600 --> 1:02:29.840
+ C++ was that you could actually do this object oriented stuff and your overhead compared to
+
+1:02:31.200 --> 1:02:39.200
+ ordinary functions. There's no indirection. It's sort of in 5, 10, 25 percent. Just the
+
+1:02:39.200 --> 1:02:46.320
+ core. It's down there. It's not two. And that means you can afford to use it. Furthermore,
+
+1:02:46.320 --> 1:02:51.840
+ in C++, you have the distinction between a virtual function and a non virtual function.
+
+1:02:51.840 --> 1:02:57.520
+ If you don't want any overhead, if you don't need the interaction that gives you the flexibility
+
+1:02:57.520 --> 1:03:04.960
+ in object oriented programming, just don't ask for it. So the idea is that you only use
+
+1:03:04.960 --> 1:03:10.400
+ virtual functions if you actually need the flexibility. So it's not zero overhead,
+
+1:03:10.400 --> 1:03:14.720
+ but it's zero overhead compared to any other way of achieving the flexibility.
+
+1:03:14.720 --> 1:03:24.400
+ Now, auto parameterization. Basically, the compiler looks at
+
+1:03:26.720 --> 1:03:37.040
+ at the template, say the vector, and it looks at the parameter and then combines the two and
+
+1:03:37.040 --> 1:03:43.440
+ generates a piece of code that is exactly as if you're ridden a vector of that specific type.
+
+1:03:43.440 --> 1:03:50.320
+ Yes. So that's the that's the minimal overhead. If you have many template parameters, you can
+
+1:03:50.320 --> 1:03:56.640
+ actually combine code that the compiler couldn't usually see at the same time and therefore get
+
+1:03:56.640 --> 1:04:04.960
+ code that is faster than if you had handwritten the stuff, unless you were very, very clever.
+
+1:04:04.960 --> 1:04:13.120
+ So the thing is parameterized code, the compiler fills stuff in during the compilation process,
+
+1:04:13.120 --> 1:04:20.560
+ not during runtime. That's right. And furthermore, it gives all the information it's gotten,
+
+1:04:21.360 --> 1:04:28.960
+ which is the template, the parameter, and the context of use. It combines the three and generates
+
+1:04:28.960 --> 1:04:37.120
+ good code. But it can generate. Now, it's a little outside of what I'm even comfortable
+
+1:04:37.120 --> 1:04:45.520
+ thinking about, but it can generate a lot of code. Yes. And how do you remember being both
+
+1:04:45.520 --> 1:04:55.680
+ amazed at the power of that idea? And how ugly the debugging looked? Yes, debugging can be truly
+
+1:04:55.680 --> 1:05:02.320
+ horrid. Come back to this because I have a solution. Anyway, the debugging was ugly.
+
+1:05:02.320 --> 1:05:12.080
+ The code generated by C++ has always been ugly, because there's these inherent optimizations.
+
+1:05:12.080 --> 1:05:18.800
+ A modern C++ compiler has front end, middle end, and back end optimizations. Even C front,
+
+1:05:18.800 --> 1:05:25.200
+ back in 83, had front end and back end optimizations. I actually took the code,
+
+1:05:25.200 --> 1:05:33.680
+ generated an internal representation, munched that representation to generate good code.
+
+1:05:34.240 --> 1:05:39.600
+ So people say it's not a compiler, it generates C. The reason it generated C was I wanted to use
+
+1:05:39.600 --> 1:05:45.280
+ a C code generator that was really good at back end optimizations. But I needed front end
+
+1:05:45.280 --> 1:05:56.160
+ optimizations. And therefore, the C I generated was optimized C. The way a really good handcrafted
+
+1:05:56.160 --> 1:06:03.440
+ optimizer human could generate it, and it was not meant for humans. It was the output of a program,
+
+1:06:03.440 --> 1:06:10.880
+ and it's much worse today. And with templates, it gets much worse still. So it's hard to combine
+
+1:06:10.880 --> 1:06:20.560
+ simple debugging with the optimal code, because the idea is to drag in information from different
+
+1:06:20.560 --> 1:06:32.080
+ parts of the code to generate good code, machine code. And that's not readable. So what people
+
+1:06:32.080 --> 1:06:41.920
+ often do for debugging is they turn the optimizer off. And so you get code that when something in
+
+1:06:41.920 --> 1:06:48.400
+ your source code looks like a function core, it is a function core. When the optimizer is turned on,
+
+1:06:49.040 --> 1:06:55.200
+ it may disappear. The function core, it may inline. And so one of the things you can do
+
+1:06:55.200 --> 1:07:04.160
+ is you can actually get code that is smaller than the function core, because you eliminate the
+
+1:07:04.160 --> 1:07:12.080
+ function preamble and return. And there's just the operation there. One of the key things when I did
+
+1:07:14.560 --> 1:07:21.200
+ templates was I wanted to make sure that if you have, say, a sort algorithm, and you give it a
+
+1:07:21.200 --> 1:07:30.560
+ sorting criteria, if that sorting criteria is simply comparing things with less than,
+
+1:07:31.360 --> 1:07:38.960
+ the code generated should be the less than, not a indirect function core to a comparison
+
+1:07:40.560 --> 1:07:47.200
+ object, which is what it is in the source code. But we really want down to the single instruction.
+
+1:07:47.200 --> 1:07:55.360
+ But anyway, turn off the optimizer and you can debug. The first level of debugging
+
+1:07:56.160 --> 1:08:01.360
+ can be done and I always do without the optimization on, because then I can see what's going on.
+
+1:08:02.000 --> 1:08:10.160
+ And then there's this idea of concepts that put some, now I've never even,
+
+1:08:10.160 --> 1:08:17.760
+ I don't know if it was ever available in any form, but it puts some constraints on the stuff you
+
+1:08:17.760 --> 1:08:27.680
+ can parameterize, essentially. Let me try and explain. So yes, it wasn't there 10 years ago.
+
+1:08:27.680 --> 1:08:33.840
+ We have had versions of it that actually work for the last four or five years.
+
+1:08:33.840 --> 1:08:43.760
+ It was a design by Gabbidas Rays, Drew Sodden and me. We were professors in postdocs in Texas at
+
+1:08:43.760 --> 1:08:55.280
+ the time. And the implementation by Andrew Sodden has been available for that time. And it is
+
+1:08:55.280 --> 1:09:05.280
+ part of C++20. And there's a standard library that uses it. So this is becoming really very real.
+
+1:09:06.240 --> 1:09:16.240
+ It's available in Klangen and GCC, GCC for a couple of years. And I believe Microsoft is soon
+
+1:09:16.240 --> 1:09:23.760
+ going to do it. We expect all of C++20 to be available. So in all the major compilers in 20.
+
+1:09:23.760 --> 1:09:32.080
+ But this kind of stuff is available now. I'm just saying that because otherwise people might think
+
+1:09:32.080 --> 1:09:37.680
+ I was talking about science fiction. And so what I'm going to say is it's concrete. You can run it
+
+1:09:37.680 --> 1:09:44.400
+ today. And there's production uses of it. So the basic idea is that when you have
+
+1:09:44.400 --> 1:09:56.480
+ a generic component, like a sort function, the sort function will require at least two parameters.
+
+1:09:56.480 --> 1:10:06.160
+ One, a data structure with a given type and a comparison criteria. And these things are related.
+
+1:10:06.160 --> 1:10:11.280
+ But obviously, you can't compare things if you don't know what the type of things you compare.
+
+1:10:11.280 --> 1:10:20.400
+ Yeah. And so you want to be able to say, I'm going to sort something and it is to be sortable.
+
+1:10:20.400 --> 1:10:26.160
+ What does it mean to be sortable? You look it up in the standard. It has to be a sequence with a
+
+1:10:26.160 --> 1:10:35.920
+ beginning and an end. There has to be random access to that sequence. And the element types
+
+1:10:35.920 --> 1:10:42.080
+ has to be comparable. Which means less than operator can operate on. Yes, less than logical
+
+1:10:42.080 --> 1:10:48.000
+ operator can operate. Basically, what concepts are their compile time predicates, their predicates
+
+1:10:48.000 --> 1:10:55.760
+ you can ask, are you a sequence? Yes, I have a beginning and end. Are you a random access sequence?
+
+1:10:56.320 --> 1:11:03.920
+ Yes, I have a subscripting and plus. Is your element type something that has a less than?
+
+1:11:03.920 --> 1:11:10.880
+ Yes, I have a less than. And so basically, that's the system. And so instead of saying,
+
+1:11:10.880 --> 1:11:15.280
+ I will take a parameter of any type, it'll say I'll take something that's sortable.
+
+1:11:17.040 --> 1:11:23.040
+ And it's well defined. And so we say, okay, you can sort with less than. I don't want less than.
+
+1:11:23.040 --> 1:11:28.880
+ I want greater than or something I invent. So you have two parameters, the sortable thing and the
+
+1:11:28.880 --> 1:11:39.120
+ comparison criteria. And the comparison criteria will say, well, you can write in saying it should
+
+1:11:39.120 --> 1:11:47.120
+ operate on the element type. And it has the comparison operations. So that's just simply
+
+1:11:47.120 --> 1:11:53.680
+ the fundamental thing. It's compile time predicates. Do you have the properties I need? So it specifies
+
+1:11:53.680 --> 1:12:02.160
+ the requirements of the code on the parameters that gets. It's very similar to types, actually.
+
+1:12:03.200 --> 1:12:13.280
+ But operating in the space of concepts. The word concept was used by Alex Stefanov,
+
+1:12:13.280 --> 1:12:18.000
+ who is sort of the father of generic programming in the context of C++.
+
+1:12:18.000 --> 1:12:25.120
+ You know, there's other places that use that word, but the way we call generic programming is
+
+1:12:25.120 --> 1:12:30.320
+ Alex's. And he called them concepts, because he said they're the sort of the fundamental
+
+1:12:30.320 --> 1:12:36.480
+ concepts of an area. So they should be called concepts. And we've had concepts all the time.
+
+1:12:36.480 --> 1:12:42.560
+ If you look at the K&R book about C, C has arithmetic types, and it has
+
+1:12:42.560 --> 1:12:52.080
+ integral types. It says so in the book. And then it lists what they are, and they have
+
+1:12:52.080 --> 1:12:58.640
+ certain properties. The difference today is that we can actually write a concept that will ask a
+
+1:12:58.640 --> 1:13:05.200
+ type, are you an integral type? Do you have the properties necessary to be an integral type?
+
+1:13:05.200 --> 1:13:15.200
+ Do you have plus, minus, divide, and such? So maybe the story of concepts, because I thought
+
+1:13:15.200 --> 1:13:28.480
+ it might be part of C++11, C0X, whatever it was at the time. We'll talk a little bit about
+
+1:13:28.480 --> 1:13:32.560
+ this fascinating process of standards, because I think it's really interesting for people.
+
+1:13:32.560 --> 1:13:39.920
+ It's interesting for me. But why did it take so long? What shapes the idea of concepts take?
+
+1:13:41.760 --> 1:13:48.320
+ What were the challenges? Back in 1987 or thereabouts. 1987?
+
+1:13:49.120 --> 1:13:54.880
+ Well, 1987 or thereabouts. When I was designing templates, obviously, I wanted to express the
+
+1:13:54.880 --> 1:14:03.920
+ notion of what is required by a template of its arguments. And so I looked at this. And basically
+
+1:14:03.920 --> 1:14:14.000
+ for templates, I wanted three properties. I wanted to be very flexible. It had to be able to express
+
+1:14:14.000 --> 1:14:20.480
+ things I couldn't imagine, because I know I can't imagine everything, and I've been suffering from
+
+1:14:20.480 --> 1:14:28.000
+ languages that try to constrain you to only do what the designer thought good. I didn't want to do that.
+
+1:14:28.880 --> 1:14:35.920
+ Secondly, it had to run faster, as fast or faster than handwritten code. So basically,
+
+1:14:35.920 --> 1:14:42.960
+ if I have a vector of t and I take a vector of char, it should run as fast as you build
+
+1:14:42.960 --> 1:14:51.440
+ a vector of char yourself without parameterization. And thirdly, I wanted to be able to express
+
+1:14:52.480 --> 1:15:00.480
+ the constraints of the arguments, have proper type checking of the interfaces,
+
+1:15:01.680 --> 1:15:09.360
+ and neither I nor anybody else at the time knew how to get all three. And I thought for C++,
+
+1:15:09.360 --> 1:15:17.600
+ I must have the two first. Otherwise, it's not C++. And it bothered me for another couple of decades
+
+1:15:17.600 --> 1:15:24.320
+ that I couldn't solve the third one. I mean, I was the one that put function argument type checking
+
+1:15:24.320 --> 1:15:30.640
+ into C. I know the value of good interfaces. I didn't invent that idea. It's very common.
+
+1:15:30.640 --> 1:15:38.240
+ But I did it. And I wanted to do the same for templates, of course, and I could. So it bothered
+
+1:15:38.240 --> 1:15:48.400
+ me. Then we tried again, 2002, 2003. Gaby just raised and I started analyzing the problem,
+
+1:15:49.200 --> 1:15:57.360
+ explained possible solutions. It was not a complete design. A group in University of Indiana,
+
+1:15:57.360 --> 1:16:10.240
+ an old friend of mine, they started a project at Indiana. And we thought we could get
+
+1:16:11.360 --> 1:16:22.000
+ a good system of concepts in another two or three years. That would have made C++ 11 to C++
+
+1:16:22.000 --> 1:16:33.040
+ 0607. Well, it turned out that I think we got a lot of the fundamental ideas wrong.
+
+1:16:33.040 --> 1:16:40.880
+ They were too conventional. They didn't quite fit C++, in my opinion. Didn't serve implicit
+
+1:16:40.880 --> 1:16:49.680
+ conversions very well. It didn't serve mixed type arithmetic, mixed type computations very well.
+
+1:16:49.680 --> 1:16:59.040
+ Well, a lot of stuff came out of the functional community. That community
+
+1:17:00.960 --> 1:17:09.280
+ didn't deal with multiple types in the same way as C++ does. Had more constraints on what you could
+
+1:17:09.280 --> 1:17:18.800
+ express and didn't have the draconian performance requirements. Basically, we tried. We tried very
+
+1:17:18.800 --> 1:17:28.320
+ hard. We had some successes, but it just in the end wasn't. Didn't compile fast enough, was too
+
+1:17:28.320 --> 1:17:39.120
+ hard to use and didn't run fast enough unless you had optimizers that was beyond the state of the
+
+1:17:39.120 --> 1:17:47.200
+ art. They still are. So we had to do something else. Basically, it was the idea that a set of
+
+1:17:47.200 --> 1:17:54.400
+ parameters defines a set of operations and you go through an interaction table just like for
+
+1:17:54.400 --> 1:18:03.360
+ virtual functions. Then you try to optimize the interaction away to get performance. We just couldn't
+
+1:18:03.360 --> 1:18:12.720
+ do all of that. But get back to the standardization. We are standardizing C++ under ISO rules,
+
+1:18:12.720 --> 1:18:19.600
+ which is a very open process. People come in. There's no requirements for education or experience.
+
+1:18:19.600 --> 1:18:29.440
+ So you've started to develop C++. When was the first standard established? What is that like?
+
+1:18:30.320 --> 1:18:35.840
+ The ISO standard? Is there a committee that you're referring to? There's a group of people. What's
+
+1:18:35.840 --> 1:18:43.840
+ that like? How often do you meet? What's the discussion? I'll try and explain that. So sometime
+
+1:18:43.840 --> 1:18:56.560
+ in early 1989, two people, one from IBM, one from HP turned up in my office and told me I would like
+
+1:18:56.560 --> 1:19:07.200
+ to standardize C++. This was a new idea to me. I pointed out that it wasn't finished yet and it
+
+1:19:07.200 --> 1:19:12.240
+ wasn't ready for formal standardization and such. They said, no, Bjarne, you haven't gotten it.
+
+1:19:12.880 --> 1:19:22.560
+ You really want to do this. Our organizations depend on C++. We cannot depend on something
+
+1:19:22.560 --> 1:19:28.800
+ that's owned by another corporation that might be a competitor. Of course, we could rely on you,
+
+1:19:29.840 --> 1:19:37.040
+ but you might get run over by a boss. We really need to get this out in the open. It has to be
+
+1:19:38.080 --> 1:19:49.760
+ standardized under formal rules. We are going to standardize it under ISO rules. You really want
+
+1:19:49.760 --> 1:19:56.400
+ to be part of it because, basically, otherwise, we'll do it ourselves. We know you can do it better.
+
+1:19:58.640 --> 1:20:06.480
+ Through a combination of arm twisting and flattery, it got started. In late
+
+1:20:08.720 --> 1:20:18.560
+ in late 89, there was a meeting in DC at the, actually, no, it was not ISO, then it was ANSI,
+
+1:20:18.560 --> 1:20:26.560
+ the American National Standard we're doing. We met there. We were lectured on the rules of
+
+1:20:26.560 --> 1:20:33.360
+ how to do an ANSI standard. There was about 25 of us there, which apparently was a new record for
+
+1:20:33.360 --> 1:20:41.120
+ that kind of meeting. Some of the old C guys that has been standardizing C was there, so we
+
+1:20:41.120 --> 1:20:48.720
+ got some expertise in. The way this works is that it's an open process. Anybody can sign up if they
+
+1:20:48.720 --> 1:20:57.200
+ pay the minimum fee, which is about $1,000. They're less than, it's a little bit more now. I think
+
+1:20:57.200 --> 1:21:07.280
+ it's $1,280. It's not going to kill you. We have three meetings a year. This is fairly standard.
+
+1:21:07.280 --> 1:21:15.040
+ We tried two meetings a year for a couple of years. That didn't work too well. Three one
+
+1:21:16.160 --> 1:21:24.720
+ week meetings a year, and you meet and you have technical meetings, technical discussions,
+
+1:21:24.720 --> 1:21:31.040
+ and then you bring proposals forward for votes. The votes are done one person per,
+
+1:21:31.040 --> 1:21:41.440
+ one vote per organization. You can't have, say, IBM come in with 10 people and dominate things
+
+1:21:41.440 --> 1:21:46.640
+ that's not allowed. These are organizations that extensively use C++? Yes.
+
+1:21:46.640 --> 1:21:56.320
+ All individuals. It's a bunch of people in the room deciding the design of a language based
+
+1:21:56.320 --> 1:22:03.760
+ on which a lot of the world's systems run. That's right. Well, I think most people would agree it's
+
+1:22:03.760 --> 1:22:11.920
+ better than if I decided it, or better than if a single organization like H&C decides it.
+
+1:22:11.920 --> 1:22:17.520
+ I don't know if everyone agrees to that, by the way. Bureaucracies have their critics too.
+
+1:22:17.520 --> 1:22:26.720
+ Yes, look, standardization is not pleasant. It's horrifying. It's like democracy.
+
+1:22:26.720 --> 1:22:32.480
+ But exactly. As Churchill says, democracy is the worst way except for the others.
+
+1:22:33.520 --> 1:22:38.880
+ And it's, I would say, the same with formal standardization. But anyway, so we meet and we
+
+1:22:38.880 --> 1:22:48.560
+ have these votes and that determines what the standard is. A couple of years later, we extended
+
+1:22:48.560 --> 1:22:58.080
+ this so it became worldwide. We have standard organizations that are active in currently 15
+
+1:22:58.080 --> 1:23:10.960
+ to 20 countries. And another 15 to 20 are sort of looking and voting based on the rest of the work
+
+1:23:10.960 --> 1:23:18.960
+ on it. And we meet three times a year. Next week, I'll be in Cologne, Germany, spending a week
+
+1:23:20.160 --> 1:23:26.480
+ doing standardization. And then we will vote out the committee draft of C++20, which goes to the
+
+1:23:26.480 --> 1:23:35.120
+ national standards committees for comments and requests for changes and improvements.
+
+1:23:35.120 --> 1:23:40.480
+ Then we do that. And there's a second set of votes where hopefully everybody votes in favor.
+
+1:23:41.200 --> 1:23:47.840
+ This has happened several times. The first time we finished, we started in the first technical
+
+1:23:47.840 --> 1:23:56.800
+ meeting was in 1990. The last was in 98. We voted it out. That was the standard that people used
+
+1:23:56.800 --> 1:24:04.880
+ till 11 or a little bit past 11. And it was an international standard. All the countries voted
+
+1:24:04.880 --> 1:24:15.840
+ in favor. It took longer with 11. I'll mention why, but all the nations voted in favor. And we
+
+1:24:15.840 --> 1:24:23.440
+ work on the basis of consensus. That is, we do not want something that passes 6040,
+
+1:24:24.400 --> 1:24:30.080
+ because then we're getting getting a dialects and opponents and people complain too much.
+
+1:24:30.080 --> 1:24:37.040
+ They all complain too much. But basically, it has no real effect. The standards has been obeyed.
+
+1:24:37.040 --> 1:24:44.000
+ They have been working to make it easier to use many compilers, many computers,
+
+1:24:44.000 --> 1:24:51.360
+ and all of that kind of stuff. And so the first, it was traditional with ISO standards to take
+
+1:24:51.360 --> 1:24:58.080
+ 10 years. We did the first one in eight, brilliant. And we thought we were going to do the next one
+
+1:24:58.080 --> 1:25:08.240
+ in six, because now we're good at it. It took 13. Yeah, it was named OX. It was named OX.
+
+1:25:08.240 --> 1:25:13.440
+ Hoping that you would at least get it within the single, within the arts, the single digits.
+
+1:25:13.440 --> 1:25:19.200
+ I thought we would get, I thought we would get the six, seven or eight. The confidence of youth.
+
+1:25:19.200 --> 1:25:25.280
+ Yeah, that's right. Well, the point is that this was sort of like a second system effect.
+
+1:25:25.280 --> 1:25:29.920
+ That is, we now knew how to do it. And so we're going to do it much better. And we've got more
+
+1:25:29.920 --> 1:25:37.840
+ ambitious and it took longer. Furthermore, there is this tendency because it's a 10 year cycle,
+
+1:25:37.840 --> 1:25:46.640
+ or it doesn't matter. Just before you're about to ship, somebody has a bright idea.
+
+1:25:49.600 --> 1:25:58.400
+ And so we really, really must get that in. We did that successfully with the STL.
+
+1:25:59.440 --> 1:26:05.680
+ We got the standard line that gives us all the STL stuff that that I basically,
+
+1:26:05.680 --> 1:26:11.440
+ I think it saved C++. It was beautiful. And then people tried it with other things.
+
+1:26:12.080 --> 1:26:18.000
+ And it didn't work so well. They got things in, but it wasn't as dramatic and it took longer and
+
+1:26:18.000 --> 1:26:27.280
+ longer and longer. So after C++ 11, which was a huge improvement and what basically what most
+
+1:26:27.280 --> 1:26:36.960
+ people are using today, we decided never again. And so how do you avoid those slips? And the
+
+1:26:36.960 --> 1:26:47.040
+ answer is that you ship more often so that if you have a slip on a 10 year cycle, by the time
+
+1:26:47.040 --> 1:26:52.400
+ you know it's a slip, there's 11 years till you get it. Now with a three year cycle,
+
+1:26:52.400 --> 1:27:01.200
+ there is about three, four years till you get it. Like the delay between feature freeze and
+
+1:27:02.080 --> 1:27:09.600
+ shipping. So you always get one or two years more. And so we shipped 14 on time. We shipped
+
+1:27:10.240 --> 1:27:19.280
+ 17 on time. And we shipped, we will ship 20 on time. It'll happen. And furthermore,
+
+1:27:19.280 --> 1:27:25.680
+ this allows, this gives a predictability that allows the implementers, the compiler implementers,
+
+1:27:25.680 --> 1:27:33.680
+ the library implementers, to, they have a target and they deliver on it. 11 took two years before
+
+1:27:34.320 --> 1:27:42.000
+ most compilers were good enough. 14, most compilers were actually getting pretty good in 14.
+
+1:27:42.000 --> 1:27:51.840
+ 17, everybody shipped in 17. We are going to have at least almost everybody ship almost
+
+1:27:51.840 --> 1:27:59.600
+ everything in 20. And I know this because they're shipping in 19. Predictability is good. Delivery
+
+1:27:59.600 --> 1:28:06.960
+ on time is good. And so yeah. That's great. So that's how it works. There's a lot of features
+
+1:28:06.960 --> 1:28:15.520
+ that came in in C++11. There's a lot of features at the birth of C++ that were amazing and ideas
+
+1:28:15.520 --> 1:28:25.600
+ with concepts in 2020. What to you is the most, just to you personally, beautiful or
+
+1:28:25.600 --> 1:28:35.520
+ just do you sit back and think, wow, that's just nice and clean feature of C++?
+
+1:28:36.960 --> 1:28:44.160
+ I have written two papers for the history of programming languages conference, which basically
+
+1:28:44.160 --> 1:28:50.800
+ asked me such questions. And I'm writing a third one, which I will deliver at the history of
+
+1:28:50.800 --> 1:28:56.160
+ programming languages conference in London next year. So I've been thinking about that and there
+
+1:28:56.160 --> 1:29:04.160
+ is one clear answer. Constructors and destructors. The way a constructor can establish the environment
+
+1:29:04.720 --> 1:29:11.680
+ for the use of a type for an object and the destructor that cleans up any messes at the end
+
+1:29:11.680 --> 1:29:18.880
+ of it. That is key to C++. That's why we don't have to use garbage collection. That's how we can
+
+1:29:18.880 --> 1:29:26.400
+ get predictable performance. That's how you can get the minimal overhead in many, many cases
+
+1:29:27.120 --> 1:29:35.440
+ and have really clean types. It's the idea of constructor, destructor pairs. Sometimes it comes
+
+1:29:35.440 --> 1:29:43.760
+ out under the name RIAII. Resource acquisition is initialization, which is the idea that you
+
+1:29:43.760 --> 1:29:50.080
+ grab resources and the constructor and release them and destructor. It's also the best example
+
+1:29:50.080 --> 1:29:56.800
+ of why I shouldn't be in advertising. I get the best idea and I call it resource acquisition is
+
+1:29:56.800 --> 1:30:08.800
+ initialization. Not the greatest naming I've ever heard. So it's types, abstraction of types.
+
+1:30:08.800 --> 1:30:18.000
+ You said, I want to create my own types. Types is an essential part of C++ and making them
+
+1:30:18.000 --> 1:30:27.680
+ efficient is the key part. To you, this is almost getting philosophical, but the construction
+
+1:30:27.680 --> 1:30:35.680
+ and the destruction, the creation of an instance of a type and the freeing of resources from that
+
+1:30:35.680 --> 1:30:45.120
+ instance of a type is what defines the object. It's almost like birth and death is what defines
+
+1:30:45.120 --> 1:30:52.320
+ human life. Yeah, that's right. By the way, philosophy is important. You can't do good
+
+1:30:52.320 --> 1:30:57.600
+ language design without philosophy because what you are determining is what people can express
+
+1:30:57.600 --> 1:31:06.720
+ and how. This is very important. By the way, constructors, destructors came into C++ in 1979
+
+1:31:07.520 --> 1:31:14.080
+ in about the second week of my work with what was then called C++. It is a fundamental idea.
+
+1:31:15.120 --> 1:31:21.200
+ Next comes the fact that you need to control copying because once you control, as you said,
+
+1:31:21.200 --> 1:31:28.400
+ birth and death, you have to control taking copies, which is another way of creating an object.
+
+1:31:29.520 --> 1:31:35.680
+ Finally, you have to be able to move things around so you get the move operations. That's
+
+1:31:35.680 --> 1:31:47.280
+ a set of key operations you can define on a C++ type. To you, those things are just a beautiful
+
+1:31:47.280 --> 1:31:55.040
+ part of C++ that is at the core of it all. Yes. You mentioned that you hope there will be one
+
+1:31:55.040 --> 1:31:59.440
+ unified set of guidelines in the future for how to construct the programming language.
+
+1:32:00.000 --> 1:32:07.200
+ So perhaps not one programming language, but a unification of how we build programming languages
+
+1:32:08.400 --> 1:32:13.760
+ if you remember such statements. I have some trouble remembering it, but I know the origin
+
+1:32:13.760 --> 1:32:20.000
+ of that idea. Maybe you can talk about, C++ has been improving. There's been a lot of programming
+
+1:32:20.000 --> 1:32:26.400
+ language. Where does the archer history taking us? Do you hope that there is a unification about
+
+1:32:27.040 --> 1:32:30.480
+ the languages with which we communicate in the digital space?
+
+1:32:33.760 --> 1:32:42.400
+ I think that languages should be designed not by clobbering language features together and
+
+1:32:42.400 --> 1:32:50.400
+ doing slightly different versions of somebody else's ideas, but through the creation of a set
+
+1:32:51.120 --> 1:33:01.360
+ of principles, rules of thumbs, whatever you call them. I made them for C++ and we're trying to
+
+1:33:02.560 --> 1:33:07.440
+ teach people in the Standards Committee about these rules because a lot of people come in and say,
+
+1:33:07.440 --> 1:33:13.440
+ I've got a great idea. Let's put it in the language. Then you have to ask, why does it fit in the
+
+1:33:13.440 --> 1:33:18.960
+ language? Why does it fit in this language? It may fit in another language and not here,
+
+1:33:18.960 --> 1:33:24.240
+ or it may fit here and not the other language. So you have to work from a set of principles and
+
+1:33:24.240 --> 1:33:35.360
+ you have to develop that set of principles. One example that I sometimes remember is I was sitting
+
+1:33:35.360 --> 1:33:44.880
+ down with some of the designers of Common Lisp and we were talking about languages and language
+
+1:33:44.880 --> 1:33:52.960
+ features and obviously we didn't agree about anything because well, Lisp is not C++ and vice
+
+1:33:52.960 --> 1:34:02.400
+ versa. Too many parentheses. But suddenly we started making progress. I said, I had this problem
+
+1:34:02.400 --> 1:34:09.200
+ and I developed it according to these ideas and they said, why? We had that problem, different
+
+1:34:09.200 --> 1:34:17.520
+ problem and we developed it with the same kind of principles. And so we worked through large chunks
+
+1:34:18.080 --> 1:34:25.200
+ of C++ and large chunks of Common Lisp and figured out we actually had similar sets
+
+1:34:26.000 --> 1:34:31.600
+ of principles of how to do it. But the constraints on our designs were very different
+
+1:34:31.600 --> 1:34:40.640
+ and the aims for the usage was very different. But there was commonality in the way you reason
+
+1:34:40.640 --> 1:34:45.200
+ about language features and the fundamental principles you were trying to do.
+
+1:34:45.200 --> 1:34:53.680
+ So do you think that's possible? So they're just like there is perhaps a unified theory of physics,
+
+1:34:53.680 --> 1:35:01.200
+ of the fundamental forces of physics, that I'm sure there is commonalities among the language
+
+1:35:01.200 --> 1:35:08.000
+ but there's also people involved that help drive the development of these languages. Do you have a
+
+1:35:08.000 --> 1:35:18.560
+ hope or an optimism that there will be a unification if you think about physics in Einstein towards
+
+1:35:18.560 --> 1:35:27.840
+ a simplified language? Do you think that's possible? Let's remember sort of modern physics,
+
+1:35:27.840 --> 1:35:34.480
+ I think started with Galileo in the 1300s. So they've had 700 years to get going.
+
+1:35:35.360 --> 1:35:45.440
+ Modern computing started in about 49. We've got, what is it, 70 years. They have 10 times.
+
+1:35:46.560 --> 1:35:53.760
+ And furthermore, they are not as bothered with people using physics the way we are worried about
+
+1:35:53.760 --> 1:36:02.640
+ programming. It's done by humans. So each have problems and constraints the others have but
+
+1:36:02.640 --> 1:36:10.800
+ we are very immature compared to physics. So I would look at sort of the philosophical level
+
+1:36:11.600 --> 1:36:18.640
+ and look for fundamental principles like you don't leak resources, you shouldn't.
+
+1:36:18.640 --> 1:36:28.800
+ You don't take errors at runtime that you don't need to. You don't violate some kind of type
+
+1:36:28.800 --> 1:36:35.840
+ system. There's many kinds of type systems, but when you have one, you don't break it, etc. etc.
+
+1:36:36.560 --> 1:36:44.240
+ There will be quite a few and it will not be the same for all languages. But I think if we step
+
+1:36:44.240 --> 1:36:51.440
+ back at some kind of philosophical level, we would be able to agree on sets of principles
+
+1:36:51.440 --> 1:37:03.120
+ that applied to sets of problem areas. And within an area of use, like in C++'s case,
+
+1:37:03.920 --> 1:37:10.800
+ what used to be called systems programming, the area between the hardware and the fluffier
+
+1:37:10.800 --> 1:37:18.480
+ the fluffier parts of the system, you might very well see a convergence. So these days you see
+
+1:37:18.480 --> 1:37:26.000
+ Rust having adopted RAII and some time accuses me for having borrowed it 20 years before they
+
+1:37:26.000 --> 1:37:37.280
+ discovered it. But we're seeing some kind of convergence here instead of relying on garbage
+
+1:37:37.280 --> 1:37:44.720
+ collection all the time. The garbage collection languages are doing things like the dispose
+
+1:37:44.720 --> 1:37:50.800
+ patterns and such that imitate some of the construction, destruction stuff. And they're
+
+1:37:50.800 --> 1:37:56.240
+ trying not to use the garbage collection all the time and things like that. So there's a
+
+1:37:56.240 --> 1:38:01.200
+ conversion. But I think we have to step back to the philosophical level, agree on principles,
+
+1:38:01.200 --> 1:38:10.720
+ and then we'll see some conversions, convergences, and it will be application domain specific.
+
+1:38:12.080 --> 1:38:17.520
+ So a crazy question, but I work a lot with machine learning with deep learning. I'm not
+
+1:38:17.520 --> 1:38:24.960
+ sure if you touch that world much. But you could think of programming as a thing that takes some
+
+1:38:24.960 --> 1:38:30.080
+ input. Programming is the task of creating a program, and the program takes some input and
+
+1:38:30.080 --> 1:38:37.760
+ produces some output. So machine learning systems train on data in order to be able
+
+1:38:37.760 --> 1:38:43.120
+ to take an input and produce output. But they're messy, fuzzy things, much like
+
+1:38:46.240 --> 1:38:52.960
+ we as children grow up, we take some input, we make some output, but we're noisy, we mess up a
+
+1:38:52.960 --> 1:39:00.240
+ lot, we're definitely not reliable biological system or a giant mess. So there's a sense in
+
+1:39:00.240 --> 1:39:06.720
+ which machine learning is a kind of way of programming, but just fuzzy. It's very, very,
+
+1:39:06.720 --> 1:39:14.800
+ very different than C++. Because C++ is a, like it's just like you said, it's extremely reliable,
+
+1:39:14.800 --> 1:39:19.840
+ it's efficient, it's, you know, you can, you can measure, you can test in a bunch of different
+
+1:39:19.840 --> 1:39:27.520
+ ways with biological systems or machine learning systems. You can't say much, except sort of
+
+1:39:27.520 --> 1:39:35.680
+ empirically saying that 99.8% of the time, it seems to work. What do you think about this fuzzy
+
+1:39:35.680 --> 1:39:42.080
+ kind of programming? Do you even see it as programming? Is it solely and totally another
+
+1:39:42.080 --> 1:39:48.880
+ kind of world? I think it's a different kind of world. And it is fuzzy. And in my domain,
+
+1:39:48.880 --> 1:39:57.840
+ I don't like fuzziness. That is, people say things like they want everybody to be able to program.
+
+1:39:58.880 --> 1:40:07.120
+ But I don't want everybody to program my airplane controls or the car controls.
+
+1:40:08.080 --> 1:40:13.840
+ I want that to be done by engineers. I want that to be done with people that are specifically
+
+1:40:13.840 --> 1:40:23.760
+ educated and trained for doing building things. And it is not for everybody. Similarly, a language
+
+1:40:23.760 --> 1:40:33.760
+ like C++ is not for everybody. It is generated to be a sharp and effective tool for professionals,
+
+1:40:33.760 --> 1:40:41.200
+ basically, and definitely for people who, who, who aim at some kind of precision. You don't
+
+1:40:41.200 --> 1:40:48.400
+ have people doing calculations without understanding math, right? Counting on your fingers is not going
+
+1:40:48.400 --> 1:41:00.480
+ to cut it if you want to fly to the moon. And so there are areas where an 84% accuracy rate,
+
+1:41:01.680 --> 1:41:10.080
+ 16% false positive rate is perfectly acceptable and where people will probably get no more than
+
+1:41:10.080 --> 1:41:18.800
+ 70. You said 98%. I, the, what I've seen is more like 84. And by, by really a lot of blood,
+
+1:41:18.800 --> 1:41:26.640
+ sweat and tears, you can get up to the 92 and a half. So this is fine if it is, say,
+
+1:41:26.640 --> 1:41:35.360
+ pre screening stuff before the human look at it. It is not good enough for, for life
+
+1:41:35.360 --> 1:41:42.720
+ threatening situations. And so there's lots of areas where, where the fuzziness is, is perfectly
+
+1:41:42.720 --> 1:41:48.640
+ acceptable and good and better than humans, cheaper than humans. But it's not the kind of
+
+1:41:48.640 --> 1:41:57.360
+ engineering stuff I'm mostly interested in. I worry a bit about machine learning in the context
+
+1:41:57.360 --> 1:42:03.760
+ of cars. You know, much more about this than I do. I worry too. But I'm, I'm, I'm sort of an
+
+1:42:03.760 --> 1:42:10.960
+ amateur here. I've read some of the papers, but I've not ever done it. And the, the, the idea
+
+1:42:10.960 --> 1:42:19.280
+ that scares me the most is the one I have heard, and I don't know how common it is, that
+
+1:42:21.840 --> 1:42:32.000
+ you have this AI system, machine learning, all of these trained neural nets. And when there's
+
+1:42:32.000 --> 1:42:39.120
+ something that's too complicated, they ask the human for help. But the human is reading a book
+
+1:42:39.120 --> 1:42:47.920
+ or sleep. And he has 30 seconds or three seconds to figure out what the problem was that the AI
+
+1:42:47.920 --> 1:42:55.440
+ system couldn't handle and do the right thing. This is scary. I mean, how do you do the cut over
+
+1:42:55.440 --> 1:43:05.200
+ between the machine and the human? It's very, very difficult. And for the designer of one of the most
+
+1:43:05.200 --> 1:43:11.760
+ reliable, efficient and powerful programming languages, C plus plus, I can understand why
+
+1:43:11.760 --> 1:43:18.960
+ that world is actually unappealing. It is for most engineers. To me, it's extremely appealing,
+
+1:43:18.960 --> 1:43:24.080
+ because we don't know how to get that interaction right. But I think it's possible,
+
+1:43:24.080 --> 1:43:29.280
+ but it's very, very hard. It is. And now it's stating a problem, not a solution.
+
+1:43:29.280 --> 1:43:34.720
+ That is impossible. I mean, I would much rather never rely on a human. If you're driving a nuclear
+
+1:43:34.720 --> 1:43:41.600
+ reactor, if you're or an autonomous vehicle, it's much better to design systems written in C plus
+
+1:43:41.600 --> 1:43:49.440
+ plus that never ask human for help. Let, let, let's just get one fact in. Yeah. All of this AI
+
+1:43:49.440 --> 1:43:58.160
+ stuff is on top of C plus plus. So, so that's one reason I have to keep a weather eye out on
+
+1:43:58.160 --> 1:44:03.200
+ what's going on in that field, but I will never become an expert in that area. But it's a good
+
+1:44:03.200 --> 1:44:10.000
+ example of how you separate different areas of applications and you have to have different tools,
+
+1:44:10.000 --> 1:44:17.760
+ different principles. And then they interact. No major system today is written in one language.
+
+1:44:17.760 --> 1:44:24.080
+ And there are good reasons for that. When you look back at your life work,
+
+1:44:25.280 --> 1:44:33.680
+ what is a, what is a moment? What is a event creation that you're really proud of?
+
+1:44:33.680 --> 1:44:40.080
+ They say, damn, I did pretty good there. Is it as obvious as the creation of C plus plus?
+
+1:44:40.080 --> 1:44:48.240
+ It's obvious. I've spent a lot of time with C plus plus and there's a combination of a few good
+
+1:44:48.240 --> 1:44:55.760
+ ideas, a lot of hard work and a bit of luck. And I've tried to get away from it a few times,
+
+1:44:55.760 --> 1:45:02.320
+ but I get dragged in again, partly because I'm most effective in this area and partly because
+
+1:45:02.320 --> 1:45:10.320
+ what I do has much more impact. If I do it in the context of C plus plus, I have four and a half
+
+1:45:10.320 --> 1:45:16.080
+ million people that pick it up tomorrow. If I get something right, if I did it in another field,
+
+1:45:16.080 --> 1:45:20.400
+ I would have to start learning, then I have to build it and then we'll see if anybody wants to use it.
+
+1:45:22.640 --> 1:45:29.200
+ One of the things that has kept me going for all of these years is one, the good things that people
+
+1:45:29.200 --> 1:45:37.920
+ do with it and the interesting things they do with it. And also, I get to see a lot of
+
+1:45:37.920 --> 1:45:46.640
+ interesting stuff and talk to a lot of interesting people. I mean, if it has just been statements
+
+1:45:46.640 --> 1:45:53.440
+ on paper or on a screen, I don't think I could have kept going. But I get to see the telescopes
+
+1:45:53.440 --> 1:46:02.480
+ up on Mauna Kea and I actually went and see how Ford built cars and I got to JPL and see how they
+
+1:46:02.480 --> 1:46:11.360
+ do the Mars rovers. There's so much cool stuff going on and most of the cool stuff is done by
+
+1:46:11.360 --> 1:46:21.680
+ pretty nice people and sometimes in very nice places, Cambridge, Sofia and Tbilisi, Silicon Valley.
+
+1:46:21.680 --> 1:46:27.360
+ Yeah, there's more to it than just code. But code is central.
+
+1:46:29.040 --> 1:46:34.960
+ On top of the code are the people in very nice places. Well, I think I speak for millions of
+
+1:46:34.960 --> 1:46:43.440
+ people. We are in saying thank you for creating this language that so many systems are built on
+
+1:46:43.440 --> 1:46:49.200
+ top of that make a better world. So thank you and thank you for talking today.
+
+1:46:49.200 --> 1:46:52.480
+ Yeah, thanks and we'll make it even better. Good.
+

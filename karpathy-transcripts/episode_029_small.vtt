@@ -1,0 +1,8711 @@
+WEBVTT
+
+00:00.000 --> 00:03.920
+ The following is a conversation with Gustav Sonastrom.
+
+00:03.920 --> 00:07.280
+ He's the chief research and development officer at Spotify,
+
+00:07.280 --> 00:11.200
+ leading their product design, data, technology, and engineering teams.
+
+00:11.200 --> 00:15.280
+ As I've said before, in my research and in life in general,
+
+00:15.280 --> 00:18.720
+ I love music, listening to it and creating it.
+
+00:18.720 --> 00:23.600
+ And using technology, especially personalization through machine learning
+
+00:23.600 --> 00:27.920
+ to enrich the music discovery and listening experience.
+
+00:27.920 --> 00:31.920
+ That is what Spotify has been doing for years, continually innovating,
+
+00:31.920 --> 00:36.000
+ defining how we experience music as a society in a digital age.
+
+00:36.000 --> 00:39.280
+ That's what Gustav and I talk about among many other topics,
+
+00:39.280 --> 00:43.280
+ including our shared appreciation of the movie True Romance,
+
+00:43.280 --> 00:46.080
+ in my view, one of the great movies of all time.
+
+00:46.080 --> 00:49.280
+ This is the Artificial Intelligence podcast.
+
+00:49.280 --> 00:53.200
+ If you enjoy it, subscribe on YouTube, give five stars on iTunes,
+
+00:53.200 --> 00:58.000
+ support on Patreon, or simply connect with me on Twitter at Lex Freedman,
+
+00:58.000 --> 01:00.400
+ spelled F R I D M A N.
+
+01:01.280 --> 01:05.120
+ And now here's my conversation with Gustav Sonastrom.
+
+01:06.400 --> 01:10.240
+ Spotify has over 50 million songs in its catalog.
+
+01:10.240 --> 01:13.200
+ So let me ask the all important question.
+
+01:14.160 --> 01:16.320
+ I feel like you're the right person to ask.
+
+01:16.320 --> 01:19.520
+ What is the definitive greatest song of all time?
+
+01:19.520 --> 01:22.880
+ It varies for me, personally.
+
+01:22.880 --> 01:24.960
+ So you can't speak definitively for everyone?
+
+01:26.240 --> 01:29.920
+ I wouldn't believe very much in machine learning if I did,
+
+01:29.920 --> 01:32.640
+ right? Because everyone had the same taste.
+
+01:32.640 --> 01:36.960
+ So for you, what is you have to pick? What is the song?
+
+01:36.960 --> 01:39.280
+ All right. So it's it's pretty easy for me.
+
+01:39.280 --> 01:42.160
+ There is this song called You're So Cool,
+
+01:42.160 --> 01:45.280
+ Hans Zimmer, a soundtrack to True Romance.
+
+01:45.280 --> 01:49.840
+ It was a movie that made a big impression on me,
+
+01:49.840 --> 01:52.720
+ and it's kind of been following me through my life.
+
+01:52.720 --> 01:55.440
+ Actually, had to play at my wedding.
+
+01:56.000 --> 01:59.040
+ I sat with the organist and helped him play it on an organ,
+
+01:59.040 --> 02:01.760
+ which was a pretty pretty interesting experience.
+
+02:01.760 --> 02:06.720
+ That is probably my I would say top three movie of all time.
+
+02:06.720 --> 02:08.320
+ Yeah, this is an incredible movie.
+
+02:08.320 --> 02:11.040
+ Yeah. And it came out during my formative years.
+
+02:11.040 --> 02:13.520
+ And as I've discovered in music,
+
+02:13.520 --> 02:16.560
+ you shape your music taste during those years.
+
+02:16.560 --> 02:18.560
+ So it definitely affected me quite a bit.
+
+02:18.560 --> 02:20.400
+ Did it affect you in any other kind of way?
+
+02:20.960 --> 02:23.440
+ Well, the movie itself affected me back then.
+
+02:23.440 --> 02:24.880
+ It was a big part of culture.
+
+02:25.600 --> 02:27.600
+ I didn't really adopt any characters from the movie,
+
+02:27.600 --> 02:30.400
+ but it was it was a great story of love.
+
+02:30.960 --> 02:32.160
+ It's fantastic actors.
+
+02:33.040 --> 02:36.480
+ And and really, I didn't even know who Hans Zimmer was at the time,
+
+02:36.480 --> 02:37.920
+ but fantastic music.
+
+02:39.040 --> 02:42.160
+ And so that song has followed me.
+
+02:42.160 --> 02:44.480
+ And the movie actually has followed me throughout my life.
+
+02:44.480 --> 02:46.320
+ That was Quentin Tarantino, actually,
+
+02:46.320 --> 02:48.480
+ I think directed or produced that.
+
+02:49.200 --> 02:52.000
+ So it's not Stairway to Heaven or Bohemian Rhapsody.
+
+02:52.000 --> 02:53.600
+ It's those are those are great.
+
+02:53.600 --> 02:54.800
+ They're not my personal favorites,
+
+02:54.800 --> 02:57.760
+ but I've realized that people have different tastes.
+
+02:57.760 --> 03:00.400
+ And that's that's a big part of what we do.
+
+03:00.400 --> 03:02.560
+ Well, for me, I don't have to stick with Stairway to Heaven.
+
+03:04.000 --> 03:09.360
+ So 35,000 years ago, I looked this up on Wikipedia,
+
+03:09.360 --> 03:11.760
+ flute like instruments started being used in caves
+
+03:11.760 --> 03:15.600
+ as part of hunting rituals and primitive cultural gatherings,
+
+03:15.600 --> 03:16.240
+ things like that.
+
+03:16.240 --> 03:17.760
+ This is the birth of music.
+
+03:18.560 --> 03:22.080
+ Since then, we had a few folks, Beethoven, Elvis, Beatles,
+
+03:22.640 --> 03:25.520
+ Justin Bieber, of course, Drake.
+
+03:26.320 --> 03:29.840
+ So in your view, let's start like high level philosophical.
+
+03:29.840 --> 03:34.640
+ What is the purpose of music on this planet of ours?
+
+03:35.760 --> 03:38.800
+ I think music has many different purposes.
+
+03:38.800 --> 03:42.880
+ I think there's there's certainly a big purpose,
+
+03:42.880 --> 03:45.200
+ which is the same as much of entertainment,
+
+03:45.200 --> 03:50.880
+ which is escapism and to be able to live in some sort of
+
+03:50.880 --> 03:52.080
+ other mental state for a while.
+
+03:52.640 --> 03:54.800
+ But I also think you have the the opposite of escaping,
+
+03:54.800 --> 03:57.200
+ which is to help you focus on something you are actually doing.
+
+03:57.760 --> 04:02.560
+ As I think people use music as a tool to to tune the brain
+
+04:03.120 --> 04:05.680
+ to the activities that they are actually doing.
+
+04:05.680 --> 04:10.720
+ And it's kind of like in one sense,
+
+04:10.720 --> 04:12.080
+ maybe it's the rawest signal.
+
+04:12.080 --> 04:14.720
+ If you if you think about the brain as neural networks,
+
+04:14.720 --> 04:16.720
+ it's maybe the most efficient hack we can do
+
+04:16.720 --> 04:19.840
+ to actually actively tune it into some state that you want to be.
+
+04:20.480 --> 04:21.360
+ You can do it in other ways.
+
+04:21.360 --> 04:23.840
+ You can tell stories to put people in a certain mood,
+
+04:23.840 --> 04:25.760
+ but music is probably very effective
+
+04:25.760 --> 04:27.520
+ to get to a certain mood very fast.
+
+04:28.640 --> 04:32.000
+ You know, there's a there's a social component historically
+
+04:32.000 --> 04:34.080
+ to music where people listen to music together.
+
+04:34.080 --> 04:36.160
+ I was just thinking about this,
+
+04:36.160 --> 04:39.440
+ that to me, and you mentioned machine learning,
+
+04:39.440 --> 04:44.400
+ but to me personally, music is a really private thing.
+
+04:45.360 --> 04:47.280
+ Like I'm speaking for myself.
+
+04:47.280 --> 04:50.160
+ I listen to music like almost nobody knows
+
+04:50.160 --> 04:52.080
+ the kind of things I have in my library,
+
+04:52.720 --> 04:54.480
+ except people who are really close to me
+
+04:54.480 --> 04:56.880
+ and they really only know a certain percentage.
+
+04:56.880 --> 04:58.400
+ There's like some weird stuff
+
+04:58.400 --> 05:01.120
+ that I'm almost probably embarrassed by, right?
+
+05:01.120 --> 05:02.480
+ It's called the guilty pleasures, right?
+
+05:02.480 --> 05:04.560
+ Everyone has the guilty pleasures, yeah.
+
+05:04.560 --> 05:05.760
+ Hopefully they're not too bad.
+
+05:07.760 --> 05:08.640
+ For me, it's personal.
+
+05:08.640 --> 05:12.000
+ Do you think of music as something that's social
+
+05:12.640 --> 05:14.880
+ or as something that's personal?
+
+05:14.880 --> 05:15.680
+ Or does it vary?
+
+05:16.720 --> 05:22.720
+ So I think it's the same answer that you use it for both.
+
+05:22.720 --> 05:24.080
+ We've thought a lot about this
+
+05:24.880 --> 05:26.960
+ during these 10 years at Spotify, obviously.
+
+05:27.600 --> 05:31.120
+ In one sense, as you said, music is incredibly social.
+
+05:31.120 --> 05:32.720
+ You go to concerts and so forth.
+
+05:33.440 --> 05:37.280
+ On the other hand, it is your escape
+
+05:37.280 --> 05:41.360
+ and everyone has these things that are very personal to them.
+
+05:42.080 --> 05:47.040
+ So what we've found is that when it comes to,
+
+05:47.040 --> 05:50.640
+ to most people claim that they have a friend or two
+
+05:50.640 --> 05:53.840
+ that they are heavily inspired by and that they listen to.
+
+05:53.840 --> 05:55.680
+ So I actually think music is very social,
+
+05:55.680 --> 05:57.440
+ but in a smaller group setting,
+
+05:57.440 --> 06:03.360
+ it's an intimate form of, it's an intimate relationship.
+
+06:03.360 --> 06:06.400
+ It's not something that you necessarily share broadly.
+
+06:06.400 --> 06:08.000
+ Now at concerts, you can argue you do,
+
+06:08.000 --> 06:10.080
+ but then you've gathered a lot of people
+
+06:10.080 --> 06:11.840
+ that you have something in common with.
+
+06:11.840 --> 06:14.880
+ I think this broadcast sharing of music
+
+06:16.160 --> 06:19.920
+ is something we tried on social networks and so forth,
+
+06:19.920 --> 06:24.400
+ but it turns out that people aren't super interested in
+
+06:24.400 --> 06:26.960
+ what their friends listen to.
+
+06:28.480 --> 06:30.400
+ They're interested in understanding
+
+06:30.400 --> 06:32.880
+ if they have something in common perhaps with a friend,
+
+06:32.880 --> 06:35.040
+ but not just as information.
+
+06:35.680 --> 06:37.360
+ Right, that's really interesting.
+
+06:37.360 --> 06:40.880
+ I was just thinking that this morning listening to Spotify,
+
+06:41.600 --> 06:45.360
+ I really have a pretty intimate relationship with Spotify,
+
+06:45.360 --> 06:47.120
+ with my playlists.
+
+06:48.560 --> 06:51.760
+ I've had them for many years now
+
+06:51.760 --> 06:53.360
+ and they've grown with me together.
+
+06:53.360 --> 06:56.640
+ There's an intimate relationship you have
+
+06:56.640 --> 06:59.520
+ with a library of music that you've developed.
+
+06:59.520 --> 07:01.920
+ And we'll talk about different ways we can play with that.
+
+07:02.480 --> 07:04.640
+ Can you do the impossible task
+
+07:04.640 --> 07:08.240
+ and try to give a history of music listening
+
+07:09.280 --> 07:12.720
+ from your perspective, from before the internet
+
+07:12.720 --> 07:14.160
+ and after the internet?
+
+07:14.160 --> 07:17.760
+ And just kind of everything leading up to streaming
+
+07:17.760 --> 07:18.800
+ with Spotify and so on.
+
+07:18.800 --> 07:20.800
+ I'll try, it could be a 100 year podcast.
+
+07:20.800 --> 07:22.400
+ Yeah.
+
+07:22.400 --> 07:24.480
+ I'll try to do a brief version.
+
+07:24.480 --> 07:27.120
+ There are some things that I think are very interesting
+
+07:27.120 --> 07:28.080
+ during the history of music,
+
+07:28.080 --> 07:31.200
+ which is that before recorded music,
+
+07:31.920 --> 07:33.040
+ to be able to enjoy music,
+
+07:33.040 --> 07:35.440
+ you actually had to be where the music was produced
+
+07:35.440 --> 07:38.640
+ because you couldn't record it and time shift it, right?
+
+07:38.640 --> 07:40.480
+ Creation and consumption had to happen at the same time,
+
+07:40.480 --> 07:41.520
+ basically concerts.
+
+07:42.400 --> 07:45.440
+ And so you either had to get to the nearest village
+
+07:46.080 --> 07:47.280
+ to listen to music.
+
+07:47.280 --> 07:48.960
+ And while that was cumbersome
+
+07:48.960 --> 07:51.760
+ and it severely limited the distribution of music,
+
+07:52.320 --> 07:54.000
+ it also had some different qualities,
+
+07:54.000 --> 07:56.800
+ which was that the creator could always interact
+
+07:56.800 --> 07:57.440
+ with the audience.
+
+07:57.440 --> 07:58.480
+ It was always live.
+
+07:59.280 --> 08:01.520
+ And also there was no time cap on the music.
+
+08:01.520 --> 08:03.040
+ So I think it's not a coincidence
+
+08:03.040 --> 08:05.760
+ that these early classical works,
+
+08:05.760 --> 08:07.520
+ they're much longer than the three minutes.
+
+08:08.320 --> 08:10.960
+ The three minutes came in as a restriction
+
+08:10.960 --> 08:13.520
+ of the first wax disc that could only contain
+
+08:13.520 --> 08:16.000
+ a three minute song on one side, right?
+
+08:16.000 --> 08:20.640
+ So actually the recorded music severely limited the,
+
+08:21.440 --> 08:22.240
+ or put constraints.
+
+08:22.240 --> 08:22.960
+ I won't say limit.
+
+08:22.960 --> 08:24.080
+ I mean, constraints are often good,
+
+08:24.080 --> 08:26.880
+ but it put very hard constraints on the music format.
+
+08:26.880 --> 08:29.760
+ So you kind of said, like instead of doing this opus
+
+08:29.760 --> 08:32.320
+ of like many, you know, tens of minutes or something,
+
+08:33.120 --> 08:34.240
+ now you get three and a half minutes
+
+08:34.240 --> 08:36.240
+ because then you're out of wax on this disc.
+
+08:36.880 --> 08:40.000
+ But in return, you get an amazing distribution.
+
+08:40.000 --> 08:41.920
+ Your reach will widen, right?
+
+08:41.920 --> 08:43.120
+ Just on that point real quick,
+
+08:43.120 --> 08:47.360
+ without the mass scale distribution,
+
+08:47.920 --> 08:52.880
+ there's a scarcity component where you kind of look forward to it.
+
+08:54.000 --> 08:58.800
+ We had that, it's like the Netflix versus HBO Game of Thrones.
+
+08:58.800 --> 09:02.720
+ You like wait for the event because you can't really listen to it.
+
+09:02.720 --> 09:04.640
+ So you like look forward to it and then it's,
+
+09:05.600 --> 09:07.360
+ you derive perhaps more pleasure
+
+09:07.360 --> 09:10.560
+ because it's more rare for you to listen to particular piece.
+
+09:10.560 --> 09:13.040
+ You think there's value to that scarcity?
+
+09:13.040 --> 09:15.280
+ Yeah, I think that that is definitely a thing.
+
+09:15.280 --> 09:17.680
+ And there's always this component of
+
+09:17.680 --> 09:19.680
+ if you have something in infinite amount,
+
+09:19.680 --> 09:21.600
+ so will you value it as much?
+
+09:22.560 --> 09:23.120
+ Probably not.
+
+09:23.680 --> 09:27.040
+ Humanity is always seeking some, is relative.
+
+09:27.040 --> 09:28.480
+ So you're always seeking something you didn't have
+
+09:28.480 --> 09:30.160
+ and when you have it, you don't appreciate it as much.
+
+09:30.160 --> 09:32.240
+ So I think that's probably true.
+
+09:32.240 --> 09:34.000
+ But I think that's why concerts exist.
+
+09:34.000 --> 09:35.520
+ So you can actually have both.
+
+09:36.480 --> 09:39.200
+ But I think net, if you couldn't listen to music
+
+09:39.200 --> 09:42.320
+ in your car driving, that'd be worse.
+
+09:42.320 --> 09:45.600
+ That cost will be bigger than the benefit of the anticipation,
+
+09:45.600 --> 09:46.560
+ I think, that you would have.
+
+09:47.600 --> 09:50.640
+ So, yeah, it started with live concerts.
+
+09:50.640 --> 09:57.040
+ Then it's being able to, you know, the photograph invented, right?
+
+09:57.040 --> 09:59.520
+ You start to be able to record music.
+
+09:59.520 --> 10:00.160
+ Exactly.
+
+10:00.160 --> 10:02.160
+ So then you got this massive distribution
+
+10:02.160 --> 10:04.800
+ that made it possible to create two things.
+
+10:04.800 --> 10:06.640
+ I think, first of all, cultural phenomenons.
+
+10:06.640 --> 10:08.160
+ They probably need distribution.
+
+10:08.160 --> 10:10.800
+ Distribution to be able to happen.
+
+10:11.600 --> 10:16.480
+ But it also opened access to, you know, for a new kind of artist.
+
+10:16.480 --> 10:18.160
+ So you started to have these phenomenons,
+
+10:18.160 --> 10:19.680
+ like Beatles and Elvis and so forth,
+
+10:19.680 --> 10:22.720
+ that would really a function of distribution, I think.
+
+10:22.720 --> 10:24.640
+ Obviously, of talent and innovation,
+
+10:24.640 --> 10:26.080
+ but there was also taking a component.
+
+10:26.720 --> 10:28.800
+ And of course, the next big innovation to come along
+
+10:28.800 --> 10:30.640
+ was radio, broadcast radio.
+
+10:31.520 --> 10:34.480
+ And I think radio is interesting
+
+10:34.480 --> 10:37.040
+ because it started not as a music medium.
+
+10:37.040 --> 10:40.400
+ It started as an information medium for news.
+
+10:40.400 --> 10:44.640
+ And then radio needed to find something to fill the time with
+
+10:44.640 --> 10:47.920
+ so that they could honestly play more ads and make more money.
+
+10:47.920 --> 10:49.440
+ And music was free.
+
+10:49.440 --> 10:52.000
+ So then you had this massive distribution
+
+10:52.000 --> 10:53.280
+ where you could program to people.
+
+10:53.280 --> 10:54.960
+ I think those things, that ecosystem,
+
+10:56.000 --> 11:00.160
+ is what created the ability for hits.
+
+11:00.160 --> 11:02.640
+ But it was also a very broadcast medium.
+
+11:02.640 --> 11:05.040
+ So you would tend to get these massive, massive hits,
+
+11:05.040 --> 11:06.800
+ but maybe not such a long tail.
+
+11:08.400 --> 11:11.520
+ In terms of choice of everybody listening to the same stuff.
+
+11:11.520 --> 11:14.880
+ Yeah. And as you said, I think there are some social benefits to that.
+
+11:15.760 --> 11:19.040
+ I think, for example, there is a high statistical chance
+
+11:19.040 --> 11:21.440
+ that if I talk about the latest episode of Game of Thrones,
+
+11:21.440 --> 11:23.600
+ we have something to talk about just statistically.
+
+11:24.240 --> 11:27.200
+ In the age of individual choice, maybe some of that goes away.
+
+11:27.200 --> 11:33.680
+ So I do see the value of shared cultural components.
+
+11:33.680 --> 11:36.080
+ But I also obviously love personalization.
+
+11:37.440 --> 11:40.080
+ And so let's catch this up to the internet.
+
+11:40.080 --> 11:42.160
+ So maybe Napster.
+
+11:42.160 --> 11:44.000
+ Well, first of all, there's like MP3s.
+
+11:44.000 --> 11:45.680
+ Exactly. There's tape, CDs.
+
+11:45.680 --> 11:48.320
+ There was a digitalization of music with a CD, really.
+
+11:48.320 --> 11:51.280
+ It was physical distribution, but the music became digital.
+
+11:52.080 --> 11:55.440
+ And so they were files, but basically boxed software,
+
+11:55.440 --> 11:56.880
+ to use a software analogy.
+
+11:57.760 --> 11:59.840
+ And then you could start downloading these files.
+
+12:00.880 --> 12:03.440
+ And I think there are two interesting things that happened
+
+12:03.440 --> 12:05.600
+ back to music used to be longer
+
+12:05.600 --> 12:08.160
+ before it was constrained by the distribution medium.
+
+12:08.960 --> 12:10.720
+ I don't think that was a coincidence.
+
+12:10.720 --> 12:14.560
+ And then really the only music genre to have developed mostly after
+
+12:15.360 --> 12:18.000
+ music was a file again on the internet is EDM.
+
+12:18.000 --> 12:21.440
+ And EDM is often much longer than the traditional music.
+
+12:21.440 --> 12:24.480
+ I think it's interesting to think about the fact that
+
+12:24.480 --> 12:28.080
+ music is no longer constrained in minutes per song or something.
+
+12:28.080 --> 12:32.080
+ It's a legacy of an old distribution technology.
+
+12:32.080 --> 12:34.640
+ And you see some of this new music that breaks the format,
+
+12:34.640 --> 12:36.880
+ not so much as I would have expected actually by now,
+
+12:37.680 --> 12:39.200
+ but it still happens.
+
+12:39.200 --> 12:42.080
+ So first of all, I don't really know what EDM is.
+
+12:42.080 --> 12:44.560
+ Electronic dance music, you could say.
+
+12:44.560 --> 12:47.280
+ Avicii was one of the biggest in this genre.
+
+12:47.840 --> 12:50.640
+ So the main constraint is of time,
+
+12:50.640 --> 12:53.280
+ something like three, four, five minutes song.
+
+12:53.280 --> 12:55.440
+ So you could have songs that were eight minutes,
+
+12:55.440 --> 12:56.640
+ 10 minutes, and so forth.
+
+12:57.200 --> 13:00.320
+ Because it started as a digital product
+
+13:00.320 --> 13:03.920
+ that you downloaded, so you didn't have this constraint anymore.
+
+13:04.800 --> 13:06.720
+ So I think it's something really interesting
+
+13:06.720 --> 13:08.480
+ that I don't think has fully happened yet.
+
+13:09.280 --> 13:11.440
+ We're kind of jumping ahead a little bit to where we are,
+
+13:11.440 --> 13:14.960
+ but I think there's tons of formal innovation in music
+
+13:15.760 --> 13:19.040
+ that should happen now, that couldn't happen
+
+13:19.040 --> 13:22.000
+ when you needed to really adhere to the distribution constraints.
+
+13:22.000 --> 13:25.280
+ If you didn't adhere to that, you would get no distribution.
+
+13:25.280 --> 13:28.640
+ So Björk, for example, an Icelandic artist,
+
+13:28.640 --> 13:30.880
+ she made a full iPad app as an album.
+
+13:30.880 --> 13:34.960
+ That was very expensive, even though the App Store
+
+13:34.960 --> 13:38.080
+ has great distribution, she gets nowhere near the distribution
+
+13:38.080 --> 13:40.240
+ versus staying within the three minute format.
+
+13:41.120 --> 13:43.840
+ So I think now that music is fully digital
+
+13:43.840 --> 13:45.840
+ inside these streaming services,
+
+13:45.840 --> 13:48.320
+ there is the opportunity to change the format again
+
+13:48.320 --> 13:51.360
+ and allow creators to be much more creative
+
+13:51.360 --> 13:54.400
+ without limiting their distribution ability.
+
+13:54.400 --> 13:56.320
+ That's interesting that you're right.
+
+13:56.320 --> 13:59.680
+ You're right, it's surprising that we don't see
+
+13:59.680 --> 14:01.680
+ that taking advantage more often.
+
+14:01.680 --> 14:05.040
+ It's almost like the constraints of the distribution
+
+14:05.040 --> 14:08.720
+ from the 50s and 60s have molded the culture
+
+14:08.720 --> 14:12.000
+ to where we want the three to five minute song,
+
+14:12.800 --> 14:14.800
+ that anything else, not just...
+
+14:14.800 --> 14:17.840
+ So we want the song as consumers and as artists,
+
+14:18.640 --> 14:20.400
+ like, because I write a lot of music
+
+14:20.400 --> 14:22.720
+ and I never even thought about writing something
+
+14:22.720 --> 14:25.680
+ longer than 10 minutes.
+
+14:26.960 --> 14:28.720
+ It's really interesting that those constraints...
+
+14:28.720 --> 14:30.160
+ Because all your training data
+
+14:30.160 --> 14:31.920
+ has been three and a half minutes long, right?
+
+14:31.920 --> 14:32.400
+ It's right.
+
+14:32.960 --> 14:38.400
+ Okay, so yeah, digitization of data led to then MP3s.
+
+14:38.400 --> 14:40.400
+ Yeah, so I think you had this file then
+
+14:41.440 --> 14:43.120
+ that was distributed physically,
+
+14:43.680 --> 14:46.400
+ but then you had the components of digital distribution
+
+14:46.400 --> 14:49.680
+ and then the internet happened and there was this vacuum
+
+14:49.680 --> 14:52.560
+ where you had a format that could be digitally shipped
+
+14:52.560 --> 14:53.760
+ but there was no business model.
+
+14:54.320 --> 14:58.000
+ And then all these pirate networks happened.
+
+14:59.040 --> 15:01.600
+ Napster and in Sweden, Pirate Bay,
+
+15:01.600 --> 15:02.960
+ which was one of the biggest.
+
+15:02.960 --> 15:07.120
+ And I think from a consumer point of view,
+
+15:07.120 --> 15:10.560
+ which leads up to the inception of Spotify
+
+15:10.560 --> 15:11.680
+ from a consumer point of view,
+
+15:13.200 --> 15:16.240
+ consumers for the first time had this access model to music
+
+15:17.040 --> 15:21.200
+ where they could, without any marginal cost,
+
+15:21.200 --> 15:24.400
+ they could try different tracks.
+
+15:25.040 --> 15:26.720
+ You could use music in new ways.
+
+15:26.720 --> 15:27.840
+ There was no marginal cost.
+
+15:28.240 --> 15:30.080
+ And that was a fantastic consumer experience.
+
+15:30.080 --> 15:31.840
+ They have access to all the music ever made.
+
+15:31.840 --> 15:33.280
+ I think it was fantastic.
+
+15:33.840 --> 15:35.600
+ But it was also horrible for artists
+
+15:35.600 --> 15:37.280
+ because there was no business model around it.
+
+15:37.280 --> 15:38.640
+ So they didn't make any money.
+
+15:38.640 --> 15:43.840
+ So the user need almost drove the user interface
+
+15:43.840 --> 15:45.280
+ before there was a business model.
+
+15:45.760 --> 15:47.440
+ And then there were these download stores
+
+15:48.640 --> 15:50.400
+ that allowed you to download files.
+
+15:50.400 --> 15:51.920
+ Which was a solution,
+
+15:51.920 --> 15:53.920
+ but it didn't solve the access problem.
+
+15:53.920 --> 15:55.760
+ There was still a marginal cost of 99 cents
+
+15:55.760 --> 15:57.040
+ to try one more track.
+
+15:57.040 --> 16:00.400
+ And I think that heavily limits how you listen to music.
+
+16:00.400 --> 16:04.480
+ The example I always give is in Spotify,
+
+16:04.480 --> 16:07.440
+ a huge amount of people listen to music while they sleep,
+
+16:07.440 --> 16:09.120
+ while they go to sleep and while they sleep.
+
+16:10.000 --> 16:12.160
+ If that costed you 99 cents per three minutes,
+
+16:12.160 --> 16:13.760
+ you probably wouldn't do that.
+
+16:13.760 --> 16:15.760
+ And you would be much less adventurous
+
+16:15.760 --> 16:17.920
+ if there was a real dollar cost to explore music.
+
+16:17.920 --> 16:20.880
+ So the access model is interesting in that
+
+16:20.880 --> 16:22.320
+ it changes your music behavior.
+
+16:22.880 --> 16:25.600
+ You can take much more risk
+
+16:25.600 --> 16:27.120
+ because there's no marginal cost to it.
+
+16:28.240 --> 16:30.480
+ Maybe let me linger on piracy for a second.
+
+16:30.480 --> 16:32.880
+ Because I find, especially coming from Russia,
+
+16:33.840 --> 16:36.080
+ piracy is something that's very interesting.
+
+16:36.640 --> 16:41.520
+ To me, not me of course ever,
+
+16:41.520 --> 16:47.040
+ but I have friends who've partook in piracy
+
+16:47.040 --> 16:52.960
+ of music, software, TV shows, sporting events.
+
+16:53.680 --> 16:55.760
+ And usually, to me, what that shows
+
+16:55.760 --> 16:59.040
+ is not that they can actually pay the money
+
+16:59.600 --> 17:01.040
+ and they're not trying to save money.
+
+17:01.920 --> 17:04.000
+ They're choosing the best experience.
+
+17:05.120 --> 17:07.520
+ So what to me, piracy shows
+
+17:07.520 --> 17:09.920
+ is a business opportunity in all these domains.
+
+17:09.920 --> 17:12.480
+ And that's where I think you're right.
+
+17:12.480 --> 17:14.880
+ Spotify stepped in is basically,
+
+17:14.880 --> 17:17.120
+ piracy is an experience.
+
+17:17.120 --> 17:19.600
+ You can explore, find music you like.
+
+17:20.240 --> 17:24.320
+ And actually, the interface of piracy is horrible.
+
+17:24.960 --> 17:26.800
+ Because it's, I mean...
+
+17:26.800 --> 17:30.960
+ Bad metadata, long download times, all kinds of stuff.
+
+17:30.960 --> 17:33.040
+ And what Spotify does is basically
+
+17:34.880 --> 17:36.160
+ first, rewards artists,
+
+17:36.160 --> 17:38.560
+ and second, makes the experience
+
+17:38.560 --> 17:40.080
+ of exploring music much better.
+
+17:40.080 --> 17:43.920
+ I mean, the same is true, I think, for movies and so on.
+
+17:43.920 --> 17:46.960
+ Piracy reveals, in the software space, for example,
+
+17:46.960 --> 17:49.760
+ I'm a huge user and fan of Adobe products.
+
+17:50.480 --> 17:53.600
+ And there was much more incentive
+
+17:53.600 --> 17:55.360
+ to pirate Adobe products
+
+17:55.360 --> 17:57.680
+ before they went to a monthly subscription plan.
+
+17:58.320 --> 18:01.040
+ And now, all of the said friends
+
+18:01.600 --> 18:05.040
+ that used to pirate Adobe products that I know,
+
+18:05.040 --> 18:08.000
+ now actually pay, gladly, for the monthly subscription.
+
+18:08.000 --> 18:09.280
+ Yeah, I think you're right.
+
+18:09.280 --> 18:11.520
+ I think it's a sign of an opportunity
+
+18:11.520 --> 18:12.960
+ for product development.
+
+18:12.960 --> 18:17.760
+ And that sometimes there's a product market fit
+
+18:17.760 --> 18:21.360
+ before there's a business model fit in product development.
+
+18:21.360 --> 18:23.200
+ I think that's a sign of it.
+
+18:23.200 --> 18:25.760
+ In Sweden, I think it was a bit of both.
+
+18:25.760 --> 18:29.680
+ There was a culture where we even had
+
+18:29.680 --> 18:32.000
+ a political party called the Pirate Party.
+
+18:32.000 --> 18:35.120
+ And this was during the time when people said that
+
+18:35.120 --> 18:36.640
+ information should be free.
+
+18:36.640 --> 18:39.360
+ It was somehow wrong to charge for ones and zeros.
+
+18:39.360 --> 18:42.480
+ So I think people felt that artists
+
+18:42.480 --> 18:44.720
+ should probably make some money somehow else
+
+18:44.720 --> 18:46.240
+ in concerts or something.
+
+18:46.240 --> 18:49.280
+ So at least in Sweden, it was part really social acceptance
+
+18:49.280 --> 18:51.120
+ even at the political level.
+
+18:51.120 --> 18:55.120
+ But that also forced Spotify to compete with free,
+
+18:57.120 --> 18:58.800
+ which I don't think could have happened
+
+18:58.800 --> 19:00.080
+ anywhere else in the world.
+
+19:00.080 --> 19:02.960
+ The music industry needed to be doing bad enough
+
+19:02.960 --> 19:04.400
+ to take that risk.
+
+19:04.400 --> 19:06.240
+ And Sweden was like the perfect testing ground.
+
+19:06.240 --> 19:10.960
+ It had government funded high bandwidth, low latency broadband,
+
+19:10.960 --> 19:12.880
+ which meant that the product would work.
+
+19:12.880 --> 19:15.520
+ And it was also, there was no music revenue anyway.
+
+19:15.520 --> 19:16.800
+ So they were kind of like,
+
+19:16.800 --> 19:19.040
+ I don't think this is going to work, but why not?
+
+19:20.320 --> 19:22.640
+ So this product is one that I don't think could have happened
+
+19:22.640 --> 19:24.800
+ in America, the world's largest music market, for example.
+
+19:24.800 --> 19:27.040
+ So how do you compete with free?
+
+19:27.040 --> 19:29.840
+ Because that's an interesting world of the internet
+
+19:29.840 --> 19:32.960
+ where most people don't like to pay for things.
+
+19:32.960 --> 19:37.120
+ So Spotify steps in and tries to, yes, compete with free.
+
+19:37.120 --> 19:38.320
+ How do you do it?
+
+19:38.320 --> 19:39.760
+ So I think two things.
+
+19:39.760 --> 19:43.360
+ One is people are starting to pay for things on the internet.
+
+19:43.360 --> 19:46.560
+ I think one way to think about it was that advertising
+
+19:46.560 --> 19:48.560
+ was the first business model
+
+19:48.560 --> 19:50.560
+ because no one would put the credit card on the internet.
+
+19:50.560 --> 19:52.720
+ Transactional with Amazon was the second.
+
+19:52.720 --> 19:54.320
+ And maybe subscription is the third.
+
+19:54.320 --> 19:57.520
+ And if you look offline, subscription is the biggest of those.
+
+19:57.520 --> 19:59.120
+ So that may still happen.
+
+19:59.120 --> 20:00.320
+ I think people are starting to pay.
+
+20:00.320 --> 20:03.120
+ But definitely back then, we needed to compete with free.
+
+20:03.120 --> 20:04.960
+ And the first thing you need to do is obviously
+
+20:04.960 --> 20:06.960
+ to lower the price to free.
+
+20:06.960 --> 20:10.160
+ And then you need to be better somehow.
+
+20:10.160 --> 20:13.760
+ And the way that Spotify was better was on the user experience,
+
+20:13.760 --> 20:19.760
+ on the actual performance, the latency of, you know,
+
+20:19.760 --> 20:24.560
+ even if you had high band with broadband,
+
+20:24.560 --> 20:27.360
+ it would still take you 30 seconds to a minute
+
+20:27.360 --> 20:28.960
+ to download one of these tracks.
+
+20:28.960 --> 20:31.360
+ So the Spotify experience of starting within the
+
+20:31.360 --> 20:34.560
+ perceptual limit of immediacy, about 250 milliseconds,
+
+20:34.560 --> 20:37.360
+ meant that the whole trick was,
+
+20:37.360 --> 20:39.760
+ it felt as if you had downloaded all of Pirate Bay.
+
+20:39.760 --> 20:40.960
+ It was on your hard drive.
+
+20:40.960 --> 20:43.360
+ It was that fast, even though it wasn't.
+
+20:43.360 --> 20:44.960
+ And it was still free.
+
+20:44.960 --> 20:48.960
+ But somehow you were actually still being a legal citizen.
+
+20:48.960 --> 20:52.960
+ That was the trick that Spotify managed to pull off.
+
+20:52.960 --> 20:56.560
+ So I've actually heard you say this or write this.
+
+20:56.560 --> 20:58.960
+ And I was surprised that I wasn't aware of it,
+
+20:58.960 --> 21:00.560
+ because I just took it for granted.
+
+21:00.560 --> 21:02.560
+ You know, whenever an awesome thing comes along,
+
+21:02.560 --> 21:04.560
+ you just like, oh, of course it has to be this way.
+
+21:04.560 --> 21:06.560
+ That's exactly right.
+
+21:06.560 --> 21:08.560
+ That it felt like the entire world's libraries
+
+21:08.560 --> 21:12.560
+ at my fingertips because of that latency being reduced.
+
+21:12.560 --> 21:16.560
+ What was the technical challenge in reducing the late?
+
+21:16.560 --> 21:20.560
+ So there was a group of really, really talented engineers.
+
+21:20.560 --> 21:22.560
+ One of them called Ludwig Strigius.
+
+21:22.560 --> 21:26.560
+ He wrote the, actually from Gothenburg,
+
+21:26.560 --> 21:30.560
+ he wrote the initial, the UTorrent Clients,
+
+21:30.560 --> 21:32.560
+ which is kind of an interesting backstory to Spotify,
+
+21:32.560 --> 21:36.560
+ you know, that we have one of the top developers
+
+21:36.560 --> 21:38.560
+ from BitTorrent Clients as well.
+
+21:38.560 --> 21:42.560
+ So he wrote UTorrent, the world's smallest BitTorrent Clients.
+
+21:42.560 --> 21:47.560
+ And then he was acquired very early by Daniel and Martin,
+
+21:47.560 --> 21:50.560
+ who founded Spotify, and they actually sold the UTorrent Client
+
+21:50.560 --> 21:52.560
+ to BitTorrent, but kept Ludwig.
+
+21:52.560 --> 21:58.560
+ So Spotify had a lot of experience within peer to peer networking.
+
+21:58.560 --> 22:02.560
+ So the original innovation was a distribution innovation,
+
+22:02.560 --> 22:05.560
+ where Spotify built an end to end media distribution system.
+
+22:05.560 --> 22:08.560
+ Up until only a few years ago, we actually hosted all the music ourselves.
+
+22:08.560 --> 22:10.560
+ So we had both the server side and the client,
+
+22:10.560 --> 22:14.560
+ and that meant that we could do things such as having a peer to peer solution
+
+22:14.560 --> 22:17.560
+ to use local caching on the client side,
+
+22:17.560 --> 22:20.560
+ because back then the world was mostly desktop.
+
+22:20.560 --> 22:24.560
+ But we could also do things like hack the TCP protocols,
+
+22:24.560 --> 22:28.560
+ things like Nagle's algorithm for kind of exponential back off,
+
+22:28.560 --> 22:32.560
+ or ramp up and just go full throttle and optimize for latency
+
+22:32.560 --> 22:34.560
+ at the cost of bandwidth.
+
+22:34.560 --> 22:38.560
+ And all of this end to end control meant that we could do
+
+22:38.560 --> 22:41.560
+ an experience that felt like a step change.
+
+22:41.560 --> 22:45.560
+ These days, we actually are on on GCP.
+
+22:45.560 --> 22:48.560
+ We don't host our own stuff, and everyone is really fast these days.
+
+22:48.560 --> 22:50.560
+ So that was the initial competitive advantage,
+
+22:50.560 --> 22:52.560
+ but then obviously you have to move on over time.
+
+22:52.560 --> 22:55.560
+ And that was over 10 years ago, right?
+
+22:55.560 --> 22:58.560
+ That was in 2008, the product was launched in Sweden.
+
+22:58.560 --> 23:00.560
+ It was in a beta, I think, 2007.
+
+23:00.560 --> 23:02.560
+ And it was on the desktop, right?
+
+23:02.560 --> 23:03.560
+ It was desktop only.
+
+23:03.560 --> 23:04.560
+ There's no phone.
+
+23:04.560 --> 23:05.560
+ There was no phone.
+
+23:05.560 --> 23:08.560
+ The iPhone came out in 2008,
+
+23:08.560 --> 23:11.560
+ but the App Store came out one year later, I think.
+
+23:11.560 --> 23:14.560
+ So the writing was on the wall, but there was no phone yet.
+
+23:14.560 --> 23:19.560
+ You've mentioned that people would use Spotify
+
+23:19.560 --> 23:20.560
+ to discover the songs they like,
+
+23:20.560 --> 23:23.560
+ and then they would torrent those songs
+
+23:23.560 --> 23:26.560
+ so they can copy it to their phone.
+
+23:26.560 --> 23:27.560
+ Just hilarious.
+
+23:27.560 --> 23:28.560
+ Exactly.
+
+23:28.560 --> 23:29.560
+ Or not torrent.
+
+23:29.560 --> 23:34.560
+ Seriously, piracy does seem to be a good guide
+
+23:34.560 --> 23:36.560
+ for business models.
+
+23:36.560 --> 23:37.560
+ Video content.
+
+23:37.560 --> 23:40.560
+ As far as I know, Spotify doesn't have video content.
+
+23:40.560 --> 23:42.560
+ Well, we do have music videos,
+
+23:42.560 --> 23:44.560
+ and we do have videos on the service,
+
+23:44.560 --> 23:46.560
+ but the way we think about ourselves is that
+
+23:46.560 --> 23:48.560
+ we're an audio service,
+
+23:48.560 --> 23:52.560
+ and we think that if you look at the amount of time
+
+23:52.560 --> 23:53.560
+ that people spend on audio,
+
+23:53.560 --> 23:56.560
+ it's actually very similar to the amount of time
+
+23:56.560 --> 23:57.560
+ that people spend on video.
+
+23:57.560 --> 24:01.560
+ So the opportunity should be equally big,
+
+24:01.560 --> 24:02.560
+ but today it's not at all valued.
+
+24:02.560 --> 24:04.560
+ Video is valued much higher.
+
+24:04.560 --> 24:07.560
+ So we think it's basically completely undervalued.
+
+24:07.560 --> 24:09.560
+ We think of ourselves as an audio service,
+
+24:09.560 --> 24:12.560
+ but within that audio service, I think video
+
+24:12.560 --> 24:13.560
+ can make a lot of sense.
+
+24:13.560 --> 24:16.560
+ I think when you're discovering an artist,
+
+24:16.560 --> 24:17.560
+ you probably do want to see them
+
+24:17.560 --> 24:18.560
+ and understand who they are,
+
+24:18.560 --> 24:20.560
+ to understand their identity.
+
+24:20.560 --> 24:21.560
+ Do you want to see that video every time?
+
+24:21.560 --> 24:22.560
+ No.
+
+24:22.560 --> 24:24.560
+ 90% of the time the phone is going to be in your pocket.
+
+24:24.560 --> 24:26.560
+ For podcasters, you use video.
+
+24:26.560 --> 24:28.560
+ I think that can make a ton of sense.
+
+24:28.560 --> 24:29.560
+ So we do have video,
+
+24:29.560 --> 24:31.560
+ but we're an audio service where,
+
+24:31.560 --> 24:33.560
+ think of it as we call it internally,
+
+24:33.560 --> 24:34.560
+ backgroundable video.
+
+24:34.560 --> 24:35.560
+ Video that is helpful,
+
+24:35.560 --> 24:38.560
+ but isn't the driver of the narrative.
+
+24:38.560 --> 24:42.560
+ I think also if you look at YouTube,
+
+24:42.560 --> 24:43.560
+ the way people,
+
+24:43.560 --> 24:47.560
+ there's quite a few folks who listen to music on YouTube.
+
+24:47.560 --> 24:48.560
+ So in some sense,
+
+24:48.560 --> 24:52.560
+ YouTube is a bit of a competitor to Spotify,
+
+24:52.560 --> 24:55.560
+ which is very strange to me that people use YouTube
+
+24:55.560 --> 24:56.560
+ to listen to music.
+
+24:56.560 --> 24:59.560
+ They play essentially the music videos, right?
+
+24:59.560 --> 25:02.560
+ But don't watch the videos and put it in their pocket.
+
+25:02.560 --> 25:07.560
+ Well, I think it's similar to what
+
+25:07.560 --> 25:11.560
+ strangely maybe it's similar to what we were
+
+25:11.560 --> 25:13.560
+ for the Piracy Networks,
+
+25:13.560 --> 25:17.560
+ where YouTube for historical reasons
+
+25:17.560 --> 25:20.560
+ have a lot of music videos.
+
+25:20.560 --> 25:21.560
+ So you use,
+
+25:21.560 --> 25:23.560
+ people use YouTube for a lot of the discovery part
+
+25:23.560 --> 25:24.560
+ of the process, I think.
+
+25:24.560 --> 25:26.560
+ But then it's not a really good
+
+25:26.560 --> 25:28.560
+ sort of quote unquote MP3 player,
+
+25:28.560 --> 25:29.560
+ because it doesn't even background.
+
+25:29.560 --> 25:31.560
+ Then you have to keep the app in the foreground.
+
+25:31.560 --> 25:32.560
+ So the consumption,
+
+25:32.560 --> 25:34.560
+ it's not a good consumption tool,
+
+25:34.560 --> 25:35.560
+ but it's a decently good discovery.
+
+25:35.560 --> 25:37.560
+ I mean, I think YouTube is fantastic products.
+
+25:37.560 --> 25:39.560
+ And I use it for all kinds of purposes.
+
+25:39.560 --> 25:40.560
+ That's true.
+
+25:40.560 --> 25:42.560
+ If I were to admit something,
+
+25:42.560 --> 25:44.560
+ I do use YouTube a little bit for the discovery,
+
+25:44.560 --> 25:46.560
+ to assist in the discovery process of songs.
+
+25:46.560 --> 25:48.560
+ And then if I like it,
+
+25:48.560 --> 25:50.560
+ I'll add it to Spotify.
+
+25:50.560 --> 25:51.560
+ But that's okay.
+
+25:51.560 --> 25:52.560
+ That's okay with us.
+
+25:52.560 --> 25:53.560
+ Okay.
+
+25:53.560 --> 25:55.560
+ So sorry, we're jumping around a little bit.
+
+25:55.560 --> 25:58.560
+ So this kind of incredible,
+
+25:58.560 --> 25:59.560
+ you look at Napster,
+
+25:59.560 --> 26:01.560
+ you look at the early days of Spotify.
+
+26:01.560 --> 26:02.560
+ How do you,
+
+26:02.560 --> 26:04.560
+ one fascinating point is how do you grow
+
+26:04.560 --> 26:05.560
+ a user base?
+
+26:05.560 --> 26:07.560
+ So you're there in Sweden.
+
+26:07.560 --> 26:09.560
+ You have an idea.
+
+26:09.560 --> 26:12.560
+ I saw the initial sketches that looked terrible.
+
+26:12.560 --> 26:14.560
+ How do you grow a user base
+
+26:14.560 --> 26:18.560
+ from a few folks to millions?
+
+26:18.560 --> 26:21.560
+ I think there are a bunch of tactical answers.
+
+26:21.560 --> 26:22.560
+ So first of all,
+
+26:22.560 --> 26:23.560
+ I think you need a great product.
+
+26:23.560 --> 26:25.560
+ I don't think you take a bad product
+
+26:25.560 --> 26:29.560
+ and market it to be successful.
+
+26:29.560 --> 26:30.560
+ So you need a great product.
+
+26:30.560 --> 26:31.560
+ Sorry to interrupt,
+
+26:31.560 --> 26:33.560
+ but it's a totally new way to listen to music.
+
+26:33.560 --> 26:34.560
+ So it's not just,
+
+26:34.560 --> 26:38.560
+ did people realize immediately that Spotify is a great product?
+
+26:38.560 --> 26:39.560
+ I think they did.
+
+26:39.560 --> 26:41.560
+ So back to the point of piracy,
+
+26:41.560 --> 26:44.560
+ it was a totally new way to listen to music legally,
+
+26:44.560 --> 26:47.560
+ but people had been used to the access model in Sweden
+
+26:47.560 --> 26:49.560
+ and the rest of the world for a long time through piracy.
+
+26:49.560 --> 26:51.560
+ So one way to think about Spotify,
+
+26:51.560 --> 26:53.560
+ it was just legal and fast piracy.
+
+26:53.560 --> 26:55.560
+ And so people have been using it for a long time.
+
+26:55.560 --> 26:57.560
+ So they weren't alien to it.
+
+26:57.560 --> 27:00.560
+ They didn't really understand how it could be legal
+
+27:00.560 --> 27:03.560
+ because it seemed too fast and too good to be true,
+
+27:03.560 --> 27:05.560
+ which I think is a great product proposition
+
+27:05.560 --> 27:07.560
+ if you can be too good to be true.
+
+27:07.560 --> 27:09.560
+ But what I saw again and again
+
+27:09.560 --> 27:10.560
+ was people showing each other,
+
+27:10.560 --> 27:12.560
+ clicking the song, showing how fast it started
+
+27:12.560 --> 27:14.560
+ and say, can you believe this?
+
+27:14.560 --> 27:17.560
+ So I really think it was about speed.
+
+27:17.560 --> 27:20.560
+ Then we also had an invite program
+
+27:20.560 --> 27:22.560
+ that was really meant for scaling
+
+27:22.560 --> 27:24.560
+ because we hosted our own servers.
+
+27:24.560 --> 27:26.560
+ We needed to control scaling,
+
+27:26.560 --> 27:28.560
+ but that built a lot of expectation
+
+27:28.560 --> 27:30.560
+ and I don't want to say hype
+
+27:30.560 --> 27:34.560
+ because hype implies that it wasn't true.
+
+27:34.560 --> 27:37.560
+ Expectations, excitement around the product.
+
+27:37.560 --> 27:40.560
+ And we replicated that when we launched in the US.
+
+27:40.560 --> 27:42.560
+ We also built up an invite only program first.
+
+27:42.560 --> 27:44.560
+ There are lots of tactics,
+
+27:44.560 --> 27:46.560
+ but I think you need a great product
+
+27:46.560 --> 27:48.560
+ to solve some problem.
+
+27:48.560 --> 27:51.560
+ And basically the key innovation,
+
+27:51.560 --> 27:54.560
+ there was technology, but on a meta level,
+
+27:54.560 --> 27:56.560
+ the innovation was really the access model
+
+27:56.560 --> 27:58.560
+ versus the ownership model.
+
+27:58.560 --> 28:00.560
+ And that was tricky.
+
+28:00.560 --> 28:04.560
+ A lot of people said that they wanted to own their music.
+
+28:04.560 --> 28:07.560
+ They would never kind of rent it or borrow it.
+
+28:07.560 --> 28:09.560
+ But I think the fact that we had a free tier
+
+28:09.560 --> 28:12.560
+ which meant that you get to keep this music for life as well
+
+28:12.560 --> 28:14.560
+ helped quite a lot.
+
+28:14.560 --> 28:17.560
+ So this is an interesting psychological point
+
+28:17.560 --> 28:19.560
+ that maybe you can speak to.
+
+28:19.560 --> 28:21.560
+ It was a big shift for me.
+
+28:21.560 --> 28:25.560
+ It's almost like to go to therapy for this.
+
+28:25.560 --> 28:29.560
+ I think I would describe my early listening experience
+
+28:29.560 --> 28:31.560
+ and I think a lot of my friends do,
+
+28:31.560 --> 28:33.560
+ is basically hoarding music.
+
+28:33.560 --> 28:36.560
+ As you're slowly one song by one song,
+
+28:36.560 --> 28:37.560
+ or maybe albums,
+
+28:37.560 --> 28:40.560
+ gathering a collection of music that you love.
+
+28:40.560 --> 28:42.560
+ And you own it.
+
+28:42.560 --> 28:44.560
+ Especially with CDs or tape,
+
+28:44.560 --> 28:46.560
+ you physically had it.
+
+28:46.560 --> 28:48.560
+ And what Spotify,
+
+28:48.560 --> 28:50.560
+ what I had to come to grips with,
+
+28:50.560 --> 28:52.560
+ and it was kind of liberating actually,
+
+28:52.560 --> 28:55.560
+ is to throw away all the music.
+
+28:55.560 --> 28:58.560
+ I've had this therapy session with lots of people.
+
+28:58.560 --> 29:00.560
+ And I think the mental trick is,
+
+29:00.560 --> 29:02.560
+ so actually we've seen the user data.
+
+29:02.560 --> 29:03.560
+ When Spotify started,
+
+29:03.560 --> 29:05.560
+ a lot of people did the exact same thing.
+
+29:05.560 --> 29:06.560
+ They started hoarding,
+
+29:06.560 --> 29:09.560
+ as if the music would disappear.
+
+29:09.560 --> 29:11.560
+ Almost the equivalent of downloading.
+
+29:11.560 --> 29:14.560
+ And so we had these playlists that had limits
+
+29:14.560 --> 29:16.560
+ of a few hundred thousand tracks
+
+29:16.560 --> 29:18.560
+ and we figured no one would ever.
+
+29:18.560 --> 29:19.560
+ Well, they do.
+
+29:19.560 --> 29:21.560
+ It's in hundreds and hundreds of thousands of tracks.
+
+29:21.560 --> 29:23.560
+ And to this day,
+
+29:23.560 --> 29:25.560
+ some people want to actually save,
+
+29:25.560 --> 29:26.560
+ quote unquote,
+
+29:26.560 --> 29:27.560
+ and play the entire catalog.
+
+29:27.560 --> 29:29.560
+ But I think that the therapy session
+
+29:29.560 --> 29:31.560
+ goes something like,
+
+29:31.560 --> 29:34.560
+ instead of throwing away your music,
+
+29:34.560 --> 29:36.560
+ if you took your files
+
+29:36.560 --> 29:39.560
+ and you stored them in a locker at Google,
+
+29:39.560 --> 29:40.560
+ it'd be a streaming service.
+
+29:40.560 --> 29:41.560
+ It's just that in that locker,
+
+29:41.560 --> 29:43.560
+ you have all the world's music now for free.
+
+29:43.560 --> 29:44.560
+ So instead of giving away your music,
+
+29:44.560 --> 29:46.560
+ you got all the music.
+
+29:46.560 --> 29:47.560
+ It's yours.
+
+29:47.560 --> 29:48.560
+ You could think of it as having a copy
+
+29:48.560 --> 29:50.560
+ of the world's catalog there forever.
+
+29:50.560 --> 29:53.560
+ So you actually got more music instead of less.
+
+29:53.560 --> 29:56.560
+ It's just that you just took that hard disk
+
+29:56.560 --> 29:59.560
+ and you sent it to someone who stored it for you.
+
+29:59.560 --> 30:01.560
+ And once you go through that mental journey of,
+
+30:01.560 --> 30:03.560
+ like, still my files, they're just over there.
+
+30:03.560 --> 30:06.560
+ And I just have 40 million or 50 million or something now.
+
+30:06.560 --> 30:08.560
+ Then people are like, okay, that's good.
+
+30:08.560 --> 30:10.560
+ The problem is, I think,
+
+30:10.560 --> 30:12.560
+ because you paid us a subscription,
+
+30:12.560 --> 30:14.560
+ if we hadn't had the free tier,
+
+30:14.560 --> 30:15.560
+ where you would feel like,
+
+30:15.560 --> 30:16.560
+ even if I don't want to pay anymore,
+
+30:16.560 --> 30:18.560
+ I still get to keep them.
+
+30:18.560 --> 30:19.560
+ You keep your playlists forever.
+
+30:19.560 --> 30:21.560
+ They don't disappear even though you stop paying.
+
+30:21.560 --> 30:23.560
+ I think that was really important.
+
+30:23.560 --> 30:25.560
+ If we would have started as, you know,
+
+30:25.560 --> 30:27.560
+ you can put in all this time,
+
+30:27.560 --> 30:29.560
+ but if you stop paying, you lose all your work.
+
+30:29.560 --> 30:31.560
+ I think that would have been a big challenge
+
+30:31.560 --> 30:33.560
+ and was the big challenge for a lot of our competitors.
+
+30:33.560 --> 30:35.560
+ That's another reason why I think the free tier
+
+30:35.560 --> 30:36.560
+ is really important,
+
+30:36.560 --> 30:38.560
+ that people need to feel the security
+
+30:38.560 --> 30:40.560
+ that the work they put in, it will never disappear,
+
+30:40.560 --> 30:42.560
+ even if they decide not to pay.
+
+30:42.560 --> 30:44.560
+ I like how you put the work you put in.
+
+30:44.560 --> 30:46.560
+ I actually stopped even thinking of it that way.
+
+30:46.560 --> 30:49.560
+ Spotify taught me to just enjoy music
+
+30:49.560 --> 30:53.560
+ as opposed to what I was doing before,
+
+30:53.560 --> 30:57.560
+ which is like, in an unhealthy way, hoarding music.
+
+30:57.560 --> 31:00.560
+ Which I found that because I was doing that,
+
+31:00.560 --> 31:03.560
+ I was listening to a small selection of songs
+
+31:03.560 --> 31:06.560
+ way too much to where I was getting sick of them.
+
+31:06.560 --> 31:09.560
+ Whereas Spotify, the more liberating kind of approach,
+
+31:09.560 --> 31:11.560
+ I was just enjoying, of course,
+
+31:11.560 --> 31:13.560
+ I listened to Stairway to Heaven over and over,
+
+31:13.560 --> 31:16.560
+ but because of the extra variety,
+
+31:16.560 --> 31:18.560
+ I don't get as sick of them.
+
+31:18.560 --> 31:21.560
+ There's an interesting statistic I saw,
+
+31:21.560 --> 31:24.560
+ so Spotify has, maybe you can correct me,
+
+31:24.560 --> 31:27.560
+ but over 50 million songs, tracks,
+
+31:27.560 --> 31:31.560
+ and over 3 billion playlists.
+
+31:31.560 --> 31:35.560
+ So 50 million songs and 3 billion playlists.
+
+31:35.560 --> 31:38.560
+ 60 times more playlists than songs.
+
+31:38.560 --> 31:40.560
+ What do you make of that?
+
+31:40.560 --> 31:43.560
+ So the way I think about it is that
+
+31:43.560 --> 31:48.560
+ from a statistical machine learning point of view,
+
+31:48.560 --> 31:50.560
+ you have all these,
+
+31:50.560 --> 31:52.560
+ if you want to think about reinforcement learning,
+
+31:52.560 --> 31:54.560
+ you have this state space of all the tracks,
+
+31:54.560 --> 31:58.560
+ and you can take different journeys through this world.
+
+31:58.560 --> 32:02.560
+ And I think of these as like people
+
+32:02.560 --> 32:05.560
+ helping themselves and each other,
+
+32:05.560 --> 32:08.560
+ creating interesting vectors through this space of tracks.
+
+32:08.560 --> 32:11.560
+ And then it's not so surprising that across
+
+32:11.560 --> 32:14.560
+ many tens of millions of atomic units,
+
+32:14.560 --> 32:17.560
+ there will be billions of paths that make sense.
+
+32:17.560 --> 32:20.560
+ And we're probably pretty quite far away from
+
+32:20.560 --> 32:22.560
+ having found all of them.
+
+32:22.560 --> 32:25.560
+ So kind of our job now is,
+
+32:25.560 --> 32:28.560
+ when Spotify started, it was really a search box
+
+32:28.560 --> 32:30.560
+ that was for the time pretty powerful,
+
+32:30.560 --> 32:33.560
+ and then I like to refer to this programming language
+
+32:33.560 --> 32:35.560
+ called playlisting, where if you,
+
+32:35.560 --> 32:37.560
+ as you probably were pretty good at music,
+
+32:37.560 --> 32:39.560
+ you knew your new releases, you knew your back catalog,
+
+32:39.560 --> 32:41.560
+ you knew you're starting with the heaven,
+
+32:41.560 --> 32:43.560
+ you could create a soundtrack for yourself
+
+32:43.560 --> 32:45.560
+ using this playlisting tool that's like metaprogramming language
+
+32:45.560 --> 32:47.560
+ for music to soundtrack your life.
+
+32:47.560 --> 32:49.560
+ And people who are good at music,
+
+32:49.560 --> 32:51.560
+ it's back to how do you scale the product.
+
+32:51.560 --> 32:53.560
+ For people who are good at music,
+
+32:53.560 --> 32:55.560
+ that wasn't actually enough.
+
+32:55.560 --> 32:57.560
+ If you had the catalog and a good search tool,
+
+32:57.560 --> 32:59.560
+ and you can create your own sessions,
+
+32:59.560 --> 33:02.560
+ you could create really good a soundtrack for your entire life.
+
+33:02.560 --> 33:05.560
+ Probably perfectly personalized because you did it yourself.
+
+33:05.560 --> 33:07.560
+ The problem was, many people aren't that good at music.
+
+33:07.560 --> 33:09.560
+ They just can't spend the time.
+
+33:09.560 --> 33:11.560
+ Even if you're very good at music, it's going to be hard to keep up.
+
+33:11.560 --> 33:14.560
+ So what we did to try to scale this
+
+33:14.560 --> 33:17.560
+ was to essentially try to build,
+
+33:17.560 --> 33:19.560
+ you can think of them as agents,
+
+33:19.560 --> 33:21.560
+ this friend that some people had
+
+33:21.560 --> 33:23.560
+ that helped them navigate this music catalog.
+
+33:23.560 --> 33:25.560
+ That's what we're trying to do for you.
+
+33:25.560 --> 33:30.560
+ But also, there is something like
+
+33:30.560 --> 33:34.560
+ 200 million active users on Spotify.
+
+33:34.560 --> 33:38.560
+ So from the machine learning perspective,
+
+33:38.560 --> 33:42.560
+ you have these 200 million people plus.
+
+33:42.560 --> 33:45.560
+ They're creating,
+
+33:45.560 --> 33:48.560
+ it's really interesting to think of playlists
+
+33:48.560 --> 33:52.560
+ as, I don't know if you meant it that way,
+
+33:52.560 --> 33:54.560
+ but it's almost like a programming language.
+
+33:54.560 --> 33:59.560
+ It's released a trace of exploration
+
+33:59.560 --> 34:03.560
+ of those individual agents, the listeners.
+
+34:03.560 --> 34:06.560
+ And you have all this new tracks coming in.
+
+34:06.560 --> 34:12.560
+ So it's a fascinating space that is ripe for machine learning.
+
+34:12.560 --> 34:18.560
+ So how can playlists be used as data
+
+34:18.560 --> 34:21.560
+ in terms of machine learning
+
+34:21.560 --> 34:24.560
+ to help Spotify organize the music?
+
+34:24.560 --> 34:27.560
+ So we found in our data,
+
+34:27.560 --> 34:30.560
+ not surprising that people who playlisted lots,
+
+34:30.560 --> 34:32.560
+ they retained much better.
+
+34:32.560 --> 34:34.560
+ We had a great experience.
+
+34:34.560 --> 34:37.560
+ And so our first attempt was to playlist for users.
+
+34:37.560 --> 34:40.560
+ And so we acquired this company called Tunigo of editors
+
+34:40.560 --> 34:43.560
+ and professional playlisters
+
+34:43.560 --> 34:47.560
+ and kind of leveraged the maximum of human intelligence
+
+34:47.560 --> 34:50.560
+ to help build kind of these vectors
+
+34:50.560 --> 34:53.560
+ through the track space for people.
+
+34:53.560 --> 34:55.560
+ And that brought in the product.
+
+34:55.560 --> 34:57.560
+ Then the obvious next,
+
+34:57.560 --> 34:59.560
+ and we used statistical means
+
+34:59.560 --> 35:02.560
+ where they could see when they created a playlist,
+
+35:02.560 --> 35:04.560
+ how did that playlist perform?
+
+35:04.560 --> 35:06.560
+ They could see skips of the songs,
+
+35:06.560 --> 35:08.560
+ they could see how the songs perform,
+
+35:08.560 --> 35:10.560
+ and they manually iterated the playlist
+
+35:10.560 --> 35:13.560
+ to maximize performance for a large group of people.
+
+35:13.560 --> 35:16.560
+ But there were never enough editors to playlists for you personally.
+
+35:16.560 --> 35:18.560
+ So the promise of machine learning
+
+35:18.560 --> 35:20.560
+ was to go from kind of group personalization,
+
+35:20.560 --> 35:23.560
+ using editors and tools and statistics
+
+35:23.560 --> 35:25.560
+ to individualization.
+
+35:25.560 --> 35:27.560
+ And then what's so interesting
+
+35:27.560 --> 35:29.560
+ about three billion playlists we have is,
+
+35:29.560 --> 35:31.560
+ the truth is we lucked out.
+
+35:31.560 --> 35:33.560
+ This was not a priori strategy,
+
+35:33.560 --> 35:35.560
+ as is often the case.
+
+35:35.560 --> 35:37.560
+ It looks really smart in hindsight,
+
+35:37.560 --> 35:39.560
+ but it was dumb luck.
+
+35:39.560 --> 35:41.560
+ We looked at these playlists
+
+35:41.560 --> 35:44.560
+ and we had some people in the company,
+
+35:44.560 --> 35:46.560
+ a person named Erik Bernhardtson,
+
+35:46.560 --> 35:48.560
+ who was really good at machine learning
+
+35:48.560 --> 35:51.560
+ already back then, in like 2007, 2008.
+
+35:51.560 --> 35:54.560
+ Back then it was mostly collaborative filtering and so forth,
+
+35:54.560 --> 35:57.560
+ we realized that what this is,
+
+35:57.560 --> 36:00.560
+ is people are grouping tracks for themselves
+
+36:00.560 --> 36:02.560
+ that have some semantic meaning to them.
+
+36:02.560 --> 36:04.560
+ And then they actually label it
+
+36:04.560 --> 36:06.560
+ with a playlist name as well.
+
+36:06.560 --> 36:09.560
+ So in a sense, people were grouping tracks
+
+36:09.560 --> 36:11.560
+ along semantic dimensions and labeling them.
+
+36:11.560 --> 36:14.560
+ And so could you use that information
+
+36:14.560 --> 36:18.560
+ to find that latent embedding?
+
+36:18.560 --> 36:21.560
+ And so we started playing around
+
+36:21.560 --> 36:23.560
+ with collaborative filtering
+
+36:23.560 --> 36:26.560
+ and we saw tremendous success with it.
+
+36:26.560 --> 36:30.560
+ Basically trying to extract some of these dimensions.
+
+36:30.560 --> 36:33.560
+ And if you think about it, it's not surprising at all.
+
+36:33.560 --> 36:35.560
+ It would be quite surprising
+
+36:35.560 --> 36:37.560
+ if playlists were actually random,
+
+36:37.560 --> 36:39.560
+ if they had no semantic meaning.
+
+36:39.560 --> 36:42.560
+ For most people, they grouped these tracks for some reason.
+
+36:42.560 --> 36:45.560
+ So we just happened across this incredible data set
+
+36:45.560 --> 36:48.560
+ where people had taken these tens of millions of tracks
+
+36:48.560 --> 36:52.560
+ and grouped them along different semantic vectors.
+
+36:52.560 --> 36:55.560
+ And the semantics being outside the individual user,
+
+36:55.560 --> 36:57.560
+ so it's some kind of universal.
+
+36:57.560 --> 36:59.560
+ There's a universal embedding
+
+36:59.560 --> 37:02.560
+ that holds across people on this earth.
+
+37:02.560 --> 37:05.560
+ Yes, I do think that the embeddings you find
+
+37:05.560 --> 37:08.560
+ are going to be reflective of the people who play listed.
+
+37:08.560 --> 37:11.560
+ So if you have a lot of indie lovers who play list
+
+37:11.560 --> 37:14.560
+ your embedding is going to perform better there.
+
+37:14.560 --> 37:17.560
+ But what we found was that, yes,
+
+37:17.560 --> 37:20.560
+ there were these latent similarities.
+
+37:20.560 --> 37:22.560
+ They were very powerful.
+
+37:22.560 --> 37:25.560
+ And it was interesting because
+
+37:25.560 --> 37:28.560
+ I think that the people who play listed the most initially
+
+37:28.560 --> 37:31.560
+ were the so called music aficionados
+
+37:31.560 --> 37:33.560
+ who were really into music.
+
+37:33.560 --> 37:35.560
+ And they often had a certain...
+
+37:35.560 --> 37:39.560
+ Their taste was often geared towards a certain type of music.
+
+37:39.560 --> 37:41.560
+ And so what surprised us,
+
+37:41.560 --> 37:43.560
+ if you look at the problem from the outside,
+
+37:43.560 --> 37:46.560
+ you might expect that the algorithms
+
+37:46.560 --> 37:49.560
+ would start performing best with mainstreamers first
+
+37:49.560 --> 37:52.560
+ and now feels like an easier problem to solve mainstream taste
+
+37:52.560 --> 37:54.560
+ than really particular taste.
+
+37:54.560 --> 37:56.560
+ It was a complete opposite for us.
+
+37:56.560 --> 37:58.560
+ The recommendations performed fantastically
+
+37:58.560 --> 38:01.560
+ for people who saw themselves as having very unique taste.
+
+38:01.560 --> 38:04.560
+ That's probably because all of them play listed
+
+38:04.560 --> 38:06.560
+ and they didn't perform so well for mainstreamers.
+
+38:06.560 --> 38:09.560
+ They actually thought they were a bit too particular
+
+38:09.560 --> 38:11.560
+ and unorthodox.
+
+38:11.560 --> 38:13.560
+ So we had a complete opposite of what we expected.
+
+38:13.560 --> 38:15.560
+ Success within the hardest problem first
+
+38:15.560 --> 38:18.560
+ and then had to try to scale to more mainstream recommendations.
+
+38:18.560 --> 38:21.560
+ So you've also acquired
+
+38:21.560 --> 38:23.560
+ Echo Nest
+
+38:23.560 --> 38:25.560
+ that analyzes song data.
+
+38:25.560 --> 38:27.560
+ So
+
+38:27.560 --> 38:29.560
+ in your view, maybe you can talk about
+
+38:29.560 --> 38:31.560
+ so what kind of data is there
+
+38:31.560 --> 38:33.560
+ from a machine learning perspective?
+
+38:33.560 --> 38:35.560
+ There's a huge amount,
+
+38:35.560 --> 38:37.560
+ what we're talking about, play listing
+
+38:37.560 --> 38:39.560
+ and just user data
+
+38:39.560 --> 38:42.560
+ of what people are listening to, the playlist they're constructing
+
+38:42.560 --> 38:44.560
+ and so on.
+
+38:44.560 --> 38:47.560
+ And then there is the actual data within a song
+
+38:47.560 --> 38:49.560
+ what makes a song,
+
+38:49.560 --> 38:52.560
+ I don't know, the actual waveforms.
+
+38:52.560 --> 38:55.560
+ How do you mix the two?
+
+38:55.560 --> 38:57.560
+ How much values are in each?
+
+38:57.560 --> 38:59.560
+ To me, it seems like user data
+
+38:59.560 --> 39:02.560
+ is a romantic notion
+
+39:02.560 --> 39:05.560
+ that the song itself would contain useful information
+
+39:05.560 --> 39:07.560
+ but if I were to guess,
+
+39:07.560 --> 39:09.560
+ user data would be much more powerful.
+
+39:09.560 --> 39:11.560
+ Playlists would be much more powerful.
+
+39:11.560 --> 39:14.560
+ Yeah, so we use both.
+
+39:14.560 --> 39:17.560
+ Our biggest success initially was with
+
+39:17.560 --> 39:20.560
+ playlist data without understanding
+
+39:20.560 --> 39:22.560
+ anything about the structure of the song.
+
+39:22.560 --> 39:24.560
+ But when we acquired the Echo Nest,
+
+39:24.560 --> 39:26.560
+ they had the inverse problem.
+
+39:26.560 --> 39:28.560
+ They actually didn't have any play data.
+
+39:28.560 --> 39:30.560
+ They were a provider of recommendations
+
+39:30.560 --> 39:32.560
+ but they didn't actually have any play data.
+
+39:32.560 --> 39:35.560
+ So they looked at the structure of songs
+
+39:35.560 --> 39:37.560
+ sonically
+
+39:37.560 --> 39:39.560
+ and they looked at Wikipedia for cultural references
+
+39:39.560 --> 39:41.560
+ and so forth, right?
+
+39:41.560 --> 39:43.560
+ And did a lot of NLU and so forth.
+
+39:43.560 --> 39:45.560
+ They had that skill into the company
+
+39:45.560 --> 39:48.560
+ and combined our user data
+
+39:48.560 --> 39:52.560
+ with their content based.
+
+39:52.560 --> 39:54.560
+ So you can think of it as we were user based
+
+39:54.560 --> 39:56.560
+ and they were content based in their recommendations.
+
+39:56.560 --> 39:58.560
+ And we combined those two.
+
+39:58.560 --> 40:00.560
+ And for some cases where you have a new song
+
+40:00.560 --> 40:02.560
+ that has no play data,
+
+40:02.560 --> 40:04.560
+ obviously you have to try to go by
+
+40:04.560 --> 40:06.560
+ either who the artist is
+
+40:06.560 --> 40:09.560
+ or the sonic information in the song
+
+40:09.560 --> 40:11.560
+ or what it's similar to.
+
+40:11.560 --> 40:13.560
+ And we do a lot in both.
+
+40:13.560 --> 40:15.560
+ But I would say yes.
+
+40:15.560 --> 40:17.560
+ The user data captures things that
+
+40:17.560 --> 40:19.560
+ have to do with culture in the greater society
+
+40:19.560 --> 40:21.560
+ that you would never see
+
+40:21.560 --> 40:23.560
+ in the content itself.
+
+40:23.560 --> 40:25.560
+ But that said, we have seen
+
+40:25.560 --> 40:27.560
+ we have a research lab in Paris
+
+40:27.560 --> 40:29.560
+ when we can talk about
+
+40:29.560 --> 40:31.560
+ more about that on
+
+40:31.560 --> 40:33.560
+ kind of machine learning on the creator side.
+
+40:33.560 --> 40:35.560
+ What it can do for creators, not just for the consumers.
+
+40:35.560 --> 40:37.560
+ But where we looked at
+
+40:37.560 --> 40:39.560
+ how does the structure of a song actually affect
+
+40:39.560 --> 40:41.560
+ the listening behavior.
+
+40:41.560 --> 40:43.560
+ And it turns out that
+
+40:43.560 --> 40:45.560
+ we can predict things like skips
+
+40:45.560 --> 40:47.560
+ based on the song itself.
+
+40:47.560 --> 40:49.560
+ We could say that
+
+40:49.560 --> 40:51.560
+ maybe you should move that chorus a bit
+
+40:51.560 --> 40:53.560
+ because your skip is going to go up here.
+
+40:53.560 --> 40:55.560
+ There is a lot of latent structure in the music
+
+40:55.560 --> 40:57.560
+ which is not surprising
+
+40:57.560 --> 40:59.560
+ because it is some sort of mind hack.
+
+40:59.560 --> 41:01.560
+ So there should be structure.
+
+41:01.560 --> 41:03.560
+ That's probably what we respond to.
+
+41:03.560 --> 41:05.560
+ You just blew my mind actually
+
+41:05.560 --> 41:07.560
+ from the creator perspective.
+
+41:07.560 --> 41:09.560
+ That probably most creators
+
+41:09.560 --> 41:11.560
+ are not taken advantage of.
+
+41:11.560 --> 41:13.560
+ So I have recently
+
+41:13.560 --> 41:15.560
+ got to interact with a few
+
+41:15.560 --> 41:17.560
+ folks, YouTubers
+
+41:17.560 --> 41:19.560
+ who are
+
+41:19.560 --> 41:21.560
+ obsessed with this idea
+
+41:21.560 --> 41:23.560
+ of what do I
+
+41:23.560 --> 41:25.560
+ do to make sure people
+
+41:25.560 --> 41:27.560
+ keep watching the video.
+
+41:27.560 --> 41:29.560
+ And then you look at the analytics
+
+41:29.560 --> 41:31.560
+ of which point do people turn it off
+
+41:31.560 --> 41:33.560
+ and so on. First of all,
+
+41:33.560 --> 41:35.560
+ I don't think that's healthy.
+
+41:35.560 --> 41:37.560
+ It's because you can do it a little too much.
+
+41:37.560 --> 41:39.560
+ But it is a really
+
+41:39.560 --> 41:41.560
+ powerful tool for helping the creative process.
+
+41:41.560 --> 41:43.560
+ You just made me
+
+41:43.560 --> 41:45.560
+ realize you could do the same thing for
+
+41:45.560 --> 41:47.560
+ creation of music.
+
+41:47.560 --> 41:49.560
+ So is that something you've looked
+
+41:49.560 --> 41:51.560
+ into?
+
+41:51.560 --> 41:53.560
+ Can you speak
+
+41:53.560 --> 41:55.560
+ to how much opportunity there is for that kind of thing?
+
+41:55.560 --> 41:57.560
+ I listened to the podcast
+
+41:57.560 --> 41:59.560
+ with Zirash and I thought it was
+
+41:59.560 --> 42:01.560
+ fantastic and reacted to the same thing
+
+42:01.560 --> 42:03.560
+ where he said he posted something
+
+42:03.560 --> 42:05.560
+ in the morning, immediately
+
+42:05.560 --> 42:07.560
+ watched the feedback where the drop off was
+
+42:07.560 --> 42:09.560
+ and then responded to that in the afternoon.
+
+42:09.560 --> 42:11.560
+ Which is quite different
+
+42:11.560 --> 42:13.560
+ from how people make podcasts, for example.
+
+42:13.560 --> 42:15.560
+ The feedback loop is almost
+
+42:15.560 --> 42:17.560
+ non existent. So if we
+
+42:17.560 --> 42:19.560
+ back out at one level, I think
+
+42:19.560 --> 42:21.560
+ actually both for music
+
+42:21.560 --> 42:23.560
+ and podcasts, which we also
+
+42:23.560 --> 42:25.560
+ do at Spotify, I think there's
+
+42:25.560 --> 42:27.560
+ tremendous opportunity just
+
+42:27.560 --> 42:29.560
+ for the creation workflow.
+
+42:29.560 --> 42:31.560
+ I think it's really interesting
+
+42:31.560 --> 42:33.560
+ speaking to you, because you're
+
+42:33.560 --> 42:35.560
+ a musician, a developer and a
+
+42:35.560 --> 42:37.560
+ podcaster, if you think about those
+
+42:37.560 --> 42:39.560
+ three different roles,
+
+42:39.560 --> 42:41.560
+ if you make the leap as a musician,
+
+42:41.560 --> 42:43.560
+ if you think about it
+
+42:43.560 --> 42:45.560
+ as a software tool chain, really,
+
+42:45.560 --> 42:47.560
+ your door with the stems,
+
+42:47.560 --> 42:49.560
+ that's the IDE, right?
+
+42:49.560 --> 42:51.560
+ That's where you work in source code format
+
+42:51.560 --> 42:53.560
+ with what you're creating.
+
+42:53.560 --> 42:55.560
+ Then you sit around and you play with that
+
+42:55.560 --> 42:57.560
+ and when you're happy you compile that thing into
+
+42:57.560 --> 42:59.560
+ some sort of, you know, AAC,
+
+42:59.560 --> 43:01.560
+ or something, you do that because
+
+43:01.560 --> 43:03.560
+ you get distribution. There are so many run times
+
+43:03.560 --> 43:05.560
+ for that MP3 across the world in car stairs and stuff.
+
+43:05.560 --> 43:07.560
+ So you kind of compile this executable and you ship it out
+
+43:07.560 --> 43:09.560
+ in kind of an old fashioned
+
+43:09.560 --> 43:11.560
+ box software analogy.
+
+43:11.560 --> 43:13.560
+ And then you hope for the best,
+
+43:13.560 --> 43:15.560
+ right? But as
+
+43:15.560 --> 43:17.560
+ a software developer,
+
+43:17.560 --> 43:19.560
+ you would never do that. First you go
+
+43:19.560 --> 43:21.560
+ on GitHub and you collaborate with other creators.
+
+43:21.560 --> 43:23.560
+ And then, you know,
+
+43:23.560 --> 43:25.560
+ you think it would be crazy to just ship one version
+
+43:25.560 --> 43:27.560
+ of your software without doing an A.B. test,
+
+43:27.560 --> 43:29.560
+ without any feedback loop.
+
+43:29.560 --> 43:31.560
+ And then, issue tracking.
+
+43:31.560 --> 43:33.560
+ Exactly. And then you would look at the
+
+43:33.560 --> 43:35.560
+ feedback loops and try to optimize that thing, right?
+
+43:35.560 --> 43:37.560
+ So I think if you think
+
+43:37.560 --> 43:39.560
+ about it as a very specific software tool chain,
+
+43:39.560 --> 43:41.560
+ it looks
+
+43:41.560 --> 43:43.560
+ quite arcane.
+
+43:43.560 --> 43:45.560
+ The tools that a music creator has versus
+
+43:45.560 --> 43:47.560
+ what a software developer has.
+
+43:47.560 --> 43:49.560
+ So that's kind of how we think about it.
+
+43:49.560 --> 43:51.560
+ Why wouldn't
+
+43:51.560 --> 43:53.560
+ a music creator
+
+43:53.560 --> 43:55.560
+ have something like GitHub where you could collaborate
+
+43:55.560 --> 43:57.560
+ much more easily? So we bought
+
+43:57.560 --> 43:59.560
+ this company called Soundtrap,
+
+43:59.560 --> 44:01.560
+ which has a kind of
+
+44:01.560 --> 44:03.560
+ Google Docs for music approach where you can
+
+44:03.560 --> 44:05.560
+ collaborate with other people on the kind of
+
+44:05.560 --> 44:07.560
+ source code format with Stems.
+
+44:07.560 --> 44:09.560
+ And I think introducing things like
+
+44:09.560 --> 44:11.560
+ AI tools there to help you
+
+44:11.560 --> 44:13.560
+ as you're creating music,
+
+44:13.560 --> 44:15.560
+ both in
+
+44:15.560 --> 44:17.560
+ helping you
+
+44:19.560 --> 44:21.560
+ put a component to your music,
+
+44:21.560 --> 44:23.560
+ like drums or something,
+
+44:23.560 --> 44:25.560
+ help you
+
+44:25.560 --> 44:27.560
+ master and mix automatically,
+
+44:27.560 --> 44:29.560
+ help you understand how this track will perform.
+
+44:29.560 --> 44:31.560
+ Exactly what you would expect as a software
+
+44:31.560 --> 44:33.560
+ developer. I think it makes a lot of sense.
+
+44:33.560 --> 44:35.560
+ And I think the same goes for
+
+44:35.560 --> 44:37.560
+ a podcaster. I think podcasters will expect
+
+44:37.560 --> 44:39.560
+ to have the same kind of feedback loop that Sirosh
+
+44:39.560 --> 44:41.560
+ has. Like,
+
+44:41.560 --> 44:43.560
+ why wouldn't you? Maybe it's not healthy, but
+
+44:43.560 --> 44:45.560
+ Sorry, I wanted to
+
+44:45.560 --> 44:47.560
+ criticize the fact because you can overdo it.
+
+44:47.560 --> 44:49.560
+ Because a lot of the
+
+44:49.560 --> 44:51.560
+ and we're in a new era
+
+44:51.560 --> 44:53.560
+ of that.
+
+44:53.560 --> 44:55.560
+ So you can become
+
+44:55.560 --> 44:57.560
+ addicted to it and
+
+44:57.560 --> 44:59.560
+ therefore
+
+44:59.560 --> 45:01.560
+ what people say you become a slave to the YouTube
+
+45:01.560 --> 45:03.560
+ algorithm.
+
+45:03.560 --> 45:05.560
+ It's always a danger
+
+45:05.560 --> 45:07.560
+ of a new technology as opposed to
+
+45:07.560 --> 45:09.560
+ say if you're creating a song
+
+45:09.560 --> 45:11.560
+ becoming too obsessed
+
+45:11.560 --> 45:13.560
+ about the
+
+45:13.560 --> 45:15.560
+ intro riff to the song
+
+45:15.560 --> 45:17.560
+ that keeps people listening versus
+
+45:17.560 --> 45:19.560
+ actually the entirety of the creation process. It's a balance.
+
+45:19.560 --> 45:21.560
+ But the fact that
+
+45:21.560 --> 45:23.560
+ there's zero, I mean you're blowing my mind right now
+
+45:23.560 --> 45:25.560
+ because you're
+
+45:25.560 --> 45:27.560
+ completely right that there's no
+
+45:27.560 --> 45:29.560
+ signal whatsoever. There's no feedback
+
+45:29.560 --> 45:31.560
+ whatsoever on the creation process
+
+45:31.560 --> 45:33.560
+ and musical podcasting
+
+45:33.560 --> 45:35.560
+ almost at all.
+
+45:35.560 --> 45:37.560
+ And are you saying
+
+45:37.560 --> 45:39.560
+ that Spotify
+
+45:39.560 --> 45:41.560
+ is hoping to help create tools
+
+45:41.560 --> 45:43.560
+ to, not tools, but
+
+45:43.560 --> 45:45.560
+ No, tools actually.
+
+45:45.560 --> 45:47.560
+ Actually tools for creators.
+
+45:47.560 --> 45:49.560
+ Absolutely.
+
+45:49.560 --> 45:51.560
+ So we have
+
+45:51.560 --> 45:53.560
+ we've made some acquisitions the last few years around music creation
+
+45:53.560 --> 45:55.560
+ this company called Soundtrap
+
+45:55.560 --> 45:57.560
+ which is a digital audio workstation
+
+45:57.560 --> 45:59.560
+ that is browser based
+
+45:59.560 --> 46:01.560
+ and their focus was really the Google Docs approach.
+
+46:01.560 --> 46:03.560
+ We can collaborate with people much more easily
+
+46:03.560 --> 46:05.560
+ than you could in previous tools.
+
+46:05.560 --> 46:07.560
+ So we have some of these tools
+
+46:07.560 --> 46:09.560
+ that we're working with that we want to make accessible
+
+46:09.560 --> 46:11.560
+ and then we can connect it
+
+46:11.560 --> 46:13.560
+ with our consumption data.
+
+46:13.560 --> 46:15.560
+ We can create this feedback loop where
+
+46:15.560 --> 46:17.560
+ we could help you understand
+
+46:17.560 --> 46:19.560
+ we could help you create
+
+46:19.560 --> 46:21.560
+ and help you understand how you will perform.
+
+46:21.560 --> 46:23.560
+ We also acquired this other company
+
+46:23.560 --> 46:25.560
+ with a podcasting called Anchor
+
+46:25.560 --> 46:27.560
+ which is one of the biggest podcasting tools
+
+46:27.560 --> 46:29.560
+ mobile focused.
+
+46:29.560 --> 46:31.560
+ So really focused on simple creation
+
+46:31.560 --> 46:33.560
+ or easy access to creation
+
+46:33.560 --> 46:35.560
+ but that also gives us this feedback loop
+
+46:35.560 --> 46:37.560
+ and even before that
+
+46:37.560 --> 46:39.560
+ we invested in something called
+
+46:39.560 --> 46:41.560
+ Spotify for Artists
+
+46:41.560 --> 46:43.560
+ and Spotify for Podcasters
+
+46:43.560 --> 46:45.560
+ which is an app that you can download
+
+46:45.560 --> 46:47.560
+ you can verify that you are that creator
+
+46:47.560 --> 46:49.560
+ and then you get
+
+46:49.560 --> 46:51.560
+ things that
+
+46:51.560 --> 46:53.560
+ software developers have had for years.
+
+46:53.560 --> 46:55.560
+ You can see where
+
+46:55.560 --> 46:57.560
+ if you look at your podcast for example on Spotify
+
+46:57.560 --> 46:59.560
+ or a song that you released
+
+46:59.560 --> 47:01.560
+ you can see how it's performing
+
+47:01.560 --> 47:03.560
+ which citizen it's performing in
+
+47:03.560 --> 47:05.560
+ who's listening to it, what's the demographic breakup
+
+47:05.560 --> 47:07.560
+ so similar in the sense that
+
+47:07.560 --> 47:09.560
+ you can understand how you're actually doing on the platform.
+
+47:09.560 --> 47:11.560
+ So we definitely want
+
+47:11.560 --> 47:13.560
+ to build tools. I think
+
+47:13.560 --> 47:15.560
+ you also interviewed
+
+47:15.560 --> 47:17.560
+ the head of research for Adobe
+
+47:17.560 --> 47:19.560
+ and I think that's
+
+47:19.560 --> 47:21.560
+ back to Photoshop that you like.
+
+47:21.560 --> 47:23.560
+ I think that's an interesting analogy as well.
+
+47:23.560 --> 47:25.560
+ Photoshop I think has been
+
+47:25.560 --> 47:27.560
+ very innovative in helping
+
+47:27.560 --> 47:29.560
+ photographers and artists
+
+47:29.560 --> 47:31.560
+ and I think there should be
+
+47:31.560 --> 47:33.560
+ the same kind of tools for
+
+47:33.560 --> 47:35.560
+ music creators where you could get
+
+47:35.560 --> 47:37.560
+ AI assistants for example as you're creating music
+
+47:37.560 --> 47:39.560
+ as you can do
+
+47:39.560 --> 47:41.560
+ with Adobe where you can
+
+47:41.560 --> 47:43.560
+ I want a sky over here and you can get help creating that sky.
+
+47:43.560 --> 47:45.560
+ The really fascinating thing is
+
+47:45.560 --> 47:47.560
+ what Adobe
+
+47:47.560 --> 47:49.560
+ doesn't have
+
+47:49.560 --> 47:51.560
+ is a distribution for the content
+
+47:51.560 --> 47:53.560
+ you create. So you don't have
+
+47:53.560 --> 47:55.560
+ the data of if I create
+
+47:55.560 --> 47:57.560
+ if I
+
+47:57.560 --> 47:59.560
+ you know whatever creation I make
+
+47:59.560 --> 48:01.560
+ in Photoshop or Premiere
+
+48:01.560 --> 48:03.560
+ I can't get like immediate feedback
+
+48:03.560 --> 48:05.560
+ like I can on YouTube for example about
+
+48:05.560 --> 48:07.560
+ the way people are responding
+
+48:07.560 --> 48:09.560
+ and if Spotify is creating those tools
+
+48:09.560 --> 48:11.560
+ that's a really exciting
+
+48:11.560 --> 48:13.560
+ actually world
+
+48:13.560 --> 48:15.560
+ but
+
+48:15.560 --> 48:17.560
+ let's talk a little about podcasts
+
+48:17.560 --> 48:19.560
+ so I have trouble
+
+48:19.560 --> 48:21.560
+ talking to one person
+
+48:21.560 --> 48:23.560
+ so it's a bit terrifying
+
+48:23.560 --> 48:25.560
+ and kind of hard to fathom
+
+48:25.560 --> 48:27.560
+ but on average
+
+48:27.560 --> 48:29.560
+ 60 to 100,000
+
+48:29.560 --> 48:31.560
+ people will listen to this episode
+
+48:31.560 --> 48:33.560
+ okay so
+
+48:33.560 --> 48:35.560
+ it's intimidating
+
+48:35.560 --> 48:37.560
+ so I hosted on Blueberry
+
+48:37.560 --> 48:39.560
+ I don't know if I'm pronouncing
+
+48:39.560 --> 48:41.560
+ that correctly actually
+
+48:41.560 --> 48:43.560
+ it looks like most people listen to it on Apple
+
+48:43.560 --> 48:45.560
+ Podcast, Cast Box and Pocket
+
+48:45.560 --> 48:47.560
+ Cast and only about
+
+48:47.560 --> 48:49.560
+ a thousand
+
+48:49.560 --> 48:51.560
+ listen on Spotify
+
+48:51.560 --> 48:53.560
+ just my podcast right
+
+48:53.560 --> 48:55.560
+ so
+
+48:55.560 --> 48:57.560
+ where
+
+48:57.560 --> 48:59.560
+ do you see a time when Spotify
+
+48:59.560 --> 49:01.560
+ will dominate this so Spotify
+
+49:01.560 --> 49:03.560
+ is relatively new
+
+49:03.560 --> 49:05.560
+ in podcasting
+
+49:05.560 --> 49:07.560
+ so yeah in podcasting
+
+49:07.560 --> 49:09.560
+ what's the deal with podcasting in Spotify
+
+49:09.560 --> 49:11.560
+ how serious
+
+49:11.560 --> 49:13.560
+ is Spotify about podcasting
+
+49:13.560 --> 49:15.560
+ do you see a time where everybody would listen
+
+49:15.560 --> 49:17.560
+ to you know probably
+
+49:17.560 --> 49:19.560
+ a huge amount of people, majority perhaps
+
+49:19.560 --> 49:21.560
+ listen to music on Spotify
+
+49:21.560 --> 49:23.560
+ do you see a time
+
+49:23.560 --> 49:25.560
+ when the same is true for
+
+49:25.560 --> 49:27.560
+ podcasting
+
+49:27.560 --> 49:29.560
+ well I certainly hope so that is our mission
+
+49:29.560 --> 49:31.560
+ our mission as a company is actually to
+
+49:31.560 --> 49:33.560
+ enable a million creators to live
+
+49:33.560 --> 49:35.560
+ off of their art and a billion people inspired
+
+49:35.560 --> 49:37.560
+ by it and what I think is interesting about that mission
+
+49:37.560 --> 49:39.560
+ is it actually puts the creators
+
+49:39.560 --> 49:41.560
+ first even though it started as a
+
+49:41.560 --> 49:43.560
+ consumer focused company and it says
+
+49:43.560 --> 49:45.560
+ to be able to live off of their art not just
+
+49:45.560 --> 49:47.560
+ make some money off of their art as well
+
+49:47.560 --> 49:49.560
+ so it's quite an ambitious
+
+49:49.560 --> 49:51.560
+ product and
+
+49:51.560 --> 49:53.560
+ so we think about creators of all kinds
+
+49:53.560 --> 49:55.560
+ and
+
+49:55.560 --> 49:57.560
+ we kind of expanded our mission from
+
+49:57.560 --> 49:59.560
+ being music to being audio
+
+49:59.560 --> 50:01.560
+ a while back
+
+50:01.560 --> 50:03.560
+ and that's not
+
+50:03.560 --> 50:05.560
+ so much because
+
+50:05.560 --> 50:07.560
+ we think we made that decision
+
+50:07.560 --> 50:09.560
+ we think that decision
+
+50:09.560 --> 50:11.560
+ was made for us
+
+50:11.560 --> 50:13.560
+ we think the world made that decision
+
+50:13.560 --> 50:15.560
+ whether we like it or not
+
+50:15.560 --> 50:17.560
+ when you put in your headphones
+
+50:17.560 --> 50:19.560
+ you're going to make a choice between
+
+50:19.560 --> 50:21.560
+ music
+
+50:21.560 --> 50:23.560
+ and a new episode of
+
+50:23.560 --> 50:25.560
+ your podcast or something else
+
+50:25.560 --> 50:27.560
+ we're in that world whether we like it or not
+
+50:27.560 --> 50:29.560
+ that's how radio work
+
+50:29.560 --> 50:31.560
+ so we decided that
+
+50:31.560 --> 50:33.560
+ we think it's about audio you can see the
+
+50:33.560 --> 50:35.560
+ rights of audio books and so forth
+
+50:35.560 --> 50:37.560
+ we think audio is this great opportunity
+
+50:37.560 --> 50:39.560
+ so we decided to enter it and obviously
+
+50:39.560 --> 50:41.560
+ Apple
+
+50:41.560 --> 50:43.560
+ and Apple podcast is absolutely
+
+50:43.560 --> 50:45.560
+ dominating in
+
+50:45.560 --> 50:47.560
+ podcasting and we didn't have
+
+50:47.560 --> 50:49.560
+ a single podcast only like two years ago
+
+50:49.560 --> 50:51.560
+ what we did though was
+
+50:51.560 --> 50:53.560
+ we
+
+50:53.560 --> 50:55.560
+ we looked at this and said
+
+50:55.560 --> 50:57.560
+ bring something to this
+
+50:57.560 --> 50:59.560
+ we want to do this but back to the original
+
+50:59.560 --> 51:01.560
+ Spotify we had to do something that consumers actually value
+
+51:03.560 --> 51:05.560
+ to be able to do this and the reason
+
+51:05.560 --> 51:07.560
+ we've gone from not existing at all
+
+51:07.560 --> 51:09.560
+ to being the
+
+51:09.560 --> 51:11.560
+ quite a wide margin the second largest podcast
+
+51:11.560 --> 51:13.560
+ consumption
+
+51:13.560 --> 51:15.560
+ still wide gap to iTunes but we're growing
+
+51:15.560 --> 51:17.560
+ quite fast
+
+51:17.560 --> 51:19.560
+ I think it's because when we looked at the consumer
+
+51:19.560 --> 51:21.560
+ problem
+
+51:21.560 --> 51:23.560
+ people said surprisingly that they wanted their podcasts
+
+51:23.560 --> 51:25.560
+ and music in the same
+
+51:25.560 --> 51:27.560
+ in the same application
+
+51:27.560 --> 51:29.560
+ so what we did was we took a little bit of a different
+
+51:29.560 --> 51:31.560
+ approach what we said instead of building a separate podcast
+
+51:31.560 --> 51:33.560
+ app
+
+51:33.560 --> 51:35.560
+ we thought is there a consumer problem to solve here
+
+51:35.560 --> 51:37.560
+ because the others are very successful already
+
+51:37.560 --> 51:39.560
+ and we thought there was in making a more
+
+51:39.560 --> 51:41.560
+ seamless experience where you can have your podcasts
+
+51:41.560 --> 51:43.560
+ and your music
+
+51:43.560 --> 51:45.560
+ in the same application
+
+51:45.560 --> 51:47.560
+ because we think it's audio to you
+
+51:47.560 --> 51:49.560
+ and that has been successful and that meant that
+
+51:49.560 --> 51:51.560
+ we actually had 200 million people
+
+51:51.560 --> 51:53.560
+ to offer this to instead of starting from zero
+
+51:53.560 --> 51:55.560
+ so I think we have a good
+
+51:55.560 --> 51:57.560
+ chance because we're taking a different approach
+
+51:57.560 --> 51:59.560
+ than the competition and back to the other thing
+
+51:59.560 --> 52:01.560
+ I mentioned about
+
+52:01.560 --> 52:03.560
+ creators
+
+52:03.560 --> 52:05.560
+ because we're looking at the end to end flow
+
+52:05.560 --> 52:07.560
+ I think there's a tremendous amount of innovation
+
+52:07.560 --> 52:09.560
+ to do around podcast as a format
+
+52:09.560 --> 52:11.560
+ when we have creation tools and consumption
+
+52:11.560 --> 52:13.560
+ I think we could
+
+52:13.560 --> 52:15.560
+ start improving what podcasting is
+
+52:15.560 --> 52:17.560
+ I mean podcast is this
+
+52:17.560 --> 52:19.560
+ this opaque big like one to
+
+52:19.560 --> 52:21.560
+ your file
+
+52:21.560 --> 52:23.560
+ that you're streaming
+
+52:23.560 --> 52:25.560
+ which it really doesn't make that much sense in 2019
+
+52:25.560 --> 52:27.560
+ that it's not interactive
+
+52:27.560 --> 52:29.560
+ there's no feedback loops nothing like that
+
+52:29.560 --> 52:31.560
+ so I think if we're going to win it's going to have to be
+
+52:31.560 --> 52:33.560
+ because we build a better product
+
+52:33.560 --> 52:35.560
+ for creators and for consumers
+
+52:35.560 --> 52:37.560
+ so we'll see but it's certainly our goal
+
+52:37.560 --> 52:39.560
+ we have a long way to go
+
+52:39.560 --> 52:41.560
+ well the creators part is really exciting
+
+52:41.560 --> 52:43.560
+ you got me hooked there
+
+52:43.560 --> 52:45.560
+ it's the only stats I have
+
+52:45.560 --> 52:47.560
+ Blueberry just recently added the stats of
+
+52:47.560 --> 52:49.560
+ it's listen to the end
+
+52:49.560 --> 52:51.560
+ or not
+
+52:51.560 --> 52:53.560
+ and that's like a huge improvement
+
+52:53.560 --> 52:55.560
+ but that's still
+
+52:55.560 --> 52:57.560
+ nowhere to where you could possibly
+
+52:57.560 --> 52:59.560
+ go into statistics
+
+52:59.560 --> 53:01.560
+ just download the Spotify podcasters up and verify
+
+53:01.560 --> 53:03.560
+ and then you'll know where people dropped out in this episode
+
+53:03.560 --> 53:05.560
+ oh wow okay
+
+53:05.560 --> 53:07.560
+ the moment I started talking
+
+53:07.560 --> 53:09.560
+ I might be depressed by this
+
+53:09.560 --> 53:11.560
+ but okay so one
+
+53:11.560 --> 53:13.560
+ one other question
+
+53:13.560 --> 53:15.560
+ the original
+
+53:15.560 --> 53:17.560
+ Spotify for music
+
+53:17.560 --> 53:19.560
+ and I have a question about
+
+53:19.560 --> 53:21.560
+ podcasting in this line
+
+53:21.560 --> 53:23.560
+ is the idea of albums
+
+53:23.560 --> 53:25.560
+ I have
+
+53:25.560 --> 53:27.560
+ music aficionados
+
+53:27.560 --> 53:29.560
+ friends who are really
+
+53:29.560 --> 53:31.560
+ big fans of music
+
+53:31.560 --> 53:33.560
+ often really enjoy albums
+
+53:33.560 --> 53:35.560
+ listening to entire albums of
+
+53:35.560 --> 53:37.560
+ an artist correct me if I'm wrong
+
+53:37.560 --> 53:39.560
+ but I feel like
+
+53:39.560 --> 53:41.560
+ Spotify has helped
+
+53:41.560 --> 53:43.560
+ replace the idea of an album with playlists
+
+53:43.560 --> 53:45.560
+ so you create your own albums
+
+53:45.560 --> 53:47.560
+ that's kind of the way
+
+53:47.560 --> 53:49.560
+ at least I've experienced music
+
+53:49.560 --> 53:51.560
+ and I've really enjoyed it that way
+
+53:51.560 --> 53:53.560
+ one of the things that was missing
+
+53:53.560 --> 53:55.560
+ in podcasting for me
+
+53:55.560 --> 53:57.560
+ I don't know if it's missing I don't know
+
+53:57.560 --> 53:59.560
+ it's an open question for me
+
+53:59.560 --> 54:01.560
+ but the way I listen to podcasts is the way I would listen to albums
+
+54:01.560 --> 54:03.560
+ so I take
+
+54:03.560 --> 54:05.560
+ Joe Rogan Experience
+
+54:05.560 --> 54:07.560
+ and that's an album and I listen
+
+54:07.560 --> 54:09.560
+ I put that on
+
+54:09.560 --> 54:11.560
+ and I listen one episode after the next
+
+54:11.560 --> 54:13.560
+ and there's a sequence and so on
+
+54:13.560 --> 54:15.560
+ is there room for
+
+54:15.560 --> 54:17.560
+ doing
+
+54:17.560 --> 54:19.560
+ what Spotify did for music
+
+54:19.560 --> 54:21.560
+ but creating
+
+54:21.560 --> 54:23.560
+ playlists
+
+54:23.560 --> 54:25.560
+ sort of this kind of playlisting
+
+54:25.560 --> 54:27.560
+ idea of breaking apart from podcasting
+
+54:27.560 --> 54:29.560
+ from individual
+
+54:29.560 --> 54:31.560
+ podcasts and creating kind of
+
+54:31.560 --> 54:33.560
+ this interplay
+
+54:33.560 --> 54:35.560
+ or have you thought about that
+
+54:35.560 --> 54:37.560
+ it's a great question so I think in
+
+54:37.560 --> 54:39.560
+ music
+
+54:39.560 --> 54:41.560
+ you're right basically you bought an album
+
+54:41.560 --> 54:43.560
+ so it was like you bought a small catalog of
+
+54:43.560 --> 54:45.560
+ 10 tracks
+
+54:45.560 --> 54:47.560
+ again it was actually a lot of consumption
+
+54:47.560 --> 54:49.560
+ you think it's about what you like
+
+54:49.560 --> 54:51.560
+ but it's based on the business model
+
+54:51.560 --> 54:53.560
+ you paid for this 10 track
+
+54:53.560 --> 54:55.560
+ service and then you listen to that for a while
+
+54:55.560 --> 54:57.560
+ and then when everything was flat
+
+54:57.560 --> 54:59.560
+ priced you tended to listen differently
+
+54:59.560 --> 55:01.560
+ now so I think
+
+55:01.560 --> 55:03.560
+ the album is still tremendously important that's why we have it
+
+55:03.560 --> 55:05.560
+ and you can save albums and so forth
+
+55:05.560 --> 55:07.560
+ and you have a huge amount of people who really listen
+
+55:07.560 --> 55:09.560
+ according to albums and I like that because
+
+55:09.560 --> 55:11.560
+ it is a creator format you can tell a longer
+
+55:11.560 --> 55:13.560
+ story over several tracks
+
+55:13.560 --> 55:15.560
+ and so some people listen to just one track
+
+55:15.560 --> 55:17.560
+ some people actually want to hear that whole
+
+55:17.560 --> 55:19.560
+ story
+
+55:19.560 --> 55:21.560
+ now in podcast I think
+
+55:21.560 --> 55:23.560
+ I think it's different
+
+55:23.560 --> 55:25.560
+ you can argue that podcasts might be more
+
+55:25.560 --> 55:27.560
+ like shows on Netflix
+
+55:27.560 --> 55:29.560
+ you have like a full season of Narcos
+
+55:29.560 --> 55:31.560
+ and you're probably not going to do like one
+
+55:31.560 --> 55:33.560
+ episode of Narcos and then one of House of Cards
+
+55:33.560 --> 55:35.560
+ like you know
+
+55:35.560 --> 55:37.560
+ there's a narrative there
+
+55:37.560 --> 55:39.560
+ and you love the cast
+
+55:39.560 --> 55:41.560
+ and you love these characters
+
+55:41.560 --> 55:43.560
+ so I think people love shows
+
+55:43.560 --> 55:45.560
+ and I think they will
+
+55:45.560 --> 55:47.560
+ listen to those shows
+
+55:47.560 --> 55:49.560
+ I do think you follow a bunch of shows at the same time
+
+55:49.560 --> 55:51.560
+ so there's certainly an opportunity to bring you the
+
+55:51.560 --> 55:53.560
+ latest episode of
+
+55:53.560 --> 55:55.560
+ whatever the 5, 6, 10 things that you're into
+
+55:55.560 --> 55:57.560
+ but I think
+
+55:57.560 --> 55:59.560
+ I think people are going to listen
+
+55:59.560 --> 56:01.560
+ to specific hosts
+
+56:01.560 --> 56:03.560
+ and love those hosts
+
+56:03.560 --> 56:05.560
+ for a long time because I think there's something
+
+56:05.560 --> 56:07.560
+ different with podcasts
+
+56:07.560 --> 56:09.560
+ where this format
+
+56:09.560 --> 56:11.560
+ of the
+
+56:11.560 --> 56:13.560
+ experience of the audience
+
+56:13.560 --> 56:15.560
+ is actually standing here right between us
+
+56:15.560 --> 56:17.560
+ whereas if you look at something on TV
+
+56:17.560 --> 56:19.560
+ the audio actually would come from
+
+56:19.560 --> 56:21.560
+ you would sit over there and the audio would come to you
+
+56:21.560 --> 56:23.560
+ from both of us as if you were watching
+
+56:23.560 --> 56:25.560
+ not as if you were part of the conversation
+
+56:25.560 --> 56:27.560
+ so my experience of having to listen to podcasts
+
+56:27.560 --> 56:29.560
+ like yours and Joe Rogan
+
+56:29.560 --> 56:31.560
+ I feel like I know all of these people
+
+56:31.560 --> 56:33.560
+ and I have no idea who I am
+
+56:33.560 --> 56:35.560
+ but I feel like I've listened to so many hours of them
+
+56:35.560 --> 56:37.560
+ it's very different from me watching
+
+56:37.560 --> 56:39.560
+ like a TV show or an interview
+
+56:39.560 --> 56:41.560
+ so I think you kind of
+
+56:41.560 --> 56:43.560
+ fall in love with people
+
+56:43.560 --> 56:45.560
+ and experience in a different way
+
+56:45.560 --> 56:47.560
+ so I think shows and hosts
+
+56:47.560 --> 56:49.560
+ are going to be very important
+
+56:49.560 --> 56:51.560
+ I don't think that's going to go away into some sort of thing
+
+56:51.560 --> 56:53.560
+ where you don't even know who you're listening to
+
+56:53.560 --> 56:55.560
+ I don't think that's going to happen
+
+56:55.560 --> 56:57.560
+ what I do think is, I think there's a tremendous
+
+56:57.560 --> 56:59.560
+ discovery opportunity
+
+56:59.560 --> 57:01.560
+ in podcasts because
+
+57:01.560 --> 57:03.560
+ the catalogue is growing quite quickly
+
+57:03.560 --> 57:05.560
+ and
+
+57:05.560 --> 57:07.560
+ I think podcasts is only
+
+57:07.560 --> 57:09.560
+ a few like five, six hundred thousand
+
+57:09.560 --> 57:11.560
+ shows right now
+
+57:11.560 --> 57:13.560
+ if you look back to YouTube as another analogy
+
+57:13.560 --> 57:15.560
+ for creators, no one really knows
+
+57:15.560 --> 57:17.560
+ if you would lift the lid on
+
+57:17.560 --> 57:19.560
+ YouTube but it's probably billions
+
+57:19.560 --> 57:21.560
+ of episodes
+
+57:21.560 --> 57:23.560
+ and so I think the podcast catalogue would probably grow
+
+57:23.560 --> 57:25.560
+ tremendously because the creation
+
+57:25.560 --> 57:27.560
+ tools are getting easier
+
+57:27.560 --> 57:29.560
+ and you're going to have this
+
+57:29.560 --> 57:31.560
+ discovery opportunity that I think is really big
+
+57:31.560 --> 57:33.560
+ so a lot of people tell me that they love their shows
+
+57:33.560 --> 57:35.560
+ but discovering
+
+57:35.560 --> 57:37.560
+ podcasts kind of suck
+
+57:37.560 --> 57:39.560
+ it's really hard to get into new show
+
+57:39.560 --> 57:41.560
+ they're usually quite long, it's a big time investment
+
+57:41.560 --> 57:43.560
+ so I think there's plenty of opportunity
+
+57:43.560 --> 57:45.560
+ in the discovery part
+
+57:45.560 --> 57:47.560
+ yeah for sure, a hundred percent
+
+57:47.560 --> 57:49.560
+ and even the dumbest
+
+57:49.560 --> 57:51.560
+ there's so many low hanging fruit too
+
+57:51.560 --> 57:53.560
+ for example
+
+57:53.560 --> 57:55.560
+ just knowing
+
+57:55.560 --> 57:57.560
+ what episode to listen to first
+
+57:57.560 --> 57:59.560
+ to try out a podcast
+
+57:59.560 --> 58:01.560
+ exactly because most podcasts
+
+58:01.560 --> 58:03.560
+ don't have an order to them
+
+58:03.560 --> 58:05.560
+ they can be listened to out of order
+
+58:05.560 --> 58:07.560
+ and
+
+58:07.560 --> 58:09.560
+ sorry to say
+
+58:09.560 --> 58:11.560
+ some are better than others
+
+58:11.560 --> 58:13.560
+ episodes so some episodes of Joe Rogan
+
+58:13.560 --> 58:15.560
+ are better than others
+
+58:15.560 --> 58:17.560
+ and it's nice to know
+
+58:17.560 --> 58:19.560
+ which you should listen to
+
+58:19.560 --> 58:21.560
+ to try it out and there's as far
+
+58:21.560 --> 58:23.560
+ as I know almost no information
+
+58:23.560 --> 58:25.560
+ in terms of
+
+58:25.560 --> 58:27.560
+ like upvotes
+
+58:27.560 --> 58:29.560
+ on how good an episode is
+
+58:29.560 --> 58:31.560
+ so I think part of the problem is
+
+58:31.560 --> 58:33.560
+ it's kind of like music
+
+58:33.560 --> 58:35.560
+ there isn't one answer, people use music for different things
+
+58:35.560 --> 58:37.560
+ and there's actually many different types of music
+
+58:37.560 --> 58:39.560
+ there's workout music and there's classical piano music
+
+58:39.560 --> 58:41.560
+ and focus music and
+
+58:41.560 --> 58:43.560
+ and so forth
+
+58:43.560 --> 58:45.560
+ I think the same with podcasts, some podcasts are sequential
+
+58:45.560 --> 58:47.560
+ they're supposed to be listened to
+
+58:47.560 --> 58:49.560
+ in order
+
+58:49.560 --> 58:51.560
+ it's actually telling and narrative
+
+58:51.560 --> 58:53.560
+ podcasts are one topic
+
+58:53.560 --> 58:55.560
+ kind of like yours but different guests
+
+58:55.560 --> 58:57.560
+ so you could jump in anywhere
+
+58:57.560 --> 58:59.560
+ some podcasts actually have completely different topics
+
+58:59.560 --> 59:01.560
+ and for those podcasts it might be that
+
+59:01.560 --> 59:03.560
+ we should recommend
+
+59:03.560 --> 59:05.560
+ one episode because it's about AI
+
+59:05.560 --> 59:07.560
+ from someone
+
+59:07.560 --> 59:09.560
+ but then they talk about something that you're not interested in
+
+59:09.560 --> 59:11.560
+ the rest of the episode
+
+59:11.560 --> 59:13.560
+ so I think what we're spending a lot of time on now
+
+59:13.560 --> 59:15.560
+ is just first understanding the domain
+
+59:15.560 --> 59:17.560
+ and creating kind of the knowledge graph
+
+59:17.560 --> 59:19.560
+ of
+
+59:19.560 --> 59:21.560
+ how do these objects relate
+
+59:21.560 --> 59:23.560
+ and how do people consume and I think we'll find that it's going to be
+
+59:23.560 --> 59:25.560
+ it's going to be different
+
+59:25.560 --> 59:27.560
+ I'm excited
+
+59:27.560 --> 59:29.560
+ Spotify is the first
+
+59:29.560 --> 59:31.560
+ people I'm aware of that are
+
+59:31.560 --> 59:33.560
+ trying to do this
+
+59:33.560 --> 59:35.560
+ for podcasting
+
+59:35.560 --> 59:37.560
+ podcasting has been like a wild west
+
+59:37.560 --> 59:39.560
+ until now
+
+59:39.560 --> 59:41.560
+ we want to be very careful though
+
+59:41.560 --> 59:43.560
+ because it's been a very good wild west
+
+59:43.560 --> 59:45.560
+ I think it's this fragile ecosystem
+
+59:45.560 --> 59:47.560
+ and
+
+59:47.560 --> 59:49.560
+ we want to make sure that
+
+59:49.560 --> 59:51.560
+ you don't barge in and say
+
+59:51.560 --> 59:53.560
+ we're going to internetize this thing
+
+59:53.560 --> 59:55.560
+ and you have to think about
+
+59:55.560 --> 59:57.560
+ the creators, you have to understand
+
+59:57.560 --> 59:59.560
+ how they get distribution today
+
+59:59.560 --> 1:00:01.560
+ who listens to how they make money today
+
+1:00:01.560 --> 1:00:03.560
+ try to
+
+1:00:03.560 --> 1:00:05.560
+ make sure that their business model works, that they understand
+
+1:00:05.560 --> 1:00:07.560
+ I think it's back to doing something
+
+1:00:07.560 --> 1:00:09.560
+ improving their products
+
+1:00:09.560 --> 1:00:11.560
+ like feedback loops and distribution
+
+1:00:13.560 --> 1:00:15.560
+ jumping back into terms of this
+
+1:00:15.560 --> 1:00:17.560
+ fascinating world of
+
+1:00:17.560 --> 1:00:19.560
+ recommender system and listening to music
+
+1:00:19.560 --> 1:00:21.560
+ and using machine learning to analyze things
+
+1:00:21.560 --> 1:00:23.560
+ do you think it's better
+
+1:00:23.560 --> 1:00:25.560
+ to
+
+1:00:25.560 --> 1:00:27.560
+ what currently
+
+1:00:27.560 --> 1:00:29.560
+ correct me if I'm wrong but
+
+1:00:29.560 --> 1:00:31.560
+ Spotify lets people pick what they listen to
+
+1:00:31.560 --> 1:00:33.560
+ for the most part
+
+1:00:33.560 --> 1:00:35.560
+ there's a discovery process but you kind of
+
+1:00:35.560 --> 1:00:37.560
+ organize playlists
+
+1:00:37.560 --> 1:00:39.560
+ is it better to let people pick
+
+1:00:39.560 --> 1:00:41.560
+ what they listen to or recommend
+
+1:00:41.560 --> 1:00:43.560
+ what they should listen to
+
+1:00:43.560 --> 1:00:45.560
+ something like stations by Spotify
+
+1:00:45.560 --> 1:00:47.560
+ that I saw that you're playing around with
+
+1:00:47.560 --> 1:00:49.560
+ maybe you can tell me
+
+1:00:49.560 --> 1:00:51.560
+ what's the status of that
+
+1:00:51.560 --> 1:00:53.560
+ this is a Pandora style app
+
+1:00:53.560 --> 1:00:55.560
+ that just kind of as opposed to you select
+
+1:00:55.560 --> 1:00:57.560
+ the music you listen to
+
+1:00:57.560 --> 1:00:59.560
+ it kind of feeds you
+
+1:00:59.560 --> 1:01:01.560
+ the music you listen to
+
+1:01:01.560 --> 1:01:03.560
+ what's the status of stations by Spotify
+
+1:01:03.560 --> 1:01:05.560
+ what's its future
+
+1:01:05.560 --> 1:01:07.560
+ the store is Spotify as we have grown
+
+1:01:07.560 --> 1:01:09.560
+ has been that we made it more accessible
+
+1:01:09.560 --> 1:01:11.560
+ to different audiences
+
+1:01:11.560 --> 1:01:13.560
+ and
+
+1:01:13.560 --> 1:01:15.560
+ stations is another one of those where
+
+1:01:15.560 --> 1:01:17.560
+ the question is
+
+1:01:17.560 --> 1:01:19.560
+ some people want to be very specific
+
+1:01:19.560 --> 1:01:21.560
+ they actually want to start with heaven right now
+
+1:01:21.560 --> 1:01:23.560
+ that needs to be very easy to do
+
+1:01:23.560 --> 1:01:25.560
+ and some people or even the same person
+
+1:01:25.560 --> 1:01:27.560
+ at some point might say
+
+1:01:27.560 --> 1:01:29.560
+ I want to feel upbeat
+
+1:01:29.560 --> 1:01:31.560
+ or I want to feel happy
+
+1:01:31.560 --> 1:01:33.560
+ or I want songs to sing in the car
+
+1:01:33.560 --> 1:01:35.560
+ so they put in the information
+
+1:01:35.560 --> 1:01:37.560
+ at a very different level
+
+1:01:37.560 --> 1:01:39.560
+ and then we need to translate that into
+
+1:01:39.560 --> 1:01:41.560
+ musically
+
+1:01:41.560 --> 1:01:43.560
+ so stations is a test to
+
+1:01:43.560 --> 1:01:45.560
+ create like a consumption input vector
+
+1:01:45.560 --> 1:01:47.560
+ that is much simpler where you can just tune it a little bit
+
+1:01:47.560 --> 1:01:49.560
+ and see if that increases the overall reach
+
+1:01:49.560 --> 1:01:51.560
+ but we're trying to kind of serve
+
+1:01:51.560 --> 1:01:53.560
+ the entire gamut of super advanced
+
+1:01:53.560 --> 1:01:55.560
+ so called music aficionados
+
+1:01:55.560 --> 1:01:57.560
+ all the way to
+
+1:01:57.560 --> 1:01:59.560
+ to people who
+
+1:01:59.560 --> 1:02:01.560
+ they love listening to music but it's not
+
+1:02:01.560 --> 1:02:03.560
+ their number one priority in life
+
+1:02:03.560 --> 1:02:05.560
+ they're not going to sit and follow every new release
+
+1:02:05.560 --> 1:02:07.560
+ from every new artist
+
+1:02:07.560 --> 1:02:09.560
+ to influence music at
+
+1:02:09.560 --> 1:02:11.560
+ at a different level
+
+1:02:11.560 --> 1:02:13.560
+ so we're trying, you can think of it as different
+
+1:02:13.560 --> 1:02:15.560
+ products and I think when
+
+1:02:15.560 --> 1:02:17.560
+ one of the interesting things
+
+1:02:17.560 --> 1:02:19.560
+ to answer your question on
+
+1:02:19.560 --> 1:02:21.560
+ if it's better to lift the user choose
+
+1:02:21.560 --> 1:02:23.560
+ or to play I think the answer is
+
+1:02:23.560 --> 1:02:25.560
+ the challenge when you
+
+1:02:25.560 --> 1:02:27.560
+ when machine learning kind of came along
+
+1:02:27.560 --> 1:02:29.560
+ there was a lot of thinking about
+
+1:02:29.560 --> 1:02:31.560
+ what does product development mean
+
+1:02:31.560 --> 1:02:33.560
+ in a machine learning context
+
+1:02:33.560 --> 1:02:35.560
+ people like Andrew Eng for example
+
+1:02:35.560 --> 1:02:37.560
+ when he went to Baidu
+
+1:02:37.560 --> 1:02:39.560
+ he started doing a lot of practical machine learning
+
+1:02:39.560 --> 1:02:41.560
+ went from academia and he thought a lot about this
+
+1:02:41.560 --> 1:02:43.560
+ and he had this notion that
+
+1:02:43.560 --> 1:02:45.560
+ you know product manager, designer
+
+1:02:45.560 --> 1:02:47.560
+ and they used to work around this wireframe
+
+1:02:47.560 --> 1:02:49.560
+ kind of describe what the product should look like
+
+1:02:49.560 --> 1:02:51.560
+ was something to talk about when you're doing
+
+1:02:51.560 --> 1:02:53.560
+ like a chat bot or a playlist
+
+1:02:53.560 --> 1:02:55.560
+ what are you going to say like it should be good
+
+1:02:55.560 --> 1:02:57.560
+ that's not a good product description
+
+1:02:57.560 --> 1:02:59.560
+ so how do you do that and he came up with this notion
+
+1:02:59.560 --> 1:03:01.560
+ that
+
+1:03:01.560 --> 1:03:03.560
+ the test set is the new wireframe
+
+1:03:03.560 --> 1:03:05.560
+ and the job of the product manager is to source
+
+1:03:05.560 --> 1:03:07.560
+ a good test set that is representative of what
+
+1:03:07.560 --> 1:03:09.560
+ like if you say like I want to play this
+
+1:03:09.560 --> 1:03:11.560
+ that is songsticing in the car
+
+1:03:11.560 --> 1:03:13.560
+ job of the product manager to go and source
+
+1:03:13.560 --> 1:03:15.560
+ like a good test set of what that means
+
+1:03:15.560 --> 1:03:17.560
+ then you can work with engineering to have algorithms
+
+1:03:17.560 --> 1:03:19.560
+ to try to produce that right
+
+1:03:19.560 --> 1:03:21.560
+ so we try to think a lot about
+
+1:03:21.560 --> 1:03:23.560
+ how to structure product development
+
+1:03:23.560 --> 1:03:25.560
+ for machine learning
+
+1:03:25.560 --> 1:03:27.560
+ age and what we discovered
+
+1:03:27.560 --> 1:03:29.560
+ was that a lot of it is actually in the expectation
+
+1:03:29.560 --> 1:03:31.560
+ and you can go
+
+1:03:31.560 --> 1:03:33.560
+ you can go two ways so
+
+1:03:35.560 --> 1:03:37.560
+ let's say that
+
+1:03:37.560 --> 1:03:39.560
+ if you set the expectation with the user
+
+1:03:39.560 --> 1:03:41.560
+ that this is a discovery product like Discover Weekly
+
+1:03:41.560 --> 1:03:43.560
+ you're actually setting
+
+1:03:43.560 --> 1:03:45.560
+ the expectation that most of what we show you will not be
+
+1:03:45.560 --> 1:03:47.560
+ relevant when you're in the discovery
+
+1:03:47.560 --> 1:03:49.560
+ process you're going to accept that
+
+1:03:49.560 --> 1:03:51.560
+ actually if you find one gem every Monday
+
+1:03:51.560 --> 1:03:53.560
+ that you totally love
+
+1:03:53.560 --> 1:03:55.560
+ you're probably going to be happy
+
+1:03:55.560 --> 1:03:57.560
+ even though the statistical meaning
+
+1:03:57.560 --> 1:03:59.560
+ 1 out of 10 is terrible or 1 out of 20
+
+1:03:59.560 --> 1:04:01.560
+ is terrible from a user point of view
+
+1:04:01.560 --> 1:04:03.560
+ because the setting was discovered it's fine
+
+1:04:03.560 --> 1:04:05.560
+ can I start to interrupt real quick
+
+1:04:05.560 --> 1:04:07.560
+ I just actually learned about Discover Weekly
+
+1:04:07.560 --> 1:04:09.560
+ which is a Spotify
+
+1:04:09.560 --> 1:04:11.560
+ I don't know
+
+1:04:11.560 --> 1:04:13.560
+ it's a feature of Spotify that shows you
+
+1:04:13.560 --> 1:04:15.560
+ cool songs to listen
+
+1:04:15.560 --> 1:04:17.560
+ maybe I can do
+
+1:04:17.560 --> 1:04:19.560
+ issue tracking I couldn't find it on my Spotify app
+
+1:04:19.560 --> 1:04:21.560
+ it's in your library
+
+1:04:21.560 --> 1:04:23.560
+ it's in the library it's in the list of live
+
+1:04:23.560 --> 1:04:25.560
+ because I was like whoa this is cool I didn't know this existed
+
+1:04:25.560 --> 1:04:27.560
+ and I tried to find it
+
+1:04:27.560 --> 1:04:29.560
+ but I would show it to you
+
+1:04:29.560 --> 1:04:31.560
+ and feed it back to our product teams
+
+1:04:31.560 --> 1:04:33.560
+ there you go
+
+1:04:33.560 --> 1:04:35.560
+ so yeah sorry
+
+1:04:35.560 --> 1:04:37.560
+ just to mention
+
+1:04:37.560 --> 1:04:39.560
+ the expectation there is
+
+1:04:39.560 --> 1:04:41.560
+ basically you're going to
+
+1:04:41.560 --> 1:04:43.560
+ discover new songs
+
+1:04:43.560 --> 1:04:45.560
+ so then you can be quite adventurous
+
+1:04:45.560 --> 1:04:47.560
+ in the recommendations you do
+
+1:04:47.560 --> 1:04:49.560
+ but we have
+
+1:04:49.560 --> 1:04:51.560
+ another product called Daily Mix
+
+1:04:51.560 --> 1:04:53.560
+ which kind of implies that these are only going to be your favorites
+
+1:04:53.560 --> 1:04:55.560
+ so if you have
+
+1:04:55.560 --> 1:04:57.560
+ 9 out of 10 that is good
+
+1:04:57.560 --> 1:04:59.560
+ and 9 out of 10 that doesn't work for you
+
+1:04:59.560 --> 1:05:01.560
+ you're going to think it's a horrible product
+
+1:05:01.560 --> 1:05:03.560
+ so actually a lot of the product development
+
+1:05:03.560 --> 1:05:05.560
+ we learned over the years is about setting the right expectations
+
+1:05:05.560 --> 1:05:07.560
+ so for Daily Mix
+
+1:05:07.560 --> 1:05:09.560
+ you know algorithmically
+
+1:05:09.560 --> 1:05:11.560
+ we would pick among things that feel very safe
+
+1:05:11.560 --> 1:05:13.560
+ in your taste space
+
+1:05:13.560 --> 1:05:15.560
+ or discover weekly we go kind of wild
+
+1:05:15.560 --> 1:05:17.560
+ because the expectation is
+
+1:05:17.560 --> 1:05:19.560
+ most of this is not going to
+
+1:05:19.560 --> 1:05:21.560
+ so a lot of that a lot of to answer your question there
+
+1:05:21.560 --> 1:05:23.560
+ a lot of
+
+1:05:23.560 --> 1:05:25.560
+ we have some products where the whole point is
+
+1:05:25.560 --> 1:05:27.560
+ that the user can click play put the phone in the pocket
+
+1:05:27.560 --> 1:05:29.560
+ and it should be really good music for like an hour
+
+1:05:29.560 --> 1:05:31.560
+ we have other products where
+
+1:05:31.560 --> 1:05:33.560
+ you probably need to say like no
+
+1:05:33.560 --> 1:05:35.560
+ save, no, no
+
+1:05:35.560 --> 1:05:37.560
+ and it's very interactive
+
+1:05:37.560 --> 1:05:39.560
+ that makes sense and then the radio product
+
+1:05:39.560 --> 1:05:41.560
+ the stations product is one of these like click play
+
+1:05:41.560 --> 1:05:43.560
+ put in your pocket for hours
+
+1:05:43.560 --> 1:05:45.560
+ that's really interesting so you're thinking of
+
+1:05:45.560 --> 1:05:47.560
+ different test sets
+
+1:05:47.560 --> 1:05:49.560
+ for different users
+
+1:05:49.560 --> 1:05:51.560
+ and trying to create products that sort of
+
+1:05:51.560 --> 1:05:53.560
+ optimize
+
+1:05:53.560 --> 1:05:55.560
+ optimize for those test sets
+
+1:05:55.560 --> 1:05:57.560
+ that represents a specific set of
+
+1:05:57.560 --> 1:05:59.560
+ users yes I think
+
+1:05:59.560 --> 1:06:01.560
+ one thing that I think is interesting
+
+1:06:01.560 --> 1:06:03.560
+ is
+
+1:06:03.560 --> 1:06:05.560
+ we invested quite heavily in editorial
+
+1:06:05.560 --> 1:06:07.560
+ in people creating playlists
+
+1:06:07.560 --> 1:06:09.560
+ using statistical data
+
+1:06:09.560 --> 1:06:11.560
+ and that was successful for us and then we also
+
+1:06:11.560 --> 1:06:13.560
+ invested in machine learning
+
+1:06:13.560 --> 1:06:15.560
+ and for the longest time
+
+1:06:15.560 --> 1:06:17.560
+ within Spotify and within the rest of the
+
+1:06:17.560 --> 1:06:19.560
+ industry there was always this narrative of
+
+1:06:19.560 --> 1:06:21.560
+ humans versus the machine
+
+1:06:21.560 --> 1:06:23.560
+ algo versus editorial
+
+1:06:23.560 --> 1:06:25.560
+ and editors would say like well
+
+1:06:25.560 --> 1:06:27.560
+ if I had that data if I could see your
+
+1:06:27.560 --> 1:06:29.560
+ playlisting history and I made a choice
+
+1:06:29.560 --> 1:06:31.560
+ for you I would have made a better choice
+
+1:06:31.560 --> 1:06:33.560
+ and they would have because they're
+
+1:06:33.560 --> 1:06:35.560
+ much smarter than these algorithms
+
+1:06:35.560 --> 1:06:37.560
+ human is incredibly smart compared to our
+
+1:06:37.560 --> 1:06:39.560
+ algorithms they can take
+
+1:06:39.560 --> 1:06:41.560
+ culture into account and so forth
+
+1:06:41.560 --> 1:06:43.560
+ the problem is that they can't make 200 million
+
+1:06:43.560 --> 1:06:45.560
+ decisions
+
+1:06:45.560 --> 1:06:47.560
+ per hour for every user that logs
+
+1:06:47.560 --> 1:06:49.560
+ in so the algo may be
+
+1:06:49.560 --> 1:06:51.560
+ not as sophisticated but much more efficient
+
+1:06:51.560 --> 1:06:53.560
+ so there was this contradiction
+
+1:06:53.560 --> 1:06:55.560
+ but then a few years ago
+
+1:06:55.560 --> 1:06:57.560
+ we started
+
+1:06:57.560 --> 1:06:59.560
+ focusing on this kind of human in the loop
+
+1:06:59.560 --> 1:07:01.560
+ thinking around machine learning
+
+1:07:01.560 --> 1:07:03.560
+ and we actually coined an internal
+
+1:07:03.560 --> 1:07:05.560
+ term for it called algotorial
+
+1:07:05.560 --> 1:07:07.560
+ the combination of algorithms and editors
+
+1:07:07.560 --> 1:07:09.560
+ where if we take a concrete
+
+1:07:09.560 --> 1:07:11.560
+ example you think
+
+1:07:11.560 --> 1:07:13.560
+ of the editor this
+
+1:07:13.560 --> 1:07:15.560
+ paid expert that we have
+
+1:07:15.560 --> 1:07:17.560
+ there's really good at something like
+
+1:07:17.560 --> 1:07:19.560
+ soul, hip hop
+
+1:07:19.560 --> 1:07:21.560
+ EDM something right there are two experts
+
+1:07:21.560 --> 1:07:23.560
+ no one in the industry
+
+1:07:23.560 --> 1:07:25.560
+ so they have all the cultural knowledge
+
+1:07:25.560 --> 1:07:27.560
+ you think of them as the product manager
+
+1:07:27.560 --> 1:07:29.560
+ and you say that
+
+1:07:29.560 --> 1:07:31.560
+ let's say that you want to create
+
+1:07:31.560 --> 1:07:33.560
+ you think that there's a product
+
+1:07:33.560 --> 1:07:35.560
+ need in the world for something like songs to sing
+
+1:07:35.560 --> 1:07:37.560
+ in the car or songs to sing in the shower
+
+1:07:37.560 --> 1:07:39.560
+ I'm taking that example because it exists
+
+1:07:39.560 --> 1:07:41.560
+ people love to scream songs in the car
+
+1:07:41.560 --> 1:07:43.560
+ when they drive right
+
+1:07:43.560 --> 1:07:45.560
+ so you want to create that product and you have this product manager
+
+1:07:45.560 --> 1:07:47.560
+ who's a musical expert
+
+1:07:47.560 --> 1:07:49.560
+ they create, they come up with a concept
+
+1:07:49.560 --> 1:07:51.560
+ like I think this is a missing thing in humanity
+
+1:07:51.560 --> 1:07:53.560
+ like a playlist called songs to sing in the car
+
+1:07:53.560 --> 1:07:55.560
+ they create
+
+1:07:55.560 --> 1:07:57.560
+ the framing, the image
+
+1:07:57.560 --> 1:07:59.560
+ the title and they create a test set
+
+1:07:59.560 --> 1:08:01.560
+ they create a group of songs
+
+1:08:01.560 --> 1:08:03.560
+ like a few thousand songs out of the catalog
+
+1:08:03.560 --> 1:08:05.560
+ that they manually curate
+
+1:08:05.560 --> 1:08:07.560
+ that are known songs that are great to sing in the car
+
+1:08:07.560 --> 1:08:09.560
+ and they can take like
+
+1:08:09.560 --> 1:08:11.560
+ through romance into account they understand things
+
+1:08:11.560 --> 1:08:13.560
+ that algorithms do not at all
+
+1:08:13.560 --> 1:08:15.560
+ so they have this huge set of tracks
+
+1:08:15.560 --> 1:08:17.560
+ then when we deliver that to you
+
+1:08:17.560 --> 1:08:19.560
+ we look at your taste vectors
+
+1:08:19.560 --> 1:08:21.560
+ and you get the 20 tracks that are songs to sing in the car
+
+1:08:21.560 --> 1:08:23.560
+ in your taste
+
+1:08:23.560 --> 1:08:25.560
+ so you have personalization
+
+1:08:25.560 --> 1:08:27.560
+ and editorial input
+
+1:08:27.560 --> 1:08:29.560
+ in the same process
+
+1:08:29.560 --> 1:08:31.560
+ if that makes sense
+
+1:08:31.560 --> 1:08:33.560
+ it makes total sense and I have several questions around that
+
+1:08:33.560 --> 1:08:35.560
+ this is like
+
+1:08:35.560 --> 1:08:37.560
+ fascinating
+
+1:08:37.560 --> 1:08:39.560
+ so first it is a little bit surprising
+
+1:08:39.560 --> 1:08:41.560
+ to me
+
+1:08:41.560 --> 1:08:43.560
+ that the world expert
+
+1:08:43.560 --> 1:08:45.560
+ humans are outperforming
+
+1:08:45.560 --> 1:08:47.560
+ machines
+
+1:08:47.560 --> 1:08:49.560
+ at specifying
+
+1:08:49.560 --> 1:08:51.560
+ songs to sing in the car
+
+1:08:51.560 --> 1:08:53.560
+ so
+
+1:08:53.560 --> 1:08:55.560
+ maybe you could talk to that a little bit
+
+1:08:55.560 --> 1:08:57.560
+ I don't know if you can put it into words but
+
+1:08:57.560 --> 1:08:59.560
+ what is it
+
+1:08:59.560 --> 1:09:01.560
+ how difficult is this problem
+
+1:09:01.560 --> 1:09:03.560
+ of
+
+1:09:03.560 --> 1:09:05.560
+ I guess what I'm trying to ask
+
+1:09:05.560 --> 1:09:07.560
+ is there how difficult is it to encode
+
+1:09:07.560 --> 1:09:09.560
+ the cultural references
+
+1:09:09.560 --> 1:09:11.560
+ the context
+
+1:09:11.560 --> 1:09:13.560
+ of the song, the artists
+
+1:09:13.560 --> 1:09:15.560
+ all those things together
+
+1:09:15.560 --> 1:09:17.560
+ can machine learning really not do that
+
+1:09:17.560 --> 1:09:19.560
+ I mean I think machine learning is great
+
+1:09:19.560 --> 1:09:21.560
+ at replicating patterns
+
+1:09:21.560 --> 1:09:23.560
+ if you have the patterns
+
+1:09:23.560 --> 1:09:25.560
+ but if you try to write
+
+1:09:25.560 --> 1:09:27.560
+ a spec of what song is great
+
+1:09:27.560 --> 1:09:29.560
+ to sing in the car definition is
+
+1:09:29.560 --> 1:09:31.560
+ is it loud
+
+1:09:31.560 --> 1:09:33.560
+ does it have many choruses to have been in movies
+
+1:09:33.560 --> 1:09:35.560
+ it quickly gets incredibly complicated
+
+1:09:35.560 --> 1:09:37.560
+ right
+
+1:09:37.560 --> 1:09:39.560
+ and a lot of it may not be
+
+1:09:39.560 --> 1:09:41.560
+ in the structure of the song or the title
+
+1:09:41.560 --> 1:09:43.560
+ it could be cultural references because
+
+1:09:43.560 --> 1:09:45.560
+ it was a hasty one
+
+1:09:45.560 --> 1:09:47.560
+ so the definition problems
+
+1:09:47.560 --> 1:09:49.560
+ quickly get
+
+1:09:49.560 --> 1:09:51.560
+ and I think that was the insight of Andrew Eng
+
+1:09:51.560 --> 1:09:53.560
+ when he said that job of the product manager
+
+1:09:53.560 --> 1:09:55.560
+ is to understand these things that
+
+1:09:55.560 --> 1:09:57.560
+ algorithms don't and then
+
+1:09:57.560 --> 1:09:59.560
+ define what that looks like
+
+1:09:59.560 --> 1:10:01.560
+ and then you have something to train towards
+
+1:10:01.560 --> 1:10:03.560
+ then you have kind of the test set
+
+1:10:03.560 --> 1:10:05.560
+ but today the editors create this
+
+1:10:05.560 --> 1:10:07.560
+ pool of tracks and then we personalize
+
+1:10:07.560 --> 1:10:09.560
+ you could easily imagine that once you have this set
+
+1:10:09.560 --> 1:10:11.560
+ you could have some automatic exploration
+
+1:10:11.560 --> 1:10:13.560
+ of the rest of the catalog because then you understand
+
+1:10:13.560 --> 1:10:15.560
+ what it is
+
+1:10:15.560 --> 1:10:17.560
+ and then the other side of it when machine learning
+
+1:10:17.560 --> 1:10:19.560
+ does help is this taste
+
+1:10:19.560 --> 1:10:21.560
+ vector
+
+1:10:21.560 --> 1:10:23.560
+ how hard is it to construct
+
+1:10:23.560 --> 1:10:25.560
+ a vector that represents the things
+
+1:10:25.560 --> 1:10:27.560
+ an individual human likes
+
+1:10:27.560 --> 1:10:29.560
+ this human preference
+
+1:10:29.560 --> 1:10:31.560
+ so you can
+
+1:10:31.560 --> 1:10:33.560
+ you know music isn't like
+
+1:10:33.560 --> 1:10:35.560
+ it's not like Amazon
+
+1:10:35.560 --> 1:10:37.560
+ like things you usually buy
+
+1:10:37.560 --> 1:10:39.560
+ music seems more amorphous
+
+1:10:39.560 --> 1:10:41.560
+ like it's this thing
+
+1:10:41.560 --> 1:10:43.560
+ that's hard to specify like
+
+1:10:43.560 --> 1:10:45.560
+ what is
+
+1:10:45.560 --> 1:10:47.560
+ if you look at my playlist what is the music
+
+1:10:47.560 --> 1:10:49.560
+ that I love it's harder
+
+1:10:49.560 --> 1:10:51.560
+ it seems to be
+
+1:10:51.560 --> 1:10:53.560
+ much more difficult to specify concretely
+
+1:10:53.560 --> 1:10:55.560
+ so how hard is it
+
+1:10:55.560 --> 1:10:57.560
+ to build a taste vector
+
+1:10:57.560 --> 1:10:59.560
+ it is very hard in the sense that you need a lot of
+
+1:10:59.560 --> 1:11:01.560
+ data
+
+1:11:01.560 --> 1:11:03.560
+ and I think what we found was that
+
+1:11:03.560 --> 1:11:05.560
+ so it's not a stationary problem
+
+1:11:05.560 --> 1:11:07.560
+ it changes over time
+
+1:11:07.560 --> 1:11:09.560
+ and so
+
+1:11:09.560 --> 1:11:11.560
+ we've gone
+
+1:11:11.560 --> 1:11:13.560
+ through the journey of if
+
+1:11:13.560 --> 1:11:15.560
+ you've done a lot of computer vision
+
+1:11:15.560 --> 1:11:17.560
+ obviously I've done a bunch of computer vision
+
+1:11:17.560 --> 1:11:19.560
+ in my past and we started
+
+1:11:19.560 --> 1:11:21.560
+ kind of with the handcrafted heuristics
+
+1:11:21.560 --> 1:11:23.560
+ for you know
+
+1:11:23.560 --> 1:11:25.560
+ this is kind of in the music this is this
+
+1:11:25.560 --> 1:11:27.560
+ and if you consume this you probably like this
+
+1:11:27.560 --> 1:11:29.560
+ so we have
+
+1:11:29.560 --> 1:11:31.560
+ we started there and we have some of that still
+
+1:11:31.560 --> 1:11:33.560
+ then what was interesting about the playlist data
+
+1:11:33.560 --> 1:11:35.560
+ was that you could find these latent things that
+
+1:11:35.560 --> 1:11:37.560
+ wouldn't necessarily even make sense to you
+
+1:11:37.560 --> 1:11:39.560
+ that could
+
+1:11:39.560 --> 1:11:41.560
+ could even capture maybe cultural references
+
+1:11:41.560 --> 1:11:43.560
+ because they co occurred things that
+
+1:11:43.560 --> 1:11:45.560
+ that wouldn't have appeared
+
+1:11:45.560 --> 1:11:47.560
+ kind of mechanistically either in the content
+
+1:11:47.560 --> 1:11:49.560
+ or so forth so
+
+1:11:49.560 --> 1:11:51.560
+ um
+
+1:11:51.560 --> 1:11:53.560
+ I think that
+
+1:11:53.560 --> 1:11:55.560
+ um
+
+1:11:55.560 --> 1:11:57.560
+ I think the core assumption
+
+1:11:57.560 --> 1:11:59.560
+ is that
+
+1:11:59.560 --> 1:12:01.560
+ there are patterns
+
+1:12:01.560 --> 1:12:03.560
+ in almost everything
+
+1:12:03.560 --> 1:12:05.560
+ and if there are patterns
+
+1:12:05.560 --> 1:12:07.560
+ these embedding techniques are getting better and better
+
+1:12:07.560 --> 1:12:09.560
+ now as everyone else
+
+1:12:09.560 --> 1:12:11.560
+ we're also using
+
+1:12:11.560 --> 1:12:13.560
+ kind of deep embeddings where you can encode binary
+
+1:12:13.560 --> 1:12:15.560
+ values and so forth
+
+1:12:15.560 --> 1:12:17.560
+ and what I think
+
+1:12:17.560 --> 1:12:19.560
+ is interesting is this process
+
+1:12:19.560 --> 1:12:21.560
+ to try to find things that
+
+1:12:21.560 --> 1:12:23.560
+ um
+
+1:12:23.560 --> 1:12:25.560
+ necessarily you wouldn't actually have
+
+1:12:25.560 --> 1:12:27.560
+ guest so it is very
+
+1:12:27.560 --> 1:12:29.560
+ hard in an engineering
+
+1:12:29.560 --> 1:12:31.560
+ sense to find the right dimensions
+
+1:12:31.560 --> 1:12:33.560
+ it's an incredible scalability
+
+1:12:33.560 --> 1:12:35.560
+ problem to do for hundreds of millions
+
+1:12:35.560 --> 1:12:37.560
+ of users and to update it every day
+
+1:12:37.560 --> 1:12:39.560
+ but in
+
+1:12:39.560 --> 1:12:41.560
+ theory
+
+1:12:41.560 --> 1:12:43.560
+ in theory embeddings isn't that
+
+1:12:43.560 --> 1:12:45.560
+ complicated the fact
+
+1:12:45.560 --> 1:12:47.560
+ that you try to find some principle components
+
+1:12:47.560 --> 1:12:49.560
+ or something like that dimensionality reduction
+
+1:12:49.560 --> 1:12:51.560
+ and so forth so the theory I guess is easy
+
+1:12:51.560 --> 1:12:53.560
+ because it's very very hard
+
+1:12:53.560 --> 1:12:55.560
+ and it's a huge
+
+1:12:55.560 --> 1:12:57.560
+ engineering challenge but fortunately we have
+
+1:12:57.560 --> 1:12:59.560
+ some amazing both research and
+
+1:12:59.560 --> 1:13:01.560
+ engineering teams in this space
+
+1:13:01.560 --> 1:13:03.560
+ yeah I guess the
+
+1:13:03.560 --> 1:13:05.560
+ question is all
+
+1:13:05.560 --> 1:13:07.560
+ I mean it's similar I deal with the autonomous
+
+1:13:07.560 --> 1:13:09.560
+ vehicle space is the question is
+
+1:13:09.560 --> 1:13:11.560
+ how hard is driving
+
+1:13:11.560 --> 1:13:13.560
+ and here is
+
+1:13:13.560 --> 1:13:15.560
+ basically the question is of
+
+1:13:15.560 --> 1:13:17.560
+ edge cases
+
+1:13:17.560 --> 1:13:19.560
+ so embedding
+
+1:13:19.560 --> 1:13:21.560
+ probably works
+
+1:13:21.560 --> 1:13:23.560
+ not probably but
+
+1:13:23.560 --> 1:13:25.560
+ I would imagine works well
+
+1:13:25.560 --> 1:13:27.560
+ in a lot of cases
+
+1:13:27.560 --> 1:13:29.560
+ so there's a bunch of questions that arise then
+
+1:13:29.560 --> 1:13:31.560
+ so do song
+
+1:13:31.560 --> 1:13:33.560
+ preferences does your taste vector
+
+1:13:33.560 --> 1:13:35.560
+ depend on context
+
+1:13:35.560 --> 1:13:37.560
+ like mood
+
+1:13:37.560 --> 1:13:39.560
+ right so there's
+
+1:13:39.560 --> 1:13:41.560
+ different moods and
+
+1:13:41.560 --> 1:13:43.560
+ absolutely so how does that
+
+1:13:43.560 --> 1:13:45.560
+ take in
+
+1:13:45.560 --> 1:13:47.560
+ is it is it possible to take that
+
+1:13:47.560 --> 1:13:49.560
+ consideration or do you just leave
+
+1:13:49.560 --> 1:13:51.560
+ that as a interface
+
+1:13:51.560 --> 1:13:53.560
+ problem that allows the user to just control
+
+1:13:53.560 --> 1:13:55.560
+ it so when I'm looking for a work
+
+1:13:55.560 --> 1:13:57.560
+ out music I kind of specify it
+
+1:13:57.560 --> 1:13:59.560
+ by choosing certain playlists
+
+1:13:59.560 --> 1:14:01.560
+ doing certain search yeah
+
+1:14:01.560 --> 1:14:03.560
+ so that's a great point and back to the product
+
+1:14:03.560 --> 1:14:05.560
+ development you could try
+
+1:14:05.560 --> 1:14:07.560
+ to spend a few years trying to predict
+
+1:14:07.560 --> 1:14:09.560
+ which mood you're in automatically when you open
+
+1:14:09.560 --> 1:14:11.560
+ Spotify or you create a tab
+
+1:14:11.560 --> 1:14:13.560
+ which is happy and sad right and you're going to be
+
+1:14:13.560 --> 1:14:15.560
+ right 100% of the time with one click
+
+1:14:15.560 --> 1:14:17.560
+ now probably much better to let
+
+1:14:17.560 --> 1:14:19.560
+ the user tell you if they're happy or sad
+
+1:14:19.560 --> 1:14:21.560
+ or if they want to work out on the other hand
+
+1:14:21.560 --> 1:14:23.560
+ if your user interface become 2000
+
+1:14:23.560 --> 1:14:25.560
+ tabs you're introducing so much friction
+
+1:14:25.560 --> 1:14:27.560
+ so no one will use the product so then you have to
+
+1:14:27.560 --> 1:14:29.560
+ get better so it's this
+
+1:14:29.560 --> 1:14:31.560
+ thing where I think it maybe was
+
+1:14:31.560 --> 1:14:33.560
+ I remember who coined it but it's
+
+1:14:33.560 --> 1:14:35.560
+ called full tolerant UIs right to build a UI
+
+1:14:35.560 --> 1:14:37.560
+ that is tolerant to being wrong
+
+1:14:37.560 --> 1:14:39.560
+ and then you can be much
+
+1:14:39.560 --> 1:14:41.560
+ less right in your
+
+1:14:41.560 --> 1:14:43.560
+ in your algorithms so
+
+1:14:43.560 --> 1:14:45.560
+ we had to learn a lot of that
+
+1:14:45.560 --> 1:14:47.560
+ building the right UI that fits
+
+1:14:47.560 --> 1:14:49.560
+ where the machine learning is
+
+1:14:49.560 --> 1:14:51.560
+ and a great
+
+1:14:51.560 --> 1:14:53.560
+ discovery there which was
+
+1:14:53.560 --> 1:14:55.560
+ by the teams during
+
+1:14:55.560 --> 1:14:57.560
+ one of our hack days was this
+
+1:14:57.560 --> 1:14:59.560
+ thing of taking discovery packaging
+
+1:14:59.560 --> 1:15:01.560
+ into a playlist and saying that
+
+1:15:01.560 --> 1:15:03.560
+ these are new tracks
+
+1:15:03.560 --> 1:15:05.560
+ that we think you might like
+
+1:15:05.560 --> 1:15:07.560
+ based on this and setting the right expectation
+
+1:15:07.560 --> 1:15:09.560
+ made it a great product
+
+1:15:09.560 --> 1:15:11.560
+ so I think we have this benefit that for example
+
+1:15:11.560 --> 1:15:13.560
+ Tesla doesn't have
+
+1:15:13.560 --> 1:15:15.560
+ that we can
+
+1:15:15.560 --> 1:15:17.560
+ we can change the expectation we can build
+
+1:15:17.560 --> 1:15:19.560
+ a full tolerant setting it's very hard to be
+
+1:15:19.560 --> 1:15:21.560
+ full tolerant when you're driving at
+
+1:15:21.560 --> 1:15:23.560
+ 100 miles per hour or something
+
+1:15:23.560 --> 1:15:25.560
+ and we have the luxury of
+
+1:15:25.560 --> 1:15:27.560
+ being able to say that
+
+1:15:27.560 --> 1:15:29.560
+ of being wrong if we have the right
+
+1:15:29.560 --> 1:15:31.560
+ UI which gives us
+
+1:15:31.560 --> 1:15:33.560
+ different abilities to take more risk
+
+1:15:33.560 --> 1:15:35.560
+ so I actually think the self driving
+
+1:15:35.560 --> 1:15:37.560
+ problem is much harder
+
+1:15:37.560 --> 1:15:39.560
+ oh yeah for sure
+
+1:15:39.560 --> 1:15:41.560
+ it's much less fun
+
+1:15:41.560 --> 1:15:43.560
+ because
+
+1:15:43.560 --> 1:15:45.560
+ people die exactly
+
+1:15:45.560 --> 1:15:47.560
+ and in Spotify
+
+1:15:47.560 --> 1:15:49.560
+ it's
+
+1:15:49.560 --> 1:15:51.560
+ such a more fun problem because
+
+1:15:51.560 --> 1:15:53.560
+ failure will
+
+1:15:53.560 --> 1:15:55.560
+ I mean failure is beautiful in a way
+
+1:15:55.560 --> 1:15:57.560
+ at least exploration so it's a really fun
+
+1:15:57.560 --> 1:15:59.560
+ reinforcement learning problem and the worst
+
+1:15:59.560 --> 1:16:01.560
+ case scenario is you get these WTF tweets
+
+1:16:01.560 --> 1:16:03.560
+ like how did I get this
+
+1:16:03.560 --> 1:16:05.560
+ which is a lot better than the self
+
+1:16:05.560 --> 1:16:07.560
+ driving failure
+
+1:16:07.560 --> 1:16:09.560
+ so
+
+1:16:09.560 --> 1:16:11.560
+ what's the feedback that a user
+
+1:16:11.560 --> 1:16:13.560
+ what's the signal
+
+1:16:13.560 --> 1:16:15.560
+ that a user provides
+
+1:16:15.560 --> 1:16:17.560
+ into the system so
+
+1:16:17.560 --> 1:16:19.560
+ you mentioned skipping
+
+1:16:19.560 --> 1:16:21.560
+ what is like the strongest signal
+
+1:16:21.560 --> 1:16:23.560
+ you didn't mention clicking
+
+1:16:23.560 --> 1:16:25.560
+ like
+
+1:16:25.560 --> 1:16:27.560
+ so we have a few signals that are important
+
+1:16:27.560 --> 1:16:29.560
+ obviously playing
+
+1:16:29.560 --> 1:16:31.560
+ playing through
+
+1:16:31.560 --> 1:16:33.560
+ so one of the benefits of music actually
+
+1:16:33.560 --> 1:16:35.560
+ even compared to podcasts or
+
+1:16:35.560 --> 1:16:37.560
+ movies is the object itself
+
+1:16:37.560 --> 1:16:39.560
+ is really only about three minutes
+
+1:16:39.560 --> 1:16:41.560
+ so you get a lot of chances to recommend
+
+1:16:41.560 --> 1:16:43.560
+ and the feedback loop is
+
+1:16:43.560 --> 1:16:45.560
+ every three minutes instead of every two hours
+
+1:16:45.560 --> 1:16:47.560
+ or something so you actually get
+
+1:16:47.560 --> 1:16:49.560
+ kind of noisy but
+
+1:16:49.560 --> 1:16:51.560
+ quite fast feedback and so you can see
+
+1:16:51.560 --> 1:16:53.560
+ if people played through or if the
+
+1:16:53.560 --> 1:16:55.560
+ which is the inverse of skip really
+
+1:16:55.560 --> 1:16:57.560
+ that's an important signal on the other hand
+
+1:16:57.560 --> 1:16:59.560
+ much of the consumption happens
+
+1:16:59.560 --> 1:17:01.560
+ when your phone is in your pocket maybe you're running
+
+1:17:01.560 --> 1:17:03.560
+ or driving or you're playing on a speaker
+
+1:17:03.560 --> 1:17:05.560
+ and you're not skipping doesn't mean that you love that song
+
+1:17:05.560 --> 1:17:07.560
+ it might be that it wasn't bad enough
+
+1:17:07.560 --> 1:17:09.560
+ that you would walk up and skip
+
+1:17:09.560 --> 1:17:11.560
+ so it's a noisy signal
+
+1:17:11.560 --> 1:17:13.560
+ then we have the equivalent of the like
+
+1:17:13.560 --> 1:17:15.560
+ which is you save it to your library
+
+1:17:15.560 --> 1:17:17.560
+ that's a pretty strong signal of affection
+
+1:17:17.560 --> 1:17:19.560
+ and then
+
+1:17:19.560 --> 1:17:21.560
+ we have the more explicit signal
+
+1:17:21.560 --> 1:17:23.560
+ of play listing like you took the time
+
+1:17:23.560 --> 1:17:25.560
+ to create a playlist you put it in there
+
+1:17:25.560 --> 1:17:27.560
+ there's a very little small chance that
+
+1:17:27.560 --> 1:17:29.560
+ if you took all that trouble this is not
+
+1:17:29.560 --> 1:17:31.560
+ a really important track to you
+
+1:17:31.560 --> 1:17:33.560
+ but also
+
+1:17:33.560 --> 1:17:35.560
+ what are the tracks it relates to so we have
+
+1:17:35.560 --> 1:17:37.560
+ we have the play listing we have the like and then we have
+
+1:17:37.560 --> 1:17:39.560
+ the listening or skip
+
+1:17:39.560 --> 1:17:41.560
+ and you have to
+
+1:17:41.560 --> 1:17:43.560
+ have very different approaches to all of them because
+
+1:17:43.560 --> 1:17:45.560
+ at different levels of noise
+
+1:17:45.560 --> 1:17:47.560
+ one is very voluminous but noisy
+
+1:17:47.560 --> 1:17:49.560
+ and the other is rare but
+
+1:17:49.560 --> 1:17:51.560
+ you can probably trust it
+
+1:17:51.560 --> 1:17:53.560
+ yeah it's interesting because
+
+1:17:53.560 --> 1:17:55.560
+ I think between those signals captures
+
+1:17:55.560 --> 1:17:57.560
+ all the information you'd want to capture
+
+1:17:57.560 --> 1:17:59.560
+ I mean there's a feeling
+
+1:17:59.560 --> 1:18:01.560
+ for me that there's sometimes that I'll
+
+1:18:01.560 --> 1:18:03.560
+ hear a song that's like yes this is
+
+1:18:03.560 --> 1:18:05.560
+ you know this was the right song for the moment
+
+1:18:05.560 --> 1:18:07.560
+ but there's really no way to express
+
+1:18:07.560 --> 1:18:09.560
+ that fact except by
+
+1:18:09.560 --> 1:18:11.560
+ listening through it all the way
+
+1:18:11.560 --> 1:18:13.560
+ and maybe playing it again at that time
+
+1:18:13.560 --> 1:18:15.560
+ or something but there's
+
+1:18:15.560 --> 1:18:17.560
+ no need for a button that says
+
+1:18:17.560 --> 1:18:19.560
+ this was the best song could have
+
+1:18:19.560 --> 1:18:21.560
+ heard at this moment well we're playing around
+
+1:18:21.560 --> 1:18:23.560
+ with that with kind of the thumbs up
+
+1:18:23.560 --> 1:18:25.560
+ concept saying like I really like this
+
+1:18:25.560 --> 1:18:27.560
+ just kind of talking to the algorithm
+
+1:18:27.560 --> 1:18:29.560
+ it's unclear if that's the best way
+
+1:18:29.560 --> 1:18:31.560
+ for humans to interact maybe it is
+
+1:18:31.560 --> 1:18:33.560
+ maybe they should think of Spotify
+
+1:18:33.560 --> 1:18:35.560
+ as a person an agent sitting there
+
+1:18:35.560 --> 1:18:37.560
+ trying to serve you and you can say like
+
+1:18:37.560 --> 1:18:39.560
+ that's Spotify, good Spotify
+
+1:18:39.560 --> 1:18:41.560
+ right now the analogy we've had is more
+
+1:18:41.560 --> 1:18:43.560
+ you shouldn't think of us
+
+1:18:43.560 --> 1:18:45.560
+ we should be investable and the feedback
+
+1:18:45.560 --> 1:18:47.560
+ is if you save it
+
+1:18:47.560 --> 1:18:49.560
+ you work for yourself you do a playlist
+
+1:18:49.560 --> 1:18:51.560
+ because you think is great and we can learn from that
+
+1:18:51.560 --> 1:18:53.560
+ it's kind of back to Tesla
+
+1:18:53.560 --> 1:18:55.560
+ how they kind of have this shadow mode
+
+1:18:55.560 --> 1:18:57.560
+ we sit in what you drive
+
+1:18:57.560 --> 1:18:59.560
+ we kind of took the same analogy
+
+1:18:59.560 --> 1:19:01.560
+ we sit in what you playlist
+
+1:19:01.560 --> 1:19:03.560
+ and then maybe we can offer you an autopilot
+
+1:19:03.560 --> 1:19:05.560
+ we can take over for a while or something like that
+
+1:19:05.560 --> 1:19:07.560
+ and then back off if you say like
+
+1:19:07.560 --> 1:19:09.560
+ that's not good enough
+
+1:19:09.560 --> 1:19:11.560
+ but I think it's interesting to figure out
+
+1:19:11.560 --> 1:19:13.560
+ what your mental model is
+
+1:19:13.560 --> 1:19:15.560
+ if Spotify is an AI that you talk to
+
+1:19:15.560 --> 1:19:17.560
+ which I think might be a bit too abstract
+
+1:19:17.560 --> 1:19:19.560
+ for many consumers
+
+1:19:19.560 --> 1:19:21.560
+ or if you still think of it as
+
+1:19:21.560 --> 1:19:23.560
+ it's my music app
+
+1:19:23.560 --> 1:19:25.560
+ it's more helpful
+
+1:19:25.560 --> 1:19:27.560
+ and depends on the device it's running on
+
+1:19:27.560 --> 1:19:29.560
+ which brings us to
+
+1:19:29.560 --> 1:19:31.560
+ smart speakers
+
+1:19:31.560 --> 1:19:33.560
+ so I have a lot of the Spotify listening I do
+
+1:19:33.560 --> 1:19:35.560
+ is on
+
+1:19:35.560 --> 1:19:37.560
+ things on devices I can talk to
+
+1:19:37.560 --> 1:19:39.560
+ whether it's from Amazon, Google
+
+1:19:39.560 --> 1:19:41.560
+ or Apple
+
+1:19:41.560 --> 1:19:43.560
+ what's the role of Spotify in those devices
+
+1:19:43.560 --> 1:19:45.560
+ how do you think of it differently than
+
+1:19:45.560 --> 1:19:47.560
+ on the phone or on the desktop
+
+1:19:47.560 --> 1:19:49.560
+ there are a few things
+
+1:19:49.560 --> 1:19:51.560
+ to say about the first of all
+
+1:19:51.560 --> 1:19:53.560
+ it's incredibly exciting they're growing like crazy
+
+1:19:53.560 --> 1:19:55.560
+ especially here in the US
+
+1:19:59.560 --> 1:20:01.560
+ and it's solving
+
+1:20:01.560 --> 1:20:03.560
+ a consumer need that I think is
+
+1:20:05.560 --> 1:20:07.560
+ you can think of it as
+
+1:20:07.560 --> 1:20:09.560
+ just remote interactivity
+
+1:20:09.560 --> 1:20:11.560
+ you can control this thing from
+
+1:20:11.560 --> 1:20:13.560
+ across the room and it may
+
+1:20:13.560 --> 1:20:15.560
+ feel like a small thing but it turns out
+
+1:20:15.560 --> 1:20:17.560
+ that friction matters to consumers
+
+1:20:17.560 --> 1:20:19.560
+ being able to say play, pause
+
+1:20:19.560 --> 1:20:21.560
+ and so forth from across the room
+
+1:20:21.560 --> 1:20:23.560
+ is very powerful so basically
+
+1:20:23.560 --> 1:20:25.560
+ you made the living room interactive
+
+1:20:25.560 --> 1:20:27.560
+ now
+
+1:20:27.560 --> 1:20:29.560
+ and
+
+1:20:29.560 --> 1:20:31.560
+ what we see in our data is that
+
+1:20:31.560 --> 1:20:33.560
+ the number one use case for these speakers
+
+1:20:33.560 --> 1:20:35.560
+ is music, music and podcast
+
+1:20:35.560 --> 1:20:37.560
+ so
+
+1:20:37.560 --> 1:20:39.560
+ fortunately for us it's been important
+
+1:20:39.560 --> 1:20:41.560
+ to these companies to have those use case
+
+1:20:41.560 --> 1:20:43.560
+ covered so they want to Spotify on this
+
+1:20:43.560 --> 1:20:45.560
+ we have very good relationships with
+
+1:20:45.560 --> 1:20:47.560
+ them
+
+1:20:47.560 --> 1:20:49.560
+ and we're seeing tremendous
+
+1:20:49.560 --> 1:20:51.560
+ success with them
+
+1:20:51.560 --> 1:20:53.560
+ what I think is interesting
+
+1:20:53.560 --> 1:20:55.560
+ about them is
+
+1:20:55.560 --> 1:20:57.560
+ it's already working
+
+1:20:57.560 --> 1:20:59.560
+ we kind of had this
+
+1:20:59.560 --> 1:21:01.560
+ epiphany
+
+1:21:01.560 --> 1:21:03.560
+ many years ago back when we started
+
+1:21:03.560 --> 1:21:05.560
+ using Sonos if you went through all the
+
+1:21:05.560 --> 1:21:07.560
+ trouble of setting up your Sonos system
+
+1:21:07.560 --> 1:21:09.560
+ you had this magical experience where you had
+
+1:21:09.560 --> 1:21:11.560
+ all the music ever made in your living room
+
+1:21:11.560 --> 1:21:13.560
+ and we
+
+1:21:13.560 --> 1:21:15.560
+ made this assumption that
+
+1:21:15.560 --> 1:21:17.560
+ at home everyone used to have a CD player at home
+
+1:21:17.560 --> 1:21:19.560
+ but they never managed to get their files
+
+1:21:19.560 --> 1:21:21.560
+ working in the home having this network attached
+
+1:21:21.560 --> 1:21:23.560
+ storage was too cumbersome for most consumers
+
+1:21:23.560 --> 1:21:25.560
+ so we made the assumption that
+
+1:21:25.560 --> 1:21:27.560
+ the home would skip from the CD all the way to
+
+1:21:27.560 --> 1:21:29.560
+ streaming box
+
+1:21:29.560 --> 1:21:31.560
+ where you would buy the steering wheel without
+
+1:21:31.560 --> 1:21:33.560
+ all the music built in that took longer than we
+
+1:21:33.560 --> 1:21:35.560
+ thought but with the voice speakers that was the
+
+1:21:35.560 --> 1:21:37.560
+ unlocking that made kind of the connected speaker
+
+1:21:37.560 --> 1:21:39.560
+ happen in the home
+
+1:21:39.560 --> 1:21:41.560
+ so it really
+
+1:21:41.560 --> 1:21:43.560
+ it really exploded and
+
+1:21:43.560 --> 1:21:45.560
+ we saw this engagement that we
+
+1:21:45.560 --> 1:21:47.560
+ predicted would happen
+
+1:21:47.560 --> 1:21:49.560
+ what I think is interesting though is where it's going
+
+1:21:49.560 --> 1:21:51.560
+ from now
+
+1:21:51.560 --> 1:21:53.560
+ right now you think of them as voice speakers
+
+1:21:53.560 --> 1:21:55.560
+ but I think if you look at
+
+1:21:55.560 --> 1:21:57.560
+ Google I.O. for example
+
+1:21:57.560 --> 1:21:59.560
+ they just added a camera
+
+1:21:59.560 --> 1:22:01.560
+ to it where when the alarm goes off
+
+1:22:01.560 --> 1:22:03.560
+ instead of saying
+
+1:22:03.560 --> 1:22:05.560
+ hey Google stop you can just
+
+1:22:05.560 --> 1:22:07.560
+ wave your hand
+
+1:22:07.560 --> 1:22:09.560
+ so I think they're going to think more of it as
+
+1:22:09.560 --> 1:22:11.560
+ an agent
+
+1:22:11.560 --> 1:22:13.560
+ as an assistant truly an assistant
+
+1:22:13.560 --> 1:22:15.560
+ and an assistant that can see you
+
+1:22:15.560 --> 1:22:17.560
+ is going to be much more effective than a blind
+
+1:22:17.560 --> 1:22:19.560
+ assistant so I think these things will
+
+1:22:19.560 --> 1:22:21.560
+ morph and we won't necessarily think of them as
+
+1:22:21.560 --> 1:22:23.560
+ quote unquote voice speakers anymore
+
+1:22:23.560 --> 1:22:25.560
+ just as
+
+1:22:25.560 --> 1:22:27.560
+ interactive
+
+1:22:27.560 --> 1:22:29.560
+ access to the internet in the home
+
+1:22:29.560 --> 1:22:31.560
+ but I still think that
+
+1:22:31.560 --> 1:22:33.560
+ the biggest use case for those will be
+
+1:22:33.560 --> 1:22:35.560
+ will be audio so
+
+1:22:35.560 --> 1:22:37.560
+ for that reason we're investing heavily in it
+
+1:22:37.560 --> 1:22:39.560
+ and we built our own NLU stack
+
+1:22:39.560 --> 1:22:41.560
+ to be able to
+
+1:22:41.560 --> 1:22:43.560
+ the challenge here is
+
+1:22:43.560 --> 1:22:45.560
+ how do you innovate in that world
+
+1:22:45.560 --> 1:22:47.560
+ it lowers friction for consumers
+
+1:22:47.560 --> 1:22:49.560
+ but it's also much more constrained
+
+1:22:49.560 --> 1:22:51.560
+ you have no pixels to play with
+
+1:22:51.560 --> 1:22:53.560
+ in an audio only world
+
+1:22:53.560 --> 1:22:55.560
+ it's really the vocabulary that is the interface
+
+1:22:55.560 --> 1:22:57.560
+ so we started investing
+
+1:22:57.560 --> 1:22:59.560
+ and playing around quite a lot with that
+
+1:22:59.560 --> 1:23:01.560
+ trying to understand what the future will be
+
+1:23:01.560 --> 1:23:03.560
+ of you speaking and gesturing
+
+1:23:03.560 --> 1:23:05.560
+ and waving at your music
+
+1:23:05.560 --> 1:23:07.560
+ and actually you're actually nudging closer
+
+1:23:07.560 --> 1:23:09.560
+ to autonomous vehicle space
+
+1:23:09.560 --> 1:23:11.560
+ because from everything I've seen
+
+1:23:11.560 --> 1:23:13.560
+ the level of frustration people experience
+
+1:23:13.560 --> 1:23:15.560
+ upon failure of natural language
+
+1:23:15.560 --> 1:23:17.560
+ understanding is much higher
+
+1:23:17.560 --> 1:23:19.560
+ than failure in other context
+
+1:23:19.560 --> 1:23:21.560
+ people get frustrated really fast
+
+1:23:21.560 --> 1:23:23.560
+ so if you screw that
+
+1:23:23.560 --> 1:23:25.560
+ experience up even just a little bit
+
+1:23:25.560 --> 1:23:27.560
+ they give up really quickly
+
+1:23:27.560 --> 1:23:29.560
+ and I think you see that in the data
+
+1:23:29.560 --> 1:23:31.560
+ while it's tremendously successful
+
+1:23:31.560 --> 1:23:33.560
+ the most common interactions
+
+1:23:33.560 --> 1:23:35.560
+ are play, pause
+
+1:23:35.560 --> 1:23:37.560
+ and you know next
+
+1:23:37.560 --> 1:23:39.560
+ the things where if you compare it to taking up your phone
+
+1:23:39.560 --> 1:23:41.560
+ unlocking it, bringing up the app and skipping
+
+1:23:41.560 --> 1:23:43.560
+ clicking skip
+
+1:23:43.560 --> 1:23:45.560
+ it was much lower friction
+
+1:23:45.560 --> 1:23:47.560
+ but then
+
+1:23:47.560 --> 1:23:49.560
+ for longer more complicated things
+
+1:23:49.560 --> 1:23:51.560
+ can you find me that song about people still bring up their phone
+
+1:23:51.560 --> 1:23:53.560
+ and search and then play it on their speaker
+
+1:23:53.560 --> 1:23:55.560
+ so we tried again to build a fault tolerant UI
+
+1:23:55.560 --> 1:23:57.560
+ where for the more
+
+1:23:57.560 --> 1:23:59.560
+ complicated things you can still pick up your phone
+
+1:23:59.560 --> 1:24:01.560
+ have powerful full keyboard search
+
+1:24:01.560 --> 1:24:03.560
+ and then try to optimize
+
+1:24:03.560 --> 1:24:05.560
+ for where there is actually lower friction
+
+1:24:05.560 --> 1:24:07.560
+ and try to, it's kind of like the
+
+1:24:07.560 --> 1:24:09.560
+ test autopilot thing
+
+1:24:09.560 --> 1:24:11.560
+ you have to be at the level where
+
+1:24:11.560 --> 1:24:13.560
+ you're helpful if you're too smart
+
+1:24:13.560 --> 1:24:15.560
+ and just in the way people are going to get frustrated
+
+1:24:15.560 --> 1:24:17.560
+ and first of all
+
+1:24:17.560 --> 1:24:19.560
+ I'm not obsessed with where it happens
+
+1:24:19.560 --> 1:24:21.560
+ it's just a good song but let me mention that as a use case
+
+1:24:21.560 --> 1:24:23.560
+ because it's an interesting one
+
+1:24:23.560 --> 1:24:25.560
+ I've literally told
+
+1:24:25.560 --> 1:24:27.560
+ I don't want to say the name of the speaker
+
+1:24:27.560 --> 1:24:29.560
+ because when people are listening to it
+
+1:24:29.560 --> 1:24:31.560
+ it'll make their speaker go off
+
+1:24:31.560 --> 1:24:33.560
+ but I talk to the speaker
+
+1:24:33.560 --> 1:24:35.560
+ and I say play
+
+1:24:35.560 --> 1:24:37.560
+ Stairway to Heaven
+
+1:24:37.560 --> 1:24:39.560
+ and every time
+
+1:24:39.560 --> 1:24:41.560
+ but a large percentage of the time plays the wrong
+
+1:24:41.560 --> 1:24:43.560
+ Stairway to Heaven
+
+1:24:43.560 --> 1:24:45.560
+ it plays some cover of the
+
+1:24:45.560 --> 1:24:47.560
+ and
+
+1:24:47.560 --> 1:24:49.560
+ that part of the experience
+
+1:24:49.560 --> 1:24:51.560
+ I actually wonder from a business perspective
+
+1:24:51.560 --> 1:24:53.560
+ the Spotify control
+
+1:24:53.560 --> 1:24:55.560
+ that entire experience
+
+1:24:55.560 --> 1:24:57.560
+ or no
+
+1:24:57.560 --> 1:24:59.560
+ it seems like the NLU
+
+1:24:59.560 --> 1:25:01.560
+ stuff is controlled by the speaker
+
+1:25:01.560 --> 1:25:03.560
+ and then Spotify stays
+
+1:25:03.560 --> 1:25:05.560
+ at a layer below that
+
+1:25:05.560 --> 1:25:07.560
+ it's a good and complicated question
+
+1:25:07.560 --> 1:25:09.560
+ some of which is dependent
+
+1:25:09.560 --> 1:25:11.560
+ on the
+
+1:25:11.560 --> 1:25:13.560
+ partners so it's hard to comment on the specifics
+
+1:25:13.560 --> 1:25:15.560
+ but
+
+1:25:15.560 --> 1:25:17.560
+ the question is the right one
+
+1:25:17.560 --> 1:25:19.560
+ the challenge is
+
+1:25:19.560 --> 1:25:21.560
+ if you can't use any of the personalization
+
+1:25:21.560 --> 1:25:23.560
+ we know which Stairway to Heaven
+
+1:25:23.560 --> 1:25:25.560
+ and the truth is maybe for one person
+
+1:25:25.560 --> 1:25:27.560
+ it is exactly the cover that they want
+
+1:25:27.560 --> 1:25:29.560
+ to be very frustrated
+
+1:25:29.560 --> 1:25:31.560
+ I think
+
+1:25:31.560 --> 1:25:33.560
+ we default to the right version
+
+1:25:33.560 --> 1:25:35.560
+ but you actually want to be able to do the cover
+
+1:25:35.560 --> 1:25:37.560
+ for the person that just played the cover 50 times
+
+1:25:37.560 --> 1:25:39.560
+ or Spotify is just going to seem stupid
+
+1:25:39.560 --> 1:25:41.560
+ so you want to be able to leverage the personalization
+
+1:25:41.560 --> 1:25:43.560
+ but you have this stack
+
+1:25:43.560 --> 1:25:45.560
+ where you have the
+
+1:25:45.560 --> 1:25:47.560
+ the ASR and this thing called the end best list
+
+1:25:47.560 --> 1:25:49.560
+ or the end best guesses
+
+1:25:49.560 --> 1:25:51.560
+ here and then the personalization comes in at the end
+
+1:25:51.560 --> 1:25:53.560
+ you actually want the personalization to be here
+
+1:25:53.560 --> 1:25:55.560
+ when you're guessing about what they actually meant
+
+1:25:55.560 --> 1:25:57.560
+ we're working with these partners
+
+1:25:57.560 --> 1:25:59.560
+ and it's a complicated
+
+1:25:59.560 --> 1:26:01.560
+ it's a complicated thing
+
+1:26:01.560 --> 1:26:03.560
+ where you want to
+
+1:26:03.560 --> 1:26:05.560
+ so first of all you want to be very
+
+1:26:05.560 --> 1:26:07.560
+ careful with your users data
+
+1:26:07.560 --> 1:26:09.560
+ you don't want to share your users data without the permission
+
+1:26:09.560 --> 1:26:11.560
+ but you want to share some data so that their experience gets better
+
+1:26:11.560 --> 1:26:13.560
+ so that these partners
+
+1:26:13.560 --> 1:26:15.560
+ can understand enough but not too much and so forth
+
+1:26:15.560 --> 1:26:17.560
+ so
+
+1:26:17.560 --> 1:26:19.560
+ it's really the trick is that
+
+1:26:19.560 --> 1:26:21.560
+ it's like a business driven relationship
+
+1:26:21.560 --> 1:26:23.560
+ where you're doing product development across companies
+
+1:26:23.560 --> 1:26:25.560
+ together
+
+1:26:25.560 --> 1:26:27.560
+ which is really complicated
+
+1:26:27.560 --> 1:26:29.560
+ but this is exactly why we built our own NLU
+
+1:26:29.560 --> 1:26:31.560
+ so that we actually
+
+1:26:31.560 --> 1:26:33.560
+ can make personalized guesses
+
+1:26:33.560 --> 1:26:35.560
+ because this is the biggest frustration
+
+1:26:35.560 --> 1:26:37.560
+ from a user point of view they don't understand
+
+1:26:37.560 --> 1:26:39.560
+ about ASRs and end best lists
+
+1:26:39.560 --> 1:26:41.560
+ and business deals they're like how hard can it be
+
+1:26:41.560 --> 1:26:43.560
+ I've told this thing 50 times
+
+1:26:43.560 --> 1:26:45.560
+ this version and still it plays the wrong thing
+
+1:26:45.560 --> 1:26:47.560
+ it can't be hard
+
+1:26:47.560 --> 1:26:49.560
+ so we try to take that user approach
+
+1:26:49.560 --> 1:26:51.560
+ if the user is not going to understand
+
+1:26:51.560 --> 1:26:53.560
+ the implications of business we have to
+
+1:26:53.560 --> 1:26:55.560
+ solve it
+
+1:26:55.560 --> 1:26:57.560
+ let's talk about sort of a complicated subject
+
+1:26:57.560 --> 1:26:59.560
+ that I myself
+
+1:26:59.560 --> 1:27:01.560
+ I'm quite
+
+1:27:01.560 --> 1:27:03.560
+ torn about
+
+1:27:03.560 --> 1:27:05.560
+ the idea sort of of
+
+1:27:05.560 --> 1:27:07.560
+ paying
+
+1:27:07.560 --> 1:27:09.560
+ artists
+
+1:27:09.560 --> 1:27:11.560
+ I saw as of August 31
+
+1:27:11.560 --> 1:27:13.560
+ 2018
+
+1:27:13.560 --> 1:27:15.560
+ over 11 billion dollars
+
+1:27:15.560 --> 1:27:17.560
+ were paid to rights holders
+
+1:27:17.560 --> 1:27:19.560
+ and further distributed
+
+1:27:19.560 --> 1:27:21.560
+ to artists from Spotify
+
+1:27:21.560 --> 1:27:23.560
+ so a lot of money is being paid to artists
+
+1:27:23.560 --> 1:27:25.560
+ first of all
+
+1:27:25.560 --> 1:27:27.560
+ the whole time as a consumer for me
+
+1:27:27.560 --> 1:27:29.560
+ when I look at Spotify
+
+1:27:29.560 --> 1:27:31.560
+ I'm not sure I'm remembering
+
+1:27:31.560 --> 1:27:33.560
+ correctly but I think you said exactly how I feel
+
+1:27:33.560 --> 1:27:35.560
+ which is this is too good to be true
+
+1:27:35.560 --> 1:27:37.560
+ like
+
+1:27:37.560 --> 1:27:39.560
+ when I started using Spotify
+
+1:27:39.560 --> 1:27:41.560
+ I assumed you guys would go bankrupt
+
+1:27:41.560 --> 1:27:43.560
+ in like a month
+
+1:27:43.560 --> 1:27:45.560
+ it's like this is too good
+
+1:27:45.560 --> 1:27:47.560
+ a lot of people did
+
+1:27:47.560 --> 1:27:49.560
+ this is amazing
+
+1:27:49.560 --> 1:27:51.560
+ so one question I have
+
+1:27:51.560 --> 1:27:53.560
+ is sort of the bigger question
+
+1:27:53.560 --> 1:27:55.560
+ how do you make money in this complicated world
+
+1:27:55.560 --> 1:27:57.560
+ how do you deal with the relationship
+
+1:27:57.560 --> 1:27:59.560
+ with record labels
+
+1:27:59.560 --> 1:28:01.560
+ who
+
+1:28:01.560 --> 1:28:03.560
+ are
+
+1:28:03.560 --> 1:28:05.560
+ complicated
+
+1:28:05.560 --> 1:28:07.560
+ these big
+
+1:28:07.560 --> 1:28:09.560
+ you essentially have the task
+
+1:28:09.560 --> 1:28:11.560
+ of hurting
+
+1:28:11.560 --> 1:28:13.560
+ cats but like rich
+
+1:28:13.560 --> 1:28:15.560
+ and powerful cats
+
+1:28:15.560 --> 1:28:17.560
+ and also
+
+1:28:17.560 --> 1:28:19.560
+ have the task of paying artists enough
+
+1:28:19.560 --> 1:28:21.560
+ and paying those labels enough
+
+1:28:21.560 --> 1:28:23.560
+ and still making money in the internet
+
+1:28:23.560 --> 1:28:25.560
+ space where people are not willing to pay
+
+1:28:25.560 --> 1:28:27.560
+ hundreds of dollars a month
+
+1:28:27.560 --> 1:28:29.560
+ so
+
+1:28:29.560 --> 1:28:31.560
+ how do you navigate the space
+
+1:28:31.560 --> 1:28:33.560
+ that's a beautiful description, hurting rich cats
+
+1:28:33.560 --> 1:28:35.560
+ I've never heard that before
+
+1:28:35.560 --> 1:28:37.560
+ it is
+
+1:28:37.560 --> 1:28:39.560
+ very complicated and I think
+
+1:28:39.560 --> 1:28:41.560
+ certainly
+
+1:28:41.560 --> 1:28:43.560
+ actually betting against Spotify has been statistically
+
+1:28:43.560 --> 1:28:45.560
+ a very smart thing to do
+
+1:28:45.560 --> 1:28:47.560
+ just looking at the
+
+1:28:47.560 --> 1:28:49.560
+ line of roadkill in music streaming services
+
+1:28:51.560 --> 1:28:53.560
+ it's kind of
+
+1:28:53.560 --> 1:28:55.560
+ I think if I understood the complexity
+
+1:28:55.560 --> 1:28:57.560
+ when I joined Spotify
+
+1:28:57.560 --> 1:28:59.560
+ fortunately I didn't know enough
+
+1:28:59.560 --> 1:29:01.560
+ about
+
+1:29:01.560 --> 1:29:03.560
+ the music industry to understand the complexities
+
+1:29:03.560 --> 1:29:05.560
+ because then I would have made a more rational guess
+
+1:29:05.560 --> 1:29:07.560
+ that it wouldn't work
+
+1:29:07.560 --> 1:29:09.560
+ so ignorance is bliss
+
+1:29:09.560 --> 1:29:11.560
+ but I think
+
+1:29:11.560 --> 1:29:13.560
+ there have been a few distinct challenges
+
+1:29:13.560 --> 1:29:15.560
+ I think as I said
+
+1:29:15.560 --> 1:29:17.560
+ one of the things that made it work at all
+
+1:29:17.560 --> 1:29:19.560
+ was that Sweden and the Nordics
+
+1:29:19.560 --> 1:29:21.560
+ was a lost market
+
+1:29:21.560 --> 1:29:23.560
+ so there was
+
+1:29:23.560 --> 1:29:25.560
+ no risk for labels to try this
+
+1:29:25.560 --> 1:29:27.560
+ I don't think it would have worked
+
+1:29:27.560 --> 1:29:29.560
+ if the market was
+
+1:29:29.560 --> 1:29:31.560
+ healthy
+
+1:29:31.560 --> 1:29:33.560
+ so that was the initial condition
+
+1:29:33.560 --> 1:29:35.560
+ then we had this tremendous
+
+1:29:35.560 --> 1:29:37.560
+ challenge with the model itself
+
+1:29:37.560 --> 1:29:39.560
+ so now
+
+1:29:39.560 --> 1:29:41.560
+ we're pirating but for the people who bought
+
+1:29:41.560 --> 1:29:43.560
+ a download or a CD
+
+1:29:43.560 --> 1:29:45.560
+ the artist would get
+
+1:29:45.560 --> 1:29:47.560
+ all the revenue for all the future plays
+
+1:29:47.560 --> 1:29:49.560
+ then right so you got it all up front
+
+1:29:49.560 --> 1:29:51.560
+ whereas the streaming model was like
+
+1:29:51.560 --> 1:29:53.560
+ almost nothing they won almost nothing they too
+
+1:29:53.560 --> 1:29:55.560
+ and then at some point this curve
+
+1:29:55.560 --> 1:29:57.560
+ of incremental revenue
+
+1:29:57.560 --> 1:29:59.560
+ would intersect with your day one payment
+
+1:29:59.560 --> 1:30:01.560
+ and that took a long time to play out
+
+1:30:01.560 --> 1:30:03.560
+ before
+
+1:30:03.560 --> 1:30:05.560
+ the music labels
+
+1:30:05.560 --> 1:30:07.560
+ they understood that but on the artist side
+
+1:30:07.560 --> 1:30:09.560
+ it took a lot of time to understand
+
+1:30:09.560 --> 1:30:11.560
+ that actually if I have a big hit that is going to be played
+
+1:30:11.560 --> 1:30:13.560
+ for many years this is a much better model
+
+1:30:13.560 --> 1:30:15.560
+ because I get paid based
+
+1:30:15.560 --> 1:30:17.560
+ on how much people use the product
+
+1:30:17.560 --> 1:30:19.560
+ not how much they thought they would use it day one
+
+1:30:19.560 --> 1:30:21.560
+ or so forth
+
+1:30:21.560 --> 1:30:23.560
+ so it was a complicated model to get across
+
+1:30:23.560 --> 1:30:25.560
+ but time helped with that
+
+1:30:25.560 --> 1:30:27.560
+ and now
+
+1:30:27.560 --> 1:30:29.560
+ the revenues to the music industry actually are bigger
+
+1:30:29.560 --> 1:30:31.560
+ again
+
+1:30:31.560 --> 1:30:33.560
+ it's gone through this incredible dip and now they're back up
+
+1:30:33.560 --> 1:30:35.560
+ and so we're very proud
+
+1:30:35.560 --> 1:30:37.560
+ of having been
+
+1:30:37.560 --> 1:30:39.560
+ a part of that
+
+1:30:39.560 --> 1:30:41.560
+ so there have been distinct problems
+
+1:30:41.560 --> 1:30:43.560
+ I think when it comes to the
+
+1:30:43.560 --> 1:30:45.560
+ labels
+
+1:30:45.560 --> 1:30:47.560
+ we have taken the painful approach
+
+1:30:47.560 --> 1:30:49.560
+ some of our competition at the time
+
+1:30:49.560 --> 1:30:51.560
+ they kind of
+
+1:30:51.560 --> 1:30:53.560
+ looked at other companies and said
+
+1:30:53.560 --> 1:30:55.560
+ if we just ignore the rights
+
+1:30:55.560 --> 1:30:57.560
+ we get really big really fast
+
+1:30:57.560 --> 1:30:59.560
+ we're going to be too big for the
+
+1:30:59.560 --> 1:31:01.560
+ labels to fail
+
+1:31:01.560 --> 1:31:03.560
+ they're not going to kill us
+
+1:31:03.560 --> 1:31:05.560
+ we're going to take that approach
+
+1:31:05.560 --> 1:31:07.560
+ we went legal from day one
+
+1:31:07.560 --> 1:31:09.560
+ and we negotiated
+
+1:31:09.560 --> 1:31:11.560
+ and negotiated and negotiated
+
+1:31:11.560 --> 1:31:13.560
+ it was very slow, very frustrating
+
+1:31:13.560 --> 1:31:15.560
+ we were angry at seeing other companies
+
+1:31:15.560 --> 1:31:17.560
+ taking shortcuts and seeming to get away with it
+
+1:31:17.560 --> 1:31:19.560
+ it was this game theory thing
+
+1:31:19.560 --> 1:31:21.560
+ where over many rounds of playing the game
+
+1:31:21.560 --> 1:31:23.560
+ this would be the right strategy
+
+1:31:23.560 --> 1:31:25.560
+ and even though
+
+1:31:25.560 --> 1:31:27.560
+ clearly there's a lot of frustrations
+
+1:31:27.560 --> 1:31:29.560
+ at times during renegotiations
+
+1:31:29.560 --> 1:31:31.560
+ there is this weird trust
+
+1:31:31.560 --> 1:31:33.560
+ honest and fair
+
+1:31:33.560 --> 1:31:35.560
+ we've never screwed them, they've never screwed us
+
+1:31:35.560 --> 1:31:37.560
+ it's ten years but
+
+1:31:37.560 --> 1:31:39.560
+ there's this trust in like
+
+1:31:39.560 --> 1:31:41.560
+ they know that if music doesn't get really big
+
+1:31:41.560 --> 1:31:43.560
+ if lots of people do not want to listen
+
+1:31:43.560 --> 1:31:45.560
+ to music and want to pay for it
+
+1:31:45.560 --> 1:31:47.560
+ Spotify has no business model
+
+1:31:47.560 --> 1:31:49.560
+ so we actually are incredibly aligned
+
+1:31:49.560 --> 1:31:51.560
+ right?
+
+1:31:51.560 --> 1:31:53.560
+ other companies have other business models
+
+1:31:53.560 --> 1:31:55.560
+ where even if they made new music
+
+1:31:55.560 --> 1:31:57.560
+ no money for music
+
+1:31:57.560 --> 1:31:59.560
+ they'd still be profitable companies
+
+1:31:59.560 --> 1:32:01.560
+ and I think the industry sees that
+
+1:32:01.560 --> 1:32:03.560
+ we are actually aligned
+
+1:32:03.560 --> 1:32:05.560
+ business wise
+
+1:32:05.560 --> 1:32:07.560
+ so there is this trust
+
+1:32:07.560 --> 1:32:09.560
+ that allows us to do
+
+1:32:09.560 --> 1:32:11.560
+ product development even if it's scary
+
+1:32:11.560 --> 1:32:13.560
+ you know
+
+1:32:13.560 --> 1:32:15.560
+ taking risks
+
+1:32:15.560 --> 1:32:17.560
+ the free model itself was an incredible risk
+
+1:32:17.560 --> 1:32:19.560
+ for the music industry to take
+
+1:32:19.560 --> 1:32:21.560
+ that they should get credit for
+
+1:32:21.560 --> 1:32:23.560
+ now some of it was that they had nothing to lose in Sweden
+
+1:32:23.560 --> 1:32:25.560
+ but frankly a lot of the labels also took risk
+
+1:32:25.560 --> 1:32:27.560
+ and so I think we built up that trust
+
+1:32:27.560 --> 1:32:29.560
+ with
+
+1:32:29.560 --> 1:32:31.560
+ I think hurting a cat sounds a bit
+
+1:32:31.560 --> 1:32:33.560
+ what's the word
+
+1:32:33.560 --> 1:32:35.560
+ it sounds like
+
+1:32:35.560 --> 1:32:37.560
+ dismissive? no every cat matter
+
+1:32:37.560 --> 1:32:39.560
+ they are all beautiful and very important
+
+1:32:39.560 --> 1:32:41.560
+ exactly they've taken a lot of risks
+
+1:32:41.560 --> 1:32:43.560
+ and certainly it's been frustrating on both sides
+
+1:32:45.560 --> 1:32:47.560
+ it's really like playing
+
+1:32:47.560 --> 1:32:49.560
+ it's game theory if you play the
+
+1:32:49.560 --> 1:32:51.560
+ if you play the game many times
+
+1:32:51.560 --> 1:32:53.560
+ then you can have the statistical outcome
+
+1:32:53.560 --> 1:32:55.560
+ that you bet on and it feels very painful
+
+1:32:55.560 --> 1:32:57.560
+ when you're in the middle of that
+
+1:32:57.560 --> 1:32:59.560
+ I mean there's risk there's trust
+
+1:32:59.560 --> 1:33:01.560
+ there's relationships from
+
+1:33:01.560 --> 1:33:03.560
+ just having read the biography
+
+1:33:03.560 --> 1:33:05.560
+ of Steve Jobs
+
+1:33:05.560 --> 1:33:07.560
+ similar kind of relationship were discussed
+
+1:33:07.560 --> 1:33:09.560
+ in iTunes the idea of selling
+
+1:33:09.560 --> 1:33:11.560
+ a song for a dollar was very uncomfortable
+
+1:33:11.560 --> 1:33:13.560
+ for labels and
+
+1:33:13.560 --> 1:33:15.560
+ and there was no
+
+1:33:15.560 --> 1:33:17.560
+ it was the same kind of thing it was trust
+
+1:33:17.560 --> 1:33:19.560
+ it was game theory
+
+1:33:19.560 --> 1:33:21.560
+ as a lot of relationships that had to be built
+
+1:33:21.560 --> 1:33:23.560
+ and it's really
+
+1:33:23.560 --> 1:33:25.560
+ terrifyingly difficult
+
+1:33:25.560 --> 1:33:27.560
+ process
+
+1:33:27.560 --> 1:33:29.560
+ that Apple could go through a little bit
+
+1:33:29.560 --> 1:33:31.560
+ because they could afford for that process
+
+1:33:31.560 --> 1:33:33.560
+ to fail
+
+1:33:33.560 --> 1:33:35.560
+ for Spotify it seems terrifying because
+
+1:33:35.560 --> 1:33:37.560
+ you can't
+
+1:33:37.560 --> 1:33:39.560
+ initially
+
+1:33:39.560 --> 1:33:41.560
+ I think a lot of it comes down to
+
+1:33:41.560 --> 1:33:43.560
+ honestly Daniel and his tenacity
+
+1:33:43.560 --> 1:33:45.560
+ in negotiating which seems like an impossible
+
+1:33:45.560 --> 1:33:47.560
+ discipline task
+
+1:33:47.560 --> 1:33:49.560
+ because
+
+1:33:49.560 --> 1:33:51.560
+ he was completely unknown and so forth
+
+1:33:51.560 --> 1:33:53.560
+ and also the reason that
+
+1:33:53.560 --> 1:33:55.560
+ it worked
+
+1:33:55.560 --> 1:33:57.560
+ but I think
+
+1:34:01.560 --> 1:34:03.560
+ I think game theory is probably the best way to think about it
+
+1:34:03.560 --> 1:34:05.560
+ you could straight go straight for this like Nash
+
+1:34:05.560 --> 1:34:07.560
+ equilibrium that someone is going to defect
+
+1:34:07.560 --> 1:34:09.560
+ or you play many times
+
+1:34:09.560 --> 1:34:11.560
+ and you try to actually go for the top left
+
+1:34:11.560 --> 1:34:13.560
+ the corporations sell
+
+1:34:13.560 --> 1:34:15.560
+ is there any magical
+
+1:34:15.560 --> 1:34:17.560
+ reason why Spotify
+
+1:34:17.560 --> 1:34:19.560
+ seems to have won
+
+1:34:19.560 --> 1:34:21.560
+ so a lot of people have tried to do
+
+1:34:21.560 --> 1:34:23.560
+ what Spotify tried to do
+
+1:34:23.560 --> 1:34:25.560
+ and Spotify has come out
+
+1:34:25.560 --> 1:34:27.560
+ well so the answer is that
+
+1:34:27.560 --> 1:34:29.560
+ there's no magical reason because I don't believe in magic
+
+1:34:29.560 --> 1:34:31.560
+ but I think there are
+
+1:34:31.560 --> 1:34:33.560
+ there are reasons
+
+1:34:33.560 --> 1:34:35.560
+ and I think some of them are that
+
+1:34:35.560 --> 1:34:37.560
+ people have
+
+1:34:37.560 --> 1:34:39.560
+ misunderstood
+
+1:34:39.560 --> 1:34:41.560
+ a lot of what we actually do
+
+1:34:41.560 --> 1:34:43.560
+ the actual
+
+1:34:43.560 --> 1:34:45.560
+ Spotify model is very complicated
+
+1:34:45.560 --> 1:34:47.560
+ they've looked at the premium model
+
+1:34:47.560 --> 1:34:49.560
+ like you can charge 9.99
+
+1:34:49.560 --> 1:34:51.560
+ for music and people are going to pay
+
+1:34:51.560 --> 1:34:53.560
+ but that's not what happened
+
+1:34:53.560 --> 1:34:55.560
+ actually when we launched the original mobile product
+
+1:34:55.560 --> 1:34:57.560
+ everyone said they would never pay
+
+1:34:57.560 --> 1:34:59.560
+ what happened was they started on the free product
+
+1:34:59.560 --> 1:35:01.560
+ and then their engagement
+
+1:35:01.560 --> 1:35:03.560
+ grew so much that eventually
+
+1:35:03.560 --> 1:35:05.560
+ they said maybe it is worth
+
+1:35:05.560 --> 1:35:07.560
+ 9.99 right it's
+
+1:35:07.560 --> 1:35:09.560
+ your propensity to pay gross with your engagement
+
+1:35:09.560 --> 1:35:11.560
+ so we had this super complicated
+
+1:35:11.560 --> 1:35:13.560
+ business model where you operate
+
+1:35:13.560 --> 1:35:15.560
+ two different business model advertising and premium
+
+1:35:15.560 --> 1:35:17.560
+ products at the same time
+
+1:35:17.560 --> 1:35:19.560
+ and I think that is hard to replicate
+
+1:35:19.560 --> 1:35:21.560
+ I struggle to think of other companies
+
+1:35:21.560 --> 1:35:23.560
+ that run large scale advertising
+
+1:35:23.560 --> 1:35:25.560
+ and subscription products at the same time
+
+1:35:25.560 --> 1:35:27.560
+ so I think the business model is actually
+
+1:35:27.560 --> 1:35:29.560
+ much more complicated than people think it is
+
+1:35:29.560 --> 1:35:31.560
+ and so
+
+1:35:31.560 --> 1:35:33.560
+ some people went after just the premium part
+
+1:35:33.560 --> 1:35:35.560
+ without the free part and ran into a wall
+
+1:35:35.560 --> 1:35:37.560
+ where no one wanted to pay
+
+1:35:37.560 --> 1:35:39.560
+ some people went after just
+
+1:35:39.560 --> 1:35:41.560
+ music should be free just ads
+
+1:35:41.560 --> 1:35:43.560
+ which doesn't give you enough revenue
+
+1:35:43.560 --> 1:35:45.560
+ for the music industry
+
+1:35:45.560 --> 1:35:47.560
+ so I think that combination is
+
+1:35:47.560 --> 1:35:49.560
+ kind of opaque from the outside
+
+1:35:49.560 --> 1:35:51.560
+ so maybe I shouldn't say it here and reveal the secret
+
+1:35:51.560 --> 1:35:53.560
+ but that turns out to be hard
+
+1:35:53.560 --> 1:35:55.560
+ to replicate
+
+1:35:55.560 --> 1:35:57.560
+ than you would think
+
+1:35:57.560 --> 1:35:59.560
+ so there is a lot of brilliant business strategy here
+
+1:35:59.560 --> 1:36:01.560
+ brilliance or luck
+
+1:36:01.560 --> 1:36:03.560
+ probably more luck but it doesn't really matter
+
+1:36:03.560 --> 1:36:05.560
+ it looks brilliant in retrospect
+
+1:36:05.560 --> 1:36:07.560
+ so let's call it brilliant
+
+1:36:07.560 --> 1:36:09.560
+ yeah when the books are written it will be brilliant
+
+1:36:09.560 --> 1:36:11.560
+ you have
+
+1:36:11.560 --> 1:36:13.560
+ mentioned that your philosophy is to
+
+1:36:13.560 --> 1:36:15.560
+ embrace change
+
+1:36:15.560 --> 1:36:17.560
+ so how will the music streaming
+
+1:36:17.560 --> 1:36:19.560
+ and music listening
+
+1:36:19.560 --> 1:36:21.560
+ world change over the next
+
+1:36:21.560 --> 1:36:23.560
+ 10 years, 20 years
+
+1:36:23.560 --> 1:36:25.560
+ you look out into the far future
+
+1:36:25.560 --> 1:36:27.560
+ what do you think?
+
+1:36:27.560 --> 1:36:29.560
+ I think that music
+
+1:36:29.560 --> 1:36:31.560
+ and for that matter audio
+
+1:36:31.560 --> 1:36:33.560
+ podcast audio books
+
+1:36:33.560 --> 1:36:35.560
+ I think it's one of the few
+
+1:36:35.560 --> 1:36:37.560
+ core human needs
+
+1:36:37.560 --> 1:36:39.560
+ I think there is no good reason to me
+
+1:36:39.560 --> 1:36:41.560
+ why it shouldn't be at the scale
+
+1:36:41.560 --> 1:36:43.560
+ of something like messaging or social networking
+
+1:36:43.560 --> 1:36:45.560
+ I don't think it's a niche thing
+
+1:36:45.560 --> 1:36:47.560
+ to listen to music or news or something
+
+1:36:47.560 --> 1:36:49.560
+ so I think scale is obviously one of the things
+
+1:36:49.560 --> 1:36:51.560
+ that I really hope for
+
+1:36:51.560 --> 1:36:53.560
+ I hope that it's going to be
+
+1:36:53.560 --> 1:36:55.560
+ billions of users, I hope eventually
+
+1:36:55.560 --> 1:36:57.560
+ everyone in the world gets access to
+
+1:36:57.560 --> 1:36:59.560
+ all the world's music ever made
+
+1:36:59.560 --> 1:37:01.560
+ so obviously I think it's going to be a much bigger business
+
+1:37:01.560 --> 1:37:03.560
+ otherwise we wouldn't be betting this big
+
+1:37:05.560 --> 1:37:07.560
+ now if you look more at how
+
+1:37:07.560 --> 1:37:09.560
+ it is consumed
+
+1:37:09.560 --> 1:37:11.560
+ what I'm hoping is back to this
+
+1:37:11.560 --> 1:37:13.560
+ analogy of the
+
+1:37:13.560 --> 1:37:15.560
+ software tool chain
+
+1:37:15.560 --> 1:37:17.560
+ where I think
+
+1:37:17.560 --> 1:37:19.560
+ sometimes internally
+
+1:37:19.560 --> 1:37:21.560
+ I make this analogy to
+
+1:37:21.560 --> 1:37:23.560
+ text messaging
+
+1:37:23.560 --> 1:37:25.560
+ text messaging was also based on
+
+1:37:25.560 --> 1:37:27.560
+ standards
+
+1:37:27.560 --> 1:37:29.560
+ in the area of mobile carriers
+
+1:37:29.560 --> 1:37:31.560
+ you had the SMS, the 140 character
+
+1:37:31.560 --> 1:37:33.560
+ 120 carat SMS
+
+1:37:33.560 --> 1:37:35.560
+ and it was great
+
+1:37:35.560 --> 1:37:37.560
+ because everyone agreed on the standard
+
+1:37:37.560 --> 1:37:39.560
+ so as a consumer you got a lot of distributions
+
+1:37:39.560 --> 1:37:41.560
+ and interoperability but it was a very constrained format
+
+1:37:41.560 --> 1:37:43.560
+ and when the industry
+
+1:37:43.560 --> 1:37:45.560
+ wanted to add pictures to that format
+
+1:37:45.560 --> 1:37:47.560
+ to do the MMS, I looked it up
+
+1:37:47.560 --> 1:37:49.560
+ and I think it took from the late 80s to early 2000
+
+1:37:49.560 --> 1:37:51.560
+ this is like a 15, 20 year product cycle
+
+1:37:51.560 --> 1:37:53.560
+ to bring pictures into that
+
+1:37:53.560 --> 1:37:55.560
+ now once that entire
+
+1:37:55.560 --> 1:37:57.560
+ value chain
+
+1:37:57.560 --> 1:37:59.560
+ of creation and consumption got wrapped
+
+1:37:59.560 --> 1:38:01.560
+ in one software stack
+
+1:38:01.560 --> 1:38:03.560
+ within something like Snapchat or WhatsApp
+
+1:38:03.560 --> 1:38:05.560
+ the first week
+
+1:38:05.560 --> 1:38:07.560
+ they added disappearing messages
+
+1:38:07.560 --> 1:38:09.560
+ then two weeks later they added stories
+
+1:38:09.560 --> 1:38:11.560
+ the pace of innovation when you're on one software stack
+
+1:38:11.560 --> 1:38:13.560
+ you can
+
+1:38:13.560 --> 1:38:15.560
+ affect both creation and consumption
+
+1:38:15.560 --> 1:38:17.560
+ I think it's going to be rapid
+
+1:38:17.560 --> 1:38:19.560
+ so with these streaming services
+
+1:38:19.560 --> 1:38:21.560
+ we now for the first time in history
+
+1:38:21.560 --> 1:38:23.560
+ have enough I hope people
+
+1:38:23.560 --> 1:38:25.560
+ on one of these services
+
+1:38:25.560 --> 1:38:27.560
+ actually whether it's Spotify or Amazon
+
+1:38:27.560 --> 1:38:29.560
+ or Apple or YouTube
+
+1:38:29.560 --> 1:38:31.560
+ and hopefully enough creators
+
+1:38:31.560 --> 1:38:33.560
+ can do the format again
+
+1:38:33.560 --> 1:38:35.560
+ and that excites me
+
+1:38:35.560 --> 1:38:37.560
+ I think being able to change these constraints from 100 years
+
+1:38:37.560 --> 1:38:39.560
+ that could really
+
+1:38:39.560 --> 1:38:41.560
+ do something interesting
+
+1:38:41.560 --> 1:38:43.560
+ I really hope it's not just going to be there
+
+1:38:43.560 --> 1:38:45.560
+ iteration on the same thing
+
+1:38:45.560 --> 1:38:47.560
+ for the next 10 to 20 years as well
+
+1:38:47.560 --> 1:38:49.560
+ yeah changing the creation
+
+1:38:49.560 --> 1:38:51.560
+ of music or creation of audio
+
+1:38:51.560 --> 1:38:53.560
+ or creation of podcasts
+
+1:38:53.560 --> 1:38:55.560
+ is a really fascinating possibility
+
+1:38:55.560 --> 1:38:57.560
+ I myself don't understand
+
+1:38:57.560 --> 1:38:59.560
+ what it is about podcasts that's so intimate
+
+1:38:59.560 --> 1:39:01.560
+ it just is I listen to a lot of podcasts
+
+1:39:01.560 --> 1:39:03.560
+ I think it touches
+
+1:39:03.560 --> 1:39:05.560
+ on a human on a deep
+
+1:39:05.560 --> 1:39:07.560
+ human need for connection
+
+1:39:07.560 --> 1:39:09.560
+ that people do feel like they're
+
+1:39:09.560 --> 1:39:11.560
+ connected
+
+1:39:11.560 --> 1:39:13.560
+ to when they listen I don't understand
+
+1:39:13.560 --> 1:39:15.560
+ what the psychology that is
+
+1:39:15.560 --> 1:39:17.560
+ but in this world is becoming
+
+1:39:17.560 --> 1:39:19.560
+ more and more disconnected
+
+1:39:19.560 --> 1:39:21.560
+ it feels like
+
+1:39:21.560 --> 1:39:23.560
+ this is fulfilling a certain kind of
+
+1:39:23.560 --> 1:39:25.560
+ need and
+
+1:39:25.560 --> 1:39:27.560
+ empowering the creator as opposed
+
+1:39:27.560 --> 1:39:29.560
+ to just the listener
+
+1:39:29.560 --> 1:39:31.560
+ is really interesting
+
+1:39:31.560 --> 1:39:33.560
+ I'm really excited that you're working on this
+
+1:39:33.560 --> 1:39:35.560
+ yeah I think one of the things that is inspiring
+
+1:39:35.560 --> 1:39:37.560
+ for our teams to work on podcasts
+
+1:39:37.560 --> 1:39:39.560
+ is exactly that
+
+1:39:39.560 --> 1:39:41.560
+ whether you think like I probably do
+
+1:39:41.560 --> 1:39:43.560
+ that it's something biological about
+
+1:39:43.560 --> 1:39:45.560
+ perceiving to be in the middle of the conversation
+
+1:39:45.560 --> 1:39:47.560
+ that makes you listen in a different way
+
+1:39:47.560 --> 1:39:49.560
+ it doesn't really matter people seem to perceive it
+
+1:39:49.560 --> 1:39:51.560
+ differently and
+
+1:39:51.560 --> 1:39:53.560
+ there was this narrative for a long time that
+
+1:39:53.560 --> 1:39:55.560
+ you know if you look at video
+
+1:39:55.560 --> 1:39:57.560
+ it's something kind of in the foreground it got shorter
+
+1:39:57.560 --> 1:39:59.560
+ and shorter and shorter because of financial
+
+1:39:59.560 --> 1:40:01.560
+ pressures and monetization and so forth
+
+1:40:01.560 --> 1:40:03.560
+ and eventually at the end there's almost like
+
+1:40:03.560 --> 1:40:05.560
+ 20 seconds clip
+
+1:40:05.560 --> 1:40:07.560
+ people just screaming something
+
+1:40:07.560 --> 1:40:09.560
+ and
+
+1:40:09.560 --> 1:40:11.560
+ I'm really I feel really good about
+
+1:40:11.560 --> 1:40:13.560
+ the fact that
+
+1:40:13.560 --> 1:40:15.560
+ you could have interpreted that as people have
+
+1:40:15.560 --> 1:40:17.560
+ no attention span anymore
+
+1:40:17.560 --> 1:40:19.560
+ they don't want to listen to things they're not interested
+
+1:40:19.560 --> 1:40:21.560
+ in deeper stories
+
+1:40:21.560 --> 1:40:23.560
+ like you know people are getting dumber
+
+1:40:23.560 --> 1:40:25.560
+ but then podcast came along and it's almost like no
+
+1:40:25.560 --> 1:40:27.560
+ no the need still existed
+
+1:40:27.560 --> 1:40:29.560
+ once but maybe maybe it was
+
+1:40:29.560 --> 1:40:31.560
+ the fact that you're not prepared to look at your
+
+1:40:31.560 --> 1:40:33.560
+ phone like this for two hours
+
+1:40:33.560 --> 1:40:35.560
+ but if you can drive at the same time it seems like
+
+1:40:35.560 --> 1:40:37.560
+ people really want to dig deeper
+
+1:40:37.560 --> 1:40:39.560
+ and they want to hear like the more complicated version
+
+1:40:39.560 --> 1:40:41.560
+ so to me that is very inspiring
+
+1:40:41.560 --> 1:40:43.560
+ that podcast is actually long form
+
+1:40:43.560 --> 1:40:45.560
+ it gives me a lot of hope for
+
+1:40:45.560 --> 1:40:47.560
+ for humanity that people seem really interested
+
+1:40:47.560 --> 1:40:49.560
+ in hearing deeper more complicated
+
+1:40:49.560 --> 1:40:51.560
+ conversations this is
+
+1:40:51.560 --> 1:40:53.560
+ I don't understand it
+
+1:40:53.560 --> 1:40:55.560
+ it's fascinating so the majority
+
+1:40:55.560 --> 1:40:57.560
+ for this podcast listen to the whole thing
+
+1:40:57.560 --> 1:40:59.560
+ this whole conversation
+
+1:40:59.560 --> 1:41:01.560
+ we've been talking for an hour and 45 minutes
+
+1:41:01.560 --> 1:41:03.560
+ and somebody will
+
+1:41:03.560 --> 1:41:05.560
+ I mean most people will be listening
+
+1:41:05.560 --> 1:41:07.560
+ to these words I'm speaking right now
+
+1:41:07.560 --> 1:41:09.560
+ you wouldn't have thought that 10 years ago
+
+1:41:09.560 --> 1:41:11.560
+ where the world seemed to go
+
+1:41:11.560 --> 1:41:13.560
+ that's very positive I think
+
+1:41:13.560 --> 1:41:15.560
+ that's really exciting and empowering the creator
+
+1:41:15.560 --> 1:41:17.560
+ there's as really exciting
+
+1:41:17.560 --> 1:41:19.560
+ last question
+
+1:41:19.560 --> 1:41:21.560
+ do you also have a passion for
+
+1:41:21.560 --> 1:41:23.560
+ just mobile in general
+
+1:41:23.560 --> 1:41:25.560
+ how do you see the smartphone world
+
+1:41:27.560 --> 1:41:29.560
+ the digital space
+
+1:41:29.560 --> 1:41:31.560
+ of
+
+1:41:31.560 --> 1:41:33.560
+ of smartphones
+
+1:41:33.560 --> 1:41:35.560
+ and just everything that's on the move
+
+1:41:35.560 --> 1:41:37.560
+ whether it's
+
+1:41:37.560 --> 1:41:39.560
+ internet of things and so on
+
+1:41:39.560 --> 1:41:41.560
+ changing over the next 10 years
+
+1:41:41.560 --> 1:41:43.560
+ and so on
+
+1:41:43.560 --> 1:41:45.560
+ I think that one way to think about it is that
+
+1:41:45.560 --> 1:41:47.560
+ computing
+
+1:41:47.560 --> 1:41:49.560
+ moving out of these
+
+1:41:49.560 --> 1:41:51.560
+ multi purpose devices
+
+1:41:51.560 --> 1:41:53.560
+ the computer we had in the phone
+
+1:41:53.560 --> 1:41:55.560
+ into specific
+
+1:41:55.560 --> 1:41:57.560
+ specific purpose devices
+
+1:41:57.560 --> 1:41:59.560
+ and it will be ambient that
+
+1:41:59.560 --> 1:42:01.560
+ at least in my home
+
+1:42:01.560 --> 1:42:03.560
+ you just shout something at someone
+
+1:42:03.560 --> 1:42:05.560
+ and there's always one of these speakers close enough
+
+1:42:05.560 --> 1:42:07.560
+ and so
+
+1:42:07.560 --> 1:42:09.560
+ you start behaving differently
+
+1:42:09.560 --> 1:42:11.560
+ it's as if you have the internet ambience
+
+1:42:11.560 --> 1:42:13.560
+ ambiently around you and you can ask it
+
+1:42:13.560 --> 1:42:15.560
+ things
+
+1:42:15.560 --> 1:42:17.560
+ so I think computing
+
+1:42:17.560 --> 1:42:19.560
+ will kind of get more integrated
+
+1:42:19.560 --> 1:42:21.560
+ and we won't necessarily think of it
+
+1:42:21.560 --> 1:42:23.560
+ as
+
+1:42:23.560 --> 1:42:25.560
+ connected to a device in the same way
+
+1:42:25.560 --> 1:42:27.560
+ that we do today
+
+1:42:27.560 --> 1:42:29.560
+ I don't know the path to that maybe
+
+1:42:29.560 --> 1:42:31.560
+ we used to have these
+
+1:42:31.560 --> 1:42:33.560
+ desktop computers
+
+1:42:33.560 --> 1:42:35.560
+ and then we partially replaced that with
+
+1:42:35.560 --> 1:42:37.560
+ the laptops and left
+
+1:42:37.560 --> 1:42:39.560
+ desktop at home and at work and then
+
+1:42:39.560 --> 1:42:41.560
+ we got these phones and we started leaving
+
+1:42:41.560 --> 1:42:43.560
+ the laptop at home for a while and maybe
+
+1:42:43.560 --> 1:42:45.560
+ for stretches of time
+
+1:42:45.560 --> 1:42:47.560
+ you're going to start using the watch and you can leave
+
+1:42:47.560 --> 1:42:49.560
+ your phone at home like for a run
+
+1:42:49.560 --> 1:42:51.560
+ or something and we're on this
+
+1:42:51.560 --> 1:42:53.560
+ progressive path where
+
+1:42:53.560 --> 1:42:55.560
+ I think
+
+1:42:55.560 --> 1:42:57.560
+ what is happening with
+
+1:42:57.560 --> 1:42:59.560
+ voice is that
+
+1:42:59.560 --> 1:43:01.560
+ you have an
+
+1:43:01.560 --> 1:43:03.560
+ interaction paradigm that doesn't
+
+1:43:03.560 --> 1:43:05.560
+ require
+
+1:43:05.560 --> 1:43:07.560
+ as large physical devices so I definitely
+
+1:43:07.560 --> 1:43:09.560
+ think there's a future where you can have
+
+1:43:09.560 --> 1:43:11.560
+ your Airpods and
+
+1:43:11.560 --> 1:43:13.560
+ your watch and you can do
+
+1:43:13.560 --> 1:43:15.560
+ a lot of computing
+
+1:43:15.560 --> 1:43:17.560
+ and I don't think
+
+1:43:17.560 --> 1:43:19.560
+ it's going to be this binary
+
+1:43:19.560 --> 1:43:21.560
+ thing, I think it's going to be like many of us
+
+1:43:21.560 --> 1:43:23.560
+ still have a laptop, we just use it less
+
+1:43:23.560 --> 1:43:25.560
+ and so you shift your consumption over
+
+1:43:25.560 --> 1:43:27.560
+ and
+
+1:43:27.560 --> 1:43:29.560
+ I don't know about
+
+1:43:29.560 --> 1:43:31.560
+ AR glasses and so forth
+
+1:43:31.560 --> 1:43:33.560
+ I'm excited about it, I spent a lot of time in that area
+
+1:43:33.560 --> 1:43:35.560
+ but I still think it's quite far away
+
+1:43:35.560 --> 1:43:37.560
+ AR, VR, all of that
+
+1:43:37.560 --> 1:43:39.560
+ Yeah, VR is happening and
+
+1:43:39.560 --> 1:43:41.560
+ working, I think the recent
+
+1:43:41.560 --> 1:43:43.560
+ Oculus Quest is quite impressive
+
+1:43:43.560 --> 1:43:45.560
+ I think AR is further away
+
+1:43:45.560 --> 1:43:47.560
+ at least that type of AR
+
+1:43:47.560 --> 1:43:49.560
+ but I do think
+
+1:43:51.560 --> 1:43:53.560
+ your phone or watch or glasses understanding
+
+1:43:53.560 --> 1:43:55.560
+ where you are and maybe what you're looking at
+
+1:43:55.560 --> 1:43:57.560
+ and being able to give you audio cues about that or you can say
+
+1:43:57.560 --> 1:43:59.560
+ like what is this and it tells you what it is
+
+1:43:59.560 --> 1:44:01.560
+ that I think
+
+1:44:01.560 --> 1:44:03.560
+ might happen, you use
+
+1:44:03.560 --> 1:44:05.560
+ your watch or your glasses as
+
+1:44:05.560 --> 1:44:07.560
+ a mouse pointer on reality
+
+1:44:07.560 --> 1:44:09.560
+ I think it might be a while before
+
+1:44:09.560 --> 1:44:11.560
+ I might be wrong, I hope I'm wrong but I think it might be a while
+
+1:44:11.560 --> 1:44:13.560
+ before we walk around with these big lab glasses
+
+1:44:13.560 --> 1:44:15.560
+ that project things
+
+1:44:15.560 --> 1:44:17.560
+ I agree with you, it's actually really
+
+1:44:17.560 --> 1:44:19.560
+ difficult when you have to
+
+1:44:19.560 --> 1:44:21.560
+ understand the physical world
+
+1:44:21.560 --> 1:44:23.560
+ enough to project
+
+1:44:23.560 --> 1:44:25.560
+ onto it
+
+1:44:25.560 --> 1:44:27.560
+ I lied about the last question
+
+1:44:27.560 --> 1:44:29.560
+ because I just thought
+
+1:44:29.560 --> 1:44:31.560
+ of audio
+
+1:44:31.560 --> 1:44:33.560
+ and my favorite topic which is the movie
+
+1:44:33.560 --> 1:44:37.560
+ Her, do you think
+
+1:44:37.560 --> 1:44:39.560
+ whether it's part of Spotify or not
+
+1:44:39.560 --> 1:44:41.560
+ will have
+
+1:44:41.560 --> 1:44:43.560
+ I don't know if you've seen the movie Her
+
+1:44:43.560 --> 1:44:45.560
+ absolutely
+
+1:44:45.560 --> 1:44:47.560
+ and there
+
+1:44:47.560 --> 1:44:49.560
+ audio is
+
+1:44:49.560 --> 1:44:51.560
+ the primary form of interaction
+
+1:44:51.560 --> 1:44:53.560
+ and the connection with another entity
+
+1:44:53.560 --> 1:44:55.560
+ that you can actually have a
+
+1:44:55.560 --> 1:44:57.560
+ relationship with or fall in love with
+
+1:44:57.560 --> 1:44:59.560
+ based on voice alone
+
+1:44:59.560 --> 1:45:01.560
+ audio alone
+
+1:45:01.560 --> 1:45:03.560
+ do you think that's possible first of all
+
+1:45:03.560 --> 1:45:05.560
+ based on audio alone to fall in love with somebody
+
+1:45:05.560 --> 1:45:07.560
+ somebody or well yeah let's go
+
+1:45:07.560 --> 1:45:09.560
+ with somebody, just have a relationship
+
+1:45:09.560 --> 1:45:11.560
+ based on audio alone
+
+1:45:11.560 --> 1:45:13.560
+ and second question to that
+
+1:45:13.560 --> 1:45:15.560
+ can we create an artificial intelligence system
+
+1:45:15.560 --> 1:45:17.560
+ that
+
+1:45:17.560 --> 1:45:19.560
+ allows one to fall in love
+
+1:45:19.560 --> 1:45:21.560
+ with it and her, him
+
+1:45:21.560 --> 1:45:23.560
+ with you
+
+1:45:23.560 --> 1:45:25.560
+ so this is my personal answer
+
+1:45:25.560 --> 1:45:27.560
+ speaking for me as a person
+
+1:45:27.560 --> 1:45:29.560
+ the answer is quite unequivocally
+
+1:45:29.560 --> 1:45:31.560
+ yes
+
+1:45:31.560 --> 1:45:33.560
+ on both
+
+1:45:33.560 --> 1:45:35.560
+ well we just said about podcasts
+
+1:45:35.560 --> 1:45:37.560
+ and the feeling of being in the middle of a conversation
+
+1:45:37.560 --> 1:45:39.560
+ if you could have an
+
+1:45:39.560 --> 1:45:41.560
+ assistant where
+
+1:45:41.560 --> 1:45:43.560
+ and we just said that feels like a very personal
+
+1:45:43.560 --> 1:45:45.560
+ setting so if you walk around with these
+
+1:45:45.560 --> 1:45:47.560
+ headphones and this thing, you're speaking with this
+
+1:45:47.560 --> 1:45:49.560
+ thing all of the time that feels like it's in your brain
+
+1:45:49.560 --> 1:45:51.560
+ I think it's
+
+1:45:51.560 --> 1:45:53.560
+ it's gonna be much easier to fall in love with
+
+1:45:53.560 --> 1:45:55.560
+ than something that would be on your screen
+
+1:45:55.560 --> 1:45:57.560
+ I think that's entirely possible
+
+1:45:57.560 --> 1:45:59.560
+ and then from the, you can probably answer this better than me
+
+1:45:59.560 --> 1:46:01.560
+ but from the concept of
+
+1:46:01.560 --> 1:46:03.560
+ if it's going to be possible
+
+1:46:03.560 --> 1:46:05.560
+ to build a machine
+
+1:46:05.560 --> 1:46:07.560
+ that can achieve that
+
+1:46:07.560 --> 1:46:09.560
+ I think whether you
+
+1:46:09.560 --> 1:46:11.560
+ think of it as, if you can fake it
+
+1:46:11.560 --> 1:46:13.560
+ the philosophical zombie that simulates it enough
+
+1:46:13.560 --> 1:46:15.560
+ or it somehow actually is
+
+1:46:15.560 --> 1:46:17.560
+ I think there's
+
+1:46:17.560 --> 1:46:19.560
+ it's only a question, if you ask me about time
+
+1:46:19.560 --> 1:46:21.560
+ I'd have to give an answer but if you say I've given
+
+1:46:21.560 --> 1:46:23.560
+ some half infinite time
+
+1:46:23.560 --> 1:46:25.560
+ absolutely, I think it's just
+
+1:46:25.560 --> 1:46:27.560
+ atoms and arrangement
+
+1:46:27.560 --> 1:46:29.560
+ of information
+
+1:46:29.560 --> 1:46:31.560
+ well, I personally think that love
+
+1:46:31.560 --> 1:46:33.560
+ is a lot simpler than people think
+
+1:46:33.560 --> 1:46:35.560
+ so we started with true romance
+
+1:46:35.560 --> 1:46:37.560
+ and ended in love
+
+1:46:37.560 --> 1:46:39.560
+ I don't see a better place to end
+
+1:46:39.560 --> 1:46:40.560
+ beautiful
+
+1:46:40.560 --> 1:46:41.560
+ Gustav, thanks so much for talking today
+
+1:46:41.560 --> 1:46:55.560
+ thank you so much, it was a lot of fun
+
