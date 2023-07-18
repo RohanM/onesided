@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "onesided"
+version = "0.1.0"
+description = ""
+authors = ["Rohan Mitchell <rohan@rohanmitchell.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "onesided"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+yt-dlp = "^2023.7.6"
+pydub = "^0.25.1"
+"pyannote.audio" = "^2.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
