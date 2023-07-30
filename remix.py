@@ -1,18 +1,35 @@
+import sys
 import csv
 from pydub import AudioSegment
 
-full_audio = AudioSegment.from_wav("lex-367-sam-altman-sample.wav")
+csv_filename = sys.argv[1]
+input_filename = sys.argv[2]
+output_filename = sys.argv[2].replace(".wav", ".onesided.wav")
+
+full_audio = AudioSegment.from_wav(input_filename)
 segments = AudioSegment.empty()
 
-with open("dz.csv") as csvfile:
+with open(csv_filename) as csvfile:
     reader = csv.reader(csvfile)
     for start, end, speaker in reader:
-        if speaker == "SPEAKER_01":
-            start = float(start) * 1000 - 500
-            if start < 0:
-                start = 0
+        if speaker in ["SPEAKER_00", "SPEAKER_00"]:
+            start = float(start) * 1000
             end = float(end) * 1000
-            print(start, end, speaker)
+
+            # TEMP: Expand range to include some context for debugging
+            # start -= 500
+            # end += 500
+
+            # Fix clipping of first sample
+            if start < 500:
+                start = 0
+            # print(start, end, speaker)
+            print(f"{start / float(len(full_audio))}:.0f"%)
             segments += full_audio[start:end]
 
-segments.export("lex-367-sam-altman-sample-sa-only.wav", format="wav")
+            # TEMP: Add silence between segments
+            # segments += AudioSegment.silent(duration=1000)
+        # if float(end) > 600000:
+        #    break
+
+segments.export(f"{output_filename}", format="wav")
