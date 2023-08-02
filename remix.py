@@ -17,12 +17,10 @@ parser.add_argument(
 )
 parser.add_argument(
     "--include-speakers",
-    nargs="+",
     help="Speakers to include, comma-separated",
 )
 parser.add_argument(
     "--exclude-speakers",
-    nargs="+",
     help="Speakers to exclude, comma-separated",
 )
 args = parser.parse_args()
