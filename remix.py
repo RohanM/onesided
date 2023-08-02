@@ -13,6 +13,9 @@ parser.add_argument(
     help="Generate audio with samples of all speakers",
 )
 parser.add_argument(
+    "--sample", action="store_true", help="Generate audio using only first 5 minutes"
+)
+parser.add_argument(
     "--include-speakers",
     nargs="+",
     help="Speakers to include, comma-separated",
@@ -48,14 +51,17 @@ def build_audio(csv_reader, speakers, full_audio):
     segments = AudioSegment.empty()
 
     for start, end, speaker in csv_reader:
+        start = float(start) * 1000
+        end = float(end) * 1000
+
+        # Fix clipping of first sample
+        if start < 500:
+            start = 0
+
+        if args.sample and start > 5 * 60 * 1000:
+            break
+
         if speaker in speakers:
-            start = float(start) * 1000
-            end = float(end) * 1000
-
-            # Fix clipping of first sample
-            if start < 500:
-                start = 0
-
             print(f"{start / float(len(full_audio))*100:.0f}%")
             segments += full_audio[start:end]
 
