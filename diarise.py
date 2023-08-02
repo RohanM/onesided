@@ -11,10 +11,10 @@ pipeline = Pipeline.from_pretrained(
 )
 
 print(f"Opening audio file {input_filename}...")
-dz = pipeline(input_filename)
+ds = pipeline(input_filename)
 
-print("Writing diarization...")
+print("Writing diarisation...")
 with open(output_filename, "w") as f:
-    for turn, _, speaker in dz.itertracks(yield_label=True):
+    for turn, _, speaker in ds.itertracks(yield_label=True):
         print(f"{turn.start},{turn.end},{speaker}")
         f.write(f"{turn.start},{turn.end},{speaker}\n")
