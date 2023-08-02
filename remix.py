@@ -16,20 +16,10 @@ with open(csv_filename) as csvfile:
             start = float(start) * 1000
             end = float(end) * 1000
 
-            # TEMP: Expand range to include some context for debugging
-            # start -= 500
-            # end += 500
-
             # Fix clipping of first sample
             if start < 500:
                 start = 0
-            # print(start, end, speaker)
             print(f"{start / float(len(full_audio))*100:.0f}%")
             segments += full_audio[start:end]
-
-            # TEMP: Add silence between segments
-            # segments += AudioSegment.silent(duration=1000)
-        # if float(end) > 600000:
-        #    break
 
 segments.export(f"{output_filename}", format="wav")
