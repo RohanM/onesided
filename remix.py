@@ -24,7 +24,7 @@ with open(csv_filename) as csvfile:
             if start < 500:
                 start = 0
             # print(start, end, speaker)
-            print(f"{start / float(len(full_audio))}:.0f"%)
+            print(f"{start / float(len(full_audio))*100:.0f}%")
             segments += full_audio[start:end]
 
             # TEMP: Add silence between segments
