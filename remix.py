@@ -24,27 +24,32 @@ output_filename = args.input.replace(".wav", ".onesided.wav")
 
 def main():
     full_audio = AudioSegment.from_wav(args.input)
-    segments = AudioSegment.empty()
 
     with open(args.ds) as csvfile:
         reader = csv.reader(csvfile)
         speakers = get_speakers(reader, args.include_speakers, args.exclude_speakers)
         csvfile.seek(0)
 
-        # Build audio segments
-        for start, end, speaker in reader:
-            if speaker in speakers:
-                start = float(start) * 1000
-                end = float(end) * 1000
+        segments = build_audio(reader, speakers, full_audio)
+        segments.export(output_filename, format="wav")
 
-                # Fix clipping of first sample
-                if start < 500:
-                    start = 0
 
-                print(f"{start / float(len(full_audio))*100:.0f}%")
-                segments += full_audio[start:end]
+def build_audio(csv_reader, speakers, full_audio):
+    segments = AudioSegment.empty()
 
-    segments.export(f"{output_filename}", format="wav")
+    for start, end, speaker in csv_reader:
+        if speaker in speakers:
+            start = float(start) * 1000
+            end = float(end) * 1000
+
+            # Fix clipping of first sample
+            if start < 500:
+                start = 0
+
+            print(f"{start / float(len(full_audio))*100:.0f}%")
+            segments += full_audio[start:end]
+
+    return segments
 
 
 def get_speakers(csv_reader, include_speakers, exclude_speakers):
