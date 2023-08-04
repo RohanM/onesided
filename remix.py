@@ -80,6 +80,10 @@ def build_speakers_sample(csv_reader, speakers, full_audio):
             if start < 500:
                 start = 0
 
+            # Limit samples to 10 seconds
+            if end - start > 10000:
+                end = start + 10000
+
             if speaker == tgt_speaker and end - start > 1000:
                 segments += chime
                 segments += AudioSegment.from_wav(f"audio/num-{tgt_speaker[-2:]}.wav")
